@@ -5,6 +5,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withBundleAnalyzer({
+  basePath: '/googlementor.com',
   poweredByHeader: false,
   trailingSlash: true,
   // The starter code loads resources from `public` folder with `router.basePath` in React components.
