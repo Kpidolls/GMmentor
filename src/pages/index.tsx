@@ -1,13 +1,19 @@
 import React from 'react';
 
+// import Link from 'next/link';
+
 import About from '../components/About';
+import AboutUs from '../components/AboutUs';
 import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
+import DownloadGoogleMaps from '../components/DownloadGoogleMaps';
+import EsimProduct from '../components/EsimProduct';
 import Features from '../components/Features';
 import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
+import Mybusiness from '../components/Mybusiness';
 import Pricing from '../components/Pricing';
 import Product from '../components/Product';
 
@@ -32,18 +38,22 @@ const App = () => {
           <Canvas />
         </>
       </LazyShow>
+      <Mybusiness />
       <LazyShow>
         <>
           <Features />
           <Canvas />
         </>
       </LazyShow>
+      <EsimProduct />
       <LazyShow>
         <Pricing />
       </LazyShow>
+      <AboutUs />
       <LazyShow>
         <>
           <Canvas />
+          <DownloadGoogleMaps />
           <About />
         </>
       </LazyShow>

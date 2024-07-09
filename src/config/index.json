@@ -1,21 +1,21 @@
 {
   "company": {
-    "name": "React landing page 2021",
-    "logo": "/assets/images/logo.png"
+    "name": "Google Maps Mentor",
+    "logo": "/assets/images/newlogo1.png"
   },
   "navigation": [
     {
-      "name": "Product",
+      "name": "Personal",
       "href": "product"
     },
     {
-      "name": "Features",
+      "name": "Businesses",
       "href": "features"
     },
 
     {
-      "name": "Pricing",
-      "href": "pricing"
+      "name": "Travelers",
+      "href": "esimproduct"
     },
     {
       "name": "About",
@@ -24,99 +24,99 @@
   ],
   "callToAction": {
     "text": "Get started",
-    "href": "#"
+    "href": "#download"
   },
   "mainHero": {
-    "title": "Use me as your",
-    "subtitle": "landing page.",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-    "img": "/assets/images/happyTeam.jpeg",
+    "title": "Google Maps Mentor",
+    "subtitle": "Navigate like a pro!",
+    "description": "We specialize in empowering individuals to harness the full potential of Google Maps for their travels, everyday life, and business needs. ",
+    "img": "/assets/images/Designer.jpeg",
     "primaryAction": {
       "text": "Get started",
-      "href": "#"
+      "href": "#download"
     },
     "secondaryAction": {
       "text": "Email us",
-      "href": "mailto:issaafakattan@gmail.com?subject=I like react landing page!"
+      "href": "mailto:mapsmentorinfo@gmail.com?subject=I love Google Maps!"
     }
   },
   "product": {
-    "title": "React landing page 2021",
+    "title": "Google Maps Lists",
     "items": [
       {
-        "title": "A plug n play template",
-        "description": "Just edit the config.json file with details about your company and voila your beautiful state of the art landing page is ready to go live! Remember to also update your assets, add any images you want to show to /assets/images and link them in the config.json",
-        "img": "/assets/images/product1.jpg"
+        "title": "Personalized Maps",
+        "description": "Through our social media channels, we offer free educational videos to teach you how to maximize the often-overlooked features of Google Maps. Edit your lists, save favorite places, add personalized markers, emojis, shapes, notes, and recommendations. Whenever you hear about a cool spot, open Google Maps to add a pin, label, or save. This will enhance your experience and add value over time. Are you a travel enthusiast or a blogger with deep knowledge of certain tourist destinations? We’d love to collaborate with you! Join us in creating and promoting customized personal guides that highlight unique attractions, hidden gems, and local favorites. Together, we can offer travelers an enriched and personalized experience. Get in touch with us to share your insights and help others explore the world like never before!",
+        "img": "/assets/images/globe.png"
       },
       {
-        "title": "Make it your own!",
-        "description": "Play around with the theme.ts file and configure the color palette to match the branding of your company! If you're feeling wild, maybe change some tailwind css as well!",
+        "title": "Enhance Your Travel",
+        "description": "Customized maps offer numerous benefits that enhance both your travel experiences and everyday life. By personalizing your map, you'll effortlessly see your favorite locations when you're nearby, allowing for spontaneous visits and the discovery of new favorites. Trip planning becomes more efficient as you visualize and organize your itinerary, selecting the most convenient area for accommodation with all the must-see spots marked and labeled. This personalized approach not only makes your travels more enjoyable but also simplifies daily navigation, making it more convenient and fun. Best of all, these powerful features are available on your phone for free, ensuring you always have an optimized and enriching experience at your fingertips.",
         "img": "/assets/images/product2.jpg"
       }
     ]
   },
   "features": {
-    "title": "Latest & greatest ",
-    "subtitle": "All the best technologies out there!",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+    "title": "How we can help your business grow!",
+    "subtitle": "Advertising opportunities on Google Maps",
+    "description": "Google Ads is an online advertising platform developed by Google. It allows businesses to display their ads on Google's search engine results pages, websites, mobile apps, and more. Businesses can reach a wide audience and promote their products or services effectively.",
     "items": [
       {
-        "name": "React.js",
-        "description": "React is a free and open-source front-end JavaScript library for building user interfaces or UI components.",
-        "icon": "/assets/images/react.png"
+        "name": "Google Ads",
+        "description": "A business, especially those with a physical storefront, should use Google Ads to efficiently reach a targeted local audience, drive high-quality traffic to their location, and achieve measurable results with a scalable advertising solution.",
+        "icon": "/assets/images/Google_Ads.png"
       },
       {
-        "name": "Tailwind",
-        "description": "Tailwind CSS is a highly customizable, low-level CSS framework for quickly creating beautiful designs without any annoying opinionated stylesheet nonsense.",
-        "icon": "/assets/images/tailwindcss.svg"
+        "name": "Google My Business Optimization",
+        "description": "Your business should optimize Google My Business to enhance local search visibility, attract more customers, and boost engagement through accurate and compelling online information.",
+        "icon": "/assets/images/smallbusiness.jpg"
       },
       {
-        "name": "Next.js",
-        "description": "Next.js is a framework for server-rendered React applications using Next.js.",
-        "icon": "/assets/images/nextjs.svg"
+        "name": "Social Media Marketing",
+        "description": "Social media marketing is essential for businesses to connect with their audience, build brand awareness, and drive website traffic. It is a powerful tool to engage with customers and increase sales.",
+        "icon": "/assets/images/tiktok.jpg"
       },
       {
-        "name": "Typescript",
-        "description": "TypeScript is a programming language developed and maintained by Microsoft.",
-        "icon": "/assets/images/ts.png"
+        "name": "SMS Marketing",
+        "description": "SMS marketing is a cost-effective way to reach a large audience, build brand awareness, and drive sales. It is a powerful tool to engage with customers and increase conversions.",
+        "icon": "/assets/images/Viber.png"
       }
     ]
   },
   "pricing": {
-    "title": "Pricing",
+    "title": "Travelers - Affordable eSIM Pricing Plans",
     "items": [
       {
-        "name": "Free",
-        "price": "$0",
-        "priceDetails": "for one user",
+        "name": "Local eSIMs",
+        "price": "$9",
+        "priceDetails": " for example",
         "features": [
-          "1 user",
-          "Basic Support",
-          "1 GB of storage",
-          "Email support"
+          "Duration: 1 week",
+          "Country of coverage: Italy",
+          "Data: 3gb",
+          "Options: 1gb - 20gb"
         ]
       },
       {
-        "name": "Pro",
+        "name": "Regional eSIMs",
         "price": "$15",
-        "priceDetails": "per user",
+        "priceDetails": " for example",
 
         "features": [
-          "5 users",
-          "Priority Support",
-          "10 GB of storage",
-          "Phone and Email support"
+          "Duration: 30 days",
+          "Coverage: Europe",
+          "Data: 3gb",
+          "Options: 1gb - 100gb"
         ]
       },
       {
-        "name": "Enterprise",
-        "price": "$29",
-        "priceDetails": "per user",
+        "name": "Global eSIMs",
+        "price": "$24",
+        "priceDetails": " for example",
         "features": [
-          "50 users",
-          "24/7 Support",
-          "100 GB of storage",
-          "Phone and Email support"
+          "Duration: 30 days",
+          "Coverage: 124 Countries",
+          "Data: 3gb",
+          "Options: 1gb - 20gb"
         ]
       }
     ]
@@ -124,30 +124,31 @@
   "about": {
     "sections": [
       {
-        "name": "Something",
-        "href": "#",
+        "name": "Contact Us",
+        "href": "mailto:mapsmentorinfo@gmail.com?subject=I love Google Maps!",
         "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       },
       {
-        "name": "Something",
-        "href": "#",
+        "name": "About",
+        "href": "#about",
         "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       },
       {
-        "name": "Something",
-        "href": "#",
+        "name": "Privacy Policy",
+        "href": "/privacy-policy",
         "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       },
       {
-        "name": "Something",
-        "href": "#",
+        "name": "Terms",
+        "href": "/terms",
         "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       }
     ],
     "socialMedia": {
-      "github": "https://github.com/issaafalkattan",
-      "twitter": "https://twitter.com/issaafkattan",
-      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
+      "tiktok": "https://www.tiktok.com/@mapsmentor?_t=8nDFt9WiKjg&_r=1",
+      "instagram": "https://www.instagram.com/mapsmentor?igsh=MXRxODZ4ajFlaGlscA%3D%3D&utm_source=qr",
+      "twitter": "https://x.com/googlementor",
+      "facebook": "https://www.facebook.com/profile.php?id=61560667811342"
     }
   }
 }
