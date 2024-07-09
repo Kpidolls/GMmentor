@@ -59,10 +59,10 @@ const Menu = () => {
                 </Link>
               ))}
               <a
-                href="#"
+                href="#download"
                 className={`font-medium text-primary hover:text-secondary`}
               >
-                Call to action
+                Get started
               </a>
             </div>
           </nav>
