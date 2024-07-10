@@ -32,7 +32,8 @@ jobs:
 
       - name: Adjust Next.js Config for GitHub Pages
         run: |
-          echo "module.exports = { basePath: '/GMmentor', assetPrefix: '/GMmentor/' };" > next.config.js
+          echo "NEXT_PUBLIC_BASE_PATH=/GMmentor" >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_ASSET_PREFIX=/GMmentor/" >> $GITHUB_ENV
 
       - name: Build Next.js app
         run: yarn build
