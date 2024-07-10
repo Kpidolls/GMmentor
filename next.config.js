@@ -13,4 +13,12 @@ module.exports = withBundleAnalyzer({
   // So, the source code is "basePath-ready".
   // You can remove `basePath` if you don't need it.
   reactStrictMode: true,
+  async exportPathMap() {
+    return {
+      '/': { page: '/' },
+      '/terms': { page: '/terms' },
+      '/privacy-policy': { page: '/privacy-policy' },
+      // Add other paths here if you have additional pages
+    };
+  },
 });
