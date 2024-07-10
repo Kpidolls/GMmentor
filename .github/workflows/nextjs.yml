@@ -74,6 +74,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Adjust Next.js Config for GitHub Pages
+        run: |
+          echo "NEXT_PUBLIC_BASE_PATH=/GMmentor" >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_ASSET_PREFIX=/GMmentor/" >> $GITHUB_ENV
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
