@@ -19,7 +19,7 @@
     },
     {
       "name": "About",
-      "href": "about"
+      "href": "aboutus"
     }
   ],
   "callToAction": {
@@ -45,7 +45,7 @@
     "items": [
       {
         "title": "Personalized Maps",
-        "description": "Through our social media channels, we offer free educational videos to teach you how to maximize the often-overlooked features of Google Maps. Edit your lists, save favorite places, add personalized markers, emojis, shapes, notes, and recommendations. Whenever you hear about a cool spot, open Google Maps to add a pin, label, or save. This will enhance your experience and add value over time. Are you a travel enthusiast or a blogger with deep knowledge of certain tourist destinations? We’d love to collaborate with you! Join us in creating and promoting customized personal guides that highlight unique attractions, hidden gems, and local favorites. Together, we can offer travelers an enriched and personalized experience. Get in touch with us to share your insights and help others explore the world like never before!",
+        "description": "Through our social media channels, we offer free educational videos to teach you how to maximize the often-overlooked features of Google Maps. Edit your lists, save favorite places, add personalized markers, emojis, shapes, notes, and recommendations. Whenever you hear about a cool spot, open Google Maps to add a pin, label, or save. This will enhance your experience and add value over time. Are you a travel enthusiast or a blogger with deep knowledge of certain tourist destinations? We’d love to collaborate with you! Join us in creating and promoting customized personal guides that highlight unique attractions, hidden gems, and local favorites.",
         "img": "/assets/images/globe.png"
       },
       {
