@@ -12,43 +12,13 @@ const nextConfig = withBundleAnalyzer({
   // So, the source code is "basePath-ready".
   // You can remove `basePath` if you don't need it.
   reactStrictMode: true,
-  i18n: {
-    locales: ["en", "fr", "es"], // Add your supported locales here
-    defaultLocale: "en",
-  },
   async exportPathMap(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
     const paths = {
-      "/": {
-        page: "/",
-        query: { __nextDefaultLocale: "en", __nextLocale: "en" },
-      },
-      "/terms": {
-        page: "/terms",
-        query: { __nextDefaultLocale: "en", __nextLocale: "en" },
-      },
-      "/privacy-policy": {
-        page: "/privacy-policy",
-        query: { __nextDefaultLocale: "en", __nextLocale: "en" },
-      },
+      '/': { page: '/' },
+      '/terms': { page: '/terms' },
+      '/privacy-policy': { page: '/privacy-policy' },
       // Add other paths here if you have additional pages
     };
-
-    // Add localized versions for each locale
-    const locales = ["en", "fr", "es"];
-    for (const locale of locales) {
-      paths[`/${locale}`] = {
-        page: "/",
-        query: { __nextDefaultLocale: "en", __nextLocale: locale },
-      };
-      paths[`/${locale}/terms`] = {
-        page: "/terms",
-        query: { __nextDefaultLocale: "en", __nextLocale: locale },
-      };
-      paths[`/${locale}/privacy-policy`] = {
-        page: "/privacy-policy",
-        query: { __nextDefaultLocale: "en", __nextLocale: locale },
-      };
-    }
 
     return paths;
   },
