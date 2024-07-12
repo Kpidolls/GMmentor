@@ -41,16 +41,16 @@
     }
   },
   "product": {
-    "title": "Google Maps Lists",
+    "title": "Google Maps",
     "items": [
       {
-        "title": "Personalized Maps",
-        "description": "Through our social media channels, we offer free educational videos to teach you how to maximize the often-overlooked features of Google Maps. Edit your lists, save favorite places, add personalized markers, emojis, shapes, notes, and recommendations. Whenever you hear about a cool spot, open Google Maps to add a pin, label, or save. This will enhance your experience and add value over time. Are you a travel enthusiast or a blogger with deep knowledge of certain tourist destinations? We’d love to collaborate with you! Join us in creating and promoting customized personal guides that highlight unique attractions, hidden gems, and local favorites.",
+        "title": "Personalized Travel",
+        "description": "We offer educational videos on social media to help you maximize Google Maps' features. Edit lists, save favorite places, and add personalized markers, notes, and recommendations. When you discover a cool spot, open Google Maps to add a pin, label, or save it. This enhances your travel experience and adds value over time. Trip planning becomes more efficient as you visualize and organize your itinerary, selecting the most convenient areas for accommodation with all the must-see spots marked and labeled. Create and promote custom guides highlighting unique attractions, hidden gems, and local favorites. Personalized maps make travel planning efficient and help you discover new favorites. If you're a travel enthusiast or blogger, we'd love to collaborate! Join Our Beta Launch.",
         "img": "/assets/images/globe.png"
       },
       {
-        "title": "Enhance Your Travel",
-        "description": "Customized maps offer numerous benefits that enhance both your travel experiences and everyday life. By personalizing your map, you'll effortlessly see your favorite locations when you're nearby, allowing for spontaneous visits and the discovery of new favorites. Trip planning becomes more efficient as you visualize and organize your itinerary, selecting the most convenient area for accommodation with all the must-see spots marked and labeled. This personalized approach not only makes your travels more enjoyable but also simplifies daily navigation, making it more convenient and fun. Best of all, these powerful features are available on your phone for free, ensuring you always have an optimized and enriching experience at your fingertips.",
+        "title": "Boost Visibility with Advertising",
+        "description": "Maximize your business's online presence by creating and maintaining an updated profile on Google Maps. A well-optimized profile enhances your SEO, ensuring your business appears higher in search results and attracts more customers. Keep your information accurate, add engaging photos, and encourage positive reviews to stand out. For businesses with a substantial marketing budget looking to run targeted campaigns, contact us today to leverage the full power of Google Maps and drive significant growth. Let's elevate your brand together!",
         "img": "/assets/images/product2.jpg"
       }
     ]
