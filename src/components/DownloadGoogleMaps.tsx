@@ -5,7 +5,7 @@ const DownloadGoogleMaps = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen bg-gray-100">
       <div className="bg-white p-10 rounded-lg shadow-xl" id="download">
         <h2 className="text-3xl font-bold mb-6 text-gray-800 text-center">
-          Download Google Maps
+          Start Creating Lists: Download Google Maps First
         </h2>
         <div className="flex flex-wrap justify-center gap-10">
           <a
