@@ -21,7 +21,9 @@ const EsimProduct = () => {
                 accommodation or rideshare, communicate with locals whenever
                 needed and ensure prompt communication right from the start. We
                 have partnered with the best in the industry to provide you with
-                reliable mobile data in more than 200+ countries.
+                reliable mobile data in more than 200+ countries. Contact us to
+                claim 10% discount with <strong>Airalo</strong>. 
+                
                 <br />
                 <br /> <strong>Disclosure</strong>: This is an affiliate link,
                 and we may earn a commission if you make a purchase through our
