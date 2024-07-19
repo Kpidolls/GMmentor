@@ -25,9 +25,9 @@ const EsimProduct = () => {
                 claim 10% discount with <strong>Airalo</strong>. 
                 
                 <br />
-                <br /> <strong>Disclosure</strong>: This is an affiliate link,
-                and we may earn a commission if you make a purchase through our
-                site. The prices remain the same for you.
+                <br /> <strong>Disclosure</strong>: We may earn a commission if
+                you make a purchase through our site. The prices are still discounted
+                for you.
               </p>
             </div>
           </div>
