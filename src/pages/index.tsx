@@ -38,7 +38,6 @@ const App = () => {
           <Canvas />
         </>
       </LazyShow>
-      <Mybusiness />
       <LazyShow>
         <>
           <Features />
@@ -54,6 +53,7 @@ const App = () => {
         <>
           <Canvas />
           <DownloadGoogleMaps />
+          <Mybusiness />
           <About />
         </>
       </LazyShow>

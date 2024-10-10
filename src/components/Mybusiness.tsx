@@ -1,87 +1,59 @@
 import React from 'react';
 
-const ClaimBusinessPage = () => {
+const CreateList = () => {
   return (
-    <section className="py-6 px-4">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6">
-          Google Business on Google Maps
-        </h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-          {/* Step 1 */}
-          <div className="bg-white shadow-md rounded-lg p-6 w-full md:w-1/3">
-            <h3 className="font-bold text-xl mb-4">
-              Step 1:{' '}
-              <a
-                href="https://business.google.com/create?gmbsrc=ww-ww-z-gs-z-gmb-v-z-u~bhc-gmblp1-u&ppsrc=GMBB0&utm_campaign=ww-ww-z-gs-z-gmb-v-z-u~bhc-gmblp1-u&utm_source=gmb&utm_medium=z&skipLandingPage&service=ome&original_intent=GMB&omesrcexp=97643701&omec=ELXZxy4yAgECOipnbWJzcmM9d3ctd3ctei1ncy16LWdtYi12LXotdX5iaGMtZ21ibHAxLXVAAUoTCLn_hbrI4oYDFTqrAAAdWhEP6A%3D%3D"
-                className="text-red-600 hover:text-red-700"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get a Business Profile
-              </a>
-            </h3>
-            <p className="text-gray-600 mb-4">
-              {/* Instruction text for step 1 */}
-              The Google My Business app is no longer available, but you can now
-              manage your business directly through Google Maps. To get started,
-              you will need to create your Business Profile. Once set up, you
-              can easily update your business information, respond to reviews,
-              and engage with customers, all from within Google Maps.
-            </p>
-            {/* Placeholder for text input */}
-            {/* TODO: Add text input for business name or email associated with Google My Business */}
+    <div className="max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
+      <h2 className="text-3xl font-bold text-center mb-8">How to Create a List on Google Maps</h2>
+      <div className="space-y-8">
+        {/* Step 1 */}
+        <div className="bg-white shadow-lg rounded-lg p-6">
+          <div className="flex items-center mb-4">
+            <h3 className="font-bold text-xl text-blue-600">Step 1:</h3>
+            <h3 className="font-bold text-red-600 text-xl ml-2">Tap “You” on Google Maps</h3>
           </div>
+          <p className="text-gray-600 mb-4">
+            You can manage your lists under the “Saved” tab on Google Maps app to get started.
+            When creating lists in Google Maps, it's important to note that the steps may vary slightly
+            depending on the device you are using.
+          </p>
+        </div>
 
-          {/* Step 2 */}
-          <div className="bg-white shadow-md rounded-lg p-6 w-full md:w-1/3">
-            <h3 className="font-bold text-xl mb-4">
-              Step 2: Verify your business
-            </h3>
-            <p className="text-gray-600 mb-4">
-              {/* Instruction text for step 2 */}
-              Business owners or managers order a verification code sent to
-              their business address, which arrives by postcard in about two
-              weeks. They then use this code to verify their business. Google
-              has updated its verification procedures to make the process easier
-              and now there are additional verification methods available. For
-              more information, please visit{' '}
-              <a
-                href="https://support.google.com/business/answer/7107242?sjid=809653980706618202-EU"
-                className="text-red-600 hover:text-red-700 font-bold"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Google&rsquo;s verification help page
-              </a>
-              .
-            </p>
-            {/* Placeholder for text input */}
-            {/* TODO: Add text input for business search */}
+        {/* Step 2 */}
+        <div className="bg-white shadow-lg rounded-lg p-6">
+          <div className="flex items-center mb-4">
+            <h3 className="font-bold text-xl text-blue-600">Step 2:</h3>
+            <h3 className="font-bold text-red-600 text-xl ml-2">Select “+ New List”</h3>
           </div>
+          <p className="text-gray-600 mb-4">
+            Navigate to the “+ New List” section to create a new list.
+          </p>
+        </div>
 
-          {/* Step 3 */}
-          <div className="bg-white shadow-md rounded-lg p-6 w-full md:w-1/3">
-            <h3 className="font-bold text-xl mb-4">
-              Step 3: Display your information
-            </h3>
-            <p className="text-gray-600 mb-4">
-              {/* Instruction text for step 3 */}
-              You can instantly improve the local ranking of your business.
-              You&apos;ll need to fill in basic details such as your address,
-              category, website, phone number, and opening hours. Adding photos
-              and a detailed description of your business can make it more
-              appealing to potential customers. Ensuring this information is
-              current and accurate helps enhance your business&apos;s visibility
-              and attractiveness on Google.
-            </p>
-            {/* Placeholder for text input */}
-            {/* TODO: Add text input for verification code or method selection */}
+        {/* Step 3 */}
+        <div className="bg-white shadow-lg rounded-lg p-6">
+          <div className="flex items-center mb-4">
+            <h3 className="font-bold text-xl text-blue-600">Step 3:</h3>
+            <h3 className="font-bold text-red-600 text-xl ml-2">Choose a Name</h3>
           </div>
+          <p className="text-gray-600 mb-4">
+            Add the name of the list. You can also add a description and emoji if you create the list on a mobile device.
+          </p>
+        </div>
+
+        {/* Step 4 */}
+        <div className="bg-white shadow-lg rounded-lg p-6">
+          <div className="flex items-center mb-4">
+            <h3 className="font-bold text-xl text-blue-600">Step 4:</h3>
+            <h3 className="font-bold text-red-600 text-xl ml-2">Save and Share Your List</h3>
+          </div>
+          <p className="text-gray-600 mb-4">
+            Once you have added all the places to your list, save it and share it with others. You can
+            share your list via a link or directly through the Google Maps app.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default ClaimBusinessPage;
+export default CreateList;
