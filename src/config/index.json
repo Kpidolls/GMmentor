@@ -5,11 +5,11 @@
   },
   "navigation": [
     {
-      "name": "Personal",
+      "name": "Maps",
       "href": "product"
     },
     {
-      "name": "Businesses",
+      "name": "Lists",
       "href": "features"
     },
 
@@ -29,7 +29,7 @@
   "mainHero": {
     "title": "Google Maps Mentor",
     "subtitle": "Navigate like a pro!",
-    "description": "We specialize in empowering individuals to harness the full potential of Google Maps for their travels, everyday life, and business needs. ",
+    "description": "Personalized maps to harness the full potential of Google Maps for their travels, everyday life, and business needs. ",
     "img": "/assets/images/Designer.jpeg",
     "primaryAction": {
       "text": "Get started",
@@ -37,7 +37,7 @@
     },
     "secondaryAction": {
       "text": "Email us",
-      "href": "mailto:mapsmentorinfo@gmail.com?subject=I love Google Maps!"
+      "href": "mailto:mapsmentorinfo@gmail.com?subject=I agree with googlementor.com terms!"
     }
   },
   "product": {
@@ -45,40 +45,40 @@
     "items": [
       {
         "title": "Personalized Travel",
-        "description": "We offer educational videos on social media to help you maximize Google Maps' features. Edit lists, save favorite places, and add personalized markers, notes, and recommendations. When you discover a cool spot, open Google Maps to add a pin, label, or save it. This enhances your travel experience and adds value over time. Trip planning becomes more efficient as you visualize and organize your itinerary, selecting the most convenient areas for accommodation with all the must-see spots marked and labeled. Create custom guides highlighting unique attractions, hidden gems and local favorites. Personalized maps make travel planning efficient and help you discover new favorites. If you're a travel enthusiast, creator or blogger, we'd love to collaborate! Get in touch with us.",
+        "description": "If you're looking for a personalized map that highlights all the best spots for fun and adventure in your area, we’d love to help! Whether it’s hidden gems, top attractions or custom routes we create maps tailored to your preferences using Google Maps. To learn more about what we offer or to request your own custom map simply email us with the label of the map. We can't wait to help you explore!",
         "img": "/assets/images/globe.png"
       },
       {
-        "title": "Boost Visibility with Advertising",
-        "description": "Maximize your business's online presence by creating and maintaining an updated profile on Google Maps. A well-optimized profile enhances your SEO, ensuring your business appears higher in search results and attracts more customers. Keep your information accurate, add engaging photos and encourage positive reviews to stand out. For businesses with a substantial marketing budget looking to run targeted campaigns, contact us today to leverage the full power of Google Maps and drive significant growth. Let's elevate your brand together!",
+        "title": "Join Our Team of Local Experts",
+        "description": "Are you an expert in your area, with in-depth knowledge of the best places to visit, dine or explore? We are looking for passionate locals and travel enthusiasts to partner with us in creating custom maps for people eager to discover new adventures. If you have a talent for uncovering hidden gems and want to share your expertise through personalized maps, we'd love to hear from you! Contact us to join our team and help others explore your favorite places.",
         "img": "/assets/images/product2.jpg"
       }
     ]
   },
   "features": {
-    "title": "How we can help your business grow!",
-    "subtitle": "Advertising opportunities on Google Maps",
-    "description": "Google Ads is an online advertising platform developed by Google. It allows businesses to display their ads on Google's search engine results pages, websites, mobile apps, and more. Businesses can reach a wide audience and promote their products or services effectively.",
+    "title": "Sell your custom maps!",
+    "subtitle": "Featured map lists on Google Maps",
+    "description": "Google Maps Lists are a feature that allows users to create and manage collections of saved locations within the Google Maps application. This functionality serves as a powerful tool for organizing and sharing locations effectively. Whether for personal use or collaborative planning, this feature enhances how users interact with their surroundings while providing easy access to curated recommendations.",
     "items": [
       {
-        "name": "Google Ads",
-        "description": "A business, especially those with a physical storefront, should use Google Ads to efficiently reach a targeted local audience, drive high-quality traffic to their location, and achieve measurable results with a scalable advertising solution.",
-        "icon": "/assets/images/Google_Ads.png"
+        "name": "Favorites List",
+        "description": "Users can create personalized lists to save locations based on their preferences, such as favorite restaurants or places to visit on a trip. Each custom list can be named and described, allowing for tailored organization.",
+        "icon": "/assets/images/heart-outline.svg"
       },
       {
-        "name": "Google My Business Optimization",
-        "description": "Your business should optimize Google My Business to enhance local search visibility, attract more customers, and boost engagement through accurate and compelling online information.",
-        "icon": "/assets/images/smallbusiness.jpg"
+        "name": "Hiking Trails List",
+        "description": "Explore amazing trails, stunning views, and hidden spots. Whether you're seeking a relaxing walk or an adventurous hike, there's something for everyone. Make it easy for planning fun experiences.",
+        "icon": "/assets/images/walk-outline.svg"
       },
       {
-        "name": "Social Media Marketing",
-        "description": "Social media marketing is essential for businesses to connect with their audience, build brand awareness, and drive website traffic. It is a powerful tool to engage with customers and increase sales.",
-        "icon": "/assets/images/tiktok.jpg"
+        "name": "Desserts List",
+        "description": "Create a collection of must-try treats that will tantalize your taste buds. From decadent cakes and creamy pastries to artisanal ice creams and gourmet chocolates, this list showcases the best dessert spots around.",
+        "icon": "/assets/images/ice-cream-outline.svg"
       },
       {
-        "name": "SMS Marketing",
-        "description": "SMS marketing is a cost-effective way to reach a large audience, build brand awareness, and drive sales. It is a powerful tool to engage with customers and increase conversions.",
-        "icon": "/assets/images/Viber.png"
+        "name": "Brunch List",
+        "description": "Elevate your brunch game, discover charming cafes and trendy restaurants serving up mouthwatering dishes, from fluffy pancakes and savory egg dishes to refreshing mimosas and artisanal coffee.",
+        "icon": "/assets/images/cafe-outline.svg"
       }
     ]
   },
@@ -125,7 +125,7 @@
     "sections": [
       {
         "name": "Contact Us",
-        "href": "mailto:mapsmentorinfo@gmail.com?subject=I love Google Maps!",
+        "href": "mailto:mapsmentorinfo@gmail.com?subject=I agree with googlementor.com terms!",
         "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
       },
       {
