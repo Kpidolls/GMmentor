@@ -16,6 +16,7 @@
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
+    "@babel/runtime": "^7.25.7",
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.5",
     "@types/react-dom": "^18.3.0",
@@ -24,8 +25,8 @@
     "gh-pages": "^6.1.1",
     "next": "latest",
     "next-seo": "^4.28.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
     "react-scroll": "^1.8.4",
     "smooth-scroll": "^16.1.3",
