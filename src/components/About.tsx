@@ -157,7 +157,7 @@ const About = () => {
                 <a href={socialMedia.twitter} target="_blank" rel="noopener noreferrer">
                   <FaTwitter className="text-2xl text-gray-400 hover:text-white transition duration-300" />
                 </a>
-                <a href="{socialMedia.tiktok}" target="_blank" rel="noopener noreferrer">
+                <a href={socialMedia.tiktok} target="_blank" rel="noopener noreferrer">
                   <FaTiktok className="text-2xl text-gray-400 hover:text-white transition duration-300" />
                 </a>
                 <a href={socialMedia.instagram} target="_blank" rel="noopener noreferrer">
