@@ -122,6 +122,7 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaTiktok, FaInstagram } from 'react-icons/fa';
 import config from '../config/index.json';
+import Link from 'next/link';
 
 const About = () => {
   const { socialMedia } = config.about;
@@ -136,14 +137,14 @@ const About = () => {
               <h3 className="text-lg font-bold mb-4">Links</h3>
               <ul className="text-gray-400">
                 <li>
-                  <a href="/dummyLogin" className="text-gray-200  hover:text-white transition duration-300">
+                  <Link href="/login" className="text-gray-200  hover:text-white transition duration-300">
                     Affiliate Partners
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/dummyLogin" className="text-gray-200  hover:text-white transition duration-300">
+                  <Link href="/login" className="text-gray-200  hover:text-white transition duration-300">
                     Map Creators
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
