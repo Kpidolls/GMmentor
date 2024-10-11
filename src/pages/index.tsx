@@ -1,7 +1,6 @@
 
-// import Link from 'next/link';
-
-import About from '../components/About';
+//  import Link from 'next/link';
+import About from '../components/About'; // Adjust the import path as necessary
 import AboutUs from '../components/AboutUs';
 import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
@@ -15,6 +14,7 @@ import MainHeroImage from '../components/MainHeroImage';
 import Mybusiness from '../components/Mybusiness';
 import Pricing from '../components/Pricing';
 import Product from '../components/Product';
+
 
 const App = () => {
   return (
