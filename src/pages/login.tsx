@@ -3,7 +3,7 @@ import Link from 'next/link';
 import secondaryAction from '../config/index.json';
 
 
-const dummyLogin: React.FC = () => {
+const Login: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
@@ -45,12 +45,16 @@ const dummyLogin: React.FC = () => {
         </form>
         <p className="text-center text-gray-600 mt-4">
           Don't have an account?{' '}
-          <Link href={secondaryAction.mainHero.secondaryAction.href} className="text-blue-600 hover:text-blue-800">Sign Up
+          <Link href={secondaryAction.mainHero.secondaryAction.href} className="text-blue-600 hover:text-blue-800">
+            Sign Up
           </Link>
         </p>
+        <Link href="/" className="inline-block mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-300">
+          Return to Home
+        </Link>
       </div>
     </div>
   );
 };
 
-export default dummyLogin;
+export default Login;
