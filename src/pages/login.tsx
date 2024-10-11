@@ -35,10 +35,12 @@ const Login: React.FC = () => {
             <button
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
+              onClick={() => alert('Invalid email or password')}
             >
               Login
             </button>
-            <Link href="/" className="inline-block align-baseline font-bold text-sm text-blue-600 hover:text-blue-800">
+            <Link href="/" className="inline-block align-baseline font-bold text-sm text-blue-600 hover:text-blue-800" 
+              onClick={() => alert('Invalid email')}>
                 Forgot Password?
             </Link>
           </div>
