@@ -3,61 +3,75 @@ import Link from 'next/link';
 
 const PrivacyPolicy: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">Privacy Policy</h1>
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <p className="mb-4 text-gray-600">
-          Welcome to Googlementor! At Googlementor, we prioritize your privacy and are committed to protecting your personal information. This Privacy Policy outlines the types of information we collect, how we use and share it, and the measures we take to safeguard your information. By using our website and services, you agree to the terms of this Privacy Policy.
-        </p>
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800">Information Collection and Use</h2>
-        <p className="mb-4 text-gray-600">
-          We collect information to provide better services to our users. The types of information we collect include:
-        </p>
-        <ul className="list-disc list-inside mb-4 text-gray-600">
-          <li>Personal Information: When you sign up for our newsletter, create an account, or make a purchase, we may collect personal details such as your name, email address, phone number, and billing information.</li>
-          <li>Non-Personal Information: We may collect non-personal information such as browser type, operating system, and IP address to enhance your experience on our site.</li>
-        </ul>
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800">Cookies and Tracking Technologies</h2>
-        <p className="mb-4 text-gray-600">
-          We use cookies, web beacons, and similar technologies to track your activity on our site and hold certain information. You can control cookie preferences through your browser settings.
-        </p>
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800">Use of Information</h2>
-        <p className="mb-4 text-gray-600">
-          We use the information we collect for various purposes, including:
-        </p>
-        <ul className="list-disc list-inside mb-4 text-gray-600">
-          <li>Providing and maintaining our services</li>
-          <li>Personalizing your experience</li>
-          <li>Processing transactions and managing your orders</li>
-          <li>Sending newsletters, promotional materials, and other communications</li>
-          <li>Improving our website, products, and services</li>
-          <li>Conducting research and analysis</li>
-          <li>Managing and promoting affiliate products and services</li>
-        </ul>
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800">Disclosure and Sharing</h2>
-        <p className="mb-4 text-gray-600">
-          We do not sell your personal information to third parties. However, we may share your information in the following circumstances:
-        </p>
-        <ul className="list-disc list-inside mb-4 text-gray-600">
-          <li>Service Providers: We may share your information with third-party service providers who help us operate our website, conduct our business, or provide services to you.</li>
-          <li>Affiliate Partners: We promote affiliate products and services and may share non-personal information with our affiliate partners to track referrals and sales.</li>
-          <li>Marketing and Social Media Services: With your consent, we may share your information with marketing and social media services.</li>
-        </ul>
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800">Security</h2>
-        <p className="mb-4 text-gray-600">
-          We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or method of electronic storage is 100% secure, and we cannot guarantee its absolute security.
-        </p>
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800">Changes to This Privacy Policy</h2>
-        <p className="mb-4 text-gray-600">
-          We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
-        </p>
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800">Contact Us</h2>
-        <p className="mb-4 text-gray-600">
-          If you have any questions about this Privacy Policy, please contact us at mapsmentorinfo@gmail.com.
-        </p>
-        <Link href="/" className="inline-block mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-300">
-          Return to Home
-        </Link>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-4xl mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">Privacy Policy</h1>
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <p className="mb-4 text-gray-600">
+            Googlementor is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mapping services and shop for custom maps. By using Googlementor, you agree to the collection and use of information in accordance with this policy.
+          </p>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Information We Collect</h2>
+          <p className="mb-4 text-gray-600">
+            <strong>Personal Information:</strong> When registering for an account or purchasing items, we may ask for personal details such as your name, email address, phone number, and shipping/billing addresses.
+          </p>
+          <p className="mb-4 text-gray-600">
+            <strong>Usage Data:</strong> We collect information about how you use our services, including navigation history, map views, purchase records, and browsing behavior.
+          </p>
+          <p className="mb-4 text-gray-600">
+            <strong>Payment Information:</strong> We store payment information securely for transactions made through our platform.
+          </p>
+          <p className="mb-4 text-gray-600">
+            <strong>Geolocation Data:</strong> With your consent, we may access your device's geolocation to provide location-specific suggestions and directions.
+          </p>
+          <p className="mb-4 text-gray-600">
+            <strong>Cookies and Tracking Technologies:</strong>
+          </p>
+          <ul className="list-disc list-inside mb-4 text-gray-600">
+            <li><strong>Cookies:</strong> Used to personalize your experience and analyze trends.</li>
+            <li><strong>Pixels:</strong> Employed for re-targeting advertisements based on your past visits.</li>
+          </ul>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">How We Use Your Information</h2>
+          <p className="mb-4 text-gray-600">
+            Googlementor uses the collected data for various purposes:
+          </p>
+          <ul className="list-disc list-inside mb-4 text-gray-600">
+            <li>To provide and maintain our mapping services.</li>
+            <li>To fulfill orders and ship purchased items.</li>
+            <li>To communicate with you about order status, promotions, and product releases.</li>
+            <li>To personalize your shopping experience based on your preferences.</li>
+            <li>To monitor the effectiveness of our marketing campaigns.</li>
+          </ul>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Sharing Your Information</h2>
+          <p className="mb-4 text-gray-600">
+            We may share your information in the following situations:
+          </p>
+          <ul className="list-disc list-inside mb-4 text-gray-600">
+            <li><strong>Affiliate Products:</strong> When recommending affiliated products or services, we might share basic contact details like email addresses.</li>
+            <li><strong>Service Providers:</strong> We employ third-party companies to facilitate our services ("Service Providers"), provide payment processing solutions, perform service-related tasks, or assist us in analyzing usage trends.</li>
+          </ul>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Your Rights</h2>
+          <p className="mb-4 text-gray-600">
+            Depending on your location, you may have rights regarding personal data:
+          </p>
+          <ul className="list-disc list-inside mb-4 text-gray-600">
+            <li><strong>Right to Access:</strong> Request copies of your personal data.</li>
+            <li><strong>Right to Rectification:</strong> Correct inaccurate or incomplete information.</li>
+            <li><strong>Right to Erasure:</strong> Delete your account under certain conditions.</li>
+            <li><strong>Right to Restrict Processing:</strong> Limit further processing under specified circumstances.</li>
+            <li><strong>Right to Data Portability:</strong> Transfer collected data between organizations or directly back to yourself under applicable laws.</li>
+          </ul>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Changes to Privacy Policy</h2>
+          <p className="mb-4 text-gray-600">
+            We reserve the right to update this privacy policy periodically. Any changes will be posted here. You agree to review these updates regularly since continued access signifies acceptance of revised policies.
+          </p>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Contact Us</h2>
+          <p className="mb-4 text-gray-600">
+            If you have any questions about this Privacy Policy, please contact us via email at mapsmentorinfo@gmail.com.
+          </p>
+          <Link href="/" className="inline-block mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-300">
+            Return to Home
+          </Link>
+        </div>
       </div>
     </div>
   );
