@@ -7,7 +7,7 @@ const Product = () => {
   const [firstItem, secondItem] = product.items;
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8" id="maps">
       <div className="flex flex-wrap items-center mb-12">
         <div className="w-full md:w-1/2 p-6">
           <h3 className="text-4xl text-gray-800 font-bold leading-tight mb-4">
