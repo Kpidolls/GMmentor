@@ -152,7 +152,7 @@ const About = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#TravelInsurance" className="text-gray-200  hover:text-white transition duration-300">
+                    <Link href="#travelinsurance" className="text-gray-200  hover:text-white transition duration-300">
                     Travel Insurance
                     </Link>
                 </li>

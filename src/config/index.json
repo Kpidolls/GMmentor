@@ -14,8 +14,12 @@
     },
 
     {
-      "name": "Travelers",
+      "name": "e-SIM",
       "href": "esimproduct"
+    },
+    {
+      "name": "Travel Insurance",
+      "href": "travelinsurance"
     },
     {
       "name": "About",
