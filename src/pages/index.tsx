@@ -12,8 +12,8 @@ import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
 import Mybusiness from '../components/Mybusiness';
-import Pricing from '../components/Pricing';
 import Product from '../components/Product';
+import TravelInsurance from '../components/TravelInsurance'; // Adjust the import path as necessary
 
 
 const App = () => {
@@ -45,7 +45,7 @@ const App = () => {
       </LazyShow>
       <EsimProduct />
       <LazyShow>
-        <Pricing />
+        <TravelInsurance />
       </LazyShow>
       <AboutUs />
       <LazyShow>
