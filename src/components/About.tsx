@@ -142,25 +142,35 @@ const About = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/login" className="text-gray-200  hover:text-white transition duration-300">
+                    <Link href="/login" className="text-gray-200  hover:text-white transition duration-300">
                     Map Creators
-                  </Link>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#esimproduct" className="text-gray-200  hover:text-white transition duration-300">
+                    Mobile Data - eSim
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#TravelInsurance" className="text-gray-200  hover:text-white transition duration-300">
+                    Travel Insurance
+                    </Link>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-bold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href={socialMedia.facebook} target="_blank" rel="noopener noreferrer">
+                <a href={socialMedia.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <FaFacebook className="text-2xl text-gray-400 hover:text-white transition duration-300" />
                 </a>
-                <a href={socialMedia.twitter} target="_blank" rel="noopener noreferrer">
+                <a href={socialMedia.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <FaTwitter className="text-2xl text-gray-400 hover:text-white transition duration-300" />
                 </a>
-                <a href={socialMedia.tiktok} target="_blank" rel="noopener noreferrer">
+                <a href={socialMedia.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                   <FaTiktok className="text-2xl text-gray-400 hover:text-white transition duration-300" />
                 </a>
-                <a href={socialMedia.instagram} target="_blank" rel="noopener noreferrer">
+                <a href={socialMedia.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <FaInstagram className="text-2xl text-gray-400 hover:text-white transition duration-300" />
                 </a>
               </div>
@@ -190,7 +200,7 @@ const About = () => {
               &copy; {new Date().getFullYear()} Copyright{' '}
               <a
                 href="https://github.com/IssaafKattan"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="text-gray-900 dark:text-gray-50"
                 target="_blank"
               >
