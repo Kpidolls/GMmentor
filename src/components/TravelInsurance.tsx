@@ -12,7 +12,7 @@ const TravelInsurance = () => {
   }, []);
 
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-12" id="TravelInsurance">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">
           Travel Insurance
@@ -36,15 +36,6 @@ const TravelInsurance = () => {
             data-safetywing-affiliate-id="26193325" // spell-checker: disable-line
             data-scale="1.0"
           ></div>
-        </div>
-        <div className="flex justify-center">
-          <iframe
-            src="https://safetywing.com/?referenceID=26193325&utm_source=26193325&utm_medium=Ambassador"
-            width="100%"
-            height="600"
-            title="SafetyWing Travel Insurance"
-            className="rounded-lg shadow-md"
-          ></iframe>
         </div>
       </div>
     </section>
