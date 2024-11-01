@@ -58,12 +58,6 @@ const Menu = () => {
                   {item.name}
                 </Link>
               ))}
-              {/* <a
-                href="#download"
-                className={`font-medium text-primary hover:text-secondary`}
-              >
-                Get started
-              </a> */}
             </div>
           </nav>
         </div>
