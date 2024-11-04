@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 import config from '../config/index.json';
 
 const Menu = () => {
-  const { navigation, company, callToAction } = config;
+  const { navigation, company } = config;
   const { name: companyName, logo } = company;
 
   return (
@@ -93,12 +93,12 @@ const Menu = () => {
                 </Link>
               ))}
             </div>
-            <a
+            {/* <a
               href={callToAction.href}
               className="block w-full px-5 py-3 text-center font-medium text-primary bg-gray-50 hover:bg-gray-100"
             >
               {callToAction.text}
-            </a>
+            </a> */}
           </div>
         </Popover.Panel>
       </Transition>
