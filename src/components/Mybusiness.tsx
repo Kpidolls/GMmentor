@@ -1,3 +1,4 @@
+import { BookmarkIcon } from '@heroicons/react/solid';
 import React from 'react';
 
 const CreateList = () => {
@@ -10,6 +11,7 @@ const CreateList = () => {
           <div className="flex items-center mb-4">
             <h3 className="font-bold text-xl text-blue-600">Step 1:</h3>
             <h3 className="font-bold text-red-600 text-xl ml-2">Tap “You” on Google Maps</h3>
+            <BookmarkIcon className="h-6 w-6 text-blue-600 mr-2 ml-2" />
           </div>
           <p className="text-gray-600 mb-4">
             You can manage your lists under the “Saved” tab on Google Maps app to get started.
