@@ -1,5 +1,5 @@
-import { BookmarkIcon } from '@heroicons/react/solid';
 import React from 'react';
+import { BookmarkIcon } from '@heroicons/react/solid';
 
 const CreateList = () => {
   return (
@@ -10,8 +10,9 @@ const CreateList = () => {
         <div className="bg-white shadow-lg rounded-lg p-6">
           <div className="flex items-center mb-4">
             <h3 className="font-bold text-xl text-blue-600">Step 1:</h3>
-            <h3 className="font-bold text-red-600 text-xl ml-2">Tap “You” on Google Maps</h3>
-            <BookmarkIcon className="h-6 w-6 text-blue-600 mr-2 ml-2" />
+            <h3 className="font-bold text-red-600 text-xl ml-2 flex items-center">Tap “You” 
+              <BookmarkIcon className="h-6 w-6 text-blue-600 ml-2" />
+            </h3>
           </div>
           <p className="text-gray-600 mb-4">
             You can manage your lists under the “Saved” tab on Google Maps app to get started.
@@ -46,11 +47,10 @@ const CreateList = () => {
         <div className="bg-white shadow-lg rounded-lg p-6">
           <div className="flex items-center mb-4">
             <h3 className="font-bold text-xl text-blue-600">Step 4:</h3>
-            <h3 className="font-bold text-red-600 text-xl ml-2">Save and Share Your List</h3>
+            <h3 className="font-bold text-red-600 text-xl ml-2">Add Location to Your List</h3>
           </div>
           <p className="text-gray-600 mb-4">
-            Once you have added all the places to your list, save it and share it with others. You can
-            share your list via a link or directly through the Google Maps app.
+          Enhance your lists by adding locations and personalized notes to make them even more valuable. Share your curated lists effortlessly via link or directly through the Google Maps app. For assistance or to discuss selling your list as an e-map guide, feel free to reach out to us.
           </p>
         </div>
       </div>

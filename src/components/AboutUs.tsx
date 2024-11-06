@@ -15,14 +15,14 @@ const AboutUs = () => {
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-indigo-600">Our Mission</h2>
             <p className="mt-4 text-gray-600">
-              Our mission is to empower individuals and businesses by providing solutions that enhance connectivity and productivity. We are dedicated to providing essential content that both educates and entertains millions around the globe.
+            Our mission is to empower individuals and businesses by delivering innovative mapping solutions that enhance connectivity, enrich experiences and drive productivity. We are committed to providing high-quality content that educates, informs, and inspires users worldwide. We aim to create a platform where valuable location-based knowledge is easily accessible to everyone.
             </p>
           </div>
 
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-indigo-600">Our Values</h2>
             <p className="mt-4 text-gray-600">
-              Integrity, accessibility, and inclusivity are the core values that guide our actions and decisions. We strive to ensure our information is reliable and up-to-date, making complex topics understandable and enjoyable for diverse audiences. We believe in fostering a community of curious minds.
+            Our actions and decisions are grounded in our core values of integrity, accessibility, and inclusivity. We are dedicated to delivering accurate, up-to-date information and making complex topics clear and engaging for a diverse audience. Our mission is to cultivate a community of curious minds, united by a shared passion for discovery and learning.
             </p>
           </div>
         </div>
