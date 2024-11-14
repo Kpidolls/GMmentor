@@ -15,14 +15,14 @@ const AboutUs = () => {
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-indigo-600">Our Mission</h2>
             <p className="mt-4 text-gray-600">
-            Our mission is to empower individuals and businesses by delivering innovative mapping solutions that enhance connectivity, enrich experiences and drive productivity. We are committed to providing high-quality content that educates, informs, and inspires users worldwide. We aim to create a platform where valuable location-based knowledge is easily accessible to everyone.
+            Our mission is to empower individuals and businesses by delivering innovative mapping solutions that enhance connectivity, enrich experiences and drive productivity. We are committed to providing high-quality content that educates, informs and inspires users worldwide. We aim to create a platform where valuable location-based knowledge is easily accessible to everyone. Our goal is to cultivate a community of curious minds united in their passion for discovery and learning.
             </p>
           </div>
 
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-indigo-600">Our Values</h2>
             <p className="mt-4 text-gray-600">
-            Our actions and decisions are grounded in our core values of integrity, accessibility, and inclusivity. We are dedicated to delivering accurate, up-to-date information and making complex topics clear and engaging for a diverse audience. Our mission is to cultivate a community of curious minds, united by a shared passion for discovery and learning.
+            We prioritize integrity, ensuring that honesty and transparency guide our actions and decisions. We strive to provide clear, accurate information that is easily understandable for everyone, regardless of their background. We embrace inclusivity, fostering an environment where diverse perspectives are valued and encouraged. We emphasize authenticity in our interactions, building trust through genuine connections that value locals insights. 
             </p>
           </div>
         </div>

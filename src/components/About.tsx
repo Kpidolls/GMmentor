@@ -148,7 +148,7 @@ const About = () => {
                   </li>
                   <li>
                     <Link href="#esimproduct" className="text-gray-200  hover:text-white transition duration-300">
-                    Mobile Data - eSim
+                    Mobile Data - eSIM
                     </Link>
                   </li>
                   <li>
