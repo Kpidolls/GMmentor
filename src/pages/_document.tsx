@@ -8,6 +8,7 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head>
+        <link rel="canonical" href={AppConfig.baseUrl} />
         <meta name="description" content="Discover our range of services designed to enhance your traveling. From travel insurance to mobile, we have you covered." />
         <meta name="keywords" content="travel insurance, mobile data e-sim, mapping services, Google Maps, tourist guides" />
         <meta name="author" content="Travel Tips" />
