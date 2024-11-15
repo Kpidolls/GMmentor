@@ -9,6 +9,7 @@ class MyDocument extends Document {
       <Html lang={AppConfig.locale}>
         <Head>
         <link rel="canonical" href={AppConfig.baseUrl} />
+        <meta name="google-site-verification" content="cUimG9-WnVYYDC8Tk1Dr6Ieh4ARJp-HzYxrbKTzYxpI" />
         <meta name="description" content="Enhance your traveling. From travel insurance to mobile data e-SIMS, we have you covered." />
         <meta name="keywords" content="travel insurance, mobile data e-sim, mapping services, Google Maps, tourist guides" />
         <meta name="author" content="Travel Tips" />
