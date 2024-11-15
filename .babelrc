@@ -8,6 +8,5 @@
         }
       }
     ]
-  ],
-  "ignore": ["node_modules/react-icons/fa/index.mjs"]
+  ]
 }
