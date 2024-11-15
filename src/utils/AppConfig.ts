@@ -3,5 +3,5 @@ export const AppConfig = {
   title: 'Google Mentor',
   description: 'Discover our range of services designed to enhance your traveling. From travel insurance to mobile, we have you covered.',
   locale: 'en',
-  baseUrl: 'https://www.googlementor.com',
+  baseUrl: process.env.NODE_ENV === 'production' ? 'https://Stavros.github.io/GoogleMapsMentor' : 'http://localhost:3000',
 };
