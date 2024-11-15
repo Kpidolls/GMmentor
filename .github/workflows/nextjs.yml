@@ -36,7 +36,9 @@ jobs:
           echo "NEXT_PUBLIC_ASSET_PREFIX=/GMmentor/" >> $GITHUB_ENV
 
       - name: Build Next.js app
-        run: yarn build
+        run: |
+          yarn build
+          yarn export
 
 
       - name: Upload artifact
