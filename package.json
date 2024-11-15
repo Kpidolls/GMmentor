@@ -12,7 +12,8 @@
     "build-types": "tsc --noEmit --pretty",
     "prepare": "husky install",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out",
+    "export": "next export"
   },
   "dependencies": {
     "@babel/runtime": "^7.25.7",
