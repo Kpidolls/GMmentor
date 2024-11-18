@@ -1,21 +1,25 @@
-import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 
-const Terms: React.FC = () => {
+const Terms = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-4xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">Terms and Conditions</h1>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <p className="mb-4 text-gray-600">
-            Welcome to Googlementor! These Terms of Use govern your access to and use of Googlementor's mapping services and shopping platform. By using our site, you agree to these terms. If you do not agree, please do not use our services.
-          </p>
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800">1. Acceptance of Terms</h2>
-          <p className="mb-4 text-gray-600">
-            By accessing or using Googlementor, you confirm that you are at least 18 years old or have the consent of a parent or guardian. If you are using the services on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.
-          </p>
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800">2. Services Provided</h2>
-          <p className="mb-4 text-gray-600">
+    <div>
+      <Head>
+        <title>Terms and Conditions - Googlementor</title>
+        <meta name="description" content="Read the terms and conditions for using Googlementor." />
+        <meta name="robots" content="index, follow" />
+      </Head>
+      <div className="container mx-auto p-4">
+        <h1 className="text-2xl font-bold mb-4">Terms and Conditions</h1>
+        <h2 className="text-2xl font-semibold mb-4 text-gray-800">1. Access</h2>
+        <p className="mb-4 text-gray-600">
+          <strong>User Consent:</strong>  Welcome to Googlementor! These Terms of Use govern your access to and use of Googlementor's mapping services and shopping platform. By using our site, you agree to these terms. If you do not agree, please do not use our services.
+        </p>
+        <h2 className="text-2xl font-semibold mb-4 text-gray-800">2. Age requirements</h2>
+        <p className="mb-4 text-gray-600">
+          <strong>Data Protection Compliance:</strong> By accessing or using Googlementor, you confirm that you are at least 18 years old or have the consent of a parent or guardian. If you are using the services on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.
+        </p>
+<p className="mb-4 text-gray-600">
             Googlementor offers a platform for users to:
           </p>
           <ul className="list-disc list-inside mb-4 text-gray-600">
@@ -98,13 +102,12 @@ const Terms: React.FC = () => {
           <p className="mb-4 text-gray-600">
             <strong>Data Protection Compliance:</strong> Comply fully with relevant privacy regulations such as GDPR and other applicable laws regarding data protection and user privacy.
           </p>
-          <p className="mb-4 text-gray-600">
-            By using Googlementor, you acknowledge that you have read these Terms and agree to be bound by them. Thank you for being part of our community!
-          </p>
-          <Link href="/" className="inline-block mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-300">
-              Return to Home
-          </Link>
-        </div>
+        <p className="mb-4 text-gray-600">
+          By using Googlementor, you acknowledge that you have read these Terms and agree to be bound by them. Thank you for being part of our community!
+        </p>
+        <Link href="/" className="inline-block mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-300">
+          Return to Home
+        </Link>
       </div>
     </div>
   );
