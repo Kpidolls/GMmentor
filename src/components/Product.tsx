@@ -14,7 +14,7 @@ const Product = () => {
 
   const mapOptions = [
     'Asian Cuisine',
-    'Bougatsa Shops (Traditional Greek Custard Pie)',
+    'Bougatsa Shops',
     'Brunch, Coffee & Bakeries',
     'Burger Spots',
     'Cheap Eats & Street Food',
