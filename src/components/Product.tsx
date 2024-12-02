@@ -3,7 +3,7 @@ import config from '../config/index.json';
 
 const Product = () => {
   const { product } = config;
-  const [firstItem, secondItem] = product.items;
+  const [firstItem, secondItem] = product.items || [{}, {}];
 
   const [selectedOption, setSelectedOption] = useState('');
 
@@ -57,8 +57,8 @@ const Product = () => {
         <select
           id="map-category"
           value={selectedOption}
-          onChange={(e) => setSelectedOption(e.target.value as string)}
-          className="mb-4 p-2 border rounded"
+          onChange={(e) => setSelectedOption(e.target.value)}
+          className="mb-4 p-2 border rounded w-full md:w-auto"
         >
           <option value="" disabled>Select a map category</option>
           {mapOptions.map((option, index) => (
@@ -68,11 +68,13 @@ const Product = () => {
           ))}
         </select>
         <button
+          type="button"
           onClick={() => {
             handleCopy();
-            window.location.href = `mailto:mapsmentorinfo@gmail.com?subject=I agree with googlementor.com terms!&body=I would like the "${selectedOption} in Greece" list`;
+            const encodedOption = encodeURIComponent(selectedOption);
+            window.location.href = `mailto:mapsmentorinfo@gmail.com?subject=I agree with googlementor.com terms!&body=I would like the "${encodedOption} in Greece" list`;
           }}
-          className="ml-2 px-4 py-2 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition-colors duration-300"
+          className="mt-4 md:mt-0 ml-0 md:ml-2 px-4 py-2 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition-colors duration-300 w-full md:w-auto"
         >
           Request
         </button>
