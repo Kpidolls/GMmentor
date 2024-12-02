@@ -13,26 +13,26 @@ const Product = () => {
   };
 
   const mapOptions = [
-    'Asian food',
-    'Bougatsa',
-    'Brunch - Coffee - Bakeries',
-    'Burgers',
-    'Cheap Eats - Street food',
-    'Desserts',
-    'Drinks',
-    'Fish Tavern',
-    'Fish Tavern with view',
-    'Greek restaurants',
-    'Gyros - Souvlaki - Kebabs',
+    'Asian Cuisine',
+    'Bougatsa Shops (Traditional Greek Custard Pie)',
+    'Brunch, Coffee & Bakeries',
+    'Burger Spots',
+    'Cheap Eats & Street Food',
+    'Desserts & Sweet Treats',
+    'Bars & Drinks',
+    'Fish Taverns',
+    'Fish Taverns with Scenic Views',
+    'Traditional Cuisine',
+    'Gyros, Souvlaki & Kebabs',
     'Hiking Trails',
-    'Italian food',
+    'Italian Cuisine',
     'Luxury Dining',
-    'Mexican food',
-    'Monasteries - Churches',
-    'Monuments - Tourist Attractions',
-    'Rooftops',
-    'Vegan - Vegetarian friendly',
-    'Winery - Vineyards'
+    'Mexican Cuisine',
+    'Historic Monasteries & Churches',
+    'Monuments & Must-See Attractions',
+    'Rooftop Lounges',
+    'Vegan & Vegetarian-Friendly Spots',
+    'Wineries & Vineyards'
   ];
 
   return (
@@ -57,7 +57,7 @@ const Product = () => {
         <select
           id="map-category"
           value={selectedOption}
-          onChange={(e) => setSelectedOption(e.target.value)}
+          onChange={(e) => setSelectedOption(e.target.value as string)}
           className="mb-4 p-2 border rounded"
         >
           <option value="" disabled>Select a map category</option>
@@ -77,6 +77,12 @@ const Product = () => {
           Request
         </button>
       </div>
+        <div className="mt-6">
+            <div className="bg-gray-100 border-l-4 border-gray-300 p-4 rounded-md shadow-md">
+              <p className="font-semibold text-gray-800">Available Regions</p>
+              <p className="text-gray-700">We currently offer custom maps for Greece. More regions will be added in the future.</p>
+            </div>
+        </div>
         </div>
         <div className="w-full md:w-1/2 p-6">
           <img
