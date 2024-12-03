@@ -11,7 +11,7 @@ const About = () => {
       {/* Other content */}
       <footer className="bg-gray-800 text-white py-12 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-lg font-bold mb-4">Links</h3>
               <ul className="text-gray-400">
@@ -53,6 +53,20 @@ const About = () => {
                   <FaInstagram className="text-2xl text-gray-400 hover:text-white transition duration-300" />
                 </a>
               </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-4">Support Us</h3>
+              <p className="text-gray-400">
+                If you find our content helpful, consider supporting us.
+              </p>
+              <a
+                href="https://buymeacoffee.com/googlementor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 px-6 py-2 bg-yellow-500 text-gray-900 font-semibold rounded hover:bg-yellow-600 transition duration-300"
+              >
+                Buy Me a Coffee
+              </a>
             </div>
             <div>
               <h3 className="text-lg font-bold mb-4">Contact Us</h3>
