@@ -86,6 +86,14 @@ const Product = () => {
         >
           Request
         </button>
+      <button
+        type="button"
+        onClick={handleCopy}
+        className={`mt-4 md:mt-0 ml-0 md:ml-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-300 w-full md:w-auto ${!selectedOption ? 'opacity-50 cursor-not-allowed' : ''}`}
+        disabled={!selectedOption}
+      >
+        Copy
+      </button>
       <div className="mt-6">
         <label htmlFor="country" className="block mb-2 text-sm font-medium text-gray-700">
           Country
