@@ -78,11 +78,24 @@ const Product = () => {
         >
           Request
         </button>
+      <div className="mt-6">
+        <label htmlFor="country" className="block mb-2 text-sm font-medium text-gray-700">
+          Country
+        </label>
+        <select
+          id="country"
+          value="Greece"
+          disabled
+          className="mb-4 p-2 border rounded w-full md:w-auto bg-gray-200 cursor-not-allowed"
+        >
+          <option value="Greece">Greece</option>
+        </select>
+      </div>
       </div>
         <div className="mt-6">
-            <div className="bg-gray-100 border-l-4 border-gray-300 p-4 rounded-md shadow-md">
-              <p className="font-semibold text-gray-800">Available Regions</p>
-              <p className="text-gray-700">We currently offer custom maps for Greece. More regions will be added in the future.</p>
+            <div className="bg-gray-100 border-l-4 border-gray-300 p-2 rounded-md shadow-md">
+              <p className="font-semibold text-gray-800 text-sm">Available Regions</p>
+              <p className="text-gray-700 text-sm">We currently offer custom maps for Greece. More regions will be added in the future.</p>
             </div>
         </div>
         </div>
