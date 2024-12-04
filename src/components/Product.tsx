@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import config from '../config/index.json';
 
+/**
+ * This component displays product information and allows users to select a map category and request a list via email.
+ * It includes a form with a dropdown for selecting map categories and a button to send the request.
+ * The country is pre-selected as "Greece" and cannot be changed.
+ * 
+ * @todo Replace this with mail list functionality and add a checkbox for user agreement.
+ */
 const Product = () => {
   const { product } = config;
   const [firstItem, secondItem] = product.items || [{}, {}];
@@ -74,7 +81,8 @@ const Product = () => {
             const encodedOption = encodeURIComponent(selectedOption);
             window.location.href = `mailto:mapsmentorinfo@gmail.com?subject=I agree with googlementor.com terms!&body=I would like the "${encodedOption} in Greece" list`;
           }}
-          className="mt-4 md:mt-0 ml-0 md:ml-2 px-4 py-2 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition-colors duration-300 w-full md:w-auto"
+          className={`mt-4 md:mt-0 ml-0 md:ml-2 px-4 py-2 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition-colors duration-300 w-full md:w-auto ${!selectedOption ? 'opacity-50 cursor-not-allowed' : ''}`}
+          disabled={!selectedOption}
         >
           Request
         </button>
