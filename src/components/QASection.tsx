@@ -64,7 +64,7 @@ const QASection = () => {
     }
   ];
     // Add more questions and answers here;
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const toggleAccordion = (index: number) => {
       setActiveIndex(activeIndex === index ? null : index);
