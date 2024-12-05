@@ -1,6 +1,6 @@
 
 //  import Link from 'next/link';
-import About from '../components/About'; // Adjust the import path as necessary
+import About from '../components/About'; 
 import AboutUs from '../components/AboutUs';
 import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
@@ -13,8 +13,8 @@ import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
 import Mybusiness from '../components/Mybusiness';
 import Product from '../components/Product';
-import TravelInsurance from '../components/TravelInsurance'; // Adjust the import path as necessary
-
+import TravelInsurance from '../components/TravelInsurance'; 
+import QASection from '../components/QASection'; 
 
 const App = () => {
   return (
@@ -49,7 +49,8 @@ const App = () => {
       <LazyShow>
         <TravelInsurance />
       </LazyShow>
-      <AboutUs />
+      <AboutUs />      
+      <QASection /> 
       <LazyShow>
         <>
           <Canvas />
