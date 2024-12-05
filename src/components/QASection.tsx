@@ -39,7 +39,7 @@ const QASection = () => {
       answer: "Yes, you can request as many maps as you need. Just include the list names in your email, and we’ll handle the rest."
     },
     {
-      question: "Why should I buy insurance for difficult trips, and what coverage can I get from SafetyWing.com?",
+      question: "Why should I buy insurance?",
       answer: "Travel insurance is essential for trips that involve adventure, remote locations or unpredictable conditions. Emergency medical expenses, trip interruptions or cancellations, lost or delayed baggage and adventure sports coverage are covered by SafetyWing."
     },
     {
@@ -47,7 +47,7 @@ const QASection = () => {
       answer: "Whether you’re a traveler, foodie or local explorer, Googlementor.com is designed for anyone looking to make the most out of Google Maps and discover amazing places tailored to their preferences."
     },
     {
-      question: "Why are Airalo’s eSIMs the cheapest reliable option?",
+      question: "Why is Airalo eSIM the cheapest reliable option?",
       answer: "Airalo offers cheap eSIM starting as low as $5 with no physical SIM card needed. It eliminates shipping and handling costs. They provide service in over 190 countries and have region plans so you can avoid getting multiple sims for different countries. You have instant activation that saves time and effort with seamless online setup."
     },
     {
