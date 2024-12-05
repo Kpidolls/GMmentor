@@ -10,7 +10,7 @@ const Menu = () => {
   const { name: companyName, logo } = company;
   const router = useRouter();
 
-  const handleNavigation = (href) => {
+  const handleNavigation = (href: string) => {
     router.push(`/#${href}`);
   };
 
