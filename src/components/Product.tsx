@@ -111,7 +111,7 @@ const Product = () => {
         <div className="mt-6">
             <div className="bg-gray-100 border-l-4 border-gray-300 p-2 rounded-md shadow-md">
               <p className="font-semibold text-gray-800 text-sm">Available Regions</p>
-              <p className="text-gray-700 text-sm">We currently offer custom maps for Greece. More regions will be added in the future.</p>
+              <p className="text-gray-700 text-sm">We currently offer custom maps for Greece, with plans to expand to more regions and city-specific lists in the near future. Stay tuned for updates!</p>
             </div>
         </div>
         </div>
