@@ -4,7 +4,7 @@ const QASection = () => {
   const questionsAndAnswers = [
     {
       question: "What is googlementor.com?",
-      answer: "Googlementor.com is your trusted platform for curated custom maps and expert navigation support. We provide tailored advice, practical tips, and insightful guidance to help you explore, discover, and make the most of Google Maps."
+      answer: "googlementor.com is your trusted platform for curated custom maps and expert navigation support. We provide tailored advice, practical tips, and insightful guidance to help you explore, discover and make the most of Google Maps."
     },
     {
       question: "What are custom maps?",
