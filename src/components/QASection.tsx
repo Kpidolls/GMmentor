@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const QASection = () => {
   const questionsAndAnswers = [
     {
-      question: "What is Googlementor.com?",
+      question: "What is googlementor.com?",
       answer: "Googlementor.com is your go-to platform for expert advice on using Google Maps. We offer curated custom maps, tips and insights to help you navigate, explore and discover with ease."
     },
     {
@@ -11,8 +11,8 @@ const QASection = () => {
       answer: "Custom maps are curated collections of saved locations organized around a specific theme. They simplify your search, making it easier to discover and explore places that match your interests. You can save a map and then it will appear in your Google Maps with all the locations as emojis."
     },
     {
-      question: "How can I request a custom Google Maps List?",
-      answer: "It’s simple! Email us your request with the name of the List and the Country. Don’t forget to add 'I agree to googlementor.com terms' as the title of your email for a smooth process."
+      question: "How can I request a custom Google Maps list?",
+      answer: "It’s simple! Email us your request with the name of the list and the Country. Don’t forget to add 'I agree to googlementor.com terms' as the title of your email for a smooth process."
     },
     {
       question: "Are the Google Maps lists free?",
@@ -24,11 +24,11 @@ const QASection = () => {
     },
     {
       question: "How can I hide the custom map?",
-      answer: "Select 'You' -> Click and expand the Saved tab -> Select the dots on the List you wish to hide ... -> Select 'Hide on your map' ✅"
+      answer: "Select 'You' -> Click and expand the Saved tab -> Select the dots on the list you wish to hide ... -> Select 'Hide on your map' ✅"
     },
     {
       question: "How can I see the custom map?",
-      answer: "Select 'You' -> Click and expand the Saved tab -> Select the dots on the List you wish to show ... -> Select 'Show on your map' ✅"
+      answer: "Select 'You' -> Click and expand the Saved tab -> Select the dots on the list you wish to show ... -> Select 'Show on your map' ✅"
     },
     {
       question: "How often do you update the maps?",
@@ -36,19 +36,19 @@ const QASection = () => {
     },
     {
       question: "Can I request multiple maps?",
-      answer: "Yes, you can request as many maps as you need. Just include the list names in your email, and we’ll handle the rest."
+      answer: "Yes, you can request as many maps as you need. Just include the list names in your email and we’ll handle the rest."
     },
     {
       question: "Why should I buy insurance?",
-      answer: "Travel insurance is essential for trips that involve adventure, remote locations or unpredictable conditions. Emergency medical expenses, trip interruptions or cancellations, lost or delayed baggage and adventure sports coverage are covered by SafetyWing."
+      answer: "Travel insurance is essential  for difficult trips involving adventure, remote destinations or unpredictable circumstances. SafetyWing provides coverage for emergency medical expenses, trip interruptions or cancellations, lost or delayed baggage and even adventure sports activities. Prepare for unexpected situations, travel with peace of mind."
     },
     {
-      question: "Who can benefit from Googlementor.com?",
-      answer: "Whether you’re a traveler, foodie or local explorer, Googlementor.com is designed for anyone looking to make the most out of Google Maps and discover amazing places tailored to their preferences."
+      question: "Who can benefit from googlementor.com?",
+      answer: "Whether you’re a traveler, foodie or local explorer, googlementor.com is designed for anyone looking to make the most out of Google Maps and discover amazing places tailored to their preferences."
     },
     {
       question: "Why is Airalo eSIM the cheapest reliable option?",
-      answer: "Airalo offers cheap eSIM starting as low as $5 with no physical SIM card needed. It eliminates shipping and handling costs. They provide service in over 190 countries and have region plans so you can avoid getting multiple sims for different countries. You have instant activation that saves time and effort with seamless online setup."
+      answer: "Airalo offers cheap eSIMs, starting as low as $5 with no physical SIM card needed. It eliminates shipping and handling costs. They provide service in over 190 countries and have regional plans for neighboring countries so you can avoid getting multiple sims for different countries. You have instant activation that saves time and effort with seamless online setup."
     },
     {
       question: "How do I contact you for additional help?",
