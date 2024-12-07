@@ -25,7 +25,7 @@ const Product = () => {
     'Coffee & Brunch',
     'Burger Spots',
     'Cheap Eats',
-    'Desserts & Sweet Treats',
+    'Desserts & Treats',
     'Bars & Drinks',
     'Fish Taverns',
     'Fish Taverns with Scenic Views',
@@ -35,10 +35,10 @@ const Product = () => {
     'Italian Cuisine',
     'Luxury Dining',
     'Mexican Cuisine',
-    'Historic Monasteries & Churches',
+    'Monasteries & Churches',
     'Must-See Attractions',
     'Rooftop Lounges',
-    'Vegan & Vegetarian-Friendly Spots',
+    'Vegan & Vegetarian-Friendly',
     'Wineries & Vineyards'
   ];
 
