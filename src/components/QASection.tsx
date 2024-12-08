@@ -8,7 +8,7 @@ const QASection = () => {
     },
     {
       question: "What are custom maps?",
-      answer: "Custom maps are curated collections of saved locations organized around a specific theme. They simplify your search, making it easier to discover and explore places that match your interests. You can save a map list and then it will appear in your Google Maps with all the locations as emojis."
+      answer: "Custom maps are curated collections of saved locations organized around a specific theme. They simplify your search, making it easier to discover and explore places that match your interests. You can save a map list, and it will  appear in your Google Maps with all the locations represented by emojis. In Google Maps 'You' tab -> under 'Lists that you saved'"
     },
     {
       question: "How can I request a custom Google Maps list?",
