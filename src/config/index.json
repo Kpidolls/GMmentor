@@ -24,6 +24,10 @@
     {
       "name": "About",
       "href": "aboutus"
+    },
+    {
+      "name": "FAQ",
+      "href": "qa-section"
     }
   ],
   "callToAction": {
