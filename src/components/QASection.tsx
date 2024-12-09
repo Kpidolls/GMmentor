@@ -47,6 +47,10 @@ const QASection = () => {
       answer: "Whether you’re a traveler, foodie or local explorer, googlementor.com is designed for anyone looking to make the most out of Google Maps and discover amazing places tailored to their preferences."
     },
     {
+      question: "Why buy an eSIM when my mobile contract already includes roaming?",
+      answer: "eSIMs are a convenient and cost-effective alternative to traditional SIM cards. An eSIM can be a smart addition even if your mobile plan includes roaming. It often provides lower costs, especially outside your carrier's preferred regions, while offering better connectivity and faster speeds by connecting directly to local networks. eSIMs are also ideal for travel to areas where your provider has limited coverage, ensuring reliable and seamless connectivity throughout your trip."
+    },
+    {
       question: "Why is Airalo eSIM the cheapest reliable option?",
       answer: "Airalo offers cheap eSIMs, starting as low as $5 with no physical SIM card needed. It eliminates shipping and handling costs. They provide service in over 190 countries and have regional plans for neighboring countries so you can avoid getting multiple sims for different countries. You have instant activation that saves time and effort with seamless online setup."
     },
