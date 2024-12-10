@@ -8,7 +8,7 @@ const EsimProduct = () => {
           <div className="md:w-1/2 mb-8 md:mb-0">
             <div className="h-full bg-white rounded-lg overflow-hidden shadow-lg p-8">
               <h3 className="font-bold text-3xl mb-6 text-center text-indigo-600">
-                Get Mobile Data for Travel: Buy an eSIM
+                Travel Smarter: Get an eSIM
               </h3>
               <p className="text-gray-600 mb-8 text-lg">
                 As a traveler, buying an eSIM offers numerous benefits, ensuring
