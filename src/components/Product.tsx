@@ -29,7 +29,7 @@ const Product = () => {
     'Bars & Drinks',
     'Fish Taverns',
     'Fish Taverns with Scenic Views',
-    'Traditional Cuisine',
+    'Tavernas',
     'Gyros & Souvlaki',
     'Hiking Trails',
     'Italian Cuisine',
