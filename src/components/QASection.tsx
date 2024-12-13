@@ -4,11 +4,11 @@ const QASection = () => {
   const questionsAndAnswers = [
     {
       question: "What is googlementor.com?",
-      answer: "googlementor.com is your trusted platform for curated custom maps and expert navigation support. We provide tailored advice, practical tips, and insightful guidance to help you explore, discover and make the most of Google Maps."
+      answer: "Googlementor is your trusted platform for curated custom maps and expert navigation support. We provide tailored advice, practical tips, fun and insightful guidance to help you explore, discover and make the most of Google Maps."
     },
     {
       question: "What are custom maps?",
-      answer: "Custom maps are curated collections of saved locations organized around a specific theme. They simplify your search, making it easier to discover and explore places that match your interests. You can save a map list, and it will  appear in your Google Maps with all the locations represented by emojis. In Google Maps 'You' tab -> under 'Lists that you saved'"
+      answer: "Custom maps are curated collections of saved locations organized around a specific theme. They simplify your search, making it easier to discover and explore places that match your interests. You can save a map list, and it will appear in your Google Maps with all the locations represented by emojis. In Google Maps 'You' tab -> under 'Lists that you saved'."
     },
     {
       question: "How can I request a custom Google Maps list?",
@@ -40,7 +40,7 @@ const QASection = () => {
     },
     {
       question: "Why should I buy insurance?",
-      answer: "Travel insurance is essential  for difficult trips involving adventure, remote destinations or unpredictable circumstances. SafetyWing provides coverage for emergency medical expenses, trip interruptions or cancellations, lost or delayed baggage and even adventure sports activities. Prepare for unexpected situations, travel with peace of mind."
+      answer: "Travel insurance is essential for difficult trips involving adventure, remote destinations or unpredictable circumstances. SafetyWing provides coverage for emergency medical expenses, trip interruptions or cancellations, lost or delayed baggage and even adventure sports activities. Prepare for unexpected situations, travel with peace of mind."
     },
     {
       question: "Who can benefit from googlementor.com?",
@@ -65,6 +65,29 @@ const QASection = () => {
     {
       question: "Can I delete a list if I no longer need it?",
       answer: "Yes, you can delete any list you’ve created at any time from your Google Maps account."
+    },
+    {
+      question: "How does the 'Request' button work?",
+      answer: `When you press the "Request" button, it opens your default email app to send an email to us with the subject line specifying the "Googlementor list" you are requesting. The email allows us to identify your request and send you the relevant Googlementor list.
+
+To use the "Request" button effectively, ensure your default email app is set up. Here's how:
+
+Windows (Outlook, Gmail):
+1. Go to Settings > Apps > Default Apps.
+2. Scroll down to Email and choose your preferred app (e.g., Outlook, Gmail).
+
+Mac (Apple Mail, Gmail):
+1. Open the Mail app.
+2. Go to Mail > Preferences.
+3. Under the General tab, set your default email app.
+
+iOS (iPhone/iPad):
+1. Go to Settings > Your Email App (e.g., Gmail).
+2. Tap Default Mail App and select your choice.
+
+Android (Samsung, Google Pixel, etc.):
+1. Go to Settings > Apps > Default Apps.
+2. Select Email and choose your preferred app.`
     }
   ];
     // Add more questions and answers here;
