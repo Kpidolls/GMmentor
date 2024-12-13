@@ -20,7 +20,7 @@ const QASection = () => {
     },
     {
       question: "How do I use the custom Google Maps list I receive?",
-      answer: "After receiving the link to your custom map, click it to open the map in Google Maps. From there, you can save it to your account for easy access on your devices. You will also receive directions via email."
+      answer: "After receiving the link to your custom map, click it to open the map in Google Maps. From there, you can save it to your account."
     },
     {
       question: "How can I hide the custom map?",
@@ -48,11 +48,11 @@ const QASection = () => {
     },
     {
       question: "Why buy an eSIM when my mobile contract already includes roaming?",
-      answer: "eSIMs are a convenient and cost-effective alternative to traditional SIM cards. An eSIM can be a smart addition even if your mobile plan includes roaming. It often provides lower costs, especially outside your carrier's preferred regions, while offering better connectivity and faster speeds by connecting directly to local networks. eSIMs are also ideal for travel to areas where your provider has limited coverage, ensuring reliable and seamless connectivity throughout your trip."
+      answer: "eSIMs are a convenient and cost-effective alternative to traditional SIM cards. It often provides lower costs while offering better connectivity and faster speeds by connecting directly to local networks. eSIMs are also ideal for areas where your provider has limited coverage, ensuring reliable and seamless connectivity throughout your trip."
     },
     {
       question: "Why is Airalo eSIM the cheapest reliable option?",
-      answer: "Airalo offers cheap eSIMs, starting as low as $5 with no physical SIM card needed. It eliminates shipping and handling costs. They provide service in over 190 countries and have regional plans for neighboring countries so you can avoid getting multiple sims for different countries. You have instant activation that saves time and effort with seamless online setup."
+      answer: "Airalo offers cheap eSIMs, starting from $5 with no physical SIM card needed. It eliminates shipping and handling costs. They provide service in over 190 countries and have regional plans for neighboring countries so you can avoid getting multiple sims for different countries. You have instant activation that saves time and effort with easy online setup."
     },
     {
       question: "How do I contact you for additional help?",
@@ -64,30 +64,13 @@ const QASection = () => {
     },
     {
       question: "Can I delete a list if I no longer need it?",
-      answer: "Yes, you can delete any list you’ve created at any time from your Google Maps account."
+      answer: "Yes, you can delete any list you’ve created at any time from your Google Maps account. Simply open the list, click the three dots in the top right corner, and select 'Delete list'."
     },
     {
       question: "How does the 'Request' button work?",
       answer: `When you press the "Request" button, it opens your default email app to send an email to us with the subject line specifying the "Googlementor list" you are requesting. The email allows us to identify your request and send you the relevant Googlementor list.
 
-To use the "Request" button effectively, ensure your default email app is set up. Here's how:
-
-Windows (Outlook, Gmail):
-1. Go to Settings > Apps > Default Apps.
-2. Scroll down to Email and choose your preferred app (e.g., Outlook, Gmail).
-
-Mac (Apple Mail, Gmail):
-1. Open the Mail app.
-2. Go to Mail > Preferences.
-3. Under the General tab, set your default email app.
-
-iOS (iPhone/iPad):
-1. Go to Settings > Your Email App (e.g., Gmail).
-2. Tap Default Mail App and select your choice.
-
-Android (Samsung, Google Pixel, etc.):
-1. Go to Settings > Apps > Default Apps.
-2. Select Email and choose your preferred app.`
+To use the "Request" button effectively, ensure your default email app is set up. For Windows -> Go to Settings > Apps > Default Apps. Scroll down to Email and choose your preferred app (e.g., Outlook, Gmail). For Mac -> Open the Mail app > Go to Mail > Preferences. Under the General tab, set your default email app. For iOS (iPhone/iPad) -> Go to Settings > Apps > Default Apps > Email and select your preference (e.g., Gmail). For Android (Samsung, Google Pixel, etc.) -> Go to Settings > Apps > Default Apps > Select Email and choose your preferred app.`
     }
   ];
     // Add more questions and answers here;
