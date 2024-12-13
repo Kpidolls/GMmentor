@@ -38,7 +38,7 @@ const Product = () => {
     'Monasteries & Churches',
     'Must-See Attractions',
     'Rooftop Lounges',
-    'Vegan & Vegetarian-Friendly',
+    'Vegan & Vegetarian friendly',
     'Wineries & Vineyards'
   ];
 
