@@ -98,14 +98,14 @@ To use the "Request" button effectively, ensure your default email app is set up
                 className="w-full text-left py-4 px-6 text-xl font-semibold text-gray-800 focus:outline-none"
                 onClick={() => toggleAccordion(index)}
               >
-                {qa.question}
+                {qa && qa.question}
                 <span className="float-right">
                   {activeIndex === index ? '-' : '+'}
                 </span>
               </button>
               {activeIndex === index && (
                 <div className="px-6 pb-4 text-lg text-gray-700">
-                  {qa.answer}
+                  {qa && qa.answer}
                 </div>
               )}
             </div>
