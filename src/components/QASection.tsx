@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 
 const QASection = () => {
   const questionsAndAnswers = [
+    ,
+    {
+      question: "I haven’t received the list I requested. What should I do?",
+      answer: "If you haven't received an email with the list you requested within a few minutes, please check your spam folder. Additionally, ensure that you sent the request from the correct email address. If the issue persists, feel free to contact us directly for further assistance."
+    },
     {
       question: "What is googlementor.com?",
       answer: "Googlementor is your trusted platform for curated custom maps and expert navigation support. We provide tailored advice, practical tips, fun and insightful guidance to help you explore, discover and make the most of Google Maps."
