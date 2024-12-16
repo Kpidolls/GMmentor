@@ -4,7 +4,6 @@ import About from '../components/About';
 import AboutUs from '../components/AboutUs';
 import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
-import DownloadGoogleMaps from '../components/DownloadGoogleMaps';
 import EsimProduct from '../components/EsimProduct';
 import Features from '../components/Features';
 import Header from '../components/Header';
