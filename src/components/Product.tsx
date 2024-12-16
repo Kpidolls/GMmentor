@@ -20,26 +20,26 @@ const Product = () => {
   };
 
   const mapOptions = [
-    'Asian Cuisine',
-    'Bougatsa Shops',
-    'Coffee & Brunch',
-    'Burger Spots',
-    'Cheap Eats',
-    'Desserts & Treats',
-    'Bars & Drinks',
-    'Fish Tavernas',
-    'Fish Tavernas with Scenic Views',
-    'Tavernas',
-    'Gyros & Souvlaki',
-    'Hiking Trails',
-    'Italian Cuisine',
-    'Luxury Dining',
-    'Mexican Cuisine',
-    'Monasteries & Churches',
-    'Must-See Attractions',
-    'Rooftop Lounges',
-    'Vegan & Vegetarian friendly',
-    'Wineries & Vineyards'
+    '📍 Asian Cuisine',
+    '📍 Bougatsa Shops',
+    '📍 Coffee & Brunch',
+    '📍 Burger Spots',
+    '📍 Cheap Eats',
+    '📍 Desserts & Treats',
+    '📍 Bars & Drinks',
+    '📍 Fish Tavernas',
+    '📍 Fish Tavernas with Scenic Views',
+    '📍 Tavernas',
+    '📍 Gyros & Souvlaki',
+    '📍 Hiking Trails',
+    '📍 Italian Cuisine',
+    '📍 Luxury Dining',
+    '📍 Mexican Cuisine',
+    '📍 Monasteries & Churches',
+    '📍 Must-See Attractions',
+    '📍 Rooftop Lounges',
+    '📍 Vegan & Vegetarian friendly',
+    '📍 Wineries & Vineyards'
   ];
 
   return (
