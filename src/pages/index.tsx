@@ -40,7 +40,6 @@ const App = () => {
       <LazyShow>
         <>
           <Features />
-          <DownloadGoogleMaps />
           <Mybusiness />
           <Canvas />
         </>
