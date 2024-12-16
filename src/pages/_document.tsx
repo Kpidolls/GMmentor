@@ -10,16 +10,16 @@ class MyDocument extends Document {
         <Head>
         <link rel="canonical" href={AppConfig.baseUrl} />
         <meta name="google-site-verification" content="cUimG9-WnVYYDC8Tk1Dr6Ieh4ARJp-HzYxrbKTzYxpI" />
-        <meta name="description" content="Enhance your traveling. From travel insurance to mobile data e-SIMS, we have you covered." />
-        <meta name="keywords" content="travel insurance, mobile data e-sim, mapping services, Google Maps, tourist guides" />
+        <meta name="description" content="Travel like a pro with location suggestions for your maps." />
+        <meta name="keywords" content="travel insurance, mobile data e-sim, mapping services, Google Maps, tourist guides, what to do" />
         <meta name="author" content="Travel Tips" />
-        <meta property="og:title" content="Google Mentor - custom maps" />
-        <meta property="og:description" content="Enhance your traveling. From travel insurance to mobile data e-SIMS, we have you covered." />
+        <meta property="og:title" content="Google Mentor - location suggestions" />
+        <meta property="og:description" content="Travel like a pro with location suggestions for your maps." />
         <meta property="og:image" content="/assets/images/newlogo1.png" />
         <meta property="og:url" content="https://www.googlementor.com" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Google Mentor - Enhance Your Experience with custom maps" />
-        <meta name="twitter:description" content="Enhance your traveling. From travel insurance to mobile data e-SIMS, we have you covered." />
+        <meta name="twitter:title" content="Google Mentor - Travel like a pro" />
+        <meta name="twitter:description" content="Location suggestions for your maps." />
         <meta name="twitter:image" content="/assets/images/newlogo1.png" />
         </Head>
         <body>
