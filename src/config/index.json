@@ -1,6 +1,6 @@
 {
   "company": {
-    "name": "Google Maps Mentor",
+    "name": "Googlementor",
     "logo": "/assets/images/newlogo1.png"
   },
   "navigation": [
@@ -37,7 +37,7 @@
   "mainHero": {
     "title": "Google Maps Mentor",
     "subtitle": "Travel like a pro!",
-    "description": "Personalized maps to harness the full potential of Google Maps for travel, everyday life and business needs. ",
+    "description": "Location suggestions to harness the full potential of Google Maps for travel, everyday life and business needs. ",
     "img": "/assets/images/Designer.jpeg",
     "primaryAction": {
       "text": "Get started",
