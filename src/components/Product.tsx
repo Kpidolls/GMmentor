@@ -15,7 +15,7 @@ const Product = () => {
   const [selectedOption, setSelectedOption] = useState('');
 
   const handleCopy = () => {
-    const textToCopy = `${selectedOption} - Greece https://googlementor.com/#maps`;
+    const textToCopy = `${selectedOption} - Greece https://googlementor.com`;
     navigator.clipboard.writeText(textToCopy);
   };
 
