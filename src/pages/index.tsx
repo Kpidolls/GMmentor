@@ -3,6 +3,7 @@
 import About from '../components/About'; 
 import AboutUs from '../components/AboutUs';
 import Analytics from '../components/Analytics';
+import BrevoForm from '../components/BrevoForm';
 import Canvas from '../components/Canvas';
 import EsimProduct from '../components/EsimProduct';
 import Features from '../components/Features';
@@ -50,6 +51,7 @@ const App = () => {
       <AboutUs />      
       <QASection /> 
       <LazyShow>
+      <BrevoForm />
         <>
           <Canvas />
           <About />
