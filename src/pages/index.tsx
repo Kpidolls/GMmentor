@@ -48,10 +48,11 @@ const App = () => {
       <LazyShow>
         <TravelInsurance />
       </LazyShow>
-      <AboutUs />      
+      <AboutUs />     
       <QASection /> 
+      <BrevoForm /> 
       <LazyShow>
-      <BrevoForm />
+
         <>
           <Canvas />
           <About />
