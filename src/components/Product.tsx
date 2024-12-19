@@ -21,15 +21,14 @@ const Product = () => {
 
   const mapOptions = [
     '📍 Asian Cuisine',
+    '📍 Bars & Drinks',
     '📍 Bougatsa Shops',
-    '📍 Coffee & Brunch',
     '📍 Burger Spots',
     '📍 Cheap Eats',
+    '📍 Coffee & Brunch',
     '📍 Desserts & Treats',
-    '📍 Bars & Drinks',
     '📍 Fish Tavernas',
     '📍 Fish Tavernas with Scenic Views',
-    '📍 Tavernas',
     '📍 Gyros & Souvlaki',
     '📍 Hiking Trails',
     '📍 Italian Cuisine',
@@ -38,6 +37,7 @@ const Product = () => {
     '📍 Monasteries & Churches',
     '📍 Must-See Attractions',
     '📍 Rooftop Lounges',
+    '📍 Tavernas',
     '📍 Vegan & Vegetarian friendly',
     '📍 Wineries & Vineyards'
   ];
