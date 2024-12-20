@@ -9,14 +9,14 @@ const QASection = () => {
     },
     {
       question: "What is googlementor.com?",
-      answer: "Googlementor is your trusted platform for curated custom maps and expert navigation support. We provide tailored advice, practical tips, fun and insightful guidance to help you explore, discover and make the most of Google Maps."
+      answer: "Googlementor is your trusted platform for curated list of maps and expert navigation support. We provide tailored advice, practical tips, fun and insightful guidance to help you explore, discover and make the most of Google Maps. Check out our TikTok channel"
     },
     {
-      question: "What are custom maps?",
-      answer: "Custom maps are curated collections of saved locations organized around a specific theme. They simplify your search, making it easier to discover and explore places that match your interests. You can save a map list, and it will appear in your Google Maps with all the locations represented by emojis. In Google Maps 'You' tab -> under 'Lists that you saved'."
+      question: "What are Googlementor lists?",
+      answer: "Googlementor maps are curated collections of saved locations organized around a specific theme. They simplify your search, making it easier to discover and explore places that match your interests. You can save a map list, and it will appear in your Google Maps with all the locations represented by emojis. In Google Maps 'You' tab -> under 'Lists that you saved'."
     },
     {
-      question: "How can I request a custom Google Maps list?",
+      question: "How can I request a Googlementor list for Google Maps?",
       answer: "It’s simple! Email us your request with the name of the list and the Country. Don’t forget to add 'I agree to googlementor.com terms' as the title of your email for a smooth process."
     },
     {
@@ -24,20 +24,20 @@ const QASection = () => {
       answer: "Yes, all our curated Google Maps lists are currently available for free. However, if you’d like to support our work, you can do so through https://buymeacoffee.com/googlementor."
     },
     {
-      question: "How do I use the custom Google Maps list I receive?",
-      answer: "After receiving the link to your custom map, click it to open the map in Google Maps. From there, you can save it to your account."
+      question: "How do I use the Google Maps list I receive?",
+      answer: "After receiving the link to your list, click the link to open the list in Google Maps. From there, you can save it to your account."
     },
     {
-      question: "How can I hide the custom map?",
+      question: "How can I hide the list?",
       answer: "Select 'You' -> Click and expand the Saved tab -> Select the dots on the list you wish to hide ... -> Select 'Hide on your map' ✅"
     },
     {
-      question: "How can I see the custom map?",
+      question: "How can I see the list in my Google Maps ap?",
       answer: "Select 'You' -> Click and expand the Saved tab -> Select the dots on the list you wish to show ... -> Select 'Show on your map' ✅"
     },
     {
-      question: "How often do you update the maps?",
-      answer: "We strive to keep our maps current, regularly updating them with new locations and feedback from users like you."
+      question: "How often do you update the lists?",
+      answer: "We strive to keep our lists current, regularly updating them with new locations and feedback from users like you."
     },
     {
       question: "Can I request multiple maps?",
@@ -45,11 +45,11 @@ const QASection = () => {
     },
     {
       question: "Why should I buy insurance?",
-      answer: "Travel insurance is essential for difficult trips involving adventure, remote destinations or unpredictable circumstances. SafetyWing provides coverage for emergency medical expenses, trip interruptions or cancellations, lost or delayed baggage and even adventure sports activities. Prepare for unexpected situations, travel with peace of mind."
+      answer: "Travel insurance is essential for difficult trips involving adventure, remote destinations or unpredictable circumstances. SafetyWing provides coverage for emergency medical expenses, trip interruptions or cancellations, lost or delayed baggage and even adventure sports activities. Prepare for unexpected situations with detailed planning of your trip."
     },
     {
       question: "Who can benefit from googlementor.com?",
-      answer: "Whether you’re a traveler, foodie or local explorer, googlementor.com is designed for anyone looking to make the most out of Google Maps and discover amazing places tailored to their preferences."
+      answer: "Whether you’re a traveler, foodie or local explorer, googlementor.com is designed for anyone looking to make the most out of Google Maps and discover amazing places."
     },
     {
       question: "Why buy an eSIM when my mobile contract already includes roaming?",
