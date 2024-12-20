@@ -9,11 +9,11 @@ const QASection = () => {
     },
     {
       question: "What is googlementor.com?",
-      answer: "Googlementor is your trusted platform for curated list of maps and expert navigation support. We provide tailored advice, practical tips, fun and insightful guidance to help you explore, discover and make the most of Google Maps. Check out our TikTok channel"
+      answer: "Googlementor is your trusted platform for curated lists of maps and expert navigation support. We provide tailored advice, practical tips, fun and insightful guidance to help you explore, discover and make the most out of Google Maps."
     },
     {
       question: "What are Googlementor lists?",
-      answer: "Googlementor maps are curated collections of saved locations organized around a specific theme. They simplify your search, making it easier to discover and explore places that match your interests. You can save a map list, and it will appear in your Google Maps with all the locations represented by emojis. In Google Maps 'You' tab -> under 'Lists that you saved'."
+      answer: "Googlementor maps are curated collections of saved locations organized around a specific theme. They simplify your search, making it easier to discover and explore places that match your interests. You can save a map list, and it will appear in your Google Maps with all the locations represented by emojis. In Google Maps at the bottom center of your screen, 'You' tab -> under 'Lists that you saved'."
     },
     {
       question: "How can I request a Googlementor list for Google Maps?",
@@ -25,7 +25,7 @@ const QASection = () => {
     },
     {
       question: "How do I use the Google Maps list I receive?",
-      answer: "After receiving the link to your list, click the link to open the list in Google Maps. From there, you can save it to your account."
+      answer: "After receiving the link to your list, click the link to open it in Google Maps. From there, you can save it to your account. After saving the list, you can access it by selecting the 'You' tab at the bottom center of your screen -> under 'Lists that you saved'"
     },
     {
       question: "How can I hide the list?",
