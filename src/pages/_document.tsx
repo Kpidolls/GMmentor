@@ -54,7 +54,7 @@ class MyDocument extends Document {
         <meta name="description" content="Travel like a pro with location suggestions for your maps." />
         <meta name="keywords" content="travel insurance, mobile data e-sim, mapping services, Google Maps, tourist guides, what to do" />
         <meta name="author" content="Travel Tips" />
-        <meta property="og:title" content="Google Mentor - location suggestions" />
+        <meta property="og:title" content="Google Mentor - Location suggestions" />
         <meta property="og:description" content="Travel like a pro with location suggestions for your maps." />
         <meta property="og:image" content="/assets/images/newlogo1.png" />
         <meta property="og:url" content="https://www.googlementor.com" />
