@@ -6,7 +6,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>Google Mentor - Enhance Your Travel Experience with custom maps</title>
+        <title>Googlementor - Location suggestions</title>
+        <meta name="googlementor" content="Travel like a pro with location suggestions for your maps." />
       </Head>
       <Component {...pageProps} />
     </>
