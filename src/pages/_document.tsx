@@ -60,6 +60,7 @@ class MyDocument extends Document {
         ></script>
         <link rel="canonical" href={AppConfig.baseUrl} />
         <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
+        <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"></script>
         <meta name="google-site-verification" content="cUimG9-WnVYYDC8Tk1Dr6Ieh4ARJp-HzYxrbKTzYxpI" />
         <meta name="description" content="Travel like a pro with location suggestions for your maps." />
         <meta name="keywords" content="travel insurance, mobile data e-sim, mapping services, Google Maps, tourist guides, what to do" />
