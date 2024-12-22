@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-
 import { AppConfig } from '../utils/AppConfig';
 
 // Need to create a custom _document because i18n support is not compatible with `next export`.
@@ -48,6 +47,17 @@ class MyDocument extends Document {
               }
             `}
           </style>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KYV8QK51B"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-7KYV8QK51B');
+            `,
+          }}
+        ></script>
         <link rel="canonical" href={AppConfig.baseUrl} />
         <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
         <meta name="google-site-verification" content="cUimG9-WnVYYDC8Tk1Dr6Ieh4ARJp-HzYxrbKTzYxpI" />
