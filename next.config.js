@@ -19,6 +19,19 @@ const nextConfig = withBundleAnalyzer({
       // Add other paths here if you have additional pages
     };
   },
+  async headers() {
+    return [
+      {
+        source: '/terms',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow',
+          },
+        ],
+      },
+    ];
+  },
 });
 
 module.exports = nextConfig;
