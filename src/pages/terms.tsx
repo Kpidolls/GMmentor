@@ -1,6 +1,12 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { GetStaticProps } from 'next';
 
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+  };
+};
 const Terms = () => {
   return (
     <div>
