@@ -16,6 +16,7 @@ const nextConfig = withBundleAnalyzer({
       '/': { page: '/' },
       '/terms': { page: '/terms' },
       '/privacy-policy': { page: '/privacy-policy' },
+      '/login': { page: '/login' },
       // Add other paths here if you have additional pages
     };
   },
