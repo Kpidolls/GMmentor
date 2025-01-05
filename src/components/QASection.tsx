@@ -9,7 +9,7 @@ const QASection = () => {
     },
     {
       question: "What is googlementor.com?",
-      answer: "Googlementor is your trusted platform for curated lists of maps and expert navigation support. We provide tailored advice, practical tips, and fun insightful guidance to help you explore, discover and make the most out of Google Maps."
+      answer: "Googlementor is your trusted platform for curated lists of maps. We provide tailored advice, practical tips and fun insightful guidance to help you explore, discover and make the most out of Google Maps."
     },
     {
       question: "What are Googlementor lists?",
