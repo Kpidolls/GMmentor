@@ -1,7 +1,12 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaTiktok, FaInstagram } from 'react-icons/fa';
 import config from '../config/index.json';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const FaFacebook = dynamic(() => import('react-icons/fa').then((mod) => mod.FaFacebook));
+const FaTwitter = dynamic(() => import('react-icons/fa').then((mod) => mod.FaTwitter));
+const FaTiktok = dynamic(() => import('react-icons/fa').then((mod) => mod.FaTiktok));
+const FaInstagram = dynamic(() => import('react-icons/fa').then((mod) => mod.FaInstagram));
 
 const About = () => {
   const { socialMedia } = config.about;
