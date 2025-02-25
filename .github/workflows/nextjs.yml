@@ -38,7 +38,6 @@ jobs:
       - name: Build and Export Next.js app
         run: |
           yarn build
-          yarn export
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
