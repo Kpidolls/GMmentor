@@ -9,8 +9,8 @@ const nextConfig = withBundleAnalyzer({
   trailingSlash: true,
   reactStrictMode: true,
   output: 'export',
-  basePath: '',
-  assetPrefix: '',
+  basePath: '/GMmentor',
+  assetPrefix: '/GMmentor',
   exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
     return {
       '/': { page: '/' },
