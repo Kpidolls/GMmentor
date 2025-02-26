@@ -10,7 +10,7 @@ const nextConfig = withBundleAnalyzer({
   reactStrictMode: true,
   output: 'export',
   basePath: '',
-  assetPrefix:  '',
+  assetPrefix: '',
   exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
     return {
       '/': { page: '/' },
