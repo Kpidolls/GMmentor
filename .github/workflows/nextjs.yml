@@ -33,7 +33,6 @@ jobs:
       - name: Build Next.js app
         run: 
           yarn build
-          yarn export
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
