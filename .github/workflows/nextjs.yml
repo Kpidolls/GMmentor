@@ -38,6 +38,9 @@ jobs:
       - name: Build Next.js app
         run: yarn build
 
+      - name: Export Next.js app
+        run: yarn export
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
