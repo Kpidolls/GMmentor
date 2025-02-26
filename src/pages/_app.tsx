@@ -3,8 +3,6 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import '../styles/main.css';
-import '../styles/tailwind.css';
-import '../styles/global.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
