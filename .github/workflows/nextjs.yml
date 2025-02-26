@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -35,9 +35,8 @@ jobs:
           echo "NEXT_PUBLIC_BASE_PATH=/GMmentor" >> $GITHUB_ENV
           echo "NEXT_PUBLIC_ASSET_PREFIX=/GMmentor/" >> $GITHUB_ENV
 
-      - name: Build and Export Next.js app
-        run: |
-          yarn build
+      - name: Build Next.js app
+        run: yarn build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
