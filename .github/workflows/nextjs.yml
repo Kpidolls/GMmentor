@@ -30,9 +30,10 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Build Next.js app
+      - name: Build and Export Next.js
         run: 
           yarn build
+          yarn export
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
