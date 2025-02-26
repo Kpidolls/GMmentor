@@ -30,11 +30,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Adjust Next.js Config for GitHub Pages
-        run: |
-          echo "NEXT_PUBLIC_BASE_PATH=/GMmentor" >> $GITHUB_ENV
-          echo "NEXT_PUBLIC_ASSET_PREFIX=/GMmentor/" >> $GITHUB_ENV
-
       - name: Build Next.js app
         run: yarn build
 
