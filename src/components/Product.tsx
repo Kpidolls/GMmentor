@@ -56,7 +56,7 @@ const Product = () => {
           </button> */}
                 <div className="mt-10">
         <h2 className="text-2xl font-bold mb-4">Request a Free Map List</h2>
-        <p className="mb-4">Select the list you want and send us an email with your request.</p>
+        <p className="mb-4">Select a list you want and send us an email with your request.</p>
         <label htmlFor="map-category" className="block mb-2 text-sm font-medium text-gray-700">
           Select a map category
         </label>
