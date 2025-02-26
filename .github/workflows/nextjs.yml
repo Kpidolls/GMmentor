@@ -31,7 +31,7 @@ jobs:
         run: yarn install
 
       - name: Build and Export Next.js
-        run:  yarn build && yarn export
+        run:  yarn build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
