@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import secondaryAction from '../config/index.json';
 
-
 const Login: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
