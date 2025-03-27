@@ -3,10 +3,6 @@ import React, { useState } from 'react';
 const QASection = () => {
   const questionsAndAnswers = [
     {
-      question: "I haven’t received the list I requested. What should I do?",
-      answer: "If you haven't received an email with the list you requested within a few minutes, please check your spam folder. Also, ensure that you sent the request from the correct email address. If the issue persists, feel free to contact us directly for further assistance."
-    },
-    {
       question: "What is googlementor.com?",
       answer: "Googlementor is your trusted platform for curated lists of maps. We provide tailored advice, practical tips and fun insightful guidance to help you explore, discover and make the most out of Google Maps."
     },
@@ -15,16 +11,16 @@ const QASection = () => {
       answer: "Googlementor lists are curated collections of saved locations organized around a specific theme. They simplify your search, making it easier to discover and explore places that match your interests. Once saved, you can find them in Google Maps under the 'You' tab -> 'Lists that you saved'."
     },
     {
-      question: "How can I request a Googlementor list for Google Maps?",
-      answer: "It’s simple! Email us your request with the name of the list and the Country. Be sure to include 'I agree to googlementor.com terms' as the title of your email for a smooth process."
+      question: "How can I use a Googlementor list for Google Maps?",
+      answer: "Open of the list on Google Maps by pressing explore under the list you want, you can view it and save it to your own Google Maps account."
     },
     {
       question: "Are the Google Maps lists free?",
-      answer: "Yes, all our curated Google Maps lists are currently available for free. However, if you’d like to support our work, you can do so at https://buymeacoffee.com/googlementor."
+      answer: "Yes, all our curated Google Maps lists by Googlementor are currently available for free. However, if you’d like to support our work, you can do so at https://buymeacoffee.com/googlementor."
     },
     {
       question: "How do I use the Google Maps list I receive?",
-      answer: "After receiving the link to your list, click it to open in Google Maps. From there, save it to your account. After saving the list, you can access it by selecting the 'You' tab at the bottom center of your screen -> under 'Lists that you saved'."
+      answer: "Click explore to open list on Google Maps. From there, save it to your account. After saving the list, you can access it by selecting the 'You' tab at the bottom center of your screen -> under 'Lists that you saved'."
     },
     {
       question: "How can I hide the list?",
@@ -40,10 +36,10 @@ const QASection = () => {
     },
     {
       question: "Can I request multiple maps?",
-      answer: "Yes, you can request as many maps as you need. Just include the list names in your email and we’ll handle the rest."
+      answer: "Yes, you can save as many maps as you need. Explore the links and save the ones that interest you."
     },
     {
-      question: "Why should I buy insurance?",
+      question: "Why should I buy travel insurance?",
       answer: "Travel insurance is essential for challenging trips involving adventure, remote destinations or unpredictable circumstances. SafetyWing provides coverage for emergency medical expenses, trip interruptions or cancellations, lost or delayed baggage and even adventure sports activities. Prepare for unexpected situations with thorough trip planning."
     },
     {
@@ -70,10 +66,6 @@ const QASection = () => {
       question: "Can I delete a list if I no longer need it?",
       answer: "Yes, you can delete any list you’ve created at any time from your Google Maps account. Simply open the list, click the three dots in the top right corner, and select 'Delete list'."
     },
-    {
-      question: "How does the 'Request' button work?",
-      answer: "When you press the 'Request' button, it opens your default email app to send an email to us with the subject line specifying the 'Googlementor list' you are requesting. The email helps us identify your request and send you the relevant list. To use the 'Request' button effectively, ensure your default email app is set up. For Windows -> Go to Settings > Apps > Default Apps. Scroll down to Email and choose your preferred app (e.g., Outlook, Gmail). For Mac -> Open the Mail app > Go to Mail > Preferences. Under the General tab, set your default email app. For iOS (iPhone/iPad) -> Go to Settings > Apps > Default Apps > Email and select your preference (e.g., Gmail). For Android (Samsung, Google Pixel, etc.) -> Go to Settings > Apps > Default Apps > Select Email and choose your preferred app."
-    }
   ];
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
