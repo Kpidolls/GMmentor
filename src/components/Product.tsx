@@ -291,6 +291,10 @@ const Product = () => {
           </div>
         ))}
       </div>
+      {/* Attribution Section */}
+    <div className="mt-8 text-center text-gray-500 text-sm">
+      Images generated using Craiyon AI.
+    </div>
     </div>
   );
 };
