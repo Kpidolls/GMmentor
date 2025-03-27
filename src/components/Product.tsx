@@ -123,6 +123,14 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
+      title: '📍 Bouzoukia Live Music',
+      img: '/assets/images/bouzoukia.webp', // Replace with actual image path
+      description: 'Experience live Greek music.',
+      link: 'https://www.google.com/maps/@39.0713743,21.0447413,7z/data=!4m6!1m2!10m1!1e1!11m2!2sAu_MGple1Ba8_AKl6f2NSQCMcYXnVg!3e3?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
       title: '📍 Burger Spots',
       img: '/assets/images/burger.webp', // Replace with actual image path
       description: 'Find the juiciest burgers and best burger joints in town.',
@@ -154,6 +162,14 @@ const Product = () => {
       target: '_blank',
       rel: 'noopener noreferrer',
     },
+    {
+      title: '📍Surf, Kite, Diving & Water Sports',
+      img: '/assets/images/surf.webp', // Replace with actual image path
+      description: 'Enjoy water sports and activities in Greece.',
+      link: 'https://www.google.com/maps/@39.0713743,21.0447413,7z/data=!4m6!1m2!10m1!1e1!11m2!2s6dmSaVQdrK8bnokSGoI3lY1mD-jvDw!3e3?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    }
   ];
 
   return (
