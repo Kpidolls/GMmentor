@@ -64,9 +64,9 @@
     ]
   },
   "features": {
-    "title": "Sell your custom maps!",
+    "title": "Feature your custom maps!",
     "subtitle": "Featured map lists on Google Maps",
-    "description": "Google Maps Lists are a feature that allows users to create and manage collections of saved locations within the Google Maps application. This functionality serves as a powerful tool for organizing and sharing locations effectively. Whether for personal use or collaborative planning, this feature enhances how users interact with their surroundings while providing easy access to curated recommendations.",
+    "description": "Google Maps Lists allow users to create and manage collections of saved locations within the Google Maps application. This functionality serves as a powerful tool for organizing and sharing locations effectively. Whether for personal use or collaborative planning, this feature enhances how users interact with their surroundings while providing easy access to curated recommendations.",
     "items": [
       {
         "name": "Favorites List",
