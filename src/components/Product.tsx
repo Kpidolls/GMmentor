@@ -195,14 +195,31 @@ const Product = () => {
               <p className="text-gray-600 text-sm mb-4">
                 {option.description} {/* Unique description for each map option */}
               </p>
-              <a
+                <a
                 href={option.link}
                 target={option.target}
                 rel={option.rel}
                 className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded shadow hover:bg-blue-700 transition duration-300 text-center"
-              >
+                >
                 Explore
-              </a>
+                </a>
+                <button
+                onClick={() => {
+                  const shareText = `Check out this amazing category: ${option.title} - ${option.description} ${option.link}`;
+                  if (navigator.share) {
+                  navigator.share({
+                    title: option.title,
+                    text: shareText,
+                    url: option.link,
+                  });
+                  } else {
+                  alert('Sharing is not supported on this browser.');
+                  }
+                }}
+                className="inline-block mt-4 ml-2 px-4 py-2 bg-green-600 text-white font-semibold rounded shadow hover:bg-green-700 transition duration-300 text-center"
+                >
+                Share
+                </button>
             </div>
           </div>
         ))}
