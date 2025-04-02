@@ -16,6 +16,7 @@ import Mybusiness from '../components/Mybusiness';
 import Product from '../components/Product';
 import TravelInsurance from '../components/TravelInsurance'; 
 import QASection from '../components/QASection'; 
+import MyTicker from '../components/Ticker';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <div className="max-w-7xl mx-auto">
           <div
             className={`relative z-10 pb-8 bg-background sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32`}>
+            <MyTicker />
             <Header />
             <MainHero />
           </div>

@@ -25,6 +25,7 @@ module.exports = {
       },
       animation: {
         vote: 'vote 1s ease-in-out',
+        scroll: 'scroll 15s linear infinite',
       },
       keyframes: {
         vote: {
@@ -37,6 +38,10 @@ module.exports = {
           '75%': {
             transform: 'rotate(30deg)',
           },
+        },
+        scroll: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
       },
     },
