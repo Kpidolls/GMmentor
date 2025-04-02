@@ -11,6 +11,14 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
+      title: '📍 Must-See Attractions',
+      img: '/assets/images/must.webp', // Replace with actual image path
+      description: 'Discover the must-see attractions in Greece.',
+      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sYdxYS6H03eNUO6wBrMYZto99JAg9Ng?g_ep=CAISEjI0LjQ5LjMuNzAyODc2MTUxMBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
       title: '📍 Hiking Trails',
       img: '/assets/images/hiking.webp', // Replace with actual image path
       description: 'Explore the best hiking trails in Greece.',
@@ -47,14 +55,6 @@ const Product = () => {
       img: '/assets/images/churches.webp', // Replace with actual image path
       description: 'Visit historic monasteries and beautiful churches.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2skRt2slouJJnCNj2AoZR08mpEYuOAbw?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
-    {
-      title: '📍 Must-See Attractions',
-      img: '/assets/images/must.webp', // Replace with actual image path
-      description: 'Discover the must-see attractions in Greece.',
-      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sYdxYS6H03eNUO6wBrMYZto99JAg9Ng?g_ep=CAISEjI0LjQ5LjMuNzAyODc2MTUxMBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },

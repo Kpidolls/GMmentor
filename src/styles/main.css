@@ -19,11 +19,24 @@ a:hover {
 }
 
 
-
 .content p {
   @apply my-6;
 }
 
 .content ul {
   @apply my-6;
+}
+
+.ticker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.ticker-text {
+  font-size: 16px;
+  color: #333;
 }

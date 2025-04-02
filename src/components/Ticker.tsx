@@ -14,14 +14,15 @@ function MyTicker() {
   ];
 
   return (
-    <div className="overflow-hidden whitespace-nowrap bg-gray-100 py-2 border border-gray-300">
-      <div className="flex animate-scroll">
-        {tickerItems.concat(tickerItems).map((item, index) => {
+    <div className="ticker-container z-50 fixed">
+      <div className="flex animate-scroll space-x-5 min-w-max">
+        {/* Duplicate items for seamless scrolling */}
+        {[...tickerItems, ...tickerItems].map((item, index) => {
           const [highlight, ...rest] = item.split(':'); // Split the string at the colon
           return (
             <div
               key={index}
-              className="inline-block px-5 text-gray-800 font-medium text-sm"
+              className="ticker-text inline-block whitespace-nowrap"
             >
               <span className="text-blue-600 font-bold">{highlight}:</span>{' '}
               <span>{rest.join(':')}</span>
