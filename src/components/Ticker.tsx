@@ -12,12 +12,15 @@ function MyTicker() {
     'Events: more.com',
     'e-Sim: Airalo',
     'Travel Insurance: SafetyWing',
+    'Language: Google Translate',
+    'Planning: rome2rio',
+    'Tours: GetYourGuide',
+    'Weather: Windy',
   ];
 
   return (
     <div className="ticker-container z-50 fixed">
       <div className="flex animate-scroll space-x-5 min-w-max">
-        {/* Duplicate items for seamless scrolling */}
         {[...tickerItems].map((item, index) => {
           const [highlight, ...rest] = item.split(':'); // Split the string at the colon
           return (
