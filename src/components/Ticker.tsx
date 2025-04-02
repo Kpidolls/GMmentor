@@ -7,6 +7,7 @@ function MyTicker() {
     'Health: doctoranytime',
     'Handyman: Douleutaras',
     'Shopping: Skroutz',
+    'Taxi: FreeNow - Uber',
     'Car Rentals: Skyscanner',
     'Events: more.com',
     'e-Sim: Airalo',
