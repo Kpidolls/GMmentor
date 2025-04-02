@@ -3,6 +3,12 @@ module.exports = {
   purge: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: false,
   theme: {
+    screens: {
+      sm: '640px', // Small screens
+      md: '768px', // Medium screens
+      lg: '1024px', // Large screens
+      xl: '1280px', // Extra large screens
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -25,7 +31,7 @@ module.exports = {
       },
       animation: {
         vote: 'vote 1s ease-in-out',
-        scroll: 'scroll 15s linear infinite',
+        scroll: 'scroll 30s linear infinite',
       },
       keyframes: {
         vote: {
