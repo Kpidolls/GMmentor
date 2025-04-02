@@ -18,7 +18,7 @@ function MyTicker() {
     <div className="ticker-container z-50 fixed">
       <div className="flex animate-scroll space-x-5 min-w-max">
         {/* Duplicate items for seamless scrolling */}
-        {[...tickerItems, ...tickerItems].map((item, index) => {
+        {[...tickerItems].map((item, index) => {
           const [highlight, ...rest] = item.split(':'); // Split the string at the colon
           return (
             <div

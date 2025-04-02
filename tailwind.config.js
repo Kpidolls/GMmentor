@@ -31,7 +31,7 @@ module.exports = {
       },
       animation: {
         vote: 'vote 1s ease-in-out',
-        scroll: 'scroll 30s linear infinite',
+        scroll: 'scroll 45s linear infinite',
       },
       keyframes: {
         vote: {
