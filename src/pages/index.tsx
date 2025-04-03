@@ -7,16 +7,17 @@ import Analytics from '../components/Analytics';
 import BrevoForm from '../components/BrevoForm';
 import Canvas from '../components/Canvas';
 import EsimProduct from '../components/EsimProduct';
-import Features from '../components/Features';
+// import Features from '../components/Features';
 import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
-import Mybusiness from '../components/Mybusiness';
+// import Mybusiness from '../components/Mybusiness';
 import Product from '../components/Product';
 import TravelInsurance from '../components/TravelInsurance'; 
 import QASection from '../components/QASection'; 
 import MyTicker from '../components/Ticker';
+import Store from '../components/Store';
 
 const App = () => {
   return (
@@ -43,8 +44,9 @@ const App = () => {
       </LazyShow>
       <LazyShow>
         <>
-          <Features />
-          <Mybusiness />
+          {/* <Features />
+          <Mybusiness /> */}
+          <Store />
           <Canvas />
         </>
       </LazyShow>
