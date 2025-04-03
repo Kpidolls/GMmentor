@@ -15,7 +15,7 @@ const AboutUs = () => {
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-indigo-600">Our Mission</h2>
             <p className="mt-4 text-gray-600">
-            Our mission is to empower individuals and businesses by delivering innovative mapping solutions that enhance connectivity, enrich experiences and drive productivity. We are committed to providing high-quality content that educates, informs and inspires users worldwide. We aim to create a platform where valuable location-based knowledge is easily accessible to everyone. Our goal is to cultivate a community of curious minds united in their passion for discovery and learning.
+              Our mission is to empower individuals and businesses with smart navigation and mapping tools that foster connectivity, enrich experiences, and boost productivity. We are dedicated to providing high-quality content that educates, informs, and inspires users globally. Our vision is to create a platform where location-based knowledge is accessible to everyone, enabling discovery and learning. Together, we aim to build a community driven by curiosity and a shared passion for exploration.
             </p>
           </div>
 
