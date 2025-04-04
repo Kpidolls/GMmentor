@@ -18,6 +18,7 @@ import TravelInsurance from '../components/TravelInsurance';
 import QASection from '../components/QASection'; 
 import MyTicker from '../components/Ticker';
 import Store from '../components/Store';
+import BackToTop from '../components/BackToTop';
 
 const App = () => {
   return (
@@ -64,6 +65,7 @@ const App = () => {
         </>
       </LazyShow>
       <Analytics />
+      <BackToTop />
     </div>
   );
 };
