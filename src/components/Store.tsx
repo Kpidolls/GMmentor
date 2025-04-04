@@ -44,16 +44,34 @@ const products = [
     link: 'https://www.amazon.com/GoPro-HERO13-Black-Compatability-HB/dp/B0DCM34GXX?crid=10NCBQXUPNIH5&dib=eyJ2IjoiMSJ9.vkUjTAHT7MzwSo8RLmaAIp9RO7yu-UJcV0r8sDakFQkUZ-S6qgGtpV2bY-q9ABitJddX-UuLMr-KjXFUd15I8zblmyiCG5QR3erM53m_fl3zoXoZinONcs9TIbtKAHGR1o_OfJb49i000RvmrXucLty237wZHTNis1nzjsmhXFPlXlqDaTVWj_5y2PZjNg2YmpvYAWVjwhrhTSGH26_b0ESYNlfXy3NXlyIvHNETya8zaUGdRLhSpyMz9L8xU8AvzdYSMtKA5GPSt34V1F36f7SaJ0PZkvpWdz42ZfPqYfk.Y-bq2WZKAjFxYo6K3jQ_--n1fXZQjK2yyOiZisphMvk&dib_tag=se&keywords=go%2Bpro&qid=1743662645&sprefix=go%2Bpro%2Caps%2C220&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=c854de0fa5e66affb72aa06958655e74&language=en_US&ref_=as_li_ss_tl',
   },
   {
-    name: 'Sun hat',
+    name: 'Sun Hat',
     description: 'Stay cool and protected from the sun.',
     image: '/assets/images/hat.jpg',
     link: 'https://www.amazon.com/Summer-Panama-Straw-Fedora-Beach/dp/B07BNNNSX5?crid=35H30J30GZNOC&dib=eyJ2IjoiMSJ9.tU3Ad7L_jXc45PW0ksQAAhL5tqfFEPZKValKUTy45xneWX-9nJwuHOJ3JnYbhQmwtgJu35hR689run1JS7rpVlBr9J-w2rZiVU-rg4P3mWZJ6jnzL8v8x1VS_pif7wCHOcCUcHPSti89nug87S-nNpGbbMaERDQvPPtwYTe9wmTtdbDmJfQjgjUoLAMGpxEaUsDjXmtzpGmytlhwn-mivuGXjfUacmMMaZRGd0ctoyihrGj9ii3x5O7C6tEAJEDOkWPDGrdIoTqM8IJ4-E6CDrUI6nAJtagnhlVZRzGp_ck.W_8kxKL5rk-jHa0lU_xTt6_2yfl49-zwKfUIL3b8VI8&dib_tag=se&keywords=hat+for+sun&qid=1743773805&sprefix=hat+for+sun%2Caps%2C218&sr=8-16&linkCode=ll1&tag=googlementor-20&linkId=2fd025d345af310cc3f1a33161f33fbc&language=en_US&ref_=as_li_ss_tl',
   },
   {
-    name: 'Water Bottle',
+    name: 'Stanley Water Bottle',
     description: 'Stay hydrated anywhere.',
     image: '/assets/images/water.jpg',
     link: 'https://www.amazon.com/Stanley-IceFlow-Stainless-Steel-Tumbler/dp/B0CSF2NXCR?crid=LDVFCXUQ3YWL&dib=eyJ2IjoiMSJ9.cIjnv3uTs3jwcdxOVEIMrGga-VUpDC6q9__RD2eE_-cv3UXfLkdj70zxEZXpgqJn8-2KoUgIuBq7uDpJRO_kx7XkUqc_o0lAzAKo3WDDUeqQa0FDkyoYOEPLGP9XfPAaw2xer397YleVdewpkof7S5cU9qL1RPI88HoJBcZ84S9FLXYj2YNmWdsyXlkHFVIUTiue9Nkqj44l0QMIoZOw8Tup4zbexp48PLIGDdgew6-9ERhAESOH_qqTnT3eT-GDtIYaXvwCxlNyPayiW3dBVYMtbkzZuM8rRXMP-87QerA.EOBb5MzLrbBOFOzDGXkUWNrkWSxKL920TrdYwdya-6s&dib_tag=se&keywords=water%2Bbottle&qid=1743774693&sprefix=water%2B%2Caps%2C290&sr=8-4&th=1&linkCode=ll1&tag=googlementor-20&linkId=5853d6b8e1b409cb712be2e5bcced25f&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Herschel Travel Backpack',
+    description: 'Carry your essentials in style.',
+    image: '/assets/images/backpack.jpg',
+    link: 'https://www.amazon.com/Herschel-Supply-Co-Classic-Backpack/dp/B0C3B2B5QC?crid=XHGDCIGAS3Q5&dib=eyJ2IjoiMSJ9.yzgIPLSG0TaOM6cd4W2QxICF3Q9VeZUsdfuixlsh90TGxGLOa48yyGOGeCGynfYMMdbA9IKkNWdlGiz2PN2E4uNQKplAyGpHR-GPry2p7nrS37-aCluEAb3Ka-xXAeTRZa3LaR89tQxEZb-c1pKBsf4vcQc7NDin1YN6rbi5gwD-utciZSKBOjDqPeE8CSESThvZs3MzGdpdqc5N4rx07qRiP-GtlzDCCBQIVMF4CxTFmVk576HAw3wI_N1zadBG15YEeu9KYL3yUh5fokSshiGnk35JdMFf4yiRoO3N8KY.SBSGQMtpVHXT2YBgLfe4K5jZqK8wl3T0yKbraO4wLtw&dib_tag=se&keywords=herschel+backpack&qid=1743775817&sprefix=hersha%2Caps%2C240&sr=8-16&linkCode=ll1&tag=googlementor-20&linkId=e705adfa7d7243a3169ec0954d19e508&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Neck Pillow with Eye Mask',
+    description: 'Travel in comfort.',
+    image: '/assets/images/pillow.jpg',
+    link: 'https://www.amazon.com/SARISUN-Airplanes-Sleeping-Headrest-Eligible/dp/B0CL6CXMGZ?crid=2ZDUSAIVFJXVZ&dib=eyJ2IjoiMSJ9.3CWiRROxnEI4OHZhXRORuV6t4MZZ8PuM9q4iAAHiZRNYXG_NNEpo600sMq_QMmO76GGIkyPxSVlua60cXx-j-JHMJdodaz9QBlUm9g4n7bgQq53w5VUIzQ-P79YuvSkvbkyH1HgXEUb4zVrILTmo3pZIDt9vTIMloKtvXE94Wg8u7Nq6ELgDozJvTdd8eINClmZQzJJLMYsWKYKew4bnS9kRXMX14QmN_d7LAEs_l_nfSAttvljAYVCwx4zXMHzxR7clbXjGzgEvFrEZLoOr8wM71YcvI7dfCFiqW0corlI.QRDM6UUBmY0eoQU6eD8lvJgCzAccQ0zV9i3AaSqnJpg&dib_tag=se&keywords=travel%2Bpillow&qid=1743776686&sprefix=travel%2Bpillow%2Caps%2C245&sr=8-15&th=1&linkCode=ll1&tag=googlementor-20&linkId=c9a286beb41d29e64da1d3363f6e2dc4&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Face Sunscreen SPF 46',
+    description: 'Protect your skin from the sun.',
+    image: '/assets/images/sunscreen.jpg',
+    link: 'https://www.amazon.com/EltaMD-Acne-Prone-Mineral-Based-Dermatologist-Recommended/dp/B002MSN3QQ?crid=3UG28XZY5PJ34&dib=eyJ2IjoiMSJ9.Dbjo2VW-q3VfGayePXsJQB9Q_56Gkm7QIxJf2Spbq-b0oZtyAkg-jWyCCYD9y18Z7HlyuNxuK34-4gK9fUOHi9vKQeGD774b-MMBdshsotuKXupSEMlJCgKeF6FAla0EO0lOIq46rFpx9_Y_cCxE1gOiCLyI9UxqspCDUqbI6XoLgGdtT-JUWVhIFS5ZUrsNfEG8qDRnXboxXzC0vmwkRO8rgWTLQcvlJ95kH3lMTv8EvTx-gHQ13zw54jjs6SDvRhfVbPf_46zTJhgTMyBQwTFbWbD_TmgKCxjJ3mdDBUU._MPaHe4J9mFqc_ro_c8C2Ntc9JoARqqTY5iGzE409xs&dib_tag=se&keywords=sun%2Bprotection&qid=1743777052&sprefix=sun%2Bprotection%2Caps%2C258&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=b8c9b3510de2c10944341d97c9e42ae5&language=en_US&ref_=as_li_ss_tl',
   },
 ];
 
