@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const products = [
   {
@@ -43,9 +43,26 @@ const products = [
     image: '/assets/images/gopro.jpg',
     link: 'https://www.amazon.com/GoPro-HERO13-Black-Compatability-HB/dp/B0DCM34GXX?crid=10NCBQXUPNIH5&dib=eyJ2IjoiMSJ9.vkUjTAHT7MzwSo8RLmaAIp9RO7yu-UJcV0r8sDakFQkUZ-S6qgGtpV2bY-q9ABitJddX-UuLMr-KjXFUd15I8zblmyiCG5QR3erM53m_fl3zoXoZinONcs9TIbtKAHGR1o_OfJb49i000RvmrXucLty237wZHTNis1nzjsmhXFPlXlqDaTVWj_5y2PZjNg2YmpvYAWVjwhrhTSGH26_b0ESYNlfXy3NXlyIvHNETya8zaUGdRLhSpyMz9L8xU8AvzdYSMtKA5GPSt34V1F36f7SaJ0PZkvpWdz42ZfPqYfk.Y-bq2WZKAjFxYo6K3jQ_--n1fXZQjK2yyOiZisphMvk&dib_tag=se&keywords=go%2Bpro&qid=1743662645&sprefix=go%2Bpro%2Caps%2C220&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=c854de0fa5e66affb72aa06958655e74&language=en_US&ref_=as_li_ss_tl',
   },
+  {
+    name: 'Sun hat',
+    description: 'Stay cool and protected from the sun.',
+    image: '/assets/images/hat.jpg',
+    link: 'https://www.amazon.com/Summer-Panama-Straw-Fedora-Beach/dp/B07BNNNSX5?crid=35H30J30GZNOC&dib=eyJ2IjoiMSJ9.tU3Ad7L_jXc45PW0ksQAAhL5tqfFEPZKValKUTy45xneWX-9nJwuHOJ3JnYbhQmwtgJu35hR689run1JS7rpVlBr9J-w2rZiVU-rg4P3mWZJ6jnzL8v8x1VS_pif7wCHOcCUcHPSti89nug87S-nNpGbbMaERDQvPPtwYTe9wmTtdbDmJfQjgjUoLAMGpxEaUsDjXmtzpGmytlhwn-mivuGXjfUacmMMaZRGd0ctoyihrGj9ii3x5O7C6tEAJEDOkWPDGrdIoTqM8IJ4-E6CDrUI6nAJtagnhlVZRzGp_ck.W_8kxKL5rk-jHa0lU_xTt6_2yfl49-zwKfUIL3b8VI8&dib_tag=se&keywords=hat+for+sun&qid=1743773805&sprefix=hat+for+sun%2Caps%2C218&sr=8-16&linkCode=ll1&tag=googlementor-20&linkId=2fd025d345af310cc3f1a33161f33fbc&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Water Bottle',
+    description: 'Stay hydrated anywhere.',
+    image: '/assets/images/water.jpg',
+    link: 'https://www.amazon.com/Stanley-IceFlow-Stainless-Steel-Tumbler/dp/B0CSF2NXCR?crid=LDVFCXUQ3YWL&dib=eyJ2IjoiMSJ9.cIjnv3uTs3jwcdxOVEIMrGga-VUpDC6q9__RD2eE_-cv3UXfLkdj70zxEZXpgqJn8-2KoUgIuBq7uDpJRO_kx7XkUqc_o0lAzAKo3WDDUeqQa0FDkyoYOEPLGP9XfPAaw2xer397YleVdewpkof7S5cU9qL1RPI88HoJBcZ84S9FLXYj2YNmWdsyXlkHFVIUTiue9Nkqj44l0QMIoZOw8Tup4zbexp48PLIGDdgew6-9ERhAESOH_qqTnT3eT-GDtIYaXvwCxlNyPayiW3dBVYMtbkzZuM8rRXMP-87QerA.EOBb5MzLrbBOFOzDGXkUWNrkWSxKL920TrdYwdya-6s&dib_tag=se&keywords=water%2Bbottle&qid=1743774693&sprefix=water%2B%2Caps%2C290&sr=8-4&th=1&linkCode=ll1&tag=googlementor-20&linkId=5853d6b8e1b409cb712be2e5bcced25f&language=en_US&ref_=as_li_ss_tl',
+  },
 ];
 
 const Store: React.FC = () => {
+  const [visibleProducts, setVisibleProducts] = useState(6);
+  
+  const handleViewMore = () => {
+    setVisibleProducts((prev) => prev + 10);
+  };
   return (
     <div id="store" className="bg-background py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -56,7 +73,7 @@ const Store: React.FC = () => {
           Make your life easier.
         </p>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
+          {products.slice(0, visibleProducts).map((product, index) => (
             <div
               key={index}
               className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
@@ -91,6 +108,16 @@ const Store: React.FC = () => {
             </div>
           ))}
         </div>
+        {visibleProducts < products.length && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={handleViewMore}
+              className="px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
+            >
+              View More Products
+            </button>
+          </div>
+        )}
         <p className="mt-8 text-sm text-gray-500 text-center">
           Note: These are affiliate links to Amazon. We may earn a commission if you purchase through these links.
         </p>
