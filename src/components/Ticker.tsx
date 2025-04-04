@@ -16,7 +16,6 @@ function MyTicker() {
     'Language: Google Translate',
     'Planning: rome2rio',
     'Tours: GetYourGuide',
-    'Weather: Windy',
   ];
 
   return (
