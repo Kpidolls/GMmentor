@@ -8,7 +8,7 @@ const QASection = () => {
     },
     {
       question: "What are Googlementor lists?",
-      answer: "Googlementor lists are curated collections of saved locations organized around a specific themes. They simplify your search, making it easier to discover and explore places that match your interests. Once saved, you can find them in Google Maps under the 'You' tab -> 'Lists that you saved'."
+      answer: "Googlementor lists are curated collections of saved locations organized around specific themes. They simplify your search, making it easier to discover and explore places that match your interests. Once saved, you can find them in Google Maps under the 'You' tab -> 'Lists that you saved'."
     },
     {
       question: "How can I use a Googlementor list for Google Maps?",
