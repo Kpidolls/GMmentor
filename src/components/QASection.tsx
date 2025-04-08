@@ -4,7 +4,7 @@ const QASection = () => {
   const questionsAndAnswers = [
     {
       question: "What is googlementor.com?",
-      answer: "Googlementor is your trusted platform for curated lists of maps to discover and make the most out of Google Maps."
+      answer: "Googlementor is your trusted platform for discovering curated lists of Google Maps locations, helping you explore the best spots around the world. With input from friends and fellow explorers, our maps get better all the time. Share your favorite finds and help improve our collections by recommending your top suggestions."
     },
     {
       question: "What are Googlementor lists?",
