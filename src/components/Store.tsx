@@ -104,7 +104,7 @@ const Store: React.FC = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-48 object-cover"
                 />
               </a>
               <div className="p-6">
