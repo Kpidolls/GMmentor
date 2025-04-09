@@ -19,6 +19,7 @@ import QASection from '../components/QASection';
 import MyTicker from '../components/Ticker';
 import Store from '../components/Store';
 import BackToTop from '../components/BackToTop';
+import IslandList from '../components/IslandList';
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
       <LazyShow>
         <>
           <Product />
+          <IslandList />
           <Canvas />
         </>
       </LazyShow>
