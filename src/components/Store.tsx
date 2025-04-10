@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 
 const products = [
   {
-    name: 'Mini Power Bank',
-    description: 'Stay charged on the go.',
-    image: '/assets/images/powerbank.jpg', // Replace with actual image paths
-    link: 'https://www.amazon.com/INIU-Portable-Charging-10000mAh-Tablets/dp/B09176JCKZ?crid=3PK4S3TX25SJT&dib=eyJ2IjoiMSJ9.NNtcMx3tBl4KYMENUAY8Ve4s_J_LjtJoQK_Tw5985l6gIfuEiSZmrU7f61vSf9trDRp5u2M7kZ4HrTJZPq5UqxnEy5ExWhNCMpU4JvdVk_txB7YqvLCNUA7Y4lyI0p1wS2vtAXun-34OwPEH-i-5cXFQkUQGuUsqANcNVRNanH4WicaPqITMWAK3ehACFntRr6QYROxpz5hlLueP08qQwa8dWkiA1opcCG7aWT3-pAs.vp_OiVQE-TDgftHGuSOVYSaUd48YRr4YYf-B5niH7Ao&dib_tag=se&keywords=mini%2BPower%2BBank&qid=1743661618&sprefix=mini%2Bpower%2Bbank%2Caps%2C348&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=198fffbd61d177ebff759a6f0793867d&language=en_US&ref_=as_li_ss_tl', // Affiliate link placeholder
+    name: 'Mini Bluetooth Speaker',
+    description: 'Enjoy music anywhere with JBL Go 3.',
+    image: '/assets/images/jbl.jpg',
+    link: 'https://www.amazon.com/JBL-Bluetooth-Built-Waterproof-Dustproof/dp/B08KW1KR5H?crid=3VUTW189394ED&dib=eyJ2IjoiMSJ9.FGkEwxm3QNHRWWQy2KNYz333rFfCFhE2oVPUD7ERc7gdb4h9-r-iJGDD3k2FAhT0_hjnGeKdBRvQ23JkhKEY0RaRfPVQdOxKEn16t5fHuN9qiQSQznJs_8Plru1vltrDK1oxTcsKO3PzNBtxBtXH5dnSB8HjX0lWcJqrOQcYAQqeBoIK3bwu5Ih0kB-oZjMaqvXLPNNMW0QQcaZ8Y6VMWNx2T6hy4SVjCnS5Kq-tiBE.Mqw-uR3eFoYa5iRHfJIR6cDp510BPAvZyEk6R-wuLMs&dib_tag=se&keywords=bluetooth%2Bspeakers%2Bwireless&qid=1744282386&sprefix=blue%2Btoothspeaker%2Caps%2C225&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=7d562457ac35b6410528d256fe68d12c&language=en_US&ref_=as_li_ss_tl',
   },
   {
     name: 'Universal Travel Adapter',
@@ -56,16 +56,16 @@ const products = [
     link: 'https://www.amazon.com/Apple-MX532LL-A-AirTag/dp/B0CWXNS552?crid=2SI1OO86CUKRC&dib=eyJ2IjoiMSJ9.eJ4jVW3fBNhHFl2sL9cZHHrfluVwfLNuHJyQMwz4nj7HJkO6koRmxSdJ4ErwjGB_EO6uM2uEx4H8AfzH_dkA6PyXc8nh1jeJtJ0XK2qeZ5ytWx9uGzzp6OWoPmHtxnzxDVxO6N4shMtfJeXIEps7Gl2FXJUt9rLBQSwRzM5xTMVIObAs46RGVlXfFwWqPNvmljuiqlWzHZ60AvyXfreVn6RRqcnXCQ-Ajln506wdWadpP3MZWVIxQcRgG4PA3kzchnoQkadbtYAU1RKvJ31BrHOjc71GgfA3iQbll8_bdH8.N_AQnxY3IK88wpIuqWAWvBU0O86stDB5hSc0IesBGV8&dib_tag=se&keywords=apple+airtag&qid=1743662087&sprefix=apple+airtag%2Caps%2C231&sr=8-1&linkCode=ll1&tag=googlementor-20&linkId=6e55276863fd379898e8ecfb3080119a&language=en_US&ref_=as_li_ss_tl',
   },
   {
+    name: 'Mini Power Bank',
+    description: 'Stay charged on the go.',
+    image: '/assets/images/powerbank.jpg', // Replace with actual image paths
+    link: 'https://www.amazon.com/INIU-Portable-Charging-10000mAh-Tablets/dp/B09176JCKZ?crid=3PK4S3TX25SJT&dib=eyJ2IjoiMSJ9.NNtcMx3tBl4KYMENUAY8Ve4s_J_LjtJoQK_Tw5985l6gIfuEiSZmrU7f61vSf9trDRp5u2M7kZ4HrTJZPq5UqxnEy5ExWhNCMpU4JvdVk_txB7YqvLCNUA7Y4lyI0p1wS2vtAXun-34OwPEH-i-5cXFQkUQGuUsqANcNVRNanH4WicaPqITMWAK3ehACFntRr6QYROxpz5hlLueP08qQwa8dWkiA1opcCG7aWT3-pAs.vp_OiVQE-TDgftHGuSOVYSaUd48YRr4YYf-B5niH7Ao&dib_tag=se&keywords=mini%2BPower%2BBank&qid=1743661618&sprefix=mini%2Bpower%2Bbank%2Caps%2C348&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=198fffbd61d177ebff759a6f0793867d&language=en_US&ref_=as_li_ss_tl', // Affiliate link placeholder
+  },
+  {
     name: 'Portable Charger 20000mAh',
     description: 'Charge multiple devices.',
     image: '/assets/images/charger.jpg',
     link: 'https://www.amazon.com/INIU-Portable-20000mAh-High-speed-Flashlight/dp/B07YPY31FL?crid=1XSBI2DD4MBI3&dib=eyJ2IjoiMSJ9.CZlI-b10iXOHhb1rmCebQ5pDKUotPusAaFPEu8XSDTm7KcdiWrT22WwyVSuZUn6drRlqXZBNAHJ7e4LZeolR-w-HP61bxkUMIZgDjk_BQobAX4j6bxfaMHAXp73aGxXF9SZ8E-GR4jRJzSSyzpX3VWP-NmzVisQUQMi-RzV1e2NpXrXqrAg2AJ5ic0GKH1WNIc6IOouEI3vin2Ki-t6Qeh_46j39WTIAElT7G95fZTw.Xkng_Yvwx6COR4I8_1KOB2ycYa7ik4Nw_BKMcom8aPY&dib_tag=se&keywords=power%2Bbank&qid=1744281640&sprefix=powerbank%2Caps%2C267&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=15bde893fcb2936e8586db2e6dc66509&language=en_US&ref_=as_li_ss_tl',
-  },
-  {
-    name: 'Mini Bluetooth Speaker',
-    description: 'Enjoy music anywhere with JBL Go 3.',
-    image: '/assets/images/jbl.jpg',
-    link: 'https://www.amazon.com/JBL-Bluetooth-Built-Waterproof-Dustproof/dp/B08KW1KR5H?crid=3VUTW189394ED&dib=eyJ2IjoiMSJ9.FGkEwxm3QNHRWWQy2KNYz333rFfCFhE2oVPUD7ERc7gdb4h9-r-iJGDD3k2FAhT0_hjnGeKdBRvQ23JkhKEY0RaRfPVQdOxKEn16t5fHuN9qiQSQznJs_8Plru1vltrDK1oxTcsKO3PzNBtxBtXH5dnSB8HjX0lWcJqrOQcYAQqeBoIK3bwu5Ih0kB-oZjMaqvXLPNNMW0QQcaZ8Y6VMWNx2T6hy4SVjCnS5Kq-tiBE.Mqw-uR3eFoYa5iRHfJIR6cDp510BPAvZyEk6R-wuLMs&dib_tag=se&keywords=bluetooth%2Bspeakers%2Bwireless&qid=1744282386&sprefix=blue%2Btoothspeaker%2Caps%2C225&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=7d562457ac35b6410528d256fe68d12c&language=en_US&ref_=as_li_ss_tl',
   },
   {
     name: 'Sun Protection Shirt',
