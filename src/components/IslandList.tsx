@@ -4,7 +4,7 @@ const IslandList = () => {
   const islands = [
     {
       title: '📍 Crete',
-      img: '/assets/images/crete.webp',
+      img: '/assets/images/crete.jpg',
       description: 'Explore the largest island in Greece.',
       link: 'https://www.google.com/maps/@35.2224747,24.2463809,9z/data=!4m6!1m2!10m1!1e1!11m2!2sFTETPqu5SnCRdQay7V_1Sg!3e3?entry=ttu&g_ep=EgoyMDI1MDQwNi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
       target: '_blank',
@@ -20,7 +20,7 @@ const IslandList = () => {
     },
     {
       title: '📍 Santorini',
-      img: '/assets/images/santorini.webp',
+      img: '/assets/images/santorini.jpg',
       description: 'Known for its iconic buildings and breathtaking sunsets.',
       link: 'https://www.google.com/maps/@36.4011997,25.3458446,12z/data=!4m6!1m2!10m1!1e1!11m2!2sPmNDSpvFTOKdewcPsf3wWw!3e3?entry=ttu&g_ep=EgoyMDI1MDQwNi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
       target: '_blank',
@@ -35,15 +35,15 @@ const IslandList = () => {
       rel: 'noopener noreferrer',
     },
     {
-      title: '📍 Rhodes',
-      img: '/assets/images/rhodes.webp',
+      title: '📍 Rhodes (Rodos)',
+      img: '/assets/images/rodos.jpg',
       description: 'Discover medieval charm and beautiful beaches.',
       link: 'https://www.google.com/maps/@36.1723163,27.6523371,10z/data=!4m6!1m2!10m1!1e1!11m2!2s9gWD1lJsTiCAh7juAHOsZQ!3e3?entry=ttu&g_ep=EgoyMDI1MDQwNi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
-      title: '📍 Corfu',
+      title: '📍 Corfu (Kerkira)',
       img: '/assets/images/corfu.jpg',
       description: 'Venetian architecture and stunning coastlines.',
       link: 'https://www.google.com/maps/@39.582828,19.542064,10z/data=!4m6!1m2!10m1!1e1!11m2!2sHQ0OGiP3TN-0BVrAqqsQog!3e3?entry=ttu&g_ep=EgoyMDI1MDQwNi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',

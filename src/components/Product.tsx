@@ -12,7 +12,7 @@ const Product = () => {
     },
     {
       title: '📍 Must-See Attractions',
-      img: '/assets/images/must.webp',
+      img: '/assets/images/must.jpg',
       description: 'Discover the must-see attractions in Greece.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sYdxYS6H03eNUO6wBrMYZto99JAg9Ng?g_ep=CAISEjI0LjQ5LjMuNzAyODc2MTUxMBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
@@ -36,7 +36,7 @@ const Product = () => {
     },
     {
       title: '📍 Fish Tavernas with Scenic views',
-      img: '/assets/images/fish.webp',
+      img: '/assets/images/eat.webp',
       description: 'Enjoy fresh seafood with a view.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sUqd74lFA2sYPEzwyP1k8I-V9qZ_VNw?g_ep=CAISEjI1LjE0LjEuNzQyMzk4MTI0MBgAILffASpsLDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDk0MjA2MTY2LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjAzMDE5LDQ3MDg0MzA0LDk0MjA4NDU4LDk0MjA4NDQ3QgJHUg%3D%3D',
       target: '_blank',
