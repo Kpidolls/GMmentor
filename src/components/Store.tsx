@@ -38,10 +38,34 @@ const products = [
     link: 'https://www.amazon.com/Lamicall-Waterproof-Phone-Pouch-Case/dp/B0BQRDKRL6?crid=OGV98TJ7YOCU&dib=eyJ2IjoiMSJ9.rvdGKthxZZQp1d8I-eHoxHlzPyaY547vZ48m43gd_FOYCT1rfHHa_pz_Vw8eWGjTBxn1PLfcsJmq_EYsJyRXH7hxJWFe_GziDMKS4FIBLAEcBy8XupPK_7ZL3Zmoz-o0xEgyNFcSzNLdmNxbXHZenzMHJY7xdUrx7HBtncDG6qRH4-Kq4HNnsPSlF-PerK2wYkLW4yoU3xLFlWE6TlKgLN_QpclCDYtSNXJLwwM9aks.oxyhtaoXkD1Y-wrxQR5lt5sKSdPBXqzDowSgHLhQjjA&dib_tag=se&keywords=waterproof%2Bphone%2Bcase&qid=1743662562&sprefix=waterproof%2Bphone%2B%2Caps%2C236&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=6304637682d9023a1e744f35066cf416&language=en_US&ref_=as_li_ss_tl',
   },
   {
-    name: 'GoPro Waterproof Camera',
-    description: 'Capture your adventures.',
-    image: '/assets/images/gopro.jpg',
-    link: 'https://www.amazon.com/GoPro-HERO13-Black-Compatability-HB/dp/B0DCM34GXX?crid=10NCBQXUPNIH5&dib=eyJ2IjoiMSJ9.vkUjTAHT7MzwSo8RLmaAIp9RO7yu-UJcV0r8sDakFQkUZ-S6qgGtpV2bY-q9ABitJddX-UuLMr-KjXFUd15I8zblmyiCG5QR3erM53m_fl3zoXoZinONcs9TIbtKAHGR1o_OfJb49i000RvmrXucLty237wZHTNis1nzjsmhXFPlXlqDaTVWj_5y2PZjNg2YmpvYAWVjwhrhTSGH26_b0ESYNlfXy3NXlyIvHNETya8zaUGdRLhSpyMz9L8xU8AvzdYSMtKA5GPSt34V1F36f7SaJ0PZkvpWdz42ZfPqYfk.Y-bq2WZKAjFxYo6K3jQ_--n1fXZQjK2yyOiZisphMvk&dib_tag=se&keywords=go%2Bpro&qid=1743662645&sprefix=go%2Bpro%2Caps%2C220&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=c854de0fa5e66affb72aa06958655e74&language=en_US&ref_=as_li_ss_tl',
+    name: 'Water Shoes',
+    description: 'Perfect for beach and water activities.',
+    image: '/assets/images/watershoes.jpg',
+    link: 'https://www.amazon.com/ATHMILE-Quick-Dry-Barefoot-Exercise-Accessories/dp/B09Q3MYDQH?crid=29GN13UM8DI65&dib=eyJ2IjoiMSJ9.NPjF_UkxH8HkjqvHP02DhqOsxKSBgQWtxxIVPvkvj_uiK64x3w1an1Er8KiH6gd3HeU1_B96HSj6x88OOZ_eaLiAlh7bx45lxRbPhucVXFMvyotcqrKvQNB7Ra9-X1h6ueZDsX3PtMytjWWYg0s4FxouVu6rrX4z0YFB3prcDF8cmUzyCYm_yikPDqX_381J5c6DKCbN5siCsQoOn297Q4IyXr56fk3Vhe2tnFgzbfJN21FcUfICausgei7xg0aDbv_Ql9stgzJssQw_Tr2ZZKWtDHjpM_jDJOXvRLnwsXg.ygA5L4vrUoQCZiB6ohqjSrt8dHkXDg2m_Q-CRySGsS8&dib_tag=se&keywords=water+shoes&qid=1744281232&sprefix=water+shoes%2Caps%2C273&sr=8-1&linkCode=ll1&tag=googlementor-20&linkId=93478b564d659a64ecb260bfbd6a023c&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Portable Charger 20000mAh',
+    description: 'Charge multiple devices.',
+    image: '/assets/images/charger.jpg',
+    link: 'https://www.amazon.com/INIU-Portable-20000mAh-High-speed-Flashlight/dp/B07YPY31FL?crid=1XSBI2DD4MBI3&dib=eyJ2IjoiMSJ9.CZlI-b10iXOHhb1rmCebQ5pDKUotPusAaFPEu8XSDTm7KcdiWrT22WwyVSuZUn6drRlqXZBNAHJ7e4LZeolR-w-HP61bxkUMIZgDjk_BQobAX4j6bxfaMHAXp73aGxXF9SZ8E-GR4jRJzSSyzpX3VWP-NmzVisQUQMi-RzV1e2NpXrXqrAg2AJ5ic0GKH1WNIc6IOouEI3vin2Ki-t6Qeh_46j39WTIAElT7G95fZTw.Xkng_Yvwx6COR4I8_1KOB2ycYa7ik4Nw_BKMcom8aPY&dib_tag=se&keywords=power%2Bbank&qid=1744281640&sprefix=powerbank%2Caps%2C267&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=15bde893fcb2936e8586db2e6dc66509&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Mini Bluetooth Speaker',
+    description: 'Enjoy music anywhere with JBL Go 3.',
+    image: '/assets/images/jbl.jpg',
+    link: 'https://www.amazon.com/JBL-Bluetooth-Built-Waterproof-Dustproof/dp/B08KW1KR5H?crid=3VUTW189394ED&dib=eyJ2IjoiMSJ9.FGkEwxm3QNHRWWQy2KNYz333rFfCFhE2oVPUD7ERc7gdb4h9-r-iJGDD3k2FAhT0_hjnGeKdBRvQ23JkhKEY0RaRfPVQdOxKEn16t5fHuN9qiQSQznJs_8Plru1vltrDK1oxTcsKO3PzNBtxBtXH5dnSB8HjX0lWcJqrOQcYAQqeBoIK3bwu5Ih0kB-oZjMaqvXLPNNMW0QQcaZ8Y6VMWNx2T6hy4SVjCnS5Kq-tiBE.Mqw-uR3eFoYa5iRHfJIR6cDp510BPAvZyEk6R-wuLMs&dib_tag=se&keywords=bluetooth%2Bspeakers%2Bwireless&qid=1744282386&sprefix=blue%2Btoothspeaker%2Caps%2C225&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=7d562457ac35b6410528d256fe68d12c&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Sun Protection Shirt',
+    description: 'Stay protected from the sun.',
+    image: '/assets/images/swimshirt.jpg',
+    link: 'https://www.amazon.com/Roadbox-Protection-Outdoor-Rashguard-Campanula/dp/B08BFKM7VT?crid=1B8XWMGNDMHZ&dib=eyJ2IjoiMSJ9.oqmEbNu4aZG54M33PmwZ0dhEhnzU6rCJCqfB6kTFE-OYrQ-VSeNQpoHKr9xz906Qe_LYneUjbRFXHvr6Q3c48hdlKAYemI6qMk9Q_8qZ0JYtn3spkoeuh6269le8cetUa-Dlc5pXu5n_tWLWy3KBmuTEtdRiSjkny5EhO3TBxxMyqvcFnbun1M3uoiFHM7H28xKHFScQCdogE2OwAvzEBdwKgEWCwMPl5pIPcCsKCfkJTBIJMVcYRzz-gQzHicJ6Xs8uVLgC65LhfSYdeyX6w2jpAAZhBBBtiRiCm2sXBk8.7yIAVVvHWW2ASwNxiOlDxl-9aPLno0LDjoqPWxRPjME&dib_tag=se&keywords=swim+shirt&qid=1744282276&sprefix=swim+shirt%2Caps%2C219&sr=8-1&linkCode=ll1&tag=googlementor-20&linkId=a7ef3772cb9cfe23053d42d546045fb4&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Dry Bag Waterproof',
+    description: 'Keep your belongings dry.',
+    image: '/assets/images/waterbag.jpg',
+    link: 'https://www.amazon.com/HEETA-Waterproof-Lightweight-Backpack-Transparent/dp/B07PLZP5LN?crid=2S45C5LWP7B8C&dib=eyJ2IjoiMSJ9.04dV5-nTjb_XJlbT6NyZUC1h2Y_hDzZ4TBvQ94SqYoyL9VQq6uvOv7aI3Cv_Is5nIYXzmexSi81ePUFvNJVLle-9SBw7eUuwB1AwFLAPsJpFvmMvnFp7lK0D_vKXGnbcreI2HtG24XF6uiPk8RMF19oEO4tg6sp1IdVwz9OnLEbqpeknRxSRoTeYryP3_KCOY3mtDI_57KTwH-aG-cQQxuc0uJtPph2PnZn88Mv_BX8geryUVVvuuTngrxZa3_HsNljlHeanHyv7ewlC2meSHD7hSi9izeXdgo6JwQeKMQQ.s5-nBJejLDvzZsHHOKyTbXF5NCMwpWSzUDZddxyVn-8&dib_tag=se&keywords=dry%2Bbag%2Bwaterproof&qid=1744282796&sprefix=dry%2Bbag%2B%2Caps%2C264&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=53007ac01d6feb4e5350f5827f915ec2&language=en_US&ref_=as_li_ss_tl',
   },
   {
     name: 'Sun Hat',
@@ -91,7 +115,7 @@ const Store: React.FC = () => {
     <div id="store" className="bg-background py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center">
-          Our Recommended Products
+          Travel Gifts
         </h2>
         <p className="mt-4 text-lg text-gray-600 text-center">
           Make your life easier.
