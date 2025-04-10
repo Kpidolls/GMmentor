@@ -14,10 +14,10 @@ const products = [
     link: 'https://www.amazon.com/NEWVANGA-International-Universal-Worldwide-Charging/dp/B01FO4W5W2?crid=28IMN2VY22YN7&dib=eyJ2IjoiMSJ9.jJ5JSSoMLRaR3Hs-XHxku86MnNJRH365FkZhxTtWXCPN0QQ8pPQBQcprISWu5Z-Q9nMnoGUUKb4YF1CIGf526FDBhfd5D5xuQKMU1LKdkDTJXilM7I3tSQGSqAP1MefzATfITwcsgaSXquY_6XRJXXxLTOFW0Exl3H8Fj3fituy7nCYIFNEFOrhvD3Ewu7zf84FJDvjlN6DSqJy2j4h-B-SKAXUd-l7ZYKXAor1AyVjM8jOBjJfm-KgVrPgD77hadOIAwWnviwR8jXNtsYpcP-7_Ldbw9KuCKDJBSfBt5T8.7LnubVDXoBTeUbNW964t3QmLTk7hwMnbsGHMCyLXj1s&dib_tag=se&keywords=Universal%2BTravel%2BAdapter&qid=1743661696&sprefix=universal%2Btravel%2Badapter%2Caps%2C281&sr=8-6&th=1&linkCode=ll1&tag=googlementor-20&linkId=138bf86aa348318d5c924b0c3a956757&language=en_US&ref_=as_li_ss_tl',
   },
   {
-    name: 'Tile GPS Tracker',
-    description: 'Never lose your belongings again.',
-    image: '/assets/images/tile.jpg',
-    link: 'https://www.amazon.com/Tile-Life360-Bluetooth-Tracker-Compatible/dp/B0D63657GY?crid=1DQMOW5YLB3UL&dib=eyJ2IjoiMSJ9.SZZ7duJsi3EtIqYaSf-Lxx8dI63Ku87qfw4p7tbWwuqDwjTNp362RfW_8WHPEwKh4PuFL8YlZQ0oyNhX516zc98zlemE9UGsy_a8Z0xWcx4bSRUxJHS8KYDxFgUYAVMfTp0kZvSjmc_leO4Whu6Oj-SQIkBmbauOR3KIacwN0-r9pPLYhh4z7FUYYStag8uvGv7vlVhgrgcAbO9jiw7-8-Jggm5ew-7yCumrG8wFwdo.xiJqztHhTbzLQJ3UC67P1R92hmurWaamBPy-nB0pybA&dib_tag=se&keywords=GPS%2BTracker&qid=1743661824&sprefix=gps%2Btracker%2Caps%2C245&sr=8-14&th=1&linkCode=ll1&tag=googlementor-20&linkId=7d7bdc11f04ea0ea7014094d2986365a&language=en_US&ref_=as_li_ss_tl',
+    name: 'e-SIM Card',
+    description: 'Best solution for mobile data.',
+    image: '/assets/images/airalo.png',
+    link: 'https://www.airalo.com/',
   },
   {
     name: 'Apple AirTag',
@@ -48,6 +48,12 @@ const products = [
     description: 'Stay cool and protected from the sun.',
     image: '/assets/images/hat.jpg',
     link: 'https://www.amazon.com/Summer-Panama-Straw-Fedora-Beach/dp/B07BNNNSX5?crid=35H30J30GZNOC&dib=eyJ2IjoiMSJ9.tU3Ad7L_jXc45PW0ksQAAhL5tqfFEPZKValKUTy45xneWX-9nJwuHOJ3JnYbhQmwtgJu35hR689run1JS7rpVlBr9J-w2rZiVU-rg4P3mWZJ6jnzL8v8x1VS_pif7wCHOcCUcHPSti89nug87S-nNpGbbMaERDQvPPtwYTe9wmTtdbDmJfQjgjUoLAMGpxEaUsDjXmtzpGmytlhwn-mivuGXjfUacmMMaZRGd0ctoyihrGj9ii3x5O7C6tEAJEDOkWPDGrdIoTqM8IJ4-E6CDrUI6nAJtagnhlVZRzGp_ck.W_8kxKL5rk-jHa0lU_xTt6_2yfl49-zwKfUIL3b8VI8&dib_tag=se&keywords=hat+for+sun&qid=1743773805&sprefix=hat+for+sun%2Caps%2C218&sr=8-16&linkCode=ll1&tag=googlementor-20&linkId=2fd025d345af310cc3f1a33161f33fbc&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Tile GPS Tracker',
+    description: 'Never lose your belongings again.',
+    image: '/assets/images/tile.jpg',
+    link: 'https://www.amazon.com/Tile-Life360-Bluetooth-Tracker-Compatible/dp/B0D63657GY?crid=1DQMOW5YLB3UL&dib=eyJ2IjoiMSJ9.SZZ7duJsi3EtIqYaSf-Lxx8dI63Ku87qfw4p7tbWwuqDwjTNp362RfW_8WHPEwKh4PuFL8YlZQ0oyNhX516zc98zlemE9UGsy_a8Z0xWcx4bSRUxJHS8KYDxFgUYAVMfTp0kZvSjmc_leO4Whu6Oj-SQIkBmbauOR3KIacwN0-r9pPLYhh4z7FUYYStag8uvGv7vlVhgrgcAbO9jiw7-8-Jggm5ew-7yCumrG8wFwdo.xiJqztHhTbzLQJ3UC67P1R92hmurWaamBPy-nB0pybA&dib_tag=se&keywords=GPS%2BTracker&qid=1743661824&sprefix=gps%2Btracker%2Caps%2C245&sr=8-14&th=1&linkCode=ll1&tag=googlementor-20&linkId=7d7bdc11f04ea0ea7014094d2986365a&language=en_US&ref_=as_li_ss_tl',
   },
   {
     name: 'Stanley Water Bottle',
@@ -137,7 +143,7 @@ const Store: React.FC = () => {
           </div>
         )}
         <p className="mt-8 text-sm text-gray-500 text-center">
-          Note: These are affiliate links to Amazon. We may earn a commission if you purchase through these links.
+          Note: We may earn a commission if you purchase through these links.
         </p>
       </div>
     </div>
