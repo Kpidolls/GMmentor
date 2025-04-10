@@ -16,14 +16,26 @@ const products = [
   {
     name: 'e-SIM Card',
     description: 'Best solution for mobile data.',
-    image: '/assets/images/airalo.png',
+    image: '/assets/images/airalo.webp',
     link: 'https://www.airalo.com/',
   },
   {
-    name: 'Apple AirTag',
-    description: 'Keep track of your items.',
-    image: '/assets/images/airtag.jpg',
-    link: 'https://www.amazon.com/Apple-MX532LL-A-AirTag/dp/B0CWXNS552?crid=2SI1OO86CUKRC&dib=eyJ2IjoiMSJ9.eJ4jVW3fBNhHFl2sL9cZHHrfluVwfLNuHJyQMwz4nj7HJkO6koRmxSdJ4ErwjGB_EO6uM2uEx4H8AfzH_dkA6PyXc8nh1jeJtJ0XK2qeZ5ytWx9uGzzp6OWoPmHtxnzxDVxO6N4shMtfJeXIEps7Gl2FXJUt9rLBQSwRzM5xTMVIObAs46RGVlXfFwWqPNvmljuiqlWzHZ60AvyXfreVn6RRqcnXCQ-Ajln506wdWadpP3MZWVIxQcRgG4PA3kzchnoQkadbtYAU1RKvJ31BrHOjc71GgfA3iQbll8_bdH8.N_AQnxY3IK88wpIuqWAWvBU0O86stDB5hSc0IesBGV8&dib_tag=se&keywords=apple+airtag&qid=1743662087&sprefix=apple+airtag%2Caps%2C231&sr=8-1&linkCode=ll1&tag=googlementor-20&linkId=6e55276863fd379898e8ecfb3080119a&language=en_US&ref_=as_li_ss_tl',
+    name: 'Water Shoes',
+    description: 'Perfect for beach and water activities.',
+    image: '/assets/images/watershoes.jpg',
+    link: 'https://www.amazon.com/ATHMILE-Quick-Dry-Barefoot-Exercise-Accessories/dp/B09Q3MYDQH?crid=29GN13UM8DI65&dib=eyJ2IjoiMSJ9.NPjF_UkxH8HkjqvHP02DhqOsxKSBgQWtxxIVPvkvj_uiK64x3w1an1Er8KiH6gd3HeU1_B96HSj6x88OOZ_eaLiAlh7bx45lxRbPhucVXFMvyotcqrKvQNB7Ra9-X1h6ueZDsX3PtMytjWWYg0s4FxouVu6rrX4z0YFB3prcDF8cmUzyCYm_yikPDqX_381J5c6DKCbN5siCsQoOn297Q4IyXr56fk3Vhe2tnFgzbfJN21FcUfICausgei7xg0aDbv_Ql9stgzJssQw_Tr2ZZKWtDHjpM_jDJOXvRLnwsXg.ygA5L4vrUoQCZiB6ohqjSrt8dHkXDg2m_Q-CRySGsS8&dib_tag=se&keywords=water+shoes&qid=1744281232&sprefix=water+shoes%2Caps%2C273&sr=8-1&linkCode=ll1&tag=googlementor-20&linkId=93478b564d659a64ecb260bfbd6a023c&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Travel Luggage Lock',
+    description: 'Secure your belongings.',
+    image: '/assets/images/lock.jpg',
+    link: 'https://www.amazon.com/Compatible-Travel-Luggage-Inspection-Indicator/dp/B073NYB7R2?crid=193YCY2P4WJR4&dib=eyJ2IjoiMSJ9.gk-FsnfAsrB47YFDiXxMZr4w4lgP23Tqz7Vz1m0VIcIxhhB-qf4rTBPMshxuzn7eDjVo_EIy3oMMztzefkXVcD3pVcQ0OaDKEfgkMV2Y2VGhefOSPIAbVkKbfWsME9aeoEyyy75OIfkRM9eLL0ZWDX91_Hh9w1JThAmanWbAm--GLXHNedqncyDGtAWuxKVtiThk8abcr0ug6lAaRvS6izTTVGJ9i_OmPDPrrQqpWrJl5nyx_nchT9ee-T7oQ6Gydgt1tRQbNPk-GG5GV4Dve8AFucT9FM1Y861m9O5bwiY.HT4ld4jRTAzqdjzrYDoHvJYfvcaDV3k41C2nKKJRe38&dib_tag=se&keywords=luggage%2Block&qid=1744297813&sprefix=luggage%2Block%2Caps%2C266&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=f60ff431657ac0a3dc911b8b1c082318&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Dry Bag Waterproof',
+    description: 'Keep your belongings dry.',
+    image: '/assets/images/waterbag.jpg',
+    link: 'https://www.amazon.com/HEETA-Waterproof-Lightweight-Backpack-Transparent/dp/B07PLZP5LN?crid=2S45C5LWP7B8C&dib=eyJ2IjoiMSJ9.04dV5-nTjb_XJlbT6NyZUC1h2Y_hDzZ4TBvQ94SqYoyL9VQq6uvOv7aI3Cv_Is5nIYXzmexSi81ePUFvNJVLle-9SBw7eUuwB1AwFLAPsJpFvmMvnFp7lK0D_vKXGnbcreI2HtG24XF6uiPk8RMF19oEO4tg6sp1IdVwz9OnLEbqpeknRxSRoTeYryP3_KCOY3mtDI_57KTwH-aG-cQQxuc0uJtPph2PnZn88Mv_BX8geryUVVvuuTngrxZa3_HsNljlHeanHyv7ewlC2meSHD7hSi9izeXdgo6JwQeKMQQ.s5-nBJejLDvzZsHHOKyTbXF5NCMwpWSzUDZddxyVn-8&dib_tag=se&keywords=dry%2Bbag%2Bwaterproof&qid=1744282796&sprefix=dry%2Bbag%2B%2Caps%2C264&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=53007ac01d6feb4e5350f5827f915ec2&language=en_US&ref_=as_li_ss_tl',
   },
   {
     name: 'Sony Wireless Noise Canceling Headphones',
@@ -34,14 +46,14 @@ const products = [
   {
     name: 'Waterproof Phone Case',
     description: 'Protect your phone at the beach.',
-    image: '/assets/images/phonecase.png',
+    image: '/assets/images/phonecase.jpg',
     link: 'https://www.amazon.com/Lamicall-Waterproof-Phone-Pouch-Case/dp/B0BQRDKRL6?crid=OGV98TJ7YOCU&dib=eyJ2IjoiMSJ9.rvdGKthxZZQp1d8I-eHoxHlzPyaY547vZ48m43gd_FOYCT1rfHHa_pz_Vw8eWGjTBxn1PLfcsJmq_EYsJyRXH7hxJWFe_GziDMKS4FIBLAEcBy8XupPK_7ZL3Zmoz-o0xEgyNFcSzNLdmNxbXHZenzMHJY7xdUrx7HBtncDG6qRH4-Kq4HNnsPSlF-PerK2wYkLW4yoU3xLFlWE6TlKgLN_QpclCDYtSNXJLwwM9aks.oxyhtaoXkD1Y-wrxQR5lt5sKSdPBXqzDowSgHLhQjjA&dib_tag=se&keywords=waterproof%2Bphone%2Bcase&qid=1743662562&sprefix=waterproof%2Bphone%2B%2Caps%2C236&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=6304637682d9023a1e744f35066cf416&language=en_US&ref_=as_li_ss_tl',
   },
   {
-    name: 'Water Shoes',
-    description: 'Perfect for beach and water activities.',
-    image: '/assets/images/watershoes.jpg',
-    link: 'https://www.amazon.com/ATHMILE-Quick-Dry-Barefoot-Exercise-Accessories/dp/B09Q3MYDQH?crid=29GN13UM8DI65&dib=eyJ2IjoiMSJ9.NPjF_UkxH8HkjqvHP02DhqOsxKSBgQWtxxIVPvkvj_uiK64x3w1an1Er8KiH6gd3HeU1_B96HSj6x88OOZ_eaLiAlh7bx45lxRbPhucVXFMvyotcqrKvQNB7Ra9-X1h6ueZDsX3PtMytjWWYg0s4FxouVu6rrX4z0YFB3prcDF8cmUzyCYm_yikPDqX_381J5c6DKCbN5siCsQoOn297Q4IyXr56fk3Vhe2tnFgzbfJN21FcUfICausgei7xg0aDbv_Ql9stgzJssQw_Tr2ZZKWtDHjpM_jDJOXvRLnwsXg.ygA5L4vrUoQCZiB6ohqjSrt8dHkXDg2m_Q-CRySGsS8&dib_tag=se&keywords=water+shoes&qid=1744281232&sprefix=water+shoes%2Caps%2C273&sr=8-1&linkCode=ll1&tag=googlementor-20&linkId=93478b564d659a64ecb260bfbd6a023c&language=en_US&ref_=as_li_ss_tl',
+    name: 'Apple AirTag',
+    description: 'Keep track of your items.',
+    image: '/assets/images/airtag.jpg',
+    link: 'https://www.amazon.com/Apple-MX532LL-A-AirTag/dp/B0CWXNS552?crid=2SI1OO86CUKRC&dib=eyJ2IjoiMSJ9.eJ4jVW3fBNhHFl2sL9cZHHrfluVwfLNuHJyQMwz4nj7HJkO6koRmxSdJ4ErwjGB_EO6uM2uEx4H8AfzH_dkA6PyXc8nh1jeJtJ0XK2qeZ5ytWx9uGzzp6OWoPmHtxnzxDVxO6N4shMtfJeXIEps7Gl2FXJUt9rLBQSwRzM5xTMVIObAs46RGVlXfFwWqPNvmljuiqlWzHZ60AvyXfreVn6RRqcnXCQ-Ajln506wdWadpP3MZWVIxQcRgG4PA3kzchnoQkadbtYAU1RKvJ31BrHOjc71GgfA3iQbll8_bdH8.N_AQnxY3IK88wpIuqWAWvBU0O86stDB5hSc0IesBGV8&dib_tag=se&keywords=apple+airtag&qid=1743662087&sprefix=apple+airtag%2Caps%2C231&sr=8-1&linkCode=ll1&tag=googlementor-20&linkId=6e55276863fd379898e8ecfb3080119a&language=en_US&ref_=as_li_ss_tl',
   },
   {
     name: 'Portable Charger 20000mAh',
@@ -62,12 +74,6 @@ const products = [
     link: 'https://www.amazon.com/Roadbox-Protection-Outdoor-Rashguard-Campanula/dp/B08BFKM7VT?crid=1B8XWMGNDMHZ&dib=eyJ2IjoiMSJ9.oqmEbNu4aZG54M33PmwZ0dhEhnzU6rCJCqfB6kTFE-OYrQ-VSeNQpoHKr9xz906Qe_LYneUjbRFXHvr6Q3c48hdlKAYemI6qMk9Q_8qZ0JYtn3spkoeuh6269le8cetUa-Dlc5pXu5n_tWLWy3KBmuTEtdRiSjkny5EhO3TBxxMyqvcFnbun1M3uoiFHM7H28xKHFScQCdogE2OwAvzEBdwKgEWCwMPl5pIPcCsKCfkJTBIJMVcYRzz-gQzHicJ6Xs8uVLgC65LhfSYdeyX6w2jpAAZhBBBtiRiCm2sXBk8.7yIAVVvHWW2ASwNxiOlDxl-9aPLno0LDjoqPWxRPjME&dib_tag=se&keywords=swim+shirt&qid=1744282276&sprefix=swim+shirt%2Caps%2C219&sr=8-1&linkCode=ll1&tag=googlementor-20&linkId=a7ef3772cb9cfe23053d42d546045fb4&language=en_US&ref_=as_li_ss_tl',
   },
   {
-    name: 'Dry Bag Waterproof',
-    description: 'Keep your belongings dry.',
-    image: '/assets/images/waterbag.jpg',
-    link: 'https://www.amazon.com/HEETA-Waterproof-Lightweight-Backpack-Transparent/dp/B07PLZP5LN?crid=2S45C5LWP7B8C&dib=eyJ2IjoiMSJ9.04dV5-nTjb_XJlbT6NyZUC1h2Y_hDzZ4TBvQ94SqYoyL9VQq6uvOv7aI3Cv_Is5nIYXzmexSi81ePUFvNJVLle-9SBw7eUuwB1AwFLAPsJpFvmMvnFp7lK0D_vKXGnbcreI2HtG24XF6uiPk8RMF19oEO4tg6sp1IdVwz9OnLEbqpeknRxSRoTeYryP3_KCOY3mtDI_57KTwH-aG-cQQxuc0uJtPph2PnZn88Mv_BX8geryUVVvuuTngrxZa3_HsNljlHeanHyv7ewlC2meSHD7hSi9izeXdgo6JwQeKMQQ.s5-nBJejLDvzZsHHOKyTbXF5NCMwpWSzUDZddxyVn-8&dib_tag=se&keywords=dry%2Bbag%2Bwaterproof&qid=1744282796&sprefix=dry%2Bbag%2B%2Caps%2C264&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=53007ac01d6feb4e5350f5827f915ec2&language=en_US&ref_=as_li_ss_tl',
-  },
-  {
     name: 'Sun Hat',
     description: 'Stay cool and protected from the sun.',
     image: '/assets/images/hat.jpg',
@@ -80,10 +86,10 @@ const products = [
     link: 'https://www.amazon.com/Tile-Life360-Bluetooth-Tracker-Compatible/dp/B0D63657GY?crid=1DQMOW5YLB3UL&dib=eyJ2IjoiMSJ9.SZZ7duJsi3EtIqYaSf-Lxx8dI63Ku87qfw4p7tbWwuqDwjTNp362RfW_8WHPEwKh4PuFL8YlZQ0oyNhX516zc98zlemE9UGsy_a8Z0xWcx4bSRUxJHS8KYDxFgUYAVMfTp0kZvSjmc_leO4Whu6Oj-SQIkBmbauOR3KIacwN0-r9pPLYhh4z7FUYYStag8uvGv7vlVhgrgcAbO9jiw7-8-Jggm5ew-7yCumrG8wFwdo.xiJqztHhTbzLQJ3UC67P1R92hmurWaamBPy-nB0pybA&dib_tag=se&keywords=GPS%2BTracker&qid=1743661824&sprefix=gps%2Btracker%2Caps%2C245&sr=8-14&th=1&linkCode=ll1&tag=googlementor-20&linkId=7d7bdc11f04ea0ea7014094d2986365a&language=en_US&ref_=as_li_ss_tl',
   },
   {
-    name: 'Stanley Water Bottle',
+    name: 'Water Bottle with Handle and Straw',
     description: 'Stay hydrated anywhere.',
     image: '/assets/images/water.jpg',
-    link: 'https://www.amazon.com/Stanley-IceFlow-Stainless-Steel-Tumbler/dp/B0CSF2NXCR?crid=LDVFCXUQ3YWL&dib=eyJ2IjoiMSJ9.cIjnv3uTs3jwcdxOVEIMrGga-VUpDC6q9__RD2eE_-cv3UXfLkdj70zxEZXpgqJn8-2KoUgIuBq7uDpJRO_kx7XkUqc_o0lAzAKo3WDDUeqQa0FDkyoYOEPLGP9XfPAaw2xer397YleVdewpkof7S5cU9qL1RPI88HoJBcZ84S9FLXYj2YNmWdsyXlkHFVIUTiue9Nkqj44l0QMIoZOw8Tup4zbexp48PLIGDdgew6-9ERhAESOH_qqTnT3eT-GDtIYaXvwCxlNyPayiW3dBVYMtbkzZuM8rRXMP-87QerA.EOBb5MzLrbBOFOzDGXkUWNrkWSxKL920TrdYwdya-6s&dib_tag=se&keywords=water%2Bbottle&qid=1743774693&sprefix=water%2B%2Caps%2C290&sr=8-4&th=1&linkCode=ll1&tag=googlementor-20&linkId=5853d6b8e1b409cb712be2e5bcced25f&language=en_US&ref_=as_li_ss_tl',
+    link: 'https://www.amazon.com/Simple-Modern-Tumbler-Handle-Insulated/dp/B0BHBP1X1B?crid=3RI1W7M2W0EW7&dib=eyJ2IjoiMSJ9.IYTNOMeir5gVqD73IVSo6KwFXMZXivVlGJ52_2l8I-l30U8jWMH3tNYgnk18A_5ExPS9-mGGh1WYfBFnIb1HCyAp2T9WA5nqH_nvKBqza2EOmJ-kEOwAnDUoC04NqzDx1YCdMQQqRxiWQWHvrrIIFNm31fOxCMq5F01TPm8hZgPfP5HcnFXoZ5Esd-HfSwKDzvZtsyK6q_3SQXnM4h55d1CtePSOJsE2-PKtpef4ShALsrEXQbMBZln9IGiFjBxDOPsELubhZMr9V2JBSSMyOnh16r2wLw9mjhDx3DW7H3A.rwFhi_cRepdMWhJ1oW94QzXKjE_XxDIN9pNB-bOvwpY&dib_tag=se&keywords=water%2Bbottle%2Btravel&qid=1744299629&sprefix=water%2Bbottle%2Btravel%2Caps%2C239&sr=8-7&th=1&linkCode=ll1&tag=googlementor-20&linkId=76a85aaebe2124769e4334342a2050ab&language=en_US&ref_=as_li_ss_tl',
   },
   {
     name: 'Herschel Travel Backpack',
@@ -109,7 +115,7 @@ const Store: React.FC = () => {
   const [visibleProducts, setVisibleProducts] = useState(6);
   
   const handleViewMore = () => {
-    setVisibleProducts((prev) => prev + 10);
+    setVisibleProducts((prev) => prev + 12);
   };
   return (
     <div id="store" className="bg-background py-12 px-4 sm:px-6 lg:px-8">
