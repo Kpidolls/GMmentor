@@ -189,7 +189,7 @@ const Product = () => {
   return (
     <div className="container mx-auto px-4 py-8" id="maps">
       <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
-        Explore Map Categories
+      Ready-to-Use Google Maps Lists
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {mapOptions.slice(0, visibleOptions).map((option, index) => (
