@@ -145,7 +145,7 @@ const Store: React.FC = () => {
     <div id="store" className="bg-background py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center">
-          Travel Gifts
+        Shop Travel-Themed Gifts
         </h2>
         <p className="mt-4 text-lg text-gray-600 text-center">
           Make your life easier.
