@@ -109,6 +109,12 @@ const products = [
     image: '/assets/images/sunscreen.jpg',
     link: 'https://www.amazon.com/EltaMD-Acne-Prone-Mineral-Based-Dermatologist-Recommended/dp/B002MSN3QQ?crid=3UG28XZY5PJ34&dib=eyJ2IjoiMSJ9.Dbjo2VW-q3VfGayePXsJQB9Q_56Gkm7QIxJf2Spbq-b0oZtyAkg-jWyCCYD9y18Z7HlyuNxuK34-4gK9fUOHi9vKQeGD774b-MMBdshsotuKXupSEMlJCgKeF6FAla0EO0lOIq46rFpx9_Y_cCxE1gOiCLyI9UxqspCDUqbI6XoLgGdtT-JUWVhIFS5ZUrsNfEG8qDRnXboxXzC0vmwkRO8rgWTLQcvlJ95kH3lMTv8EvTx-gHQ13zw54jjs6SDvRhfVbPf_46zTJhgTMyBQwTFbWbD_TmgKCxjJ3mdDBUU._MPaHe4J9mFqc_ro_c8C2Ntc9JoARqqTY5iGzE409xs&dib_tag=se&keywords=sun%2Bprotection&qid=1743777052&sprefix=sun%2Bprotection%2Caps%2C258&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=b8c9b3510de2c10944341d97c9e42ae5&language=en_US&ref_=as_li_ss_tl',
   },
+  {
+    name: 'Travel First Aid Kit',
+    description: 'Be prepared for any situation.',
+    image: '/assets/images/firstaid.jpg',
+    link: 'https://www.amazon.com/Mini-First-Aid-Pieces-Small/dp/B0747N5KDM?crid=K9RBPL7QNW63&dib=eyJ2IjoiMSJ9.7V-Bnp2ksBXaSqzv_YBz1AzlgoEvZfMWn49iAke95Er6pjAbX39TdsQZXQf1Fr4OYkvJdY2nYfg7oonUw1hXykkB8kBynF9ekFdIYCmDPJ1gRiu_ZjgsTBRmSwsso_iKEMyycJAfRztCTugTV2swrqZ7LW7F84Kjj7eZDJ4OofTLTfdeHIwur4bOmlwGIfiM4ZyCXxV4URi66CdgwILCFaKJRpDaAh1J88lykEkcO7YqDEdhVy2FXc_pDjE6ntrfv3PEnW3Ap97fYkbi0GR1nlJ_DIYP3E2640bjvKC-PcU.1BigUDyXWY_Jgd6FG6et4V60cLFVnikqumP6qFIPyqU&dib_tag=se&keywords=first+aid+kit+travel&qid=1744300576&sprefix=first+aid%2Caps%2C238&sr=8-3&linkCode=ll1&tag=googlementor-20&linkId=4356bb842c872fece7e7d883afb71826&language=en_US&ref_=as_li_ss_tl',
+  },
 ];
 
 const Store: React.FC = () => {
