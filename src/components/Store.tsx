@@ -128,10 +128,10 @@ const products = [
     link: 'https://www.amazon.com/Wekapo-Blanket-Compact-Lightweight-Durable/dp/B08X6VQBGJ?crid=2ASBCQXF79O2M&dib=eyJ2IjoiMSJ9.Ao8EkkUbE7_uDV4lm6x3pB_ctp9idiu4xJkNu31HqRJvxCZQHEdOA5KTglqua94WMhAy8jv7YAbfvWUnuHSg2cbIGC20kQy4WpE4dJbsG-a7X0EyECoSLlhWPtSN5HkzOEd9lcnCK2pfNgR_ndcKgPByVEkF1blHLMVaaOLS2HmdH8qQLaddcStsf4-Q7VeB9zmnw8tuyewtDpo4DxuGc_gXwOxXhlhqohPtheG0Hhh83S6yLVHdqVdmHZLGfAqq9X9lxvtpMAteeSWcoGTfzL4RMv__2Iibcwk27AaHqaI.56ASIg50MPlLiwbXLs3iSdN8lbHN-j6bV3IjTd4lA3g&dib_tag=se&keywords=beach%2Bbest%2Bsellers&qid=1744304916&sprefix=beach%2Bbest%2Bselet%2Caps%2C247&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=c82d008debb81e655e50f4deeffd74ba&language=en_US&ref_=as_li_ss_tl',
  },
   // {
-  //   name: 'Travel Boho Blanket',
-  //   description: 'Stay cozy and stylish on the go.',
-  //   image: '/assets/images/boho.jpg',
-  //   link: 'https://www.amazon.com/Travel-Jewelry-Organizer-Portable-Accessories/dp/B0B2J5K3Q4?crid=3G1X9X5O7V8W&dib=eyJ2IjoiMSJ9.9iQjXh6rj0tqY1NwzR8w4c7lZKxgk2r9vHnL6m3cM3dYvRjGx0yqZzXbI8uQeKk5a1RrKk4gC0gF5xS4f6nq4aA6lW1z2x2oZs7WqFhD8f8cPpE7bB7gJm5e1aTz0z5cD7sNfUe2t5gkXyWkE9L6n6lH3JtqYpA0wPj7bOe8wKkqYtQdF0dGxVq1FzjN3i6vW4lRrVtP3M2vD8xZfT9rGvE9g&dib_tag=se&keywords=jewelry%2Btravel&qid=1744305393&sprefix=jewelry%2Btravel%2Caps%2C239&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=cae52a4c25b0b9aebd4f7f3b9c5cbbd8&language=en_US&ref_=as_li_ss_tl',
+  //   name: '',
+  //   description: '',
+  //   image: '/assets/images/.jpg',
+  //   link: '',
   // }
 ];
 
