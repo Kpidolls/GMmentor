@@ -6,7 +6,6 @@ import AboutUs from '../components/AboutUs';
 import Analytics from '../components/Analytics';
 import BrevoForm from '../components/BrevoForm';
 import Canvas from '../components/Canvas';
-import EsimProduct from '../components/EsimProduct';
 // import Features from '../components/Features';
 import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
@@ -53,7 +52,6 @@ const App = () => {
           <Canvas />
         </>
       </LazyShow>
-      <EsimProduct />
       <LazyShow>
         <TravelInsurance />
       </LazyShow>
