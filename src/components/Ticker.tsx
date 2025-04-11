@@ -10,7 +10,7 @@ function MyTicker() {
     'Shopping: Skroutz',
     'Taxi: FREENOW - Uber',
     'Car Rentals: Skyscanner',
-    'Luggage storage: Stasher',
+    'Luggage Storage: Stasher',
     'Events: More',
     'e-Sim: Airalo',
     'Travel Insurance: SafetyWing',
