@@ -9,7 +9,7 @@ const products = [
   },
   {
     name: 'e-SIM Card',
-    description: 'Best solution for mobile data.',
+    description: 'Mobile data: Get 3.00 € off with referral code GOOGLE4204.',
     image: '/assets/images/airalo.webp',
     link: 'https://www.airalo.com/',
   },
