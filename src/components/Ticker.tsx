@@ -3,6 +3,7 @@ import React from 'react';
 function MyTicker() {
   const tickerItems = [
     'Useful Apps: GREECE',
+    'Accommodation: Booking.com - Airbnb',
     'Order Food: efood - Wolt',
     'Ferry Tickets: Ferryhopper',
     'Health: doctoranytime',
@@ -17,6 +18,7 @@ function MyTicker() {
     'Language: Google Translate',
     'Planning: rome2rio',
     'Tours: GetYourGuide',
+    'Parking: ParkAround',
   ];
 
   return (
