@@ -32,7 +32,7 @@ const About = () => {
                   </li>
                   <li>
                     <Link href="#store" className="text-gray-200  hover:text-white transition duration-300">
-                    Travel Products
+                    Products
                     </Link>
                   </li>
                   <li>
