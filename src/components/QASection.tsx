@@ -12,7 +12,7 @@ const QASection = () => {
     },
     {
       question: "How can I use a Googlementor list for Google Maps?",
-      answer: "Open of the list on Google Maps by pressing explore under the list you want, you can view it and save it to your own Google Maps account."
+      answer: "Open of the list on Google Maps by pressing explore under the list you want, you can view it and save it to your own Google Maps account and zoom in on the locations to view what is near your area. Once saved, you can access it by selecting the 'You' tab at the bottom center of your screen -> under 'Lists that you saved'."
     },
     {
       question: "Are the Google Maps lists free?",
