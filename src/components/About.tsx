@@ -31,8 +31,8 @@ const About = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#esimproduct" className="text-gray-200  hover:text-white transition duration-300">
-                    Mobile Data - eSIM
+                    <Link href="#store" className="text-gray-200  hover:text-white transition duration-300">
+                    Travel Products
                     </Link>
                   </li>
                   <li>
