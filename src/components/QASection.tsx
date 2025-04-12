@@ -19,8 +19,8 @@ const QASection = () => {
       answer: "Yes, all our curated Google Maps lists by Googlementor are currently available for free. However, if you’d like to support our work, you can do so at https://buymeacoffee.com/googlementor."
     },
     {
-      question: "How do I use the Google Maps list I receive?",
-      answer: "Click explore to open list on Google Maps. From there, save it to your account. After saving the list, you can access it by selecting the 'You' tab at the bottom center of your screen -> under 'Lists that you saved'."
+      question: "How do I use the Google Maps lists?",
+      answer: "Click explore to open a list on Google Maps. From there, you can view the locations or save the list to your account. After saving the list, you can access it by selecting the 'You' tab at the bottom center of your screen -> under 'Lists that you saved'."
     },
     {
       question: "How can I hide the list?",
@@ -33,10 +33,6 @@ const QASection = () => {
     {
       question: "How often do you update the lists?",
       answer: "We strive to keep our lists current, regularly updating them with new locations and feedback from users like you."
-    },
-    {
-      question: "Can I request multiple maps?",
-      answer: "Yes, you can save as many maps as you need. Explore the links and save the ones that interest you."
     },
     {
       question: "Why should I buy travel insurance?",
