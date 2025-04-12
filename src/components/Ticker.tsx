@@ -19,6 +19,7 @@ function MyTicker() {
     'Planning: rome2rio',
     'Tours: GetYourGuide',
     'Parking: ParkAround',
+    'Expense Tracker: Splitwise',
   ];
 
   return (
