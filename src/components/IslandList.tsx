@@ -50,14 +50,14 @@ const IslandList = () => {
       target: '_blank',
       rel: 'noopener noreferrer',
     },
-    // {
-    //   title: '📍 Zakynthos',
-    //   img: '/assets/images/zakynthos.webp',
-    //   description: 'Home to the famous Navagio Beach and crystal-clear waters.',
-    //   link: '',
-    //   target: '_blank',
-    //   rel: 'noopener noreferrer',
-    // },
+    {
+      title: '📍 Zakynthos',
+      img: '/assets/images/zakynthos.jpg',
+      description: 'Home to the famous Navagio Beach and crystal-clear waters.',
+      link: 'https://www.google.com/maps/@37.7911093,20.6425114,11z/data=!4m6!1m2!10m1!1e1!11m2!2s3Gy3UZ1xSGeHnXSGZN_BgA!3e3?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
     // {
     //   title: '📍 Paros',
     //   img: '/assets/images/paros.webp',
@@ -74,6 +74,14 @@ const IslandList = () => {
     //   target: '_blank',
     //   rel: 'noopener noreferrer',
     // },
+    {
+      title: '📍 Karpathos',
+      img: '/assets/images/karpathos.jpg',
+      description: 'Stunning beaches and traditional villages.',
+      link: 'https://www.google.com/maps/@36.7946282,22.5294794,8z/data=!4m6!1m2!10m1!1e1!11m2!2s1kM2FOdmaKnuCrFKFqG9imJg2d9EGg!3e3?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    }
   ];
 
   const [visibleIslands, setVisibleIslands] = useState(3); // Initially show 6 islands
