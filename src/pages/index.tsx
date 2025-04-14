@@ -48,8 +48,6 @@ const App = () => {
       </LazyShow>
       <LazyShow>
         <>
-          {/* <Features />
-          <Mybusiness /> */}
           <Store />
           <Canvas />
         </>
