@@ -62,6 +62,12 @@ const products = [
     link: 'https://www.amazon.com/Sony-WH-1000XM5-Canceling-Headphones-Hands-Free/dp/B09XS7JWHH?crid=1RILF5NJQL3QY&dib=eyJ2IjoiMSJ9.DybUtroQtxKRVf4Ik5FOzxJ0mhEi0WjWYUvm2CrA3GBilVNix93n6qTXoFLT4RVeyw1I4aOiu-hwEH0W_giTBsc7a5qGIKkfXG5bD-cTYyyF6gA7bOAn8dojwYF5z-TkL-4XdshNVjG6Z7kRpRKkrLwu-TPuCtqRODc6-XvYfHBghRpiGafQH9yV9VHpWiuDYvp_ch__xOQ1d_gmwQiKfezEIYX5gUYWLxv2_ZQdHVlhu7nSWIQyDZtNGzwwn40-0LLLzQwiawQAITBq8D2gYeC7soLiNKC8qX-padSv34k.STSJ1OExZmEzn9uvfm7co0aEIF8BiZPXv_x71XJm1qw&dib_tag=se&keywords=Sony%2BWH-1000XM5&qid=1743662318&sbo=eyPEepoLJVEU2NRNeETf0Q%3D%3D&sprefix=sony%2Bwh-1000xm5%2Caps%2C385&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=90e4c1c011b622b6f17a9047a139e41e&language=en_US&ref_=as_li_ss_tl',
   },
   {
+    name: 'JBL Noise Cancelling Headphones',
+    description: ' Enjoy your music without distractions.',
+    image: '/assets/images/jblhead.jpg',
+    link: 'https://www.amazon.com/JBL-TUNE-770NC-Lightweight-comfortable/dp/B0CTB1BM3P?crid=LNC84AEEG7Q8&dib=eyJ2IjoiMSJ9.KkLp42kkcKQwJxOYkMQYRTi5kBAeuLrbj-Je8EWD5SDqyiABtFiOKCRbhdoWRKJSffT672Pzum4OjcKjHuB0DbjUa07tmxOEHvncZFwuSgywpdVtIYltZ7kprkrdP_gCMXDbwjcSBNcckIoV5o9uuSYgwoTtbRRQ92GxrAOH3sQlsOXzwCYmDV4iUkk7EOydahpFv2vy8wERNxCW_Z_cCaIJ_aSe22nVBMU-ihiFLWy2NJ4Rgb8V2uWX6RkozqSEu23DjUHV6ZJiUOuesCda6nEY45N9BC5YusmLOFB96R4.fDzOPxPvDK8HDPnw4993lbedGQy8sDyLpt6yMRw8ZgI&dib_tag=se&keywords=jbl%2Bheadphones&qid=1744654698&sprefix=JBL%2BHEAD%2Caps%2C283&sr=8-6&th=1&linkCode=ll1&tag=googlementor-20&linkId=27b016dfe83affe2019f8b6d5122debd&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
     name: 'Apple AirTag',
     description: 'Keep track of your items.',
     image: '/assets/images/airtag.jpg',
@@ -136,7 +142,7 @@ const products = [
 ];
 
 const Store: React.FC = () => {
-  const [visibleProducts, setVisibleProducts] = useState(6);
+  const [visibleProducts, setVisibleProducts] = useState(12);
   
   const handleViewMore = () => {
     setVisibleProducts((prev) => prev + 12);
