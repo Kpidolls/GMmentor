@@ -84,7 +84,7 @@ const IslandList = () => {
     }
   ];
 
-  const [visibleIslands, setVisibleIslands] = useState(3); // Initially show 6 islands
+  const [visibleIslands, setVisibleIslands] = useState(6); // Initially show 6 islands
 
   const handleViewMore = () => {
     setVisibleIslands(islands.length); 

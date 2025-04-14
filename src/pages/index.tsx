@@ -19,6 +19,7 @@ import MyTicker from '../components/Ticker';
 import Store from '../components/Store';
 import BackToTop from '../components/BackToTop';
 import IslandList from '../components/IslandList';
+import CategoryCards from '../components/CategoryCards';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
             className={`relative z-10 pb-8 bg-background sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32`}>
             <Header />
             <MainHero />
+            <CategoryCards />
           </div>
         </div>
         <MainHeroImage />

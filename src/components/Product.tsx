@@ -3,14 +3,7 @@ import React, { useState } from 'react';
 const Product = () => {
   const mapOptions = [
     {
-      title: '📍 Vegan & Vegetarian Friendly ',
-      img: '/assets/images/vegan.webp',
-      description: 'Find vegan & vegetarian friendly spots.',
-      link: 'https://www.google.com/maps/@37.9884209,18.8656014,6z/data=!4m2!11m1!2sBlO52sink_AIFpF1zqhHJc4a-1gNjA?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
-    {
+      id: 'must-see',
       title: '📍 Must-See Attractions',
       img: '/assets/images/must.jpg',
       description: 'Discover the must-see attractions in Greece.',
@@ -19,14 +12,7 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
-      title: '📍 Hiking Trails',
-      img: '/assets/images/hiking.webp',
-      description: 'Explore the best hiking trails in Greece.',
-      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2s7OJgKvmRnVtoRn9oYU-nQBdtEa3YRg?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
-    {
+      id: 'churches',
       title: '📍 Monasteries & Churches',
       img: '/assets/images/church.jpg',
       description: 'Visit historic monasteries and beautiful churches.',
@@ -35,6 +21,16 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: 'vegan',
+      title: '📍 Vegan & Vegetarian Friendly ',
+      img: '/assets/images/vegan.webp',
+      description: 'Find vegan & vegetarian friendly spots.',
+      link: 'https://www.google.com/maps/@37.9884209,18.8656014,6z/data=!4m2!11m1!2sBlO52sink_AIFpF1zqhHJc4a-1gNjA?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
+      id: 'fish-tavernas',
       title: '📍 Fish Tavernas with Scenic views',
       img: '/assets/images/eat.webp',
       description: 'Enjoy fresh seafood with a view.',
@@ -43,6 +39,7 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: 'gyros',
       title: '📍 Gyros & Souvlaki',
       img: '/assets/images/giros.jpg',
       description: 'Taste the best gyros and souvlaki in Greece.',
@@ -51,78 +48,79 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
-      title: '📍 Desserts & Treats',
-      img: '/assets/images/desserts.webp', 
+      id: 'desserts',
+      title: '📍 Desserts',
+      img: '/assets/images/desserts.jpg', 
       description: 'Indulge in the sweetest desserts and treats in Greece.',
       link: 'https://www.google.com/maps/@38.2359653,18.8043517,6z/data=!4m2!11m1!2sm1cxb5MV3-sY4PWJHfmInA21TWh0dw?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
+      id: 'coffee',
       title: '📍 Coffee & Brunch',
-      img: '/assets/images/coffee.webp',
+      img: '/assets/images/coffee.jpg',
       description: 'Relax with a cup of coffee or enjoy a hearty brunch.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sbiCkX803OJgBPnpLky_vUk4mueLn2A?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
+      id: 'rooftop',
       title: '📍 Rooftop Lounges',
-      img: '/assets/images/rooftop.webp',
+      img: '/assets/images/rooftop.jpg',
       description: 'Relax and enjoy the view at the best rooftop lounges.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sm3-v6U64Q2U33zHbEqNR5QCnmoCFwQ?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
+      id: 'tavernas',
       title: '📍 Tavernas',
-      img: '/assets/images/taverna.webp',
+      img: '/assets/images/taverna.jpg',
       description: 'Experience authentic Greek cuisine at traditional tavernas.',
       link: 'https://www.google.com/maps/@38.2213603,18.7977243,6z/data=!4m2!11m1!2sKWzjU1re09T9AWBKitVLba5WjIvAOA?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
+      id: 'wineries',
       title: '📍 Wineries & Vineyards',
-      img: '/assets/images/wine.webp',
+      img: '/assets/images/winery.jpg',
       description: 'Find amazing vineyards and indulge in Greek wines.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sULXdtW62DdUhw9WNva4lJXSKQZNn1g?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
-      title: '📍 Family Friendly',
-      img: '/assets/images/family.webp',
-      description: 'Family-friendly spots for all ages.',
-      link: 'https://www.google.com/maps/@36.7677445,20.2183426,6.47z/data=!4m6!1m2!10m1!1e1!11m2!2s0EngS48iZOPCCddKa8VdXybOXjmbYQ!3e3?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
-    {
+      id: 'fish-tavernas',
       title: '📍 Fish Tavernas',
-      img: '/assets/images/fish.webp',
+      img: '/assets/images/fishtavern.jpg',
       description: 'Enjoy fresh seafood.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2spbVj7n-ymuhsCoobIGpuZ7J1VyzStw?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
+      id: 'burger',
       title: '📍 Burger Spots',
-      img: '/assets/images/burger.webp',
+      img: '/assets/images/burger.jpg',
       description: 'Find the juiciest burgers and best burger joints in town.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2s3BJ_ogc9dsqNs-Rcp1eDsZlG6VqSvw?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqHASw5NDI0NDU0Myw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
+      id: 'italian',
       title: '📍 Italian Cuisine',
-      img: '/assets/images/italian.webp',
+      img: '/assets/images/italian.jpg',
       description: 'The best Italian food in Greece.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2s0-iIf-yL8Ia6FRPNS5lr6KoN0ovNJw?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
+      id: 'asian',
       title: '📍 Asian Cuisine',
       img: '/assets/images/asian.webp',
       description: 'Discover the best Asian restaurants in Greece.',
@@ -131,14 +129,16 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: 'mexican',
       title: '📍 Mexican Cuisine',
-      img: '/assets/images/mexican.webp',
+      img: '/assets/images/mexican.jpg',
       description: 'Savor the vibrant flavors of Mexican cuisine.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sWY_q_zSFm5nxUUuGAVh-AifDfWNpHg?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
     {
+      id: 'cheap-eats',
       title: '📍 Cheap Eats',
       img: '/assets/images/cheapEats.webp',
       description: 'Enjoy delicious meals that won’t break the bank.',
@@ -147,14 +147,7 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
-      title: '📍 Bougatsa Shops',
-      img: '/assets/images/bougatsa.webp',
-      description: 'Taste the famous Bougatsa pie in Greece.',
-      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2s0Wwmu7OQWv8HDFmc_lRAYV5NvCG3XA?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
-    {
+      id: 'bars',
       title: '📍 Bars & Drinks',
       img: '/assets/images/drinks.webp',
       description: 'Explore the top bars and lounges.',
@@ -163,24 +156,53 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
-      title: '📍 Bouzoukia Live Music',
-      img: '/assets/images/bouzoukia.webp',
+      id: 'bougatsa',
+      title: '📍 Bougatsa Shops',
+      img: '/assets/images/bougatsa.jpg',
+      description: 'Taste the famous Bougatsa pie in Greece.',
+      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2s0Wwmu7OQWv8HDFmc_lRAYV5NvCG3XA?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
+      id: 'hiking',
+      title: '📍 Hiking Trails',
+      img: '/assets/images/hiking.webp',
+      description: 'Explore the best hiking trails in Greece.',
+      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2s7OJgKvmRnVtoRn9oYU-nQBdtEa3YRg?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
+      id: 'surf',
+      title: '📍Surf, Kite, Diving & Water Sports',
+      img: '/assets/images/surf.jpg',
+      description: 'Enjoy water sports and activities in Greece.',
+      link: 'https://www.google.com/maps/@39.0713743,21.0447413,7z/data=!4m6!1m2!10m1!1e1!11m2!2s6dmSaVQdrK8bnokSGoI3lY1mD-jvDw!3e3?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
+      id: 'family',
+      title: '📍 Family Friendly',
+      img: '/assets/images/family.jpg',
+      description: 'Family-friendly spots for all ages.',
+      link: 'https://www.google.com/maps/@36.7677445,20.2183426,6.47z/data=!4m6!1m2!10m1!1e1!11m2!2s0EngS48iZOPCCddKa8VdXybOXjmbYQ!3e3?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
+      id: 'Bouzoukia',
+      title: '📍 Live Music (Bouzoukia)',
+      img: '/assets/images/bouzoukia.jpg',
       description: 'Experience live Greek music.',
       link: 'https://www.google.com/maps/@39.0713743,21.0447413,7z/data=!4m6!1m2!10m1!1e1!11m2!2sAu_MGple1Ba8_AKl6f2NSQCMcYXnVg!3e3?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
-    {
-      title: '📍Surf, Kite, Diving & Water Sports',
-      img: '/assets/images/surf.webp',
-      description: 'Enjoy water sports and activities in Greece.',
-      link: 'https://www.google.com/maps/@39.0713743,21.0447413,7z/data=!4m6!1m2!10m1!1e1!11m2!2s6dmSaVQdrK8bnokSGoI3lY1mD-jvDw!3e3?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    }
   ];
 
-  const [visibleOptions, setVisibleOptions] = useState(6); 
+  const [visibleOptions, setVisibleOptions] = useState(21); 
 
   const handleViewMore = () => {
     setVisibleOptions(mapOptions.length); 
@@ -195,6 +217,7 @@ const Product = () => {
         {mapOptions.slice(0, visibleOptions).map((option, index) => (
           <div
             key={index}
+            id={option.id}
             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
           >
             <img

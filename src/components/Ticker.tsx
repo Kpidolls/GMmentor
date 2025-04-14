@@ -2,7 +2,7 @@ import React from 'react';
 
 function MyTicker() {
   const tickerItems = [
-    'Useful Apps: GREECE',
+    'USEFUL APPS: GREECE',
     'Accommodation: Booking.com - Airbnb',
     'Order Food: efood - Wolt',
     'Ferry Tickets: Ferryhopper',

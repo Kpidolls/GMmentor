@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronUpIcon } from '@heroicons/react/outline';
+import { ChevronUpIcon } from '@heroicons/react/24/outline';
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
