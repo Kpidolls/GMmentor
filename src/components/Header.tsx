@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
-import { Bars3Icon , XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-scroll';
 import { useRouter } from 'next/router';
 import config from '../config/index.json';
@@ -39,25 +39,76 @@ const Menu = () => {
                     className="bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
                   >
                     <span className="sr-only">Open main menu</span>
-                    <Bars3Icon  className="h-6 w-6" aria-hidden="true" />
+                    <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
             </div>
-            <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  spy={true}
-                  smooth={true}
-                  duration={1000}
-                  className="font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
-                  onClick={() => handleNavigation(item.href)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+            <div className="hidden md:flex md:ml-10 md:pr-4 md:space-x-8">
+              {navigation.map((item) =>
+                item.submenu ? (
+                  <Popover key={item.name} className="relative">
+                    {({ open }) => (
+                      <>
+                        <Popover.Button
+                          className={`group inline-flex items-center text-gray-500 hover:text-gray-900 font-medium focus:outline-none ${
+                            open ? 'text-gray-900' : ''
+                          }`}
+                        >
+                          <span>{item.name}</span>
+                          <ChevronDownIcon
+                            className={`ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500 ${
+                              open ? 'text-gray-500' : ''
+                            }`}
+                            aria-hidden="true"
+                          />
+                        </Popover.Button>
+                        <Transition
+                          as={Fragment}
+                          enter="transition ease-out duration-200"
+                          enterFrom="opacity-0 translate-y-1"
+                          enterTo="opacity-100 translate-y-0"
+                          leave="transition ease-in duration-150"
+                          leaveFrom="opacity-100 translate-y-0"
+                          leaveTo="opacity-0 translate-y-1"
+                        >
+                          <Popover.Panel className="absolute z-10 mt-3 transform px-2 w-screen max-w-md sm:px-0">
+                            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                              <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                {item.submenu.map((subItem) => (
+                                  <Link
+                                    key={subItem.name}
+                                    to={subItem.href}
+                                    spy={true}
+                                    smooth={true}
+                                    duration={1000}
+                                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
+                                    onClick={() => handleNavigation(subItem.href)}
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          </Popover.Panel>
+                        </Transition>
+                      </>
+                    )}
+                  </Popover>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    spy={true}
+                    smooth={true}
+                    duration={1000}
+                    className="font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                    onClick={() => handleNavigation(item.href)}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
             </div>
           </nav>
         </div>
@@ -86,19 +137,40 @@ const Menu = () => {
                 </div>
               </div>
               <div className="px-2 pt-2 pb-3 space-y-1">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    spy={true}
-                    smooth={true}
-                    duration={1000}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
-                    onClick={() => handleNavigation(item.href)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                {navigation.map((item) =>
+                  item.submenu ? (
+                    <div key={item.name} className="space-y-1">
+                      <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-700">
+                        {item.name}
+                      </span>
+                      {item.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          spy={true}
+                          smooth={true}
+                          duration={1000}
+                          className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
+                          onClick={() => handleNavigation(subItem.href)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      spy={true}
+                      smooth={true}
+                      duration={1000}
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
+                      onClick={() => handleNavigation(item.href)}
+                    >
+                      {item.name}
+                    </Link>
+                  )
+                )}
               </div>
             </div>
           </Popover.Panel>
