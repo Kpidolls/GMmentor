@@ -19,7 +19,7 @@ const MainHero = () => {
           <div className="rounded-md shadow">
             <a
               href={mainHero.primaryAction.href}
-              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+              className="w-full flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-md text-white bg-red-600 hover:bg-red-700 md:py-5 md:text-xl md:px-12"
             >
               {mainHero.primaryAction.text}
             </a>
@@ -27,7 +27,7 @@ const MainHero = () => {
           <div className="mt-3 sm:mt-0 sm:ml-3">
             <a
               href={mainHero.secondaryAction.href}
-              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
+              className="w-full flex items-center justify-center px-10 py-4 border border-indigo-600 text-lg font-bold rounded-md text-indigo-600 bg-white hover:bg-indigo-50 md:py-5 md:text-xl md:px-12"
             >
               {mainHero.secondaryAction.text}
             </a>
