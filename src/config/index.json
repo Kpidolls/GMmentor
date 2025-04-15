@@ -6,23 +6,34 @@
   "navigation": [
     {
       "name": "Maps",
-      "href": "maps"
+      "href": "maps",
+      "submenu": [
+        { "name": "Must See", "href": "maps" },
+        { "name": "Islands", "href": "islands" },
+        { "name": "Food", "href": "fish-tavernas" },
+        { "name": "Hiking", "href": "hiking" }
+      ]
     },
     {
       "name": "Store",
-      "href": "store"
-    },
-    {
-      "name": "Travel Insurance",
-      "href": "travelinsurance"
+      "href": "store",
+      "submenu": [
+        { "name": "e-Sim", "href": "mobile-data-esim-card" },
+        { "name": "Travel Insurance", "href": "travelinsurance" },
+        { "name": "Travel Items", "href": "store" }
+      ]
     },
     {
       "name": "About",
-      "href": "aboutus"
-    },
-    {
-      "name": "FAQ",
-      "href": "qa-section"
+      "href": "aboutus",
+      "submenu": [
+        { "name": "About", "href": "aboutus" },
+        { "name": "FAQ", "href": "qa-section" },
+        {
+          "name": "Contact",
+          "href": "footer"
+        }
+      ]
     }
   ],
   "callToAction": {

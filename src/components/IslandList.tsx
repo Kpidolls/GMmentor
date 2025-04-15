@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const IslandList = () => {
   const islands = [
     {
+      id: 'island-crete',
       title: '📍 Crete',
       img: '/assets/images/crete.jpg',
       description: 'Explore the largest island in Greece.',
@@ -11,6 +12,7 @@ const IslandList = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: 'island-mykonos',
       title: '📍 Mykonos',
       img: '/assets/images/mykonos.jpg',
       description: 'Famous for its vibrant nightlife and stunning beaches.',
@@ -19,6 +21,7 @@ const IslandList = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: 'island-santorini',
       title: '📍 Santorini',
       img: '/assets/images/santorini.jpg',
       description: 'Known for its iconic buildings and breathtaking sunsets.',
@@ -27,6 +30,7 @@ const IslandList = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: 'island-aegina',
       title: '📍 Aegina',
       img: '/assets/images/aegina.jpg',
       description: 'A charming island known for its pistachios and beaches.',
@@ -35,6 +39,7 @@ const IslandList = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: 'island-rhodes',
       title: '📍 Rhodes (Rodos)',
       img: '/assets/images/rodos.jpg',
       description: 'Discover medieval charm and beautiful beaches.',
@@ -43,6 +48,7 @@ const IslandList = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: 'island-corfu',
       title: '📍 Corfu (Kerkira)',
       img: '/assets/images/corfu.jpg',
       description: 'Venetian architecture and stunning coastlines.',
@@ -51,6 +57,7 @@ const IslandList = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: 'island-zakynthos',
       title: '📍 Zakynthos',
       img: '/assets/images/zakynthos.jpg',
       description: 'Home to the famous Navagio Beach.',
@@ -58,23 +65,8 @@ const IslandList = () => {
       target: '_blank',
       rel: 'noopener noreferrer',
     },
-    // {
-    //   title: '📍 Paros',
-    //   img: '/assets/images/paros.webp',
-    //   description: 'A charming island with traditional villages and sandy beaches.',
-    //   link: '',
-    //   target: '_blank',
-    //   rel: 'noopener noreferrer',
-    // },
-    // {
-    //   title: '📍 Naxos',
-    //   img: '/assets/images/naxos.webp',
-    //   description: 'The largest Cycladic island, offering rich history and beautiful landscapes.',
-    //   link: '',
-    //   target: '_blank',
-    //   rel: 'noopener noreferrer',
-    // },
     {
+      id: 'island-karpathos',
       title: '📍 Karpathos',
       img: '/assets/images/karpathos.jpg',
       description: 'Stunning beaches and traditional villages.',
@@ -99,6 +91,7 @@ const IslandList = () => {
         {islands.slice(0, visibleIslands).map((island, index) => (
           <div
             key={index}
+            id={island.id}
             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
           >
             <img
