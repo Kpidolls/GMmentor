@@ -27,12 +27,9 @@
       "name": "About",
       "href": "aboutus",
       "submenu": [
-        { "name": "About", "href": "aboutus" },
+        { "name": "Our Story", "href": "aboutus" },
         { "name": "FAQ", "href": "qa-section" },
-        {
-          "name": "Contact",
-          "href": "footer"
-        }
+        { "name": "Contact", "href": "footer" }
       ]
     }
   ],
