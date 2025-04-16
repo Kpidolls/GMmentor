@@ -6,9 +6,9 @@ const MainHero = () => {
   return (
     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-12 lg:mt-12 lg:px-8 xl:mt-12">
       <div className="sm:text-center lg:text-left">
-        <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+        <h1 className="text-4xl tracking-tight font-extrabold text-[#001c28] sm:text-5xl md:text-6xl">
           <span className="block xl:inline">{mainHero.title}</span>{' '}
-          <span className="block text-indigo-600 xl:inline">
+          <span className="block text-[#0878fe] xl:inline">
             {mainHero.subtitle}
           </span>
         </h1>
@@ -27,7 +27,7 @@ const MainHero = () => {
           <div className="mt-3 sm:mt-0 sm:ml-3">
             <a
               href={mainHero.secondaryAction.href}
-              className="w-full flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 border border-indigo-600 text-base sm:text-lg font-bold rounded-md text-indigo-600 bg-white hover:bg-indigo-50 md:py-5 md:text-xl md:px-12"
+              className="w-full flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 border border-[#0878fe] text-base sm:text-lg font-bold rounded-md text-[#0878fe] bg-white hover:bg-indigo-50 md:py-5 md:text-xl md:px-12"
             >
               {mainHero.secondaryAction.text}
             </a>
