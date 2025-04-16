@@ -1,13 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { AppConfig } from '../utils/AppConfig';
 
-// Need to create a custom _document because i18n support is not compatible with `next export`.
 class MyDocument extends Document {
   render() {
     return (
       <Html lang={AppConfig.locale}>
         <Head>
-        <style>
+          <style>
             {`
               @font-face {
                 font-display: block;
@@ -47,52 +46,54 @@ class MyDocument extends Document {
               }
             `}
           </style>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KYV8QK51B"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-7KYV8QK51B');
-            `,
-          }}
-        ></script>
-        <link rel="canonical" href={AppConfig.baseUrl} />
-        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
-        <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"></script>
-        <meta name="google-site-verification" content="cUimG9-WnVYYDC8Tk1Dr6Ieh4ARJp-HzYxrbKTzYxpI" />
-        <meta name="description" content="Travel like a pro with location suggestions for your maps." />
-        <meta name="keywords" content="travel insurance, mobile data e-sim, mapping services, Google Maps, tourist guides, what to do" />
-        <meta name="author" content="Travel Tips" />
-        <meta property="og:title" content="Google Mentor - Location suggestions" />
-        <meta property="og:description" content="Travel like a pro with location suggestions for your maps." />
-        <meta property="og:image" content="/assets/images/newlogo1.png" />
-        <meta property="og:url" content="https://www.googlementor.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Google Mentor - Travel like a pro" />
-        <meta name="twitter:description" content="Location suggestions for your maps." />
-        <meta name="twitter:image" content="/assets/images/newlogo1.png" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KYV8QK51B"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-7KYV8QK51B');
+              `,
+            }}
+          ></script>
+          <link rel="canonical" href={AppConfig.baseUrl} />
+          <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
+          <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"></script>
+          <meta name="google-site-verification" content="cUimG9-WnVYYDC8Tk1Dr6Ieh4ARJp-HzYxrbKTzYxpI" />
+          <meta name="description" content="Travel tools for exploring - lists on Google Maps for travel and everyday life." />
+          <meta name="keywords" content="travel insurance, mobile data e-sim, mapping services, Google Maps, tourist guides, what to do, sun protection" />
+          <meta name="author" content="Travel Tips" />
+          <meta property="og:title" content="Googlementor" />
+          <meta property="og:description" content="Travel like a pro with location suggestions for your maps." />
+          <meta property="og:image" content="/assets/images/newlogo1.png" />
+          <meta property="og:url" content="https://www.googlementor.com" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Google Mentor - Travel like a pro" />
+          <meta name="twitter:description" content="Location suggestions for your maps." />
+          <meta name="twitter:image" content="/assets/images/newlogo1.png" />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script>
-            {`
-              window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-              window.LOCALE = 'en';
-              window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-              window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
-              window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-              window.translation = {
-                common: {
-                  selectedList: '{quantity} list selected',
-                  selectedLists: '{quantity} lists selected'
-                }
-              };
-              var autoHide = Boolean(1);
-            `}
-          </script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+                window.LOCALE = 'en';
+                window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+                window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
+                window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+                window.translation = {
+                  common: {
+                    selectedList: '{quantity} list selected',
+                    selectedLists: '{quantity} lists selected'
+                  }
+                };
+                var autoHide = Boolean(1);
+              `,
+            }}
+          ></script>
           <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
           <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
         </body>
