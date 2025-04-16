@@ -1,7 +1,3 @@
-declare module '@heroicons/react/outline' {
-  export * from '@heroicons/react';
-}
-
-declare module '@heroicons/react/solid' {
-  export * from '@heroicons/react';
+declare module '@heroicons/react/24/outline' {
+  export { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react';
 }
