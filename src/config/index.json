@@ -18,7 +18,7 @@
       "name": "Store",
       "href": "store",
       "submenu": [
-        { "name": "e-Sim", "href": "store" },
+        { "name": "Mobile Travel Data", "href": "store" },
         { "name": "Travel Insurance", "href": "travelinsurance" },
         { "name": "Travel Items", "href": "store" }
       ]
