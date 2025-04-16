@@ -71,6 +71,20 @@ const products = [
     image: '/assets/images/headphones.jpg',
     link: 'https://www.amazon.com/Sony-WH-1000XM5-Canceling-Headphones-Hands-Free/dp/B09XS7JWHH?crid=1RILF5NJQL3QY&dib=eyJ2IjoiMSJ9.DybUtroQtxKRVf4Ik5FOzxJ0mhEi0WjWYUvm2CrA3GBilVNix93n6qTXoFLT4RVeyw1I4aOiu-hwEH0W_giTBsc7a5qGIKkfXG5bD-cTYyyF6gA7bOAn8dojwYF5z-TkL-4XdshNVjG6Z7kRpRKkrLwu-TPuCtqRODc6-XvYfHBghRpiGafQH9yV9VHpWiuDYvp_ch__xOQ1d_gmwQiKfezEIYX5gUYWLxv2_ZQdHVlhu7nSWIQyDZtNGzwwn40-0LLLzQwiawQAITBq8D2gYeC7soLiNKC8qX-padSv34k.STSJ1OExZmEzn9uvfm7co0aEIF8BiZPXv_x71XJm1qw&dib_tag=se&keywords=Sony%2BWH-1000XM5&qid=1743662318&sbo=eyPEepoLJVEU2NRNeETf0Q%3D%3D&sprefix=sony%2Bwh-1000xm5%2Caps%2C385&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=90e4c1c011b622b6f17a9047a139e41e&language=en_US&ref_=as_li_ss_tl',
   },
+  {
+    id: 'nordic-walking-poles',
+    name: 'Nordic Walking Poles',
+    description: 'Perfect for hiking and walking.',
+    image: '/assets/images/poles.png',
+    link: 'https://www.amazon.com/TheFitLife-Nordic-Walking-Trekking-Poles/dp/B01N57G27J?crid=UAZRC5HNXR1V&dib=eyJ2IjoiMSJ9.ZxKQyk-7wWYfgH8-VJjhURO5Mkk_Y0qPwdesgZi4IusU09S-93TGDDnEZn9MsLYfMerKzbLflZMwwZd0TnIy-NOLlWqwKS6X4Nk4SFNp0kosbdVcJaY2_XH_NqSVpNwSsFJpaIl4AvmDCfoo3UB6MaFaWFoMuKPx9O87eXqQ0CVTTfE_h3N_6Dqhnsb0l6pjeOaABLne3NxYxaCDRxV7zNl3WvT-KaGqs0ljYxKP05w.2q493ibjiNGdUHZhVXEyDPAe4lgzeKREOFxsnut6uR4&dib_tag=se&keywords=nordic%2Bhiking%2Bpoles&qid=1744792912&sprefix=nordic%2Bhiking%2Caps%2C255&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=57e459ca010825efe0c025e8354f2db4&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    id: 'anker-multi-usb-port',
+    name: 'Anker Multi USB Port',
+    description: 'Charge multiple devices at once.',
+    image: '/assets/images/usbports.jpg',
+    link: 'https://www.amazon.com/Anker-Display-MacBook-Thinkpad-Laptops/dp/B0BQLLB61B?crid=3D49RTF3E7DHJ&dib=eyJ2IjoiMSJ9.Do0A8AsPHyHc1NFcnh3svm3AnNZ2HiccAimNCAGFPtTAFx7LlhPYaMjzSVPoMRF_chNEXjYvJrYtiCnRkB4L_Pw--__l9zHfA3HDgqntUX5aqJZ2opYu_7iiXxccCMwpqkdlsmFXrc97PrkEntC3MsdVAT_GqHRbvFs4WWIv1kMrWZ83s_7J5GfnXDud2JKBA7nKiFS-11lv6rtRGUSwM8xjbHsy-YCGGspZkA2Tlpo.VwKjls_SH5YzJU4VKU_VuT6VVK63R36ed-sqlEyojvQ&dib_tag=se&keywords=multi%2Busb%2Bport&qid=1744794809&sprefix=multi%2Busb%2Bport%2Caps%2C249&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=06d1704430ca77f693bf6f68c7f1cfd7&language=en_US&ref_=as_li_ss_tl',
+  },
   // Add similar IDs for the remaining items
 ];
 
