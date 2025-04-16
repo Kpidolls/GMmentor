@@ -18,7 +18,7 @@
       "name": "Store",
       "href": "store",
       "submenu": [
-        { "name": "e-Sim", "href": "mobile-data-esim-card" },
+        { "name": "e-Sim", "href": "store" },
         { "name": "Travel Insurance", "href": "travelinsurance" },
         { "name": "Travel Items", "href": "store" }
       ]
@@ -40,7 +40,7 @@
   "mainHero": {
     "title": "Googlementor",
     "subtitle": "Travel Tools for Exploring Greece!",
-    "description": "Suggestions on Google Maps for travel and everyday life.",
+    "description": "Lists on Google Maps for travel and everyday life.",
     "img": "/assets/images/Designer.jpeg",
     "primaryAction": {
       "text": "Get Your Free Map",

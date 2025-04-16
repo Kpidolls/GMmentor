@@ -30,7 +30,7 @@ function useOnScreen(
   return isIntersecting;
 }
 
-const LazyShow = ({ children }: { children: React.ReactChild }) => {
+const LazyShow = ({ children }: { children: React.ReactNode }) => {
   const controls = useAnimation();
   const rootRef = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(rootRef);
