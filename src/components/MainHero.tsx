@@ -1,8 +1,21 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import config from '../config/index.json';
 
 const MainHero = () => {
   const { mainHero } = config;
+
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  useEffect(() => {
+    // Set up an interval to change the text every 3 seconds
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % mainHero.primaryAction.text.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [mainHero.primaryAction.text.length]);
+
+
   return (
     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-12 lg:mt-12 lg:px-8 xl:mt-12">
       <div className="sm:text-center lg:text-left">
@@ -19,15 +32,15 @@ const MainHero = () => {
           <div className="rounded-md shadow">
             <a
               href={mainHero.primaryAction.href}
-              className="w-full flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 border border-transparent text-base sm:text-lg font-bold rounded-md text-white bg-red-600 hover:bg-red-700 md:py-5 md:text-xl md:px-12"
+              className="w-full flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 border border-transparent text-base sm:text-lg font-bold rounded-md text-white bg-red-600 hover:bg-red-700 md:py-5 md:text-xl md:px-12 min-w-[350px]"
             >
-              {mainHero.primaryAction.text}
+              {mainHero.primaryAction.text[currentTextIndex]}
             </a>
           </div>
           <div className="mt-3 sm:mt-0 sm:ml-3">
             <a
               href={mainHero.secondaryAction.href}
-              className="w-full flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 border border-[#0878fe] text-base sm:text-lg font-bold rounded-md text-[#0878fe] bg-white hover:bg-indigo-50 md:py-5 md:text-xl md:px-12"
+              className="w-full flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 border border-[#0878fe] text-base sm:text-lg font-bold rounded-md text-[#0878fe] bg-white hover:bg-indigo-50 md:py-5 md:text-xl md:px-12 min-w-[200px]"
             >
               {mainHero.secondaryAction.text}
             </a>

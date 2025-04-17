@@ -39,11 +39,15 @@
   },
   "mainHero": {
     "title": "Googlementor",
-    "subtitle": "Travel Tools for Greece!",
+    "subtitle": "Tools for Travelers",
     "description": "Lists on Google Maps for travel and everyday life.",
     "img": "/assets/images/Designer.jpeg",
     "primaryAction": {
-      "text": "Get Your Free Map",
+      "text": [
+        "What to do in Greece!",
+        "Where to go in Greece!",
+        "Where to eat in Greece!"
+      ],
       "href": "#maps"
     },
     "secondaryAction": {
