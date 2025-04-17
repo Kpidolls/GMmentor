@@ -51,6 +51,13 @@ const products = [
     link: 'https://www.amazon.com/INIU-Portable-20000mAh-High-speed-Flashlight/dp/B07YPY31FL?crid=1XSBI2DD4MBI3&dib=eyJ2IjoiMSJ9.CZlI-b10iXOHhb1rmCebQ5pDKUotPusAaFPEu8XSDTm7KcdiWrT22WwyVSuZUn6drRlqXZBNAHJ7e4LZeolR-w-HP61bxkUMIZgDjk_BQobAX4j6bxfaMHAXp73aGxXF9SZ8E-GR4jRJzSSyzpX3VWP-NmzVisQUQMi-RzV1e2NpXrXqrAg2AJ5ic0GKH1WNIc6IOouEI3vin2Ki-t6Qeh_46j39WTIAElT7G95fZTw.Xkng_Yvwx6COR4I8_1KOB2ycYa7ik4Nw_BKMcom8aPY&dib_tag=se&keywords=power%2Bbank&qid=1744281640&sprefix=powerbank%2Caps%2C267&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=15bde893fcb2936e8586db2e6dc66509&language=en_US&ref_=as_li_ss_tl',
   },
   {
+    id: 'car-charger',
+    name: 'Car Charger',
+    description: 'Charge your devices on the go.',
+    image: '/assets/images/car-charger.jpg',
+    link: 'https://www.amazon.com/LISEN-Retractable-Charger-Charging-Accessories/dp/B0D4215HCX?crid=1L7E0RTPVSUPD&dib=eyJ2IjoiMSJ9.JsSdZgc4aAPVec63UKw8Xhw3dVkz8thJ_AtlAaVHVRmXgMennzu3n8Y9anULK9xXDh2bZB1PoL_ZDVNbbLqiL3FUQ9ZdD9PW_G6k0GQU_6Kgxpu6OuGrFgyY1FC9WoHNM3IhWK8rUOCOw1uNjki2l-60VZMNFC4RUqwoZwhdJ54XvaxuPZfYAoqq2PoIG4rutJe29YrPvXEdlPp-h-Hqh7TzNEY3CmQzfxhOTe8cOxvucf0E4G05xU0OwZkZYXa4p9Vs-HgeTlLNOAY_zmZTdy2YdoMTJ-f62DNHZ0ND_g0.UTJ3kS419Duz_s2Vwm5e3un3W38A-lGwq4i7qGwQGZc&dib_tag=se&keywords=travel%2Bessentials&qid=1744917036&sprefix=travel%2B%2Caps%2C917&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=96b0b67ebe5a89dc8ce460a897c8fef0&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
     id: 'sun-protection-shirt',
     name: 'Sun Protection Shirt',
     description: 'Stay protected from the sun.',
