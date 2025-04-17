@@ -175,7 +175,7 @@ const Product = () => {
     },
     {
       id: 'surf',
-      title: '📍Surf, Kite, Diving & Water Sports',
+      title: '📍Water Sports',
       img: '/assets/images/surf.jpg',
       description: 'Enjoy water sports and activities in Greece.',
       link: 'https://www.google.com/maps/@39.0713743,21.0447413,7z/data=!4m6!1m2!10m1!1e1!11m2!2s6dmSaVQdrK8bnokSGoI3lY1mD-jvDw!3e3?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
@@ -213,7 +213,7 @@ const Product = () => {
       <h1 className="text-4xl font-bold text-[#001c28] mb-8 text-center">
       Ready-to-Use Google Maps Lists
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {mapOptions.slice(0, visibleOptions).map((option, index) => (
           <div
             key={index}
@@ -226,10 +226,10 @@ const Product = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2 h-14 overflow-hidden">
                 {option.title}
               </h3>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-gray-600 text-sm mb-4 h-12 overflow-hidden">
                 {option.description} {/* Unique description for each map option */}
               </p>
                 <a

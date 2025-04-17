@@ -89,7 +89,7 @@ const products = [
 ];
 
 const Store: React.FC = () => {
-  const [visibleProducts, setVisibleProducts] = useState(12);
+  const [visibleProducts, setVisibleProducts] = useState(8);
   
   const handleViewMore = () => {
     setVisibleProducts((prev) => prev + 12);
@@ -103,7 +103,7 @@ const Store: React.FC = () => {
         <p className="mt-4 text-lg text-gray-600 text-center">
           Make your life easier.
         </p>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.slice(0, visibleProducts).map((product, index) => (
             <div
               key={index}
@@ -121,10 +121,10 @@ const Store: React.FC = () => {
                 />
               </a>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-800">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2 h-8 overflow-hidden">
                   {product.name}
                 </h3>
-                <p className="mt-2 text-sm text-gray-600">
+                <p className="text-gray-600 text-sm mb-4 h-10 overflow-hidden">
                   {product.description}
                 </p>
                 <a
