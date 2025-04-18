@@ -119,8 +119,60 @@ const products = [
     description: 'Charge your devices in Europe, 4-Port usb with fast charging.',
     image: '/assets/images/multiusb.jpg',
     link: 'https://www.amazon.com/USINFLY-European-Adapter-Charging-International/dp/B0CRYN8FGP?crid=2C0P5CZ9VCOVS&dib=eyJ2IjoiMSJ9.7g2xuuFG6eINsUnLmLd5iOPerpv0qEoT7KeJgTA-8w88Avf-UCLC0WL4nDNMOKf7OhqkWiRVieg8kgnr2iUlNvuS_J3HU3mST-MeREJtAi3ocR1tGSrzxLgtSY634mlcFX8UcWMoHmaiJL7IWDc7y6fAHpA4GQksZ7Ik6zwu4MIyf7xpNJrkFhd5_iIJn-ospQEQmJbhNADrUqwPWQ4ew6U-cdKcHdZqmFalvJuFet5nfMQB1eAkgpTpzGRMvUdK2wX2AnVuaE5GBfeQzHfqlPOaZPuRahV2Kmv4oy9j8LA.Yoi6xdOwivJek7NbEbOciEJHoOpGcvQapgbrf3W-aTQ&dib_tag=se&keywords=european%2Btravel%2Badapter%2Bmulti%2Busb&qid=1744967048&sprefix=european%2Btravel%2Badapter%2Bmulti%2Busb%2Caps%2C239&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=d4909f8b59dc235be46b47c442233a35&language=en_US&ref_=as_li_ss_tl',
+  },{
+    name: 'Apple AirTag',
+    description: 'Keep track of your items.',
+    image: '/assets/images/airtag.jpg',
+    link: 'https://www.amazon.com/Apple-MX532LL-A-AirTag/dp/B0CWXNS552?crid=2SI1OO86CUKRC&dib=eyJ2IjoiMSJ9.eJ4jVW3fBNhHFl2sL9cZHHrfluVwfLNuHJyQMwz4nj7HJkO6koRmxSdJ4ErwjGB_EO6uM2uEx4H8AfzH_dkA6PyXc8nh1jeJtJ0XK2qeZ5ytWx9uGzzp6OWoPmHtxnzxDVxO6N4shMtfJeXIEps7Gl2FXJUt9rLBQSwRzM5xTMVIObAs46RGVlXfFwWqPNvmljuiqlWzHZ60AvyXfreVn6RRqcnXCQ-Ajln506wdWadpP3MZWVIxQcRgG4PA3kzchnoQkadbtYAU1RKvJ31BrHOjc71GgfA3iQbll8_bdH8.N_AQnxY3IK88wpIuqWAWvBU0O86stDB5hSc0IesBGV8&dib_tag=se&keywords=apple+airtag&qid=1743662087&sprefix=apple+airtag%2Caps%2C231&sr=8-1&linkCode=ll1&tag=googlementor-20&linkId=6e55276863fd379898e8ecfb3080119a&language=en_US&ref_=as_li_ss_tl',
   },
-  // Add similar IDs for the remaining items
+  {
+    name: 'Mini Power Bank',
+    description: 'Stay charged on the go.',
+    image: '/assets/images/powerbank.jpg', // Replace with actual image paths
+    link: 'https://www.amazon.com/INIU-Portable-Charging-10000mAh-Tablets/dp/B09176JCKZ?crid=3PK4S3TX25SJT&dib=eyJ2IjoiMSJ9.NNtcMx3tBl4KYMENUAY8Ve4s_J_LjtJoQK_Tw5985l6gIfuEiSZmrU7f61vSf9trDRp5u2M7kZ4HrTJZPq5UqxnEy5ExWhNCMpU4JvdVk_txB7YqvLCNUA7Y4lyI0p1wS2vtAXun-34OwPEH-i-5cXFQkUQGuUsqANcNVRNanH4WicaPqITMWAK3ehACFntRr6QYROxpz5hlLueP08qQwa8dWkiA1opcCG7aWT3-pAs.vp_OiVQE-TDgftHGuSOVYSaUd48YRr4YYf-B5niH7Ao&dib_tag=se&keywords=mini%2BPower%2BBank&qid=1743661618&sprefix=mini%2Bpower%2Bbank%2Caps%2C348&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=198fffbd61d177ebff759a6f0793867d&language=en_US&ref_=as_li_ss_tl', // Affiliate link placeholder
+  },
+  {
+    name: 'Sun Hat',
+    description: 'Stay cool and protected from the sun.',
+    image: '/assets/images/hat.jpg',
+    link: 'https://www.amazon.com/Summer-Panama-Straw-Fedora-Beach/dp/B07BNNNSX5?crid=35H30J30GZNOC&dib=eyJ2IjoiMSJ9.tU3Ad7L_jXc45PW0ksQAAhL5tqfFEPZKValKUTy45xneWX-9nJwuHOJ3JnYbhQmwtgJu35hR689run1JS7rpVlBr9J-w2rZiVU-rg4P3mWZJ6jnzL8v8x1VS_pif7wCHOcCUcHPSti89nug87S-nNpGbbMaERDQvPPtwYTe9wmTtdbDmJfQjgjUoLAMGpxEaUsDjXmtzpGmytlhwn-mivuGXjfUacmMMaZRGd0ctoyihrGj9ii3x5O7C6tEAJEDOkWPDGrdIoTqM8IJ4-E6CDrUI6nAJtagnhlVZRzGp_ck.W_8kxKL5rk-jHa0lU_xTt6_2yfl49-zwKfUIL3b8VI8&dib_tag=se&keywords=hat+for+sun&qid=1743773805&sprefix=hat+for+sun%2Caps%2C218&sr=8-16&linkCode=ll1&tag=googlementor-20&linkId=2fd025d345af310cc3f1a33161f33fbc&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Tile GPS Tracker',
+    description: 'Never lose your belongings again.',
+    image: '/assets/images/tile.jpg',
+    link: 'https://www.amazon.com/Tile-Life360-Bluetooth-Tracker-Compatible/dp/B0D63657GY?crid=1DQMOW5YLB3UL&dib=eyJ2IjoiMSJ9.SZZ7duJsi3EtIqYaSf-Lxx8dI63Ku87qfw4p7tbWwuqDwjTNp362RfW_8WHPEwKh4PuFL8YlZQ0oyNhX516zc98zlemE9UGsy_a8Z0xWcx4bSRUxJHS8KYDxFgUYAVMfTp0kZvSjmc_leO4Whu6Oj-SQIkBmbauOR3KIacwN0-r9pPLYhh4z7FUYYStag8uvGv7vlVhgrgcAbO9jiw7-8-Jggm5ew-7yCumrG8wFwdo.xiJqztHhTbzLQJ3UC67P1R92hmurWaamBPy-nB0pybA&dib_tag=se&keywords=GPS%2BTracker&qid=1743661824&sprefix=gps%2Btracker%2Caps%2C245&sr=8-14&th=1&linkCode=ll1&tag=googlementor-20&linkId=7d7bdc11f04ea0ea7014094d2986365a&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Water Bottle with Handle and Straw',
+    description: 'Stay hydrated anywhere.',
+    image: '/assets/images/water.jpg',
+    link: 'https://www.amazon.com/Simple-Modern-Tumbler-Handle-Insulated/dp/B0BHBP1X1B?crid=3RI1W7M2W0EW7&dib=eyJ2IjoiMSJ9.IYTNOMeir5gVqD73IVSo6KwFXMZXivVlGJ52_2l8I-l30U8jWMH3tNYgnk18A_5ExPS9-mGGh1WYfBFnIb1HCyAp2T9WA5nqH_nvKBqza2EOmJ-kEOwAnDUoC04NqzDx1YCdMQQqRxiWQWHvrrIIFNm31fOxCMq5F01TPm8hZgPfP5HcnFXoZ5Esd-HfSwKDzvZtsyK6q_3SQXnM4h55d1CtePSOJsE2-PKtpef4ShALsrEXQbMBZln9IGiFjBxDOPsELubhZMr9V2JBSSMyOnh16r2wLw9mjhDx3DW7H3A.rwFhi_cRepdMWhJ1oW94QzXKjE_XxDIN9pNB-bOvwpY&dib_tag=se&keywords=water%2Bbottle%2Btravel&qid=1744299629&sprefix=water%2Bbottle%2Btravel%2Caps%2C239&sr=8-7&th=1&linkCode=ll1&tag=googlementor-20&linkId=76a85aaebe2124769e4334342a2050ab&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Herschel Travel Backpack',
+    description: 'Carry your essentials in style.',
+    image: '/assets/images/backpack.jpg',
+    link: 'https://www.amazon.com/Herschel-Supply-Co-Classic-Backpack/dp/B0C3B2B5QC?crid=XHGDCIGAS3Q5&dib=eyJ2IjoiMSJ9.yzgIPLSG0TaOM6cd4W2QxICF3Q9VeZUsdfuixlsh90TGxGLOa48yyGOGeCGynfYMMdbA9IKkNWdlGiz2PN2E4uNQKplAyGpHR-GPry2p7nrS37-aCluEAb3Ka-xXAeTRZa3LaR89tQxEZb-c1pKBsf4vcQc7NDin1YN6rbi5gwD-utciZSKBOjDqPeE8CSESThvZs3MzGdpdqc5N4rx07qRiP-GtlzDCCBQIVMF4CxTFmVk576HAw3wI_N1zadBG15YEeu9KYL3yUh5fokSshiGnk35JdMFf4yiRoO3N8KY.SBSGQMtpVHXT2YBgLfe4K5jZqK8wl3T0yKbraO4wLtw&dib_tag=se&keywords=herschel+backpack&qid=1743775817&sprefix=hersha%2Caps%2C240&sr=8-16&linkCode=ll1&tag=googlementor-20&linkId=e705adfa7d7243a3169ec0954d19e508&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Face Sunscreen SPF 46',
+    description: 'Protect your skin from the sun.',
+    image: '/assets/images/sunscreen.jpg',
+    link: 'https://www.amazon.com/EltaMD-Acne-Prone-Mineral-Based-Dermatologist-Recommended/dp/B002MSN3QQ?crid=3UG28XZY5PJ34&dib=eyJ2IjoiMSJ9.Dbjo2VW-q3VfGayePXsJQB9Q_56Gkm7QIxJf2Spbq-b0oZtyAkg-jWyCCYD9y18Z7HlyuNxuK34-4gK9fUOHi9vKQeGD774b-MMBdshsotuKXupSEMlJCgKeF6FAla0EO0lOIq46rFpx9_Y_cCxE1gOiCLyI9UxqspCDUqbI6XoLgGdtT-JUWVhIFS5ZUrsNfEG8qDRnXboxXzC0vmwkRO8rgWTLQcvlJ95kH3lMTv8EvTx-gHQ13zw54jjs6SDvRhfVbPf_46zTJhgTMyBQwTFbWbD_TmgKCxjJ3mdDBUU._MPaHe4J9mFqc_ro_c8C2Ntc9JoARqqTY5iGzE409xs&dib_tag=se&keywords=sun%2Bprotection&qid=1743777052&sprefix=sun%2Bprotection%2Caps%2C258&sr=8-1&th=1&linkCode=ll1&tag=googlementor-20&linkId=b8c9b3510de2c10944341d97c9e42ae5&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Travel First Aid Kit',
+    description: 'Be prepared for any situation.',
+    image: '/assets/images/firstaid.jpg',
+    link: 'https://www.amazon.com/Mini-First-Aid-Pieces-Small/dp/B0747N5KDM?crid=K9RBPL7QNW63&dib=eyJ2IjoiMSJ9.7V-Bnp2ksBXaSqzv_YBz1AzlgoEvZfMWn49iAke95Er6pjAbX39TdsQZXQf1Fr4OYkvJdY2nYfg7oonUw1hXykkB8kBynF9ekFdIYCmDPJ1gRiu_ZjgsTBRmSwsso_iKEMyycJAfRztCTugTV2swrqZ7LW7F84Kjj7eZDJ4OofTLTfdeHIwur4bOmlwGIfiM4ZyCXxV4URi66CdgwILCFaKJRpDaAh1J88lykEkcO7YqDEdhVy2FXc_pDjE6ntrfv3PEnW3Ap97fYkbi0GR1nlJ_DIYP3E2640bjvKC-PcU.1BigUDyXWY_Jgd6FG6et4V60cLFVnikqumP6qFIPyqU&dib_tag=se&keywords=first+aid+kit+travel&qid=1744300576&sprefix=first+aid%2Caps%2C238&sr=8-3&linkCode=ll1&tag=googlementor-20&linkId=4356bb842c872fece7e7d883afb71826&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    name: 'Beach Blanket',
+    description: 'Stay dry and comfortable on the sand.',
+    image: '/assets/images/blanket.jpg',
+    link: 'https://www.amazon.com/Wekapo-Blanket-Compact-Lightweight-Durable/dp/B08X6VQBGJ?crid=2ASBCQXF79O2M&dib=eyJ2IjoiMSJ9.Ao8EkkUbE7_uDV4lm6x3pB_ctp9idiu4xJkNu31HqRJvxCZQHEdOA5KTglqua94WMhAy8jv7YAbfvWUnuHSg2cbIGC20kQy4WpE4dJbsG-a7X0EyECoSLlhWPtSN5HkzOEd9lcnCK2pfNgR_ndcKgPByVEkF1blHLMVaaOLS2HmdH8qQLaddcStsf4-Q7VeB9zmnw8tuyewtDpo4DxuGc_gXwOxXhlhqohPtheG0Hhh83S6yLVHdqVdmHZLGfAqq9X9lxvtpMAteeSWcoGTfzL4RMv__2Iibcwk27AaHqaI.56ASIg50MPlLiwbXLs3iSdN8lbHN-j6bV3IjTd4lA3g&dib_tag=se&keywords=beach%2Bbest%2Bsellers&qid=1744304916&sprefix=beach%2Bbest%2Bselet%2Caps%2C247&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=c82d008debb81e655e50f4deeffd74ba&language=enUS&ref_=as_li_ss_tl',
+ },
 ];
 
 const Store: React.FC = () => {
