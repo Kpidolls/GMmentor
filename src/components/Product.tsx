@@ -22,7 +22,7 @@ const Product = () => {
     },
     {
       id: 'vegan',
-      title: '📍 Vegan & Vegetarian Friendly ',
+      title: '📍 Vegetarian Friendly ',
       img: '/assets/images/vegan.webp',
       description: 'Find vegan & vegetarian friendly spots.',
       link: 'https://www.google.com/maps/@37.9884209,18.8656014,6z/data=!4m2!11m1!2sBlO52sink_AIFpF1zqhHJc4a-1gNjA?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
@@ -85,7 +85,7 @@ const Product = () => {
     },
     {
       id: 'wineries',
-      title: '📍 Wineries & Vineyards',
+      title: '📍 Wineries',
       img: '/assets/images/winery.jpg',
       description: 'Find amazing vineyards and indulge in Greek wines.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sULXdtW62DdUhw9WNva4lJXSKQZNn1g?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
@@ -226,10 +226,10 @@ const Product = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2 h-14 overflow-hidden">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2 h-8 sm:h-14 overflow-hidden">
                 {option.title}
               </h3>
-              <p className="text-gray-600 text-sm mb-4 h-12 overflow-hidden">
+              <p className="text-gray-600 text-sm mb-2 sm:mb-4 h-6 sm:h-12 overflow-hidden">
                 {option.description} {/* Unique description for each map option */}
               </p>
                 <a

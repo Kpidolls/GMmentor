@@ -103,7 +103,7 @@ const IslandList = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 {island.title}
               </h3>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-gray-600 text-sm mb-2 sm:mb-4 h-6 sm:h-12">
                 {island.description}
               </p>
               <a
