@@ -131,14 +131,14 @@ const Store: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-800 mb-2 h-8 overflow-hidden">
                   {product.name}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4 h-10 overflow-hidden">
+                <p className="text-gray-600 text-sm mb-1 h-10 overflow-hidden">
                   {product.description}
                 </p>
                 <a
                   href={product.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-block text-primary font-medium hover:underline"
+                  className="mt-2 inline-block text-primary font-medium hover:underline"
                 >
                   Learn More
                 </a>
