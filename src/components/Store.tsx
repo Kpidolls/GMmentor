@@ -84,8 +84,7 @@ const products = [
     description: ' Make calls comfortable and hands free.',
     image: '/assets/images/mount.png',
     link: 'https://www.amazon.com/LISEN-Essentials-Accessories-Universal-Handsfree/dp/B0CKN1N2YH?crid=1L7E0RTPVSUPD&dib=eyJ2IjoiMSJ9.zIBkwMtM_3BUoh9TenjGWvNvYdqTZisNRnIF47gvCun7iYxyFP9JphBkpb2TkleQlHBTEvZBj9eISj8wMvLkVlgl_wfRAI4ojf9hK4ofy09n7n3E5bJah7xF0GZNBhOe9bsg0VlL3ec1gGWDJJ27knX2BcvDF7t3IKS12YoCZZKqNa-TNQAQk1gd-FG7NLbKJ_bshPirqDJHV-glYn2oLYzJg7mjBdbhBMYo3sp_mo7kFv7Ro_wDi9Ql31h1EUw6p5yDbwtaUd2F-yd6Cs_UAZ6R3mXu8eiRMdHBODe-XbM.u7aLw07kPtPGGf0-auS2fQTwPzXWInEhKpWpdVGu43s&dib_tag=se&keywords=travel%2Bessentials&qid=1744963703&sprefix=travel%2B%2Caps%2C917&sr=8-9&th=1&linkCode=ll1&tag=googlementor-20&linkId=0b95bd52b417f82a30b0c45fd26eb060&language=en_US&ref_=as_li_ss_tl',
-  },
-  
+  }, 
   {
     id: 'airplane-phone-holder',
     name: 'Airplane Phone Holder ',
@@ -113,6 +112,13 @@ const products = [
     description: 'Charge multiple devices at once.',
     image: '/assets/images/usbports.jpg',
     link: 'https://www.amazon.com/Anker-Display-MacBook-Thinkpad-Laptops/dp/B0BQLLB61B?crid=3D49RTF3E7DHJ&dib=eyJ2IjoiMSJ9.Do0A8AsPHyHc1NFcnh3svm3AnNZ2HiccAimNCAGFPtTAFx7LlhPYaMjzSVPoMRF_chNEXjYvJrYtiCnRkB4L_Pw--__l9zHfA3HDgqntUX5aqJZ2opYu_7iiXxccCMwpqkdlsmFXrc97PrkEntC3MsdVAT_GqHRbvFs4WWIv1kMrWZ83s_7J5GfnXDud2JKBA7nKiFS-11lv6rtRGUSwM8xjbHsy-YCGGspZkA2Tlpo.VwKjls_SH5YzJU4VKU_VuT6VVK63R36ed-sqlEyojvQ&dib_tag=se&keywords=multi%2Busb%2Bport&qid=1744794809&sprefix=multi%2Busb%2Bport%2Caps%2C249&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=06d1704430ca77f693bf6f68c7f1cfd7&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    id: '',
+    name: 'European Travel Plug',
+    description: 'Charge your devices in Europe, 4-Port usb with fast charging.',
+    image: '/assets/images/multiusb.jpg',
+    link: 'https://www.amazon.com/USINFLY-European-Adapter-Charging-International/dp/B0CRYN8FGP?crid=2C0P5CZ9VCOVS&dib=eyJ2IjoiMSJ9.7g2xuuFG6eINsUnLmLd5iOPerpv0qEoT7KeJgTA-8w88Avf-UCLC0WL4nDNMOKf7OhqkWiRVieg8kgnr2iUlNvuS_J3HU3mST-MeREJtAi3ocR1tGSrzxLgtSY634mlcFX8UcWMoHmaiJL7IWDc7y6fAHpA4GQksZ7Ik6zwu4MIyf7xpNJrkFhd5_iIJn-ospQEQmJbhNADrUqwPWQ4ew6U-cdKcHdZqmFalvJuFet5nfMQB1eAkgpTpzGRMvUdK2wX2AnVuaE5GBfeQzHfqlPOaZPuRahV2Kmv4oy9j8LA.Yoi6xdOwivJek7NbEbOciEJHoOpGcvQapgbrf3W-aTQ&dib_tag=se&keywords=european%2Btravel%2Badapter%2Bmulti%2Busb&qid=1744967048&sprefix=european%2Btravel%2Badapter%2Bmulti%2Busb%2Caps%2C239&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=d4909f8b59dc235be46b47c442233a35&language=en_US&ref_=as_li_ss_tl',
   },
   // Add similar IDs for the remaining items
 ];
