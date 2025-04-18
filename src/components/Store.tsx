@@ -72,6 +72,28 @@ const products = [
     link: 'https://www.amazon.com/JBL-Bluetooth-Built-Waterproof-Dustproof/dp/B08KW1KR5H?crid=3VUTW189394ED&dib=eyJ2IjoiMSJ9.FGkEwxm3QNHRWWQy2KNYz333rFfCFhE2oVPUD7ERc7gdb4h9-r-iJGDD3k2FAhT0_hjnGeKdBRvQ23JkhKEY0RaRfPVQdOxKEn16t5fHuN9qiQSQznJs_8Plru1vltrDK1oxTcsKO3PzNBtxBtXH5dnSB8HjX0lWcJqrOQcYAQqeBoIK3bwu5Ih0kB-oZjMaqvXLPNNMW0QQcaZ8Y6VMWNx2T6hy4SVjCnS5Kq-tiBE.Mqw-uR3eFoYa5iRHfJIR6cDp510BPAvZyEk6R-wuLMs&dib_tag=se&keywords=bluetooth%2Bspeakers%2Bwireless&qid=1744282386&sprefix=blue%2Btoothspeaker%2Caps%2C225&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=7d562457ac35b6410528d256fe68d12c&language=en_US&ref_=as_li_ss_tl',
   },
   {
+    id: 'pillow-mask',
+    name: 'Travel Pillow and Mask',
+    description: 'Comfortable travel essentials.',
+    image: '/assets/images/pillow.jpg',
+    link: 'https://www.amazon.com/SARISUN-Airplanes-Sleeping-Headrest-Eligible/dp/B0CL6CXMGZ?crid=1XOTYYXQ7J8S8&dib=eyJ2IjoiMSJ9.DyT2qP-xZMOu-DEanapYVB_zQbxYLigcZeeHLK6NuIBr3R83NYGO31bTUfTWblVIhsEc-ozpY9JE5JpYi2vd7UegxZrqtCtm3-W52ZaFWSM7EhzteyGWKaJZ4SG4bgwyXagt2ufXcOMbDeXJ5rZsdEFEqJ6lqKfeJFIfp_aBB-fxHEjzXfkij_kMRn_-GSHqgFhBmZ91SgaiiIGaIlBAqRVjl6h7hBTqrsx7l9uDDddk_62NXVPT7S2emk1waxk_tbKHagXArlBs6lrQHFcVFYzgLQNdJTBx3FgnHuCWIyE.Uw6YzlSws72o1UJHLP2dCvlBxZEtPqGBuMhPhYu36sc&dib_tag=se&keywords=pillow%2Btravel%2Band%2Bmask&qid=1744964506&sprefix=pillow%2Btravel%2Band%2Bmask%2Caps%2C231&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=googlementor-20&linkId=1e7392ea42e93d97ceb967d7e460881a&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
+    id: 'phone-holder-mount',
+    name: 'Phone Holder Mount',
+    description: ' Make calls comfortable and hands free.',
+    image: '/assets/images/mount.png',
+    link: 'https://www.amazon.com/LISEN-Essentials-Accessories-Universal-Handsfree/dp/B0CKN1N2YH?crid=1L7E0RTPVSUPD&dib=eyJ2IjoiMSJ9.zIBkwMtM_3BUoh9TenjGWvNvYdqTZisNRnIF47gvCun7iYxyFP9JphBkpb2TkleQlHBTEvZBj9eISj8wMvLkVlgl_wfRAI4ojf9hK4ofy09n7n3E5bJah7xF0GZNBhOe9bsg0VlL3ec1gGWDJJ27knX2BcvDF7t3IKS12YoCZZKqNa-TNQAQk1gd-FG7NLbKJ_bshPirqDJHV-glYn2oLYzJg7mjBdbhBMYo3sp_mo7kFv7Ro_wDi9Ql31h1EUw6p5yDbwtaUd2F-yd6Cs_UAZ6R3mXu8eiRMdHBODe-XbM.u7aLw07kPtPGGf0-auS2fQTwPzXWInEhKpWpdVGu43s&dib_tag=se&keywords=travel%2Bessentials&qid=1744963703&sprefix=travel%2B%2Caps%2C917&sr=8-9&th=1&linkCode=ll1&tag=googlementor-20&linkId=0b95bd52b417f82a30b0c45fd26eb060&language=en_US&ref_=as_li_ss_tl',
+  },
+  
+  {
+    id: 'airplane-phone-holder',
+    name: 'Airplane Phone Holder ',
+    description: 'Perfect for watching movies.',
+    image: '/assets/images/mount-airplane.jpg',
+    link: 'https://www.amazon.com/Perilogics-Universal-Airplane-Multi-Directional-Rotation/dp/B07T8KL6C6?crid=1L7E0RTPVSUPD&dib=eyJ2IjoiMSJ9.JsSdZgc4aAPVec63UKw8Xhw3dVkz8thJ_AtlAaVHVRmXgMennzu3n8Y9anULK9xXmBFERZ7JBRmRBAMUjoK-uCgrUe6LQXEQxSQ-KMn7BaMS5WWQL0GZ0nxXehzVGkbyjD1TZ52u9NUS07_usytmD5IktZVo5LlXlQmJIWwDQ4kXvaxuPZfYAoqq2PoIG4rujfHh_AiZy5bOQzJ7Tm9c5JZDe1a9r3fJq2nR9qAd67vucf0E4G05xU0OwZkZYXa4p9Vs-HgeTlLNOAY_zmZTdy2YdoMTJ-f62DNHZ0ND_g0.02aszl0VFevKmSERcFVa10_fBC7nCto9vCNDEJuWxhA&dib_tag=se&keywords=travel%2Bessentials&qid=1744956301&sprefix=travel%2B%2Caps%2C917&sr=8-27&th=1&linkCode=ll1&tag=googlementor-20&linkId=062ea2e3ef789655629ab6e668c9283d&language=en_US&ref_=as_li_ss_tl',
+  },
+  {
     id: 'sony-wireless-headphones',
     name: 'Sony Wireless Noise Canceling Headphones',
     description: 'Experience immersive sound.',
