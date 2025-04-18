@@ -236,7 +236,7 @@ const Product = () => {
                 href={option.link}
                 target={option.target}
                 rel={option.rel}
-                className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded shadow hover:bg-blue-700 transition duration-300 text-center"
+                className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded shadow hover:bg-blue-700 transition duration-300 text-center"
                 >
                 Explore
                 </a>
