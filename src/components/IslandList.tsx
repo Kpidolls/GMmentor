@@ -41,7 +41,7 @@ const IslandList = () => {
     {
       id: 'island-rhodes',
       title: '📍 Rhodes (Rodos)',
-      img: '/assets/images/rodos.jpg',
+      img: '/assets/images/rodos.webp',
       description: 'Discover medieval charm and beautiful beaches.',
       link: 'https://www.google.com/maps/@36.1723163,27.6523371,10z/data=!4m6!1m2!10m1!1e1!11m2!2s9gWD1lJsTiCAh7juAHOsZQ!3e3?entry=ttu&g_ep=EgoyMDI1MDQwNi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
       target: '_blank',
@@ -50,7 +50,7 @@ const IslandList = () => {
     {
       id: 'island-corfu',
       title: '📍 Corfu (Kerkira)',
-      img: '/assets/images/corfu.jpg',
+      img: '/assets/images/corfu.png',
       description: 'Venetian architecture and stunning coastlines.',
       link: 'https://www.google.com/maps/@39.582828,19.542064,10z/data=!4m6!1m2!10m1!1e1!11m2!2sHQ0OGiP3TN-0BVrAqqsQog!3e3?entry=ttu&g_ep=EgoyMDI1MDQwNi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
       target: '_blank',

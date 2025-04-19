@@ -5,7 +5,7 @@ const Product = () => {
     {
       id: 'must-see',
       title: '📍 Must-See Attractions',
-      img: '/assets/images/must.jpg',
+      img: '/assets/images/must.png',
       description: 'Discover the must-see attractions in Greece.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sYdxYS6H03eNUO6wBrMYZto99JAg9Ng?g_ep=CAISEjI0LjQ5LjMuNzAyODc2MTUxMBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
@@ -32,7 +32,7 @@ const Product = () => {
     {
       id: 'fish-tavernas',
       title: '📍 Fish Tavernas with Scenic views',
-      img: '/assets/images/eat.webp',
+      img: '/assets/images/eat.png',
       description: 'Enjoy fresh seafood with a view.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sUqd74lFA2sYPEzwyP1k8I-V9qZ_VNw?g_ep=CAISEjI1LjE0LjEuNzQyMzk4MTI0MBgAILffASpsLDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDk0MjA2MTY2LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjAzMDE5LDQ3MDg0MzA0LDk0MjA4NDU4LDk0MjA4NDQ3QgJHUg%3D%3D',
       target: '_blank',
@@ -68,7 +68,7 @@ const Product = () => {
     {
       id: 'rooftop',
       title: '📍 Rooftop Lounges',
-      img: '/assets/images/rooftop.jpg',
+      img: '/assets/images/rooftop.png',
       description: 'Relax and enjoy the view at the best rooftop lounges.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sm3-v6U64Q2U33zHbEqNR5QCnmoCFwQ?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
@@ -86,7 +86,7 @@ const Product = () => {
     {
       id: 'wineries',
       title: '📍 Wineries',
-      img: '/assets/images/winery.jpg',
+      img: '/assets/images/winery.png',
       description: 'Find amazing vineyards and indulge in Greek wines.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sULXdtW62DdUhw9WNva4lJXSKQZNn1g?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
