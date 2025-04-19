@@ -21,6 +21,15 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: 'hiking',
+      title: '📍 Hiking Trails',
+      img: '/assets/images/hiking.webp',
+      description: 'Explore the best hiking trails in Greece.',
+      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2s7OJgKvmRnVtoRn9oYU-nQBdtEa3YRg?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
       id: 'vegan',
       title: '📍 Vegetarian Friendly ',
       img: '/assets/images/vegan.webp',
@@ -30,20 +39,20 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
-      id: 'fish-tavernas',
-      title: '📍 Fish Tavernas with Scenic views',
-      img: '/assets/images/eat.png',
-      description: 'Enjoy fresh seafood with a view.',
-      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sUqd74lFA2sYPEzwyP1k8I-V9qZ_VNw?g_ep=CAISEjI1LjE0LjEuNzQyMzk4MTI0MBgAILffASpsLDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDk0MjA2MTY2LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjAzMDE5LDQ3MDg0MzA0LDk0MjA4NDU4LDk0MjA4NDQ3QgJHUg%3D%3D',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
-    {
       id: 'gyros',
       title: '📍 Gyros & Souvlaki',
       img: '/assets/images/giros.jpg',
       description: 'Taste the best gyros and souvlaki in Greece.',
       link: 'https://www.google.com/maps/@38.254912,18.8000805,6z/data=!4m2!11m1!2sLJ2pu96yJpCM1iWznQvGGNSrHClf_A?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
+      id: 'fish-tavernas',
+      title: '📍 Fish Tavernas with Scenic views',
+      img: '/assets/images/eat.png',
+      description: 'Enjoy fresh seafood with a view.',
+      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sUqd74lFA2sYPEzwyP1k8I-V9qZ_VNw?g_ep=CAISEjI1LjE0LjEuNzQyMzk4MTI0MBgAILffASpsLDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDk0MjA2MTY2LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjAzMDE5LDQ3MDg0MzA0LDk0MjA4NDU4LDk0MjA4NDQ3QgJHUg%3D%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
@@ -165,15 +174,6 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
-      id: 'hiking',
-      title: '📍 Hiking Trails',
-      img: '/assets/images/hiking.webp',
-      description: 'Explore the best hiking trails in Greece.',
-      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2s7OJgKvmRnVtoRn9oYU-nQBdtEa3YRg?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
-    {
       id: 'surf',
       title: '📍Water Sports',
       img: '/assets/images/surf.jpg',
@@ -202,7 +202,7 @@ const Product = () => {
     },
   ];
 
-  const [visibleOptions, setVisibleOptions] = useState(21); 
+  const [visibleOptions, setVisibleOptions] = useState(12); 
 
   const handleViewMore = () => {
     setVisibleOptions(mapOptions.length); 
