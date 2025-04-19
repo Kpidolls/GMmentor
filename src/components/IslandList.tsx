@@ -116,7 +116,7 @@ const IslandList = () => {
               </a>
               <button
                 onClick={() => {
-                  const shareText = `Check out this amazing category: ${island.title} - ${island.description} ${island.link}`;
+                  const shareText = `Recommendations for: ${island.title} - ${island.description} link} from googlementor.com`;
                   if (navigator.share) {
                   navigator.share({
                     title: island.title,

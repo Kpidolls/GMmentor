@@ -242,7 +242,7 @@ const Product = () => {
                 </a>
                 <button
                 onClick={() => {
-                  const shareText = `Googlementor recommendations for: ${option.title} - ${option.description}`;
+                  const shareText = `Recommendations for: ${option.title} - ${option.description} from googlementor.com`;
                   if (navigator.share) {
                   navigator.share({
                     title: option.title,
