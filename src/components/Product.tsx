@@ -12,20 +12,29 @@ const Product = () => {
       rel: 'noopener noreferrer',
     },
     {
-      id: 'churches',
-      title: '📍 Monasteries & Churches',
-      img: '/assets/images/church.jpg',
-      description: 'Visit historic monasteries and beautiful churches.',
-      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2skRt2slouJJnCNj2AoZR08mpEYuOAbw?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
-    {
       id: 'hiking',
       title: '📍 Hiking Trails',
       img: '/assets/images/hiking.webp',
       description: 'Explore the best hiking trails in Greece.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2s7OJgKvmRnVtoRn9oYU-nQBdtEa3YRg?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
+      id: 'rooftop',
+      title: '📍 Rooftop Lounges',
+      img: '/assets/images/rooftop.png',
+      description: 'Relax and enjoy the view at the best rooftop lounges.',
+      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sm3-v6U64Q2U33zHbEqNR5QCnmoCFwQ?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
+      id: 'churches',
+      title: '📍 Monasteries & Churches',
+      img: '/assets/images/church.jpg',
+      description: 'Visit historic monasteries and beautiful churches.',
+      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2skRt2slouJJnCNj2AoZR08mpEYuOAbw?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
@@ -71,15 +80,6 @@ const Product = () => {
       img: '/assets/images/coffee.jpg',
       description: 'Relax with a cup of coffee or enjoy a hearty brunch.',
       link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sbiCkX803OJgBPnpLky_vUk4mueLn2A?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
-    {
-      id: 'rooftop',
-      title: '📍 Rooftop Lounges',
-      img: '/assets/images/rooftop.png',
-      description: 'Relax and enjoy the view at the best rooftop lounges.',
-      link: 'https://www.google.com/maps/@/data=!3m1!4b1!4m2!11m1!2sm3-v6U64Q2U33zHbEqNR5QCnmoCFwQ?g_ep=CAISEjI0LjQ3LjMuNjk4NTMxOTU1MBgAILffASqZASw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw5NDIwNjE2Niw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICR1I%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
@@ -234,7 +234,7 @@ const Product = () => {
               </p>
                 <a
                 href={option.link}
-                target={option.target}
+                target="_self"
                 rel={option.rel}
                 className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded shadow hover:bg-blue-700 transition duration-300 text-center"
                 >
@@ -242,7 +242,7 @@ const Product = () => {
                 </a>
                 <button
                 onClick={() => {
-                  const shareText = `Check out this amazing category: ${option.title} - ${option.description} ${option.link}`;
+                  const shareText = `Googlementor recommendations for: ${option.title} - ${option.description} ${option.link}`;
                   if (navigator.share) {
                   navigator.share({
                     title: option.title,
