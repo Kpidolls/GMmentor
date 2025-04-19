@@ -20,7 +20,7 @@ const TravelInsurance = () => {
         <div className="flex justify-center mb-6">
           <a
         href="https://safetywing.com/?referenceID=26193325&utm_source=26193325&utm_medium=Ambassador"
-        target="_blank"
+        target="_self"
         rel="noopener noreferrer"
         className="px-8 py-3 bg-primary text-white font-semibold rounded-lg shadow-lg hover:bg-secondary transition duration-300"
           >
