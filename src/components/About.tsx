@@ -97,12 +97,12 @@ const About = () => {
             <p className="mt-4">
               &copy; {new Date().getFullYear()} Copyright{' '}
               <a
-                href="https://github.com/IssaafKattan"
+                href="https://github.com/issaafalkattan/React-Landing-Page-Template"
                 rel="noopener noreferrer"
                 className="text-gray-900 dark:text-gray-50"
                 target="_blank"
               >
-                | Issaaf Kattan
+                | I. Kattan
               </a>
             </p>
           </div>
