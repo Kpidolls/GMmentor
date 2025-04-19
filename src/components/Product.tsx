@@ -159,7 +159,7 @@ const Product = () => {
       id: 'bars',
       title: '📍 Bars & Drinks',
       img: '/assets/images/drinks.webp',
-      description: 'Explore the top bars and lounges.',
+      description: 'Explore top bars and lounges.',
       link: 'https://www.google.com/maps/@40.691437,6.9973243,5z/data=!4m2!11m1!2sl42F2SIYqB3xNDLPLLuWuNii-mPoJg?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D',
       target: '_blank',
       rel: 'noopener noreferrer',
@@ -242,7 +242,7 @@ const Product = () => {
                 </a>
                 <button
                 onClick={() => {
-                  const shareText = `Googlementor recommendations for: ${option.title} - ${option.description} ${option.link}`;
+                  const shareText = `Googlementor recommendations for: ${option.title} - ${option.description}`;
                   if (navigator.share) {
                   navigator.share({
                     title: option.title,
