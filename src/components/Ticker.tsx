@@ -32,7 +32,7 @@ function MyTicker() {
               key={index}
               className="ticker-text inline-block whitespace-nowrap"
             >
-              <span className="text-blue-600 font-bold">{highlight}:</span>{' '}
+              <span className="text-[#0878fe] font-bold">{highlight}:</span>{' '}
               <span>{rest.join(':')}</span>
             </div>
           );
