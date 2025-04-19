@@ -202,7 +202,7 @@ const Product = () => {
     },
   ];
 
-  const [visibleOptions, setVisibleOptions] = useState(12); 
+  const [visibleOptions, setVisibleOptions] = useState(10); 
 
   const handleViewMore = () => {
     setVisibleOptions(mapOptions.length); 
