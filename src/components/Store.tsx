@@ -198,7 +198,7 @@ const Store: React.FC = () => {
             >
               <a
                 href={product.link}
-                target="_blank"
+                target="_self"
                 rel="noopener noreferrer"
               >
                 <img
@@ -216,7 +216,7 @@ const Store: React.FC = () => {
                 </p>
                 <a
                   href={product.link}
-                  target="_blank"
+                  target="_self"
                   rel="noopener noreferrer"
                   className="mt-2 inline-block text-primary font-medium hover:underline"
                 >
