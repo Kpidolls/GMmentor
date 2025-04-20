@@ -184,10 +184,10 @@ const Store: React.FC = () => {
   return (
     <div id="store" className="bg-background py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center">
+        <h2 className="text-3xl font-extrabold font-secondary-primary text-gray-900 sm:text-4xl text-center">
         Shop Travel-Themed Gifts
         </h2>
-        <p className="mt-4 text-lg text-gray-600 text-center">
+        <p className="mt-4 text-lg text-gray-600 font-secondary text-center">
           Make your life easier.
         </p>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -208,10 +208,10 @@ const Store: React.FC = () => {
                 />
               </a>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2 h-8 overflow-hidden">
+                <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2 h-8 overflow-hidden">
                   {product.name}
                 </h3>
-                <p className="text-gray-600 text-sm mb-1 h-10 overflow-hidden">
+                <p className="text-gray-600 font-secondary text-sm mb-1 h-10 overflow-hidden">
                   {product.description}
                 </p>
                 <a
@@ -230,13 +230,13 @@ const Store: React.FC = () => {
           <div className="mt-8 text-center">
             <button
               onClick={handleViewMore}
-              className="px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
+              className="px-6 py-3 bg-primary text-white font-secondary font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
             >
               View More Products
             </button>
           </div>
         )}
-        <p className="mt-8 text-sm text-gray-500 text-center">
+        <p className="mt-8 text-sm text-gray-500 font-secondary text-center">
           Note: We may earn a commission if you purchase through these links.
         </p>
       </div>

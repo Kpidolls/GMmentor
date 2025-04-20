@@ -19,20 +19,20 @@ const MainHero = () => {
   return (
     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-12 lg:mt-12 lg:px-8 xl:mt-12">
       <div className="sm:text-center lg:text-left">
-        <h1 className="text-4xl tracking-tight font-extrabold text-[#001c28] sm:text-5xl md:text-6xl">
+        <h1 className="text-4xl tracking-tight font-primary font-extrabold text-[#001c28] sm:text-5xl md:text-6xl">
           <span className="block xl:inline">{mainHero.title}</span>{' '}
           <span className="block text-[#0878fe] xl:inline">
             {mainHero.subtitle}
           </span>
         </h1>
-        <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+        <p className="mt-3 text-base font-secondary text text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
           {mainHero.description}
         </p>
         <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md shadow">
             <a
               href={mainHero.primaryAction.href}
-              className="w-full flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 border border-transparent text-base sm:text-lg font-bold rounded-md text-white bg-red-600 hover:bg-red-700 md:py-5 md:text-xl md:px-12 min-w-[350px]"
+              className="w-full flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 border border-transparent text-base sm:text-lg font-bold rounded-md text-white font-secondary bg-red-600 hover:bg-red-700 md:py-5 md:text-xl md:px-12 min-w-[350px]"
             >
               {mainHero.primaryAction.text[currentTextIndex]}
             </a>
@@ -40,7 +40,7 @@ const MainHero = () => {
           <div className="mt-3 sm:mt-0 sm:ml-3">
             <a
               href={mainHero.secondaryAction.href}
-              className="w-full flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 border border-[#0878fe] text-base sm:text-lg font-bold rounded-md text-[#0878fe] bg-white hover:bg-indigo-50 md:py-5 md:text-xl md:px-12 min-w-[200px]"
+              className="w-full flex items-center justify-center font-secondary px-8 py-3 sm:px-10 sm:py-4 border border-[#0878fe] text-base sm:text-lg font-bold rounded-md text-[#0878fe] bg-white hover:bg-indigo-50 md:py-5 md:text-xl md:px-12 min-w-[200px]"
             >
               {mainHero.secondaryAction.text}
             </a>

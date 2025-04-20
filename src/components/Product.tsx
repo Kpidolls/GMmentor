@@ -210,7 +210,7 @@ const Product = () => {
 
   return (
     <div className="container mx-auto px-4 py-8" id="maps">
-      <h1 className="text-4xl font-bold text-[#001c28] mb-8 text-center">
+      <h1 className="text-4xl font-primary font-bold text-[#001c28] mb-8 text-center">
       Ready-to-Use Google Maps Lists
       </h1>
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -226,10 +226,10 @@ const Product = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2 h-8 sm:h-14 overflow-hidden">
+              <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2 h-8 sm:h-14 overflow-hidden">
                 {option.title}
               </h3>
-              <p className="text-gray-600 text-sm mb-2 sm:mb-4 h-6 sm:h-12 overflow-hidden">
+              <p className="text-gray-600 font-secondary text-sm mb-2 sm:mb-4 h-6 sm:h-12 overflow-hidden">
                 {option.description} {/* Unique description for each map option */}
               </p>
                 <a
@@ -242,7 +242,7 @@ const Product = () => {
                 </a>
                 <button
                 onClick={() => {
-                  const shareText = `Recommendations for: ${option.title} - ${option.description} from googlementor.com`;
+                  const shareText = `Recommendations for ${option.title} in Greece from Googlementor`;
                   if (navigator.share) {
                   navigator.share({
                     title: option.title,
@@ -262,14 +262,14 @@ const Product = () => {
         ))}
       </div>
       {/* Attribution Section */}
-    <div className="mt-8 text-center text-gray-500 text-sm">
+    <div className="mt-8 text-center font-secondary text-gray-500 text-sm">
       Images generated using Craiyon AI.
     </div>
     {visibleOptions < mapOptions.length && (
         <div className="mt-8 text-center">
           <button
             onClick={handleViewMore}
-            className="px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
+            className="px-6 py-3 bg-primary font-secondary text-white font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
           >
             View More Categories
           </button>

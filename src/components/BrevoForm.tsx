@@ -10,7 +10,7 @@ const BrevoForm = () => {
         height="600"
         frameBorder="0"
         scrolling="auto"
-        className="sib-form-iframe block mx-auto max-w-full"
+        className="sib-form-iframe font-primary block mx-auto max-w-full"
         aria-label="Brevo Form"
       ></iframe>
     </div>

@@ -73,14 +73,14 @@ const QASection = () => {
   return (
     <section className="bg-white py-16" id="qa-section">
       <div className="container mx-auto px-6 lg:px-8">
-        <h2 className="text-5xl font-extrabold text-center text-gray-900 mb-12">
+        <h2 className="text-5xl font-extrabold text-center text-gray-900 font-primary mb-12">
           Frequently Asked Questions
         </h2>
         <div className="space-y-4">
           {questionsAndAnswers.map((qa, index) => (
             <div key={index} className="border-b border-gray-200">
               <button
-                className="w-full text-left py-4 px-6 text-xl font-semibold text-gray-800 focus:outline-none"
+                className="w-full text-left py-4 px-6 text-xl font-semibold font-secondary text-gray-800 focus:outline-none"
                 onClick={() => toggleAccordion(index)}
               >
                 {qa.question}
@@ -89,7 +89,7 @@ const QASection = () => {
                 </span>
               </button>
               {activeIndex === index && (
-                <div className="px-6 pb-4 text-lg text-gray-700">
+                <div className="px-6 pb-4 text- font-secondary text-gray-700">
                   {qa.answer}
                 </div>
               )}
