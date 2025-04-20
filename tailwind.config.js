@@ -9,6 +9,10 @@ module.exports = {
       lg: '1024px', // Large screens
       xl: '1280px', // Extra large screens
     },
+    fontFamily: {
+      primary: ['Roboto', 'sans-serif'],
+      secondary: ['Merriweather', 'serif'],
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',

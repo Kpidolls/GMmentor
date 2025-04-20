@@ -84,7 +84,7 @@ const IslandList = () => {
 
   return (
     <div className="container mx-auto px-4 py-8" id="islands">
-      <h1 className="text-4xl font-bold text-[#001c28] mb-8 text-center">
+      <h1 className="text-4xl font-primary font-bold text-[#001c28] mb-8 text-center">
         Explore Greek Islands
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -100,10 +100,10 @@ const IslandList = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2">
                 {island.title}
               </h3>
-              <p className="text-gray-600 text-sm mb-2 sm:mb-4 h-6 sm:h-12">
+              <p className="text-gray-600 text-sm font-secondary mb-2 sm:mb-4 h-6 sm:h-12">
                 {island.description}
               </p>
               <a
@@ -116,7 +116,7 @@ const IslandList = () => {
               </a>
               <button
                 onClick={() => {
-                  const shareText = `Recommendations for: ${island.title} - ${island.description} link} from googlementor.com`;
+                  const shareText = `Recommendations for ${island.title} from Googlementor`;
                   if (navigator.share) {
                   navigator.share({
                     title: island.title,
@@ -139,7 +139,7 @@ const IslandList = () => {
         <div className="mt-8 text-center">
           <button
             onClick={handleViewMore}
-            className="px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
+            className="px-6 py-3 bg-primary font-primary text-white font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
           >
             View More Islands
           </button>

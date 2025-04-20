@@ -36,7 +36,7 @@ const Menu = () => {
                 </a>
                 <div className="-mr-2 flex items-center md:hidden">
                   <Popover.Button
-                    className="bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
+                    className="bg-background rounded-md p-2 inline-flex items-center justify-center font-secondary text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
                   >
                     <span className="sr-only">Open main menu</span>
                     <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -51,13 +51,13 @@ const Menu = () => {
                     {({ open }) => (
                       <>
                         <Popover.Button
-                          className={`group inline-flex items-center text-gray-500 hover:text-gray-900 font-medium focus:outline-none ${
+                          className={`group inline-flex items-center font-primary text-gray-500 hover:text-gray-900 font-medium focus:outline-none ${
                             open ? 'text-gray-900' : ''
                           }`}
                         >
                           <span>{item.name}</span>
                           <ChevronDownIcon
-                            className={`ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500 ${
+                            className={`ml-2 h-5 w-5 text-gray-400 font-secondary group-hover:text-gray-500 ${
                               open ? 'text-gray-500' : ''
                             }`}
                             aria-hidden="true"
@@ -82,7 +82,7 @@ const Menu = () => {
                                     spy={true}
                                     smooth={true}
                                     duration={1000}
-                                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
+                                    className="block px-3 py-2 rounded-md text-base font-medium font-primary text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
                                     onClick={() => handleNavigation(subItem.href)}
                                   >
                                     {subItem.name}
@@ -102,7 +102,7 @@ const Menu = () => {
                     spy={true}
                     smooth={true}
                     duration={1000}
-                    className="font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                    className="font-medium text-gray-500 font-secondary hover:text-gray-900 cursor-pointer"
                     onClick={() => handleNavigation(item.href)}
                   >
                     {item.name}

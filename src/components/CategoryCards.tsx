@@ -17,7 +17,7 @@ export default function CategoryCards() {
   return (
     <section id="categories" className="py-16 bg-gray-100 mt-16 lg:mt-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <h2 className="text-center text-3xl font-extrabold text-gray-900 mb-8">
+        <h2 className="text-center font-primary text-3xl font-extrabold text-gray-900 mb-8">
           Explore Lists by Category
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -25,7 +25,7 @@ export default function CategoryCards() {
             <a
               key={cat.tag}
               href={cat.link}
-              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl text-center transition duration-300 transform hover:scale-105"
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl font-secondary text-center transition duration-300 transform hover:scale-105"
             >
               <div className="mb-4">{cat.icon}</div>
               <div className="text-lg font-semibold text-gray-800">{cat.name}</div>
