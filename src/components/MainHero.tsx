@@ -15,7 +15,6 @@ const MainHero = () => {
     return () => clearInterval(interval);
   }, [mainHero.primaryAction.text.length]);
 
-
   return (
     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-12 lg:mt-12 lg:px-8 xl:mt-12">
       <div className="sm:text-center lg:text-left">
@@ -33,6 +32,7 @@ const MainHero = () => {
             <a
               href={mainHero.primaryAction.href}
               className="w-full flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 border border-transparent text-base sm:text-lg font-bold rounded-md text-white font-secondary bg-red-600 hover:bg-red-700 md:py-5 md:text-xl md:px-12 min-w-[350px]"
+              aria-label={`Primary action: ${mainHero.primaryAction.text[currentTextIndex]}`}
             >
               {mainHero.primaryAction.text[currentTextIndex]}
             </a>
@@ -41,6 +41,7 @@ const MainHero = () => {
             <a
               href={mainHero.secondaryAction.href}
               className="w-full flex items-center justify-center font-secondary px-8 py-3 sm:px-10 sm:py-4 border border-[#0878fe] text-base sm:text-lg font-bold rounded-md text-[#0878fe] bg-white hover:bg-indigo-50 md:py-5 md:text-xl md:px-12 min-w-[200px]"
+              aria-label={`Secondary action: ${mainHero.secondaryAction.text}`}
             >
               {mainHero.secondaryAction.text}
             </a>

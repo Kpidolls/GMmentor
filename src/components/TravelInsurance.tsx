@@ -12,27 +12,28 @@ const TravelInsurance = () => {
         </p>
         <div className="flex justify-center mb-8">
           <img
-        src="/assets/images/NI-info-2.png"
-        alt="Travel Insurance Infographic"
-        className="w-full max-w-lg rounded-lg shadow-lg"
+            src="/assets/images/NI-info-2.png"
+            alt="Infographic showing benefits of travel insurance" // Updated alt attribute for better description
+            className="w-full max-w-lg rounded-lg shadow-lg"
           />
         </div>
         <div className="flex justify-center mb-6">
           <a
-        href="https://safetywing.com/?referenceID=26193325&utm_source=26193325&utm_medium=Ambassador"
-        target="_self"
-        rel="noopener noreferrer"
-        className="px-8 py-3 bg-primary font-secondary text-white font-semibold rounded-lg shadow-lg hover:bg-secondary transition duration-300"
+            href="https://safetywing.com/?referenceID=26193325&utm_source=26193325&utm_medium=Ambassador"
+            target="_self"
+            rel="noopener noreferrer"
+            className="px-8 py-3 bg-primary font-secondary text-white font-semibold rounded-lg shadow-lg hover:bg-secondary transition duration-300"
+            aria-label="Get travel insurance from SafetyWing" // Added aria-label for the button
           >
-        Get Travel Insurance
+            Get Travel Insurance
           </a>
         </div>
         <div className="text-center text-gray-600">
           <p className="mb-4 text-base font-secondary sm:text-lg leading-relaxed">
-        Traveling can be unpredictable. Ensure you are covered with SafetyWing's comprehensive travel insurance. 
+            Traveling can be unpredictable. Ensure you are covered with SafetyWing's comprehensive travel insurance.
           </p>
           <p className="text-base font-secondary sm:text-lg leading-relaxed">
-        Our travel insurance offers coverage for medical expenses, trip cancellations, lost luggage, and more. Don't leave home without it!
+            Our travel insurance offers coverage for medical expenses, trip cancellations, lost luggage, and more. Don't leave home without it!
           </p>
         </div>
       </div>

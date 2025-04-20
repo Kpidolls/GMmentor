@@ -200,10 +200,11 @@ const Store: React.FC = () => {
                 href={product.link}
                 target="_self"
                 rel="noopener noreferrer"
+                aria-label={`Learn more about ${product.name}`} // Added aria-label for the link
               >
                 <img
                   src={product.image}
-                  alt={product.name}
+                  alt={`Image of ${product.name}`} // Added descriptive alt attribute
                   className="w-full h-48 object-cover"
                 />
               </a>
@@ -219,6 +220,7 @@ const Store: React.FC = () => {
                   target="_self"
                   rel="noopener noreferrer"
                   className="mt-2 inline-block text-primary font-medium hover:underline"
+                  aria-label={`Learn more about ${product.name}`} // Added aria-label for the link
                 >
                   Learn More
                 </a>
@@ -231,6 +233,7 @@ const Store: React.FC = () => {
             <button
               onClick={handleViewMore}
               className="px-6 py-3 bg-primary text-white font-secondary font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
+              aria-label="View more products" // Added aria-label for the button
             >
               View More Products
             </button>

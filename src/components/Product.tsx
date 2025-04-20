@@ -221,8 +221,8 @@ const Product = () => {
             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
           >
             <img
-              src={option.img} // Unique image for each map option
-              alt={option.title}
+              src={option.img}
+              alt={`Image for ${option.title}`} // Added descriptive alt attribute
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
@@ -237,6 +237,7 @@ const Product = () => {
                 target="_self"
                 rel={option.rel}
                 className="inline-block mt-2 px-4 py-2 bg-[#0878fe] text-white font-semibold rounded shadow hover:bg-blue-700 transition duration-300 text-center"
+                aria-label={`Explore ${option.title}`} // Added aria-label for the link
                 >
                 Explore
                 </a>
@@ -254,6 +255,7 @@ const Product = () => {
                   }
                 }}
                 className="inline-block mt-4 ml-2 px-4 py-2 bg-green-600 text-white font-semibold rounded shadow hover:bg-green-700 transition duration-300 text-center"
+                aria-label={`Share ${option.title}`} // Added aria-label for the button
                 >
                 Share
                 </button>
@@ -270,6 +272,7 @@ const Product = () => {
           <button
             onClick={handleViewMore}
             className="px-6 py-3 bg-primary font-secondary text-white font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
+            aria-label="View more categories" // Added aria-label for the button
           >
             View More Categories
           </button>
