@@ -79,7 +79,7 @@ const IslandList = () => {
   const [visibleIslands, setVisibleIslands] = useState(6); // Initially show 6 islands
 
   const handleViewMore = () => {
-    setVisibleIslands(islands.length); 
+    setVisibleIslands(islands.length);
   };
 
   return (
@@ -96,7 +96,7 @@ const IslandList = () => {
           >
             <img
               src={island.img}
-              alt={island.title}
+              alt={`Image of ${island.title}`} // Added descriptive alt attribute
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
@@ -111,6 +111,7 @@ const IslandList = () => {
                 target="_self"
                 rel={island.rel}
                 className="inline-block mt-4 px-4 py-2 bg-[#0878fe] text-white font-semibold rounded shadow hover:bg-blue-700 transition duration-300 text-center"
+                aria-label={`Explore ${island.title}`} // Added aria-label for the link
               >
                 Explore
               </a>
@@ -118,19 +119,20 @@ const IslandList = () => {
                 onClick={() => {
                   const shareText = `Recommendations for ${island.title} from Googlementor`;
                   if (navigator.share) {
-                  navigator.share({
-                    title: island.title,
-                    text: shareText,
-                    url: island.link,
-                  });
+                    navigator.share({
+                      title: island.title,
+                      text: shareText,
+                      url: island.link,
+                    });
                   } else {
-                  alert('Sharing is not supported on this browser.');
+                    alert('Sharing is not supported on this browser.');
                   }
                 }}
                 className="inline-block mt-4 ml-2 px-4 py-2 bg-green-600 text-white font-semibold rounded shadow hover:bg-green-700 transition duration-300 text-center"
-                >
+                aria-label={`Share ${island.title}`} // Added aria-label for the button
+              >
                 Share
-                </button>
+              </button>
             </div>
           </div>
         ))}
@@ -140,6 +142,7 @@ const IslandList = () => {
           <button
             onClick={handleViewMore}
             className="px-6 py-3 bg-primary font-primary text-white font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
+            aria-label="View more islands" // Added aria-label for the button
           >
             View More Islands
           </button>

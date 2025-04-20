@@ -26,35 +26,58 @@ const About = () => {
                   </Link>
                 </li>
                 <li>
-                    <Link href="/login" className="text-gray-200 font-secondary hover:text-white transition duration-300">
+                  <Link href="/login" className="text-gray-200 font-secondary hover:text-white transition duration-300">
                     Map Creators
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#store" className="text-gray-200 font-secondary hover:text-white transition duration-300">
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#store" className="text-gray-200 font-secondary hover:text-white transition duration-300">
                     Products
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#travelinsurance" className="text-gray-200 font-secondary hover:text-white transition duration-300">
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#travelinsurance"
+                    className="text-gray-200 font-secondary hover:text-white transition duration-300"
+                  >
                     Travel Insurance
-                    </Link>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-bold font-primary mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href={socialMedia.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a
+                  href={socialMedia.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Facebook"
+                >
                   <FaFacebook className="text-2xl text-gray-400 hover:text-white transition duration-300" />
                 </a>
-                <a href={socialMedia.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <a
+                  href={socialMedia.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Twitter"
+                >
                   <FaTwitter className="text-2xl text-gray-400 hover:text-white transition duration-300" />
                 </a>
-                <a href={socialMedia.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <a
+                  href={socialMedia.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on TikTok"
+                >
                   <FaTiktok className="text-2xl text-gray-400 hover:text-white transition duration-300" />
                 </a>
-                <a href={socialMedia.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a
+                  href={socialMedia.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Instagram"
+                >
                   <FaInstagram className="text-2xl text-gray-400 hover:text-white transition duration-300" />
                 </a>
               </div>
@@ -69,6 +92,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-4 px-6 py-2 font-secondary bg-yellow-500 text-gray-900 font-semibold rounded hover:bg-yellow-600 transition duration-300"
+                aria-label="Support us by buying a coffee"
               >
                 Buy Me a Coffee
               </a>
@@ -80,11 +104,19 @@ const About = () => {
               </p>
               <p className="text-gray-400 font-secondary mt-1">
                 By contacting us, you accept our{' '}
-                <a href="/terms" className="text-gray-200 underline  hover:text-white transition duration-300">
+                <a
+                  href="/terms"
+                  className="text-gray-200 underline hover:text-white transition duration-300"
+                  aria-label="Read our terms and conditions"
+                >
                   terms and conditions
                 </a>{' '}
                 and{' '}
-                <a href="/privacy-policy" className="text-gray-200 underline hover:text-white transition duration-300">
+                <a
+                  href="/privacy-policy"
+                  className="text-gray-200 underline hover:text-white transition duration-300"
+                  aria-label="Read our privacy policy"
+                >
                   privacy policy
                 </a>.
               </p>
@@ -101,6 +133,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="text-gray-900 dark:text-gray-50"
                 target="_blank"
+                aria-label="Visit the GitHub repository for the React Landing Page Template"
               >
                 | I. Kattan
               </a>

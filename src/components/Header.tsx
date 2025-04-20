@@ -32,13 +32,13 @@ const Menu = () => {
               <div className="flex items-center justify-between w-full md:w-auto">
                 <a href="#">
                   <span className="sr-only">{companyName}</span>
-                  <img alt="logo" className="h-16 w-auto sm:h-16" src={logo} />
+                  <img alt={`${companyName} logo`} className="h-16 w-auto sm:h-16" src={logo} />
                 </a>
                 <div className="-mr-2 flex items-center md:hidden">
                   <Popover.Button
                     className="bg-background rounded-md p-2 inline-flex items-center justify-center font-secondary text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
+                    aria-label="Open main menu"
                   >
-                    <span className="sr-only">Open main menu</span>
                     <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
@@ -54,6 +54,7 @@ const Menu = () => {
                           className={`group inline-flex items-center font-primary text-gray-500 hover:text-gray-900 font-medium focus:outline-none ${
                             open ? 'text-gray-900' : ''
                           }`}
+                          aria-label={`Toggle submenu for ${item.name}`}
                         >
                           <span>{item.name}</span>
                           <ChevronDownIcon
@@ -84,6 +85,7 @@ const Menu = () => {
                                     duration={1000}
                                     className="block px-3 py-2 rounded-md text-base font-medium font-primary text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
                                     onClick={() => handleNavigation(subItem.href)}
+                                    aria-label={`Navigate to ${subItem.name}`}
                                   >
                                     {subItem.name}
                                   </Link>
@@ -104,6 +106,7 @@ const Menu = () => {
                     duration={1000}
                     className="font-medium text-gray-500 font-secondary hover:text-gray-900 cursor-pointer"
                     onClick={() => handleNavigation(item.href)}
+                    aria-label={`Navigate to ${item.name}`}
                   >
                     {item.name}
                   </Link>
@@ -129,13 +132,13 @@ const Menu = () => {
               {/* Header Section */}
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
-                  <img className="h-10 w-auto" src={logo} alt={companyName} />
+                  <img className="h-10 w-auto" src={logo} alt={`${companyName} logo`} />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button
                     className="bg-gray-100 rounded-md p-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                    aria-label="Close main menu"
                   >
-                    <span className="sr-only">Close main menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
@@ -158,6 +161,7 @@ const Menu = () => {
                           duration={1000}
                           className="block px-4 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 cursor-pointer"
                           onClick={() => handleNavigation(subItem.href)}
+                          aria-label={`Navigate to ${subItem.name}`}
                         >
                           {subItem.name}
                         </Link>
@@ -172,6 +176,7 @@ const Menu = () => {
                       duration={1000}
                       className="block px-4 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 cursor-pointer"
                       onClick={() => handleNavigation(item.href)}
+                      aria-label={`Navigate to ${item.name}`}
                     >
                       {item.name}
                     </Link>

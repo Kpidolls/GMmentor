@@ -26,6 +26,7 @@ export default function CategoryCards() {
               key={cat.tag}
               href={cat.link}
               className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl font-secondary text-center transition duration-300 transform hover:scale-105"
+              aria-label={`Explore ${cat.name} category`}
             >
               <div className="mb-4">{cat.icon}</div>
               <div className="text-lg font-semibold text-gray-800">{cat.name}</div>
