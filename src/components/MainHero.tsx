@@ -20,7 +20,7 @@ const MainHero = () => {
       <div className="sm:text-center lg:text-left">
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-primary font-extrabold tracking-tight text-gray-900 leading-tight">
   <span className="block xl:inline">{mainHero.title}</span>{' '}
-  <span className="block xl:inline text-blue-600 font-extrabold">
+  <span className="block xl:inline text-[#0878fe] font-extrabold">
     {mainHero.subtitle}
   </span>
 </h1>
