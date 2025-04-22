@@ -209,11 +209,11 @@ const Store: React.FC = () => {
                 href={product.link}
                 target="_self"
                 rel="noopener noreferrer"
-                aria-label={`Learn more about ${product.name}`} // Added aria-label for the link
+                aria-label={`Learn more about ${product.name}`} 
               >
                 <img
                   src={product.image}
-                  alt={`Image of ${product.name}`} // Added descriptive alt attribute
+                  alt={`Image of ${product.name}`} 
                   className="w-full h-48 object-cover"
                 />
               </a>
@@ -221,7 +221,7 @@ const Store: React.FC = () => {
                 <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2 h-8 overflow-hidden">
                   {product.name}
                 </h3>
-                <p className="text-gray-600 font-secondary text-sm mb-1 h-16 sm:h-20 md:h-28 lg:h-24 overflow-hidden">
+                <p className="text-gray-600 font-secondary text-sm mb-1 h-16 sm:h-20 md:h-24 lg:h-20 overflow-hidden line-clamp-3">
                   {product.description}
                 </p>
                 <a
@@ -229,7 +229,7 @@ const Store: React.FC = () => {
                   target="_self"
                   rel="noopener noreferrer"
                   className="mt-2 inline-block text-primary font-medium hover:underline"
-                  aria-label={`Learn more about ${product.name}`} // Added aria-label for the link
+                  aria-label={`Learn more about ${product.name}`} 
                 >
                   Learn More
                 </a>
@@ -242,7 +242,7 @@ const Store: React.FC = () => {
             <button
               onClick={handleViewMore}
               className="px-6 py-3 bg-primary text-white font-secondary font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
-              aria-label="View more products" // Added aria-label for the button
+              aria-label="View more products" 
             >
               View More Products
             </button>
