@@ -66,6 +66,15 @@ const IslandList = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: ' island-zakynthos',
+      title: '📍 Zakynthos',
+      img: '/assets/images/zakynthos.jpg',
+      description: 'Experience Zakynthos, known for its stunning beaches, turquoise waters and dramatic cliffs.',
+      link: 'https://maps.app.goo.gl/ve6sQVdDRJC3hQwt9',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
       id: 'island-karpathos',
       title: '📍 Karpathos',
       img: '/assets/images/karpathos.jpg',
