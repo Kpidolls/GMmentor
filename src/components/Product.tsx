@@ -229,7 +229,7 @@ const Product = () => {
               <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2 h-8 sm:h-14 overflow-hidden">
                 {option.title}
               </h3>
-              <p className="text-gray-600 font-secondary text-sm mb-2 sm:mb-4 h-10 sm:h-16 overflow-hidden">
+                <p className="text-gray-600 font-secondary text-sm mb-2 sm:mb-4 h-12 sm:h-20 overflow-hidden line-clamp-3">
                 {option.description} {/* Unique description for each map option */}
               </p>
                 <a
@@ -237,7 +237,7 @@ const Product = () => {
                 target="_self"
                 rel={option.rel}
                 className="inline-block mt-2 px-4 py-2 bg-[#0878fe] text-white font-semibold rounded shadow hover:bg-blue-700 transition duration-300 text-center"
-                aria-label={`Explore ${option.title}`} // Added aria-label for the link
+                aria-label={`Explore ${option.title}`} 
                 >
                 Explore
                 </a>
@@ -255,7 +255,7 @@ const Product = () => {
                   }
                 }}
                 className="inline-block mt-4 ml-2 px-4 py-2 bg-green-600 text-white font-semibold rounded shadow hover:bg-green-700 transition duration-300 text-center"
-                aria-label={`Share ${option.title}`} // Added aria-label for the button
+                aria-label={`Share ${option.title}`} 
                 >
                 Share
                 </button>
