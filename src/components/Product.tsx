@@ -59,7 +59,7 @@ const Product = () => {
     {
       id: 'fish-tavernas',
       title: '📍 Fish Tavernas with Scenic Views',
-      img: '/assets/images/eat.png',
+      img: '/assets/images/eat.jpg',
       description: 'Enjoy fresh seafood with stunning views at the best fish tavernas.',
       link: 'https://maps.app.goo.gl/nvnD7kbMVK4dsJc96',
       target: '_blank',
