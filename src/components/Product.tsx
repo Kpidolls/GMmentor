@@ -229,7 +229,7 @@ const Product = () => {
               <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2 h-8 sm:h-14 overflow-hidden">
                 {option.title}
               </h3>
-              <p className="text-gray-600 font-secondary text-sm mb-2 sm:mb-4 h-6 sm:h-16 overflow-hidden">
+              <p className="text-gray-600 font-secondary text-sm mb-2 sm:mb-4 h-10 sm:h-16 overflow-hidden">
                 {option.description} {/* Unique description for each map option */}
               </p>
                 <a
