@@ -3,6 +3,26 @@ import config from '../config/index.json';
 import Link from 'next/link';
 import { FaFacebook, FaTwitter, FaTiktok, FaInstagram } from 'react-icons/fa';
 
+const SocialMediaIcon = ({
+  href,
+  label,
+  Icon,
+}: {
+  href: string;
+  label: string;
+  Icon: React.ElementType;
+}) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={label}
+    className="text-2xl text-gray-400 hover:text-white transition duration-300"
+  >
+    <Icon />
+  </a>
+);
+
 const About = () => {
   const { socialMedia } = config.about;
 
@@ -15,7 +35,7 @@ const About = () => {
             {/* Links Section */}
             <div>
               <h3 className="text-lg font-bold font-primary mb-4">Links</h3>
-              <ul className="text-gray-400">
+              <ul className="text-gray-400 space-y-2">
                 <li>
                   <Link href="/login" className="text-gray-200 font-secondary hover:text-white transition duration-300">
                     Affiliate Partners
@@ -46,46 +66,26 @@ const About = () => {
             <div>
               <h3 className="text-lg font-bold font-primary mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                <a
+                <SocialMediaIcon
                   href={socialMedia.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow us on Facebook"
-                >
-                  <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    <FaFacebook />
-                  </span>
-                </a>
-                <a
+                  label="Follow us on Facebook"
+                  Icon={FaFacebook}
+                />
+                <SocialMediaIcon
                   href={socialMedia.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow us on Twitter"
-                >
-                  <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    <FaTwitter />
-                  </span>
-                </a>
-                <a
+                  label="Follow us on Twitter"
+                  Icon={FaTwitter}
+                />
+                <SocialMediaIcon
                   href={socialMedia.tiktok}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow us on TikTok"
-                >
-                  <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    <FaTiktok />
-                  </span>
-                </a>
-                <a
+                  label="Follow us on TikTok"
+                  Icon={FaTiktok}
+                />
+                <SocialMediaIcon
                   href={socialMedia.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow us on Instagram"
-                >
-                  <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    <FaInstagram />
-                  </span>
-                </a>
+                  label="Follow us on Instagram"
+                  Icon={FaInstagram}
+                />
               </div>
             </div>
 
@@ -114,21 +114,21 @@ const About = () => {
               </p>
               <p className="text-gray-400 font-secondary mt-1">
                 By contacting us, you accept our{' '}
-                <a
+                <Link
                   href="/terms"
                   className="text-gray-200 underline hover:text-white transition duration-300"
                   aria-label="Read our terms and conditions"
                 >
                   terms and conditions
-                </a>{' '}
+                </Link>{' '}
                 and{' '}
-                <a
+                <Link
                   href="/privacy-policy"
                   className="text-gray-200 underline hover:text-white transition duration-300"
                   aria-label="Read our privacy policy"
                 >
                   privacy policy
-                </a>.
+                </Link>.
               </p>
             </div>
           </div>
