@@ -53,7 +53,7 @@ const About = () => {
                   aria-label="Follow us on Facebook"
                 >
                   <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    {React.createElement(FaFacebook)}
+                    <FaFacebook />
                   </span>
                 </a>
                 <a
@@ -63,7 +63,7 @@ const About = () => {
                   aria-label="Follow us on Twitter"
                 >
                   <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    {React.createElement(FaTwitter)}
+                    <FaTwitter />
                   </span>
                 </a>
                 <a
@@ -73,7 +73,7 @@ const About = () => {
                   aria-label="Follow us on TikTok"
                 >
                   <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    {React.createElement(FaTiktok)}
+                    <FaTiktok />
                   </span>
                 </a>
                 <a
@@ -83,7 +83,7 @@ const About = () => {
                   aria-label="Follow us on Instagram"
                 >
                   <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    {React.createElement(FaInstagram)}
+                    <FaInstagram />
                   </span>
                 </a>
               </div>
