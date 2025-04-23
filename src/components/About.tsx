@@ -1,7 +1,7 @@
 import React from 'react';
 import config from '../config/index.json';
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaTiktok, FaInstagram } from 'react-icons/fa'; // Directly import specific icons
+import { FaFacebook, FaTwitter, FaTiktok, FaInstagram } from 'react-icons/fa';
 
 const About = () => {
   const { socialMedia } = config.about;
@@ -53,7 +53,7 @@ const About = () => {
                   aria-label="Follow us on Facebook"
                 >
                   <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    <FaFacebook />
+                    {React.createElement(FaFacebook)}
                   </span>
                 </a>
                 <a
@@ -63,7 +63,7 @@ const About = () => {
                   aria-label="Follow us on Twitter"
                 >
                   <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    <FaTwitter />
+                    {React.createElement(FaTwitter)}
                   </span>
                 </a>
                 <a
@@ -73,7 +73,7 @@ const About = () => {
                   aria-label="Follow us on TikTok"
                 >
                   <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    <FaTiktok />
+                    {React.createElement(FaTiktok)}
                   </span>
                 </a>
                 <a
@@ -83,7 +83,7 @@ const About = () => {
                   aria-label="Follow us on Instagram"
                 >
                   <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
-                    <FaInstagram />
+                    {React.createElement(FaInstagram)}
                   </span>
                 </a>
               </div>
