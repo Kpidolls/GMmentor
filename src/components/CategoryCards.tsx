@@ -9,7 +9,7 @@ import {
 const categories = [
   { name: 'Must See', icon: <MustSeeIcon className="text-blue-600 text-6xl" />, tag: 'must', link: '#maps' },
   { name: 'Islands', icon: <IslandsIcon className="text-blue-600 text-6xl" />, tag: 'islands', link: '#islands' },
-  { name: 'Food', icon: <FoodIcon className="text-blue-600 text-6xl" />, tag: 'food', link: '#fish-tavernas' },
+  { name: 'Food', icon: <FoodIcon className="text-blue-600 text-6xl" />, tag: 'food', link: '#vegan' },
   { name: 'Hiking', icon: <HikingIcon className="text-blue-600 text-6xl" />, tag: 'hiking', link: '#hiking' },
 ];
 
