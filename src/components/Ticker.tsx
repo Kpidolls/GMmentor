@@ -4,7 +4,7 @@ function MyTicker() {
   const tickerItems = [
     'USEFUL APPS: GREECE',
     'Accommodation: Booking.com - Airbnb',
-    'ATMs: Alpha Bank - Piraeus Bank - National Bank',
+    'Bank ATMs: ALPHA - Piraeus - NBG (avoid Euronet)',
     'Order Food: efood - Wolt',
     'Ferry Tickets: Ferryhopper',
     'Health: doctoranytime',
