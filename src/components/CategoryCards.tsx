@@ -17,8 +17,10 @@ const CategoryCard = ({ name, Icon, link }: { name: string; Icon: React.ElementT
       aria-label={`Explore ${name} category`}
       role="link"
     >
-      <div className="mb-4">
-        <Icon className="text-[#0878fe] text-4xl mx-auto transition duration-300 hover:text-blue-700" />
+      <div className="mb-4 flex justify-center items-center">
+        <div className="bg-blue-100 p-4 rounded-full transition duration-300 transform hover:scale-110">
+          <Icon className="text-[#0878fe] text-5xl transition duration-300 hover:text-blue-700" />
+        </div>
       </div>
       <div className="text-lg font-semibold text-gray-800 hover:text-blue-700 transition duration-300">{name}</div>
     </a>
