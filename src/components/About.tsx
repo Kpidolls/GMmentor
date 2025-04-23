@@ -11,7 +11,7 @@ const SocialMediaIcon = ({
 }: {
   href: string;
   label: string;
-  Icon: IconType;
+  Icon?: IconType;
 }) => (
   <a
     href={href}
@@ -20,7 +20,7 @@ const SocialMediaIcon = ({
     aria-label={label}
     className="text-2xl text-gray-400 hover:text-white transition duration-300"
   >
-    <Icon />
+    {Icon ? <Icon /> : null}
   </a>
 );
 
