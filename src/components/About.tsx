@@ -2,7 +2,6 @@ import React from 'react';
 import config from '../config/index.json';
 import Link from 'next/link';
 import { FaFacebook, FaTwitter, FaTiktok, FaInstagram } from 'react-icons/fa';
-import { IconType } from 'react-icons';
 
 const SocialMediaIcon = ({
   href,
@@ -11,7 +10,7 @@ const SocialMediaIcon = ({
 }: {
   href: string;
   label: string;
-  Icon?: IconType;
+  Icon: React.ComponentType;
 }) => (
   <a
     href={href}
