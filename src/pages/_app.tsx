@@ -25,8 +25,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>Googlementor - Location suggestions</title>
-        <meta name="googlementor" content="Travel like a pro with location suggestions for your maps." />
+        <title>Googlementor - Tools for travelers</title>
+        <meta name="googlementor" content="Lists on Google Maps for travel and everyday life" />
       </Head>
       <Component {...pageProps} />
     </>
