@@ -77,24 +77,18 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
           <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-                window.LOCALE = 'en';
-                window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-                window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
-                window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-                window.translation = {
-                  common: {
-                    selectedList: '{quantity} list selected',
-                    selectedLists: '{quantity} lists selected'
-                  }
-                };
-                var autoHide = Boolean(1);
-              `,
-            }}
+              dangerouslySetInnerHTML={{
+                __html: `
+                  document.addEventListener('DOMContentLoaded', function () {
+                    // Ensure the DOM is fully loaded before executing main.js
+                    var script = document.createElement('script');
+                    script.src = 'https://sibforms.com/forms/end-form/build/main.js';
+                    script.defer = true;
+                    document.body.appendChild(script);
+                  });
+                `,
+              }}
           ></script>
-          <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
           <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
         </body>
       </Html>
