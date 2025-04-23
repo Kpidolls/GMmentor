@@ -3,10 +3,10 @@ import config from '../config/index.json';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
-const FaFacebook = dynamic(() => import('react-icons/fa').then((mod) => mod.FaFacebook));
-const FaTwitter = dynamic(() => import('react-icons/fa').then((mod) => mod.FaTwitter));
-const FaTiktok = dynamic(() => import('react-icons/fa').then((mod) => mod.FaTiktok));
-const FaInstagram = dynamic(() => import('react-icons/fa').then((mod) => mod.FaInstagram));
+const FaFacebook = dynamic(() => import('react-icons/fa').then((mod) => mod.FaFacebook as any), { ssr: false });
+const FaTwitter = dynamic(() => import('react-icons/fa').then((mod) => mod.FaTwitter as any), { ssr: false });
+const FaTiktok = dynamic(() => import('react-icons/fa').then((mod) => mod.FaTiktok as any), { ssr: false });
+const FaInstagram = dynamic(() => import('react-icons/fa').then((mod) => mod.FaInstagram as any), { ssr: false });
 
 const About = () => {
   const { socialMedia } = config.about;
