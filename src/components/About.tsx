@@ -10,7 +10,7 @@ const SocialMediaIcon = ({
 }: {
   href: string;
   label: string;
-  Icon: React.ComponentType;
+  Icon: () => JSX.Element;
 }) => (
   <a
     href={href}
