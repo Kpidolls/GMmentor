@@ -1,12 +1,7 @@
 import React from 'react';
 import config from '../config/index.json';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-const FaFacebook = dynamic(() => import('react-icons/fa').then((mod) => mod.FaFacebook as any), { ssr: false });
-const FaTwitter = dynamic(() => import('react-icons/fa').then((mod) => mod.FaTwitter as any), { ssr: false });
-const FaTiktok = dynamic(() => import('react-icons/fa').then((mod) => mod.FaTiktok as any), { ssr: false });
-const FaInstagram = dynamic(() => import('react-icons/fa').then((mod) => mod.FaInstagram as any), { ssr: false });
+import { FaFacebook, FaTwitter, FaTiktok, FaInstagram } from 'react-icons/fa'; // Directly import specific icons
 
 const About = () => {
   const { socialMedia } = config.about;
@@ -17,6 +12,7 @@ const About = () => {
       <footer id="footer" className="bg-gray-800 text-white py-12 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Links Section */}
             <div>
               <h3 className="text-lg font-bold font-primary mb-4">Links</h3>
               <ul className="text-gray-400">
@@ -45,6 +41,8 @@ const About = () => {
                 </li>
               </ul>
             </div>
+
+            {/* Follow Us Section */}
             <div>
               <h3 className="text-lg font-bold font-primary mb-4">Follow Us</h3>
               <div className="flex space-x-4">
@@ -54,7 +52,9 @@ const About = () => {
                   rel="noopener noreferrer"
                   aria-label="Follow us on Facebook"
                 >
-                  <FaFacebook className="text-2xl text-gray-400 hover:text-white transition duration-300" />
+                  <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
+                    <FaFacebook />
+                  </span>
                 </a>
                 <a
                   href={socialMedia.twitter}
@@ -62,7 +62,9 @@ const About = () => {
                   rel="noopener noreferrer"
                   aria-label="Follow us on Twitter"
                 >
-                  <FaTwitter className="text-2xl text-gray-400 hover:text-white transition duration-300" />
+                  <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
+                    <FaTwitter />
+                  </span>
                 </a>
                 <a
                   href={socialMedia.tiktok}
@@ -70,7 +72,9 @@ const About = () => {
                   rel="noopener noreferrer"
                   aria-label="Follow us on TikTok"
                 >
-                  <FaTiktok className="text-2xl text-gray-400 hover:text-white transition duration-300" />
+                  <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
+                    <FaTiktok />
+                  </span>
                 </a>
                 <a
                   href={socialMedia.instagram}
@@ -78,10 +82,14 @@ const About = () => {
                   rel="noopener noreferrer"
                   aria-label="Follow us on Instagram"
                 >
-                  <FaInstagram className="text-2xl text-gray-400 hover:text-white transition duration-300" />
+                  <span className="text-2xl text-gray-400 hover:text-white transition duration-300">
+                    <FaInstagram />
+                  </span>
                 </a>
               </div>
             </div>
+
+            {/* Support Us Section */}
             <div>
               <h3 className="text-lg font-bold font-primary mb-4">Support Us</h3>
               <p className="text-gray-400 font-secondary">
@@ -97,6 +105,8 @@ const About = () => {
                 Buy Me a Coffee
               </a>
             </div>
+
+            {/* Contact Us Section */}
             <div>
               <h3 className="text-lg font-bold font-primary mb-4">Contact Us</h3>
               <p className="text-gray-400 font-secondary">
@@ -122,6 +132,8 @@ const About = () => {
               </p>
             </div>
           </div>
+
+          {/* Footer Bottom Section */}
           <div className="mt-8 border-t border-gray-700 pt-4 text-center text-gray-400">
             <p className="text-xs font-secondary lg:text-sm leading-none text-gray-400">
               Maps data © Google. Google Maps is a trademark of Google LLC.
