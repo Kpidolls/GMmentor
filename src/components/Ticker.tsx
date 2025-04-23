@@ -14,7 +14,7 @@ function MyTicker() {
     'Car Rentals: Skyscanner',
     'Luggage Storage: Stasher',
     'Events: ticketmaster - More',
-    'e-Sim: Airalo',
+    'e-Sim: Airalo - Nomad',
     'Travel Insurance: SafetyWing',
     'Language: Google Translate',
     'Planning: rome2rio',
