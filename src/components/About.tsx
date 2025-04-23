@@ -69,22 +69,22 @@ const About = () => {
                 <SocialMediaIcon
                   href={socialMedia.facebook}
                   label="Follow us on Facebook"
-                  Icon={FaFacebook}
+                  Icon={FaFacebook as React.ElementType}
                 />
                 <SocialMediaIcon
                   href={socialMedia.twitter}
                   label="Follow us on Twitter"
-                  Icon={FaTwitter}
+                  Icon={FaTwitter as React.ElementType}
                 />
                 <SocialMediaIcon
                   href={socialMedia.tiktok}
                   label="Follow us on TikTok"
-                  Icon={FaTiktok}
+                  Icon={FaTiktok as React.ElementType}
                 />
                 <SocialMediaIcon
                   href={socialMedia.instagram}
                   label="Follow us on Instagram"
-                  Icon={FaInstagram}
+                  Icon={FaInstagram as React.ElementType}
                 />
               </div>
             </div>
