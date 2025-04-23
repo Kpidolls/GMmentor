@@ -1,17 +1,29 @@
 import React from 'react';
-import {
-  AccountBalance as MustSeeIcon,
-  BeachAccess as IslandsIcon,
-  Landscape as HikingIcon,
-  Restaurant as FoodIcon,
-} from '@mui/icons-material';
+import { FaLandmark, FaUmbrellaBeach, FaHiking, FaUtensils } from 'react-icons/fa'; // Importing icons from FontAwesome
 
 const categories = [
-  { name: 'Must See', icon: <MustSeeIcon className="text-blue-600 text-6xl" />, tag: 'must', link: '#maps' },
-  { name: 'Islands', icon: <IslandsIcon className="text-blue-600 text-6xl" />, tag: 'islands', link: '#islands' },
-  { name: 'Food', icon: <FoodIcon className="text-blue-600 text-6xl" />, tag: 'food', link: '#vegan' },
-  { name: 'Hiking', icon: <HikingIcon className="text-blue-600 text-6xl" />, tag: 'hiking', link: '#hiking' },
+  { name: 'Must See', icon: FaLandmark, tag: 'must', link: '#maps' },
+  { name: 'Islands', icon: FaUmbrellaBeach, tag: 'islands', link: '#islands' },
+  { name: 'Food', icon: FaUtensils, tag: 'food', link: '#vegan' },
+  { name: 'Hiking', icon: FaHiking, tag: 'hiking', link: '#hiking' },
 ];
+
+// Reusable CategoryCard Component
+const CategoryCard = ({ name, Icon, link }: { name: string; Icon: React.ElementType; link: string }) => {
+  return (
+    <a
+      href={link}
+      className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl font-secondary text-center transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+      aria-label={`Explore ${name} category`}
+      role="link"
+    >
+      <div className="mb-4">
+        <Icon className="text-[#0878fe] text-4xl mx-auto transition duration-300 hover:text-blue-700" />
+      </div>
+      <div className="text-lg font-semibold text-gray-800 hover:text-blue-700 transition duration-300">{name}</div>
+    </a>
+  );
+};
 
 export default function CategoryCards() {
   return (
@@ -22,15 +34,7 @@ export default function CategoryCards() {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((cat) => (
-            <a
-              key={cat.tag}
-              href={cat.link}
-              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl font-secondary text-center transition duration-300 transform hover:scale-105"
-              aria-label={`Explore ${cat.name} category`}
-            >
-              <div className="mb-4">{cat.icon}</div>
-              <div className="text-lg font-semibold text-gray-800">{cat.name}</div>
-            </a>
+            <CategoryCard key={cat.tag} name={cat.name} Icon={cat.icon} link={cat.link} />
           ))}
         </div>
       </div>
