@@ -10,7 +10,7 @@
       "submenu": [
         { "name": "Must See", "href": "maps" },
         { "name": "Islands", "href": "islands" },
-        { "name": "Food", "href": "fish-tavernas" },
+        { "name": "Food", "href": "vegan" },
         { "name": "Hiking", "href": "hiking" }
       ]
     },
