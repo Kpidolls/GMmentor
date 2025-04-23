@@ -12,7 +12,7 @@ function MyTicker() {
     'Taxi: FREENOW - Uber',
     'Car Rentals: Skyscanner',
     'Luggage Storage: Stasher',
-    'Events: More',
+    'Events: ticketmaster - More',
     'e-Sim: Airalo',
     'Travel Insurance: SafetyWing',
     'Language: Google Translate',
