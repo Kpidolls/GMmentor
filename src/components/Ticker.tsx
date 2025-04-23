@@ -4,6 +4,7 @@ function MyTicker() {
   const tickerItems = [
     'USEFUL APPS: GREECE',
     'Accommodation: Booking.com - Airbnb',
+    'ATMs: Alpha Bank - Piraeus Bank - National Bank',
     'Order Food: efood - Wolt',
     'Ferry Tickets: Ferryhopper',
     'Health: doctoranytime',
