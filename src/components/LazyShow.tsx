@@ -1,6 +1,11 @@
 import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
+import { motion, MotionProps, useAnimation } from 'framer-motion';
 
-import { motion, useAnimation } from 'framer-motion';
+const MotionDiv = motion(
+  React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & MotionProps>(
+    (props, ref) => <div ref={ref} {...props} />
+  )
+);
 
 function useOnScreen(
   ref: MutableRefObject<HTMLDivElement | null>,
@@ -9,23 +14,27 @@ function useOnScreen(
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
-    let currentRef: any = null;
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) setIntersecting(entry?.isIntersecting);
+      (entries) => {
+        const entry = entries[0];
+        if (entry) {
+          setIntersecting(entry.isIntersecting);
+        }
       },
-      {
-        rootMargin,
-      }
+      { rootMargin }
     );
-    if (ref && ref?.current) {
-      currentRef = ref.current;
+  
+    const currentRef = ref.current;
+    if (currentRef) {
       observer.observe(currentRef);
     }
+  
     return () => {
-      observer.unobserve(currentRef);
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
     };
-  }, [ref, rootMargin]); // Empty array ensures that effect is only run on mount and unmount
+  }, [ref, rootMargin]);
 
   return isIntersecting;
 }
@@ -34,6 +43,7 @@ const LazyShow = ({ children }: { children: React.ReactNode }) => {
   const controls = useAnimation();
   const rootRef = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(rootRef);
+
   useEffect(() => {
     if (onScreen) {
       controls.start({
@@ -46,15 +56,16 @@ const LazyShow = ({ children }: { children: React.ReactNode }) => {
       });
     }
   }, [onScreen, controls]);
+
   return (
-    <motion.div
-      className="lazy-div"
+    <MotionDiv
       ref={rootRef}
+      className="lazy-div"
       initial={{ opacity: 0, x: -50 }}
       animate={controls}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 };
 
