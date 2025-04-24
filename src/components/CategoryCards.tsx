@@ -1,10 +1,12 @@
 import React from 'react';
-import { FaLandmark, FaUmbrellaBeach, FaHiking, FaUtensils } from 'react-icons/fa'; // Importing icons from FontAwesome
+import { GiIsland, GiForkKnifeSpoon } from 'react-icons/gi';
+import { FaMapMarkedAlt, FaHiking } from 'react-icons/fa'; // Importing Hiking icon from react-icons
+
 
 const categories = [
-  { name: 'Must See', icon: FaLandmark, tag: 'must', link: '#maps' },
-  { name: 'Islands', icon: FaUmbrellaBeach, tag: 'islands', link: '#islands' },
-  { name: 'Food', icon: FaUtensils, tag: 'food', link: '#vegan' },
+  { name: 'Must See', icon: FaMapMarkedAlt, tag: 'must', link: '#maps' },
+  { name: 'Islands', icon: GiIsland, tag: 'islands', link: '#islands' },
+  { name: 'Food', icon: GiForkKnifeSpoon, tag: 'food', link: '#vegan' },
   { name: 'Hiking', icon: FaHiking, tag: 'hiking', link: '#hiking' },
 ];
 
@@ -19,7 +21,7 @@ const CategoryCard = ({ name, Icon, link }: { name: string; Icon: React.ElementT
     >
       <div className="mb-4 flex justify-center items-center">
         <div className="bg-blue-100 p-4 rounded-full transition duration-300 transform hover:scale-110">
-          <Icon className="text-[#0878fe] text-5xl transition duration-300 hover:text-blue-700" />
+          <Icon className="h-12 w-12 text-[#0878fe] transition duration-300 hover:text-blue-700" />
         </div>
       </div>
       <div className="text-lg font-semibold text-gray-800 hover:text-blue-700 transition duration-300">{name}</div>
