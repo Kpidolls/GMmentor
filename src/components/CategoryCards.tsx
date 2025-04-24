@@ -1,8 +1,9 @@
 import React from 'react';
 import { GiIsland, GiForkKnifeSpoon } from 'react-icons/gi';
-import { FaMapMarkedAlt, FaHiking } from 'react-icons/fa'; // Importing Hiking icon from react-icons
+import { FaMapMarkedAlt, FaHiking } from 'react-icons/fa';
+import { ComponentType } from 'react';
 
-
+// Define the categories array with proper typing
 const categories = [
   { name: 'Must See', icon: FaMapMarkedAlt, tag: 'must', link: '#maps' },
   { name: 'Islands', icon: GiIsland, tag: 'islands', link: '#islands' },
@@ -10,8 +11,15 @@ const categories = [
   { name: 'Hiking', icon: FaHiking, tag: 'hiking', link: '#hiking' },
 ];
 
+// Define the props for the CategoryCard component
+interface CategoryCardProps {
+  name: string;
+  Icon: ComponentType<{ className?: string }>; 
+  link: string;
+}
+
 // Reusable CategoryCard Component
-const CategoryCard = ({ name, Icon, link }: { name: string; Icon: React.ElementType; link: string }) => {
+const CategoryCard: React.FC<CategoryCardProps> = ({ name, Icon, link }) => {
   return (
     <a
       href={link}
@@ -29,6 +37,7 @@ const CategoryCard = ({ name, Icon, link }: { name: string; Icon: React.ElementT
   );
 };
 
+// Main CategoryCards Component
 export default function CategoryCards() {
   return (
     <section id="categories" className="py-16 bg-gray-100 mt-16 lg:mt-24">
@@ -38,7 +47,7 @@ export default function CategoryCards() {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((cat) => (
-            <CategoryCard key={cat.tag} name={cat.name} Icon={cat.icon} link={cat.link} />
+            <CategoryCard key={cat.tag} name={cat.name} Icon={cat.icon as React.ComponentType<{ className?: string }>} link={cat.link} />
           ))}
         </div>
       </div>

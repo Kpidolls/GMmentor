@@ -17,21 +17,21 @@ const products = [
   },
   {
     id: 'pillow-mask',
-    name: 'Travel Pillow and Mask',
+    name: 'Pillow and Mask',
     description: 'Travel in comfort with this ergonomic pillow and sleep mask set. Perfect for long flights or road trips.',
     image: '/assets/images/pillow.jpg',
     link: 'https://www.amazon.com/SARISUN-Airplanes-Sleeping-Headrest-Eligible/dp/B0CL6CXMGZ?crid=1XOTYYXQ7J8S8&dib=eyJ2IjoiMSJ9.DyT2qP-xZMOu-DEanapYVB_zQbxYLigcZeeHLK6NuIBr3R83NYGO31bTUfTWblVIhsEc-ozpY9JE5JpYi2vd7UegxZrqtCtm3-W52ZaFWSM7EhzteyGWKaJZ4SG4bgwyXagt2ufXcOMbDeXJ5rZsdEFEqJ6lqKfeJFIfp_aBB-fxHEjzXfkij_kMRn_-GSHqgFhBmZ91SgaiiIGaIlBAqRVjl6h7hBTqrsx7l9uDDddk_62NXVPT7S2emk1waxk_tbKHagXArlBs6lrQHFcVFYzgLQNdJTBx3FgnHuCWIyE.Uw6YzlSws72o1UJHLP2dCvlBxZEtPqGBuMhPhYu36sc&dib_tag=se&keywords=pillow%2Btravel%2Band%2Bmask&qid=1744964506&sprefix=pillow%2Btravel%2Band%2Bmask%2Caps%2C231&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=googlementor-20&linkId=1e7392ea42e93d97ceb967d7e460881a&language=en_US&ref_=as_li_ss_tl',
   },
   {
     id: 'travel-luggage-lock',
-    name: 'Travel Luggage Lock',
+    name: 'Luggage Lock',
     description: 'Keep your belongings safe with this TSA-approved luggage lock. Durable and easy to use for peace of mind during your travels.',
     image: '/assets/images/lock.jpg',
     link: 'https://www.amazon.com/Compatible-Travel-Luggage-Inspection-Indicator/dp/B073NYB7R2?crid=193YCY2P4WJR4&dib=eyJ2IjoiMSJ9.gk-FsnfAsrB47YFDiXxMZr4w4lgP23Tqz7Vz1m0VIcIxhhB-qf4rTBPMshxuzn7eDjVo_EIy3oMMztzefkXVcD3pVcQ0OaDKEfgkMV2Y2VGhefOSPIAbVkKbfWsME9aeoEyyy75OIfkRM9eLL0ZWDX91_Hh9w1JThAmanWbAm--GLXHNedqncyDGtAWuxKVtiThk8abcr0ug6lAaRvS6izTTVGJ9i_OmPDPrrQqpWrJl5nyx_nchT9ee-T7oQ6Gydgt1tRQbNPk-GG5GV4Dve8AFucT9FM1Y861m9O5bwiY.HT4ld4jRTAzqdjzrYDoHvJYfvcaDV3k41C2nKKJRe38&dib_tag=se&keywords=luggage%2Block&qid=1744297813&sprefix=luggage%2Block%2Caps%2C266&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=f60ff431657ac0a3dc911b8b1c082318&language=en_US&ref_=as_li_ss_tl',
   },
   {
     id: 'dry-bag-waterproof',
-    name: 'Dry Bag Waterproof',
+    name: 'Waterproof Bag',
     description: 'Protect your belongings from water damage with this lightweight, durable dry bag. Ideal for beach trips, kayaking, and more.',
     image: '/assets/images/waterbag.jpg',
     link: 'https://www.amazon.com/HEETA-Waterproof-Lightweight-Backpack-Transparent/dp/B07PLZP5LN?crid=2S45C5LWP7B8C&dib=eyJ2IjoiMSJ9.04dV5-nTjb_XJlbT6NyZUC1h2Y_hDzZ4TBvQ94SqYoyL9VQq6uvOv7aI3Cv_Is5nIYXzmexSi81ePUFvNJVLle-9SBw7eUuwB1AwFLAPsJpFvmMvnFp7lK0D_vKXGnbcreI2HtG24XF6uiPk8RMF19oEO4tg6sp1IdVwz9OnLEbqpeknRxSRoTeYryP3_KCOY3mtDI_57KTwH-aG-cQQxuc0uJtPph2PnZn88Mv_BX8geryUVVvuuTngrxZa3_HsNljlHeanHyv7ewlC2meSHD7hSi9izeXdgo6JwQeKMQQ.s5-nBJejLDvzZsHHOKyTbXF5NCMwpWSzUDZddxyVn-8&dib_tag=se&keywords=dry%2Bbag%2Bwaterproof&qid=1744282796&sprefix=dry%2Bbag%2B%2Caps%2C264&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=53007ac01d6feb4e5350f5827f915ec2&language=en_US&ref_=as_li_ss_tl',
@@ -186,50 +186,88 @@ const products = [
 
 const Store: React.FC = () => {
   const [visibleProducts, setVisibleProducts] = useState(8);
-  
+  const [expandedDescriptions, setExpandedDescriptions] = useState<{ [key: string]: boolean }>({});
+
   const handleViewMore = () => {
-    setVisibleProducts((prev) => prev + 12);
+    setVisibleProducts((prev) => prev + 8);
   };
+
+  const toggleDescription = (id: string) => {
+    setExpandedDescriptions((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
   return (
-    <div id="store" className="bg-background py-12 px-4 sm:px-6 lg:px-8">
+    <div id="store" className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <h2 className="text-3xl font-extrabold font-secondary-primary text-gray-900 sm:text-4xl text-center">
-        Shop Travel-Themed Gifts
+          Shop Travel-Themed Gifts
         </h2>
         <p className="mt-4 text-lg text-gray-600 font-secondary text-center">
-          Make your life easier.
+          Discover the perfect travel accessories for your next adventure.
         </p>
+
+        {/* Product Grid */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {products.slice(0, visibleProducts).map((product, index) => (
+          {products.slice(0, visibleProducts).map((product) => (
             <div
-              key={index}
-              className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              key={product.id}
+              className="bg-white shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300 flex flex-col"
             >
+              {/* Product Image */}
               <a
                 href={product.link}
                 target="_self"
                 rel="noopener noreferrer"
-                aria-label={`Learn more about ${product.name}`} 
+                aria-label={`Learn more about ${product.name}`}
+                className="block"
               >
                 <img
                   src={product.image}
-                  alt={`Image of ${product.name}`} 
-                  className="w-full h-48 object-cover"
+                  alt={`Image of ${product.name}`}
+                  className="w-full h-48 object-cover rounded-t-lg"
                 />
               </a>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2 h-8 overflow-hidden">
+
+              {/* Product Details */}
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2">
                   {product.name}
                 </h3>
-                <p className="text-gray-600 font-secondary text-sm mb-1 h-16 sm:h-20 md:h-24 lg:h-20 overflow-hidden line-clamp-3">
-                  {product.description}
+                <p className="text-gray-600 font-secondary text-sm mb-4">
+                  {expandedDescriptions[product.id]
+                    ? product.description
+                    : product.description.length > 150
+                    ? `${product.description.slice(0, 150)}...`
+                    : product.description}
+                  {product.description.length > 150 && !expandedDescriptions[product.id] && (
+                    <button
+                      onClick={() => toggleDescription(product.id)}
+                      className="text-primary font-medium hover:underline ml-1"
+                      aria-label={`Show full description for ${product.name}`}
+                    >
+                      Read More
+                    </button>
+                  )}
+                  {expandedDescriptions[product.id] && (
+                    <button
+                      onClick={() => toggleDescription(product.id)}
+                      className="text-primary font-medium hover:underline ml-1"
+                      aria-label={`Collapse description for ${product.name}`}
+                    >
+                      Show Less
+                    </button>
+                  )}
                 </p>
                 <a
                   href={product.link}
                   target="_self"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-block text-primary font-medium hover:underline"
-                  aria-label={`Learn more about ${product.name}`} 
+                  className="mt-auto inline-block text-primary font-medium hover:underline"
+                  aria-label={`Learn more about ${product.name}`}
                 >
                   Learn More
                 </a>
@@ -237,17 +275,21 @@ const Store: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* View More Button */}
         {visibleProducts < products.length && (
           <div className="mt-8 text-center">
             <button
               onClick={handleViewMore}
               className="px-6 py-3 bg-primary text-white font-secondary font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
-              aria-label="View more products" 
+              aria-label="View more products"
             >
               View More Products
             </button>
           </div>
         )}
+
+        {/* Footer Note */}
         <p className="mt-8 text-sm text-gray-500 font-secondary text-center">
           Note: We may earn a commission if you purchase through these links.
         </p>
