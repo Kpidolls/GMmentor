@@ -75,6 +75,15 @@ const IslandList = () => {
       rel: 'noopener noreferrer',
     },
     {
+      id: 'island-skiathos',
+      title: '📍 Skiathos',
+      img: '/assets/images/skiathos.jpg',
+      description: 'Relax on Skiathos, famous for its beautiful beaches, lush pine forests and vibrant nightlife.',
+      link: 'https://maps.app.goo.gl/NgV5jbjCV5hQRViF7',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
       id: 'island-karpathos',
       title: '📍 Karpathos',
       img: '/assets/images/karpathos.jpg',
