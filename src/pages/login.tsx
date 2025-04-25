@@ -46,7 +46,7 @@ const Login: React.FC = () => {
         </form>
         <p className="text-center text-gray-600 mt-4">
           Don't have an account?{' '}
-          <Link href={secondaryAction.mainHero.secondaryAction.href} className="text-blue-600 hover:text-blue-800">
+          <Link href="/signup" className="text-blue-600 hover:text-blue-800">
             Sign Up
           </Link>
         </p>
