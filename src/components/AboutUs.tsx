@@ -1,22 +1,29 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const AboutUs = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-16 bg-gray-100" id="aboutus">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Title Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold font-primary text-gray-900">About Us</h1>
-          <p className="mt-4 text-lg text-gray-600 font-secondary">
-            Discover the story behind our platform and the principles that guide us.
+          <h1 className="text-4xl lg:text-5xl font-extrabold font-primary text-gray-900">
+            {t('aboutUs.title')}
+          </h1>
+          <p className="mt-4 text-lg lg:text-xl text-gray-600 font-secondary">
+            {t('aboutUs.subtitle')}
           </p>
         </div>
 
-        <div className="bg-white shadow-lg rounded-lg p-8">
-          <p className="text-gray-700 font-secondary text-lg leading-relaxed mb-6">
-            This platform was built with friends, for friends. It came to life from real conversations, shared adventures and the joy of discovering hidden gems. Our mission is to make smart, honest recommendations easy to find and share.
+        {/* Content Section */}
+        <div className="bg-white shadow-lg rounded-lg p-8 lg:p-12">
+          <p className="text-gray-700 font-secondary text-lg lg:text-xl leading-relaxed mb-6">
+            {t('aboutUs.paragraph1')}
           </p>
-          <p className="text-gray- font-secondary text-lg leading-relaxed">
-            We value simplicity, integrity and authenticity. Whether you're exploring a new city or your own neighborhood, we aim to make location-based knowledge accessible, useful and personal. This platform grows every day with the help of people like you—curious, open and eager to contribute. Together, we’re building something meaningful, one recommendation at a time.
+          <p className="text-gray-700 font-secondary text-lg lg:text-xl leading-relaxed">
+            {t('aboutUs.paragraph2')}
           </p>
         </div>
       </div>

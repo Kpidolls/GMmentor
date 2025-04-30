@@ -1,0 +1,387 @@
+{
+  "header": {
+    "promo": "",
+    "login": "Login",
+    "register": "Register"
+  },
+  "company": {
+    "name": "Googlementor"
+  },
+  "navigation": {
+    "maps": "Maps",
+    "mustSee": "Must See",
+    "islands": "Islands",
+    "food": "Food",
+    "hiking": "Hiking",
+    "store": "Store",
+    "mobileTravelData": "Mobile Travel Data",
+    "travelInsurance": "Travel Insurance",
+    "travelItems": "Travel Gear",
+    "aboutUs": "About Us",
+    "ourStory": "Our Story",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "callToAction": {
+    "text": "Get Started"
+  },
+  "mainHero": {
+    "title": "Googlementor",
+    "subtitle": "Tools for Travelers",
+    "description": "Lists on Google Maps for travel and everyday life.",
+    "primaryAction": {
+      "text": {
+        "0": "What to do in Greece!",
+        "1": "Where to go in Greece!",
+        "2": "Where to eat in Greece!"
+      }
+    },
+    "secondaryAction": {
+      "text": "Travel Gear"
+    }
+  },
+  "categories": {
+    "title": "Explore Lists by Category",
+    "mustSee": "Must See",
+    "islands": "Islands",
+    "food": "Food",
+    "hiking": "Hiking"
+  },
+  "aria": {
+    "exploreCategory": "Explore {{name}} category"
+  },
+  "product": {
+    "title": "Ready-to-Use Google Maps Lists",
+    "mustSee": {
+      "title": "📍 Must-See Attractions",
+      "description": "Discover must-see attractions, from ancient ruins to breathtaking landscapes."
+    },
+    "hiking": {
+      "title": "📍 Hiking Trails",
+      "description": "Explore the best hiking trails, offering stunning views and unforgettable experiences."
+    },
+    "rooftop": {
+      "title": "📍 Rooftop Lounges",
+      "description": "Enjoy the view at the best rooftop lounges, perfect for unwinding after a long day."
+    },
+    "churches": {
+      "title": "📍 Monasteries & Churches",
+      "description": "Historic monasteries and beautiful churches that showcase Greece’s rich cultural heritage."
+    },
+    "vegan": {
+      "title": "📍 Vegetarian Friendly",
+      "description": "Find vegan and vegetarian-friendly spots that cater to a variety of dietary preferences."
+    },
+    "gyros": {
+      "title": "📍 Gyros & Souvlaki",
+      "description": "Taste the best gyros and souvlaki in Greece, a must-try for food lovers."
+    },
+    "fishTavernas": {
+      "title": "📍 Fish Tavernas with Scenic Views",
+      "description": "Enjoy fresh seafood with stunning views at the best fish tavernas."
+    },
+    "desserts": {
+      "title": "📍 Desserts",
+      "description": "Indulge in the sweetest desserts and treats that Greece has to offer."
+    },
+    "coffee": {
+      "title": "📍 Coffee & Brunch",
+      "description": "Relax with a cup of coffee or enjoy a hearty brunch at cozy spots across Greece."
+    },
+    "tavernas": {
+      "title": "📍 Greek Restaurants",
+      "description": "Experience authentic Greek cuisine at traditional tavernas, a true culinary delight."
+    },
+    "wineries": {
+      "title": "📍 Wineries",
+      "description": "Find amazing vineyards and indulge in the finest Greek wines."
+    },
+    "burger": {
+      "title": "📍 Burger Spots",
+      "description": "Find the juiciest burgers and best burger joints in town for a satisfying meal."
+    },
+    "italian": {
+      "title": "📍 Italian Cuisine",
+      "description": "Savor the best Italian food in Greece, from pasta to pizza and more."
+    },
+    "asian": {
+      "title": "📍 Asian Cuisine",
+      "description": "Discover the best Asian restaurants in Greece, offering authentic flavors and dishes."
+    },
+    "mexican": {
+      "title": "📍 Mexican Cuisine",
+      "description": "Savor the vibrant and bold flavors of Mexican cuisine in Greece."
+    },
+    "cheapEats": {
+      "title": "📍 Cheap Eats",
+      "description": "Enjoy delicious meals that won’t break the bank, perfect for budget travelers."
+    },
+    "bars": {
+      "title": "📍 Bars & Drinks",
+      "description": "Explore top bars and lounges for a vibrant nightlife experience."
+    },
+    "bougatsa": {
+      "title": "📍 Bougatsa Shops",
+      "description": "Taste the famous Bougatsa pie, sweet version with cream and powdered sugar and the savory one with cheese or minced meat."
+    },
+    "surf": {
+      "title": "📍 Water Sports",
+      "description": "Enjoy water sports and activities from surfing to paddle boarding."
+    },
+    "family": {
+      "title": "📍 Family Friendly",
+      "description": "Family-friendly spots for all ages, ensuring fun and memorable experiences."
+    },
+    "bouzoukia": {
+      "title": "📍 Live Music (Bouzoukia)",
+      "description": "Experience live Greek music and immerse yourself in the local culture."
+    },
+    "luxury": {
+      "title": "📍 Luxury Dining",
+      "description": "Indulge in luxury dining experiences that redefine elegance and taste."
+    },
+    "exploreButton": "Explore",
+    "shareButton": "Share",
+    "shareText": "Recommendations for {{title}} in Greece from Googlementor",
+    "shareNotSupported": "Sharing is not supported on this browser.",
+    "viewMoreButton": "View More Categories",
+    "attribution": "Images generated using Craiyon AI.",
+    "imageAlt": "Image for {{title}}"
+  },
+  "islands": {
+    "title": "Explore Greek Islands",
+    "crete": {
+      "title": "📍 Crete",
+      "description": "Discover Crete, the largest Greek island, with its rich history, stunning landscapes and vibrant culture."
+    },
+    "mykonos": {
+      "title": "📍 Mykonos",
+      "description": "Experience Mykonos, famous for its vibrant nightlife, luxurious resorts and stunning sandy beaches."
+    },
+    "santorini": {
+      "title": "📍 Santorini",
+      "description": "Visit Santorini, known for its iconic white-washed buildings, blue-domed churches and breathtaking sunsets."
+    },
+    "aegina": {
+      "title": "📍 Aegina",
+      "description": "Relax on Aegina, a charming island known for its pistachios, ancient temples and serene beaches."
+    },
+    "rhodes": {
+      "title": "📍 Rhodes (Rodos)",
+      "description": "Explore Rhodes, a historic island with medieval charm, ancient ruins and beautiful beaches."
+    },
+    "corfu": {
+      "title": "📍 Corfu (Kerkira)",
+      "description": "Discover Corfu, with its Venetian architecture, lush landscapes and stunning coastlines."
+    },
+    "paros": {
+      "title": "📍 Paros",
+      "description": "Enjoy Paros, with its golden beaches, traditional Cycladic villages and vibrant nightlife."
+    },
+    "zakynthos": {
+      "title": "📍 Zakynthos",
+      "description": "Experience Zakynthos, known for its stunning beaches, turquoise waters and dramatic cliffs."
+    },
+    "skiathos": {
+      "title": "📍 Skiathos",
+      "description": "Relax on Skiathos, famous for its beautiful beaches, lush pine forests and vibrant nightlife."
+    },
+    "karpathos": {
+      "title": "📍 Karpathos",
+      "description": "Visit Karpathos, a hidden gem with stunning beaches, traditional villages and unspoiled beauty."
+    },
+    "exploreButton": "Explore",
+    "shareButton": "Share",
+    "shareText": "Recommendations for {{title}} from Googlementor",
+    "shareNotSupported": "Sharing is not supported on this browser.",
+    "viewMoreButton": "View More Islands"
+  },
+  "store": {
+    "title": "Essential Travel Gear",
+    "subtitle": "Discover the perfect travel accessories for your next adventure.",
+    "products": {
+      "universalTravelAdapter": {
+        "name": "Universal Travel Adapter",
+        "description": "All-in-one travel adapter. Perfect for charging your devices in over 150 countries worldwide."
+      },
+      "mobileDataEsimCard": {
+        "name": "Mobile Data e-SIM Card",
+        "description": "Stay online effortlessly while traveling with this e-SIM card. Get 3€ off your first purchase with code GOOGLE4204."
+      },
+      "pillowMask": {
+        "name": "Pillow and Mask",
+        "description": "Travel in comfort with this ergonomic pillow and sleep mask set. Perfect for long flights or road trips."
+      },
+      "travelLuggageLock": {
+        "name": "Luggage Lock",
+        "description": "Keep your belongings safe with this TSA-approved luggage lock. Durable and easy to use for peace of mind during your travels."
+      },
+      "dryBagWaterproof": {
+        "name": "Waterproof Bag",
+        "description": "Protect your belongings from water damage with this lightweight, durable dry bag. Ideal for beach trips, kayaking, and more."
+      },
+      "portableCharger": {
+        "name": "Portable Charger 20000mAh",
+        "description": "Keep your devices powered up with this high-capacity portable charger. Perfect for long trips and multiple devices."
+      },
+      "carCharger": {
+        "name": "Car Charger",
+        "description": "Charge your devices on the go with this compact and efficient car charger. Perfect for road trips and daily commutes."
+      },
+      "sunProtectionShirt": {
+        "name": "Sun Protection Shirt",
+        "description": "Stay cool and shielded from harmful UV rays with this lightweight and breathable sun protection shirt. Ideal for outdoor adventures."
+      },
+      "waterShoes": {
+        "name": "Water Shoes",
+        "description": "Enjoy comfort and safety during water activities with these quick-dry, anti-slip water shoes. Perfect for beaches, rivers, and pools."
+      },
+      "waterproofPhoneCase": {
+        "name": "Waterproof Phone Case",
+        "description": "Keep your phone safe and dry with this durable waterproof case. Perfect for beach days, kayaking, and other water activities."
+      },
+      "miniBluetoothSpeaker": {
+        "name": "Mini Bluetooth Speaker",
+        "description": "Take your music anywhere with this portable, waterproof Bluetooth speaker. Enjoy high-quality sound on the go."
+      },
+      "phoneHolderMount": {
+        "name": "Phone Holder Mount",
+        "description": "Make hands-free calls and navigate effortlessly with this sturdy and adjustable phone holder mount for your car."
+      },
+      "airplanePhoneHolder": {
+        "name": "Airplane Phone Holder",
+        "description": "Enjoy hands-free entertainment on flights with this compact and adjustable airplane phone holder. Perfect for watching movies."
+      },
+      "sonyWirelessHeadphones": {
+        "name": "Sony Wireless Noise Canceling Headphones",
+        "description": "Immerse yourself in crystal-clear sound with these premium noise-canceling headphones. Perfect for travel and relaxation."
+      },
+      "nordicWalkingPoles": {
+        "name": "Nordic Walking Poles",
+        "description": "Enhance your hiking experience with these lightweight and durable Nordic walking poles. Perfect for all terrains."
+      },
+      "ankerMultiUsbPort": {
+        "name": "Anker Multi USB Port",
+        "description": "Charge multiple devices simultaneously with this compact and reliable multi-USB port. Ideal for home or travel."
+      },
+      "europeanTravelPlug": {
+        "name": "European Travel Plug",
+        "description": "Stay powered up in Europe with this fast-charging travel plug featuring multiple USB ports for convenience."
+      },
+      "appleAirtag": {
+        "name": "Apple AirTag",
+        "description": "Keep track of your belongings with this compact and reliable Apple AirTag. Never lose your essentials again."
+      },
+      "miniPowerBank": {
+        "name": "Mini Power Bank",
+        "description": "Stay charged on the go with this compact and lightweight mini power bank. Perfect for travel and emergencies."
+      },
+      "sunHat": {
+        "name": "Sun Hat",
+        "description": "Stay cool and stylish while protecting yourself from the sun with this lightweight and breathable sun hat."
+      },
+      "tileGpsTracker": {
+        "name": "Tile GPS Tracker",
+        "description": "Never lose your valuables again with this compact and reliable Tile GPS tracker. Perfect for keys, bags, and more."
+      },
+      "waterBottle": {
+        "name": "Water Bottle with Handle and Straw",
+        "description": "Stay hydrated on the go with this durable and portable water bottle featuring a convenient handle and straw."
+      },
+      "herschelBackpack": {
+        "name": "Herschel Travel Backpack",
+        "description": "Carry your essentials in style with this spacious and durable Herschel travel backpack. Perfect for any adventure."
+      },
+      "faceSunscreen": {
+        "name": "Face Sunscreen SPF 46",
+        "description": "Protect your skin from harmful UV rays with this lightweight and dermatologist-recommended face sunscreen."
+      },
+      "travelFirstAidKit": {
+        "name": "Travel First Aid Kit",
+        "description": "Be prepared for any situation with this compact and comprehensive travel first aid kit. A must-have for every trip."
+      },
+      "beachBlanket": {
+        "name": "Beach Blanket",
+        "description": "Relax in comfort with this lightweight and sand-resistant beach blanket. Perfect for picnics, beaches, and outdoor fun."
+      },
+      "learnMoreButton": "Learn More",
+      "readMoreButton": "Read More",
+      "showLessButton": "Show Less",
+      "viewMoreButton": "View More Products",
+      "footerNote": "Note: We may earn a commission if you purchase through these links.",
+      "imageAlt": "Image of {{name}}",
+      "learnMore": "Learn more about {{name}}"
+    }
+  },
+  "travelInsurance": {
+    "title": "Travel Insurance",
+    "subtitle": "Protect yourself while traveling with comprehensive travel insurance from SafetyWing.",
+    "imageAlt": "Infographic showing benefits of travel insurance",
+    "ctaButton": "Get Travel Insurance",
+    "ctaAriaLabel": "Get travel insurance from SafetyWing",
+    "description1": "Traveling can be unpredictable. Ensure you are covered with SafetyWing's comprehensive travel insurance.",
+    "description2": "Our travel insurance offers coverage for medical expenses, trip cancellations, lost luggage, and more. Don't leave home without it!"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "subtitle": "Discover the story behind our platform and the principles that guide us.",
+    "paragraph1": "This platform was built with friends, for friends. It came to life from real conversations, shared adventures and the joy of discovering hidden gems. Our mission is to make smart, honest recommendations easy to find and share.",
+    "paragraph2": "We value simplicity, integrity and authenticity. Whether you're exploring a new city or your own neighborhood, we aim to make location-based knowledge accessible, useful and personal. This platform grows every day with the help of people like you—curious, open and eager to contribute. Together, we’re building something meaningful, one recommendation at a time."
+  },
+  "qa": {
+    "title": "Frequently Asked Questions",
+    "whatIsGooglementor": "What is googlementor.com?",
+    "whatIsGooglementorAnswer": "Googlementor is your trusted platform for discovering curated lists of Google Maps locations, helping you explore the best spots around the world.",
+    "whatAreLists": "What are Googlementor lists?",
+    "whatAreListsAnswer": "Googlementor lists are curated collections of saved locations organized around specific themes.",
+    "howToUseList": "How can I use a Googlementor list for Google Maps?",
+    "howToUseListAnswer": "Open a list on Google Maps by pressing explore under the list you want, and save it to your account.",
+    "areListsFree": "Are the Google Maps lists free?",
+    "areListsFreeAnswer": "Yes, all our curated Google Maps lists by Googlementor are currently available for free.",
+    "howToHideList": "How can I hide the list?",
+    "howToHideListAnswer": "Go to the 'You' tab -> Click 'Saved' -> Find the list you want to hide, tap the three dots (...), and select 'Hide on your map.'",
+    "howToShowList": "How can I see the list in my Google Maps app?",
+    "howToShowListAnswer": "Go to the 'You' tab -> Click 'Saved' -> Find the list you want to show, tap the three dots (...), and select 'Show on your map.'",
+    "howOftenUpdated": "How often do you update the lists?",
+    "howOftenUpdatedAnswer": "We strive to keep our lists current, regularly updating them with new locations and feedback from users like you.",
+    "whyTravelInsurance": "Why should I buy travel insurance?",
+    "whyTravelInsuranceAnswer": "Travel insurance is essential for challenging trips involving adventure, remote destinations, or unpredictable circumstances.",
+    "whoCanBenefit": "Who can benefit from googlementor.com?",
+    "whoCanBenefitAnswer": "Whether you’re a traveler, foodie, or local explorer, googlementor.com is designed for anyone looking to make the most out of Google Maps.",
+    "whyBuyEsim": "Why buy an eSIM when my mobile contract already includes roaming?",
+    "whyBuyEsimAnswer": "eSIMs are a convenient and cost-effective alternative to traditional SIM cards, often providing lower costs and better connectivity.",
+    "whyAiraloEsim": "Why is Airalo eSIM the cheapest reliable option?",
+    "whyAiraloEsimAnswer": "Airalo offers cheap eSIMs, starting from $5 with no physical SIM card needed. They provide service in over 190 countries.",
+    "howToContact": "How do I contact you for additional help?",
+    "howToContactAnswer": "You can reach us at mapsmentorinfo@gmail.com. We’re here to assist you with any questions or requests.",
+    "areListsSecure": "Are Google Maps lists secure?",
+    "areListsSecureAnswer": "Yes, Google protects your lists with robust security measures, including encryption.",
+    "canDeleteList": "Can I delete a list if I no longer need it?",
+    "canDeleteListAnswer": "Yes, you can delete any list you’ve created at any time from your Google Maps account."
+  },
+  "about": {
+    "linksTitle": "Links",
+    "affiliatePartners": "Affiliate Partners",
+    "mapCreators": "Map Creators",
+    "products": "Products",
+    "travelInsurance": "Travel Insurance",
+    "followUs": "Follow Us",
+    "followUsOn": "Follow us on {{platform}}",
+    "supportUs": "Support Us",
+    "supportUsDescription": "If you find our content helpful, consider supporting us.",
+    "supportUsLink": "https://buymeacoffee.com/googlementor",
+    "supportUsAria": "Support us by buying a coffee",
+    "buyMeCoffee": "Buy Me a Coffee",
+    "contactUs": "Contact Us",
+    "contactEmail": "Email: mapsmentorinfo@gmail.com",
+    "contactTerms": "By contacting us, you accept our <terms>terms and conditions</terms> and <privacy>privacy policy</privacy>.",
+    "terms": "terms and conditions",
+    "privacyPolicy": "privacy policy",
+    "mapsData": "Maps data © Google. Google Maps is a trademark of Google LLC.",
+    "copyright": "Built with ❤️ by Googlementor Team! All rights reserved ",
+    "tiktok": "https://www.tiktok.com/@mapsmentor",
+    "instagram": "https://www.instagram.com/mapsmentor?igsh=MXRxODZ4ajFlaGlscA%3D%3D&utm_source=qr",
+    "twitter": "https://x.com/googlementor",
+    "facebook": "https://www.facebook.com/profile.php?id=61560667811342"
+  }
+}

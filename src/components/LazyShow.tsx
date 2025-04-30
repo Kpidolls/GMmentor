@@ -1,6 +1,7 @@
 import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
 import { motion, MotionProps, useAnimation } from 'framer-motion';
 
+
 const MotionDiv = motion(
   React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & MotionProps>(
     (props, ref) => <div ref={ref} {...props} />

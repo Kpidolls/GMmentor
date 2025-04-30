@@ -1,0 +1,92 @@
+[
+  {
+    "id": "island-crete",
+    "title": "islands.crete.title",
+    "img": "/assets/images/crete.jpg",
+    "description": "islands.crete.description",
+    "link": "https://maps.app.goo.gl/Jqj9PF98pe3Pjbt86",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-mykonos",
+    "title": "islands.mykonos.title",
+    "img": "/assets/images/mykonos.jpg",
+    "description": "islands.mykonos.description",
+    "link": "https://maps.app.goo.gl/a5ydikhYtHbFqimq8",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-santorini",
+    "title": "islands.santorini.title",
+    "img": "/assets/images/santorini.jpg",
+    "description": "islands.santorini.description",
+    "link": "https://maps.app.goo.gl/szbFdbDzFkxaYfjNA",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-aegina",
+    "title": "islands.aegina.title",
+    "img": "/assets/images/aegina.jpg",
+    "description": "islands.aegina.description",
+    "link": "https://maps.app.goo.gl/KFCFNepFpoeG9wGh9",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-rhodes",
+    "title": "islands.rhodes.title",
+    "img": "/assets/images/rodos.webp",
+    "description": "islands.rhodes.description",
+    "link": "https://maps.app.goo.gl/tLQZpTA6oyRoNg1w9",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-corfu",
+    "title": "islands.corfu.title",
+    "img": "/assets/images/corfu.png",
+    "description": "islands.corfu.description",
+    "link": "https://maps.app.goo.gl/9fSrbmQQu6eCHA6H9",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-paros",
+    "title": "islands.paros.title",
+    "img": "/assets/images/paros.jpg",
+    "description": "islands.paros.description",
+    "link": "https://maps.app.goo.gl/N22ZNRRcEbj2kHQ36",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": " island-zakynthos",
+    "title": "islands.zakynthos.title",
+    "img": "/assets/images/zakynthos.jpg",
+    "description": "islands.zakynthos.description",
+    "link": "https://maps.app.goo.gl/ve6sQVdDRJC3hQwt9",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-skiathos",
+    "title": "islands.skiathos.title",
+    "img": "/assets/images/skiathos.jpg",
+    "description": "islands.skiathos.description",
+    "link": "https://maps.app.goo.gl/NgV5jbjCV5hQRViF7",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-karpathos",
+    "title": "islands.karpathos.title",
+    "img": "/assets/images/karpathos.jpg",
+    "description": "islands.karpathos.description",
+    "link": "https://maps.app.goo.gl/WMXHM2VfaxyM2s147",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  }
+]

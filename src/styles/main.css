@@ -11,7 +11,7 @@
 }
 
 a { 
-  @apply text-red-700;
+  @apply text-red-700
 }
 
 a:hover {

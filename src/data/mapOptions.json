@@ -1,0 +1,200 @@
+[
+  {
+    "id": "must-see",
+    "title": "product.mustSee.title",
+    "img": "/assets/images/must.png",
+    "description": "product.mustSee.description",
+    "link": "https://maps.app.goo.gl/iDRPEgDRk7v8rpJj6",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "hiking",
+    "title": "product.hiking.title",
+    "img": "/assets/images/hiking.webp",
+    "description": "product.hiking.description",
+    "link": "https://maps.app.goo.gl/1qjPVDcEhx1p4dcy8",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "rooftop",
+    "title": "product.rooftop.title",
+    "img": "/assets/images/rooftop.png",
+    "description": "product.rooftop.description",
+    "link": "https://maps.app.goo.gl/XJLd73anECFR8jBC6",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "churches",
+    "title": "product.churches.title",
+    "img": "/assets/images/church.jpg",
+    "description": "product.churches.description",
+    "link": "https://maps.app.goo.gl/y7bCep89uvZN7d9U9",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "vegan",
+    "title": "product.vegan.title",
+    "img": "/assets/images/vegan.webp",
+    "description": "product.vegan.description",
+    "link": "https://maps.app.goo.gl/FkDZGraEdQBmzS1A6",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "gyros",
+    "title": "product.gyros.title",
+    "img": "/assets/images/giros.jpg",
+    "description": "product.gyros.description",
+    "link": "https://maps.app.goo.gl/yVgdoS9nzp6XErWR6",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "fish-tavernas",
+    "title": "product.fishTavernas.title",
+    "img": "/assets/images/eat.jpg",
+    "description": "product.fishTavernas.description",
+    "link": "https://maps.app.goo.gl/nvnD7kbMVK4dsJc96",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "desserts",
+    "title": "product.desserts.title",
+    "img": "/assets/images/desserts.jpg",
+    "description": "product.desserts.description",
+    "link": "https://maps.app.goo.gl/WKwvzVVLfCLLAAGK8",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "coffee",
+    "title": "product.coffee.title",
+    "img": "/assets/images/coffee.jpg",
+    "description": "product.coffee.description",
+    "link": "https://maps.app.goo.gl/p4o7Sk17ocYqQidP8",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "tavernas",
+    "title": "product.tavernas.title",
+    "img": "/assets/images/taverna.jpg",
+    "description": "product.tavernas.description",
+    "link": "https://maps.app.goo.gl/b1bUHEkRYgv9dGGs7",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "wineries",
+    "title": "product.wineries.title",
+    "img": "/assets/images/winery.png",
+    "description": "product.wineries.description",
+    "link": "https://maps.app.goo.gl/izXJ2jaSSueHwrML8",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "burger",
+    "title": "product.burger.title",
+    "img": "/assets/images/burger.jpg",
+    "description": "product.burger.description",
+    "link": "https://maps.app.goo.gl/nYnmFKXgLBNkVKiC6",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "italian",
+    "title": "product.italian.title",
+    "img": "/assets/images/italian.jpg",
+    "description": "product.italian.description",
+    "link": "https://maps.app.goo.gl/KxdyM7pcpi8dSkTK7",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "asian",
+    "title": "product.asian.title",
+    "img": "/assets/images/asian.webp",
+    "description": "product.asian.description",
+    "link": "https://maps.app.goo.gl/tn7c3qc8uYzbkhji6",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "mexican",
+    "title": "product.mexican.title",
+    "img": "/assets/images/mexican.jpg",
+    "description": "product.mexican.description",
+    "link": "https://maps.app.goo.gl/5aiGTrhtr7ob9D7M7",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "cheap-eats",
+    "title": "product.cheapEats.title",
+    "img": "/assets/images/cheapEats.webp",
+    "description": "product.cheapEats.description",
+    "link": "https://maps.app.goo.gl/yB9f6U24aQbe8FNRA",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "bars",
+    "title": "product.bars.title",
+    "img": "/assets/images/drinks.webp",
+    "description": "product.bars.description",
+    "link": "https://maps.app.goo.gl/GzgU8nPbzbJE8K7P8",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "bougatsa",
+    "title": "product.bougatsa.title",
+    "img": "/assets/images/bougatsa.jpg",
+    "description": "product.bougatsa.description",
+    "link": "https://maps.app.goo.gl/EdZ87NgMbE25Qk7f8",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "surf",
+    "title": "product.surf.title",
+    "img": "/assets/images/surf.jpg",
+    "description": "product.surf.description",
+    "link": "https://maps.app.goo.gl/C9vQfGhZTVE5phpa6",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "family",
+    "title": "product.family.title",
+    "img": "/assets/images/family.jpg",
+    "description": "product.family.description",
+    "link": "https://maps.app.goo.gl/Ju4Aw5yUeQZLgK159",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "bouzoukia",
+    "title": "product.bouzoukia.title",
+    "img": "/assets/images/bouzoukia.jpg",
+    "description": "product.bouzoukia.description",
+    "link": "https://maps.app.goo.gl/EockHSJsHcWGRk7j8",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "luxury",
+    "title": "product.luxury.title",
+    "img": "/assets/images/fine-dining.jpg",
+    "description": "product.luxury.description",
+    "link": "https://maps.app.goo.gl/peyCRuk3gVxiF2ej7",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  }
+]
