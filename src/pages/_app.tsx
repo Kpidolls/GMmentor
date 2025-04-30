@@ -2,7 +2,20 @@ import { AppProps } from 'next/app';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '../styles/main.css';
+
+// Optional: Extend Chakra's default theme
+const customTheme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: 'gray.50',
+        color: 'gray.800',
+      },
+    },
+  },
+});
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -23,13 +36,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   }, [router.events]);
 
   return (
-    <>
+    <ChakraProvider theme={customTheme}>
       <Head>
         <title>Googlementor - Tools for travelers</title>
         <meta name="googlementor" content="Lists on Google Maps for travel and everyday life" />
       </Head>
       <Component {...pageProps} />
-    </>
+    </ChakraProvider>
   );
 };
 

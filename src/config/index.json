@@ -1,162 +1,82 @@
 {
+  "header": {
+    "promo": "header.promo",
+    "login": "header.login",
+    "register": "header.register"
+  },
   "company": {
-    "name": "Googlementor",
+    "name": "company.name",
     "logo": "/assets/images/newlogo1.png"
   },
   "navigation": [
     {
-      "name": "Maps",
+      "name": "navigation.maps",
       "href": "maps",
       "submenu": [
-        { "name": "Must See", "href": "maps" },
-        { "name": "Islands", "href": "islands" },
-        { "name": "Food", "href": "vegan" },
-        { "name": "Hiking", "href": "hiking" }
+        { "name": "navigation.mustSee", "href": "maps" },
+        { "name": "navigation.islands", "href": "islands" },
+        { "name": "navigation.food", "href": "vegan" },
+        { "name": "navigation.hiking", "href": "hiking" }
       ]
     },
     {
-      "name": "Store",
+      "name": "navigation.store",
       "href": "store",
       "submenu": [
-        { "name": "Mobile Travel Data", "href": "store" },
-        { "name": "Travel Insurance", "href": "travelinsurance" },
-        { "name": "Travel Items", "href": "store" }
+        { "name": "navigation.mobileTravelData", "href": "store" },
+        { "name": "navigation.travelInsurance", "href": "travelinsurance" },
+        { "name": "navigation.travelItems", "href": "store" }
       ]
     },
     {
-      "name": "About",
+      "name": "navigation.aboutUs",
       "href": "aboutus",
       "submenu": [
-        { "name": "Our Story", "href": "aboutus" },
-        { "name": "FAQ", "href": "qa-section" },
-        { "name": "Contact", "href": "footer" }
+        { "name": "navigation.ourStory", "href": "aboutus" },
+        { "name": "navigation.faq", "href": "qa-section" },
+        { "name": "navigation.contact", "href": "footer" }
       ]
     }
   ],
   "callToAction": {
-    "text": "Get started",
+    "text": "callToAction.text",
     "href": "#download"
   },
   "mainHero": {
-    "title": "Googlementor",
-    "subtitle": "Tools for Travelers",
-    "description": "Lists on Google Maps for travel and everyday life.",
+    "title": "mainHero.title",
+    "subtitle": "mainHero.subtitle",
+    "description": "mainHero.description",
     "img": "/assets/images/Designer.jpeg",
     "primaryAction": {
-      "text": [
-        "What to do in Greece!",
-        "Where to go in Greece!",
-        "Where to eat in Greece!"
-      ],
+      "text": {
+        "0": "mainHero.primaryAction.text.0",
+        "1": "mainHero.primaryAction.text.1",
+        "2": "mainHero.primaryAction.text.2"
+      },
       "href": "#maps"
     },
     "secondaryAction": {
-      "text": "Shop",
+      "text": "mainHero.secondaryAction.text",
       "href": "#store"
     }
-  },
-  "product": {
-    "title": "Google Maps",
-    "items": [
-      {
-        "title": "Personalized Travel",
-        "description": "Add collections of recommended locations to your Google Maps. Discover hidden gems and top attractions! Whether you are seeking the best local spots or planning your next adventure, request your own map. Send us an email with the label of the map. We can't wait to help you explore!",
-        "img": "/assets/images/globe.png"
-      },
-      {
-        "title": "Travelers - Local Experts",
-        "description": "Are you an expert in your area, with in-depth knowledge of the best places to visit, dine or explore? We are looking for passionate locals and travel enthusiasts to partner with us. If you have a talent for uncovering hidden gems, we'd love to hear from you! Contact us to join our team and help others explore your favorite places.",
-        "img": "/assets/images/product2.jpeg"
-      }
-    ]
-  },
-  "features": {
-    "title": "Feature your custom maps!",
-    "subtitle": "Featured map lists on Google Maps",
-    "description": "Google Maps Lists allow users to create and manage collections of saved locations within the Google Maps application. This functionality serves as a powerful tool for organizing and sharing locations effectively. Whether for personal use or collaborative planning, this feature enhances how users interact with their surroundings while providing easy access to curated recommendations.",
-    "items": [
-      {
-        "name": "Favorites List",
-        "description": "Users can create personalized lists to save locations based on their preferences, such as favorite restaurants or places to visit on a trip. Each custom list can be named and described, allowing for tailored organization.",
-        "icon": "/assets/images/heart-outline.svg"
-      },
-      {
-        "name": "Hiking Trails List",
-        "description": "Explore amazing trails, stunning views, and hidden spots. Whether you're seeking a relaxing walk or an adventurous hike, there's something for everyone. Make it easy for planning fun experiences.",
-        "icon": "/assets/images/walk-outline.svg"
-      },
-      {
-        "name": "Desserts List",
-        "description": "Create a collection of must-try treats that will delight your taste buds! Indulge in local delicacies. This list highlights the top dessert spots to satisfy your sweet cravings while celebrating local flavors.",
-        "icon": "/assets/images/ice-cream-outline.svg"
-      },
-      {
-        "name": "Brunch List",
-        "description": "Elevate your brunch game, discover charming cafes and trendy restaurants serving up mouthwatering dishes, from fluffy pancakes and savory egg dishes to refreshing mimosas and artisanal coffee.",
-        "icon": "/assets/images/cafe-outline.svg"
-      }
-    ]
-  },
-  "pricing": {
-    "title": "Travelers - Affordable eSIM Pricing Plans",
-    "items": [
-      {
-        "name": "Local eSIMs",
-        "price": "$9",
-        "priceDetails": " for example",
-        "features": [
-          "Duration: 1 week",
-          "Country of coverage: Italy",
-          "Data: 3gb",
-          "Options: 1gb - 20gb"
-        ]
-      },
-      {
-        "name": "Regional eSIMs",
-        "price": "$15",
-        "priceDetails": " for example",
-
-        "features": [
-          "Duration: 30 days",
-          "Coverage: Europe",
-          "Data: 3gb",
-          "Options: 1gb - 100gb"
-        ]
-      },
-      {
-        "name": "Global eSIMs",
-        "price": "$24",
-        "priceDetails": " for example",
-        "features": [
-          "Duration: 30 days",
-          "Coverage: 124 Countries",
-          "Data: 3gb",
-          "Options: 1gb - 20gb"
-        ]
-      }
-    ]
   },
   "about": {
     "sections": [
       {
-        "name": "Contact Us",
-        "href": "mailto:mapsmentorinfo@gmail.com?subject=I agree with googlementor.com terms!",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+        "name": "about.sections.contactUs",
+        "href": "mailto:mapsmentorinfo@gmail.com?subject=I agree with googlementor.com terms!"
       },
       {
-        "name": "About",
-        "href": "#aboutus",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+        "name": "about.sections.about",
+        "href": "#aboutus"
       },
       {
-        "name": "Privacy Policy",
-        "href": "/privacy-policy",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+        "name": "about.sections.privacyPolicy",
+        "href": "/privacy-policy"
       },
       {
-        "name": "Terms",
-        "href": "/terms",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+        "name": "about.sections.terms",
+        "href": "/terms"
       }
     ],
     "socialMedia": {
