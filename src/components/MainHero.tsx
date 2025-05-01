@@ -39,7 +39,7 @@ const MainHero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 sm:px-8 lg:px-12 flex flex-col items-center lg:items-start text-center lg:text-left">
+      <div className="relative z-10 max-w-full mx-auto px-6 py-24 sm:px-8 lg:px-12 flex flex-col items-center text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-primary font-extrabold tracking-tight text-white leading-tight">
           <span className="block text-[#0878fe] mb-2">{t('mainHero.subtitle')}</span>
           {/* <span className="block text-white">{t('mainHero.title')}</span> */}
@@ -48,7 +48,7 @@ const MainHero = () => {
           {t('mainHero.description')}
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-6">
+        <div className="mt-10 flex flex-col sm:flex-row sm:justify-center gap-6">
           <a
             href={mainHero.primaryAction.href}
             className="inline-flex min-w-[300px] items-center justify-center px-8 py-4 text-lg font-bold text-white bg-red-600 rounded-lg shadow-lg hover:bg-red-700 hover:shadow-xl transition-all duration-300"
