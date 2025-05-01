@@ -378,10 +378,32 @@
     "terms": "terms and conditions",
     "privacyPolicy": "privacy policy",
     "mapsData": "Maps data © Google. Google Maps is a trademark of Google LLC.",
-    "copyright": "Built with ❤️ by Googlementor Team! All rights reserved ",
+    "copyright": " ❤️ by Googlementor team! All rights reserved ",
     "tiktok": "https://www.tiktok.com/@mapsmentor",
     "instagram": "https://www.instagram.com/mapsmentor?igsh=MXRxODZ4ajFlaGlscA%3D%3D&utm_source=qr",
     "twitter": "https://x.com/googlementor",
     "facebook": "https://www.facebook.com/profile.php?id=61560667811342"
+  },
+  "ticker": {
+    "usefulApps": "USEFUL APPS: GREECE",
+    "accommodation": "Accommodation: Booking.com - Airbnb",
+    "bankAtms": "Bank ATMs: ALPHA - Piraeus - NBG (avoid Euronet)",
+    "orderFood": "Order Food: efood - Wolt",
+    "ferryTickets": "Ferry Tickets: Ferryhopper",
+    "health": "Health: doctoranytime",
+    "handyman": "Handyman: Douleutaras",
+    "shopping": "Shopping: Skroutz",
+    "taxi": "Taxi: FREENOW - Uber",
+    "carRentals": "Car Rentals: Skyscanner",
+    "luggageStorage": "Luggage Storage: Stasher",
+    "events": "Events: ticketmaster - More",
+    "eSim": "e-Sim: Airalo - Nomad",
+    "travelInsurance": "Travel Insurance: SafetyWing",
+    "language": "Language: Google Translate",
+    "planning": "Planning: rome2rio",
+    "tours": "Tours: GetYourGuide",
+    "parking": "Parking: ParkAround",
+    "expenseTracker": "Expense Tracker: Splitwise",
+    "welcomePickups": "Airport Transfers: Welcome Pickups"
   }
 }

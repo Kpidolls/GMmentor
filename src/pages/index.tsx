@@ -21,7 +21,7 @@ import '../i18n';
 
 const App = () => {
   return (
-    <div className={`bg-background grid gap-y-16 overflow-hidden`}>
+    <div className={`bg-background grid gap-y-8 overflow-hidden`}>
       <div className="relative z-50">
         <MyTicker />
       </div>

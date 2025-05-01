@@ -45,14 +45,14 @@ const Header = React.memo(() => {
   };
 
   return (
-    <Box as="header" bg={bg} shadow="md" position="sticky" top="0" zIndex="50" w="full">
+    <Box as="header" bg={bg} shadow="md" position="sticky" top="0" zIndex="50" w="full" mt="0">
       {/* Top Bar */}
-      <Box bg="gray.800" py="2" px={{ base: 4, md: 6 }}>
-        <Flex justify="space-between" align="center" maxW="container.xl" mx="auto">
+      <Box bg="gray.800" py="1" px={{ base: 4, md: 6 }}>
+        <Flex justify="space-between" align="center" w="full" mx="auto">
           <Button
               variant="ghost"
               onClick={toggleLanguage}
-              color="Lavender"
+              color="whiteAlpha.600"
               _hover={{ bg: hoverBg, color: 'gray.400' }}
             >
               {i18n.language === 'en' ? 'Ελληνικά' : 'English'}
@@ -77,8 +77,8 @@ const Header = React.memo(() => {
       </Box>
 
       {/* Main Header */}
-      <Box px={{ base: 4, md: 6 }} py="6">
-        <Flex justify="space-between" align="center" wrap="wrap" maxW="container.xl" mx="auto">
+      <Box px={{ base: 4, md: 6 }} py="3">
+        <Flex justify="space-between" align="center" wrap="wrap" w="full" mx="auto">
           {/* Logo and Company Name */}
           <HStack spacing="4">
             <Image
