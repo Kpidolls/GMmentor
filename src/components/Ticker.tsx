@@ -1,45 +1,52 @@
 import React from 'react';
+import { Box, Flex, Text } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
+import tickerItems from '../data/tickerItems.json';
 
 function MyTicker() {
-  const tickerItems = [
-    'USEFUL APPS: GREECE',
-    'Accommodation: Booking.com - Airbnb',
-    'Bank ATMs: ALPHA - Piraeus - NBG (avoid Euronet)',
-    'Order Food: efood - Wolt',
-    'Ferry Tickets: Ferryhopper',
-    'Health: doctoranytime',
-    'Handyman: Douleutaras',
-    'Shopping: Skroutz',
-    'Taxi: FREENOW - Uber',
-    'Car Rentals: Skyscanner',
-    'Luggage Storage: Stasher',
-    'Events: ticketmaster - More',
-    'e-Sim: Airalo - Nomad',
-    'Travel Insurance: SafetyWing',
-    'Language: Google Translate',
-    'Planning: rome2rio',
-    'Tours: GetYourGuide',
-    'Parking: ParkAround',
-    'Expense Tracker: Splitwise',
-  ];
+  const { t } = useTranslation();
 
   return (
-    <div className="ticker-container z-50 fixed">
-      <div className="flex animate-scroll space-x-5 min-w-max">
-        {[...tickerItems].map((item, index) => {
-          const [highlight, ...rest] = item.split(':'); // Split the string at the colon
+    <Box
+      className="ticker-container"
+      position="fixed"
+      zIndex="50"
+      width="100%"
+      overflow="hidden"
+      color="black"
+      py="2"
+      sx={{
+        '&:hover .animate-scroll': {
+          animationPlayState: 'paused',
+        },
+      }}
+    >
+      <Flex
+        className="animate-scroll"
+        whiteSpace="nowrap"
+        minWidth="max-content"
+        gap="5"
+        animation="scroll 60s linear infinite"
+      >
+        {tickerItems.map((item, index) => {
+          const [highlight, ...rest] = t(`ticker.${item.key}`).split(':');
           return (
-            <div
+            <Text
               key={index}
-              className="ticker-text inline-block whitespace-nowrap"
+              display="inline-block"
+              fontSize="sm"
+              fontWeight="medium"
+              px="2"
             >
-              <span className="text-[#0878fe] font-bold">{highlight}:</span>{' '}
-              <span>{rest.join(':')}</span>
-            </div>
+              <Text as="span" color="#0878fe" fontWeight="bold">
+                {highlight}:
+              </Text>{' '}
+              <Text as="span">{rest.join(':')}</Text>
+            </Text>
           );
         })}
-      </div>
-    </div>
+      </Flex>
+    </Box>
   );
 }
 

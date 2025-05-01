@@ -32,11 +32,24 @@ a:hover {
   justify-content: center;
   align-items: center;
   background-color: #f0f0f0;
-  padding: 10px;
+  padding: 2px;
   border: 1px solid #ccc;
 }
 
 .ticker-text {
   font-size: 16px;
   color: #333;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
 }
