@@ -81,11 +81,29 @@
     "rel": "noopener noreferrer"
   },
   {
+    "id": "island-naxos",
+    "title": "islands.naxos.title",
+    "img": "/assets/images/naxos.jpg",
+    "description": "islands.naxos.description",
+    "link": "https://maps.app.goo.gl/oqCZFMkzeEujtUTZ7",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
     "id": "island-karpathos",
     "title": "islands.karpathos.title",
     "img": "/assets/images/karpathos.jpg",
     "description": "islands.karpathos.description",
     "link": "https://maps.app.goo.gl/WMXHM2VfaxyM2s147",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-kos",
+    "title": "islands.kos.title",
+    "img": "/assets/images/kos.jpg",
+    "description": "islands.kos.description",
+    "link": "https://maps.app.goo.gl/uPrNF6PM2HMdAnU66",
     "target": "_blank",
     "rel": "noopener noreferrer"
   }
