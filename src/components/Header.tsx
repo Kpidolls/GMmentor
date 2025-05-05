@@ -23,6 +23,7 @@ import {
   InputLeftElement,
   useColorModeValue,
   useDisclosure,
+  Text,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, SearchIcon } from '@chakra-ui/icons';
 import { useRouter } from 'next/navigation';
@@ -34,107 +35,97 @@ import SearchPage from './SearchPage';
 const Header = () => {
   const { company, navigation } = config;
   const { logo } = company;
+
   const router = useRouter();
   const { t, i18n } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isMenuOpen, setMenuOpen] = useState(false); // State for the hamburger menu
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const bg = useColorModeValue('gray.100', 'gray.800');
+  const bg = useColorModeValue('white', 'gray.900');
   const textColor = useColorModeValue('gray.800', 'white');
-  const hoverBg = useColorModeValue('gray.200', 'gray.700');
-  const submenuHover = useColorModeValue('gray.300', 'gray.600');
+  const hoverBg = useColorModeValue('gray.100', 'gray.700');
+  const submenuHover = useColorModeValue('gray.200', 'gray.600');
 
   const toggleLanguage = () => {
-    const newLanguage = i18n.language === 'en' ? 'el' : 'en';
-    i18n.changeLanguage(newLanguage);
+    i18n.changeLanguage(i18n.language === 'en' ? 'el' : 'en');
   };
 
   const handleNavigation = (href?: string) => {
     if (href) {
       router.push(href.startsWith('/') ? href : `/#${href}`);
       onClose();
+      setMenuOpen(false);
     }
   };
 
-  const toggleMenu = () => setMenuOpen(!isMenuOpen); // Toggle function for the menu
-
   return (
-    <Box as="header" bg={bg} shadow="md" position="sticky" top="0" zIndex="50" w="full">
+    <Box as="header" bg={bg} shadow="sm" position="sticky" top="0" zIndex="50" w="full">
       {/* Top Bar */}
-      <Box bg="gray.800" py="1" px={{ base: 4, md: 6 }}>
-        <Flex justify="space-between" align="center" w="full" flexWrap="wrap" gap={4}>
-          {/* Language Toggle */}
-          <Button
-            variant="ghost"
-            onClick={toggleLanguage}
-            color="whiteAlpha.600"
-            _hover={{ bg: hoverBg, color: 'gray.400' }}
-          >
-            {i18n.language === 'en' ? 'Ελληνικά' : 'English'}
-          </Button>
+      <Flex
+        bg="gray.800"
+        color="white"
+        px={{ base: 4, md: 8 }}
+        py={2}
+        align="center"
+        justify="space-between"
+        flexWrap="wrap"
+      >
+        <Button
+          size="sm"
+          variant="ghost"
+          onClick={toggleLanguage}
+          color="whiteAlpha.800"
+          _hover={{ bg: hoverBg, color: 'gray.400' }}
+        >
+          {i18n.language === 'en' ? 'Ελληνικά' : 'English'}
+        </Button>
 
-          {/* Promo Text */}
-          <Box fontSize="md" color="white">
-            {t('header.promo')}
-          </Box>
+        <Text fontSize="sm" textAlign="center" flex="1">
+          {t('header.promo')}
+        </Text>
 
-          {/* Search Bar */}
-          {/* Search Box Trigger (desktop only) */}
-          <Box onClick={onOpen} cursor="pointer" ml="auto">
-            <InputGroup maxW="400px" mt="2">
-              <InputLeftElement pointerEvents="none">
-                <SearchIcon color="gray.500" />
-              </InputLeftElement>
-              <Input
-                placeholder={t('search.placeholder')}
-                size="md"
-                focusBorderColor="blue.500"
-                isReadOnly
-                pointerEvents="none"
-              />
-              </InputGroup>
-            </Box>
-
-          {/* Login Button */}
-          <HStack spacing="6">
-            {/* <Button
-              variant="ghost"
-              onClick={() => router.push('/login')}
-              color="white"
-              _hover={{ bg: hoverBg }}
-            >
-              {t('header.login')}
-            </Button> */}
-          </HStack>
-        </Flex>
-      </Box>
+        <Box onClick={onOpen} cursor="pointer">
+          <InputGroup maxW="250px" size="sm">
+            <InputLeftElement pointerEvents="none">
+              <SearchIcon color="gray.400" />
+            </InputLeftElement>
+            <Input
+              isReadOnly
+              placeholder={t('search.placeholder')}
+              pointerEvents="none"
+              focusBorderColor="blue.400"
+              _placeholder={{ color: 'gray.400' }}
+            />
+          </InputGroup>
+        </Box>
+      </Flex>
 
       {/* Main Header */}
-      <Box px={{ base: 4, md: 6 }} py="3">
-        <Flex justify="space-between" align="center" wrap="wrap" w="full">
-          {/* Logo and Company Name */}
-          <HStack spacing="4">
+      <Box px={{ base: 4, md: 8 }} py={4}>
+        <Flex align="center" justify="space-between" wrap="wrap">
+          {/* Logo and Company */}
+          <HStack spacing={3}>
             <Image
               src={logo}
               alt={t('company.logoAlt', { name: t('company.name') })}
-              width={48}
-              height={48}
+              width={40}
+              height={40}
               loading="lazy"
             />
-            <Box fontSize="2xl" fontWeight="bold" color={textColor}>
+            <Text fontSize="2xl" fontWeight="bold" color={textColor}>
               {t('company.name')}
-            </Box>
+            </Text>
           </HStack>
 
-          {/* Desktop Navigation */}
-          <HStack spacing="8" display={{ base: 'none', md: 'flex' }}>
+          {/* Desktop Nav */}
+          <HStack spacing={6} display={{ base: 'none', md: 'flex' }}>
             {navigation.map((item) =>
               !item.submenu ? (
                 <Button
                   key={item.name}
                   variant="ghost"
                   onClick={() => handleNavigation(item.href)}
-                  _hover={{ textDecoration: 'underline', bg: hoverBg }}
+                  _hover={{ bg: hoverBg }}
                   color={textColor}
                 >
                   {t(item.name)}
@@ -144,7 +135,7 @@ const Header = () => {
                   <MenuButton
                     as={Button}
                     variant="ghost"
-                    _hover={{ textDecoration: 'underline', bg: hoverBg }}
+                    _hover={{ bg: hoverBg }}
                     color={textColor}
                   >
                     {t(item.name)}
@@ -165,60 +156,44 @@ const Header = () => {
             )}
           </HStack>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <IconButton
-            onClick={toggleMenu}
+            onClick={() => setMenuOpen(!isMenuOpen)}
+            icon={isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
             variant="ghost"
             aria-label={isMenuOpen ? t('aria.closeMenu') : t('aria.openMenu')}
-            icon={isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
             display={{ base: 'flex', md: 'none' }}
             _hover={{ bg: hoverBg }}
           />
         </Flex>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <Box
-            bg={bg}
-            shadow="lg"
-            p="4"
-            rounded="md"
-            mt="4"
-            overflowY="auto"
-            maxH="80vh"
-            display={{ base: 'block', md: 'none' }}
-          >
-            <VStack align="start" spacing="4" w="full">
+          <Box mt={4} display={{ base: 'block', md: 'none' }}>
+            <VStack spacing={2} align="stretch">
               {navigation.map((item) => (
-                <Box key={item.name} w="full">
+                <Box key={item.name}>
                   <Button
                     variant="ghost"
                     w="full"
                     justifyContent="flex-start"
-                    onClick={() => {
-                      handleNavigation(item.href);
-                      setMenuOpen(false); // Close the menu after navigation
-                    }}
-                    _hover={{ bg: hoverBg }}
+                    onClick={() => handleNavigation(item.href)}
                     color={textColor}
+                    _hover={{ bg: hoverBg }}
                   >
                     {t(item.name)}
                   </Button>
                   {item.submenu && (
-                    <VStack align="start" pl="4" spacing="2">
+                    <VStack align="start" pl={4} spacing={1}>
                       {item.submenu.map((subItem) => (
                         <Button
                           key={subItem.name}
                           variant="ghost"
                           w="full"
-                          justifyContent="flex-start"
-                          onClick={() => {
-                            handleNavigation(subItem.href);
-                            setMenuOpen(false); // Close the menu after navigation
-                          }}
-                          _hover={{ bg: submenuHover }}
                           fontSize="sm"
-                          py="1"
+                          justifyContent="flex-start"
+                          onClick={() => handleNavigation(subItem.href)}
+                          _hover={{ bg: submenuHover }}
                           color={textColor}
                         >
                           {t(subItem.name)}
@@ -233,17 +208,17 @@ const Header = () => {
         )}
       </Box>
 
-      {/* Modal for SearchPage */}
-      <Modal isOpen={isOpen} onClose={onClose} size="xl">
+      {/* Search Modal */}
+      <Modal isOpen={isOpen} onClose={onClose} size="xl" motionPreset="slideInBottom">
         <ModalOverlay />
-        <ModalContent w={{ base: '95%', md: '90%' }} maxW="unset">
+        <ModalContent maxW="95vw">
           <ModalHeader>{t('header.search')}</ModalHeader>
           <ModalCloseButton />
-            <ModalBody p={0}>
-              <Box maxH="80vh" overflowY="auto" p={4}>
-                <SearchPage />
-              </Box>
-            </ModalBody>
+          <ModalBody p={0}>
+            <Box maxH="75vh" overflowY="auto" p={4}>
+              <SearchPage />
+            </Box>
+          </ModalBody>
         </ModalContent>
       </Modal>
     </Box>
