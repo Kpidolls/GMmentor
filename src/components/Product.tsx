@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import mapOptions from '../data/mapOptions.json'; // Import the JSON file
+import mapOptions from '../data/mapOptions.json';
 
 const Product = () => {
   const { t } = useTranslation();

@@ -42,7 +42,7 @@ const MainHero = () => {
       <div className="relative z-10 max-w-full mx-auto px-6 py-24 sm:px-8 lg:px-12 flex flex-col items-center text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-primary font-extrabold tracking-tight text-white leading-tight">
           <span className="block text-[#0878fe] mb-2">{t('mainHero.subtitle')}</span>
-          {/* <span className="block text-white">{t('mainHero.title')}</span> */}
+          <span className="block text-white">{t('mainHero.title')}</span>
         </h1>
         <p className="mt-6 text-lg sm:text-xl text-white font-secondary max-w-2xl leading-relaxed">
           {t('mainHero.description')}

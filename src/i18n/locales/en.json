@@ -2,7 +2,11 @@
   "header": {
     "promo": "",
     "login": "Login",
-    "register": "Register"
+    "register": "Register",
+    "search": "Activities, Cuisine, and Places to Visit"
+  },
+  "search": {
+    "placeholder": "Search..."
   },
   "company": {
     "name": "Googlementor"
@@ -26,7 +30,7 @@
     "text": "Get Started"
   },
   "mainHero": {
-    "title": "Googlementor",
+    "title": "Recommendations for Greece",
     "subtitle": "Tools for Travelers",
     "description": "Lists on Google Maps for travel and everyday life.",
     "primaryAction": {
@@ -140,7 +144,7 @@
       "title": "📍 Luxury Dining",
       "description": "Indulge in luxury dining experiences that redefine elegance and taste."
     },
-    "exploreButton": "Explore",
+    "exploreButton": "Open",
     "shareButton": "Share",
     "shareText": "Recommendations for {{title}} in Greece from Googlementor",
     "shareNotSupported": "Sharing is not supported on this browser.",
@@ -160,7 +164,7 @@
     },
     "santorini": {
       "title": "📍 Santorini",
-      "description": "Visit Santorini, known for its iconic white-washed buildings, blue-domed churches and breathtaking sunsets."
+      "description": "Visit Santorini for its iconic white-washed buildings, blue-domed churches and breathtaking sunsets."
     },
     "aegina": {
       "title": "📍 Aegina",
@@ -190,7 +194,7 @@
       "title": "📍 Karpathos",
       "description": "Visit Karpathos, a hidden gem with stunning beaches, traditional villages and unspoiled beauty."
     },
-    "exploreButton": "Explore",
+    "exploreButton": "Open",
     "shareButton": "Share",
     "shareText": "Recommendations for {{title}} from Googlementor",
     "shareNotSupported": "Sharing is not supported on this browser.",
@@ -330,33 +334,33 @@
   },
   "qa": {
     "title": "Frequently Asked Questions",
-    "whatIsGooglementor": "What is googlementor.com?",
+    "whatIsGooglementor": "What is googlementor.com",
     "whatIsGooglementorAnswer": "Googlementor is your trusted platform for discovering curated lists of Google Maps locations, helping you explore the best spots around the world.",
-    "whatAreLists": "What are Googlementor lists?",
+    "whatAreLists": "What are Googlementor lists",
     "whatAreListsAnswer": "Googlementor lists are curated collections of saved locations organized around specific themes.",
-    "howToUseList": "How can I use a Googlementor list for Google Maps?",
+    "howToUseList": "How can I use a Googlementor list for Google Maps",
     "howToUseListAnswer": "Open a list on Google Maps by pressing explore under the list you want, and save it to your account.",
-    "areListsFree": "Are the Google Maps lists free?",
+    "areListsFree": "Are the Google Maps lists free",
     "areListsFreeAnswer": "Yes, all our curated Google Maps lists by Googlementor are currently available for free.",
-    "howToHideList": "How can I hide the list?",
+    "howToHideList": "How can I hide the list",
     "howToHideListAnswer": "Go to the 'You' tab -> Click 'Saved' -> Find the list you want to hide, tap the three dots (...), and select 'Hide on your map.'",
-    "howToShowList": "How can I see the list in my Google Maps app?",
+    "howToShowList": "How can I see the list in my Google Maps app",
     "howToShowListAnswer": "Go to the 'You' tab -> Click 'Saved' -> Find the list you want to show, tap the three dots (...), and select 'Show on your map.'",
-    "howOftenUpdated": "How often do you update the lists?",
+    "howOftenUpdated": "How often do you update the lists",
     "howOftenUpdatedAnswer": "We strive to keep our lists current, regularly updating them with new locations and feedback from users like you.",
-    "whyTravelInsurance": "Why should I buy travel insurance?",
+    "whyTravelInsurance": "Why should I buy travel insurance",
     "whyTravelInsuranceAnswer": "Travel insurance is essential for challenging trips involving adventure, remote destinations, or unpredictable circumstances.",
-    "whoCanBenefit": "Who can benefit from googlementor.com?",
+    "whoCanBenefit": "Who can benefit from googlementor.com",
     "whoCanBenefitAnswer": "Whether you’re a traveler, foodie, or local explorer, googlementor.com is designed for anyone looking to make the most out of Google Maps.",
-    "whyBuyEsim": "Why buy an eSIM when my mobile contract already includes roaming?",
+    "whyBuyEsim": "Why buy an eSIM when my mobile contract already includes roaming",
     "whyBuyEsimAnswer": "eSIMs are a convenient and cost-effective alternative to traditional SIM cards, often providing lower costs and better connectivity.",
-    "whyAiraloEsim": "Why is Airalo eSIM the cheapest reliable option?",
+    "whyAiraloEsim": "Why is Airalo eSIM the cheapest reliable option",
     "whyAiraloEsimAnswer": "Airalo offers cheap eSIMs, starting from $5 with no physical SIM card needed. They provide service in over 190 countries.",
-    "howToContact": "How do I contact you for additional help?",
+    "howToContact": "How do I contact you for additional help",
     "howToContactAnswer": "You can reach us at mapsmentorinfo@gmail.com. We’re here to assist you with any questions or requests.",
-    "areListsSecure": "Are Google Maps lists secure?",
+    "areListsSecure": "Are Google Maps lists secure",
     "areListsSecureAnswer": "Yes, Google protects your lists with robust security measures, including encryption.",
-    "canDeleteList": "Can I delete a list if I no longer need it?",
+    "canDeleteList": "Can I delete a list if I no longer need it",
     "canDeleteListAnswer": "Yes, you can delete any list you’ve created at any time from your Google Maps account."
   },
   "about": {
@@ -378,7 +382,7 @@
     "terms": "terms and conditions",
     "privacyPolicy": "privacy policy",
     "mapsData": "Maps data © Google. Google Maps is a trademark of Google LLC.",
-    "copyright": " ❤️ by Googlementor team! All rights reserved ",
+    "copyright": " Crafted by Googlementor Team ❤️ |  All rights reserved ",
     "tiktok": "https://www.tiktok.com/@mapsmentor",
     "instagram": "https://www.instagram.com/mapsmentor?igsh=MXRxODZ4ajFlaGlscA%3D%3D&utm_source=qr",
     "twitter": "https://x.com/googlementor",
