@@ -144,7 +144,7 @@
       "title": "📍 Luxury Dining",
       "description": "Indulge in luxury dining experiences that redefine elegance and taste."
     },
-    "exploreButton": "Open",
+    "exploreButton": "Open Map",
     "shareButton": "Share",
     "shareText": "Recommendations for {{title}} in Greece from Googlementor",
     "shareNotSupported": "Sharing is not supported on this browser.",
@@ -194,7 +194,15 @@
       "title": "📍 Karpathos",
       "description": "Visit Karpathos, a hidden gem with stunning beaches, traditional villages and unspoiled beauty."
     },
-    "exploreButton": "Open",
+    "naxos": {
+      "title": "📍 Naxos",
+      "description": "Explore Naxos, the largest island in the Cyclades, known for its beautiful beaches and rich history."
+    },
+    "kos": {
+      "title": "📍 Kos",
+      "description": "Discover Kos, known for its ancient ruins, beautiful beaches and vibrant nightlife."
+    },
+    "exploreButton": "Open Map",
     "shareButton": "Share",
     "shareText": "Recommendations for {{title}} from Googlementor",
     "shareNotSupported": "Sharing is not supported on this browser.",
