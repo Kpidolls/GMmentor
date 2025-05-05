@@ -31,7 +31,7 @@ const IslandList = () => {
               <h3 className="text-lg sm:text-xl font-semibold font-primary text-gray-800 mb-2 sm:mb-4 leading-tight">
                 {t(island.title)} {/* Translated title */}
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base font-secondary mb-6 leading-relaxed min-h-[48px] sm:min-h-[10px]">
+              <p className="text-gray-600 text-sm sm:text-base font-secondary mb-6 leading-relaxed min-h-[48px] sm:min-h-[100px]">
                 {t(island.description)} {/* Translated description */}
               </p>
               <div className="flex flex-wrap gap-4 mt-auto">
