@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useRef, useMemo, useEffect } from 'react';
 import {
   Box,
@@ -37,6 +39,19 @@ const sectionTitles: Record<string, string> = {
   store: 'Travel Gear',
 };
 
+// Basic Greek-to-Latin transliteration map
+const greekToLatinMap: Record<string, string> = {
+  α: 'a', β: 'v', γ: 'g', δ: 'd', ε: 'e', ζ: 'z', η: 'i', θ: 'th', ι: 'i',
+  κ: 'k', λ: 'l', μ: 'm', ν: 'n', ξ: 'x', ο: 'o', π: 'p', ρ: 'r', σ: 's',
+  τ: 't', υ: 'y', φ: 'f', χ: 'ch', ψ: 'ps', ω: 'o',
+  ά: 'a', έ: 'e', ή: 'i', ί: 'i', ό: 'o', ύ: 'y', ώ: 'o', ς: 's',
+};
+
+const normalizeText = (text: string): string => {
+  const lower = text.toLowerCase();
+  return lower.replace(/[\u0370-\u03FF\u1F00-\u1FFF]/g, (char) => greekToLatinMap[char] || char);
+};
+
 const SearchPage = () => {
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
@@ -70,17 +85,17 @@ const SearchPage = () => {
     })),
   ], [t]);
 
-  const debouncedSearch = useMemo(
-    () =>
-      debounce((query: string) => {
-        const results = searchableData.filter((item) =>
-          item.title.toLowerCase().includes(query.toLowerCase()) ||
-          item.description.toLowerCase().includes(query.toLowerCase())
-        );
-        setFilteredResults(results);
-      }, 300),
-    [searchableData]
-  );
+  const debouncedSearch = useMemo(() =>
+    debounce((query: string) => {
+      const normalizedQuery = normalizeText(query.toLowerCase());
+      const results = searchableData.filter((item) => {
+        const titleNorm = normalizeText(item.title.toLowerCase());
+        const descNorm = normalizeText(item.description.toLowerCase());
+        return titleNorm.includes(normalizedQuery) || descNorm.includes(normalizedQuery);
+      });
+      setFilteredResults(results);
+    }, 300)
+  , [searchableData]);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
