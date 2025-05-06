@@ -106,5 +106,41 @@
     "link": "https://maps.app.goo.gl/uPrNF6PM2HMdAnU66",
     "target": "_blank",
     "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-kefalonia",
+    "title": "islands.kefalonia.title",
+    "img": "/assets/images/kefalonia.jpg",
+    "description": "islands.kefalonia.description",
+    "link": "https://maps.app.goo.gl/UZDiFWDUYfs1fkYZ7",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-kythnos",
+    "title": "islands.kythnos.title",
+    "img": "/assets/images/kythnos.webp",
+    "description": "islands.kythnos.description",
+    "link": "https://maps.app.goo.gl/zUoS8hr8bHiMc63G9",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-skyros",
+    "title": "islands.skyros.title",
+    "img": "/assets/images/skyros.jpg",
+    "description": "islands.skyros.description",
+    "link": "https://maps.app.goo.gl/byu8NL7UySph7vYYA",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-lemnos",
+    "title": "islands.lemnos.title",
+    "img": "/assets/images/lemnos.jpg",
+    "description": "islands.lemnos.description",
+    "link": "https://maps.app.goo.gl/2v1Z5a3j7k6g4G9y8",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
   }
 ]
