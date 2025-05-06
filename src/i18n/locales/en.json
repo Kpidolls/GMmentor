@@ -202,6 +202,22 @@
       "title": "📍 Kos",
       "description": "Discover Kos, known for its ancient ruins, beautiful beaches and vibrant nightlife."
     },
+    "kefalonia": {
+      "title": "📍 Kefalonia",
+      "description": "Experience Kefalonia, famous for its stunning beaches, lush landscapes and charming villages."
+    },
+    "kythnos": {
+      "title": "📍 Kythnos",
+      "description": "Kythnos, an island that has it all, tradition, natural beauty, serene beaches and traditional villages."
+    },
+    "skyros": {
+      "title": "📍 Skyros",
+      "description": "Skyros is renowned for its rare ponies, breathtaking landscapes and delectable Lobster Spaghetti."
+    },
+    "lemnos": {
+      "title": "📍 Lemnos",
+      "description": "Visit Lemnos, known for its beautiful beaches, ancient ruins and unique landscapes."
+    },
     "exploreButton": "Open Map",
     "shareButton": "Share",
     "shareText": "Recommendations for {{title}} from Googlementor",
