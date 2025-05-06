@@ -190,13 +190,13 @@
       "title": "📍 Skiathos",
       "description": "Relax on Skiathos, famous for its beautiful beaches, lush pine forests and vibrant nightlife."
     },
-    "karpathos": {
-      "title": "📍 Karpathos",
-      "description": "Visit Karpathos, a hidden gem with stunning beaches, traditional villages and unspoiled beauty."
-    },
     "naxos": {
       "title": "📍 Naxos",
       "description": "Explore Naxos, the largest island in the Cyclades, known for its beautiful beaches and rich history."
+    },
+    "karpathos": {
+      "title": "📍 Karpathos",
+      "description": "Visit Karpathos, a hidden gem with stunning beaches, traditional villages and unspoiled beauty."
     },
     "kos": {
       "title": "📍 Kos",
