@@ -140,12 +140,22 @@ const Header = () => {
                   >
                     {t(item.name)}
                   </MenuButton>
-                  <MenuList bg={bg} borderColor="gray.300">
+                  <MenuList
+                    bg={bg}
+                    borderColor="gray.300"
+                    shadow="lg"
+                    py={2}
+                    borderRadius="md"
+                  >
                     {item.submenu.map((subItem) => (
                       <MenuItem
                         key={subItem.name}
                         onClick={() => handleNavigation(subItem.href)}
-                        _hover={{ bg: submenuHover }}
+                        _hover={{ bg: submenuHover, color: 'blue.500' }}
+                        fontSize="sm"
+                        fontWeight="medium"
+                        px={4}
+                        py={2}
                       >
                         {t(subItem.name)}
                       </MenuItem>

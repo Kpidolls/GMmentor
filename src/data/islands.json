@@ -142,5 +142,14 @@
     "link": "https://maps.app.goo.gl/e4aSadNjBMhQauPg9",
     "target": "_blank",
     "rel": "noopener noreferrer"
+  },
+  {
+    "id": "island-sifnos",
+    "title": "islands.sifnos.title",
+    "img": "/assets/images/sifnos.webp",
+    "description": "islands.sifnos.description",
+    "link": "https://maps.app.goo.gl/oAWNrN1uC3FwEZNu6",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
   }
 ]
