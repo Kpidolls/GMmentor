@@ -31,8 +31,8 @@
   },
   "mainHero": {
     "title": "Recommendations for Greece",
-    "subtitle": "Tools for Travelers",
-    "description": "Lists on Google Maps for travel and everyday life.",
+    "subtitle": "Travel Tools",
+    "description": "Google Maps Lists for trip planning.",
     "primaryAction": {
       "text": {
         "0": "What to do in Greece!",
@@ -120,6 +120,10 @@
       "title": "📍 Cheap Eats",
       "description": "Enjoy delicious meals that won’t break the bank, perfect for budget travelers."
     },
+    "luxury": {
+      "title": "📍 Luxury Dining",
+      "description": "Indulge in luxury dining experiences that redefine elegance and taste."
+    },
     "bars": {
       "title": "📍 Bars & Drinks",
       "description": "Explore top bars and lounges for a vibrant nightlife experience."
@@ -139,10 +143,6 @@
     "bouzoukia": {
       "title": "📍 Live Music (Bouzoukia)",
       "description": "Experience live Greek music and immerse yourself in the local culture."
-    },
-    "luxury": {
-      "title": "📍 Luxury Dining",
-      "description": "Indulge in luxury dining experiences that redefine elegance and taste."
     },
     "exploreButton": "Open Map",
     "shareButton": "Share",
@@ -218,6 +218,10 @@
       "title": "📍 Lemnos",
       "description": "Visit Lemnos, known for its beautiful beaches, ancient ruins and unique landscapes."
     },
+    "sifnos": {
+      "title": "📍 Sifnos",
+      "description": "Sifnos is famous for its traditional Cycladic architecture, beautiful beaches and delicious cuisine."
+    },
     "exploreButton": "Open Map",
     "shareButton": "Share",
     "shareText": "Recommendations for {{title}} from Googlementor",
@@ -225,6 +229,11 @@
     "viewMoreButton": "View More Islands"
   },
   "store": {
+    "filters": {
+      "all": "All",
+      "amazon": "Amazon",
+      "temu": "Temu"
+    },
     "title": "Essential Travel Gear",
     "subtitle": "Discover the perfect travel accessories for your next adventure.",
     "products": {
@@ -332,6 +341,99 @@
         "name": "Beach Blanket",
         "description": "Relax in comfort with this lightweight and sand-resistant beach blanket. Perfect for picnics, beaches, and outdoor fun."
       },
+      "snorkel": {
+        "name": "Kids Full Face Snorkel Mask",
+        "description": " Experience underwater adventures with this comfortable and easy-to-use full face snorkel mask for kids."
+      },
+      "travelJournal": {
+        "name": "Travel Journal",
+        "description": "Capture your travel memories with this stylish leather and durable travel journal. Perfect for jotting down thoughts and experiences."
+      },
+      "packingCubes": {
+        "name": "Travel Organizer Cubes",
+        "description": "Organize your luggage with these lightweight and durable travel packing cubes. Perfect for keeping your belongings tidy."
+      },
+      "travelSizeToiletries": {
+        "name": "Refillable Cosmetic Containers",
+        "description": "Travel light with these refillable cosmetic containers. Perfect for carrying your favorite products without the bulk."
+      },
+      "goggles": {
+        "name": "Kids Swimming Goggles",
+        "description": "Protect your child's eyes while swimming with these comfortable and adjustable kids swimming goggles."
+      },
+      "flippers": {
+        "name": "Kids Swim Fins",
+        "description": "Enhance your child's swimming experience with these comfortable and colorful swim fins."
+      },
+      "beachTowel": {
+        "name": "Poncho Towel for Kids",
+        "description": "Keep your child dry and comfortable with this soft and absorbent quick dry, super soft bath towel."
+      },
+      "shoulderBag": {
+        "name": "Foldable Shoulder Bag",
+        "description": "Carry your essentials in style with this foldable shoulder bag. Perfect for the beach, travel and everyday use."
+      },
+      "waterproofBag": {
+        "name": "Waterproof Mobile Phone Case",
+        "description": "Keep your phone safe and dry with this waterproof transparent mobile phone bag. Touch screen compatible, perfect for water activities."
+      },
+      "portableFan": {
+        "name": "Mini Portable Fan",
+        "description": "Stay cool on the go with this compact and lightweight mini portable fan. USB rechargeable, 3-Speed, 360° rotatable head."
+      },
+      "tent": {
+        "name": "Pop-Up Beach Tent",
+        "description": "Shield yourself from the sun with this  portable pop-up beach tent with quick setup, it offers instant shade and protection. "
+      },
+      "phoneStraps": {
+        "name": "Phone Straps",
+        "description": "Keep your phone secure and accessible with these stylish phone straps suitable for keys, cameras and mobile devices."
+      },
+      "beachToys": {
+        "name": "Beach Toy Set",
+        "description": "Compact beach toy set for kids, including a bucket, shovel, and molds. Perfect for building sandcastles and enjoying beach activities."
+      },
+      "beachChair": {
+        "name": "Folding Beach Chair",
+        "description": "Relax in comfort with this ergonomic folding beach chair. Lightweight and portable, aluminum frame with comfortable recliner and sponge filled cushion."
+      },
+      "picnicBlanket": {
+        "name": "Outdoor Picnic Blanket",
+        "description": "Vibrant blue and green striped outdoor picnic blanket, built for all-season use, making it the perfect companion for camping, hiking and vacations."
+      },
+      "umbrellaAnchor": {
+        "name": "Beach Umbrella Anchor",
+        "description": "Secure your beach umbrella with this durable anchor. Easy to use and perfect for windy days at the beach."
+      },
+      "chairUmbrella": {
+        "name": "Beach Chair Umbrella with Clamp",
+        "description": "Stay cool and shielded from the sun with this convenient portable beach umbrella, because there’s no such thing as too much shade."
+      },
+      "travelUmbrella": {
+        "name": "Compact Travel Umbrella",
+        "description": "Stay dry on the go with this compact and lightweight travel umbrella. Windproof and portable, perfect for unexpected weather."
+      },
+      "fridgeBackpack": {
+        "name": "Backpack Cooler",
+        "description": "Keep your drinks cool on the go with this insulated backpack cooler. Perfect for picnics, beach trips, and outdoor adventures."
+      },
+      "coffeeMug": {
+        "name": "Portable Travel Cup 450ml ",
+        "description": "Stay hydrated on the go with this portable stainless steel insulated travel cup. 450ml capacity, perfect for coffee, tea or any beverage."
+      },
+      "portableJar": {
+        "name": "Portable Jar With Spoon",
+        "description": "Keep your snacks fresh with these portable jars with spoons. Perfect for travel, picnics and outdoor adventures."
+      },
+      "cordlessPump": {
+        "name": "Wireless Tire Inflator",
+        "description": " Keep your tires inflated with this portable tire inflator. Compact and easy to use, suitable for cars, motorcycles, bicycles and sports balls."
+      },
+      "coolingFan": {
+        "name": "Rechargeable Cooling Fan",
+        "description": "Stay cool on the go with this rechargeable cooling fan. Compact and lightweight, perfect for travel and outdoor activities."
+      },
+
       "learnMoreButton": "Learn More",
       "readMoreButton": "Read More",
       "showLessButton": "Show Less",

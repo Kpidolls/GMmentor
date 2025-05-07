@@ -180,5 +180,166 @@
     "description": "store.products.beachBlanket.description",
     "image": "/assets/images/blanket.jpg",
     "link": "https://www.amazon.com/Wekapo-Blanket-Compact-Lightweight-Durable/dp/B08X6VQBGJ"
+  },
+  {
+    "id": "snorkel-mask",
+    "name": "store.products.snorkel.name",
+    "description": "store.products.snorkel.description",
+    "image": "/assets/images/snorkel.webp",
+    "link": "https://temu.to/k/eb6c9o8ii5y"
+  },
+  {
+    "id": "travel-journal",
+    "name": "store.products.travelJournal.name",
+    "description": "store.products.travelJournal.description",
+    "image": "/assets/images/travelJournal.webp",
+    "link": "https://temu.to/k/e4vq4yef233"
+  },
+  {
+    "id": "packing-cubes",
+    "name": "store.products.packingCubes.name",
+    "description": "store.products.packingCubes.description",
+    "image": "/assets/images/packingCubes.webp",
+    "link": "https://temu.to/k/eacfcv9uzwy"
+  },
+  {
+    "id": "travel-size-toiletries",
+    "name": "store.products.travelSizeToiletries.name",
+    "description": "store.products.travelSizeToiletries.description",
+    "image": "/assets/images/toiletries.webp",
+    "link": "https://temu.to/k/eczu0okvedo"
+  },
+  {
+    "id": " travel-goggles",
+    "name": "store.products.goggles.name",
+    "description": "store.products.goggles.description",
+    "image": "/assets/images/goggles.webp",
+    "link": "https://temu.to/k/el99mdx9xws"
+  },
+  {
+    "id": "travel-flippers",
+    "name": "store.products.flippers.name",
+    "description": "store.products.flippers.description",
+    "image": "/assets/images/flippers.webp",
+    "link": "https://temu.to/k/etxtia7082w"
+  },
+  {
+    "id": "beachTowel",
+    "name": "store.products.beachTowel.name",
+    "description": "store.products.beachTowel.description",
+    "image": "/assets/images/beachTowel.webp",
+    "link": "https://temu.to/k/el9q17erh03"
+  },
+  {
+    "id": "shoulder-bag ",
+    "name": "store.products.shoulderBag.name",
+    "description": "store.products.shoulderBag.description",
+    "image": "/assets/images/shoulderBag.webp",
+    "link": "https://temu.to/k/extk8aayb1w"
+  },
+  {
+    "id": "waterproof-bag",
+    "name": "store.products.waterproofBag.name",
+    "description": "store.products.waterproofBag.description",
+    "image": "/assets/images/waterproofBag.webp",
+    "link": "https://temu.to/k/epvx9k50ogb"
+  },
+  {
+    "id": "portableFan",
+    "name": "store.products.portableFan.name",
+    "description": "store.products.portableFan.description",
+    "image": "/assets/images/portableFan.webp",
+    "link": "https://temu.to/k/epvx9k50ogb"
+  },
+  {
+    "id": "beachTent",
+    "name": "store.products.tent.name",
+    "description": "store.products.tent.description",
+    "image": "/assets/images/tent.webp",
+    "link": "https://temu.to/k/eh357z6wrda"
+  },
+  {
+    "id": "phoneStraps",
+    "name": "store.products.phoneStraps.name",
+    "description": "store.products.phoneStraps.description",
+    "image": "/assets/images/phoneStraps.webp",
+    "link": "https://temu.to/k/eghvjgcahml"
+  },
+  {
+    "id": "beachToys",
+    "name": "store.products.beachToys.name",
+    "description": "store.products.beachToys.description",
+    "image": "/assets/images/beachToys.webp",
+    "link": "https://temu.to/k/eghvjgcahml"
+  },
+  {
+    "id": "beachChair",
+    "name": "store.products.beachChair.name",
+    "description": "store.products.beachChair.description",
+    "image": "/assets/images/beachChair.webp",
+    "link": "https://temu.to/k/eo8o7eyopus"
+  },
+  {
+    "id": "picnicBlanket",
+    "name": "store.products.picnicBlanket.name",
+    "description": "store.products.picnicBlanket.description",
+    "image": "/assets/images/picnicBlanket.webp",
+    "link": "https://temu.to/k/elfycqbol2q"
+  },
+  {
+    "id": "umbrellaAnchor",
+    "name": "store.products.umbrellaAnchor.name",
+    "description": "store.products.umbrellaAnchor.description",
+    "image": "/assets/images/umbrellaAnchor.webp",
+    "link": "https://temu.to/k/elfycqbol2q"
+  },
+  {
+    "id": "chairUmbrella",
+    "name": "store.products.chairUmbrella.name",
+    "description": "store.products.chairUmbrella.description",
+    "image": "/assets/images/chairUmbrella.webp",
+    "link": "https://temu.to/k/eem5gmav1g8"
+  },
+  {
+    "id": "travelUmbrella",
+    "name": "store.products.travelUmbrella.name",
+    "description": "store.products.travelUmbrella.description",
+    "image": "/assets/images/travelUmbrella.webp",
+    "link": "https://temu.to/k/e41g5dt6lxj"
+  },
+  {
+    "id": "fridgeBackpack",
+    "name": "store.products.fridgeBackpack.name",
+    "description": "store.products.fridgeBackpack.description",
+    "image": "/assets/images/fridgeBackpack.webp",
+    "link": "https://temu.to/k/ehr7mln8r3f"
+  },
+  {
+    "id": "coffeeMug",
+    "name": "store.products.coffeeMug.name",
+    "description": "store.products.coffeeMug.description",
+    "image": "/assets/images/coffeeMug.webp",
+    "link": "https://temu.to/k/eve2fg4i102"
+  },
+  {
+    "id": "portableJar",
+    "name": "store.products.portableJar.name",
+    "description": "store.products.portableJar.description",
+    "image": "/assets/images/portableJar.webp",
+    "link": "https://temu.to/k/e7qtz76r8o4"
+  },
+  {
+    "id": "cordlessPump",
+    "name": "store.products.cordlessPump.name",
+    "description": "store.products.cordlessPump.description",
+    "image": "/assets/images/pump.webp",
+    "link": "https://temu.to/k/eb9eyz6ja6p"
+  },
+  {
+    "id": "coolingFan",
+    "name": "store.products.coolingFan.name",
+    "description": "store.products.coolingFan.description",
+    "image": "/assets/images/coolingFan.webp",
+    "link": "https://temu.to/k/ew24j43hg96"
   }
 ]

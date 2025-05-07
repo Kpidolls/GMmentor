@@ -53,3 +53,7 @@ a:hover {
 .animate-scroll {
   animation: scroll 40s linear infinite;
 }
+
+.fit-content-span {
+  width: fit-content;
+}

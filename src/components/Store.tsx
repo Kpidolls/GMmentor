@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import products from '../data/products.json'; // Import the JSON file
+import products from '../data/products.json';
 
 const Store: React.FC = () => {
   const { t } = useTranslation();
-  const [visibleProducts, setVisibleProducts] = useState(8);
+  const [visibleProducts, setVisibleProducts] = useState(16);
+  const [filter, setFilter] = useState<'all' | 'amazon' | 'temu'>('all'); // Filter state
 
   const handleViewMore = () => {
-    setVisibleProducts((prev) => prev + 8);
+    setVisibleProducts((prev) => prev + 16);
   };
+
+  const filteredProducts = products.filter((product) => {
+    if (filter === 'amazon') return product.link.includes('amazon');
+    if (filter === 'temu') return product.link.includes('temu');
+    return true; // 'all' filter
+  });
 
   return (
     <div id="store" className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -17,13 +24,43 @@ const Store: React.FC = () => {
         <h2 className="text-3xl font-extrabold font-secondary-primary text-gray-900 sm:text-4xl text-center">
           {t('store.title')}
         </h2>
-        <p className="mt-4 text-lg text-gray-600 font-secondary text-center">
+        {/* <p className="mt-4 text-lg text-gray-600 font-secondary text-center">
           {t('store.subtitle')}
-        </p>
+        </p> */}
+
+        {/* Filter Buttons */}
+        <div className="mt-6 flex justify-center space-x-4">
+          <button
+            onClick={() => setFilter('all')}
+            className={`px-4 py-2 font-medium rounded-lg shadow-md transition duration-300 ${
+              filter === 'all' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-800'
+            }`}
+          >
+            {t('store.filters.all')}
+          </button>
+          <button
+            onClick={() => setFilter('amazon')}
+            className={`px-4 py-2 font-medium rounded-lg shadow-md transition duration-300 ${
+              filter === 'amazon' ? 'bg-black text-white' : 'bg-gray-200 text-gray-800'
+            }`}
+          >
+            {t('store.filters.amazon')}
+          </button>
+          <button
+            onClick={() => setFilter('temu')}
+            className={`px-4 py-2 font-medium rounded-lg shadow-md transition duration-300 ${
+              filter === 'temu' ? 'bg-orange-500 text-white' : 'bg-gray-200 text-gray-800'
+            }`}
+          >
+            {t('store.filters.temu')}
+          </button>
+        </div>
 
         {/* Product Grid */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {products.slice(0, visibleProducts).map((product) => (
+        <div
+          className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        >
+          {filteredProducts.slice(0, visibleProducts).map((product) => (
             <div
               key={product.id}
               className="bg-white shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300 flex flex-col"
@@ -48,25 +85,48 @@ const Store: React.FC = () => {
                 <h3 className="text-lg sm:text-xl font-semibold font-primary text-gray-800 mb-2 sm:mb-4 leading-tight min-h-[48px] sm:min-h-[56px]">
                   {t(product.name)}
                 </h3>
+
                 <p className="text-gray-600 font-secondary text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed">
                   {t(product.description)}
                 </p>
-                <a
-                  href={product.link}
-                  target="_self"
-                  rel="noopener noreferrer"
-                  className="mt-auto inline-block px-4 py-2 bg-[#0878fe] text-white font-medium rounded shadow hover:bg-blue-700 transition duration-300 text-center"
-                  aria-label={t('store.learnMore', { name: t(product.name) })}
-                >
-                  {t('store.products.learnMoreButton')}
-                </a>
+
+                {/* Horizontal Alignment for Label and Button */}
+                <div className="mt-auto flex items-center justify-between">
+                  {/* Product Label */}
+                  <span
+                    className={`inline-flex items-center text-xs font-medium px-2 py-1 rounded ${
+                      product.link.includes('amazon')
+                        ? 'bg-black text-white'
+                        : product.link.includes('temu')
+                        ? 'bg-orange-500 text-white'
+                        : 'bg-gray-300 text-gray-800'
+                    }`}
+                  >
+                    {product.link.includes('amazon')
+                      ? 'Amazon Store'
+                      : product.link.includes('temu')
+                      ? 'Temu Store'
+                      : 'Buy Now'}
+                  </span>
+
+                  {/* Learn More Button */}
+                  <a
+                    href={product.link}
+                    target="_self"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-[#0878fe] text-white font-medium rounded shadow hover:bg-blue-700 transition duration-300 text-center"
+                    aria-label={t('store.learnMore', { name: t(product.name) })}
+                  >
+                    {t('store.products.learnMoreButton')}
+                  </a>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* View More Button */}
-        {visibleProducts < products.length && (
+        {visibleProducts < filteredProducts.length && (
           <div className="mt-8 text-center">
             <button
               onClick={handleViewMore}
