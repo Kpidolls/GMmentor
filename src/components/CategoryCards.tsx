@@ -6,10 +6,10 @@ import { useTranslation } from 'react-i18next';
 
 // Define the categories array with proper typing
 const categories = [
-  { name: 'categories.mustSee', icon: FaMapMarkedAlt, tag: 'must', link: '#maps' },
+  { name: 'categories.mustSee', icon: FaMapMarkedAlt, tag: 'must', link: 'https://maps.app.goo.gl/nh9QZAwzkh31DrqGA' },
   { name: 'categories.islands', icon: GiIsland, tag: 'islands', link: '#islands' },
   { name: 'categories.food', icon: GiForkKnifeSpoon, tag: 'food', link: '#vegan' },
-  { name: 'categories.hiking', icon: FaHiking, tag: 'hiking', link: '#hiking' },
+  { name: 'categories.hiking', icon: FaHiking, tag: 'hiking', link: 'https://maps.app.goo.gl/oZ8ZGmrR7n2MCBtG8' },
 ];
 
 // Define the props for the CategoryCard component
@@ -23,9 +23,13 @@ interface CategoryCardProps {
 const CategoryCard: React.FC<CategoryCardProps> = ({ name, Icon, link }) => {
   const { t } = useTranslation();
 
+  const isExternalLink = link.startsWith('https://'); 
+
   return (
     <a
       href={link}
+      target={isExternalLink ? "_blank" : undefined} 
+      rel={isExternalLink ? "noopener noreferrer" : undefined} 
       className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl font-secondary text-center transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
       aria-label={t(`aria.exploreCategory`, { name: t(name) })}
       role="link"
