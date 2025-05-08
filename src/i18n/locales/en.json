@@ -231,8 +231,8 @@
   "store": {
     "filters": {
       "all": "All",
-      "amazon": "Amazon",
-      "temu": "Temu"
+      "amazon": "Amazon Store",
+      "temu": "Temu Store"
     },
     "title": "Essential Travel Gear",
     "subtitle": "Discover the perfect travel accessories for your next adventure.",

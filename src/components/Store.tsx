@@ -29,7 +29,7 @@ const Store: React.FC = () => {
         </p> */}
 
         {/* Filter Buttons */}
-        <div className="mt-6 flex justify-center space-x-4">
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
           <button
             onClick={() => setFilter('all')}
             className={`px-4 py-2 font-medium rounded-lg shadow-md transition duration-300 ${
@@ -103,9 +103,9 @@ const Store: React.FC = () => {
                     }`}
                   >
                     {product.link.includes('amazon')
-                      ? 'Amazon Store'
+                      ? 'Amazon'
                       : product.link.includes('temu')
-                      ? 'Temu Store'
+                      ? 'Temu'
                       : 'Buy Now'}
                   </span>
 
