@@ -93,7 +93,10 @@ const Store: React.FC = () => {
                 {/* Horizontal Alignment for Label and Button */}
                 <div className="mt-auto flex items-center justify-between">
                   {/* Product Label */}
-                  <span
+                  <a
+                    href={product.link}
+                    target="_self"
+                    rel="noopener noreferrer"
                     className={`inline-flex items-center text-xs font-medium px-2 py-1 rounded ${
                       product.link.includes('amazon')
                         ? 'bg-black text-white'
@@ -101,13 +104,14 @@ const Store: React.FC = () => {
                         ? 'bg-orange-500 text-white'
                         : 'bg-gray-300 text-gray-800'
                     }`}
+                    aria-label={t('store.learnMore', { name: t(product.name) })}
                   >
                     {product.link.includes('amazon')
                       ? 'Amazon'
                       : product.link.includes('temu')
                       ? 'Temu'
                       : 'Buy Now'}
-                  </span>
+                  </a>
 
                   {/* Learn More Button */}
                   <a
