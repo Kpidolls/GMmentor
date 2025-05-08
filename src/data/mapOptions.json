@@ -2,7 +2,7 @@
   {
     "id": "must-see",
     "title": "product.mustSee.title",
-    "img": "/assets/images/must.png",
+    "img": "/assets/images/must.webp",
     "description": "product.mustSee.description",
     "link": "https://maps.app.goo.gl/iDRPEgDRk7v8rpJj6",
     "target": "_blank",
@@ -20,7 +20,7 @@
   {
     "id": "rooftop",
     "title": "product.rooftop.title",
-    "img": "/assets/images/rooftop.png",
+    "img": "/assets/images/rooftop.webp",
     "description": "product.rooftop.description",
     "link": "https://maps.app.goo.gl/XJLd73anECFR8jBC6",
     "target": "_blank",
@@ -29,7 +29,7 @@
   {
     "id": "churches",
     "title": "product.churches.title",
-    "img": "/assets/images/church.jpg",
+    "img": "/assets/images/church.webp",
     "description": "product.churches.description",
     "link": "https://maps.app.goo.gl/y7bCep89uvZN7d9U9",
     "target": "_blank",
@@ -47,7 +47,7 @@
   {
     "id": "gyros",
     "title": "product.gyros.title",
-    "img": "/assets/images/giros.jpg",
+    "img": "/assets/images/giros.webp",
     "description": "product.gyros.description",
     "link": "https://maps.app.goo.gl/yVgdoS9nzp6XErWR6",
     "target": "_blank",
@@ -56,7 +56,7 @@
   {
     "id": "fish-tavernas",
     "title": "product.fishTavernas.title",
-    "img": "/assets/images/eat.jpg",
+    "img": "/assets/images/eat.webp",
     "description": "product.fishTavernas.description",
     "link": "https://maps.app.goo.gl/nvnD7kbMVK4dsJc96",
     "target": "_blank",
@@ -65,7 +65,7 @@
   {
     "id": "desserts",
     "title": "product.desserts.title",
-    "img": "/assets/images/desserts.jpg",
+    "img": "/assets/images/desserts.webp",
     "description": "product.desserts.description",
     "link": "https://maps.app.goo.gl/WKwvzVVLfCLLAAGK8",
     "target": "_blank",
@@ -74,7 +74,7 @@
   {
     "id": "coffee",
     "title": "product.coffee.title",
-    "img": "/assets/images/coffee.jpg",
+    "img": "/assets/images/coffee.webp",
     "description": "product.coffee.description",
     "link": "https://maps.app.goo.gl/p4o7Sk17ocYqQidP8",
     "target": "_blank",
@@ -83,7 +83,7 @@
   {
     "id": "tavernas",
     "title": "product.tavernas.title",
-    "img": "/assets/images/taverna.jpg",
+    "img": "/assets/images/taverna.webp",
     "description": "product.tavernas.description",
     "link": "https://maps.app.goo.gl/b1bUHEkRYgv9dGGs7",
     "target": "_blank",
@@ -92,7 +92,7 @@
   {
     "id": "wineries",
     "title": "product.wineries.title",
-    "img": "/assets/images/winery.png",
+    "img": "/assets/images/winery.webp",
     "description": "product.wineries.description",
     "link": "https://maps.app.goo.gl/izXJ2jaSSueHwrML8",
     "target": "_blank",
@@ -101,7 +101,7 @@
   {
     "id": "burger",
     "title": "product.burger.title",
-    "img": "/assets/images/burger.jpg",
+    "img": "/assets/images/burger.webp",
     "description": "product.burger.description",
     "link": "https://maps.app.goo.gl/nYnmFKXgLBNkVKiC6",
     "target": "_blank",
@@ -110,7 +110,7 @@
   {
     "id": "italian",
     "title": "product.italian.title",
-    "img": "/assets/images/italian.jpg",
+    "img": "/assets/images/italian.webp",
     "description": "product.italian.description",
     "link": "https://maps.app.goo.gl/KxdyM7pcpi8dSkTK7",
     "target": "_blank",
@@ -128,7 +128,7 @@
   {
     "id": "mexican",
     "title": "product.mexican.title",
-    "img": "/assets/images/mexican.jpg",
+    "img": "/assets/images/mexican.webp",
     "description": "product.mexican.description",
     "link": "https://maps.app.goo.gl/5aiGTrhtr7ob9D7M7",
     "target": "_blank",
@@ -155,7 +155,7 @@
   {
     "id": "bougatsa",
     "title": "product.bougatsa.title",
-    "img": "/assets/images/bougatsa.jpg",
+    "img": "/assets/images/bougatsa.webp",
     "description": "product.bougatsa.description",
     "link": "https://maps.app.goo.gl/EdZ87NgMbE25Qk7f8",
     "target": "_blank",
@@ -164,7 +164,7 @@
   {
     "id": "surf",
     "title": "product.surf.title",
-    "img": "/assets/images/surf.jpg",
+    "img": "/assets/images/surf.webp",
     "description": "product.surf.description",
     "link": "https://maps.app.goo.gl/C9vQfGhZTVE5phpa6",
     "target": "_blank",
@@ -173,7 +173,7 @@
   {
     "id": "family",
     "title": "product.family.title",
-    "img": "/assets/images/family.jpg",
+    "img": "/assets/images/family.webp",
     "description": "product.family.description",
     "link": "https://maps.app.goo.gl/Ju4Aw5yUeQZLgK159",
     "target": "_blank",
@@ -182,7 +182,7 @@
   {
     "id": "bouzoukia",
     "title": "product.bouzoukia.title",
-    "img": "/assets/images/bouzoukia.jpg",
+    "img": "/assets/images/bouzoukia.webp",
     "description": "product.bouzoukia.description",
     "link": "https://maps.app.goo.gl/EockHSJsHcWGRk7j8",
     "target": "_blank",
@@ -191,7 +191,7 @@
   {
     "id": "luxury",
     "title": "product.luxury.title",
-    "img": "/assets/images/fine-dining.jpg",
+    "img": "/assets/images/fine-dining.webp",
     "description": "product.luxury.description",
     "link": "https://maps.app.goo.gl/peyCRuk3gVxiF2ej7",
     "target": "_blank",

@@ -18,8 +18,8 @@ const TravelInsurance = () => {
         {/* Infographic */}
         <div className="flex justify-center mb-8 lg:mb-10 xl:mb-12">
           <img
-            src="/assets/images/NI-info-2.png"
-            alt={t('travelInsurance.imageAlt')} // Translated alt attribute
+            src="/assets/images/NI-info-2.webp"
+            alt={t('travelInsurance.imageAlt')}
             className="w-full max-w-lg lg:max-w-xl xl:max-w-2xl rounded-lg shadow-lg"
           />
         </div>
@@ -30,7 +30,7 @@ const TravelInsurance = () => {
             target="_self"
             rel="noopener noreferrer"
             className="px-8 lg:px-10 xl:px-12 py-3 lg:py-4 xl:py-5 bg-primary font-secondary text-white font-semibold rounded-lg shadow-lg hover:bg-secondary transition duration-300 text-lg lg:text-xl xl:text-2xl"
-            aria-label={t('travelInsurance.ctaAriaLabel')} // Translated aria-label
+            aria-label={t('travelInsurance.ctaAriaLabel')}
           >
             {t('travelInsurance.ctaButton')}
           </a>
