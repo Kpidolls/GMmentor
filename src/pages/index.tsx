@@ -10,7 +10,6 @@ import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import Product from '../components/Product';
-import TravelInsurance from '../components/TravelInsurance'; 
 import QASection from '../components/QASection'; 
 import MyTicker from '../components/Ticker';
 import Store from '../components/Store';
@@ -48,9 +47,6 @@ const App = () => {
           <Store />
           <Canvas />
         </>
-      </LazyShow>
-      <LazyShow>
-        <TravelInsurance />
       </LazyShow>
       <AboutUs />     
       <QASection /> 
