@@ -23,8 +23,8 @@
       "name": "navigation.store",
       "href": "store",
       "submenu": [
-        { "name": "navigation.mobileTravelData", "href": "store" },
-        { "name": "navigation.travelInsurance", "href": "travelinsurance" },
+        { "name": "navigation.mobileTravelData", "href": "/airalo" },
+        { "name": "navigation.travelInsurance", "href": "/insurance" },
         { "name": "navigation.travelItems", "href": "store" }
       ]
     },

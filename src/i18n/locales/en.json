@@ -444,13 +444,16 @@
     }
   },
   "travelInsurance": {
-    "title": "Travel Insurance",
-    "subtitle": "Protect yourself while traveling with comprehensive travel insurance from SafetyWing.",
+    "returnHome": "Return to Home",
+    "title": "Protect Your Travels with Insurance",
+    "subtitle": "Travel with peace of mind knowing you're covered by reliable and affordable travel insurance, trusted by adventurers worldwide.",
     "imageAlt": "Infographic showing benefits of travel insurance",
     "ctaButton": "Get Travel Insurance",
     "ctaAriaLabel": "Get travel insurance from SafetyWing",
-    "description1": "Traveling can be unpredictable. Ensure you are covered with SafetyWing's comprehensive travel insurance.",
-    "description2": "Our travel insurance offers coverage for medical expenses, trip cancellations, lost luggage, and more. Don't leave home without it!"
+    "description1": "Traveling can be unpredictable. Ensure you are covered with SafetyWing's comprehensive travel insurance. We trust SafetyWing because they offer reliable coverage, affordable plans, and exceptional customer support, making them our go-to choice for travel insurance.",
+    "description2": "This travel insurance offers coverage for medical expenses, trip cancellations, lost luggage, and more. Buy your peace of mind today and enjoy your travels without worries.",
+    "ctaTitle": "Get Covered Today!",
+    "ctaDescription": "Travel insurance is essential for challenging trips involving adventure, remote destinations, or unpredictable circumstances. We recommend SafetyWing for its reliability and affordability."
   },
   "aboutUs": {
     "title": "About Us",
@@ -535,5 +538,17 @@
     "parking": "Parking: ParkAround",
     "expenseTracker": "Expense Tracker: Splitwise",
     "welcomePickups": "Airport Transfers: Welcome Pickups"
+  },
+  "airalo": {
+    "returnHome": "Return to Home",
+    "title": "Mobile Travel Data with Airalo",
+    "subtitle": "Stay connected effortlessly while traveling with Airalo – the world’s first eSIM store.",
+    "imageAlt": "Airalo eSIM",
+    "description": "Avoid expensive roaming fees and the hassle of swapping SIM cards. With Airalo, you can easily download an eSIM for your destination and start browsing, navigating, and sharing your journey online as soon as you land.",
+    "promoTitle": "Get €3 off your first eSIM!",
+    "promoDescription": "Use referral code",
+    "promoInstruction": "at checkout or click the link below.",
+    "ctaButton": "Get Your Airalo eSIM",
+    "disclaimer": "Airalo is a trusted solution used by millions of travelers worldwide. Ensure your phone supports eSIM before purchasing."
   }
 }
