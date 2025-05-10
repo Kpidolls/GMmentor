@@ -31,10 +31,11 @@ interface SearchResult {
   link: string;
   type: string;
   image?: string;
+  keywords?: string[];
 }
 
 const sectionTitles: Record<string, string> = {
-  islands: 'Greek Islands',
+  islands: 'Destinations',
   product: 'Map lists',
   store: 'Travel Gear',
 };
@@ -66,6 +67,7 @@ const SearchPage = () => {
       link: item.link,
       type: 'islands',
       image: item.img || '/placeholder.png',
+      keywords: item.keywords || [], // Include keywords from islands.json
     })),
     ...productData.map((item) => ({
       id: item.id,
@@ -74,6 +76,7 @@ const SearchPage = () => {
       link: item.link,
       type: 'product',
       image: item.img || '/placeholder.png',
+      keywords: item.keywords || [], // Include keywords from mapOptions.json
     })),
     ...storeData.map((item) => ({
       id: item.id,
@@ -82,6 +85,7 @@ const SearchPage = () => {
       link: item.link,
       type: 'store',
       image: item.image || '/placeholder.png',
+      keywords: item.keywords || [], // Include keywords from products.json
     })),
   ], [t]);
 
@@ -91,7 +95,14 @@ const SearchPage = () => {
       const results = searchableData.filter((item) => {
         const titleNorm = normalizeText(item.title.toLowerCase());
         const descNorm = normalizeText(item.description.toLowerCase());
-        return titleNorm.includes(normalizedQuery) || descNorm.includes(normalizedQuery);
+        const keywordsNorm = (item.keywords || []).map((keyword) =>
+          normalizeText(keyword.toLowerCase())
+        );
+        return (
+          titleNorm.includes(normalizedQuery) ||
+          descNorm.includes(normalizedQuery) ||
+          keywordsNorm.some((keyword) => keyword.includes(normalizedQuery))
+        );
       });
       setFilteredResults(results);
     }, 300)

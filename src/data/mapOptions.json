@@ -6,7 +6,15 @@
     "description": "product.mustSee.description",
     "link": "https://maps.app.goo.gl/iDRPEgDRk7v8rpJj6",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "must see",
+      "greece",
+      "sights",
+      "attractions",
+      "landmarks",
+      "tourist attractions"
+    ]
   },
   {
     "id": "hiking",
@@ -15,7 +23,15 @@
     "description": "product.hiking.description",
     "link": "https://maps.app.goo.gl/1qjPVDcEhx1p4dcy8",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "hiking",
+      "greece",
+      "trails",
+      "nature",
+      "outdoors",
+      "adventure"
+    ]
   },
   {
     "id": "rooftop",
@@ -24,7 +40,15 @@
     "description": "product.rooftop.description",
     "link": "https://maps.app.goo.gl/XJLd73anECFR8jBC6",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "rooftop",
+      "greece",
+      "views",
+      "restaurants",
+      "bars",
+      "nightlife"
+    ]
   },
   {
     "id": "churches",
@@ -33,7 +57,15 @@
     "description": "product.churches.description",
     "link": "https://maps.app.goo.gl/y7bCep89uvZN7d9U9",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "churches",
+      "greece",
+      "religion",
+      "culture",
+      "history",
+      "architecture"
+    ]
   },
   {
     "id": "vegan",
@@ -42,7 +74,15 @@
     "description": "product.vegan.description",
     "link": "https://maps.app.goo.gl/FkDZGraEdQBmzS1A6",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "vegan",
+      "greece",
+      "food",
+      "restaurants",
+      "healthy",
+      "plant-based"
+    ]
   },
   {
     "id": "gyros",
@@ -51,7 +91,21 @@
     "description": "product.gyros.description",
     "link": "https://maps.app.goo.gl/yVgdoS9nzp6XErWR6",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "gyros",
+      "greece",
+      "food",
+      "restaurants",
+      "street food",
+      "fast food",
+      "doner",
+      "souvlaki",
+      "pita",
+      "kebab",
+      "traditional food",
+      "greek food"
+    ]
   },
   {
     "id": "fish-tavernas",
@@ -60,7 +114,15 @@
     "description": "product.fishTavernas.description",
     "link": "https://maps.app.goo.gl/nvnD7kbMVK4dsJc96",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "fish tavernas",
+      "greece",
+      "food",
+      "restaurants",
+      "seafood",
+      "traditional food"
+    ]
   },
   {
     "id": "desserts",
@@ -69,7 +131,16 @@
     "description": "product.desserts.description",
     "link": "https://maps.app.goo.gl/WKwvzVVLfCLLAAGK8",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "desserts",
+      "greece",
+      "food",
+      "restaurants",
+      "sweets",
+      "pastries",
+      "traditional food"
+    ]
   },
   {
     "id": "coffee",
@@ -78,7 +149,16 @@
     "description": "product.coffee.description",
     "link": "https://maps.app.goo.gl/p4o7Sk17ocYqQidP8",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "coffee",
+      "greece",
+      "food",
+      "cafes",
+      "restaurants",
+      "breakfast",
+      "snacks"
+    ]
   },
   {
     "id": "tavernas",
@@ -87,7 +167,15 @@
     "description": "product.tavernas.description",
     "link": "https://maps.app.goo.gl/b1bUHEkRYgv9dGGs7",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "tavernas",
+      "greece",
+      "food",
+      "restaurants",
+      "traditional food",
+      "greek food"
+    ]
   },
   {
     "id": "wineries",
@@ -96,7 +184,16 @@
     "description": "product.wineries.description",
     "link": "https://maps.app.goo.gl/izXJ2jaSSueHwrML8",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "wineries",
+      "greece",
+      "food",
+      "restaurants",
+      "wine",
+      "vineyards",
+      "tasting"
+    ]
   },
   {
     "id": "burger",
@@ -105,7 +202,15 @@
     "description": "product.burger.description",
     "link": "https://maps.app.goo.gl/nYnmFKXgLBNkVKiC6",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "burger",
+      "greece",
+      "food",
+      "restaurants",
+      "fast food",
+      "street food"
+    ]
   },
   {
     "id": "italian",
@@ -114,7 +219,16 @@
     "description": "product.italian.description",
     "link": "https://maps.app.goo.gl/KxdyM7pcpi8dSkTK7",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "italian",
+      "greece",
+      "food",
+      "restaurants",
+      "pasta",
+      "pizza",
+      "cuisine"
+    ]
   },
   {
     "id": "asian",
@@ -123,7 +237,16 @@
     "description": "product.asian.description",
     "link": "https://maps.app.goo.gl/tn7c3qc8uYzbkhji6",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "asian",
+      "greece",
+      "food",
+      "restaurants",
+      "cuisine",
+      "sushi",
+      "noodles"
+    ]
   },
   {
     "id": "mexican",
@@ -132,7 +255,16 @@
     "description": "product.mexican.description",
     "link": "https://maps.app.goo.gl/5aiGTrhtr7ob9D7M7",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "mexican",
+      "greece",
+      "food",
+      "restaurants",
+      "cuisine",
+      "tacos",
+      "burritos"
+    ]
   },
   {
     "id": "cheap-eats",
@@ -141,7 +273,15 @@
     "description": "product.cheapEats.description",
     "link": "https://maps.app.goo.gl/yB9f6U24aQbe8FNRA",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "cheap eats",
+      "greece",
+      "food",
+      "restaurants",
+      "budget",
+      "affordable"
+    ]
   },
   {
     "id": "bars",
@@ -150,7 +290,8 @@
     "description": "product.bars.description",
     "link": "https://maps.app.goo.gl/GzgU8nPbzbJE8K7P8",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": ["bars", "greece", "nightlife", "drinks", "cocktails", "pubs"]
   },
   {
     "id": "bougatsa",
@@ -159,7 +300,15 @@
     "description": "product.bougatsa.description",
     "link": "https://maps.app.goo.gl/EdZ87NgMbE25Qk7f8",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "bougatsa",
+      "greece",
+      "food",
+      "restaurants",
+      "pastries",
+      "snacks"
+    ]
   },
   {
     "id": "surf",
@@ -168,7 +317,15 @@
     "description": "product.surf.description",
     "link": "https://maps.app.goo.gl/C9vQfGhZTVE5phpa6",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "surf",
+      "greece",
+      "water sports",
+      "beach",
+      "ocean",
+      "adventure"
+    ]
   },
   {
     "id": "family",
@@ -177,7 +334,15 @@
     "description": "product.family.description",
     "link": "https://maps.app.goo.gl/Ju4Aw5yUeQZLgK159",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "family",
+      "greece",
+      "activities",
+      "kids",
+      "fun",
+      "entertainment"
+    ]
   },
   {
     "id": "bouzoukia",
@@ -186,7 +351,15 @@
     "description": "product.bouzoukia.description",
     "link": "https://maps.app.goo.gl/EockHSJsHcWGRk7j8",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "bouzoukia",
+      "greece",
+      "nightlife",
+      "music",
+      "entertainment",
+      "culture"
+    ]
   },
   {
     "id": "luxury",
@@ -195,6 +368,14 @@
     "description": "product.luxury.description",
     "link": "https://maps.app.goo.gl/peyCRuk3gVxiF2ej7",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "luxury",
+      "greece",
+      "fine dining",
+      "restaurants",
+      "high-end",
+      "exclusive"
+    ]
   }
 ]

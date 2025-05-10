@@ -14,7 +14,7 @@
   "navigation": {
     "maps": "Maps",
     "mustSee": "Must See",
-    "islands": "Islands",
+    "islands": "Destinations",
     "food": "Food",
     "hiking": "Hiking",
     "store": "Store",
@@ -47,7 +47,7 @@
   "categories": {
     "title": "Explore Lists by Category",
     "mustSee": "Must See",
-    "islands": "Islands",
+    "islands": "Destinations",
     "food": "Food",
     "hiking": "Hiking"
   },
@@ -153,7 +153,7 @@
     "imageAlt": "Image for {{title}}"
   },
   "islands": {
-    "title": "Explore Greek Islands",
+    "title": "Explore Destinations in Greece",
     "crete": {
       "title": "📍 Crete",
       "description": "Discover Crete, the largest Greek island, with its rich history, stunning landscapes and vibrant culture."
@@ -175,7 +175,7 @@
       "description": "Explore Rhodes, a historic island with medieval charm, ancient ruins and beautiful beaches."
     },
     "corfu": {
-      "title": "📍 Corfu (Kerkira)",
+      "title": "📍 Corfu (Kerkyra)",
       "description": "Discover Corfu, with its Venetian architecture, lush landscapes and stunning coastlines."
     },
     "paros": {
@@ -221,6 +221,10 @@
     "sifnos": {
       "title": "📍 Sifnos",
       "description": "Sifnos is famous for its traditional Cycladic architecture, beautiful beaches and delicious cuisine."
+    },
+    "halkidiki": {
+      "title": "📍 Halkidiki",
+      "description": "The golden beaches meet crystal-clear waters and green landscapes. Truly, there is nowhere else quite like Halkidiki."
     },
     "exploreButton": "Open Map",
     "shareButton": "Share",
@@ -432,6 +436,10 @@
       "coolingFan": {
         "name": "Rechargeable Cooling Fan",
         "description": "Stay cool on the go with this rechargeable cooling fan. Compact and lightweight, perfect for travel and outdoor activities."
+      },
+      "lipProtection": {
+        "name": "Lip Protection Balm",
+        "description": "Protect your lips from the sun with this SPF 30 lip balm. Moisturizing and nourishing, perfect for outdoor adventures."
       },
 
       "learnMoreButton": "Learn More",

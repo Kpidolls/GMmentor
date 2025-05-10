@@ -6,7 +6,20 @@
     "description": "islands.crete.description",
     "link": "https://maps.app.goo.gl/Jqj9PF98pe3Pjbt86",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "crete",
+      "crete island",
+      "crete town",
+      "chania",
+      "heraklion",
+      "iraklion",
+      "rethymno",
+      "rethimno",
+      "agios nikolaos"
+    ]
   },
   {
     "id": "island-mykonos",
@@ -15,7 +28,18 @@
     "description": "islands.mykonos.description",
     "link": "https://maps.app.goo.gl/a5ydikhYtHbFqimq8",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "mykonos",
+      "mykonos island",
+      "mykonos town",
+      "mykonos beaches",
+      "kuklades",
+      "kyklades",
+      "party"
+    ]
   },
   {
     "id": "island-santorini",
@@ -24,7 +48,17 @@
     "description": "islands.santorini.description",
     "link": "https://maps.app.goo.gl/szbFdbDzFkxaYfjNA",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "santorini",
+      "santorini island",
+      "santorini town",
+      "oia",
+      "oia town",
+      "kyklades"
+    ]
   },
   {
     "id": "island-aegina",
@@ -33,7 +67,17 @@
     "description": "islands.aegina.description",
     "link": "https://maps.app.goo.gl/KFCFNepFpoeG9wGh9",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "aegina",
+      "aegina island",
+      "aegina town",
+      "saronic",
+      "argosaronic",
+      "near athens"
+    ]
   },
   {
     "id": "island-rhodes",
@@ -42,7 +86,8 @@
     "description": "islands.rhodes.description",
     "link": "https://maps.app.goo.gl/tLQZpTA6oyRoNg1w9",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": ["island", "greece", "rhodes", "rodos", "dodecanese"]
   },
   {
     "id": "island-corfu",
@@ -51,7 +96,16 @@
     "description": "islands.corfu.description",
     "link": "https://maps.app.goo.gl/9fSrbmQQu6eCHA6H9",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "corfu",
+      "kerkyra",
+      "kerkira",
+      "ionio",
+      "ionian"
+    ]
   },
   {
     "id": "island-paros",
@@ -60,7 +114,21 @@
     "description": "islands.paros.description",
     "link": "https://maps.app.goo.gl/N22ZNRRcEbj2kHQ36",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "paros",
+      "parikia",
+      "paros town",
+      "antiparos",
+      "kite",
+      "kitesurf",
+      "windsurf",
+      "kyklades",
+      "kuklades",
+      "party"
+    ]
   },
   {
     "id": " island-zakynthos",
@@ -69,7 +137,16 @@
     "description": "islands.zakynthos.description",
     "link": "https://maps.app.goo.gl/ve6sQVdDRJC3hQwt9",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "zakynthos",
+      "zante",
+      "kefalonia",
+      "kefalonia island",
+      "ionio"
+    ]
   },
   {
     "id": "island-skiathos",
@@ -78,7 +155,15 @@
     "description": "islands.skiathos.description",
     "link": "https://maps.app.goo.gl/NgV5jbjCV5hQRViF7",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "skiathos",
+      "skiathos island",
+      "skiathos town",
+      "sporades"
+    ]
   },
   {
     "id": "island-naxos",
@@ -87,7 +172,16 @@
     "description": "islands.naxos.description",
     "link": "https://maps.app.goo.gl/oqCZFMkzeEujtUTZ7",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "naxos",
+      "naxos island",
+      "naxos town",
+      "kyklades",
+      "kuklades"
+    ]
   },
   {
     "id": "island-karpathos",
@@ -96,7 +190,16 @@
     "description": "islands.karpathos.description",
     "link": "https://maps.app.goo.gl/WMXHM2VfaxyM2s147",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "karpathos",
+      "karpathos island",
+      "karpathos town",
+      "dodecanese",
+      "dodekanisa"
+    ]
   },
   {
     "id": "island-kos",
@@ -105,7 +208,16 @@
     "description": "islands.kos.description",
     "link": "https://maps.app.goo.gl/uPrNF6PM2HMdAnU66",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "kos",
+      "kos island",
+      "kos town",
+      "dodecanese",
+      "dodekanisa"
+    ]
   },
   {
     "id": "island-kefalonia",
@@ -114,7 +226,15 @@
     "description": "islands.kefalonia.description",
     "link": "https://maps.app.goo.gl/UZDiFWDUYfs1fkYZ7",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "kefalonia",
+      "kefalonia island",
+      "kefalonia town",
+      "ionio"
+    ]
   },
   {
     "id": "island-kythnos",
@@ -123,7 +243,16 @@
     "description": "islands.kythnos.description",
     "link": "https://maps.app.goo.gl/zUoS8hr8bHiMc63G9",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "kythnos",
+      "kythnos island",
+      "kythnos town",
+      "kuklades",
+      "kyklades"
+    ]
   },
   {
     "id": "island-skyros",
@@ -132,7 +261,15 @@
     "description": "islands.skyros.description",
     "link": "https://maps.app.goo.gl/byu8NL7UySph7vYYA",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "skyros",
+      "skyros island",
+      "skyros town",
+      "sporades"
+    ]
   },
   {
     "id": "island-lemnos",
@@ -141,7 +278,16 @@
     "description": "islands.lemnos.description",
     "link": "https://maps.app.goo.gl/e4aSadNjBMhQauPg9",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "lemnos",
+      "lemnos island",
+      "lemnos town",
+      "aigaio",
+      "aegean"
+    ]
   },
   {
     "id": "island-sifnos",
@@ -150,6 +296,64 @@
     "description": "islands.sifnos.description",
     "link": "https://maps.app.goo.gl/oAWNrN1uC3FwEZNu6",
     "target": "_blank",
-    "rel": "noopener noreferrer"
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "sifnos",
+      "sifnos island",
+      "sifnos town",
+      "kyklades",
+      "kuklades"
+    ]
+  },
+  {
+    "id": "halkidiki",
+    "title": "islands.halkidiki.title",
+    "img": "/assets/images/halkidiki.webp",
+    "description": "islands.halkidiki.description",
+    "link": "https://maps.app.goo.gl/MhqSnEAoDn9vkc3b8",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "halkidiki",
+      "greece",
+      "halkidiki peninsula",
+      "halkidiki island",
+      "halkidiki beaches",
+      "kassandra",
+      "kassandra peninsula",
+      "kassandra island",
+      "kassandra beaches",
+      "kassandra travel",
+      "kassandra tourism",
+      "sithonia",
+      "sithonia peninsula",
+      "sithonia island",
+      "sithonia beaches",
+      "athos",
+      "athos peninsula",
+      "hanioti",
+      "chanioti",
+      "pefkochori",
+      "pefkohori",
+      "kapsoxora",
+      "paliouri",
+      "poluxrono",
+      "pallini",
+      "nikiti",
+      "neos marmaras",
+      "toroni",
+      "parthenon",
+      "sani",
+      "vourvourou",
+      "kavourotripes",
+      "nikiti",
+      "agio oros",
+      "mount athos",
+      "fourka",
+      "kallithea",
+      "diaporos"
+    ]
   }
 ]
