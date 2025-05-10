@@ -40,17 +40,19 @@ const sectionTitles: Record<string, string> = {
   store: 'Travel Gear',
 };
 
-// Basic Greek-to-Latin transliteration map
-const greekToLatinMap: Record<string, string> = {
-  α: 'a', β: 'v', γ: 'g', δ: 'd', ε: 'e', ζ: 'z', η: 'i', θ: 'th', ι: 'i',
-  κ: 'k', λ: 'l', μ: 'm', ν: 'n', ξ: 'x', ο: 'o', π: 'p', ρ: 'r', σ: 's',
-  τ: 't', υ: 'y', φ: 'f', χ: 'ch', ψ: 'ps', ω: 'o',
-  ά: 'a', έ: 'e', ή: 'i', ί: 'i', ό: 'o', ύ: 'y', ώ: 'o', ς: 's',
+const greekToLatinMap: Record<string, string[]> = {
+  α: ['a'], β: ['v', 'b'], γ: ['g'], δ: ['d'], ε: ['e'], ζ: ['z'], η: ['i', 'e'], θ: ['th'], ι: ['i','y'],
+  κ: ['k'], λ: ['l'], μ: ['m'], ν: ['n'], ξ: ['x','ks'], ο: ['o'], π: ['p'], ρ: ['r'], σ: ['s'],
+  τ: ['t'], υ: ['y', 'i'], φ: ['f'], χ: ['ch', 'h', 'x'], ψ: ['ps'], ω: ['o'],
+  ά: ['a'], έ: ['e'], ή: ['i'], ί: ['i'], ό: ['o'], ύ: ['y'], ώ: ['o'], ς: ['s'],
 };
 
 const normalizeText = (text: string): string => {
   const lower = text.toLowerCase();
-  return lower.replace(/[\u0370-\u03FF\u1F00-\u1FFF]/g, (char) => greekToLatinMap[char] || char);
+  return Array.from(lower).map((char) => {
+    const transliterations = greekToLatinMap[char];
+    return transliterations ? transliterations[0] : char; // Use the first transliteration or the original character
+  }).join('');
 };
 
 const SearchPage = () => {
@@ -62,35 +64,40 @@ const SearchPage = () => {
   const searchableData = useMemo<SearchResult[]>(() => [
     ...islandsData.map((item) => ({
       id: item.id,
-      title: t(item.title),
-      description: t(item.description),
+      title: t(item.title) || item.title,
+      description: t(item.description) || item.description,
       link: item.link,
       type: 'islands',
       image: item.img || '/placeholder.png',
-      keywords: item.keywords || [], // Include keywords from islands.json
+      keywords: item.keywords || [],
     })),
     ...productData.map((item) => ({
       id: item.id,
-      title: t(item.title),
-      description: t(item.description),
+      title: t(item.title) || item.title,
+      description: t(item.description) || item.description,
       link: item.link,
       type: 'product',
       image: item.img || '/placeholder.png',
-      keywords: item.keywords || [], // Include keywords from mapOptions.json
+      keywords: item.keywords || [],
     })),
     ...storeData.map((item) => ({
       id: item.id,
-      title: t(item.name),
-      description: t(item.description),
+      title: t(item.name) || item.name,
+      description: t(item.description) || item.description,
       link: item.link,
       type: 'store',
       image: item.image || '/placeholder.png',
-      keywords: item.keywords || [], // Include keywords from products.json
+      keywords: item.keywords || [],
     })),
   ], [t]);
 
   const debouncedSearch = useMemo(() =>
     debounce((query: string) => {
+      if (!query.trim()) {
+        setFilteredResults([]);
+        return;
+      }
+
       const normalizedQuery = normalizeText(query.toLowerCase());
       const results = searchableData.filter((item) => {
         const titleNorm = normalizeText(item.title.toLowerCase());
@@ -115,7 +122,9 @@ const SearchPage = () => {
 
   const handleFocus = () => {
     searchInputRef.current?.focus();
-    setFilteredResults(searchableData);
+    if (!searchQuery.trim()) {
+      setFilteredResults(searchableData);
+    }
   };
 
   useEffect(() => {
@@ -128,7 +137,7 @@ const SearchPage = () => {
         <Input
           ref={searchInputRef}
           placeholder={t('search.placeholder', 'Search...')}
-          aria-label="Search input"
+          aria-label="Search input for destinations, maps, or travel gear"
           value={searchQuery}
           onChange={(e) => handleSearch(e.target.value)}
           size="sm"
@@ -139,7 +148,7 @@ const SearchPage = () => {
         />
         <InputRightElement width="2.5rem">
           <IconButton
-            aria-label="Search"
+            aria-label="Execute search"
             icon={<SearchIcon />}
             size="sm"
             variant="ghost"
@@ -163,18 +172,19 @@ const SearchPage = () => {
                 gap={{ base: 3, sm: 4, md: 6 }}
               >
                 {sectionResults.map((item) => (
-                  <NextLink key={item.id} href={item.link} passHref>
-                    <Link
-                      _hover={{ textDecoration: 'none' }}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <GridItem
-                        bg="white"
-                        shadow="md"
-                        borderRadius="md"
-                        overflow="hidden"
-                        _hover={{ shadow: 'lg' }}
+                  <GridItem
+                    key={item.id}
+                    bg="white"
+                    shadow="md"
+                    borderRadius="md"
+                    overflow="hidden"
+                    _hover={{ shadow: 'lg' }}
+                  >
+                    <NextLink href={item.link} passHref>
+                      <Link
+                        _hover={{ textDecoration: 'none' }}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <Box p={{ base: 2, sm: 3 }}>
                           <Image
@@ -201,9 +211,9 @@ const SearchPage = () => {
                             {item.description}
                           </Text>
                         </Box>
-                      </GridItem>
-                    </Link>
-                  </NextLink>
+                      </Link>
+                    </NextLink>
+                  </GridItem>
                 ))}
               </Grid>
             </Box>

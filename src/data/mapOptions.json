@@ -121,7 +121,30 @@
       "food",
       "restaurants",
       "seafood",
-      "traditional food"
+      "traditional food",
+      "sea view",
+      "waterfront",
+      "beachfront",
+      "ocean view"
+    ]
+  },
+  {
+    "id": "fish",
+    "title": "product.fish.title",
+    "img": "/assets/images/psari.webp",
+    "description": "product.fish.description",
+    "link": "https://maps.app.goo.gl/YGLZVx8jLVvULZB57",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "fish tavernas",
+      "greece",
+      "food",
+      "restaurants",
+      "seafood",
+      "traditional food",
+      "tavernas",
+      "psari"
     ]
   },
   {
