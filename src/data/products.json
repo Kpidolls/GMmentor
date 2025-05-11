@@ -24,6 +24,14 @@
     "keywords": ["pillow", "mask", "travel", "sleeping"]
   },
   {
+    "id": "insurance",
+    "name": "store.products.insurance.name",
+    "description": "store.products.insurance.description",
+    "image": "/assets/images/insurance.webp",
+    "link": "",
+    "keywords": [""]
+  },
+  {
     "id": "travel-luggage-lock",
     "name": "store.products.travelLuggageLock.name",
     "description": "store.products.travelLuggageLock.description",
