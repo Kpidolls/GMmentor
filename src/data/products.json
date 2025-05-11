@@ -28,8 +28,15 @@
     "name": "store.products.insurance.name",
     "description": "store.products.insurance.description",
     "image": "/assets/images/insurance.webp",
-    "link": "",
-    "keywords": [""]
+    "link": "https://safetywing.com/?referenceID=26193325&utm_source=26193325&utm_medium=Ambassador",
+    "keywords": [
+      "insurance",
+      "travel",
+      "safety",
+      "health",
+      "medical",
+      "asfaleia"
+    ]
   },
   {
     "id": "travel-luggage-lock",
