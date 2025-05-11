@@ -13,7 +13,16 @@
       "sights",
       "attractions",
       "landmarks",
-      "tourist attractions"
+      "tourist attractions",
+      "acropolis",
+      "parthenon",
+      "temple of olympian zeus",
+      "ancient agora",
+      "plaka",
+      "monastiraki",
+      "sightseeing",
+      "historical sites",
+      "cultural sites"
     ]
   },
   {
@@ -30,7 +39,10 @@
       "trails",
       "nature",
       "outdoors",
-      "adventure"
+      "adventure",
+      "mountains",
+      "landscapes",
+      "exploration"
     ]
   },
   {
@@ -64,7 +76,10 @@
       "religion",
       "culture",
       "history",
-      "architecture"
+      "architecture",
+      "ekklisia",
+      "agios",
+      "agias"
     ]
   },
   {
@@ -104,7 +119,8 @@
       "pita",
       "kebab",
       "traditional food",
-      "greek food"
+      "greek food",
+      "giros"
     ]
   },
   {
@@ -125,7 +141,11 @@
       "sea view",
       "waterfront",
       "beachfront",
-      "ocean view"
+      "ocean view",
+      "psari",
+      "taverna",
+      "mezedopoleio",
+      "meze"
     ]
   },
   {
@@ -144,7 +164,10 @@
       "seafood",
       "traditional food",
       "tavernas",
-      "psari"
+      "psari",
+      "taverna",
+      "mezedopoleio",
+      "meze"
     ]
   },
   {
@@ -162,7 +185,14 @@
       "restaurants",
       "sweets",
       "pastries",
-      "traditional food"
+      "traditional food",
+      "profiterole",
+      "baklava",
+      "galaktoboureko",
+      "kourabiedes",
+      "loukoum",
+      "koulourakia",
+      "halva"
     ]
   },
   {
@@ -180,7 +210,10 @@
       "cafes",
       "restaurants",
       "breakfast",
-      "snacks"
+      "snacks",
+      "kafeneio",
+      "kafes",
+      "kafeteria"
     ]
   },
   {
@@ -197,7 +230,9 @@
       "food",
       "restaurants",
       "traditional food",
-      "greek food"
+      "greek food",
+      "mezedopoleio",
+      "meze"
     ]
   },
   {
@@ -215,7 +250,11 @@
       "restaurants",
       "wine",
       "vineyards",
-      "tasting"
+      "tasting",
+      "vineyard",
+      "krasi",
+      "wine tasting",
+      "wine tours"
     ]
   },
   {
@@ -232,7 +271,11 @@
       "food",
       "restaurants",
       "fast food",
-      "street food"
+      "street food",
+      "berger",
+      "hamburger",
+      "cheeseburger",
+      "bourger"
     ]
   },
   {
@@ -250,7 +293,11 @@
       "restaurants",
       "pasta",
       "pizza",
-      "cuisine"
+      "cuisine",
+      "makaroni",
+      "spaghetti",
+      "lasagna",
+      "ravioli"
     ]
   },
   {
@@ -268,7 +315,11 @@
       "restaurants",
       "cuisine",
       "sushi",
-      "noodles"
+      "noodles",
+      "soushi",
+      "ramen",
+      "kineziko",
+      "noudles"
     ]
   },
   {
@@ -286,7 +337,8 @@
       "restaurants",
       "cuisine",
       "tacos",
-      "burritos"
+      "burritos",
+      "mexikaniko"
     ]
   },
   {
@@ -303,7 +355,8 @@
       "food",
       "restaurants",
       "budget",
-      "affordable"
+      "affordable",
+      "ftina"
     ]
   },
   {
@@ -314,7 +367,15 @@
     "link": "https://maps.app.goo.gl/GzgU8nPbzbJE8K7P8",
     "target": "_blank",
     "rel": "noopener noreferrer",
-    "keywords": ["bars", "greece", "nightlife", "drinks", "cocktails", "pubs"]
+    "keywords": [
+      "bars",
+      "greece",
+      "nightlife",
+      "drinks",
+      "cocktails",
+      "pubs",
+      "mpar"
+    ]
   },
   {
     "id": "bougatsa",
@@ -330,7 +391,9 @@
       "food",
       "restaurants",
       "pastries",
-      "snacks"
+      "snacks",
+      "mpougatsa",
+      "gluko"
     ]
   },
   {
@@ -347,7 +410,9 @@
       "water sports",
       "beach",
       "ocean",
-      "adventure"
+      "adventure",
+      "serf",
+      "thalassa"
     ]
   },
   {
@@ -364,7 +429,10 @@
       "activities",
       "kids",
       "fun",
-      "entertainment"
+      "entertainment",
+      "paidia",
+      "parka",
+      "moro"
     ]
   },
   {
@@ -381,7 +449,12 @@
       "nightlife",
       "music",
       "entertainment",
-      "culture"
+      "culture",
+      "live music",
+      "dancing",
+      "greek music",
+      "traditional music",
+      "mpouzoukia"
     ]
   },
   {
@@ -398,7 +471,9 @@
       "fine dining",
       "restaurants",
       "high-end",
-      "exclusive"
+      "exclusive",
+      "akrivo fagito",
+      "premium"
     ]
   }
 ]
