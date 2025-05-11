@@ -18,7 +18,7 @@ const About = () => {
                 { href: '/login', label: t('about.affiliatePartners') },
                 { href: '/login', label: t('about.mapCreators') },
                 { href: '#store', label: t('about.products') },
-                { href: '#travelinsurance', label: t('about.travelInsurance') },
+                { href: '/insurance', label: t('about.travelInsurance') },
               ].map((link, index) => (
                 <li key={index}>
                   <Link
