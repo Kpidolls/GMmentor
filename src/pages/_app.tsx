@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '../styles/main.css';
+import usePersistedLanguage from '../hooks/usePersistedLanguage';
 
 // Optional: Extend Chakra's default theme
 const customTheme = extendTheme({
@@ -19,6 +20,7 @@ const customTheme = extendTheme({
 });
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  usePersistedLanguage();
   const router = useRouter();
 
   useEffect(() => {

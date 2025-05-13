@@ -54,7 +54,9 @@ const Header = () => {
   const submenuHover = 'gray.200'; // Default submenu hover background color
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'el' : 'en');
+    const newLang = i18n.language === 'en' ? 'el' : 'en';
+    i18n.changeLanguage(newLang);
+    localStorage.setItem('language', newLang); // ✅ persist language
   };
 
   const handleNavigation = (href?: string) => {
