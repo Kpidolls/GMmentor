@@ -9,8 +9,8 @@ function MyTicker() {
   return (
     <Box
       className="ticker-container"
-      position="fixed"
-      zIndex="50"
+      position="relative"
+      zIndex="20"
       width="100%"
       overflow="hidden"
       color="black"

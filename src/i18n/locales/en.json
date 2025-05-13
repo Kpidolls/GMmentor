@@ -31,7 +31,7 @@
   },
   "mainHero": {
     "title": "Recommendations for Greece",
-    "subtitle": "Travel Tools",
+    "subtitle": "Travel Maps",
     "description": "Google Maps Lists for trip planning.",
     "primaryAction": {
       "text": {
@@ -237,12 +237,16 @@
     "viewMoreButton": "View More Islands"
   },
   "store": {
+    "meta": {
+      "title": "Travel Gear Store",
+      "description": "Discover the best travel accessories from Amazon and Temu."
+    },
     "filters": {
       "all": "All",
-      "amazon": "Amazon Store",
-      "temu": "Temu Store"
+      "amazon": "Amazon",
+      "temu": "Temu"
     },
-    "title": "Essential Travel Gear",
+    "title": "Travel Gear",
     "subtitle": "Discover the perfect travel accessories for your next adventure.",
     "products": {
       "universalTravelAdapter": {
@@ -453,15 +457,15 @@
       "learnMoreButton": "Learn More",
       "readMoreButton": "Read More",
       "showLessButton": "Show Less",
-      "viewMoreButton": "View More Products",
-      "footerNote": "Note: We may earn a commission if you purchase through these links.",
+      "viewMoreButton": "View More",
+      "footerNote": "Note: We may earn a commission if you purchase through these links at no extra cost to you.",
       "imageAlt": "Image of {{name}}",
       "learnMore": "Learn more about {{name}}"
     }
   },
   "travelInsurance": {
     "returnHome": "Return to Home",
-    "title": "Protect Your Travels with Insurance",
+    "title": "Protect Your Trip",
     "subtitle": "Travel with peace of mind knowing you're covered by reliable and affordable travel insurance, trusted by adventurers worldwide.",
     "imageAlt": "Infographic showing benefits of travel insurance",
     "ctaButton": "Get Travel Insurance",

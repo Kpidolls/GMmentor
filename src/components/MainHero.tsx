@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import MyTicker from '../components/Ticker'; // Import your ticker component
 
 const MainHero = () => {
   const { mainHero } = config;
@@ -23,6 +24,11 @@ const MainHero = () => {
 
   return (
     <main className="relative min-h-[90vh]">
+      {/* Ticker */}
+      <div className="absolute top-0 left-0 w-full z-20">
+        <MyTicker />
+      </div>
+
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
