@@ -71,7 +71,7 @@ const IslandList = () => {
         <div className="mt-8 text-center">
           <button
             onClick={handleViewMore}
-            className="px-6 py-3 bg-primary font-primary text-white font-medium rounded-lg shadow-md hover:bg-secondary transition duration-300"
+            className="px-6 py-3 bg-blue-600 font-primary text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
             aria-label={t('islands.viewMore')} // Translated aria-label
           >
             {t('islands.viewMoreButton')}

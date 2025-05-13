@@ -1,5 +1,4 @@
-
-//  import Link from 'next/link';
+// import Link from 'next/link';
 import React from 'react';
 import About from '../components/About'; 
 import AboutUs from '../components/AboutUs';
@@ -10,9 +9,7 @@ import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import Product from '../components/Product';
-import QASection from '../components/QASection'; 
-import MyTicker from '../components/Ticker';
-import Store from '../components/Store';
+import QASection from '../components/QASection';
 import BackToTop from '../components/BackToTop';
 import IslandList from '../components/IslandList';
 import CategoryCards from '../components/CategoryCards';
@@ -21,9 +18,6 @@ import '../i18n';
 const App = () => {
   return (
     <div className={`bg-background grid gap-y-8 overflow-hidden`}>
-      <div className="relative z-50">
-        <MyTicker />
-      </div>
       <div className={`relative bg-background`}>
         <div className="max-w-full mx-auto">
           <div
@@ -33,7 +27,7 @@ const App = () => {
             <CategoryCards />
           </div>
         </div>
-            </div>
+      </div>
       <Canvas />
       <LazyShow>
         <>
@@ -44,7 +38,6 @@ const App = () => {
       </LazyShow>
       <LazyShow>
         <>
-          <Store />
           <Canvas />
         </>
       </LazyShow>

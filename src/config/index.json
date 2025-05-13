@@ -21,11 +21,11 @@
     },
     {
       "name": "navigation.store",
-      "href": "store",
+      "href": "/store",
       "submenu": [
+        { "name": "navigation.travelItems", "href": "/store" },
         { "name": "navigation.mobileTravelData", "href": "/airalo" },
-        { "name": "navigation.travelInsurance", "href": "/insurance" },
-        { "name": "navigation.travelItems", "href": "store" }
+        { "name": "navigation.travelInsurance", "href": "/insurance" }
       ]
     },
     {
@@ -57,7 +57,7 @@
     },
     "secondaryAction": {
       "text": "mainHero.secondaryAction.text",
-      "href": "#store"
+      "href": "/store"
     }
   },
   "about": {

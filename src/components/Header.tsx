@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   Button,
@@ -21,7 +21,6 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  useColorModeValue,
   useDisclosure,
   Text,
 } from '@chakra-ui/react';
@@ -38,13 +37,21 @@ const Header = () => {
 
   const router = useRouter();
   const { t, i18n } = useTranslation();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure({ defaultIsOpen: false });
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isLanguageReady, setIsLanguageReady] = useState(false);
 
-  const bg = useColorModeValue('white', 'gray.900');
-  const textColor = useColorModeValue('gray.800', 'white');
-  const hoverBg = useColorModeValue('gray.100', 'gray.700');
-  const submenuHover = useColorModeValue('gray.200', 'gray.600');
+  useEffect(() => {
+    setIsLanguageReady(true); // Ensure language is ready before rendering
+  }, []);
+
+  if (!isLanguageReady) return null; // Avoid rendering until language is ready
+
+
+  const bg = 'white'; // Default background color
+  const textColor = 'gray.800'; // Default text color
+  const hoverBg = 'gray.100'; // Default hover background color
+  const submenuHover = 'gray.200'; // Default submenu hover background color
 
   const toggleLanguage = () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'el' : 'en');
@@ -104,7 +111,7 @@ const Header = () => {
       <Box px={{ base: 4, md: 8 }} py={4}>
         <Flex align="center" justify="space-between" wrap="wrap">
           {/* Logo and Company */}
-          <HStack spacing={3}>
+          <HStack spacing={3} onClick={() => router.push('/')} cursor="pointer">
             <Image
               src={logo}
               alt={t('company.logoAlt', { name: t('company.name') })}
