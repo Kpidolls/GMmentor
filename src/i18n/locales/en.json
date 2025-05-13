@@ -234,7 +234,7 @@
     "shareButton": "Share",
     "shareText": "Recommendations for {{title}} from Googlementor",
     "shareNotSupported": "Sharing is not supported on this browser.",
-    "viewMoreButton": "View More Islands"
+    "viewMoreButton": "View More"
   },
   "store": {
     "meta": {
