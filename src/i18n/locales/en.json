@@ -20,7 +20,7 @@
     "store": "Store",
     "mobileTravelData": "Mobile Travel Data",
     "travelInsurance": "Travel Insurance",
-    "travelItems": "Travel Gear",
+    "travelItems": "Shop Travel Gear",
     "aboutUs": "About Us",
     "ourStory": "Our Story",
     "faq": "FAQ",
@@ -30,7 +30,7 @@
     "text": "Get Started"
   },
   "mainHero": {
-    "title": "Recommendations for Greece",
+    "title": "Greece",
     "subtitle": "Travel Maps",
     "description": "Google Maps Lists for trip planning.",
     "primaryAction": {
