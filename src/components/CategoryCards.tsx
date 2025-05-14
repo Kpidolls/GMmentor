@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 // Define the categories array with proper typing
 const categories = [
   { name: 'categories.mustSee', icon: FaMapMarkedAlt, tag: 'must', link: 'https://maps.app.goo.gl/nh9QZAwzkh31DrqGA' },
-  { name: 'categories.islands', icon: GiIsland, tag: 'islands', link: '#islands' },
+  { name: 'categories.islands', icon: GiIsland, tag: 'islands', link: '#destinations' },
   { name: 'categories.food', icon: GiForkKnifeSpoon, tag: 'food', link: '#vegan' },
   { name: 'categories.hiking', icon: FaHiking, tag: 'hiking', link: 'https://maps.app.goo.gl/oZ8ZGmrR7n2MCBtG8' },
 ];
