@@ -14,7 +14,7 @@
       "href": "maps",
       "submenu": [
         { "name": "navigation.mustSee", "href": "maps" },
-        { "name": "navigation.islands", "href": "islands" },
+        { "name": "navigation.islands", "href": "destinations" },
         { "name": "navigation.food", "href": "vegan" },
         { "name": "navigation.hiking", "href": "hiking" }
       ]

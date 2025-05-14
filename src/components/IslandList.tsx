@@ -4,14 +4,14 @@ import islands from '../data/islands.json';
 
 const IslandList = () => {
   const { t } = useTranslation();
-  const [visibleIslands, setVisibleIslands] = useState(6);
+  const [visibleIslands, setVisibleIslands] = useState(9);
 
   const handleViewMore = () => {
     setVisibleIslands(islands.length);
   };
 
   return (
-    <div className="container mx-auto px-4 py-8" id="islands">
+    <div className="container mx-auto px-4 py-8" id="destinations">
       <h1 className="text-4xl font-primary font-bold text-[#001c28] mb-8 text-center">
         {t('islands.title')}
       </h1>
@@ -24,15 +24,15 @@ const IslandList = () => {
           >
             <img
               src={island.img}
-              alt={t(island.title)} // Translated alt attribute
+              alt={t(island.title)}
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
               <h3 className="text-lg sm:text-xl font-semibold font-primary text-gray-800 mb-2 sm:mb-4 leading-tight">
-                {t(island.title)} {/* Translated title */}
+                {t(island.title)}
               </h3>
               <p className="text-gray-600 text-sm sm:text-base font-secondary mb-6 leading-relaxed min-h-[48px] sm:min-h-[100px]">
-                {t(island.description)} {/* Translated description */}
+                {t(island.description)}
               </p>
               <div className="flex flex-wrap gap-4 mt-auto">
                 <a
@@ -40,7 +40,7 @@ const IslandList = () => {
                   target={island.target}
                   rel={island.rel}
                   className="flex-1 inline-block px-4 py-2 bg-[#0878fe] text-white font-semibold rounded shadow hover:bg-blue-700 transition duration-300 text-center"
-                  aria-label={t('islands.explore', { title: t(island.title) })} // Translated aria-label
+                  aria-label={t('islands.explore', { title: t(island.title) })}
                 >
                   {t('islands.exploreButton')}
                 </a>
@@ -58,7 +58,7 @@ const IslandList = () => {
                     }
                   }}
                   className="flex-1 inline-block px-4 py-2 bg-green-600 text-white font-semibold rounded shadow hover:bg-green-700 transition duration-300 text-center"
-                  aria-label={t('islands.share', { title: t(island.title) })} // Translated aria-label
+                  aria-label={t('islands.share', { title: t(island.title) })}
                 >
                   {t('islands.shareButton')}
                 </button>
@@ -72,7 +72,7 @@ const IslandList = () => {
           <button
             onClick={handleViewMore}
             className="px-6 py-3 bg-blue-600 font-primary text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
-            aria-label={t('islands.viewMore')} // Translated aria-label
+            aria-label={t('islands.viewMore')}
           >
             {t('islands.viewMoreButton')}
           </button>
