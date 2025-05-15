@@ -230,6 +230,10 @@
       "title": "📍 Halkidiki",
       "description": "The golden beaches meet crystal-clear waters and green landscapes. Truly, there is nowhere else quite like Halkidiki."
     },
+    "evia": {
+      "title": "📍 Evia",
+      "description": "Evia is the second largest island in Greece, known for its stunning beaches, lush landscapes and rich history."
+    },
     "exploreButton": "Open Map",
     "shareButton": "Share",
     "shareText": "Recommendations for {{title}} from Googlementor",
