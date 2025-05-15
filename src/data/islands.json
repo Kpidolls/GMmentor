@@ -357,5 +357,31 @@
       "kallithea",
       "diaporos"
     ]
+  },
+  {
+    "id": "island-evia",
+    "title": "islands.evia.title",
+    "img": "/assets/images/evia.webp",
+    "description": "islands.evia.description",
+    "link": "https://maps.app.goo.gl/qjTKiy7PMHzKJTqD6",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "evia",
+      "evoia",
+      "evvoia",
+      "greece",
+      "evia island",
+      "evia beaches",
+      "eboia island",
+      "euoia island",
+      "marmari",
+      "kymi",
+      "limni",
+      "edipsos",
+      "karystos",
+      "styra"
+    ]
   }
 ]
