@@ -46,7 +46,7 @@
     "title": "mainHero.title",
     "subtitle": "mainHero.subtitle",
     "description": "mainHero.description",
-    "img": "/assets/images/Designer.jpeg",
+    "img": "/assets/images/designerbg.webp",
     "primaryAction": {
       "text": {
         "0": "mainHero.primaryAction.text.0",

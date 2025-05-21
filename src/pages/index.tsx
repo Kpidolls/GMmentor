@@ -29,18 +29,12 @@ const App = () => {
         </div>
       </div>
       <Canvas />
-      <LazyShow>
         <>
-          <Product />
           <IslandList />
           <Canvas />
-        </>
-      </LazyShow>
-      <LazyShow>
-        <>
+          <Product />
           <Canvas />
         </>
-      </LazyShow>
       <AboutUs />     
       <QASection /> 
       <BrevoForm /> 
