@@ -20,7 +20,7 @@
     "store": "Store",
     "mobileTravelData": "Mobile Travel Data",
     "travelInsurance": "Travel Insurance",
-    "travelItems": "Shop Travel Gear",
+    "travelItems": "Buy Travel Gear",
     "aboutUs": "About Us",
     "ourStory": "Our Story",
     "faq": "FAQ",
@@ -36,12 +36,12 @@
     "primaryAction": {
       "text": {
         "0": "What to do in Greece!",
-        "1": "Where to go in Greece!",
-        "2": "Where to eat in Greece!"
+        "1": "Where to eat in Greece!",
+        "2": "Where to go in Greece!"
       }
     },
     "secondaryAction": {
-      "text": "Travel Gear"
+      "text": "Buy Travel Gear"
     }
   },
   "categories": {
@@ -242,7 +242,7 @@
   },
   "store": {
     "meta": {
-      "title": "Travel Gear Store",
+      "title": "Buy Travel Gear ",
       "description": "Discover the best travel accessories from Amazon and Temu."
     },
     "filters": {
@@ -250,7 +250,7 @@
       "amazon": "Amazon",
       "temu": "Temu"
     },
-    "title": "Travel Gear",
+    "title": "Buy Travel Gear",
     "subtitle": "Discover the perfect travel accessories for your next adventure.",
     "products": {
       "universalTravelAdapter": {
