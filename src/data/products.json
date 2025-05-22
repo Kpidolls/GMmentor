@@ -1,5 +1,13 @@
 [
   {
+    "id": "travel-luggage-lock",
+    "name": "store.products.travelLuggageLock.name",
+    "description": "store.products.travelLuggageLock.description",
+    "image": "/assets/images/lock.webp",
+    "link": "https://www.amazon.com/Compatible-Travel-Luggage-Inspection-Indicator/dp/B073NYB7R2?crid=193YCY2P4WJR4&dib=eyJ2IjoiMSJ9.gk-FsnfAsrB47YFDiXxMZr4w4lgP23Tqz7Vz1m0VIcIxhhB-qf4rTBPMshxuzn7eDjVo_EIy3oMMztzefkXVcD3pVcQ0OaDKEfgkMV2Y2VGhefOSPIAbVkKbfWsME9aeoEyyy75OIfkRM9eLL0ZWDX91_Hh9w1JThAmanWbAm--GLXHNedqncyDGtAWuxKVtiThk8abcr0ug6lAaRvS6izTTVGJ9i_OmPDPrrQqpWrJl5nyx_nchT9ee-T7oQ6Gydgt1tRQbNPk-GG5GV4Dve8AFucT9FM1Y861m9O5bwiY.HT4ld4jRTAzqdjzrYDoHvJYfvcaDV3k41C2nKKJRe38&dib_tag=se&keywords=luggage%2Block&qid=1744297813&sprefix=luggage%2Block%2Caps%2C266&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=f60ff431657ac0a3dc911b8b1c082318&language=en_US&ref_=as_li_ss_tl",
+    "keywords": ["travel", "luggage", "lock", "safety", "security"]
+  },
+  {
     "id": "universal-travel-adapter",
     "name": "store.products.universalTravelAdapter.name",
     "description": "store.products.universalTravelAdapter.description",
@@ -35,16 +43,9 @@
       "safety",
       "health",
       "medical",
-      "asfaleia"
+      "asfaleia",
+      "safety"
     ]
-  },
-  {
-    "id": "travel-luggage-lock",
-    "name": "store.products.travelLuggageLock.name",
-    "description": "store.products.travelLuggageLock.description",
-    "image": "/assets/images/lock.webp",
-    "link": "https://www.amazon.com/Compatible-Travel-Luggage-Inspection-Indicator/dp/B073NYB7R2?crid=193YCY2P4WJR4&dib=eyJ2IjoiMSJ9.gk-FsnfAsrB47YFDiXxMZr4w4lgP23Tqz7Vz1m0VIcIxhhB-qf4rTBPMshxuzn7eDjVo_EIy3oMMztzefkXVcD3pVcQ0OaDKEfgkMV2Y2VGhefOSPIAbVkKbfWsME9aeoEyyy75OIfkRM9eLL0ZWDX91_Hh9w1JThAmanWbAm--GLXHNedqncyDGtAWuxKVtiThk8abcr0ug6lAaRvS6izTTVGJ9i_OmPDPrrQqpWrJl5nyx_nchT9ee-T7oQ6Gydgt1tRQbNPk-GG5GV4Dve8AFucT9FM1Y861m9O5bwiY.HT4ld4jRTAzqdjzrYDoHvJYfvcaDV3k41C2nKKJRe38&dib_tag=se&keywords=luggage%2Block&qid=1744297813&sprefix=luggage%2Block%2Caps%2C266&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=f60ff431657ac0a3dc911b8b1c082318&language=en_US&ref_=as_li_ss_tl",
-    "keywords": ["travel", "luggage", "lock"]
   },
   {
     "id": "dry-bag-waterproof",
@@ -76,7 +77,7 @@
     "description": "store.products.sunProtectionShirt.description",
     "image": "/assets/images/swimshirt.webp",
     "link": "https://www.amazon.com/Roadbox-Protection-Outdoor-Rashguard-Campanula/dp/B08BFKM7VT",
-    "keywords": ["sun", "protection", "shirt"]
+    "keywords": ["sun", "protection", "shirt", "safety"]
   },
   {
     "id": "water-shoes",
