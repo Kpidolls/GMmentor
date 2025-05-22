@@ -150,7 +150,7 @@
     },
     "exploreButton": "Προβολή χάρτη",
     "shareButton": "Μοιράσου",
-    "shareText": " Προτάσεις για {{title}} στην Ελλάδα από το Googlementor",
+    "shareText": " Προτάσεις του Googlementor για {{title}}, δείτε στο Google Maps",
     "shareNotSupported": "Η κοινή χρήση δεν υποστηρίζεται.",
     "viewMoreButton": "Περισσότερες Κατηγορίες",
     "attribution": "Εικόνες δημιουργήθηκαν με το Craiyon AI.",

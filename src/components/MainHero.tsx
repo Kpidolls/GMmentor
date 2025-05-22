@@ -35,7 +35,7 @@ const MainHero = () => {
           src="/assets/images/device.webp"
           alt="Background Illustration"
           fill
-          className="object-cover object-center brightness-75 blur-[1.5px] transition-all duration-700"
+          className="object-cover object-center brightness-75 blur-[1.2px] transition-all duration-700"
           priority
           quality={95}
           sizes="100vw"
@@ -46,7 +46,7 @@ const MainHero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 px-6 py-24 sm:px-8 lg:px-12 max-w-screen-xl w-full text-center flex flex-col items-center">
+      <div className="relative z-10 px-6 pt-0 py-6 sm:px-8 lg:px-12 max-w-screen-xl w-full text-center flex flex-col items-center">
         <h1 className="text-white font-primary font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl">
           <span className="block text-[#0878fe] mb-2">
             {t('mainHero.subtitle')}

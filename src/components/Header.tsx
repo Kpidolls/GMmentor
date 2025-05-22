@@ -47,7 +47,6 @@ const Header = () => {
 
   if (!isLanguageReady) return null; // Avoid rendering until language is ready
 
-
   const bg = 'white'; // Default background color
   const textColor = 'gray.800'; // Default text color
   const hoverBg = 'gray.100'; // Default hover background color
@@ -121,7 +120,14 @@ const Header = () => {
               height={40}
               loading="lazy"
             />
-            <Text fontSize="2xl" fontWeight="bold" color={textColor}>
+            <Text
+              fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+              fontWeight="bold"
+              color={textColor}
+              textShadow="0 2px 8px rgba(0,0,0,0.12)"
+              letterSpacing="tight"
+              className="leading-tight tracking-tight"
+            >
               {t('company.name')}
             </Text>
           </HStack>
