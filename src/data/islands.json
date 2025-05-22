@@ -383,5 +383,82 @@
       "karystos",
       "styra"
     ]
+  },
+  {
+    "id": "island-chios",
+    "title": "islands.chios.title",
+    "img": "/assets/images/chios.webp",
+    "description": "islands.chios.description",
+    "link": "https://maps.app.goo.gl/2t1CT8oueTWr4d4Y8",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "chios",
+      "hios",
+      "xios",
+      "hyos",
+      "aegean",
+      "egian"
+    ]
+  },
+  {
+    "id": "island-tinos",
+    "title": "islands.tinos.title",
+    "img": "/assets/images/tinos.webp",
+    "description": "islands.tinos.description",
+    "link": "https://maps.app.goo.gl/Q3eDPRFq7USFUyz97",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "tinos",
+      "tinos island",
+      "tinos town",
+      "kuklades",
+      "panagia evangelistria",
+      "evagelistria",
+      "myk"
+    ]
+  },
+  {
+    "id": "nafplio",
+    "title": "islands.nafplio.title",
+    "img": "/assets/images/nafplio.webp",
+    "description": "islands.nafplio.description",
+    "link": "https://maps.app.goo.gl/RTVhcLFPcRsrvnfZA",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "near athens",
+      "greece",
+      "nauplio",
+      "nafplio",
+      "nafplion",
+      "nafplio town",
+      "peloponnese",
+      "peloponnesos"
+    ]
+  },
+  {
+    "id": "island-astypalea",
+    "title": "islands.astypalea.title",
+    "img": "/assets/images/astypalea.webp",
+    "description": "islands.astypalea.description",
+    "link": "https://maps.app.goo.gl/tPuo5xNm6upCehjU8",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "astypalea",
+      "astypalea island",
+      "astypalea town",
+      "astypalea beaches",
+      "aegean",
+      "aigaio"
+    ]
   }
 ]
