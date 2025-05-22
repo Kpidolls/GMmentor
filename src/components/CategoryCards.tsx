@@ -1,68 +1,90 @@
-import React from 'react';
+'use client';
+
+import React, { ComponentType } from 'react';
 import { GiIsland, GiForkKnifeSpoon } from 'react-icons/gi';
 import { FaMapMarkedAlt, FaHiking } from 'react-icons/fa';
-import { ComponentType } from 'react';
 import { useTranslation } from 'react-i18next';
 
-// Define the categories array with proper typing
-const categories = [
-  { name: 'categories.mustSee', icon: FaMapMarkedAlt, tag: 'must', link: 'https://maps.app.goo.gl/nh9QZAwzkh31DrqGA' },
-  { name: 'categories.islands', icon: GiIsland, tag: 'islands', link: '#destinations' },
-  { name: 'categories.food', icon: GiForkKnifeSpoon, tag: 'food', link: '#vegan' },
-  { name: 'categories.hiking', icon: FaHiking, tag: 'hiking', link: 'https://maps.app.goo.gl/oZ8ZGmrR7n2MCBtG8' },
+interface CategoryItem {
+  name: string;
+  icon: ComponentType<{ className?: string }>;
+  tag: string;
+  link: string;
+}
+
+const categories: CategoryItem[] = [
+  {
+    name: 'categories.mustSee',
+    icon: FaMapMarkedAlt,
+    tag: 'must',
+    link: 'https://maps.app.goo.gl/nh9QZAwzkh31DrqGA',
+  },
+  {
+    name: 'categories.islands',
+    icon: GiIsland,
+    tag: 'islands',
+    link: '#destinations',
+  },
+  {
+    name: 'categories.food',
+    icon: GiForkKnifeSpoon,
+    tag: 'food',
+    link: '#vegan',
+  },
+  {
+    name: 'categories.hiking',
+    icon: FaHiking,
+    tag: 'hiking',
+    link: 'https://maps.app.goo.gl/oZ8ZGmrR7n2MCBtG8',
+  },
 ];
 
-// Define the props for the CategoryCard component
 interface CategoryCardProps {
   name: string;
   Icon: ComponentType<{ className?: string }>;
   link: string;
 }
 
-// Reusable CategoryCard Component
 const CategoryCard: React.FC<CategoryCardProps> = ({ name, Icon, link }) => {
   const { t } = useTranslation();
-
-  const isExternalLink = link.startsWith('https://'); 
+  const isExternal = link.startsWith('http');
 
   return (
     <a
       href={link}
-      target={isExternalLink ? "_blank" : undefined} 
-      rel={isExternalLink ? "noopener noreferrer" : undefined} 
-      className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl font-secondary text-center transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-      aria-label={t(`aria.exploreCategory`, { name: t(name) })}
-      role="link"
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+      className="group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0878fe]"
+      aria-label={t('aria.exploreCategory', { name: t(name) })}
     >
-      <div className="mb-4 flex justify-center items-center">
-        <div className="bg-blue-100 p-4 rounded-full transition duration-300 transform hover:scale-110">
-          <Icon className="h-12 w-12 text-[#0878fe] transition duration-300 hover:text-blue-700" />
+      <div className="flex justify-center items-center mb-4">
+        <div className="bg-[#e5f1ff] p-4 rounded-full group-hover:scale-110 transition-transform duration-300">
+          <Icon className="w-10 h-10 text-[#0878fe] group-hover:text-blue-700 transition-colors duration-300" />
         </div>
       </div>
-      <div className="text-lg font-semibold text-gray-800 hover:text-blue-700 transition duration-300">
+      <p className="text-center text-base sm:text-lg font-semibold text-gray-800 group-hover:text-[#0878fe] transition-colors duration-300">
         {t(name)}
-      </div>
+      </p>
     </a>
   );
 };
 
-// Main CategoryCards Component
 export default function CategoryCards() {
   const { t } = useTranslation();
 
   return (
-    <section id="categories" className="py-16 bg-gray-100 mt-16 lg:mt-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <h2 className="text-center font-primary text-3xl font-extrabold text-gray-900 mb-8">
+    <section id="categories" className="py-8 bg-gray-50 mt-10">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <h2 className="text-center font-primary text-2xl sm:text-3xl font-extrabold text-gray-900 mb-6">
           {t('categories.title')}
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((cat) => (
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {categories.map(({ tag, name, icon, link }) => (
             <CategoryCard
-              key={cat.tag}
-              name={cat.name}
-              Icon={cat.icon as React.ComponentType<{ className?: string }>}
-              link={cat.link}
+              key={tag}
+              name={name}
+              Icon={icon}
+              link={link}
             />
           ))}
         </div>

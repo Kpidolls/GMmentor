@@ -28,7 +28,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <Canvas />
+      {/* <Canvas /> */}
         <>
           <IslandList />
           <Canvas />

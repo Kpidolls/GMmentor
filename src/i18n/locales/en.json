@@ -150,7 +150,7 @@
     },
     "exploreButton": "Open Map",
     "shareButton": "Share",
-    "shareText": "Recommendations for {{title}} in Greece from Googlementor",
+    "shareText": " Googlementor recommendations for {{title}}, view on Google Maps",
     "shareNotSupported": "Sharing is not supported on this browser.",
     "viewMoreButton": "View More Categories",
     "attribution": "Images generated using Craiyon AI.",
