@@ -234,6 +234,22 @@
       "title": "📍 Evia",
       "description": "Evia is the second largest island in Greece, known for its stunning beaches, lush landscapes and rich history."
     },
+    "chios": {
+      "title": "📍 Chios",
+      "description": "Chios is renowned for its captivating medieval villages, rare mastic trees, historic monasteries and fortresses, reflecting its rich cultural and architectural heritage."
+    },
+    "tinos": {
+      "title": "📍 Tinos",
+      "description": "Tinos is renowned for its stunning beaches, charming traditional villages, vibrant youth culture and the iconic Church of Panagia Evangelistria."
+    },
+    "nafplio": {
+      "title": "📍 Nafplion",
+      "description": "Nafplion is a picturesque coastal town known for its charming old town, stunning architecture and rich history as the first capital of modern Greece."
+    },
+    "astypalea": {
+      "title": "📍 Astypalea",
+      "description": "Astypalea is a hidden gem in the Dodecanese, known for its stunning beaches, charming villages and unique blend of Cycladic and Dodecanese architecture."
+    },
     "exploreButton": "Open Map",
     "shareButton": "Share",
     "shareText": "Recommendations for {{title}} from Googlementor",
