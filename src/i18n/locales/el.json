@@ -541,11 +541,17 @@
     "supportUsLink": "https://buymeacoffee.com/googlementor",
     "supportUsAria": "Υποστηρίξτε μας αγοράζοντας έναν καφέ",
     "buyMeCoffee": "Buy Me a Coffee",
-    "contactUs": "Επικοινωνήστε μαζί μας",
+    "contactUs": "Επικοινωνία",
     "contactEmail": "Email: mapsmentorinfo@gmail.com",
     "contactTerms": "Με την επικοινωνία μαζί μας, αποδέχεστε τους <terms>όρους και προϋποθέσεις</terms> και την <privacy>πολιτική απορρήτου</privacy>.",
     "terms": "όρους και προϋποθέσεις",
-    "privacyPolicy": "πολιτική απορρήτου"
+    "privacyPolicy": "πολιτική απορρήτου",
+    "mapsData": "Maps data © Google. Google Maps is a trademark of Google LLC. ",
+    "copyright": " Googlementor. Με επιφύλαξη παντός δικαιώματος. ",
+    "tiktok": "https://www.tiktok.com/@mapsmentor",
+    "instagram": "https://www.instagram.com/mapsmentor?igsh=MXRxODZ4ajFlaGlscA%3D%3D&utm_source=qr",
+    "twitter": "https://x.com/googlementor",
+    "facebook": "https://www.facebook.com/profile.php?id=61560667811342"
   },
   "ticker": {
     "usefulApps": "ΧΡΗΣΙΜΕΣ ΕΦΑΡΜΟΓΕΣ: ΕΛΛΑΔΑ",
