@@ -32,17 +32,17 @@ const MainHero = () => {
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/assets/images/device.webp"
+          src="/assets/images/cover.webp"
           alt="Background Illustration"
           fill
-          className="object-cover object-center brightness-75 blur-[1.2px] transition-all duration-700"
+          className="object-cover object-center brightness-90 blur-[1.1px] transition-all duration-700"
           priority
           quality={95}
           sizes="100vw"
           aria-hidden="true"
         />
         {/* Stronger gradient overlay for contrast and readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/90 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 pointer-events-none" />
       </div>
 
       {/* Hero Content */}
