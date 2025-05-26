@@ -250,14 +250,6 @@
     ]
   },
   {
-    "id": "travel-journal",
-    "name": "store.products.travelJournal.name",
-    "description": "store.products.travelJournal.description",
-    "image": "/assets/images/travelJournal.webp",
-    "link": "https://temu.to/k/e4vq4yef233",
-    "keywords": ["travel", "journal", "diary", "writing"]
-  },
-  {
     "id": "packing-cubes",
     "name": "store.products.packingCubes.name",
     "description": "store.products.packingCubes.description",
@@ -473,5 +465,13 @@
     "image": "/assets/images/lipProtection.webp",
     "link": "https://www.amazon.com/Blistex-Five-Star-Protection-Ounce/dp/B003AXUQOO?crid=23IYY6RAY633M&dib=eyJ2IjoiMSJ9.GJBquHqv4CJxD2IOYVRRqsD7eRo9tCH-ytH5ylsalrjtRMxOOxvwRO5cwo89eC_k8rC4xFDECL0NY4nT_tfmwGc_72WZ9Xblz_xeTxFmOfR7zsj6wvWXIJIGvZ4Es8SFxeXB2aiN9NH0S5zugphs4RjdJ_GEzKPgZFFD-JT2hX7z6BgbLBBvUw8Tt0YxAARgMUlPxZhhEd7AiwXA2pN27zBU1bDb6Y1wrffX2Aop5guc8CQbqs5BxxSxwetnpm_NEvNhU3pT7t_atkWzOTRaJJAaDwqo9qOqPw3UTpNUCFE.g9I9gHvzyJPfeFWlnA-j2XAMkyFZrszO2rdq1dsPyUA&dib_tag=se&keywords=wind%2Bprotection&qid=1746795563&sprefix=wind%2Bprotection%2Caps%2C252&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=c6309205d6a80a8856c274e683ad3873&language=en_US&ref_=as_li_ss_tl",
     "keywords": ["lip", "protection", "travel", "beach", "sun", "hydration"]
+  },
+  {
+    "id": "travel-journal",
+    "name": "store.products.travelJournal.name",
+    "description": "store.products.travelJournal.description",
+    "image": "/assets/images/travelJournal.webp",
+    "link": "https://temu.to/k/e4vq4yef233",
+    "keywords": ["travel", "journal", "diary", "writing"]
   }
 ]
