@@ -57,3 +57,7 @@ a:hover {
 .fit-content-span {
   width: fit-content;
 }
+
+.backdrop-blur-custom {
+  backdrop-filter: blur(4px);
+}
