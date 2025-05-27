@@ -1,6 +1,7 @@
 [
   {
     "id": "travel-luggage-lock",
+    "translationKey": "travelLuggageLock",
     "name": "store.products.travelLuggageLock.name",
     "description": "store.products.travelLuggageLock.description",
     "image": "/assets/images/lock.webp",
@@ -9,6 +10,7 @@
   },
   {
     "id": "universal-travel-adapter",
+    "translationKey": "universalTravelAdapter",
     "name": "store.products.universalTravelAdapter.name",
     "description": "store.products.universalTravelAdapter.description",
     "image": "/assets/images/universaladapter.webp",
@@ -17,6 +19,7 @@
   },
   {
     "id": "mobile-data-esim-card",
+    "translationKey": "mobileDataEsimCard",
     "name": "store.products.mobileDataEsimCard.name",
     "description": "store.products.mobileDataEsimCard.description",
     "image": "/assets/images/airalo.webp",
@@ -25,6 +28,7 @@
   },
   {
     "id": "pillow-mask",
+    "translationKey": "pillowMask",
     "name": "store.products.pillowMask.name",
     "description": "store.products.pillowMask.description",
     "image": "/assets/images/pillow.webp",
@@ -33,6 +37,7 @@
   },
   {
     "id": "insurance",
+    "translationKey": "insurance",
     "name": "store.products.insurance.name",
     "description": "store.products.insurance.description",
     "image": "/assets/images/insurance.webp",
@@ -49,6 +54,7 @@
   },
   {
     "id": "dry-bag-waterproof",
+    "translationKey": "dryBagWaterproof",
     "name": "store.products.dryBagWaterproof.name",
     "description": "store.products.dryBagWaterproof.description",
     "image": "/assets/images/waterbag.webp",
@@ -57,6 +63,7 @@
   },
   {
     "id": "portable-charger-20000mah",
+    "translationKey": "portableCharger",
     "name": "store.products.portableCharger.name",
     "description": "store.products.portableCharger.description",
     "image": "/assets/images/charger.webp",
@@ -65,6 +72,7 @@
   },
   {
     "id": "car-charger",
+    "translationKey": "carCharger",
     "name": "store.products.carCharger.name",
     "description": "store.products.carCharger.description",
     "image": "/assets/images/car-charger.webp",
@@ -73,6 +81,7 @@
   },
   {
     "id": "sun-protection-shirt",
+    "translationKey": "sunProtectionShirt",
     "name": "store.products.sunProtectionShirt.name",
     "description": "store.products.sunProtectionShirt.description",
     "image": "/assets/images/swimshirt.webp",
@@ -81,6 +90,7 @@
   },
   {
     "id": "water-shoes",
+    "translationKey": "waterShoes",
     "name": "store.products.waterShoes.name",
     "description": "store.products.waterShoes.description",
     "image": "/assets/images/watershoes.webp",
@@ -89,6 +99,7 @@
   },
   {
     "id": "waterproof-phone-case",
+    "translationKey": "waterproofPhoneCase",
     "name": "store.products.waterproofPhoneCase.name",
     "description": "store.products.waterproofPhoneCase.description",
     "image": "/assets/images/waterproof-phone-case.webp",
@@ -97,6 +108,7 @@
   },
   {
     "id": "mini-bluetooth-speaker",
+    "translationKey": "miniBluetoothSpeaker",
     "name": "store.products.miniBluetoothSpeaker.name",
     "description": "store.products.miniBluetoothSpeaker.description",
     "image": "/assets/images/jbl.webp",
@@ -105,6 +117,7 @@
   },
   {
     "id": "phone-holder-mount",
+    "translationKey": "phoneHolderMount",
     "name": "store.products.phoneHolderMount.name",
     "description": "store.products.phoneHolderMount.description",
     "image": "/assets/images/mount.webp",
@@ -113,6 +126,7 @@
   },
   {
     "id": "airplane-phone-holder",
+    "translationKey": "airplanePhoneHolder",
     "name": "store.products.airplanePhoneHolder.name",
     "description": "store.products.airplanePhoneHolder.description",
     "image": "/assets/images/mount-airplane.webp",
@@ -121,6 +135,7 @@
   },
   {
     "id": "sony-wireless-headphones",
+    "translationKey": "sonyWirelessHeadphones",
     "name": "store.products.sonyWirelessHeadphones.name",
     "description": "store.products.sonyWirelessHeadphones.description",
     "image": "/assets/images/headphones.webp",
@@ -129,6 +144,7 @@
   },
   {
     "id": "nordic-walking-poles",
+    "translationKey": "nordicWalkingPoles",
     "name": "store.products.nordicWalkingPoles.name",
     "description": "store.products.nordicWalkingPoles.description",
     "image": "/assets/images/poles.webp",
@@ -137,6 +153,7 @@
   },
   {
     "id": "anker-multi-usb-port",
+    "translationKey": "ankerMultiUsbPort",
     "name": "store.products.ankerMultiUsbPort.name",
     "description": "store.products.ankerMultiUsbPort.description",
     "image": "/assets/images/usbports.webp",
@@ -153,6 +170,7 @@
   },
   {
     "id": "european-travel-plug",
+    "translationKey": "europeanTravelPlug",
     "name": "store.products.europeanTravelPlug.name",
     "description": "store.products.europeanTravelPlug.description",
     "image": "/assets/images/multiusb.webp",
@@ -161,6 +179,7 @@
   },
   {
     "id": "apple-airtag",
+    "translationKey": "appleAirtag",
     "name": "store.products.appleAirtag.name",
     "description": "store.products.appleAirtag.description",
     "image": "/assets/images/airtag.webp",
@@ -169,6 +188,7 @@
   },
   {
     "id": "mini-power-bank",
+    "translationKey": "miniPowerBank",
     "name": "store.products.miniPowerBank.name",
     "description": "store.products.miniPowerBank.description",
     "image": "/assets/images/powerbank.webp",
@@ -177,6 +197,7 @@
   },
   {
     "id": "sun-hat",
+    "translationKey": "sunHat",
     "name": "store.products.sunHat.name",
     "description": "store.products.sunHat.description",
     "image": "/assets/images/hat.webp",
@@ -185,6 +206,7 @@
   },
   {
     "id": "tile-gps-tracker",
+    "translationKey": "tileGpsTracker",
     "name": "store.products.tileGpsTracker.name",
     "description": "store.products.tileGpsTracker.description",
     "image": "/assets/images/tile.webp",
@@ -193,6 +215,7 @@
   },
   {
     "id": "water-bottle",
+    "translationKey": "waterBottle",
     "name": "store.products.waterBottle.name",
     "description": "store.products.waterBottle.description",
     "image": "/assets/images/water.webp",
@@ -201,6 +224,7 @@
   },
   {
     "id": "herschel-backpack",
+    "translationKey": "herschelBackpack",
     "name": "store.products.herschelBackpack.name",
     "description": "store.products.herschelBackpack.description",
     "image": "/assets/images/backpack.webp",
@@ -209,6 +233,7 @@
   },
   {
     "id": "face-sunscreen",
+    "translationKey": "faceSunscreen",
     "name": "store.products.faceSunscreen.name",
     "description": "store.products.faceSunscreen.description",
     "image": "/assets/images/sunscreen.webp",
@@ -217,6 +242,7 @@
   },
   {
     "id": "travel-first-aid-kit",
+    "translationKey": "travelFirstAidKit",
     "name": "store.products.travelFirstAidKit.name",
     "description": "store.products.travelFirstAidKit.description",
     "image": "/assets/images/firstaid.webp",
@@ -225,6 +251,7 @@
   },
   {
     "id": "beach-blanket",
+    "translationKey": "beachBlanket",
     "name": "store.products.beachBlanket.name",
     "description": "store.products.beachBlanket.description",
     "image": "/assets/images/blanket.webp",
@@ -233,6 +260,7 @@
   },
   {
     "id": "snorkel-mask",
+    "translationKey": "snorkel",
     "name": "store.products.snorkel.name",
     "description": "store.products.snorkel.description",
     "image": "/assets/images/snorkel.webp",
@@ -251,6 +279,7 @@
   },
   {
     "id": "packing-cubes",
+    "translationKey": "packingCubes",
     "name": "store.products.packingCubes.name",
     "description": "store.products.packingCubes.description",
     "image": "/assets/images/packingCubes.webp",
@@ -259,6 +288,7 @@
   },
   {
     "id": "travel-size-toiletries",
+    "translationKey": "travelSizeToiletries",
     "name": "store.products.travelSizeToiletries.name",
     "description": "store.products.travelSizeToiletries.description",
     "image": "/assets/images/toiletries.webp",
@@ -274,6 +304,7 @@
   },
   {
     "id": " travel-goggles",
+    "translationKey": "goggles",
     "name": "store.products.goggles.name",
     "description": "store.products.goggles.description",
     "image": "/assets/images/goggles.webp",
@@ -282,6 +313,7 @@
   },
   {
     "id": "travel-flippers",
+    "translationKey": "flippers",
     "name": "store.products.flippers.name",
     "description": "store.products.flippers.description",
     "image": "/assets/images/flippers.webp",
@@ -290,6 +322,7 @@
   },
   {
     "id": "beachTowel",
+    "translationKey": "beachTowel",
     "name": "store.products.beachTowel.name",
     "description": "store.products.beachTowel.description",
     "image": "/assets/images/beachTowel.webp",
@@ -307,6 +340,7 @@
   },
   {
     "id": "shoulder-bag ",
+    "translationKey": "shoulderBag",
     "name": "store.products.shoulderBag.name",
     "description": "store.products.shoulderBag.description",
     "image": "/assets/images/shoulderBag.webp",
@@ -315,6 +349,7 @@
   },
   {
     "id": "waterproof-bag",
+    "translationKey": "waterproofBag",
     "name": "store.products.waterproofBag.name",
     "description": "store.products.waterproofBag.description",
     "image": "/assets/images/waterproofBag.webp",
@@ -323,6 +358,7 @@
   },
   {
     "id": "portableFan",
+    "translationKey": "portableFan",
     "name": "store.products.portableFan.name",
     "description": "store.products.portableFan.description",
     "image": "/assets/images/portableFan.webp",
@@ -339,6 +375,7 @@
   },
   {
     "id": "beachTent",
+    "translationKey": "tent",
     "name": "store.products.tent.name",
     "description": "store.products.tent.description",
     "image": "/assets/images/tent.webp",
@@ -347,6 +384,7 @@
   },
   {
     "id": "phoneStraps",
+    "translationKey": "phoneStraps",
     "name": "store.products.phoneStraps.name",
     "description": "store.products.phoneStraps.description",
     "image": "/assets/images/phoneStraps.webp",
@@ -363,6 +401,7 @@
   },
   {
     "id": "beachToys",
+    "translationKey": "beachToys",
     "name": "store.products.beachToys.name",
     "description": "store.products.beachToys.description",
     "image": "/assets/images/beachToys.webp",
@@ -371,6 +410,7 @@
   },
   {
     "id": "beachChair",
+    "translationKey": "beachChair",
     "name": "store.products.beachChair.name",
     "description": "store.products.beachChair.description",
     "image": "/assets/images/beachChair.webp",
@@ -379,6 +419,7 @@
   },
   {
     "id": "picnicBlanket",
+    "translationKey": "picnicBlanket",
     "name": "store.products.picnicBlanket.name",
     "description": "store.products.picnicBlanket.description",
     "image": "/assets/images/picnicBlanket.webp",
@@ -387,6 +428,7 @@
   },
   {
     "id": "umbrellaAnchor",
+    "translationKey": "umbrellaAnchor",
     "name": "store.products.umbrellaAnchor.name",
     "description": "store.products.umbrellaAnchor.description",
     "image": "/assets/images/umbrellaAnchor.webp",
@@ -395,6 +437,7 @@
   },
   {
     "id": "chairUmbrella",
+    "translationKey": "chairUmbrella",
     "name": "store.products.chairUmbrella.name",
     "description": "store.products.chairUmbrella.description",
     "image": "/assets/images/chairUmbrella.webp",
@@ -403,6 +446,7 @@
   },
   {
     "id": "travelUmbrella",
+    "translationKey": "travelUmbrella",
     "name": "store.products.travelUmbrella.name",
     "description": "store.products.travelUmbrella.description",
     "image": "/assets/images/travelUmbrella.webp",
@@ -411,6 +455,7 @@
   },
   {
     "id": "fridgeBackpack",
+    "translationKey": "fridgeBackpack",
     "name": "store.products.fridgeBackpack.name",
     "description": "store.products.fridgeBackpack.description",
     "image": "/assets/images/fridgeBackpack.webp",
@@ -419,6 +464,7 @@
   },
   {
     "id": "coffeeMug",
+    "translationKey": "coffeeMug",
     "name": "store.products.coffeeMug.name",
     "description": "store.products.coffeeMug.description",
     "image": "/assets/images/coffeeMug.webp",
@@ -427,6 +473,7 @@
   },
   {
     "id": "portableJar",
+    "translationKey": "portableJar",
     "name": "store.products.portableJar.name",
     "description": "store.products.portableJar.description",
     "image": "/assets/images/portableJar.webp",
@@ -435,6 +482,7 @@
   },
   {
     "id": "cordlessPump",
+    "translationKey": "cordlessPump",
     "name": "store.products.cordlessPump.name",
     "description": "store.products.cordlessPump.description",
     "image": "/assets/images/pump.webp",
@@ -443,6 +491,7 @@
   },
   {
     "id": "coolingFan",
+    "translationKey": "coolingFan",
     "name": "store.products.coolingFan.name",
     "description": "store.products.coolingFan.description",
     "image": "/assets/images/coolingFan.webp",
@@ -460,6 +509,7 @@
   },
   {
     "id": "lipProtection",
+    "translationKey": "lipProtection",
     "name": "store.products.lipProtection.name",
     "description": "store.products.lipProtection.description",
     "image": "/assets/images/lipProtection.webp",
@@ -468,6 +518,7 @@
   },
   {
     "id": "travel-journal",
+    "translationKey": "travelJournal",
     "name": "store.products.travelJournal.name",
     "description": "store.products.travelJournal.description",
     "image": "/assets/images/travelJournal.webp",
