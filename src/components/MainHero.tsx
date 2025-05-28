@@ -61,8 +61,8 @@ const MainHero = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 px-4 sm:px-8 lg:px-16 py-10 sm:py-16 lg:py-24 max-w-screen-xl w-full text-center flex flex-col items-center">
-        <h1 className="text-white font-primary font-extrabold leading-tight tracking-tight text-3xl sm:text-5xl md:text-6xl drop-shadow-lg mb-2 sm:mb-3">
-          <span className="block text-[#0878fe] mb-2 text-lg sm:text-2xl md:text-3xl tracking-wider">
+        <h1 className="text-white font-primary font-extrabold leading-tight tracking-tight text-3xl sm:text-5xl md:text-6xl drop-shadow-lg mb-1 sm:mb-2 md:mb-2">
+          <span className="block text-[#0878fe] mb-1 sm:mb-2 md:mb-2 text-lg sm:text-2xl md:text-3xl tracking-wider">
             {t('mainHero.subtitle')}
           </span>
           <span className="block">
@@ -70,7 +70,7 @@ const MainHero = () => {
           </span>
         </h1>
 
-        <p className="mt-3 sm:mt-4 text-base sm:text-xl md:text-2xl max-w-2xl text-white font-secondary leading-relaxed opacity-90 drop-shadow">
+        <p className="mt-2 sm:mt-2 md:mt-2 text-base sm:text-xl md:text-2xl max-w-2xl text-white font-secondary leading-relaxed opacity-90 drop-shadow">
           {t('mainHero.description')}
         </p>
         
