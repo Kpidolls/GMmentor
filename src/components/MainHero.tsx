@@ -124,7 +124,7 @@ const MainHero = () => {
               </div>
               <div className="flex-1 text-left flex flex-col justify-center min-h-[5.5rem]">
                 <h3
-                  className="text-base xs:text-lg sm:text-2xl font-bold text-gray-900 mb-1 truncate"
+                  className="text-base xs:text-lg sm:text-2xl font-bold text-gray-900 mb-1 whitespace-normal break-words"
                   title={t(`store.products.${currentProduct.translationKey}.name`)}
                 >
                   {t(`store.products.${currentProduct.translationKey}.name`)}
