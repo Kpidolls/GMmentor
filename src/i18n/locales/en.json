@@ -45,7 +45,7 @@
     }
   },
   "categories": {
-    "title": "Explore Lists by Category",
+    "title": "Lists by Category",
     "mustSee": "Must See",
     "islands": "Destinations",
     "food": "Food",
@@ -157,7 +157,7 @@
     "imageAlt": "Image for {{title}}"
   },
   "islands": {
-    "title": "Explore Destinations in Greece",
+    "title": "Explore Destinations",
     "crete": {
       "title": "📍 Crete",
       "description": "Discover Crete, the largest Greek island, with its rich history, stunning landscapes and vibrant culture."
@@ -483,6 +483,7 @@
       "learnMore": "Learn more about {{name}}"
     }
   },
+  "productShowcaseTitle": "Travel Products",
   "travelInsurance": {
     "returnHome": "Return to Home",
     "title": "Protect Your Trip",
