@@ -6,7 +6,7 @@ import config from '../config/index.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import MyTicker from '../components/Ticker';
-import products from '../data/products.json';
+// import products from '../data/products.json';
 // import store from '../pages/store';
 
 
@@ -14,7 +14,7 @@ const MainHero = () => {
   const { mainHero } = config;
   const { t } = useTranslation();
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [currentProductIndex, setCurrentProductIndex] = useState(0);
+  // const [currentProductIndex, setCurrentProductIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,15 +26,15 @@ const MainHero = () => {
     return () => clearInterval(interval);
   }, [mainHero.primaryAction.text]);
 
-  useEffect(() => {
-    if (!products || products.length === 0) return;
-    const interval = setInterval(() => {
-      setCurrentProductIndex((prev) => (prev + 1) % products.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   if (!products || products.length === 0) return;
+  //   const interval = setInterval(() => {
+  //     setCurrentProductIndex((prev) => (prev + 1) % products.length);
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
-  const currentProduct = products[currentProductIndex];
+  // const currentProduct = products[currentProductIndex];
 
   return (
     <main className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
@@ -105,7 +105,7 @@ const MainHero = () => {
           </a>
         </div>
 
-        {/* Product Showcase */}
+        {/* Product Showcase
         {currentProduct && (
           <div className="w-full flex flex-col items-center justify-center mt-10 mb-4 px-0 sm:px-4">
             <a
@@ -135,7 +135,7 @@ const MainHero = () => {
               </div>
             </a>
           </div>
-        )}
+        )} */}
       </div>
     </main>
   );

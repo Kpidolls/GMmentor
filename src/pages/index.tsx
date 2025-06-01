@@ -13,7 +13,10 @@ import QASection from '../components/QASection';
 import BackToTop from '../components/BackToTop';
 import IslandList from '../components/IslandList';
 import CategoryCards from '../components/CategoryCards';
+import ProductShowcase from '../components/ProductShowcase';
 import '../i18n';
+// import { t } from 'i18next';
+
 
 const App = () => {
   return (
@@ -28,9 +31,10 @@ const App = () => {
           </div>
         </div>
       </div>
-      {/* <Canvas /> */}
         <>
           <IslandList />
+          <Canvas />
+          <ProductShowcase />
           <Canvas />
           <Product />
           <Canvas />
