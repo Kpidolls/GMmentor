@@ -1,5 +1,26 @@
 [
   {
+    "id": "athens",
+    "title": "islands.athens.title",
+    "img": "/assets/images/athens.webp",
+    "description": "islands.athens.description",
+    "link": "https://maps.app.goo.gl/cUsbK1QPMZoAt1976",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "athens",
+      "athina",
+      "athens",
+      "atina",
+      "atena",
+      "athins",
+      "ath",
+      "greece",
+      "ellada",
+      "greece"
+    ]
+  },
+  {
     "id": "island-crete",
     "title": "islands.crete.title",
     "img": "/assets/images/crete.webp",
@@ -19,6 +40,25 @@
       "rethymno",
       "rethimno",
       "agios nikolaos"
+    ]
+  },
+  {
+    "id": "thessaloniki",
+    "title": "islands.thessaloniki.title",
+    "img": "/assets/images/thessaloniki.webp",
+    "description": "islands.thessaloniki.description",
+    "link": "https://maps.app.goo.gl/ULw9hefkicLDUFJJA",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "thessaloniki",
+      "tesaloniki",
+      "thesaloniki",
+      "saloon",
+      "saloniki",
+      "skg",
+      "ellada",
+      "greece"
     ]
   },
   {
@@ -62,6 +102,16 @@
     ]
   },
   {
+    "id": "island-rhodes",
+    "title": "islands.rhodes.title",
+    "img": "/assets/images/rodos.webp",
+    "description": "islands.rhodes.description",
+    "link": "https://maps.app.goo.gl/tLQZpTA6oyRoNg1w9",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": ["island", "greece", "rhodes", "rodos", "dodecanese"]
+  },
+  {
     "id": "island-aegina",
     "title": "islands.aegina.title",
     "img": "/assets/images/aegina.webp",
@@ -79,16 +129,6 @@
       "argosaronic",
       "near athens"
     ]
-  },
-  {
-    "id": "island-rhodes",
-    "title": "islands.rhodes.title",
-    "img": "/assets/images/rodos.webp",
-    "description": "islands.rhodes.description",
-    "link": "https://maps.app.goo.gl/tLQZpTA6oyRoNg1w9",
-    "target": "_blank",
-    "rel": "noopener noreferrer",
-    "keywords": ["island", "greece", "rhodes", "rodos", "dodecanese"]
   },
   {
     "id": "island-corfu",

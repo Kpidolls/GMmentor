@@ -75,7 +75,7 @@ export default function CategoryCards() {
   return (
     <section id="categories" className="py-8 bg-gray-50 mt-10">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <h2 className="text-center font-primary text-2xl sm:text-3xl font-extrabold text-gray-900 mb-6">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 text-center tracking-tight drop-shadow-lg">
           {t('categories.title')}
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">

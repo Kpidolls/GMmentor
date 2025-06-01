@@ -158,9 +158,17 @@
   },
   "islands": {
     "title": "Explore Destinations",
+    "athens": {
+      "title": "📍 Athens",
+      "description": "Athens, the capital of Greece, where ancient history meets vibrant modern life.  Explore ancient ruins, museums and lively neighborhoods."
+    },
     "crete": {
       "title": "📍 Crete",
       "description": "Discover Crete, the largest Greek island, with its rich history, stunning landscapes and vibrant culture."
+    },
+    "thessaloniki": {
+      "title": "📍 Thessaloniki",
+      "description": "Thessaloniki, Greece's second-largest city, is known for its rich history, vibrant culture and lively atmosphere."
     },
     "mykonos": {
       "title": "📍 Mykonos",
@@ -170,13 +178,13 @@
       "title": "📍 Santorini",
       "description": "Visit Santorini for its iconic white-washed buildings, blue-domed churches and breathtaking sunsets."
     },
-    "aegina": {
-      "title": "📍 Aegina",
-      "description": "Relax on Aegina, a charming island known for its pistachios, ancient temples and serene beaches."
-    },
     "rhodes": {
       "title": "📍 Rhodes (Rodos)",
       "description": "Explore Rhodes, a historic island with medieval charm, ancient ruins and beautiful beaches."
+    },
+    "aegina": {
+      "title": "📍 Aegina",
+      "description": "Relax on Aegina, a charming island known for its pistachios, ancient temples and serene beaches."
     },
     "corfu": {
       "title": "📍 Corfu (Kerkyra)",
