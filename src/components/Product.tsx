@@ -12,7 +12,7 @@ const Product = () => {
 
   return (
     <div className="container mx-auto px-4 py-8" id="maps">
-      <h1 className="text-4xl font-primary font-bold text-[#001c28] mb-8 text-center">
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 text-center tracking-tight drop-shadow-lg">
         {t('product.title')}
       </h1>
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

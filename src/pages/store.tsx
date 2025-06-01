@@ -78,7 +78,7 @@ const Store: React.FC = () => {
                 <img
                   src={product.image || '/placeholder.jpg'}
                   alt={t('imageAlt', { name: t(product.name, { defaultValue: product.name }) })}
-                  className="w-full h-48 object-cover rounded-t-lg"
+                  className="w-full aspect-square object-cover rounded-t-lg"
                 />
               </a>
               <div className="p-6 flex flex-col flex-grow">
