@@ -285,9 +285,21 @@
         "name": "Mobile Data e-SIM Card",
         "description": "Stay online effortlessly while traveling with this e-SIM card. Get 3€ off your first purchase with code GOOGLE4204."
       },
+      "temuAdapter": {
+        "name": "Universal Travel Adapter",
+        "description": "Fast multi-device charging, power up anywhere with this high-speed international adapter. It features 4 USB ports (2.4A) and a Type-C 3.0A port for quick, efficient charging."
+      },
       "pillowMask": {
         "name": "Pillow and Mask",
         "description": "Travel in comfort with this ergonomic pillow and sleep mask set. Perfect for long flights or road trips."
+      },
+      "neckPillow": {
+        "name": "Neck Pillow",
+        "description": "Enjoy ultimate neck support on long flights or road trips with this ergonomic travel pillow. Designed for maximum comfort, it comes with a machine-washable cover and a compact storage bag for easy portability."
+      },
+      "temuMask": {
+        "name": "Sleep Mask",
+        "description": "Experience restful sleep on the go with this comfortable and adjustable sleep mask. Perfect for flights, road trips, or home use. Get one for all your family members and friends."
       },
       "insurance": {
         "name": "Travel Insurance",
@@ -297,29 +309,57 @@
         "name": "Luggage Lock",
         "description": "Keep your belongings safe with this TSA-approved luggage lock. Durable and easy to use for peace of mind during your travels."
       },
+      "lockTemu": {
+        "name": "3-digit Combination Lock",
+        "description": "Secure your luggage with this durable and reliable luggage lock. Perfect for travel and everyday use, available In various colors."
+      },
       "dryBagWaterproof": {
         "name": "Waterproof Bag",
         "description": "Protect your belongings from water damage with this lightweight, durable dry bag. Ideal for beach trips, kayaking, and more."
+      },
+      "dryBagTemu": {
+        "name": "Waterproof Dry Bag",
+        "description": "Keep your belongings dry with this waterproof dry bag with assorted colors. Perfect for water activities, hiking, and outdoor adventures."
       },
       "portableCharger": {
         "name": "Portable Charger 20000mAh",
         "description": "Keep your devices powered up with this high-capacity portable charger. Perfect for long trips and multiple devices."
       },
+      "portableChargerTemu": {
+        "name": "Portable Charger 20000/10000mAh",
+        "description": "Stay powered anywhere with this portable power bank, available in 20000mAh or 10000mAh capacity. Featuring 22.5W fast charging, 2 USB 3.0 ports, and a Type-C port."
+      },
       "carCharger": {
         "name": "Car Charger",
         "description": "Charge your devices on the go with this compact and efficient car charger. Perfect for road trips and daily commutes."
+      },
+      "carChargerTemu": {
+        "name": "4-in-1 Fast Car Charger",
+        "description": "Charge multiple devices effortlessly with this high-speed car charger, featuring USB and Type-C ports. The extendable 80cm cable provides flexibility, while the adjustable 180° plug ensures easy positioning."
       },
       "sunProtectionShirt": {
         "name": "Sun Protection Shirt",
         "description": "Stay cool and shielded from harmful UV rays with this lightweight and breathable sun protection shirt. Ideal for outdoor adventures."
       },
+      "sunProtectionShirtTemu": {
+        "name": "Sun Protection Hoodie",
+        "description": "Shield yourself from the sun while staying cool and comfortable with this ultra-light, breathable UV protection shirt. It features quick-dry fabric and a long-sleeve rash guard for optimal sun defense."
+      },
       "waterShoes": {
         "name": "Water Shoes",
         "description": "Enjoy comfort and safety during water activities with these quick-dry, anti-slip water shoes. Perfect for beaches, rivers, and pools."
       },
+      "waterShoesTemu": {
+        "name": "Water Shoes",
+        "description": "Experience comfort and safety during water activities with these quick-dry, anti-slip water shoes. Perfect for beaches, rivers, and pools."
+      },
       "waterproofPhoneCase": {
         "name": "Waterproof Phone Case",
-        "description": "Keep your phone safe and dry with this durable waterproof case. Perfect for beach days, kayaking, and other water activities."
+        "description": "Keep your phone safe and dry with this durable waterproof case. Perfect for beach days and all water activities."
+      },
+      "waterproofPhoneCaseTemu": {
+        "name": "Waterproof Phone Case",
+        "description": "Protect your phone from water damage with this waterproof case. Perfect for beach trips, kayaking, and other water activities."
       },
       "miniBluetoothSpeaker": {
         "name": "Mini Bluetooth Speaker",
@@ -329,9 +369,17 @@
         "name": "Phone Holder Mount",
         "description": "Make hands-free calls and navigate effortlessly with this sturdy and adjustable phone holder mount for your car."
       },
+      "carphoneHolder": {
+        "name": "Car Phone Holder Mount",
+        "description": "Effortlessly navigate and take hands-free calls with this secure, 360° rotating phone mount. Designed with a sturdy hook clip for car air vents. Compatible with iPhone, Samsung, and Android."
+      },
       "airplanePhoneHolder": {
         "name": "Airplane Phone Holder",
         "description": "Enjoy hands-free entertainment on flights with this compact and adjustable airplane phone holder. Perfect for watching movies."
+      },
+      "airplanePhoneHolderTemu": {
+        "name": "Airplane Phone Holder",
+        "description": "Designed for travel convenience, it securely mounts to airplane seats, offering a stable stand for your device. Its compact, foldable design makes it easy to pack."
       },
       "sonyWirelessHeadphones": {
         "name": "Sony Wireless Noise Canceling Headphones",
@@ -340,6 +388,10 @@
       "nordicWalkingPoles": {
         "name": "Nordic Walking Poles",
         "description": "Enhance your hiking experience with these lightweight and durable Nordic walking poles. Perfect for all terrains."
+      },
+      "telescopicHikingTicks": {
+        "name": "Telescopic Hiking Sticks",
+        "description": "Improve your hiking experience with these adjustable aluminum alloy telescopic hiking sticks. Lightweight and durable, perfect for all terrains."
       },
       "ankerMultiUsbPort": {
         "name": "Anker Multi USB Port",
@@ -356,6 +408,10 @@
       "miniPowerBank": {
         "name": "Mini Power Bank",
         "description": "Stay charged on the go with this compact and lightweight mini power bank. Perfect for travel and emergencies."
+      },
+      "miniPowerBankTemu": {
+        "name": "Mini Portable Charger",
+        "description": "Compact and lightweight, this mini portable charger is perfect for travel. Compatible with iPhone 15/14/13/12 Pro Max/iPad Pro/Samsung Android."
       },
       "sunHat": {
         "name": "Sun Hat",

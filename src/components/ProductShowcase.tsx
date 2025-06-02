@@ -65,11 +65,11 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ products = defaultPro
           rel="noopener noreferrer"
           className="flex-1 group flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-white/90 rounded-2xl shadow-2xl p-4 sm:p-6 mx-2 sm:mx-4 transition-all duration-300 hover:scale-105 hover:shadow-blue-200/60 backdrop-blur-md border border-gray-100 min-h-[10rem] sm:min-h-[9rem]"
         >
-          <div className="w-full sm:w-32 md:w-40 aspect-square flex-shrink-0 rounded-xl overflow-hidden border border-gray-200 shadow-md bg-gray-50 flex items-center justify-center">
+          <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 flex-shrink-0 rounded-xl overflow-hidden border border-gray-200 shadow-md bg-gray-50 flex items-center justify-center">
             <img
               src={product.image}
               alt="Product Image"
-              className="object-cover w-full h-full aspect-square transition-transform duration-300 group-hover:scale-110"
+              className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
               loading="lazy"
             />
           </div>

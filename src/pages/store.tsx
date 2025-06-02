@@ -82,7 +82,9 @@ const Store: React.FC = () => {
                 />
               </a>
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2 sm:mb-4 leading-tight">
+                <h3
+                  className="text-lg sm:text-xl font-semibold text-gray-800 mb-2 sm:mb-4 leading-tight min-h-[2.5em] sm:min-h-[3em]"
+                >
                   {t(product.name, { defaultValue: product.name })}
                 </h3>
                 <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed">
