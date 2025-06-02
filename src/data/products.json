@@ -1,23 +1,5 @@
 [
   {
-    "id": "travel-luggage-lock",
-    "translationKey": "travelLuggageLock",
-    "name": "store.products.travelLuggageLock.name",
-    "description": "store.products.travelLuggageLock.description",
-    "image": "/assets/images/lock.webp",
-    "link": "https://www.amazon.com/Compatible-Travel-Luggage-Inspection-Indicator/dp/B073NYB7R2?crid=193YCY2P4WJR4&dib=eyJ2IjoiMSJ9.gk-FsnfAsrB47YFDiXxMZr4w4lgP23Tqz7Vz1m0VIcIxhhB-qf4rTBPMshxuzn7eDjVo_EIy3oMMztzefkXVcD3pVcQ0OaDKEfgkMV2Y2VGhefOSPIAbVkKbfWsME9aeoEyyy75OIfkRM9eLL0ZWDX91_Hh9w1JThAmanWbAm--GLXHNedqncyDGtAWuxKVtiThk8abcr0ug6lAaRvS6izTTVGJ9i_OmPDPrrQqpWrJl5nyx_nchT9ee-T7oQ6Gydgt1tRQbNPk-GG5GV4Dve8AFucT9FM1Y861m9O5bwiY.HT4ld4jRTAzqdjzrYDoHvJYfvcaDV3k41C2nKKJRe38&dib_tag=se&keywords=luggage%2Block&qid=1744297813&sprefix=luggage%2Block%2Caps%2C266&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=f60ff431657ac0a3dc911b8b1c082318&language=en_US&ref_=as_li_ss_tl",
-    "keywords": ["travel", "luggage", "lock", "safety", "security"]
-  },
-  {
-    "id": "universal-travel-adapter",
-    "translationKey": "universalTravelAdapter",
-    "name": "store.products.universalTravelAdapter.name",
-    "description": "store.products.universalTravelAdapter.description",
-    "image": "/assets/images/universaladapter.webp",
-    "link": "https://www.amazon.com/NEWVANGA-International-Universal-Worldwide-Charging/dp/B01FO4W5W2?crid=28IMN2VY22YN7&dib=eyJ2IjoiMSJ9.jJ5JSSoMLRaR3Hs-XHxku86MnNJRH365FkZhxTtWXCPN0QQ8pPQBQcprISWu5Z-Q9nMnoGUUKb4YF1CIGf526FDBhfd5D5xuQKMU1LKdkDTJXilM7I3tSQGSqAP1MefzATfITwcsgaSXquY_6XRJXXxLTOFW0Exl3H8Fj3fituy7nCYIFNEFOrhvD3Ewu7zf84FJDvjlN6DSqJy2j4h-B-SKAXUd-l7ZYKXAor1AyVjM8jOBjJfm-KgVrPgD77hadOIAwWnviwR8jXNtsYpcP-7_Ldbw9KuCKDJBSfBt5T8.7LnubVDXoBTeUbNW964t3QmLTk7hwMnbsGHMCyLXj1s&dib_tag=se&keywords=Universal%2BTravel%2BAdapter&qid=1743661696&sprefix=universal%2Btravel%2Badapter%2Caps%2C281&sr=8-6&th=1&linkCode=ll1&tag=googlementor-20&linkId=138bf86aa348318d5c924b0c3a956757&language=en_US&ref_=as_li_ss_tl",
-    "keywords": ["adapter", "universal", "travel", "charging", "international"]
-  },
-  {
     "id": "mobile-data-esim-card",
     "translationKey": "mobileDataEsimCard",
     "name": "store.products.mobileDataEsimCard.name",
@@ -27,13 +9,22 @@
     "keywords": ["mobile", "data", "esim", "card", "international"]
   },
   {
-    "id": "pillow-mask",
-    "translationKey": "pillowMask",
-    "name": "store.products.pillowMask.name",
-    "description": "store.products.pillowMask.description",
-    "image": "/assets/images/pillow.webp",
-    "link": "https://www.amazon.com/SARISUN-Airplanes-Sleeping-Headrest-Eligible/dp/B0CL6CXMGZ?crid=1XOTYYXQ7J8S8&dib=eyJ2IjoiMSJ9.DyT2qP-xZMOu-DEanapYVB_zQbxYLigcZeeHLK6NuIBr3R83NYGO31bTUfTWblVIhsEc-ozpY9JE5JpYi2vd7UegxZrqtCtm3-W52ZaFWSM7EhzteyGWKaJZ4SG4bgwyXagt2ufXcOMbDeXJ5rZsdEFEqJ6lqKfeJFIfp_aBB-fxHEjzXfkij_kMRn_-GSHqgFhBmZ91SgaiiIGaIlBAqRVjl6h7hBTqrsx7l9uDDddk_62NXVPT7S2emk1waxk_tbKHagXArlBs6lrQHFcVFYzgLQNdJTBx3FgnHuCWIyE.Uw6YzlSws72o1UJHLP2dCvlBxZEtPqGBuMhPhYu36sc&dib_tag=se&keywords=pillow%2Btravel%2Band%2Bmask&qid=1744964506&sprefix=pillow%2Btravel%2Band%2Bmask%2Caps%2C231&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=googlementor-20&linkId=1e7392ea42e93d97ceb967d7e460881a&language=en_US&ref_=as_li_ss_tl",
-    "keywords": ["pillow", "mask", "travel", "sleeping"]
+    "id": "temu-adapter",
+    "translationKey": "temuAdapter",
+    "name": "store.products.temuAdapter.name",
+    "description": "store.products.temuAdapter.description",
+    "image": "/assets/images/temu-adapter.webp",
+    "link": "https://temu.to/k/e1yjesu6q97",
+    "keywords": [
+      "charger",
+      "adapter",
+      "european",
+      "universal",
+      "type c",
+      "c",
+      "usb",
+      "travel"
+    ]
   },
   {
     "id": "insurance",
@@ -53,6 +44,70 @@
     ]
   },
   {
+    "id": "universal-travel-adapter",
+    "translationKey": "universalTravelAdapter",
+    "name": "store.products.universalTravelAdapter.name",
+    "description": "store.products.universalTravelAdapter.description",
+    "image": "/assets/images/universaladapter.webp",
+    "link": "https://www.amazon.com/NEWVANGA-International-Universal-Worldwide-Charging/dp/B01FO4W5W2?crid=28IMN2VY22YN7&dib=eyJ2IjoiMSJ9.jJ5JSSoMLRaR3Hs-XHxku86MnNJRH365FkZhxTtWXCPN0QQ8pPQBQcprISWu5Z-Q9nMnoGUUKb4YF1CIGf526FDBhfd5D5xuQKMU1LKdkDTJXilM7I3tSQGSqAP1MefzATfITwcsgaSXquY_6XRJXXxLTOFW0Exl3H8Fj3fituy7nCYIFNEFOrhvD3Ewu7zf84FJDvjlN6DSqJy2j4h-B-SKAXUd-l7ZYKXAor1AyVjM8jOBjJfm-KgVrPgD77hadOIAwWnviwR8jXNtsYpcP-7_Ldbw9KuCKDJBSfBt5T8.7LnubVDXoBTeUbNW964t3QmLTk7hwMnbsGHMCyLXj1s&dib_tag=se&keywords=Universal%2BTravel%2BAdapter&qid=1743661696&sprefix=universal%2Btravel%2Badapter%2Caps%2C281&sr=8-6&th=1&linkCode=ll1&tag=googlementor-20&linkId=138bf86aa348318d5c924b0c3a956757&language=en_US&ref_=as_li_ss_tl",
+    "keywords": ["adapter", "universal", "travel", "charging", "international"]
+  },
+  {
+    "id": "pillow-mask",
+    "translationKey": "pillowMask",
+    "name": "store.products.pillowMask.name",
+    "description": "store.products.pillowMask.description",
+    "image": "/assets/images/pillow.webp",
+    "link": "https://www.amazon.com/SARISUN-Airplanes-Sleeping-Headrest-Eligible/dp/B0CL6CXMGZ?crid=1XOTYYXQ7J8S8&dib=eyJ2IjoiMSJ9.DyT2qP-xZMOu-DEanapYVB_zQbxYLigcZeeHLK6NuIBr3R83NYGO31bTUfTWblVIhsEc-ozpY9JE5JpYi2vd7UegxZrqtCtm3-W52ZaFWSM7EhzteyGWKaJZ4SG4bgwyXagt2ufXcOMbDeXJ5rZsdEFEqJ6lqKfeJFIfp_aBB-fxHEjzXfkij_kMRn_-GSHqgFhBmZ91SgaiiIGaIlBAqRVjl6h7hBTqrsx7l9uDDddk_62NXVPT7S2emk1waxk_tbKHagXArlBs6lrQHFcVFYzgLQNdJTBx3FgnHuCWIyE.Uw6YzlSws72o1UJHLP2dCvlBxZEtPqGBuMhPhYu36sc&dib_tag=se&keywords=pillow%2Btravel%2Band%2Bmask&qid=1744964506&sprefix=pillow%2Btravel%2Band%2Bmask%2Caps%2C231&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=googlementor-20&linkId=1e7392ea42e93d97ceb967d7e460881a&language=en_US&ref_=as_li_ss_tl",
+    "keywords": ["pillow", "mask", "travel", "sleeping"]
+  },
+  {
+    "id": "neck-pillow",
+    "translationKey": "neckPillow",
+    "name": "store.products.neckPillow.name",
+    "description": "store.products.neckPillow.description",
+    "image": "/assets/images/neck-pillow.webp",
+    "link": "https://temu.to/k/eagpe63gbpl",
+    "keywords": ["pillow", "mask", "travel", "sleeping", "neck", "support"]
+  },
+  {
+    "id": "temu-mask",
+    "translationKey": "temuMask",
+    "name": "store.products.temuMask.name",
+    "description": "store.products.temuMask.description",
+    "image": "/assets/images/temu-mask.webp",
+    "link": "https://temu.to/k/ed8yr88qoy1",
+    "keywords": ["travel", "luggage", "mask", "sun", "airplane", "sleep"]
+  },
+  {
+    "id": "travel-luggage-lock",
+    "translationKey": "travelLuggageLock",
+    "name": "store.products.travelLuggageLock.name",
+    "description": "store.products.travelLuggageLock.description",
+    "image": "/assets/images/lock.webp",
+    "link": "https://www.amazon.com/Compatible-Travel-Luggage-Inspection-Indicator/dp/B073NYB7R2?crid=193YCY2P4WJR4&dib=eyJ2IjoiMSJ9.gk-FsnfAsrB47YFDiXxMZr4w4lgP23Tqz7Vz1m0VIcIxhhB-qf4rTBPMshxuzn7eDjVo_EIy3oMMztzefkXVcD3pVcQ0OaDKEfgkMV2Y2VGhefOSPIAbVkKbfWsME9aeoEyyy75OIfkRM9eLL0ZWDX91_Hh9w1JThAmanWbAm--GLXHNedqncyDGtAWuxKVtiThk8abcr0ug6lAaRvS6izTTVGJ9i_OmPDPrrQqpWrJl5nyx_nchT9ee-T7oQ6Gydgt1tRQbNPk-GG5GV4Dve8AFucT9FM1Y861m9O5bwiY.HT4ld4jRTAzqdjzrYDoHvJYfvcaDV3k41C2nKKJRe38&dib_tag=se&keywords=luggage%2Block&qid=1744297813&sprefix=luggage%2Block%2Caps%2C266&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=f60ff431657ac0a3dc911b8b1c082318&language=en_US&ref_=as_li_ss_tl",
+    "keywords": ["travel", "luggage", "lock", "safety", "security"]
+  },
+  {
+    "id": "lock-temu",
+    "translationKey": "lockTemu",
+    "name": "store.products.lockTemu.name",
+    "description": "store.products.lockTemu.description",
+    "image": "/assets/images/lock-temu.webp",
+    "link": "https://temu.to/k/efvfis3qqld",
+    "keywords": [
+      "travel",
+      "travel",
+      "luggage",
+      "lock",
+      "safety",
+      "security",
+      "klidaria",
+      "asfaleia",
+      "kleida"
+    ]
+  },
+  {
     "id": "dry-bag-waterproof",
     "translationKey": "dryBagWaterproof",
     "name": "store.products.dryBagWaterproof.name",
@@ -62,13 +117,49 @@
     "keywords": ["dry", "bag", "waterproof"]
   },
   {
+    "id": "dry-bag-temu",
+    "translationKey": "dryBagTemu",
+    "name": "store.products.dryBagTemu.name",
+    "description": "store.products.dryBagTemu.description",
+    "image": "/assets/images/dry-bag-temu.webp",
+    "link": "https://temu.to/k/ejj8f3eyyxy",
+    "keywords": ["waterproof", "water", "bag", "luggage", "beach", "dry"]
+  },
+  {
     "id": "portable-charger-20000mah",
     "translationKey": "portableCharger",
     "name": "store.products.portableCharger.name",
     "description": "store.products.portableCharger.description",
-    "image": "/assets/images/charger.webp",
+    "image": "/assets/images/powerbank1.webp",
     "link": "https://www.amazon.com/INIU-Portable-20000mAh-High-speed-Flashlight/dp/B07YPY31FL?crid=1XSBI2DD4MBI3&dib=eyJ2IjoiMSJ9.CZlI-b10iXOHhb1rmCebQ5pDKUotPusAaFPEu8XSDTm7KcdiWrT22WwyVSuZUn6drRlqXZBNAHJ7e4LZeolR-w-HP61bxkUMIZgDjk_BQobAX4j6bxfaMHAXp73aGxXF9SZ8E-GR4jRJzSSyzpX3VWP-NmzVisQUQMi-RzV1e2NpXrXqrAg2AJ5ic0GKH1WNIc6IOouEI3vin2Ki-t6Qeh_46j39WTIAElT7G95fZTw.Xkng_Yvwx6COR4I8_1KOB2ycYa7ik4Nw_BKMcom8aPY&dib_tag=se&keywords=power%2Bbank&qid=1744281640&sprefix=powerbank%2Caps%2C267&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=15bde893fcb2936e8586db2e6dc66509&language=en_US&ref_=as_li_ss_tl",
-    "keywords": ["portable", "charger", "20000mah"]
+    "keywords": [
+      "portable",
+      "charger",
+      "20000mah",
+      "fortistis",
+      "power",
+      "bank",
+      "travel",
+      "kinito"
+    ]
+  },
+  {
+    "id": "portable-charger-temu",
+    "translationKey": "portableChargerTemu",
+    "name": "store.products.portableChargerTemu.name",
+    "description": "store.products.portableChargerTemu.description",
+    "image": "/assets/images/charger-temu.webp",
+    "link": "https://temu.to/k/eaaxie01gyg",
+    "keywords": [
+      "portable",
+      "charger",
+      "20000mah",
+      "fortistis",
+      "power",
+      "bank",
+      "travel",
+      "kinito"
+    ]
   },
   {
     "id": "car-charger",
@@ -77,7 +168,30 @@
     "description": "store.products.carCharger.description",
     "image": "/assets/images/car-charger.webp",
     "link": "https://www.amazon.com/LISEN-Retractable-Charger-Charging-Accessories/dp/B0D4215HCX",
-    "keywords": ["car", "charger", "retractable"]
+    "keywords": [
+      "car",
+      "charger",
+      "retractable",
+      "kinito",
+      "fortistis",
+      "autokinito"
+    ]
+  },
+  {
+    "id": "car-charger-temu",
+    "translationKey": "carChargerTemu",
+    "name": "store.products.carChargerTemu.name",
+    "description": "store.products.carChargerTemu.description",
+    "image": "/assets/images/car-charger-temu.webp",
+    "link": "https://temu.to/k/edb87ozg5yo",
+    "keywords": [
+      "car",
+      "charger",
+      "retractable",
+      "kinito",
+      "fortistis",
+      "autokinito"
+    ]
   },
   {
     "id": "sun-protection-shirt",
@@ -86,7 +200,34 @@
     "description": "store.products.sunProtectionShirt.description",
     "image": "/assets/images/swimshirt.webp",
     "link": "https://www.amazon.com/Roadbox-Protection-Outdoor-Rashguard-Campanula/dp/B08BFKM7VT",
-    "keywords": ["sun", "protection", "shirt", "safety"]
+    "keywords": [
+      "sun",
+      "protection",
+      "shirt",
+      "safety",
+      "antiiliakia",
+      "ilios",
+      "antiliako",
+      "prostasia"
+    ]
+  },
+  {
+    "id": "sun-protection-hoodie",
+    "translationKey": "sunProtectionShirtTemu",
+    "name": "store.products.sunProtectionShirtTemu.name",
+    "description": "store.products.sunProtectionShirtTemu.description",
+    "image": "/assets/images/sun-protection-hoodie.webp",
+    "link": "https://temu.to/k/epmxnnu14vj",
+    "keywords": [
+      "sun",
+      "protection",
+      "shirt",
+      "safety",
+      "antiiliakia",
+      "ilios",
+      "antiliako",
+      "prostasia"
+    ]
   },
   {
     "id": "water-shoes",
@@ -95,7 +236,40 @@
     "description": "store.products.waterShoes.description",
     "image": "/assets/images/watershoes.webp",
     "link": "https://www.amazon.com/ATHMILE-Quick-Dry-Barefoot-Exercise-Accessories/dp/B09Q3MYDQH",
-    "keywords": ["water", "shoes", "quick-dry"]
+    "keywords": [
+      "water",
+      "shoes",
+      "quick-dry",
+      "papoutsia",
+      "beach",
+      "swimming",
+      "thalassa",
+      "pedila",
+      "papoutsia thalasas",
+      "nisia",
+      "island"
+    ]
+  },
+  {
+    "id": "water-shoes-temu",
+    "translationKey": "waterShoesTemu",
+    "name": "store.products.waterShoesTemu.name",
+    "description": "store.products.waterShoesTemu.description",
+    "image": "/assets/images/waterShoesTemu.webp",
+    "link": "https://temu.to/k/e8pkzqiymso",
+    "keywords": [
+      "water",
+      "shoes",
+      "quick-dry",
+      "papoutsia",
+      "beach",
+      "swimming",
+      "thalassa",
+      "pedila",
+      "papoutsia thalasas",
+      "nisia",
+      "island"
+    ]
   },
   {
     "id": "waterproof-phone-case",
@@ -104,7 +278,32 @@
     "description": "store.products.waterproofPhoneCase.description",
     "image": "/assets/images/waterproof-phone-case.webp",
     "link": "https://www.amazon.com/Lamicall-Waterproof-Phone-Pouch-Case/dp/B0BQRDKRL6",
-    "keywords": ["waterproof", "phone", "case"]
+    "keywords": [
+      "waterproof",
+      "phone",
+      "case",
+      "kinito",
+      "telefono",
+      "tilefono",
+      "prostasia"
+    ]
+  },
+  {
+    "id": "waterproof-phone-case-temu",
+    "translationKey": "waterproofPhoneCaseTemu",
+    "name": "store.products.waterproofPhoneCaseTemu.name",
+    "description": "store.products.waterproofPhoneCaseTemu.description",
+    "image": "/assets/images/waterproof-phone-case-temu.webp",
+    "link": "https://temu.to/k/evx2hq7nh0v",
+    "keywords": [
+      "waterproof",
+      "phone",
+      "case",
+      "kinito",
+      "telefono",
+      "tilefono",
+      "prostasia"
+    ]
   },
   {
     "id": "mini-bluetooth-speaker",
@@ -122,8 +321,38 @@
     "description": "store.products.phoneHolderMount.description",
     "image": "/assets/images/mount.webp",
     "link": "https://www.amazon.com/LISEN-Essentials-Accessories-Universal-Handsfree/dp/B0CKN1N2YH",
-    "keywords": ["phone", "holder", "mount"]
+    "keywords": [
+      "phone",
+      "holder",
+      "mount",
+      "car",
+      "kinito",
+      "autokinito",
+      "telefono",
+      "tilefono",
+      "carphone"
+    ]
   },
+  {
+    "id": "phone-holder-mount",
+    "translationKey": "carphoneHolder",
+    "name": "store.products.carphoneHolder.name",
+    "description": "store.products.carphoneHolder.description",
+    "image": "/assets/images/carphoneHolder.webp",
+    "link": "https://temu.to/k/eycabxa74fm",
+    "keywords": [
+      "phone",
+      "holder",
+      "mount",
+      "car",
+      "kinito",
+      "autokinito",
+      "telefono",
+      "tilefono",
+      "carphone"
+    ]
+  },
+
   {
     "id": "airplane-phone-holder",
     "translationKey": "airplanePhoneHolder",
@@ -131,7 +360,36 @@
     "description": "store.products.airplanePhoneHolder.description",
     "image": "/assets/images/mount-airplane.webp",
     "link": "https://www.amazon.com/Perilogics-Universal-Airplane-Multi-Directional-Rotation/dp/B07T8KL6C6",
-    "keywords": ["airplane", "phone", "holder", "mount", "travel", "phone"]
+    "keywords": [
+      "airplane",
+      "phone",
+      "holder",
+      "mount",
+      "travel",
+      "phone",
+      "telefono",
+      "tilefono",
+      "kinito"
+    ]
+  },
+  {
+    "id": "airplane-phone-holder-temu",
+    "translationKey": "airplanePhoneHolderTemu",
+    "name": "store.products.airplanePhoneHolderTemu.name",
+    "description": "store.products.airplanePhoneHolderTemu.description",
+    "image": "/assets/images/airplanePhoneHolderTemu.webp",
+    "link": "https://temu.to/k/ec6abuwno4t",
+    "keywords": [
+      "airplane",
+      "phone",
+      "holder",
+      "mount",
+      "travel",
+      "phone",
+      "telefono",
+      "tilefono",
+      "kinito"
+    ]
   },
   {
     "id": "sony-wireless-headphones",
@@ -149,7 +407,34 @@
     "description": "store.products.nordicWalkingPoles.description",
     "image": "/assets/images/poles.webp",
     "link": "https://www.amazon.com/TheFitLife-Nordic-Walking-Trekking-Poles/dp/B01N57G27J",
-    "keywords": ["nordic", "walking", "poles", "hiking", "mountain"]
+    "keywords": [
+      "nordic",
+      "walking",
+      "poles",
+      "hiking",
+      "mountain",
+      "pezoporia",
+      "treximo",
+      "olympos"
+    ]
+  },
+  {
+    "id": "telescopic-hiking-tick",
+    "translationKey": "telescopicHikingTicks",
+    "name": "store.products.telescopicHikingTicks.name",
+    "description": "store.products.telescopicHikingTicks.description",
+    "image": "/assets/images/telescopicHikingTicks.webp",
+    "link": "https://temu.to/k/e8x87odgs6k",
+    "keywords": [
+      "nordic",
+      "walking",
+      "poles",
+      "hiking",
+      "mountain",
+      "pezoporia",
+      "treximo",
+      "olympos"
+    ]
   },
   {
     "id": "anker-multi-usb-port",
@@ -193,7 +478,34 @@
     "description": "store.products.miniPowerBank.description",
     "image": "/assets/images/powerbank.webp",
     "link": "https://www.amazon.com/INIU-Portable-Charging-10000mAh-Tablets/dp/B09176JCKZ",
-    "keywords": ["mini", "power", "bank", "charging", "travel", "phone"]
+    "keywords": [
+      "mini",
+      "power",
+      "bank",
+      "charging",
+      "travel",
+      "phone",
+      "fortistis",
+      "kinito"
+    ]
+  },
+  {
+    "id": "mini-power-bank",
+    "translationKey": "miniPowerBankTemu",
+    "name": "store.products.miniPowerBankTemu.name",
+    "description": "store.products.miniPowerBankTemu.description",
+    "image": "/assets/images/mini-powerbank-temu.webp",
+    "link": "https://temu.to/k/edb87ozg5yo",
+    "keywords": [
+      "mini",
+      "power",
+      "bank",
+      "charging",
+      "travel",
+      "phone",
+      "fortistis",
+      "kinito"
+    ]
   },
   {
     "id": "sun-hat",
