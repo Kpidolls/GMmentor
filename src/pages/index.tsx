@@ -20,28 +20,32 @@ import '../i18n';
 
 const App = () => {
   return (
-    <div className={`bg-background grid gap-y-8 overflow-hidden`}>
-      <div className={`relative bg-background`}>
+    <div className="bg-background grid">
+      {/* Sticky Header */}
+      <div className="sticky top-0 z-50 bg-background">
+        <Header />
+      </div>
+      <div className="relative bg-background overflow-hidden">
         <div className="max-w-full mx-auto">
           <div
-            className={`relative z-10 pb-8 bg-background sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32`}>
-            <Header />
+            className="relative z-10 pb-8 bg-background sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32"
+          >
             <MainHero />
             <CategoryCards />
           </div>
         </div>
       </div>
-        <>
-          <IslandList />
-          <Canvas />
-          <ProductShowcase />
-          <Canvas />
-          <Product />
-          <Canvas />
-        </>
-      <AboutUs />     
-      <QASection /> 
-      <BrevoForm /> 
+      <>
+        <IslandList />
+        <Canvas />
+        <ProductShowcase />
+        <Canvas />
+        <Product />
+        <Canvas />
+      </>
+      <AboutUs />
+      <QASection />
+      <BrevoForm />
       <LazyShow>
         <>
           <Canvas />
