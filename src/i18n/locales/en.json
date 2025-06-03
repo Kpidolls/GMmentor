@@ -260,7 +260,7 @@
     },
     "exploreButton": "Open Map",
     "shareButton": "Share",
-    "shareText": "Recommendations for {{title}} from Googlementor",
+    "shareText": "Recommendations for {{title}} from googlementor",
     "shareNotSupported": "Sharing is not supported on this browser.",
     "viewMoreButton": "View More"
   },
@@ -478,7 +478,7 @@
         "description": "Keep your phone safe and dry with this waterproof transparent mobile phone case. Touch screen compatible, perfect for water activities."
       },
       "portableFan": {
-        "name": "Mini Portable Fan",
+        "name": "Portable USB Desk Fan",
         "description": "Stay cool on the go with this compact and lightweight mini portable fan. USB rechargeable, 3-Speed, 360° rotatable head."
       },
       "tent": {
@@ -570,12 +570,12 @@
     "title": "Frequently Asked Questions",
     "whatIsGooglementor": "What is googlementor.com",
     "whatIsGooglementorAnswer": "Googlementor is your trusted platform for discovering curated lists of Google Maps locations, helping you explore the best spots around the world.",
-    "whatAreLists": "What are Googlementor lists",
+    "whatAreLists": "What are googlementor lists",
     "whatAreListsAnswer": "Googlementor lists are curated collections of saved locations organized around specific themes.",
-    "howToUseList": "How can I use a Googlementor list for Google Maps",
+    "howToUseList": "How can I use a googlementor list for Google Maps",
     "howToUseListAnswer": "Open a list on Google Maps by pressing explore under the list you want, and save it to your account.",
     "areListsFree": "Are the Google Maps lists free",
-    "areListsFreeAnswer": "Yes, all our curated Google Maps lists by Googlementor are currently available for free.",
+    "areListsFreeAnswer": "Yes, all our curated Google Maps lists by googlementor are currently available for free.",
     "howToHideList": "How can I hide the list",
     "howToHideListAnswer": "Go to the 'You' tab -> Click 'Saved' -> Find the list you want to hide, tap the three dots (...), and select 'Hide on your map.'",
     "howToShowList": "How can I see the list in my Google Maps app",
@@ -616,7 +616,7 @@
     "terms": "terms and conditions",
     "privacyPolicy": "privacy policy",
     "mapsData": "Maps data © Google. Google Maps is a trademark of Google LLC.",
-    "copyright": " Googlementor |  All rights reserved ",
+    "copyright": " googlementor |  All rights reserved ",
     "tiktok": "https://www.tiktok.com/@mapsmentor",
     "instagram": "https://www.instagram.com/mapsmentor?igsh=MXRxODZ4ajFlaGlscA%3D%3D&utm_source=qr",
     "twitter": "https://x.com/googlementor",
