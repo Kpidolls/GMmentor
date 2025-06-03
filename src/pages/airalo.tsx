@@ -34,7 +34,7 @@ export default function MobileDataPage() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/assets/images/airalo.png" // Replace with your image path or URL
+                  src="/assets/images/airalo.webp" // Replace with your image path or URL
                   alt={t("airalo.imageAlt", "Airalo eSIM")}
                   className="w-full max-w-sm h-auto object-contain rounded-lg hover:opacity-90 transition"
                 />
