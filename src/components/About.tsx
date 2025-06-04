@@ -7,10 +7,10 @@ const About = () => {
   const { t } = useTranslation();
 
   const links = [
-    { href: '/login', label: t('about.affiliatePartners', 'Affiliate Partners') },
-    { href: '/login', label: t('about.mapCreators', 'Map Creators') },
-    { href: '/store', label: t('about.products', 'Products') },
-    { href: '/insurance', label: t('about.travelInsurance', 'Travel Insurance') },
+    { key: 'affiliatePartners', href: '/login', label: t('about.affiliatePartners', 'Affiliate Partners') },
+    { key: 'mapCreators', href: '/login', label: t('about.mapCreators', 'Map Creators') },
+    { key: 'products', href: '/store', label: t('about.products', 'Products') },
+    { key: 'travelInsurance', href: '/insurance', label: t('about.travelInsurance', 'Travel Insurance') },
   ];
 
   const socialLinks = [
