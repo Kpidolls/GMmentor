@@ -58,95 +58,95 @@
     "title": "Ready-to-Use Google Maps Lists",
     "mustSee": {
       "title": "📍 Must-See Attractions",
-      "description": "Discover must-see attractions, from ancient ruins to breathtaking landscapes."
+      "description": "Embark on a journey through history and nature with our curated list of iconic landmarks, ancient ruins, and breathtaking landscapes that define Greece’s timeless charm. "
     },
     "hiking": {
       "title": "📍 Hiking Trails",
-      "description": "Explore the best hiking trails, offering stunning views and unforgettable experiences."
+      "description": "Discover Greece’s most stunning hiking routes, from gentle walks to challenging treks, each offering amazing views and unforgettable outdoor experiences."
     },
     "rooftop": {
       "title": "📍 Rooftop Lounges",
-      "description": "Enjoy the view at the best rooftop lounges, perfect for unwinding after a long day."
+      "description": "Unwind in style at the top rooftop bars and lounges, where you can sip cocktails while soaking in mesmerizing cityscapes and sunsets."
     },
     "churches": {
       "title": "📍 Monasteries & Churches",
-      "description": "Historic monasteries and beautiful churches that showcase Greece’s rich cultural heritage."
+      "description": "Explore Greece’s spiritual heritage through its beautifully preserved monasteries and churches, rich in history, architecture, and cultural significance."
     },
     "vegan": {
       "title": "📍 Vegetarian Friendly",
-      "description": "Find vegan and vegetarian-friendly spots that cater to a variety of dietary preferences."
+      "description": "Savor delicious plant-based dishes at the best vegan and vegetarian spots, perfect for health-conscious travelers and food lovers alike."
     },
     "gyros": {
       "title": "📍 Gyros & Souvlaki",
-      "description": "Taste the best gyros and souvlaki in Greece, a must-try for food lovers."
+      "description": "Indulge in Greece’s iconic street food — the juiciest gyros and souvlaki crafted with traditional flavors that every foodie must try."
     },
     "fishTavernas": {
       "title": "📍 Fish Tavernas with Scenic Views",
-      "description": "Enjoy fresh seafood with stunning views at the best fish tavernas."
+      "description": "Dine on the freshest seafood while enjoying breathtaking coastal views at Greece’s top fish tavernas."
     },
     "fish": {
       "title": "📍 Fish Tavernas",
-      "description": "Enjoy fresh seafood at the best fish tavernas, a true Greek culinary experience."
+      "description": "Experience authentic Greek seafood at charming tavernas known for their fresh catch and warm hospitality."
     },
     "desserts": {
       "title": "📍 Desserts",
-      "description": "Indulge in the sweetest desserts and treats that Greece has to offer."
+      "description": "Treat yourself to Greece’s most irresistible desserts — from creamy baklava to luscious loukoumades, perfect for every sweet tooth."
     },
     "coffee": {
       "title": "📍 Coffee & Brunch",
-      "description": "Relax with a cup of coffee or enjoy a hearty brunch at cozy spots across Greece."
+      "description": "Start your day right with the best coffee and brunch venues, offering cozy atmospheres and delicious menus across Greece."
     },
     "tavernas": {
       "title": "📍 Greek Restaurants",
-      "description": "Experience authentic Greek cuisine at traditional tavernas, a true culinary delight."
+      "description": "Dive into traditional Greek flavors at handpicked tavernas where every meal is a celebration of local ingredients and recipes."
     },
     "wineries": {
       "title": "📍 Wineries",
-      "description": "Find amazing vineyards and indulge in the finest Greek wines."
+      "description": "Discover Greece’s finest wineries, where you can taste exquisite local wines and learn about centuries-old winemaking traditions."
     },
     "burger": {
       "title": "📍 Burger Spots",
-      "description": "Find the juiciest burgers and best burger joints in town for a satisfying meal."
+      "description": "Find the best burger spots serving mouthwatering, juicy burgers made with quality ingredients."
     },
     "italian": {
       "title": "📍 Italian Cuisine",
-      "description": "Savor the best Italian food in Greece, from pasta to pizza and more."
+      "description": "Savor Italy’s beloved classics—from wood-fired pizzas to fresh pasta—at top Italian restaurants across Greece."
     },
     "asian": {
       "title": "📍 Asian Cuisine",
-      "description": "Discover the best Asian restaurants in Greece, offering authentic flavors and dishes."
+      "description": "Explore a world of authentic Asian dishes, from sushi to spicy curries, crafted by talented chefs in Greece."
     },
     "mexican": {
       "title": "📍 Mexican Cuisine",
-      "description": "Savor the vibrant and bold flavors of Mexican cuisine in Greece."
+      "description": "Spice up your palate with bold, colorful Mexican cuisine, featuring tacos, burritos, and more at Greece’s top Mexican eateries."
     },
     "cheapEats": {
       "title": "📍 Cheap Eats",
-      "description": "Enjoy delicious meals that won’t break the bank, perfect for budget travelers."
+      "description": "Enjoy tasty meals that won’t stretch your wallet—perfect picks for budget travelers and food lovers on the go."
     },
     "luxury": {
       "title": "📍 Luxury Dining",
-      "description": "Indulge in luxury dining experiences that redefine elegance and taste."
+      "description": "Indulge in elegant dining at Greece’s finest restaurants, where gourmet cuisine meets impeccable service and ambiance."
     },
     "bars": {
       "title": "📍 Bars & Drinks",
-      "description": "Explore top bars and lounges for a vibrant nightlife experience."
+      "description": "Discover the best bars and lounges for cocktails, craft beers, and vibrant nightlife scenes that keep the party going."
     },
     "bougatsa": {
       "title": "📍 Bougatsa Shops",
-      "description": "Taste the famous Bougatsa pie, sweet version with cream and powdered sugar and the savory one with cheese or minced meat."
+      "description": "Delight in Greece’s famous bougatsa pies—choose from creamy sweet versions or savory fillings like cheese and minced meat."
     },
     "surf": {
       "title": "📍 Water Sports",
-      "description": "Enjoy water sports and activities from surfing to paddle boarding."
+      "description": "Dive into adventure with top spots for surfing, paddleboarding, and other exhilarating water sports along Greece’s stunning coastlines."
     },
     "family": {
       "title": "📍 Family Friendly",
-      "description": "Family-friendly spots for all ages, ensuring fun and memorable experiences."
+      "description": "Find the perfect spots for families, offering activities and environments where kids and adults alike can create lasting memories."
     },
     "bouzoukia": {
       "title": "📍 Live Music (Bouzoukia)",
-      "description": "Experience live Greek music and immerse yourself in the local culture."
+      "description": "Immerse yourself in authentic Greek nightlife with live bouzoukia performances—an unforgettable cultural and musical experience."
     },
     "exploreButton": "Open Map",
     "shareButton": "Share",
