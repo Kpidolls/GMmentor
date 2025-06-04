@@ -15,6 +15,8 @@ import IslandList from '../components/IslandList';
 import CategoryCards from '../components/CategoryCards';
 import ProductShowcase from '../components/ProductShowcase';
 import '../i18n';
+import GetYourGuideWidget from '../components/GetYourGuideWidget';
+import { Box } from '@chakra-ui/react';
 // import { t } from 'i18next';
 
 
@@ -31,6 +33,9 @@ const App = () => {
             className="relative z-10 pb-8 bg-background sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32"
           >
             <MainHero />
+            <Box mt={10} px={4}>
+              <GetYourGuideWidget />
+            </Box>
             <CategoryCards />
           </div>
         </div>
