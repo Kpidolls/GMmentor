@@ -15,26 +15,28 @@ const Product = () => {
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 text-center tracking-tight drop-shadow-lg">
         {t('product.title')}
       </h1>
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-stretch">
         {mapOptions.slice(0, visibleOptions).map((option, index) => (
           <div
             key={index}
             id={option.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
           >
-            <img
-              src={option.img}
-              alt={t('product.imageAlt', { title: t(option.title) })}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
+            <div className="w-full aspect-square bg-gray-100">
+              <img
+                src={option.img}
+                alt={t('product.imageAlt', { title: t(option.title) })}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-4 flex flex-col flex-1">
               <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2 h-8 sm:h-14 overflow-hidden">
                 {t(option.title)}
               </h3>
-              <p className="text-gray-600 font-secondary text-sm mb-2 sm:mb-4 h-12 sm:h-20 overflow-hidden">
+              <p className="text-gray-600 font-secondary text-sm mb-2 sm:mb-4 min-h-[3.5em] sm:min-h-[5em]">
                 {t(option.description)}
               </p>
-              <div className="flex flex-wrap gap-4 mt-4">
+              <div className="flex flex-wrap gap-4 mt-auto">
                 <a
                   href={option.link}
                   target={option.target}
