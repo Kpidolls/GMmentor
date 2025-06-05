@@ -46,55 +46,61 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ products = defaultPro
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center mt-10 mb-4 px-2 sm:px-4">
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 text-center tracking-tight drop-shadow-lg">
+    <section className="w-full flex flex-col items-center justify-center mt-10 mb-4 px-2 sm:px-4">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8 text-center tracking-tight drop-shadow-lg">
         {t('productShowcaseTitle', { defaultValue: 'Travel Products' })}
       </h2>
-      <div className="flex items-center w-full max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-2xl">
+      <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
+        {/* Navigation Buttons */}
         <button
           onClick={handlePrev}
           aria-label={t('mainHero.prevProduct', { defaultValue: 'Previous Product' })}
-          className="p-2 sm:p-3 rounded-full bg-white border border-gray-200 shadow hover:bg-blue-50 transition disabled:opacity-50 text-xl sm:text-2xl"
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 sm:p-3 rounded-full bg-white/90 border border-gray-200 shadow hover:bg-blue-50 transition disabled:opacity-50 text-2xl"
           disabled={products.length < 2}
         >
           &#8592;
         </button>
-        <a
-          href={product.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 group flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-white/90 rounded-2xl shadow-2xl p-4 sm:p-6 mx-2 sm:mx-4 transition-all duration-300 hover:scale-105 hover:shadow-blue-200/60 backdrop-blur-md border border-gray-100 min-h-[10rem] sm:min-h-[9rem]"
-        >
-          <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 flex-shrink-0 rounded-xl overflow-hidden border border-gray-200 shadow-md bg-gray-50 flex items-center justify-center">
-            <img
-              src={product.image}
-              alt="Product Image"
-              className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex-1 text-left flex flex-col justify-center min-h-[5.5rem]">
-            <h3
-              className="text-base xs:text-lg sm:text-2xl md:text-3xl font-bold text-gray-900 mb-1 truncate sm:truncate lg:whitespace-normal lg:break-words"
-              title={t(`store.products.${product.translationKey}.name`)}
-            >
-              {t(`store.products.${product.translationKey}.name`)}
-            </h3>
-            <span className="inline-block mt-2 text-[#0878fe] font-semibold underline underline-offset-2 group-hover:text-[#0053b8] transition-colors text-sm sm:text-base md:text-lg">
-              {t('mainHero.viewProduct', { defaultValue: 'View Product' })}
-            </span>
-          </div>
-        </a>
         <button
           onClick={handleNext}
           aria-label={t('mainHero.nextProduct', { defaultValue: 'Next Product' })}
-          className="p-2 sm:p-3 rounded-full bg-white border border-gray-200 shadow hover:bg-blue-50 transition disabled:opacity-50 text-xl sm:text-2xl"
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 sm:p-3 rounded-full bg-white/90 border border-gray-200 shadow hover:bg-blue-50 transition disabled:opacity-50 text-2xl"
           disabled={products.length < 2}
         >
           &#8594;
         </button>
+        {/* Product Card */}
+        <div className="flex flex-col items-center bg-white/90 rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 min-h-[420px] sm:min-h-[440px] md:min-h-[480px]">
+          <a
+            href={product.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex-1 flex flex-col items-center group"
+            style={{ minHeight: '320px' }}
+          >
+            <div className="w-full flex-1 flex items-center justify-center bg-gray-50 relative aspect-[4/3] sm:aspect-[16/9]">
+              <img
+                src={product.image}
+                alt={t(`store.products.${product.translationKey}.name`)}
+                className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                style={{ maxHeight: '320px' }}
+              />
+            </div>
+            <div className="w-full px-6 py-4 flex flex-col items-center">
+              <h3
+                className="text-lg sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center truncate w-full"
+                title={t(`store.products.${product.translationKey}.name`)}
+              >
+                {t(`store.products.${product.translationKey}.name`)}
+              </h3>
+              <span className="inline-block text-[#0878fe] font-semibold underline underline-offset-2 group-hover:text-[#0053b8] transition-colors text-base sm:text-lg">
+                {t('mainHero.viewProduct', { defaultValue: 'View Product' })}
+              </span>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
