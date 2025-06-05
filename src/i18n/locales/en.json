@@ -279,11 +279,11 @@
     "products": {
       "universalTravelAdapter": {
         "name": "Universal Travel Adapter",
-        "description": "All-in-one travel adapter. Perfect for charging your devices in over 150 countries worldwide."
+        "description": "This travel adapter lets you charge multiple devices, including phones and tablets. It’s powerful (33.5W) with Dual USB-C, 3 USB ports, and fast-charging (PD & QC 3.0). Works with plug types I, C, G, A and supports both 110V and 220V."
       },
       "mobileDataEsimCard": {
         "name": "Mobile Data e-SIM Card",
-        "description": "Stay online effortlessly while traveling with this e-SIM card. Get 3€ off your first purchase with code GOOGLE4204."
+        "description": "Travel worry-free with Airalo eSIMs—no physical SIM! Stay online wherever you go and enjoy seamless global connectivity. Get 3€ off your first purchase with code GOOGLE4204. One less thing to plan, so you can focus on the adventure ahead!"
       },
       "temuAdapter": {
         "name": "Universal Travel Adapter",
@@ -291,7 +291,7 @@
       },
       "pillowMask": {
         "name": "Pillow and Mask",
-        "description": "Travel in comfort with this ergonomic pillow and sleep mask set. Perfect for long flights or road trips."
+        "description": "Relax and recharge on every journey with this ultra-comfortable ergonomic pillow and sleep mask set. Designed for long flights and road trips, it provides perfect support and blocks out light, helping you rest anywhere with ease."
       },
       "neckPillow": {
         "name": "Neck Pillow",
@@ -303,11 +303,11 @@
       },
       "insurance": {
         "name": "Travel Insurance",
-        "description": "Protect your travels with reliable and affordable travel insurance, trusted by adventurers worldwide."
+        "description": "Travel with confidence knowing you’re covered! SafetyWing offers reliable, affordable travel insurance designed for adventurers like you—whether you're exploring new destinations or working remotely around the world. Stay protected wherever you go!"
       },
       "travelLuggageLock": {
         "name": "Luggage Lock",
-        "description": "Keep your belongings safe with this TSA-approved luggage lock. Durable and easy to use for peace of mind during your travels."
+        "description": "Keep your belongings secure with this TSA-approved luggage lock—strong, reliable, and effortless to use. Travel with confidence knowing your luggage is protected wherever you go!"
       },
       "lockTemu": {
         "name": "3-digit Combination Lock",
