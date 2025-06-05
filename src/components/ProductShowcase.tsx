@@ -69,7 +69,7 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ products = defaultPro
           &#8594;
         </button>
         {/* Product Card */}
-        <div className="flex flex-col items-center bg-white/90 rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 min-h-[420px] sm:min-h-[440px] md:min-h-[480px]">
+        <div className="gyg-widget-container transition-all duration-300 min-h-[420px] sm:min-h-[440px] md:min-h-[480px] flex flex-col items-center">
           <a
             href={product.link}
             target="_blank"
@@ -77,13 +77,32 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ products = defaultPro
             className="w-full flex-1 flex flex-col items-center group"
             style={{ minHeight: '320px' }}
           >
-            <div className="w-full flex-1 flex items-center justify-center bg-gray-50 relative aspect-[4/3] sm:aspect-[16/9]">
+            <div
+              className="w-full flex-1 flex items-center justify-center relative aspect-[4/3] sm:aspect-[16/9] bg-gradient-to-br from-gray-200 via-gray-100 to-gray-300 p-4"
+              style={{
+                borderRadius: '1rem',
+                boxShadow: '0 4px 24px rgba(44,62,80,0.10)',
+                border: '1.5px solid #e5e7eb',
+                minHeight: '220px',
+                maxHeight: '340px',
+              }}
+            >
               <img
                 src={product.image}
                 alt={t(`store.products.${product.translationKey}.name`)}
-                className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
+                className="object-contain w-full h-full rounded-xl shadow-md bg-white"
                 loading="lazy"
-                style={{ maxHeight: '320px' }}
+                style={{
+                  maxWidth: '100%',
+                  maxHeight: '260px',
+                  minHeight: '180px',
+                  background: 'white',
+                  padding: '0.5rem',
+                  borderRadius: '0.75rem',
+                  border: '1px solid #f3f4f6',
+                  boxShadow: '0 2px 8px rgba(44,62,80,0.08)',
+                  transition: 'transform 0.3s',
+                }}
               />
             </div>
             <div className="w-full px-6 py-4 flex flex-col items-center">
