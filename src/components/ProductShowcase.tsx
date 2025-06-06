@@ -47,9 +47,9 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ products = defaultPro
 
   return (
     <section className="w-full flex flex-col items-center justify-center mt-10 mb-4 px-2 sm:px-4">
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8 text-center tracking-tight drop-shadow-lg">
+      {/* <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8 text-center tracking-tight drop-shadow-lg">
         {t('productShowcaseTitle', { defaultValue: 'Travel Products' })}
-      </h2>
+      </h2> */}
       <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
         {/* Navigation Buttons */}
         <button

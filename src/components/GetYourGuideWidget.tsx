@@ -18,7 +18,7 @@ const GetYourGuideWidget = () => {
   return (
     <div
       ref={containerRef}
-      className="gyg-widget-container"
+      className="gyg-widget-container mb-8"
     >
       <div data-gyg-widget="auto" data-gyg-partner-id="V2LLO22"></div>
     </div>
