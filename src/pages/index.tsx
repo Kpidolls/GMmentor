@@ -17,12 +17,20 @@ import ProductShowcase from '../components/ProductShowcase';
 import '../i18n';
 import GetYourGuideWidget from '../components/GetYourGuideWidget';
 import { Box } from '@chakra-ui/react';
-// import { t } from 'i18next';
-
+import Head from 'next/head';
+import { useTranslation } from 'react-i18next';
 
 const App = () => {
+  const { t } = useTranslation();
   return (
     <div className="bg-background grid">
+      <Head>
+        <title>Greek Islands Travel Guide | Top Tours & Activities 2025</title>
+        <meta
+          name="description"
+          content="Explore the Greek Islands with our 2025 travel guide. Discover top tours, activities, and expert tips for an unforgettable Greek vacation. Book now!"
+        />
+      </Head>
       {/* Sticky Header */}
       <div className="sticky top-0 z-50 bg-background">
         <Header />
@@ -34,18 +42,42 @@ const App = () => {
           >
             <MainHero />
             <Box mt={10} px={4}>
+              <h1 className="text-4xl font-primary font-bold mb-4">
+                {t('navigation.getyourguide')}
+              </h1>
               <GetYourGuideWidget />
+            </Box>
+            <Box mt={10} px={4}>
+            <h2 className="text-4xl font-primary font-bold mb-4">
+               {t('mainHero.subtitle')} {new Date().getFullYear()}
+            </h2>
             </Box>
             <CategoryCards />
           </div>
         </div>
       </div>
       <>
-        <IslandList />
+      <Box mt={10} px={4}>
+          <h2 className="text-4xl font-primary font-bold mb-4">
+            {t('islands.title')}
+          </h2>
+      <IslandList />
+      </Box>
+
         <Canvas />
+        <Box mt={10} px={4}>
+            <h2 className="text-4xl font-primary font-bold mb-4">
+              {t('productShowcaseTitle')}
+            </h2>
         <ProductShowcase />
+        </Box>
         <Canvas />
+        <Box mt={10} px={4}>
+          <h2 className="text-4xl font-primary font-bold mb-4">
+              {t('product.title')}
+          </h2>
         <Product />
+        </Box>
         <Canvas />
       </>
       <AboutUs />

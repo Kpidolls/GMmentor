@@ -13,7 +13,7 @@ const QASection = () => {
   return (
     <section className="bg-white py-16" id="qa-section">
       <div className="container mx-auto px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 text-center tracking-tight drop-shadow-lg">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center tracking-tight drop-shadow-lg">
           {t('qa.title')}
         </h2>
         <div className="space-y-4">

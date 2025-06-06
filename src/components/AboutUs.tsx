@@ -9,7 +9,7 @@ const AboutUs = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Title Section */}
         <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 text-center tracking-tight drop-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center tracking-tight drop-shadow-lg">
             {t('aboutUs.title')}
           </h1>
           <p className="mt-4 text-lg lg:text-xl text-gray-600 font-secondary">

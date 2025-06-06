@@ -70,14 +70,14 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ name, Icon, link }) => {
 };
 
 export default function CategoryCards() {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <section id="categories" className="py-8 bg-gray-50 mt-10">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6 text-center tracking-tight drop-shadow-lg">
+        {/* <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center tracking-tight drop-shadow-lg">
           {t('categories.title')}
-        </h2>
+        </h2> */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {categories.map(({ tag, name, icon, link }) => (
             <CategoryCard

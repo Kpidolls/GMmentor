@@ -13,6 +13,7 @@
   },
   "navigation": {
     "maps": "Lists",
+    "getyourguide": "Top Tours & Activities",
     "mustSee": "Must See",
     "islands": "Destinations",
     "food": "Food",
@@ -31,7 +32,7 @@
   },
   "mainHero": {
     "title": "Greece",
-    "subtitle": "Travel Maps",
+    "subtitle": "Travel Lists",
     "description": "Google Maps Lists for trip planning.",
     "primaryAction": {
       "text": {
@@ -547,7 +548,7 @@
       "learnMore": "Learn more about {{name}}"
     }
   },
-  "productShowcaseTitle": "Travel Products",
+  "productShowcaseTitle": "Essential Travel Items",
   "travelInsurance": {
     "returnHome": "Return to Home",
     "title": "Protect Your Trip",
