@@ -18,5 +18,7 @@
   { "key": "tours" },
   { "key": "parking" },
   { "key": "expenseTracker" },
-  { "key": "welcomePickups" }
+  { "key": "welcomePickups" },
+  { "key": "moovit" },
+  { "key": "revolut" }
 ]

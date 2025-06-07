@@ -22,11 +22,12 @@ const Product = () => {
             id={option.id}
             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
           >
-            <div className="w-full aspect-square bg-gray-100">
+            <div className="w-full aspect-square bg-gray-100 flex items-center justify-center">
               <img
                 src={option.img}
                 alt={t('product.imageAlt', { title: t(option.title) })}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover block"
+                style={{ aspectRatio: '1 / 1', maxHeight: '100%' }}
               />
             </div>
             <div className="p-4 flex flex-col flex-1">
