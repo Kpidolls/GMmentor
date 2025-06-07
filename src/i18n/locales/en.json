@@ -643,7 +643,9 @@
     "tours": "Tours: GetYourGuide",
     "parking": "Parking: ParkAround",
     "expenseTracker": "Expense Tracker: Splitwise",
-    "welcomePickups": "Airport Transfers: Welcome Pickups"
+    "welcomePickups": "Airport Transfers: Welcome Pickups",
+    "moovit": "Public Transport: Moovit",
+    "revolut": "Currency Exchange: Revolut"
   },
   "airalo": {
     "returnHome": "Return to Home",

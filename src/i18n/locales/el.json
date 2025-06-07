@@ -639,7 +639,9 @@
     "tours": "Ξεναγήσεις: GetYourGuide",
     "parking": "Στάθμευση: ParkAround",
     "expenseTracker": "Διαχείριση Εξόδων: Splitwise",
-    "welcomePickups": "Προς/από Αεροδρόμιο: Welcome Pickups"
+    "welcomePickups": "Προς/από Αεροδρόμιο: Welcome Pickups",
+    "moovit": "Δημόσιες Συγκοινωνίες: Moovit",
+    "revolut": "Μετατροπή Συναλάγματος: Revolut"
   },
   "airalo": {
     "returnHome": "Επιστροφή",
