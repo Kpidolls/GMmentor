@@ -25,10 +25,10 @@ const App = () => {
   return (
     <div className="bg-background grid">
       <Head>
-        <title>Greek Islands Travel Guide | Top Tours & Activities 2025</title>
+        <title>Greek Travel Lists | Top Tours & Activities {new Date().getFullYear()}</title>
         <meta
           name="description"
-          content="Explore Greece with our 2025 travel lists. Discover top tours, activities, and top locations for an unforgettable Greek vacation. Explore more!"
+          content="Explore Greece with our travel lists. Discover top tours, activities, and top locations for an unforgettable vacation. Explore more!"
         />
       </Head>
       {/* Sticky Header */}
