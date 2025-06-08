@@ -28,7 +28,7 @@ const App = () => {
         <title>Greek Islands Travel Guide | Top Tours & Activities 2025</title>
         <meta
           name="description"
-          content="Explore the Greek Islands with our 2025 travel guide. Discover top tours, activities, and expert tips for an unforgettable Greek vacation. Book now!"
+          content="Explore Greece with our 2025 travel lists. Discover top tours, activities, and top locations for an unforgettable Greek vacation. Explore more!"
         />
       </Head>
       {/* Sticky Header */}
