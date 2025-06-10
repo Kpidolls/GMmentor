@@ -69,7 +69,7 @@
   "product": {
     "title": "Ready-to-Use Google Maps Lists",
     "mustSee": {
-      "title": "📍 Must-See Attractions",
+      "title": "📍 Must See Attractions",
       "description": "Embark on a journey through history and nature with our curated list of iconic landmarks, ancient ruins, and breathtaking landscapes that define Greece’s timeless charm. "
     },
     "hiking": {
@@ -86,7 +86,7 @@
     },
     "vegan": {
       "title": "📍 Vegetarian Friendly",
-      "description": "Savor delicious plant-based dishes at the best vegan and vegetarian spots, perfect for health-conscious travelers and food lovers alike."
+      "description": "Savor delicious plant based dishes at the best vegan and vegetarian spots, perfect for health conscious travelers and food lovers alike."
     },
     "gyros": {
       "title": "📍 Gyros & Souvlaki",
@@ -114,7 +114,7 @@
     },
     "wineries": {
       "title": "📍 Wineries",
-      "description": "Discover Greece’s finest wineries, where you can taste exquisite local wines and learn about centuries-old winemaking traditions."
+      "description": "Discover Greece’s finest wineries, where you can taste exquisite local wines and learn about centuries old winemaking traditions."
     },
     "burger": {
       "title": "📍 Burger Spots",
@@ -122,7 +122,7 @@
     },
     "italian": {
       "title": "📍 Italian Cuisine",
-      "description": "Savor Italy’s beloved classics—from wood-fired pizzas to fresh pasta—at top Italian restaurants across Greece."
+      "description": "Savor Italy’s beloved classics, from wood fired pizzas to fresh pasta at top Italian restaurants across Greece."
     },
     "asian": {
       "title": "📍 Asian Cuisine",
@@ -180,7 +180,7 @@
     },
     "thessaloniki": {
       "title": "📍 Thessaloniki",
-      "description": "Thessaloniki, Greece's second-largest city, is known for its rich history, vibrant culture and lively atmosphere."
+      "description": "Thessaloniki, Greece's second largest city, is known for its rich history, vibrant culture and lively atmosphere."
     },
     "mykonos": {
       "title": "📍 Mykonos",
@@ -188,7 +188,7 @@
     },
     "santorini": {
       "title": "📍 Santorini",
-      "description": "Visit Santorini for its iconic white-washed buildings, blue-domed churches and breathtaking sunsets."
+      "description": "Visit Santorini for its iconic white washed buildings, blue domed churches and breathtaking sunsets."
     },
     "rhodes": {
       "title": "📍 Rhodes (Rodos)",
@@ -248,7 +248,7 @@
     },
     "halkidiki": {
       "title": "📍 Halkidiki",
-      "description": "The golden beaches meet crystal-clear waters and green landscapes. Truly, there is nowhere else quite like Halkidiki."
+      "description": "The golden beaches meet crystal clear waters and green landscapes. Truly, there is nowhere else quite like Halkidiki."
     },
     "evia": {
       "title": "📍 Evia",
@@ -291,23 +291,23 @@
     "products": {
       "universalTravelAdapter": {
         "name": "Universal Travel Adapter",
-        "description": "This travel adapter lets you charge multiple devices, including phones and tablets. It’s powerful (33.5W) with Dual USB-C, 3 USB ports, and fast-charging (PD & QC 3.0). Works with plug types I, C, G, A and supports both 110V and 220V."
+        "description": "This travel adapter lets you charge multiple devices, including phones and tablets. It’s powerful (33.5W) with Dual USB-C, 3 USB ports, and fast charging (PD & QC 3.0). Works with plug types I, C, G, A and supports both 110V and 220V."
       },
       "mobileDataEsimCard": {
         "name": "Mobile Data e-SIM Card",
-        "description": "Travel worry-free with Airalo eSIMs—no physical SIM! Stay online wherever you go and enjoy seamless global connectivity. Get 3€ off your first purchase with code GOOGLE4204. One less thing to plan, so you can focus on the adventure ahead!"
+        "description": "Travel worry free with Airalo eSIMs—no physical SIM! Stay online wherever you go and enjoy seamless global connectivity. Get 3€ off your first purchase with code GOOGLE4204. One less thing to plan, so you can focus on the adventure ahead!"
       },
       "temuAdapter": {
         "name": "Universal Travel Adapter",
-        "description": "Fast multi-device charging, power up anywhere with this high-speed international adapter. It features 4 USB ports (2.4A) and a Type-C 3.0A port for quick, efficient charging."
+        "description": "Fast multi device charging, power up anywhere with this high speed international adapter. It features 4 USB ports (2.4A) and a Type-C 3.0A port for quick, efficient charging."
       },
       "pillowMask": {
         "name": "Pillow and Mask",
-        "description": "Relax and recharge on every journey with this ultra-comfortable ergonomic pillow and sleep mask set. Designed for long flights and road trips, it provides perfect support and blocks out light, helping you rest anywhere with ease."
+        "description": "Relax and recharge on every journey with this ultra comfortable ergonomic pillow and sleep mask set. Designed for long flights and road trips, it provides perfect support and blocks out light, helping you rest anywhere with ease."
       },
       "neckPillow": {
         "name": "Neck Pillow",
-        "description": "Enjoy ultimate neck support on long flights or road trips with this ergonomic travel pillow. Designed for maximum comfort, it comes with a machine-washable cover and a compact storage bag for easy portability."
+        "description": "Enjoy ultimate neck support on long flights or road trips with this ergonomic travel pillow. Designed for maximum comfort, it comes with a machine washable cover and a compact storage bag for easy portability."
       },
       "temuMask": {
         "name": "Sleep Mask",
@@ -319,7 +319,7 @@
       },
       "travelLuggageLock": {
         "name": "Luggage Lock",
-        "description": "Keep your belongings secure with this TSA-approved luggage lock—strong, reliable, and effortless to use. Travel with confidence knowing your luggage is protected wherever you go!"
+        "description": "Keep your belongings secure with this TSA approved luggage lock—strong, reliable, and effortless to use. Travel with confidence knowing your luggage is protected wherever you go!"
       },
       "lockTemu": {
         "name": "3-digit Combination Lock",
@@ -335,7 +335,7 @@
       },
       "portableCharger": {
         "name": "Portable Charger 20000mAh",
-        "description": "Keep your devices powered up with this high-capacity portable charger. Perfect for long trips and multiple devices."
+        "description": "Keep your devices powered up with this high capacity portable charger. Perfect for long trips and multiple devices."
       },
       "portableChargerTemu": {
         "name": "Portable Charger 20000/10000mAh",
@@ -347,7 +347,7 @@
       },
       "carChargerTemu": {
         "name": "4-in-1 Fast Car Charger",
-        "description": "Charge multiple devices effortlessly with this high-speed car charger, featuring USB and Type-C ports. The extendable 80cm cable provides flexibility, while the adjustable 180° plug ensures easy positioning."
+        "description": "Charge multiple devices effortlessly with this high speed car charger, featuring USB and Type-C ports. The extendable 80cm cable provides flexibility, while the adjustable 180° plug ensures easy positioning."
       },
       "sunProtectionShirt": {
         "name": "Sun Protection Shirt",
@@ -355,7 +355,7 @@
       },
       "sunProtectionShirtTemu": {
         "name": "Sun Protection Hoodie",
-        "description": "Shield yourself from the sun while staying cool and comfortable with this ultra-light, breathable UV protection shirt. It features quick-dry fabric and a long-sleeve rash guard for optimal sun defense."
+        "description": "Shield yourself from the sun while staying cool and comfortable with this ultra light, breathable UV protection shirt. It features quick-dry fabric and a long sleeve rash guard for optimal sun defense."
       },
       "waterShoes": {
         "name": "Water Shoes",
@@ -375,7 +375,7 @@
       },
       "miniBluetoothSpeaker": {
         "name": "Mini Bluetooth Speaker",
-        "description": "Take your music anywhere with this portable, waterproof Bluetooth speaker. Enjoy high-quality sound on the go."
+        "description": "Take your music anywhere with this portable, waterproof Bluetooth speaker. Enjoy high quality sound on the go."
       },
       "phoneHolderMount": {
         "name": "Phone Holder Mount",
@@ -395,7 +395,7 @@
       },
       "sonyWirelessHeadphones": {
         "name": "Sony Noise Canceling Headphones",
-        "description": "Immerse yourself in crystal-clear sound with these premium noise-canceling headphones. Perfect for travel and relaxation."
+        "description": "Immerse yourself in crystal clear sound with these premium noise canceling headphones. Perfect for travel and relaxation."
       },
       "nordicWalkingPoles": {
         "name": "Nordic Walking Poles",
@@ -411,7 +411,7 @@
       },
       "europeanTravelPlug": {
         "name": "European Travel Plug",
-        "description": "Stay powered up in Europe with this fast-charging travel plug featuring multiple USB ports for convenience."
+        "description": "Stay powered up in Europe with this fast charging travel plug featuring multiple USB ports for convenience."
       },
       "appleAirtag": {
         "name": "Apple AirTag",
@@ -443,19 +443,19 @@
       },
       "faceSunscreen": {
         "name": "Face Sunscreen SPF 46",
-        "description": "Protect your skin from harmful UV rays with this lightweight and dermatologist-recommended face sunscreen."
+        "description": "Protect your skin from harmful UV rays with this lightweight and dermatologist recommended face sunscreen."
       },
       "travelFirstAidKit": {
         "name": "Travel First Aid Kit",
-        "description": "Be prepared for any situation with this compact and comprehensive travel first aid kit. A must-have for every trip."
+        "description": "Be prepared for any situation with this compact and comprehensive travel first aid kit. A must have for every trip."
       },
       "beachBlanket": {
         "name": "Beach Blanket",
-        "description": "Relax in comfort with this lightweight and sand-resistant beach blanket. Perfect for picnics, beaches, and outdoor fun."
+        "description": "Relax in comfort with this lightweight and sand resistant beach blanket. Perfect for picnics, beaches, and outdoor fun."
       },
       "snorkel": {
         "name": "Kids Full Face Snorkel Mask",
-        "description": " Experience underwater adventures with this comfortable and easy-to-use full face snorkel mask for kids."
+        "description": " Experience underwater adventures with this comfortable and easy to use full face snorkel mask for kids."
       },
       "travelJournal": {
         "name": "Travel Journal",
@@ -494,8 +494,8 @@
         "description": "Stay cool on the go with this compact and lightweight mini portable fan. USB rechargeable, 3-Speed, 360° rotatable head."
       },
       "tent": {
-        "name": "Pop-Up Beach Tent",
-        "description": "Shield yourself from the sun with this  portable pop-up beach tent with quick setup, it offers instant shade and protection. "
+        "name": "Pop Up Beach Tent",
+        "description": "Shield yourself from the sun with this  portable pop up beach tent with quick setup, it offers instant shade and protection. "
       },
       "phoneStraps": {
         "name": "Phone Straps",
@@ -511,7 +511,7 @@
       },
       "picnicBlanket": {
         "name": "Outdoor Picnic Blanket",
-        "description": "Vibrant blue and green striped outdoor picnic blanket, built for all-season use, making it the perfect companion for camping, hiking and vacations."
+        "description": "Vibrant blue and green striped outdoor picnic blanket, built for all season use, making it the perfect companion for camping, hiking and vacations."
       },
       "umbrellaAnchor": {
         "name": "Beach Umbrella Anchor",
@@ -576,7 +576,7 @@
     "title": "About Us",
     "subtitle": "Discover the story behind our platform and the principles that guide us.",
     "paragraph1": "This platform was built with friends, for friends. It came to life from real conversations, shared adventures and the joy of discovering hidden gems. Our mission is to make smart, honest recommendations easy to find and share.",
-    "paragraph2": "We value simplicity, integrity and authenticity. Whether you're exploring a new city or your own neighborhood, we aim to make location-based knowledge accessible, useful and personal. This platform grows every day with the help of people like you—curious, open and eager to contribute. Together, we’re building something meaningful, one recommendation at a time."
+    "paragraph2": "We value simplicity, integrity and authenticity. Whether you're exploring a new city or your own neighborhood, we aim to make location based knowledge accessible, useful and personal. This platform grows every day with the help of people like you—curious, open and eager to contribute. Together, we’re building something meaningful, one recommendation at a time."
   },
   "qa": {
     "title": "Frequently Asked Questions",
@@ -599,7 +599,7 @@
     "whoCanBenefit": "Who can benefit from googlementor.com",
     "whoCanBenefitAnswer": "Whether you’re a traveler, foodie, or local explorer, googlementor.com is designed for anyone looking to make the most out of Google Maps.",
     "whyBuyEsim": "Why buy an eSIM when my mobile contract already includes roaming",
-    "whyBuyEsimAnswer": "eSIMs are a convenient and cost-effective alternative to traditional SIM cards, often providing lower costs and better connectivity.",
+    "whyBuyEsimAnswer": "eSIMs are a convenient and cost effective alternative to traditional SIM cards, often providing lower costs and better connectivity.",
     "whyAiraloEsim": "Why is Airalo eSIM the cheapest reliable option",
     "whyAiraloEsimAnswer": "Airalo offers cheap eSIMs, starting from $5 with no physical SIM card needed. They provide service in over 190 countries.",
     "howToContact": "How do I contact you for additional help",
