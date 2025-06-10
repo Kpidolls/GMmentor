@@ -19,6 +19,7 @@ import GetYourGuideWidget from '../components/GetYourGuideWidget';
 import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
+import Reviews from '../components/Reviews';
 
 const App = () => {
   const { t } = useTranslation();
@@ -47,6 +48,10 @@ const App = () => {
               </h1>
               <GetYourGuideWidget />
             </Box>
+            <Box mt={10} px={4}>
+               <Reviews />
+            </Box>
+
             <Box mt={10} px={4}>
             <h2 className="text-4xl font-primary font-bold mb-4">
                {t('mainHero.subtitle')} {new Date().getFullYear()}
