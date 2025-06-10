@@ -45,6 +45,17 @@
       "text": "Buy Travel Gear"
     }
   },
+  "reviews": {
+    "title": "What Our Users Say",
+    "review1": "I used to waste so much time scrolling through reviews. Now I just check Googlementor and know I’ll get a great recommendation!",
+    "author1": "Alex M., Digital Nomad in Athens",
+    "review2": "Googlementor helped us find a fish tavern with the most amazing sunset view, it totally made our trip!",
+    "author2": "Sophia & Marco, Airbnb Guests from Italy",
+    "review3": "Googlementor has been a game changer! Whether I'm looking for a hiking trail or a great restaurant, it always delivers the perfect recommendations. I never head out without checking it first.",
+    "author3": "Yiannis P., Local Explorer",
+    "review4": "I’ve discovered so many amazing places I didn’t even know existed. Now I’m hooked and exploring everything on the Italian restaurants list!",
+    "author4": "Pantelis, Food Lover in Athens"
+  },
   "categories": {
     "title": "Lists by Category",
     "mustSee": "Must See",
