@@ -27,6 +27,10 @@
     "faq": "FAQ",
     "contact": "Contact"
   },
+  "meta": {
+    "homeTitle": "Greek Travel Lists | Top Tours & Activities ",
+    "homeDescription": "Explore Greece with our travel lists. Discover top tours, activities, and top locations for an unforgettable vacation. Explore more!"
+  },
   "callToAction": {
     "text": "Get Started"
   },
@@ -54,7 +58,7 @@
     "review3": "Googlementor has been a game changer! Whether I'm looking for a hiking trail or a great restaurant, it always delivers the perfect recommendations. I never head out without checking it first.",
     "author3": "Yiannis P., Local Explorer",
     "review4": "I’ve discovered so many amazing places I didn’t even know existed. Now I’m hooked and exploring everything on the Italian restaurants list!",
-    "author4": "Pantelis, Food Lover in Athens"
+    "author4": "Pantelis K., Food Lover in Athens"
   },
   "categories": {
     "title": "Lists by Category",
