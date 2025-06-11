@@ -243,6 +243,25 @@
     ]
   },
   {
+    "id": "island-syros",
+    "title": "islands.syros.title",
+    "img": "/assets/images/syros.webp",
+    "description": "islands.syros.description",
+    "link": "https://maps.app.goo.gl/dvs1Dp3r3UqcSUA5A",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "syros",
+      "siros island",
+      "syros town",
+      "ermoupoli",
+      "ermoupoli town",
+      "kyklades"
+    ]
+  },
+  {
     "id": "island-kos",
     "title": "islands.kos.title",
     "img": "/assets/images/kos.webp",
