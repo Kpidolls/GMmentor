@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import Header from "../components/Header";
@@ -7,6 +8,9 @@ export default function MobileDataPage() {
 
   return (
     <main className="bg-gray-50 min-h-screen">
+      <Head>
+        <link rel="canonical" href="https://googlementor.com/airalo" />
+      </Head>
       <Header />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -34,7 +38,7 @@ export default function MobileDataPage() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/assets/images/airalo.webp" // Replace with your image path or URL
+                  src="/assets/images/airalo.webp"
                   alt={t("airalo.imageAlt", "Airalo eSIM")}
                   className="w-full max-w-sm h-auto object-contain rounded-lg hover:opacity-90 transition"
                 />

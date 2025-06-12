@@ -14,6 +14,7 @@ const Terms = () => {
         <title>Terms and Conditions - Googlementor</title>
         <meta name="description" content="Read the terms and conditions for using Googlementor." />
         <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://googlementor.com/terms" />
       </Head>
       <div className="container mx-auto p-4">
         <h1 className="text-2xl font-bold mb-4">Terms and Conditions</h1>
@@ -25,7 +26,7 @@ const Terms = () => {
         <p className="mb-4 text-gray-600">
           <strong>Data Protection Compliance:</strong> By accessing or using Googlementor, you confirm that you are at least 18 years old or have the consent of a parent or guardian. If you are using the services on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.
         </p>
-<p className="mb-4 text-gray-600">
+          <p className="mb-4 text-gray-600">
             Googlementor offers a platform for users to:
           </p>
           <ul className="list-disc list-inside mb-4 text-gray-600">
