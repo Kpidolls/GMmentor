@@ -55,7 +55,7 @@ const normalizeText = (text: string): string => {
   }).join('');
 };
 
-const SearchPage = () => {
+const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredResults, setFilteredResults] = useState<SearchResult[]>([]);
@@ -131,6 +131,12 @@ const SearchPage = () => {
     return () => debouncedSearch.cancel();
   }, [debouncedSearch]);
 
+  useEffect(() => {
+    if (focusOnMount && searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, [focusOnMount]);
+
   return (
     <Box maxW="100%" px={{ base: 3, md: 4 }} py={{ base: 4, md: 8 }}>
       <InputGroup mb={6} onClick={handleFocus} w="100%" maxW="600px" mx="auto">
@@ -140,6 +146,7 @@ const SearchPage = () => {
           aria-label="Search input for destinations, maps, or travel gear"
           value={searchQuery}
           onChange={(e) => handleSearch(e.target.value)}
+          onClick={handleFocus}
           size="sm"
           focusBorderColor="blue.500"
           fontSize={{ base: 'sm', md: 'md' }}

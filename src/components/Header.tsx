@@ -241,7 +241,7 @@ const Header = () => {
           <ModalCloseButton />
           <ModalBody p={0}>
             <Box maxH="75vh" overflowY="auto" p={4}>
-              <SearchPage />
+              <SearchPage focusOnMount={isOpen} />
             </Box>
           </ModalBody>
         </ModalContent>
