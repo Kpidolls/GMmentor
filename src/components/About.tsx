@@ -7,7 +7,7 @@ const About = () => {
   const { t } = useTranslation();
 
   const links = [
-    { key: 'affiliatePartners', href: '/login', label: t('about.affiliatePartners', 'Affiliate Partners') },
+    // { key: 'affiliatePartners', href: '/login', label: t('about.affiliatePartners', 'Affiliate Partners') },
     { key: 'mapCreators', href: '/login', label: t('about.mapCreators', 'Map Creators') },
     { key: 'products', href: '/store', label: t('about.products', 'Products') },
     { key: 'travelInsurance', href: '/insurance', label: t('about.travelInsurance', 'Travel Insurance') },

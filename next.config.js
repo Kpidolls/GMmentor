@@ -19,6 +19,10 @@ const nextConfig = withBundleAnalyzer({
       '/privacy-policy': { page: '/privacy-policy' },
       '/login': { page: '/login' },
       '/store': { page: '/store' },
+      '/airalo': { page: '/airalo' },
+      '/insurance': { page: '/insurance' },
+      '/search': { page: '/search' },
+      '/signup': { page: '/signup' },
       // Add other paths here if you have additional pages 
     };
   }

@@ -1,9 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const Login: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <Head>
+        <link rel="canonical" href="https://googlementor.com/login" />
+      </Head>
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">Login</h1>
         <form>

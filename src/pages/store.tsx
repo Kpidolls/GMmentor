@@ -29,6 +29,7 @@ const Store: React.FC = () => {
             defaultValue: 'Discover the best travel accessories from Amazon and Temu.',
           })}
         />
+        <link rel="canonical" href="https://googlementor.com/store" />
       </Head>
 
       <Header />

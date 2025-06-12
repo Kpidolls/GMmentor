@@ -31,6 +31,7 @@ const App = () => {
           name="description"
           content={t('meta.homeDescription')}
         />
+        <link rel="canonical" href="https://googlementor.com" />
       </Head>
       {/* Sticky Header */}
       <div className="sticky top-0 z-50 bg-background">

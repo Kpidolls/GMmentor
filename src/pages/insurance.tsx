@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Head from 'next/head';
 import Header from '../components/Header';
 
 const TravelInsurance = () => {
@@ -7,6 +8,9 @@ const TravelInsurance = () => {
 
   return (
     <main className="bg-gray-50 min-h-screen">
+      <Head>
+        <link rel="canonical" href="https://googlementor.com/insurance" />
+      </Head>
       <Header />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
