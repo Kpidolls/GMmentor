@@ -1,7 +1,10 @@
 import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaTiktok, FaInstagram } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
+import { FaTiktok } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 
 const About = () => {
   const { t } = useTranslation();
