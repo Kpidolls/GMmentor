@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '../styles/main.css';
 import usePersistedLanguage from '../hooks/usePersistedLanguage';
+import Layout from '../components/Layout';
 
 // Optional: Extend Chakra's default theme
 const customTheme = extendTheme({
@@ -44,7 +45,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <title>Googlementor - Tools for travelers</title>
         <meta name="googlementor" content="Lists on Google Maps for travel and everyday life" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ChakraProvider>
   );
 };
