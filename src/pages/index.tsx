@@ -26,7 +26,7 @@ const App = () => {
   return (
     <div className="bg-background grid">
       <Head>
-        <title>{t('meta.homeTitle')} {new Date().getFullYear()}</title>
+        <title>{`${t('meta.homeTitle')} ${new Date().getFullYear()}`}</title>
         <meta
           name="description"
           content={t('meta.homeDescription')}
