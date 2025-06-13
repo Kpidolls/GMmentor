@@ -1,6 +1,5 @@
 // import Link from 'next/link';
 import React from 'react';
-import About from '../components/About'; 
 import AboutUs from '../components/AboutUs';
 import Analytics from '../components/Analytics';
 import BrevoForm from '../components/BrevoForm';
@@ -92,7 +91,7 @@ const App = () => {
       <LazyShow>
         <>
           <Canvas />
-          <About />
+          {/* <About /> */}
         </>
       </LazyShow>
       <Analytics />
