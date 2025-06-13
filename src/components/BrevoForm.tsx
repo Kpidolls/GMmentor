@@ -1,6 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const BrevoForm = () => {
+  useEffect(() => {
+    // Only load the script if the form exists
+    const form = document.getElementById('sib-form');
+    if (form) {
+      const script = document.createElement('script');
+      script.src = 'https://sibforms.com/forms/end-form/build/main.js';
+      script.async = true;
+      script.onload = () => {
+        // Defensive: ensure main.js does not throw if form is missing
+        try {
+          // If main.js exposes a function, you can call it here if needed
+        } catch (e) {
+          // Handle errors gracefully
+        }
+      };
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <div className="sib-form-container bg-blue-500 text-center">
       <iframe

@@ -76,7 +76,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script
+          {/* <script
               dangerouslySetInnerHTML={{
                 __html: `
                   document.addEventListener('DOMContentLoaded', function () {
@@ -88,7 +88,7 @@ class MyDocument extends Document {
                   });
                 `,
               }}
-          ></script>
+          ></script> */}
           <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
         </body>
       </Html>
