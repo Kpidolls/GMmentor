@@ -4,12 +4,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = withBundleAnalyzer({
   poweredByHeader: false,
   trailingSlash: true,
   reactStrictMode: true,
 
-  // Optional if you're not using styled-components
+
   compiler: {
     styledComponents: true,
   },
@@ -34,6 +34,6 @@ const nextConfig = {
       '/signup': { page: '/signup' },
     };
   },
-};
+});
 
 module.exports = nextConfig;
