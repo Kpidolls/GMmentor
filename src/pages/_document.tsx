@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { AppConfig } from '../utils/AppConfig';
+import Script from 'next/script';
 
 class MyDocument extends Document {
   render() {
@@ -46,17 +47,6 @@ class MyDocument extends Document {
               }
             `}
           </style>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KYV8QK51B"></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-7KYV8QK51B');
-              `,
-            }}
-          ></script>
           <link rel="canonical" href={AppConfig.baseUrl} />
           <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
           <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"></script>
@@ -76,20 +66,19 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {/* <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  document.addEventListener('DOMContentLoaded', function () {
-                    // Ensure the DOM is fully loaded before executing main.js
-                    var script = document.createElement('script');
-                    script.src = 'https://sibforms.com/forms/end-form/build/main.js';
-                    script.defer = true;
-                    document.body.appendChild(script);
-                  });
-                `,
-              }}
-          ></script> */}
           <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-7KYV8QK51B"
+            strategy="lazyOnload"
+          />
+          <Script id="google-analytics" strategy="lazyOnload">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-7KYV8QK51B');
+            `}
+          </Script>
         </body>
       </Html>
     );

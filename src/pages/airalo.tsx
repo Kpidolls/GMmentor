@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import Header from "../components/Header";
+import Image from 'next/image';
 
 export default function MobileDataPage() {
   const { t } = useTranslation();
@@ -15,7 +16,7 @@ export default function MobileDataPage() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Title Section */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
             {t("airalo.title", "Mobile Travel Data with Airalo")}
           </h1>
@@ -37,10 +38,15 @@ export default function MobileDataPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src="/assets/images/airalo.webp"
-                  alt={t("airalo.imageAlt", "Airalo eSIM")}
+                  alt="Airalo eSIM"
+                  width={400}           // Set an appropriate width
+                  height={300}          // Set an appropriate height
+                  quality={85}          // Optional: set image quality (1-100)
                   className="w-full max-w-sm h-auto object-contain rounded-lg hover:opacity-90 transition"
+                  style={{ width: '100%', height: 'auto' }} // Ensures responsiveness
+                  priority              // Optional: for above-the-fold images
                 />
               </Link>
             </div>

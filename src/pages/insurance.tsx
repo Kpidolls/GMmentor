@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Head from 'next/head';
 import Header from '../components/Header';
+import Image from 'next/image';
 
 const TravelInsurance = () => {
   const { t } = useTranslation();
@@ -29,11 +30,16 @@ const TravelInsurance = () => {
 
         {/* Infographic Section */}
         <div className="flex justify-center mb-12">
-          <img
-            src="/assets/images/NI-info-2.webp"
-            alt={t('travelInsurance.imageAlt', 'Travel Insurance Infographic')}
-            className="w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-lg shadow-lg hover:opacity-90 transition"
-          />
+        <Image
+          src="/assets/images/NI-info-2.webp"
+          alt="'Travel Insurance Infographic'"
+          width={400} // set an appropriate width
+          height={300} // set an appropriate height
+          quality={85} // optional
+          className="w-full max-w-sm h-auto object-contain rounded-lg hover:opacity-90 transition"
+          style={{ width: '100%', height: 'auto' }}
+          priority // optional, for above-the-fold images
+        />
         </div>
 
         {/* Call-to-Action Section */}
