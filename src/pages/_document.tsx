@@ -52,16 +52,20 @@ class MyDocument extends Document {
 
 
           {/* External form styles (can be removed if inlined) */}
-          <link
+          {/* <link
             rel="stylesheet"
             href="https://sibforms.com/forms/end-form/build/sib-styles.css"
-          />
+          /> */}
         </Head>
         <body>
           <Main />
           <NextScript />
 
-          {/* Lazy load CookieYes consent script */}
+            {/* Preconnect to external resources for performance */}
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+            <link rel="preconnect" href="https://www.googletagmanager.com" />
+            {/* Lazy load CookieYes consent script */}
           <Script
             id="cookieyes"
             src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"

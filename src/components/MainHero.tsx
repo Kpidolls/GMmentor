@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
 const MyTicker = dynamic(() => import('../components/Ticker'), { ssr: false });
@@ -33,17 +32,7 @@ const MainHero = () => {
 
       {/* Optimized Background Image */}
       <div className="absolute inset-0 -z-10">
-        <Image
-          src="/assets/images/cover.webp"
-          alt="Background image of a map and toy car"
-          width={1280}
-          height={853}
-          priority
-          quality={90}
-          placeholder="blur"
-          blurDataURL="/assets/images/cover-blur.webp"
-          className="w-full h-full object-cover object-center brightness-90 blur-[1.1px] transition-all duration-700"
-        />
+        <div className="absolute inset-0 -z-10 bg-[url('/assets/images/cover.webp')] bg-cover bg-center brightness-90 blur-[1.1px]" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 pointer-events-none" />
       </div>
 
@@ -72,11 +61,9 @@ const MainHero = () => {
           >
             <AnimatePresence mode="wait">
               <motion.span
-                key={currentTextIndex}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.4 }}
+                initial={false}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.2 }}
               >
                 {t(`mainHero.primaryAction.text.${currentTextIndex}`)}
               </motion.span>

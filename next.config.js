@@ -1,20 +1,22 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withBundleAnalyzer({
+const nextConfig = {
   poweredByHeader: false,
   trailingSlash: true,
   reactStrictMode: true,
+
+  // Optional if you're not using styled-components
   compiler: {
-  styledComponents: true,
+    styledComponents: true,
   },
 
   output: 'export',
   images: {
-    unoptimized: true, 
+    unoptimized: true,
   },
 
   exportPathMap: async function (
@@ -33,6 +35,6 @@ const nextConfig = withBundleAnalyzer({
       '/signup': { page: '/signup' },
     };
   },
-});
+};
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);
