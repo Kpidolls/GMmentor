@@ -7,12 +7,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import MyTicker from '../components/Ticker';
 
-
 const MainHero = () => {
   const { mainHero } = config;
   const { t } = useTranslation();
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  // const [currentProductIndex, setCurrentProductIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,19 +29,19 @@ const MainHero = () => {
         <MyTicker />
       </div>
 
-      {/* Background */}
+      {/* Optimized Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
           src="/assets/images/cover.webp"
-          alt="Background Illustration"
+          alt="Background illustration of a map and toy car"
+          aria-hidden="true"
           fill
-          className="object-cover object-center brightness-90 blur-[1.1px] transition-all duration-700"
           priority
           quality={95}
           sizes="100vw"
-          aria-hidden="true"
+          className="object-cover object-center brightness-90 blur-[1.1px] transition-all duration-700"
         />
-        {/* Stronger gradient overlay for contrast and readability */}
+        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 pointer-events-none" />
       </div>
 
@@ -61,8 +59,8 @@ const MainHero = () => {
         <p className="mt-2 sm:mt-2 md:mt-2 text-base sm:text-xl md:text-2xl max-w-2xl text-white font-secondary leading-relaxed opacity-90 drop-shadow">
           {t('mainHero.description')}
         </p>
-        
-        {/* Actions */}
+
+        {/* CTA Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row gap-5 sm:gap-8 sm:justify-center w-full max-w-2xl">
           {/* Primary CTA */}
           <a
@@ -93,7 +91,6 @@ const MainHero = () => {
           </a>
         </div>
       </div>
-
     </main>
   );
 };
