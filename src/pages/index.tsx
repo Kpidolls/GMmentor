@@ -2,7 +2,6 @@
 import React from 'react';
 import AboutUs from '../components/AboutUs';
 import Analytics from '../components/Analytics';
-import BrevoForm from '../components/BrevoForm';
 import Canvas from '../components/Canvas';
 import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
@@ -14,11 +13,14 @@ import IslandList from '../components/IslandList';
 import CategoryCards from '../components/CategoryCards';
 import ProductShowcase from '../components/ProductShowcase';
 import '../i18n';
-import GetYourGuideWidget from '../components/GetYourGuideWidget';
 import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import Reviews from '../components/Reviews';
+import dynamic from 'next/dynamic';
+
+const BrevoForm = dynamic(() => import('../components/BrevoForm'), { ssr: false });
+const GetYourGuideWidget = dynamic(() => import('../components/GetYourGuideWidget'), { ssr: false });
 
 const App = () => {
   const { t } = useTranslation();

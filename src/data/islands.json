@@ -190,6 +190,30 @@
     ]
   },
   {
+    "id": "island-leukada",
+    "title": "islands.leukada.title",
+    "img": "/assets/images/leukada.webp",
+    "description": "islands.leukada.description",
+    "link": "https://maps.app.goo.gl/NrXA2FSD8dcyCrn46",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "leukada",
+      "lefkada",
+      "meganisi",
+      "leukada island",
+      "lefkada island",
+      "porto katsiki",
+      "kathisma",
+      "kathisma beach",
+      "ionio",
+      "ionian",
+      "egremni"
+    ]
+  },
+  {
     "id": "island-skiathos",
     "title": "islands.skiathos.title",
     "img": "/assets/images/skiathos.webp",
