@@ -48,7 +48,8 @@ class MyDocument extends Document {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Google Mentor - Travel like a pro" />
           <meta name="twitter:description" content="Location suggestions for your maps." />
-          <meta name="twitter:image" content="/assets/images/webp" />
+          <meta name="twitter:image" content="/assets/images/newlogo1.webp" />
+
 
           {/* External form styles (can be removed if inlined) */}
           <link

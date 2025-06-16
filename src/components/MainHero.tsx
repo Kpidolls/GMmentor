@@ -5,7 +5,9 @@ import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import MyTicker from '../components/Ticker';
+import dynamic from 'next/dynamic';
+
+const MyTicker = dynamic(() => import('../components/Ticker'), { ssr: false });
 
 const MainHero = () => {
   const { mainHero } = config;
@@ -33,15 +35,15 @@ const MainHero = () => {
       <div className="absolute inset-0 -z-10">
         <Image
           src="/assets/images/cover.webp"
-          alt="Background illustration of a map and toy car"
-          aria-hidden="true"
-          fill
+          alt="Background image of a map and toy car"
+          width={1280}
+          height={853}
           priority
-          quality={95}
-          sizes="100vw"
-          className="object-cover object-center brightness-90 blur-[1.1px] transition-all duration-700"
+          quality={90}
+          placeholder="blur"
+          blurDataURL="/assets/images/cover-blur.webp"
+          className="w-full h-full object-cover object-center brightness-90 blur-[1.1px] transition-all duration-700"
         />
-        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 pointer-events-none" />
       </div>
 
