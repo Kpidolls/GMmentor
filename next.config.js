@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+// const withBundleAnalyzer = require('@next/bundle-analyzer')({
+//   enabled: process.env.ANALYZE === 'true',
+// });
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -13,7 +13,6 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-
   output: 'export',
   images: {
     unoptimized: true,
@@ -37,4 +36,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withBundleAnalyzer(nextConfig);
+module.exports = nextConfig;
