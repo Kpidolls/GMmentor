@@ -118,7 +118,8 @@ const Header = () => {
               alt={t('company.logoAlt', { name: t('company.name') })}
               width={40}
               height={40}
-              loading="lazy"
+              priority 
+              unoptimized={false} 
             />
             <Text
               fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}

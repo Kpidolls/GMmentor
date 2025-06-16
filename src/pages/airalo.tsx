@@ -43,7 +43,7 @@ export default function MobileDataPage() {
                   alt="Airalo eSIM"
                   width={400}           // Set an appropriate width
                   height={300}          // Set an appropriate height
-                  quality={85}          // Optional: set image quality (1-100)
+                  quality={70}          // Optional: set image quality (1-100)
                   className="w-full max-w-sm h-auto object-contain rounded-lg hover:opacity-90 transition"
                   style={{ width: '100%', height: 'auto' }} // Ensures responsiveness
                   priority              // Optional: for above-the-fold images
