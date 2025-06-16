@@ -1,21 +1,20 @@
 {
   "name": "google-maps-mentor",
   "version": "1.0.0",
-  "homepage": "https://googlementor.com",
+  "homepage": "https://Kpidolls.github.io/GMmentor",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
-    "build-prod": "run-s clean build",
+    "build-prod": "run-s clean build export",
     "clean": "rimraf .next out",
     "lint": "next lint",
     "build-types": "tsc --noEmit --pretty",
     "prepare": "husky install",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d out",
-    "preview": "serve out"
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@babel/runtime": "^7.25.7",
@@ -75,7 +74,6 @@
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
-    "serve": "^14.2.4",
     "tailwindcss": "3.4.3",
     "typescript": "^5.8.3"
   },
