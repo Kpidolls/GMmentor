@@ -17,6 +17,7 @@ import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import Reviews from '../components/Reviews';
 import dynamic from 'next/dynamic';
+import { GetStaticProps } from 'next';
 
 const BrevoForm = dynamic(() => import('../components/BrevoForm'), { ssr: false });
 const GetYourGuideWidget = dynamic(() => import('../components/GetYourGuideWidget'), { ssr: false });
@@ -98,6 +99,13 @@ const App = () => {
       <Analytics />
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  // You can fetch data here if needed and pass as props
+  return {
+    props: {},
+  };
 };
 
 export default App;
