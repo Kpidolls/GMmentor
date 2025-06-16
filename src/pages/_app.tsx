@@ -8,6 +8,7 @@ import '../styles/main.css';
 import usePersistedLanguage from '../hooks/usePersistedLanguage';
 import Layout from '../components/Layout';
 import { Roboto } from 'next/font/google';
+import BackToTop from '../components/BackToTop'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -56,6 +57,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <main className={roboto.className}>
         <Layout>
           <Component {...pageProps} />
+          <BackToTop />
         </Layout>
       </main>
     </ChakraProvider>

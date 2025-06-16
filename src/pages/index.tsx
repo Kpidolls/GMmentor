@@ -8,7 +8,6 @@ import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import Product from '../components/Product';
 import QASection from '../components/QASection';
-import BackToTop from '../components/BackToTop';
 import IslandList from '../components/IslandList';
 import CategoryCards from '../components/CategoryCards';
 import ProductShowcase from '../components/ProductShowcase';
@@ -97,7 +96,6 @@ const App = () => {
         </>
       </LazyShow>
       <Analytics />
-      <BackToTop />
     </div>
   );
 };
