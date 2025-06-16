@@ -35,7 +35,7 @@ const TravelInsurance = () => {
           alt="'Travel Insurance Infographic'"
           width={400} // set an appropriate width
           height={300} // set an appropriate height
-          quality={85} // optional
+          quality={70} // optional
           className="w-full max-w-sm h-auto object-contain rounded-lg hover:opacity-90 transition"
           style={{ width: '100%', height: 'auto' }}
           priority // optional, for above-the-fold images

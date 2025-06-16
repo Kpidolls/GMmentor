@@ -7,14 +7,21 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '../styles/main.css';
 import usePersistedLanguage from '../hooks/usePersistedLanguage';
 import Layout from '../components/Layout';
+import { Roboto } from 'next/font/google';
 
-// Optional: Extend Chakra's default theme
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  display: 'swap',
+});
+
 const customTheme = extendTheme({
   styles: {
     global: {
       body: {
         bg: 'gray.50',
         color: 'gray.800',
+        fontFamily: `'Roboto', sans-serif`,
       },
     },
   },
@@ -43,11 +50,14 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <ChakraProvider theme={customTheme}>
       <Head>
         <title>Googlementor - Tools for travelers</title>
-        <meta name="googlementor" content="Lists on Google Maps for travel and everyday life" />
+        <meta name="description" content="Lists on Google Maps for travel and everyday life" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <main className={roboto.className}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </main>
     </ChakraProvider>
   );
 };

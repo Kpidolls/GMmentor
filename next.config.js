@@ -8,11 +8,19 @@ const nextConfig = withBundleAnalyzer({
   poweredByHeader: false,
   trailingSlash: true,
   reactStrictMode: true,
+  compiler: {
+  styledComponents: true,
+  },
+
   output: 'export',
-  images: { unoptimized: true },
-  basePath: '',
-  assetPrefix: '',
-  exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
+  images: {
+    unoptimized: true, 
+  },
+
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
     return {
       '/': { page: '/' },
       '/terms': { page: '/terms' },
@@ -23,9 +31,8 @@ const nextConfig = withBundleAnalyzer({
       '/insurance': { page: '/insurance' },
       '/search': { page: '/search' },
       '/signup': { page: '/signup' },
-      // Add other paths here if you have additional pages 
     };
-  }
+  },
 });
 
 module.exports = nextConfig;

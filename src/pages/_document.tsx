@@ -1,3 +1,4 @@
+// pages/_document.tsx
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { AppConfig } from '../utils/AppConfig';
 import Script from 'next/script';
@@ -7,66 +8,67 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head>
-          <style>
-            {`
-              @font-face {
-                font-display: block;
-                font-family: Roboto;
-                src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
-              }
-              @font-face {
-                font-display: fallback;
-                font-family: Roboto;
-                font-weight: 600;
-                src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
-              }
-              @font-face {
-                font-display: fallback;
-                font-family: Roboto;
-                font-weight: 700;
-                src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
-              }
-              #sib-container input:-ms-input-placeholder {
-                text-align: left;
-                font-family: Helvetica, sans-serif;
-                color: #c0ccda;
-              }
-              #sib-container input::placeholder {
-                text-align: left;
-                font-family: Helvetica, sans-serif;
-                color: #c0ccda;
-              }
-              #sib-container textarea::placeholder {
-                text-align: left;
-                font-family: Helvetica, sans-serif;
-                color: #c0ccda;
-              }
-              #sib-container a {
-                text-decoration: underline;
-                color: #2BB2FC;
-              }
-            `}
-          </style>
+          {/* Preload key assets */}
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/images/newlogo1.webp"
+            type="image/png"
+          />
+
+          {/* Canonical & SEO meta */}
           <link rel="canonical" href={AppConfig.baseUrl} />
-          <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
-          <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"></script>
-          <meta name="google-site-verification" content="cUimG9-WnVYYDC8Tk1Dr6Ieh4ARJp-HzYxrbKTzYxpI" />
-          <meta name="description" content="Travel tools for exploring - lists on Google Maps for travel and everyday life." />
-          <meta name="keywords" content="travel insurance, mobile data e-sim, mapping services, Google Maps, tourist guides, what to do, sun protection" />
+          <meta
+            name="description"
+            content="Travel tools for exploring - lists on Google Maps for travel and everyday life."
+          />
+          <meta
+            name="keywords"
+            content="travel insurance, mobile data e-sim, mapping services, Google Maps, tourist guides, what to do, sun protection"
+          />
           <meta name="author" content="Travel Tips" />
+          <meta name="google-site-verification" content="cUimG9-WnVYYDC8Tk1Dr6Ieh4ARJp-HzYxrbKTzYxpI" />
+
+          {/* Open Graph */}
           <meta property="og:title" content="Googlementor" />
-          <meta property="og:description" content="Travel like a pro with location suggestions for your maps." />
-          <meta property="og:image" content="/assets/images/newlogo1.png" />
+          <meta
+            property="og:description"
+            content="Travel like a pro with location suggestions for your maps."
+          />
+          <meta property="og:image" content="/assets/images/newlogo1.webp" />
           <meta property="og:url" content="https://www.googlementor.com" />
+
+          {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Google Mentor - Travel like a pro" />
           <meta name="twitter:description" content="Location suggestions for your maps." />
-          <meta name="twitter:image" content="/assets/images/newlogo1.png" />
+          <meta name="twitter:image" content="/assets/images/webp" />
+
+          {/* External form styles (can be removed if inlined) */}
+          <link
+            rel="stylesheet"
+            href="https://sibforms.com/forms/end-form/build/sib-styles.css"
+          />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+
+          {/* Lazy load CookieYes consent script */}
+          <Script
+            id="cookieyes"
+            src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"
+            strategy="lazyOnload"
+          />
+
+          {/* Lazy load reCAPTCHA */}
+          <Script
+            id="recaptcha"
+            src="https://www.google.com/recaptcha/api.js?hl=en"
+            strategy="lazyOnload"
+          />
+
+          {/* Google Analytics */}
           <Script
             src="https://www.googletagmanager.com/gtag/js?id=G-7KYV8QK51B"
             strategy="lazyOnload"
