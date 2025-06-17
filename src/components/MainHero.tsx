@@ -37,7 +37,7 @@ const MainHero = () => {
         <meta property="og:title" content="Googlementor – Travel Better" />
         <meta
           property="og:description"
-          content="Curated tools and location suggestions for smarter travel."
+          content="Curated lists and location tips for smarter travel."
         />
         <meta property="og:image" content="/assets/images/cover.webp" />
         <meta property="og:url" content="https://www.googlementor.com" />

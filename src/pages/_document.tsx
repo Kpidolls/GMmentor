@@ -39,15 +39,15 @@ class MyDocument extends Document {
           <meta property="og:title" content="Googlementor" />
           <meta
             property="og:description"
-            content="Travel like a pro with location suggestions for your maps."
+            content="Googlementor – Travel lists for trip planning"
           />
           <meta property="og:image" content="/assets/images/newlogo1.webp" />
-          <meta property="og:url" content="https://www.googlementor.com" />
+          <meta property="og:url" content="https://googlementor.com" />
 
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Google Mentor - Travel like a pro" />
-          <meta name="twitter:description" content="Location suggestions for your maps." />
+          <meta name="twitter:title" content="Googlementor - Travel better" />
+          <meta name="twitter:description" content="Travel lists for trip planning" />
           <meta name="twitter:image" content="/assets/images/newlogo1.webp" />
 
 
