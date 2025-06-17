@@ -104,7 +104,7 @@ const MainHero = () => {
             <a
               href={mainHero.secondaryAction.href}
               className="inline-flex min-w-[180px] sm:min-w-[220px] items-center justify-center px-8 py-4 text-lg font-semibold text-[#0878fe] bg-white border-2 border-[#0878fe] rounded-xl shadow-lg hover:bg-blue-50 hover:text-[#0053b8] hover:border-[#0053b8] hover:scale-105 transition duration-300"
-              aria-label={t('mainHero.secondaryAction.text')}
+              aria-label="Buy travel gear from our store"
             >
               {t('mainHero.secondaryAction.text')}
             </a>
