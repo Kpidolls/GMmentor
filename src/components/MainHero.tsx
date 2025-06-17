@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
-import { motion, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
+// import Image from 'next/image';
+import Head from 'next/head';
 
 const MyTicker = dynamic(() => import('../components/Ticker'), { ssr: false });
 
@@ -24,63 +25,93 @@ const MainHero = () => {
   }, [mainHero.primaryAction.text]);
 
   return (
-    <main className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Ticker */}
-      <div className="absolute top-0 left-0 w-full z-20">
-        <MyTicker />
-      </div>
+    <>
+      <Head>
+        <title>Googlementor – Travel lists for trip planning</title>
+        <meta
+          name="description"
+          content="Explore curated Google Maps lists that help you travel like a pro with Googlementor."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Googlementor – Travel Better" />
+        <meta
+          property="og:description"
+          content="Curated tools and location suggestions for smarter travel."
+        />
+        <meta property="og:image" content="/assets/images/cover.webp" />
+        <meta property="og:url" content="https://www.googlementor.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
 
-      {/* Optimized Background Image */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 -z-10 bg-[url('/assets/images/cover.webp')] bg-cover bg-center brightness-90 blur-[1.1px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 pointer-events-none" />
-      </div>
-
-      {/* Hero Content */}
-      <div className="relative z-10 px-4 sm:px-8 lg:px-16 py-10 sm:py-16 lg:py-24 max-w-screen-xl w-full text-center flex flex-col items-center">
-        <h1 className="text-white font-primary font-extrabold leading-tight tracking-tight text-3xl sm:text-5xl md:text-6xl drop-shadow-lg mb-1 sm:mb-2 md:mb-2">
-          <span className="block text-[#0878fe] mb-1 sm:mb-2 md:mb-2 text-lg sm:text-2xl md:text-3xl tracking-wider">
-            {t('mainHero.subtitle')}
-          </span>
-          <span className="block">
-            {t('mainHero.title')}
-          </span>
-        </h1>
-
-        <p className="mt-2 sm:mt-2 md:mt-2 text-base sm:text-xl md:text-2xl max-w-2xl text-white font-secondary leading-relaxed opacity-90 drop-shadow">
-          {t('mainHero.description')}
-        </p>
-
-        {/* CTA Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-5 sm:gap-8 sm:justify-center w-full max-w-2xl">
-          {/* Primary CTA */}
-          <a
-            href={mainHero.primaryAction.href}
-            className="inline-flex min-w-[220px] sm:min-w-[260px] items-center justify-center px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-[#0878fe] to-[#0053b8] rounded-2xl shadow-xl hover:from-[#0053b8] hover:to-[#0878fe] hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#0878fe]/40 transition-all duration-300"
-            aria-label={t(`mainHero.primaryAction.text.${currentTextIndex}`)}
-          >
-            <AnimatePresence mode="wait">
-              <motion.span
-                initial={false}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.2 }}
-              >
-                {t(`mainHero.primaryAction.text.${currentTextIndex}`)}
-              </motion.span>
-            </AnimatePresence>
-          </a>
-
-          {/* Secondary CTA */}
-          <a
-            href={mainHero.secondaryAction.href}
-            className="inline-flex min-w-[180px] sm:min-w-[220px] items-center justify-center px-8 py-4 text-lg font-bold text-[#0878fe] bg-white border-2 border-[#0878fe] rounded-2xl shadow-lg hover:bg-blue-50 hover:text-[#0053b8] hover:border-[#0053b8] hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#0878fe]/30 transition-all duration-300"
-            aria-label={t('mainHero.secondaryAction.text')}
-          >
-            {t('mainHero.secondaryAction.text')}
-          </a>
+      <main className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+        {/* Ticker */}
+        <div className="absolute top-0 left-0 w-full z-30">
+          <MyTicker />
         </div>
-      </div>
-    </main>
+
+        {/* Background image */}
+        <div className="absolute inset-0 -z-10">
+          {/* <Image
+            src="/assets/images/cover.webp"
+            alt="Map and travel items on a table"
+            fill
+            priority
+            quality={90}
+            placeholder="blur"
+            blurDataURL="/assets/images/cover-blur.webp"
+            sizes="100vw"
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
+              transition: 'opacity 0.5s ease-in-out',
+              filter: 'brightness(1.15) contrast(1.15) saturate(1.2)',
+            }}
+          /> */}
+          {/* <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10 pointer-events-none" /> */}
+        </div>
+
+        {/* Hero content */}
+        <section
+          className="relative z-20 px-6 sm:px-10 lg:px-20 py-14 sm:py-20 lg:py-28 max-w-screen-xl w-full text-center flex flex-col items-center"
+          aria-label="Hero: Googlementor Travel Tools"
+        >
+          <header>
+            <h1 className="text-white font-primary font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl drop-shadow-md mb-6">
+              <span className="block text-[#0878fe] mb-2 text-xl sm:text-2xl md:text-3xl tracking-wider uppercase">
+                {t('mainHero.subtitle')}
+              </span>
+              <span className="block">
+                {t('mainHero.title')}
+              </span>
+            </h1>
+          </header>
+
+          <p className="mt-2 text-base sm:text-xl md:text-2xl max-w-2xl text-white/90 font-secondary leading-relaxed drop-shadow-sm">
+            {t('mainHero.description')}
+          </p>
+
+          {/* Buttons */}
+          <div className="mt-10 flex flex-col sm:flex-row gap-5 sm:gap-8 sm:justify-center w-full max-w-2xl">
+            <a
+              href={mainHero.primaryAction.href}
+              className="inline-flex min-w-[220px] sm:min-w-[260px] items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#0878fe] to-[#0053b8] rounded-xl shadow-xl hover:scale-105 hover:brightness-110 transition duration-300"
+              aria-label={t(`mainHero.primaryAction.text.${currentTextIndex}`)}
+            >
+              {t(`mainHero.primaryAction.text.${currentTextIndex}`)}
+            </a>
+
+            <a
+              href={mainHero.secondaryAction.href}
+              className="inline-flex min-w-[180px] sm:min-w-[220px] items-center justify-center px-8 py-4 text-lg font-semibold text-[#0878fe] bg-white border-2 border-[#0878fe] rounded-xl shadow-lg hover:bg-blue-50 hover:text-[#0053b8] hover:border-[#0053b8] hover:scale-105 transition duration-300"
+              aria-label={t('mainHero.secondaryAction.text')}
+            >
+              {t('mainHero.secondaryAction.text')}
+            </a>
+          </div>
+        </section>
+      </main>
+    </>
   );
 };
 

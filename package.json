@@ -1,7 +1,7 @@
 {
   "name": "google-maps-mentor",
   "version": "1.0.0",
-  "homepage": "https://www.googlementor.com",
+  "homepage": "https://googlementor.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
