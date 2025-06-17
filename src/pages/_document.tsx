@@ -60,7 +60,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-
             {/* Preconnect to external resources for performance */}
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -71,14 +70,12 @@ class MyDocument extends Document {
             src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"
             strategy="lazyOnload"
           />
-
           {/* Lazy load reCAPTCHA */}
           <Script
             id="recaptcha"
             src="https://www.google.com/recaptcha/api.js?hl=en"
             strategy="lazyOnload"
           />
-
           {/* Google Analytics */}
           <Script
             src="https://www.googletagmanager.com/gtag/js?id=G-7KYV8QK51B"

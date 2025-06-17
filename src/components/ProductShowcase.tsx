@@ -112,9 +112,12 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ products = defaultPro
               >
                 {t(`store.products.${product.translationKey}.name`)}
               </h3>
-              <span className="inline-block text-[#0878fe] font-semibold underline underline-offset-2 group-hover:text-[#0053b8] transition-colors text-base sm:text-lg">
+                <span
+                className="inline-block text-[#0878fe] font-semibold underline underline-offset-2 group-hover:text-[#0053b8] transition-colors text-base sm:text-lg"
+                aria-label="View product details"
+                >
                 {t('mainHero.viewProduct', { defaultValue: 'View Product' })}
-              </span>
+                </span>
             </div>
           </a>
         </div>

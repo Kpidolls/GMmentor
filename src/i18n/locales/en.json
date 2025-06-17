@@ -37,6 +37,7 @@
   "mainHero": {
     "title": "Greece",
     "subtitle": "Travel Lists",
+    "viewProduct": "View Product",
     "description": "Google Maps Lists for trip planning.",
     "primaryAction": {
       "text": {
@@ -170,7 +171,8 @@
     "shareNotSupported": "Sharing is not supported on this browser.",
     "viewMoreButton": "View More Categories",
     "attribution": "Images generated using Pexels, AI & Pixabay.",
-    "imageAlt": "Image for {{title}}"
+    "imageAlt": "Image for {{title}}",
+    "viewMore": "View More {{title}}"
   },
   "islands": {
     "title": "Explore Destinations",
