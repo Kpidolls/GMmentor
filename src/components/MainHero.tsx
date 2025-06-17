@@ -27,7 +27,7 @@ const MainHero = () => {
   return (
     <>
       <Head>
-        <title>Googlementor – Travel lists for trip planning</title>
+        <title>Googlementor – Travel Better</title>
         <meta
           name="description"
           content="Explore curated Google Maps lists that help you travel like a pro with Googlementor."
