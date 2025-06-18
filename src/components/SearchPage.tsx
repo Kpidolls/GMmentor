@@ -147,6 +147,8 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
           value={searchQuery}
           onChange={(e) => handleSearch(e.target.value)}
           onClick={handleFocus}
+          id="search"
+          name="search"
           size="sm"
           focusBorderColor="blue.500"
           fontSize={{ base: 'sm', md: 'md' }}
