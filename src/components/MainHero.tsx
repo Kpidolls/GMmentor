@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
 import dynamic from 'next/dynamic';
-// import Image from 'next/image';
+import Image from 'next/image';
 import Head from 'next/head';
 
 const MyTicker = dynamic(() => import('../components/Ticker'), { ssr: false });
@@ -52,7 +52,7 @@ const MainHero = () => {
 
         {/* Background image */}
         <div className="absolute inset-0 -z-10">
-          {/* <Image
+          <Image
             src="/assets/images/cover.webp"
             alt="Map and travel items on a table"
             fill
@@ -67,8 +67,8 @@ const MainHero = () => {
               transition: 'opacity 0.5s ease-in-out',
               filter: 'brightness(1.15) contrast(1.15) saturate(1.2)',
             }}
-          /> */}
-          {/* <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10 pointer-events-none" /> */}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10 pointer-events-none" />
         </div>
 
         {/* Hero content */}

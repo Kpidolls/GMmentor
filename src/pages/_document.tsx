@@ -8,12 +8,12 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head>
-          <link
+          {/* <link
             rel="preload"
             as="image"
             href="/assets/images/cover.webp"
             type="image/webp"
-          />
+          /> */}
           {/* Preload key assets */}
           <link
             rel="preload"
