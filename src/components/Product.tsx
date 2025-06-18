@@ -27,6 +27,8 @@ const Product = () => {
                 src={option.img}
                 alt={t('product.imageAlt', { title: t(option.title) })}
                 className="w-full h-full object-cover block"
+                width={400} // Set an explicit width
+                height={400} // Set an explicit height
                 style={{ aspectRatio: '1 / 1', maxHeight: '100%' }}
               />
             </div>
