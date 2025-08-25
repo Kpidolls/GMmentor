@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Head from 'next/head';
-import Header from '../components/Header';
 import Image from 'next/image';
 
 const TravelInsurance = () => {
@@ -12,7 +11,6 @@ const TravelInsurance = () => {
       <Head>
         <link rel="canonical" href="https://googlementor.com/insurance" />
       </Head>
-      <Header />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Title Section */}

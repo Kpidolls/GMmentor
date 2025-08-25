@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
-import Header from '../components/Header';
 import productsData from '../data/products.json';
 
 const Store: React.FC = () => {
@@ -31,8 +30,6 @@ const Store: React.FC = () => {
         />
         <link rel="canonical" href="https://googlementor.com/store" />
       </Head>
-
-      <Header />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">

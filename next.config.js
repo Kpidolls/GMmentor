@@ -4,6 +4,23 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 /** @type {import('next').NextConfig} */
+const redirects = async () => [
+  {
+    source: '/:path*/',
+    destination: '/:path*',
+    permanent: true,
+    has: [{ type: 'host', value: 'googlementor.com' }],
+  },
+  {
+    source: '/:path*',
+    destination: 'https://googlementor.com/:path*',
+    permanent: true,
+    has: [{ type: 'host', value: 'www.googlementor.com' }],
+  },
+  // Add more rules as needed
+];
+
+/** @type {import('next').NextConfig} */
 const nextConfig = withBundleAnalyzer({
   poweredByHeader: false,
   trailingSlash: true,

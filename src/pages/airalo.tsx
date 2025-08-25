@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import Header from "../components/Header";
 import Image from 'next/image';
 
 export default function MobileDataPage() {
@@ -12,7 +11,6 @@ export default function MobileDataPage() {
       <Head>
         <link rel="canonical" href="https://googlementor.com/airalo" />
       </Head>
-      <Header />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Title Section */}
