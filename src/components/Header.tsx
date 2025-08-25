@@ -103,6 +103,7 @@ const Header = () => {
               pointerEvents="none"
               focusBorderColor="blue.400"
               _placeholder={{ color: 'gray.400' }}
+              id="header-search"
             />
           </InputGroup>
         </Box>

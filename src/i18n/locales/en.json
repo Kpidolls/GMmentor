@@ -25,6 +25,7 @@
     "aboutUs": "About Us",
     "ourStory": "Our Story",
     "faq": "FAQ",
+    "blog": "Blog",
     "contact": "Contact"
   },
   "meta": {
@@ -41,9 +42,9 @@
     "description": "Google Maps Lists for trip planning.",
     "primaryAction": {
       "text": {
-        "0": "What to do in Greece!",
-        "1": "Where to eat in Greece!",
-        "2": "Where to go in Greece!"
+        "0": "What to do!",
+        "1": "Where to eat!",
+        "2": "Where to go!"
       }
     },
     "secondaryAction": {
@@ -573,6 +574,17 @@
       "learnMore": "Learn more about {{name}}"
     }
   },
+  "blog": {
+    "giveBestRecommendations": {
+      "title": "Share the Best Places and Make Travel Easier",
+      "summary": "test",
+      "intro": "At Googlementor, we believe that the most memorable spots are the ones shared by real people, not algorithms. Whether it’s your go-to brunch place in Athens, a family-run taverna in the mountains, or a secret beach in Crete, your recommendations help others uncover authentic, unforgettable experiences.",
+      "community": "By exploring our curated Google Maps lists, you're not just finding great places — you're joining a growing community of travelers who value local insight and real-life discovery.",
+      "missing": "And if there’s a spot you love that’s missing from our lists, we’d love to hear about it. Your input helps us grow, and it helps others travel better.",
+      "contact": "Got a question, suggestion or need help using the lists? 📲 Reach out to us anytime on Facebook, Instagram or TikTok — we’re here to make sure your journey is as smooth as possible.",
+      "cta": "Travel smarter. Share your finds. Be a Googlementor."
+    }
+  },
   "productShowcaseTitle": "Essential Travel Items",
   "travelInsurance": {
     "returnHome": "Return to Home",
@@ -642,7 +654,7 @@
     "terms": "terms and conditions",
     "privacyPolicy": "privacy policy",
     "mapsData": "Maps data © Google. Google Maps is a trademark of Google LLC.",
-    "copyright": " googlementor |  All rights reserved ",
+    "copyright": " Googlementor |  All rights reserved ",
     "tiktok": "https://www.tiktok.com/@mapsmentor",
     "instagram": "https://www.instagram.com/mapsmentor?igsh=MXRxODZ4ajFlaGlscA%3D%3D&utm_source=qr",
     "twitter": "https://x.com/googlementor",

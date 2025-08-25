@@ -3,7 +3,6 @@ import React from 'react';
 import AboutUs from '../components/AboutUs';
 import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
-import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import Product from '../components/Product';
@@ -36,7 +35,7 @@ const App = () => {
       </Head>
       {/* Sticky Header */}
       <div className="sticky top-0 z-50 bg-background">
-        <Header />
+        {/* <Header /> */}
       </div>
       <div className="relative bg-background overflow-hidden">
         <div className="max-w-full mx-auto">
@@ -50,10 +49,6 @@ const App = () => {
               </h1>
               <GetYourGuideWidget />
             </Box>
-            <Box mt={10} px={4}>
-               <Reviews />
-            </Box>
-
             <Box mt={10} px={4}>
             <h2 className="text-4xl font-primary font-bold mb-4">
                {t('mainHero.subtitle')} {new Date().getFullYear()}
@@ -70,7 +65,9 @@ const App = () => {
           </h2>
       <IslandList />
       </Box>
-
+      <Box mt={10} px={4}>
+        <Reviews />
+      </Box>
         <Canvas />
         <Box mt={10} px={4}>
             <h2 className="text-4xl font-primary font-bold mb-4">

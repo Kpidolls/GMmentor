@@ -9,6 +9,7 @@ import usePersistedLanguage from '../hooks/usePersistedLanguage';
 import Layout from '../components/Layout';
 import { Roboto } from 'next/font/google';
 import BackToTop from '../components/BackToTop'
+import Header from '../components/Header';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -50,10 +51,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <ChakraProvider theme={customTheme}>
       <Head>
-        <title>Googlementor - Tools for travelers</title>
-        <meta name="description" content="Lists on Google Maps for travel and everyday life" />
+        <title>Googlementor - Travel Better</title>
+        <meta name="description" content="Lists on Google Maps for travel and everyday life." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Header />
       <main className={roboto.className}>
         <Layout>
           <Component {...pageProps} />
