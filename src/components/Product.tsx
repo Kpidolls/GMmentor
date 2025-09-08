@@ -20,31 +20,32 @@ const Product = () => {
           <div
             key={index}
             id={option.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
+            className="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
           >
-            <div className="w-full aspect-square bg-gray-100 flex items-center justify-center">
+            <div className="relative w-full aspect-square bg-gray-100 flex items-center justify-center overflow-hidden">
               <img
                 src={option.img}
                 alt={t('product.imageAlt', { title: t(option.title) })}
-                className="w-full h-full object-cover block"
-                width={400} // Set an explicit width
-                height={400} // Set an explicit height
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                width={400}
+                height={400}
                 style={{ aspectRatio: '1 / 1', maxHeight: '100%' }}
+                loading={index < 4 ? 'eager' : 'lazy'}
               />
             </div>
             <div className="p-4 flex flex-col flex-1">
-              <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2 h-8 sm:h-14 overflow-hidden">
+              <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2 h-8 sm:h-14 overflow-hidden text-center group-hover:text-[#0878fe] transition-colors duration-300">
                 {t(option.title)}
               </h3>
-              <p className="text-gray-600 font-secondary text-sm mb-2 sm:mb-4 min-h-[3.5em] sm:min-h-[5em]">
+              <p className="text-gray-600 font-secondary text-sm mb-2 sm:mb-4 min-h-[3.5em] sm:min-h-[5em] text-center">
                 {t(option.description)}
               </p>
-              <div className="flex flex-wrap gap-4 mt-auto">
+              <div className="flex flex-wrap gap-4 mt-auto justify-center">
                 <a
                   href={option.link}
                   target={option.target}
                   rel={option.rel}
-                  className="flex-1 inline-block px-4 py-2 bg-[#0878fe] text-white font-semibold rounded shadow hover:bg-blue-700 transition duration-300 text-center"
+                  className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-[#0878fe] text-white font-semibold rounded shadow hover:bg-blue-700 transition duration-300 text-center"
                   aria-label={t('product.explore', { title: t(option.title) })}
                 >
                   {t('product.exploreButton')}
@@ -62,7 +63,7 @@ const Product = () => {
                       alert(t('product.shareNotSupported'));
                     }
                   }}
-                  className="flex-1 inline-block px-4 py-2 bg-green-600 text-white font-semibold rounded shadow hover:bg-green-700 transition duration-300 text-center"
+                  className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-green-600 text-white font-semibold rounded shadow hover:bg-green-700 transition duration-300 text-center"
                   aria-label={t('product.share', { title: t(option.title) })}
                 >
                   {t('product.shareButton')}
