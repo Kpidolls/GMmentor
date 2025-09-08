@@ -108,7 +108,7 @@
     },
     "desserts": {
       "title": "📍 Desserts",
-      "description": "Treat yourself to Greece’s most irresistible desserts — from creamy baklava to luscious loukoumades, perfect for every sweet tooth."
+      "description": "Treat yourself to Greece’s most irresistible desserts, from creamy baklava to luscious loukoumades, perfect for every sweet tooth."
     },
     "coffee": {
       "title": "📍 Coffee & Brunch",
@@ -140,7 +140,7 @@
     },
     "cheapEats": {
       "title": "📍 Cheap Eats",
-      "description": "Enjoy tasty meals that won’t stretch your wallet—perfect picks for budget travelers and food lovers on the go."
+      "description": "Enjoy tasty meals that won’t stretch your wallet, perfect picks for budget travelers and food lovers on the go."
     },
     "luxury": {
       "title": "📍 Luxury Dining",
@@ -152,7 +152,7 @@
     },
     "bougatsa": {
       "title": "📍 Bougatsa Shops",
-      "description": "Delight in Greece’s famous bougatsa pies—choose from creamy sweet versions or savory fillings like cheese and minced meat."
+      "description": "Delight in Greece’s famous bougatsa pies, choose from creamy sweet versions or savory fillings like cheese and minced meat."
     },
     "surf": {
       "title": "📍 Water Sports",
@@ -164,7 +164,7 @@
     },
     "bouzoukia": {
       "title": "📍 Live Music (Bouzoukia)",
-      "description": "Immerse yourself in authentic Greek nightlife with live bouzoukia performances—an unforgettable cultural and musical experience."
+      "description": "Immerse yourself in authentic Greek nightlife with live bouzoukia performances, an unforgettable cultural and musical experience."
     },
     "exploreButton": "Open Map",
     "shareButton": "Share",
@@ -578,8 +578,8 @@
     "giveBestRecommendations": {
       "title": "Share the Best Places and Make Travel Easier",
       "summary": "test",
-      "intro": "At Googlementor, we believe that the most memorable spots are the ones shared by real people, not algorithms. Whether it’s your go-to brunch place in Athens, a family-run taverna in the mountains, or a secret beach in Crete, your recommendations help others uncover authentic, unforgettable experiences.",
-      "community": "By exploring our curated Google Maps lists, you're not just finding great places — you're joining a growing community of travelers who value local insight and real-life discovery.",
+      "intro": "At Googlementor, we believe that the most memorable spots are the ones shared by real people, not algorithms. Whether it’s your go-to brunch place in Athens, a family run taverna in the mountains, or a secret beach in Crete, your recommendations help others uncover authentic, unforgettable experiences.",
+      "community": "By exploring our curated Google Maps lists, you're not just finding great places — you're joining a growing community of travelers who value local insight and real life discovery.",
       "missing": "And if there’s a spot you love that’s missing from our lists, we’d love to hear about it. Your input helps us grow, and it helps others travel better.",
       "contact": "Got a question, suggestion or need help using the lists? 📲 Reach out to us anytime on Facebook, Instagram or TikTok — we’re here to make sure your journey is as smooth as possible.",
       "cta": "Travel smarter. Share your finds. Be a Googlementor."
