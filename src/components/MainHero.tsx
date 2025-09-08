@@ -50,7 +50,7 @@ const MainHero = () => {
         />
       </Head>
 
-      <main className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black group">
+  <main className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0a2342] via-[#0b3c49] to-[#014d4e] group">
         {/* Greece Edition Sticker */}
         <div className="absolute top-10 right-6 z-40">
           <span className="inline-flex items-center px-4 py-2 bg-white/90 text-[#0878fe] font-bold rounded-full shadow-lg border-2 border-[#0878fe] text-base sm:text-lg gap-2 select-none">
