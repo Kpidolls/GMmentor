@@ -2,5 +2,8 @@
 User-agent: *
 Allow: /
 
+# Host
+Host: https://googlementor.com/
+
 # Sitemaps
 Sitemap: https://googlementor.com/sitemap.xml
