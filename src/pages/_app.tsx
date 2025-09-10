@@ -52,7 +52,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <ChakraProvider theme={customTheme}>
       <Head>
         <title>Googlementor - Travel Better</title>
-        <meta name="description" content="Lists on Google Maps for travel and everyday life." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header />
