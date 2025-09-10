@@ -23,7 +23,6 @@ class MyDocument extends Document {
           />
 
           {/* Canonical & SEO meta */}
-          <link rel="canonical" href={AppConfig.baseUrl} />
           <meta
             name="description"
             content="Travel tools for exploring - lists on Google Maps for travel and everyday life."

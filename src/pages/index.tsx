@@ -44,9 +44,9 @@ const App = () => {
           >
             <MainHero />
             <Box mt={10} px={4}>
-              <h1 className="text-4xl font-primary font-bold mb-4">
+              <h2 className="text-4xl font-primary font-bold mb-4">
                 {t('navigation.getyourguide')}
-              </h1>
+              </h2>
               <GetYourGuideWidget />
             </Box>
             <Box mt={10} px={4}>
