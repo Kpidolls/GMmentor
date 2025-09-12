@@ -12,7 +12,7 @@ const Terms = () => {
     <div>
       <Head>
         <title>Terms and Conditions - Googlementor</title>
-        <meta name="description" content="Read the terms and conditions for using Googlementor." />
+        <meta name="description" content="Review the terms and conditions for using Googlementor, including user responsibilities, payment terms, privacy compliance, and legal information." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/terms" />
       </Head>
