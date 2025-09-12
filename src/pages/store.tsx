@@ -25,7 +25,7 @@ const Store: React.FC = () => {
         <meta
           name="description"
           content={t('store.meta.description', {
-            defaultValue: 'Discover the best travel accessories from Amazon and Temu.',
+            defaultValue: 'Browse and shop top-rated travel gear, accessories, and essentials from Amazon and Temu. Find curated products to make your journeys easier and more enjoyable with Googlementor.',
           })}
         />
         <link rel="canonical" href="https://googlementor.com/store" />

@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
     <div>
       <Head>
         <title>Privacy Policy - Googlementor</title>
-        <meta name="description" content="Read the privacy policy for using Googlementor." />
+        <meta name="description" content="Learn how Googlementor collects, uses, and protects your personal information. Read our privacy policy for details on data usage, cookies, and your rights as a user." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/privacy-policy" />
       </Head>
