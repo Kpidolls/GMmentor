@@ -2,8 +2,8 @@ import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import Link from 'next/link';
 import { FaFacebook } from 'react-icons/fa';
-import { FaTwitter } from 'react-icons/fa';
-import { FaTiktok } from 'react-icons/fa';
+// import { FaTwitter } from 'react-icons/fa';
+// import { FaTiktok } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 
 const About = () => {
@@ -18,8 +18,8 @@ const About = () => {
 
   const socialLinks = [
     { href: t('about.facebook', '#'), icon: FaFacebook, platform: 'Facebook' },
-    { href: t('about.twitter', '#'), icon: FaTwitter, platform: 'Twitter' },
-    { href: t('about.tiktok', '#'), icon: FaTiktok, platform: 'TikTok' },
+    // { href: t('about.twitter', '#'), icon: FaTwitter, platform: 'Twitter' },
+    // { href: t('about.tiktok', '#'), icon: FaTiktok, platform: 'TikTok' },
     { href: t('about.instagram', '#'), icon: FaInstagram, platform: 'Instagram' },
   ];
 
