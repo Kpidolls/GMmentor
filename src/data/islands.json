@@ -543,5 +543,43 @@
       "aegean",
       "aigaio"
     ]
+  },
+  {
+    "id": "island-hydra",
+    "title": "islands.hydra.title",
+    "img": "/assets/images/hydra.webp",
+    "description": "islands.hydra.description",
+    "link": "https://maps.app.goo.gl/FE3rWWzseKREmsTP6",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "hydra",
+      "hydra island",
+      "hydra town",
+      "saronic",
+      "argosaronic",
+      "idra",
+      "ydra"
+    ]
+  },
+  {
+    "id": "island-amorgos",
+    "title": "islands.amorgos.title",
+    "img": "/assets/images/amorgos.webp",
+    "description": "islands.amorgos.description",
+    "link": "https://maps.app.goo.gl/mRSeeJH3qnrtx3PH9",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "island",
+      "greece",
+      "amorgos",
+      "amorgos island",
+      "amorgos town",
+      "kyklades",
+      "kuklades"
+    ]
   }
 ]

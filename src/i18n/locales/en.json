@@ -285,6 +285,14 @@
       "title": "📍 Astypalea",
       "description": "Astypalea is a hidden gem in the Dodecanese, known for its stunning beaches, charming villages and unique blend of Cycladic and Dodecanese architecture."
     },
+    "amorgos": {
+      "title": "📍 Amorgos",
+      "description": "Amorgos captivates with its dramatic cliffs, charming whitewashed villages, pristine beaches, and timeless Cycladic architecture. A haven for nature lovers and seekers of authentic island life."
+    },
+    "hydra": {
+      "title": "📍 Hydra",
+      "description": "Hydra is a refined gem of the Argosaronic Gulf, celebrated for its elegant stone mansions, vibrant artistic spirit, and enchanting alleys untouched by cars. A perfect blend of history, culture, and serenity."
+    },
     "exploreButton": "Open Map",
     "shareButton": "Share",
     "shareText": "Recommendations for {{title}} from googlementor",
