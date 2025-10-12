@@ -8,6 +8,7 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head>
+          <meta charSet="utf-8" />
           {/* <link
             rel="preload"
             as="image"
