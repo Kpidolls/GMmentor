@@ -104,7 +104,7 @@ const MainHero = () => {
           setLoading(false);
         },
         () => {
-          setError('Unable to get your location. Please enable location services.');
+          setError(t('restaurantFinder.locationError', 'Unable to get your location. Please enable location services.'));
           setLoading(false);
         },
         {
@@ -114,7 +114,7 @@ const MainHero = () => {
         }
       );
     } else {
-      setError('Geolocation is not supported by this browser.');
+      setError(t('restaurantFinder.geolocationNotSupported', 'Geolocation is not supported by this browser.'));
       setLoading(false);
     }
   };
@@ -249,10 +249,10 @@ const MainHero = () => {
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
                 <div className="text-center mb-6">
                   <h2 className="text-2xl font-bold text-white mb-3 flex items-center justify-center gap-3">
-                    🍽️ Discover Authentic Greek Cuisine
+                    🍽️ {t('restaurantFinder.title', 'Discover Authentic Greek Cuisine')}
                   </h2>
                   <p className="text-white/80 text-lg">
-                    Find traditional Greek tavernas and restaurants near you
+                    {t('restaurantFinder.subtitle', 'Find traditional Greek tavernas and restaurants near you')}
                   </p>
                 </div>
 
@@ -262,7 +262,7 @@ const MainHero = () => {
                     className="w-full bg-gradient-to-r from-[#0878fe] to-[#0053b8] text-white py-4 px-6 rounded-xl font-semibold text-lg hover:scale-105 hover:brightness-110 transition-all duration-300 shadow-lg flex items-center justify-center gap-3"
                   >
                     <span className="text-xl">📍</span>
-                    Search Near My Location
+                    {t('restaurantFinder.searchNearLocation', 'Search Near My Location')}
                   </button>
 
                   <div className="relative">
@@ -270,7 +270,7 @@ const MainHero = () => {
                       <span className="w-full border-t border-white/30"></span>
                     </div>
                     <div className="relative flex justify-center text-sm">
-                      <span className="bg-transparent px-2 text-white/70">OR</span>
+                      <span className="bg-transparent px-2 text-white/70">{t('restaurantFinder.or', 'OR')}</span>
                     </div>
                   </div>
 
@@ -279,22 +279,22 @@ const MainHero = () => {
                     className="w-full bg-white/20 backdrop-blur-sm text-white py-4 px-6 rounded-xl font-semibold text-lg hover:bg-white/30 hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-3 border border-white/30"
                   >
                     <span className="text-xl">🏛️</span>
-                    Choose Athens Municipality
+                    {t('restaurantFinder.chooseRegion', 'Choose Athens Region')}
                   </button>
                 </div>
 
                 <div className="mt-6 flex justify-center items-center gap-6 text-sm text-white/70">
                   <div className="flex items-center gap-2">
                     <span>🎯</span>
-                    <span>Location-based</span>
+                    <span>{t('restaurantFinder.features.locationBased', 'Location-based')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span>🏆</span>
-                    <span>Handpicked venues</span>
+                    <span>{t('restaurantFinder.features.handpicked', 'Handpicked venues')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span>📱</span>
-                    <span>Direct to Maps</span>
+                    <span>{t('restaurantFinder.features.directMaps', 'Direct to Maps')}</span>
                   </div>
                 </div>
               </div>
@@ -303,10 +303,10 @@ const MainHero = () => {
               <div className="bg-white/95 backdrop-blur-md rounded-2xl p-8 border border-white/30 shadow-2xl max-h-[600px] overflow-hidden">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                    🏛️ Choose Your Municipality
+                    🏛️ {t('restaurantFinder.chooseMunicipality', 'Choose Your Municipality')}
                   </h3>
                   <p className="text-gray-600">
-                    Select an Athens area to find nearby Greek restaurants
+                    {t('restaurantFinder.selectArea', 'Select an area in Athens to find nearby restaurants')}
                   </p>
                 </div>
 
@@ -321,7 +321,7 @@ const MainHero = () => {
                   ).map(([region, municipalities]) => (
                     <div key={region} className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-700 mb-2 px-3 py-1 bg-gray-100 rounded-lg">
-                        {region}
+                        {t(`regions.${region}`, region)}
                       </h4>
                       <div className="space-y-2">
                         {municipalities.map((municipality) => (
@@ -332,7 +332,7 @@ const MainHero = () => {
                           >
                             <div className="flex items-center justify-between">
                               <span className="font-medium text-gray-800 group-hover:text-blue-600">
-                                {municipality.name}
+                                {t(`municipalities.${municipality.name}`, municipality.name)}
                               </span>
                               <span className="text-gray-400 text-sm">
                                 →
@@ -350,7 +350,7 @@ const MainHero = () => {
                     onClick={resetSearch}
                     className="text-gray-500 hover:text-gray-700 transition duration-200 font-medium"
                   >
-                    ← Back to Search Options
+                    ← {t('restaurantFinder.backToOptions', 'Back to Search Options')}
                   </button>
                 </div>
               </div>
@@ -360,7 +360,7 @@ const MainHero = () => {
                 {loading && (
                   <div className="text-center py-8">
                     <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-[#0878fe] mb-4"></div>
-                    <p className="text-gray-700 text-lg">Discovering Greek tavernas near you...</p>
+                    <p className="text-gray-700 text-lg">{t('restaurantFinder.loadingMessage', 'Discovering Greek tavernas near you...')}</p>
                   </div>
                 )}
 
@@ -372,7 +372,7 @@ const MainHero = () => {
                         onClick={getUserLocation}
                         className="text-[#0878fe] font-medium hover:underline"
                       >
-                        Try again
+                        {t('restaurantFinder.tryAgain', 'Try again')}
                       </button>
                     </div>
                   </div>
@@ -382,17 +382,17 @@ const MainHero = () => {
                   <div className="space-y-6">
                     <div className="text-center mb-6">
                       <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                        🎯 Greek Restaurants {searchMode.type === 'municipality' ? `in ${searchMode.selectedMunicipality?.name}` : 'Near You'}
+                        🎯 {t('restaurantFinder.resultsTitle', 'Greek Restaurants')} {searchMode.type === 'municipality' ? `${t('restaurantFinder.inArea', 'in')} ${searchMode.selectedMunicipality?.name ? t(`municipalities.${searchMode.selectedMunicipality.name}`, searchMode.selectedMunicipality.name) : ''}` : t('restaurantFinder.nearYou', 'Near You')}
                       </h3>
                       <p className="text-gray-600">
                         {searchMode.type === 'municipality' 
-                          ? `Found ${nearestRestaurants.length} restaurants near ${searchMode.selectedMunicipality?.name}`
-                          : `Showing ${nearestRestaurants.length} closest authentic Greek tavernas`
+                          ? `${t('restaurantFinder.foundCount', 'Found')} ${nearestRestaurants.length} ${t('restaurantFinder.restaurantsNear', 'restaurants near')} ${searchMode.selectedMunicipality?.name ? t(`municipalities.${searchMode.selectedMunicipality.name}`, searchMode.selectedMunicipality.name) : ''}`
+                          : `${t('restaurantFinder.showingClosest', 'Showing')} ${nearestRestaurants.length} ${t('restaurantFinder.closestTavernas', 'closest authentic Greek tavernas')}`
                         }
                       </p>
                       {searchMode.type === 'municipality' && (
                         <span className="inline-block mt-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                          📍 {searchMode.selectedMunicipality?.region}
+                          📍 {searchMode.selectedMunicipality?.region ? t(`regions.${searchMode.selectedMunicipality.region}`, searchMode.selectedMunicipality.region) : ''}
                         </span>
                       )}
                     </div>
@@ -425,7 +425,7 @@ const MainHero = () => {
                           rel="noopener noreferrer"
                           className="flex-1 bg-green-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-green-700 transition duration-200 text-center"
                         >
-                          View on Google Maps
+                          {t('restaurantFinder.viewOnMaps', 'View on Google Maps')}
                         </a>
                       </div>
                     </div>
@@ -438,7 +438,7 @@ const MainHero = () => {
                           disabled={currentIndex === 0}
                           className="flex items-center gap-2 px-4 py-2 text-gray-600 disabled:text-gray-400 hover:text-[#0878fe] transition duration-200 font-medium"
                         >
-                          ← Previous
+                          ← {t('restaurantFinder.previous', 'Previous')}
                         </button>
                         
                         <div className="flex gap-2">
@@ -459,7 +459,7 @@ const MainHero = () => {
                           disabled={currentIndex === nearestRestaurants.length - 1}
                           className="flex items-center gap-2 px-4 py-2 text-gray-600 disabled:text-gray-400 hover:text-[#0878fe] transition duration-200 font-medium"
                         >
-                          Next →
+                          {t('restaurantFinder.next', 'Next')} →
                         </button>
                       </div>
                     )}
@@ -469,7 +469,7 @@ const MainHero = () => {
                         onClick={resetSearch}
                         className="text-gray-500 hover:text-gray-700 transition duration-200 font-medium"
                       >
-                        🔄 Search Again
+                        🔄 {t('restaurantFinder.searchAgain', 'Search Again')}
                       </button>
                     </div>
                   </div>
