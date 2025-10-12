@@ -34,12 +34,6 @@ interface SearchResult {
   keywords?: string[];
 }
 
-const sectionTitles: Record<string, string> = {
-  islands: 'Destinations',
-  product: 'Map lists',
-  store: 'Travel Gear',
-};
-
 const greekToLatinMap: Record<string, string[]> = {
   α: ['a'], β: ['v', 'b'], γ: ['g'], δ: ['d'], ε: ['e'], ζ: ['z'], η: ['i', 'e'], θ: ['th'], ι: ['i','y'],
   κ: ['k'], λ: ['l'], μ: ['m'], ν: ['n'], ξ: ['x','ks'], ο: ['o'], π: ['p'], ρ: ['r'], σ: ['s'],
@@ -57,6 +51,19 @@ const normalizeText = (text: string): string => {
 
 const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
   const { t } = useTranslation();
+
+  const getSectionTitle = (type: string): string => {
+    switch (type) {
+      case 'islands':
+        return t('search.sectionTitles.destinations', 'Destinations');
+      case 'product':
+        return t('search.sectionTitles.mapLists', 'Map lists');
+      case 'store':
+        return t('search.sectionTitles.travelGear', 'Travel Gear');
+      default:
+        return type;
+    }
+  };
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredResults, setFilteredResults] = useState<SearchResult[]>([]);
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -174,7 +181,7 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
           return (
             <Box key={type}>
               <Heading as="h2" size="md" mb={2} color="blue.500" textAlign="center">
-                {sectionTitles[type]}
+                {getSectionTitle(type)}
               </Heading>
               <Grid
                 templateColumns={{ base: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }}
