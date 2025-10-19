@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Souvlaki tou Thanasi",
+    "url": "https://maps.app.goo.gl/sample7",
+    "address": "Mitropoleos 69, Athina 105 55",
+    "lat": 37.975,
+    "lng": 23.728
+  },
+  {
+    "name": "O Kostas Psyrri",
+    "url": "https://maps.app.goo.gl/sample8",
+    "address": "Plateia Agia Irini 2, Athina 105 51",
+    "lat": 37.977,
+    "lng": 23.726
+  },
+  {
+    "name": "Pita Pan",
+    "url": "https://maps.app.goo.gl/sample9",
+    "address": "Aristofanous 11, Athina 105 54",
+    "lat": 37.976,
+    "lng": 23.724
+  }
+]

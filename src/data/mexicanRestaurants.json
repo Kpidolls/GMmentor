@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Taco Libre",
+    "url": "https://maps.app.goo.gl/sample31",
+    "address": "Voulis 15, Athina 105 62",
+    "lat": 37.975,
+    "lng": 23.731
+  },
+  {
+    "name": "Azteca Mexican",
+    "url": "https://maps.app.goo.gl/sample32",
+    "address": "Themistokleous 80, Athina 106 83",
+    "lat": 37.981,
+    "lng": 23.732
+  },
+  {
+    "name": "El Burrito Loco",
+    "url": "https://maps.app.goo.gl/sample33",
+    "address": "Kolokotroni 57, Athina 105 60",
+    "lat": 37.973,
+    "lng": 23.73
+  }
+]

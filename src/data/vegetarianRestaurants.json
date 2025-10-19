@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Avocado Vegetarian Restaurant",
+    "url": "https://maps.app.goo.gl/sample25",
+    "address": "Nikis 30, Athina 105 57",
+    "lat": 37.973,
+    "lng": 23.734
+  },
+  {
+    "name": "Mama Tierra",
+    "url": "https://maps.app.goo.gl/sample26",
+    "address": "Akadimias 84, Athina 106 77",
+    "lat": 37.98,
+    "lng": 23.738
+  },
+  {
+    "name": "Lime Bistro",
+    "url": "https://maps.app.goo.gl/sample27",
+    "address": "Falirou 7, Athina 117 42",
+    "lat": 37.966,
+    "lng": 23.724
+  }
+]
