@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Spondi Restaurant",
+    "url": "https://maps.app.goo.gl/sample19",
+    "address": "Pyrronos 5, Athina 116 36",
+    "lat": 37.968,
+    "lng": 23.756
+  },
+  {
+    "name": "Funky Gourmet",
+    "url": "https://maps.app.goo.gl/sample20",
+    "address": "Paramithias 13, Athina 104 35",
+    "lat": 37.985,
+    "lng": 23.718
+  },
+  {
+    "name": "Hytra Restaurant",
+    "url": "https://maps.app.goo.gl/sample21",
+    "address": "Navarchou Apostoli 7, Athina 105 54",
+    "lat": 37.971,
+    "lng": 23.729
+  }
+]

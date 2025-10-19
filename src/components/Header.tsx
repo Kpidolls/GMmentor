@@ -113,7 +113,7 @@ const Header = () => {
       <Box px={{ base: 4, md: 8 }} py={4}>
         <Flex align="center" justify="space-between" wrap="wrap">
           {/* Logo and Company */}
-          <HStack spacing={3} onClick={() => router.push('/')} cursor="pointer">
+          <HStack spacing={3} onClick={() => window.location.href = '/'} cursor="pointer">
             <Image
               src={logo}
               alt={t('company.logoAlt', { name: t('company.name') })}

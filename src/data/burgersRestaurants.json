@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Burger Joint Gazi",
+    "url": "https://maps.app.goo.gl/sample16",
+    "address": "Iera Odos 84, Athina 118 55",
+    "lat": 37.962,
+    "lng": 23.718
+  },
+  {
+    "name": "The Burger Priest",
+    "url": "https://maps.app.goo.gl/sample17",
+    "address": "Miaouli 23, Athina 105 54",
+    "lat": 37.973,
+    "lng": 23.725
+  },
+  {
+    "name": "Black Iron Burger",
+    "url": "https://maps.app.goo.gl/sample18",
+    "address": "Lekka 12, Athina 105 62",
+    "lat": 37.972,
+    "lng": 23.732
+  }
+]

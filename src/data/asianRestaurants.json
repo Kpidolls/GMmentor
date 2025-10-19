@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Furin Kazan Ramen",
+    "url": "https://maps.app.goo.gl/sample10",
+    "address": "Apollonos 2, Athina 105 57",
+    "lat": 37.974,
+    "lng": 23.734
+  },
+  {
+    "name": "Sushi Bar Kolonaki",
+    "url": "https://maps.app.goo.gl/sample11",
+    "address": "Anagnostopoulou 14, Athina 106 73",
+    "lat": 37.979,
+    "lng": 23.744
+  },
+  {
+    "name": "Thai Massage & Food",
+    "url": "https://maps.app.goo.gl/sample12",
+    "address": "Veikou 72, Athina 117 41",
+    "lat": 37.965,
+    "lng": 23.722
+  }
+]

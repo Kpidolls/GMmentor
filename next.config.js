@@ -33,6 +33,7 @@ const nextConfig = withBundleAnalyzer({
   output: 'export',
   images: {
     unoptimized: true,
+    qualities: [75, 90, 95, 100],
   },
 
   exportPathMap: async function (

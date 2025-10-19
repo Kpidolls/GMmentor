@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Il Postino Kolonaki",
+    "url": "https://maps.app.goo.gl/sample4",
+    "address": "Skoufa 3, Athina 106 73",
+    "lat": 37.978,
+    "lng": 23.742
+  },
+  {
+    "name": "Pasta Basta Exarchia",
+    "url": "https://maps.app.goo.gl/sample5",
+    "address": "Themistokleous 72, Athina 106 83",
+    "lat": 37.982,
+    "lng": 23.731
+  },
+  {
+    "name": "Rosso di Sera",
+    "url": "https://maps.app.goo.gl/sample6",
+    "address": "Valtetsiou 41, Athina 106 81",
+    "lat": 37.981,
+    "lng": 23.733
+  }
+]

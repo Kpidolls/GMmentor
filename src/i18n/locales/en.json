@@ -66,7 +66,16 @@
     "Νίκαια": "Nikaia",
     "Κορυδαλλός": "Korydallos",
     "Άγιοι Ανάργυροι": "Agioi Anargyroi",
-    "Καματερό": "Kamatero"
+    "Καματερό": "Kamatero",
+    "Νέο Ψυχικό": "Neo Psychiko",
+    "Μελίσσια": "Melissia",
+    "Ηράκλειο": "Heraklion",
+    "Βριλήσσια": "Vrilissia",
+    "Βύρωνας": "Vyronas",
+    "Παλαιό Φάληρο": "Paleo Faliro",
+    "Άνοιξη": "Anoixi",
+    "Πειραιάς": "Piraeus",
+    "Κερατσίνι": "Keratsini"
   },
   "regions": {
     "Κέντρο Αθήνας": "Athens Center",
@@ -75,6 +84,23 @@
     "Ανατολικά Προάστια": "Eastern Suburbs",
     "Δυτικά Προάστια": "Western Suburbs"
   },
+  "restaurantTerms": {
+    "ταβέρνα": "taverna",
+    "ουζερί": "ouzeri",
+    "ψαροταβέρνα": "fish taverna",
+    "καφενείο": "traditional coffee house",
+    "στέκι": "hangout spot",
+    "μεζεδοπωλείο": "mezze restaurant",
+    "ψητοπωλείο": "grill house",
+    "θαλασσινά": "seafood",
+    "ψάρια": "fish",
+    "μπακαλιάρος": "cod",
+    "κουτούκι": "small taverna",
+    "μπαλκόνι": "balcony",
+    "μαρίνα": "marina",
+    "ακτή": "coast/shore",
+    "παραλία": "beach"
+  },
   "company": {
     "name": "Googlementor"
   },
@@ -82,7 +108,7 @@
     "maps": "Lists",
     "getyourguide": "Top Tours & Activities",
     "mustSee": "Must See",
-    "islands": "Destinations",
+    "islands": "Destinations in Greece",
     "food": "Food",
     "hiking": "Hiking",
     "store": "Store",
@@ -129,7 +155,7 @@
     "foundRestaurants": "Found {{count}} restaurants near {{location}}",
     "nearestRestaurants": "Showing {{count}} closest authentic Greek tavernas",
     "searchingMessage": "Discovering Greek tavernas near you...",
-    "loadingMessage": "Discovering Greek tavernas near you...",
+    "loadingMessage": "Discovering {{category}} near you...",
     "locationError": "Unable to get your location. Please enable location services.",
     "geolocationNotSupported": "Geolocation is not supported by this browser.",
     "or": "OR",
