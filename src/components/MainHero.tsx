@@ -614,10 +614,10 @@ const MainHero = () => {
                       </h3>
                       <p className="text-gray-600 text-sm sm:text-base px-2">
                         {searchMode.type === 'category' && searchMode.selectedCategory
-                          ? `${t('restaurantFinder.found', 'Found')} ${nearestRestaurants.length} ${t(`categories.${searchMode.selectedCategory.id}`, searchMode.selectedCategory.name).toLowerCase()} ${t('restaurantFinder.restaurants', 'restaurants')}`
+                          ? `${t('restaurantFinder.found', 'Found')} ${nearestRestaurants.length} ${t(`categories.${searchMode.selectedCategory.id}`, searchMode.selectedCategory.name)} ${t('restaurantFinder.places', 'places')}`
                           : searchMode.type === 'municipality' 
-                          ? `${t('restaurantFinder.foundCount', 'Found')} ${nearestRestaurants.length} ${t('restaurantFinder.restaurantsNear', 'restaurants near')} ${searchMode.selectedMunicipality?.name ? t(`municipalities.${searchMode.selectedMunicipality.name}`, searchMode.selectedMunicipality.name) : ''}`
-                          : `${t('restaurantFinder.showingClosest', 'Showing')} ${nearestRestaurants.length} ${t('restaurantFinder.closestTavernas', 'closest authentic Greek tavernas')}`
+                          ? `${t('restaurantFinder.foundCount', 'Found')} ${nearestRestaurants.length} ${t(`categories.${selectedDisplayCategory.id}`, selectedDisplayCategory.name)} ${t('restaurantFinder.placesNear', 'places near')} ${searchMode.selectedMunicipality?.name ? t(`municipalities.${searchMode.selectedMunicipality.name}`, searchMode.selectedMunicipality.name) : ''}`
+                          : `${t('restaurantFinder.showingClosest', 'Showing')} ${nearestRestaurants.length} ${t('restaurantFinder.closest', 'closest')} ${t(`categories.${selectedDisplayCategory.id}`, selectedDisplayCategory.name)} ${t('restaurantFinder.places', 'places')}`
                         }
                       </p>
                       {searchMode.type === 'municipality' && (
