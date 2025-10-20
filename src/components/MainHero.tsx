@@ -255,11 +255,15 @@ const MainHero = () => {
     setError(null);
     // Don't perform search immediately - let user choose search method
     
-    // Gentle scroll back to main interface - minimal on mobile
+    // No scroll for desktop to keep main cards fully visible
+    // Minimal scroll only for mobile
     setTimeout(() => {
       const isMobile = window.innerWidth < 768;
-      const scrollTarget = isMobile ? 50 : 100;
-      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+      if (isMobile) {
+        const scrollTarget = 30; // Minimal scroll for mobile only
+        window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+      }
+      // Desktop: no scroll to preserve main cards visibility
     }, 100);
   };
 
@@ -269,10 +273,10 @@ const MainHero = () => {
     setShowCategoryList(false);
     setError(null);
     
-    // Minimal scroll on mobile, more on desktop for better list viewing
+    // Optimal scroll for municipality/region list to show areas better
     setTimeout(() => {
       const isMobile = window.innerWidth < 768;
-      const scrollTarget = isMobile ? 80 : 200;
+      const scrollTarget = isMobile ? 40 : 280; // Increased for better region visibility
       window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
     }, 100);
   };
@@ -283,11 +287,15 @@ const MainHero = () => {
     setShowMunicipalityList(false);
     setError(null);
     
-    // Minimal scroll on mobile, more on desktop for category selection
+    // No scroll for desktop to keep main cards fully visible
+    // Light scroll only for mobile for better UX
     setTimeout(() => {
       const isMobile = window.innerWidth < 768;
-      const scrollTarget = isMobile ? 80 : 200;
-      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+      if (isMobile) {
+        const scrollTarget = 30; // Minimal scroll for mobile only
+        window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+      }
+      // Desktop: no scroll to preserve main cards visibility
     }, 100);
   };
 
@@ -302,11 +310,16 @@ const MainHero = () => {
     setSearchMode({ type: 'location' });
     setSelectedDisplayCategory(defaultCategory); // Reset to default Greek Restaurants
     
-    // Gentle scroll back to main interface - minimal on mobile
+    // Optimal scroll to show all 3 main cards completely in viewport
     setTimeout(() => {
       const isMobile = window.innerWidth < 768;
-      const scrollTarget = isMobile ? 50 : 100;
-      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+      if (isMobile) {
+        // Minimal scroll for mobile
+        window.scrollTo({ top: 30, behavior: 'smooth' });
+      } else {
+        // Desktop: scroll to position that shows the 3 main cards optimally
+        window.scrollTo({ top: 280, behavior: 'smooth' });
+      }
     }, 100);
   };
 
@@ -557,9 +570,6 @@ const MainHero = () => {
                     <button
                       onClick={() => {
                         resetSearch();
-                        setTimeout(() => {
-                          window.scrollTo({ top: 200, behavior: 'smooth' });
-                        }, 100);
                       }}
                       className="text-slate-300 hover:text-white transition-colors duration-200 font-medium text-sm sm:text-base"
                     >
@@ -625,9 +635,6 @@ const MainHero = () => {
                   <button
                     onClick={() => {
                       resetSearch();
-                      setTimeout(() => {
-                        window.scrollTo({ top: 200, behavior: 'smooth' });
-                      }, 100);
                     }}
                     className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors duration-200 font-medium text-sm sm:text-base px-4 py-2 rounded-lg hover:bg-gray-50"
                   >
