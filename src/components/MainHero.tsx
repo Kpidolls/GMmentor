@@ -162,6 +162,11 @@ const MainHero = () => {
     setSearchMode({ type: 'location' });
     // Keep the currently selected display category instead of resetting to default
 
+    // Scroll to optimal viewing position
+    setTimeout(() => {
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    }, 100);
+
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -173,10 +178,19 @@ const MainHero = () => {
           setNearestRestaurants(nearest);
           setCurrentIndex(0);
           setLoading(false);
+          
+          // Ensure results are visible after loading
+          setTimeout(() => {
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+          }, 200);
         },
         () => {
           setError(t('restaurantFinder.locationError', 'Unable to get your location. Please enable location services.'));
           setLoading(false);
+          // Ensure error message is visible
+          setTimeout(() => {
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+          }, 200);
         },
         {
           enableHighAccuracy: true,
@@ -187,6 +201,10 @@ const MainHero = () => {
     } else {
       setError(t('restaurantFinder.geolocationNotSupported', 'Geolocation is not supported by this browser.'));
       setLoading(false);
+      // Ensure error message is visible
+      setTimeout(() => {
+        window.scrollTo({ top: 300, behavior: 'smooth' });
+      }, 200);
     }
   };
 
@@ -198,10 +216,20 @@ const MainHero = () => {
     setSearchMode({ type: 'municipality', selectedMunicipality: municipality });
     // Keep the currently selected display category instead of resetting to default
 
+    // Scroll to optimal viewing position
+    setTimeout(() => {
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    }, 100);
+
     const nearest = findNearestRestaurants(municipality.lat, municipality.lng, 10, selectedDisplayCategory);
     setNearestRestaurants(nearest);
     setCurrentIndex(0);
     setLoading(false);
+    
+    // Ensure results are visible after loading
+    setTimeout(() => {
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    }, 200);
   };
 
   const selectCategory = (category: RestaurantCategory) => {
@@ -212,6 +240,11 @@ const MainHero = () => {
     setShowMunicipalityList(false);
     setError(null);
     // Don't perform search immediately - let user choose search method
+    
+    // Scroll back to main interface to show updated category
+    setTimeout(() => {
+      window.scrollTo({ top: 100, behavior: 'smooth' });
+    }, 100);
   };
 
   const showMunicipalitySelection = () => {
@@ -219,6 +252,11 @@ const MainHero = () => {
     setShowRestaurantFinder(false);
     setShowCategoryList(false);
     setError(null);
+    
+    // Scroll to optimal viewing position for location selection
+    setTimeout(() => {
+      window.scrollTo({ top: 200, behavior: 'smooth' });
+    }, 100);
   };
 
   const showCategorySelection = () => {
@@ -226,6 +264,11 @@ const MainHero = () => {
     setShowRestaurantFinder(false);
     setShowMunicipalityList(false);
     setError(null);
+    
+    // Scroll to optimal viewing position for category selection
+    setTimeout(() => {
+      window.scrollTo({ top: 200, behavior: 'smooth' });
+    }, 100);
   };
 
   const resetSearch = () => {
@@ -238,6 +281,11 @@ const MainHero = () => {
     setShowCategoryList(false);
     setSearchMode({ type: 'location' });
     setSelectedDisplayCategory(defaultCategory); // Reset to default Greek Restaurants
+    
+    // Scroll back to main interface
+    setTimeout(() => {
+      window.scrollTo({ top: 100, behavior: 'smooth' });
+    }, 100);
   };
 
   const nextRestaurant = () => {
@@ -675,19 +723,30 @@ const MainHero = () => {
                           {nearestRestaurants.map((restaurantData, index) => (
                             <div
                               key={index}
-                              className={`min-w-[280px] bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 sm:p-6 border border-blue-200 transition-all duration-200 ${
+                              className={`min-w-[280px] h-[240px] sm:h-[260px] bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 sm:p-6 border border-blue-200 transition-all duration-200 flex flex-col ${
                                 index === currentIndex ? 'ring-2 ring-[#0878fe] shadow-lg' : 'opacity-80'
                               }`}
                             >
-                              <div className="space-y-3 sm:space-y-4">
-                                <div>
-                                  <h4 className="font-bold text-gray-800 text-base sm:text-lg mb-2 flex items-start gap-2 line-clamp-2">
-                                    🍽️ <span className="flex-1">{restaurantData.restaurant.name}</span>
-                                  </h4>
-                                  <p className="text-gray-600 text-sm sm:text-base mb-3 flex items-start gap-2 line-clamp-2">
-                                    📍 <span className="flex-1">{restaurantData.restaurant.address}</span>
-                                  </p>
-                                  <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                              {/* Content Container - Flex grow to push button to bottom */}
+                              <div className="flex-1 flex flex-col">
+                                {/* Restaurant Info - Fixed height sections */}
+                                <div className="flex-1 space-y-2 sm:space-y-3">
+                                  {/* Restaurant Name - Fixed height with line clamping */}
+                                  <div className="h-[40px] sm:h-[48px]">
+                                    <h4 className="font-bold text-gray-800 text-base sm:text-lg flex items-start gap-2 line-clamp-2 leading-tight">
+                                      🍽️ <span className="flex-1">{restaurantData.restaurant.name}</span>
+                                    </h4>
+                                  </div>
+                                  
+                                  {/* Address - Fixed height with line clamping */}
+                                  <div className="h-[32px] sm:h-[40px]">
+                                    <p className="text-gray-600 text-sm sm:text-base flex items-start gap-2 line-clamp-2 leading-tight">
+                                      📍 <span className="flex-1">{restaurantData.restaurant.address}</span>
+                                    </p>
+                                  </div>
+                                  
+                                  {/* Distance and Index Info */}
+                                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-1">
                                     <span className="bg-[#0878fe] text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap">
                                       📏 {formatDistance(restaurantData.distance)}
                                     </span>
@@ -697,14 +756,17 @@ const MainHero = () => {
                                   </div>
                                 </div>
                                 
-                                <a
-                                  href={restaurantData.restaurant.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="block w-full bg-green-600 text-white py-2 sm:py-3 px-3 sm:px-4 rounded-lg font-medium hover:bg-green-700 transition duration-200 text-center text-sm sm:text-base"
-                                >
-                                  {t('restaurantFinder.viewOnMaps', 'View on Google Maps')}
-                                </a>
+                                {/* Button - Always at bottom */}
+                                <div className="mt-3 sm:mt-4">
+                                  <a
+                                    href={restaurantData.restaurant.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block w-full bg-green-600 text-white py-2 sm:py-3 px-3 sm:px-4 rounded-lg font-medium hover:bg-green-700 transition duration-200 text-center text-sm sm:text-base"
+                                  >
+                                    {t('restaurantFinder.viewOnMaps', 'View on Google Maps')}
+                                  </a>
+                                </div>
                               </div>
                             </div>
                           ))}
@@ -764,7 +826,7 @@ const MainHero = () => {
                     <div className="text-center pt-4 border-t border-gray-200">
                       <button
                         onClick={resetSearch}
-                        className="text-gray-500 hover:text-gray-700 transition duration-200 font-medium text-sm sm:text-base"
+                        className="inline-flex items-center gap-2 px-4 py-2 text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium text-sm sm:text-base cursor-pointer"
                       >
                         🔄 {t('restaurantFinder.searchAgain', 'Search Again')}
                       </button>
