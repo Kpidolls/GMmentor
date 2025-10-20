@@ -162,9 +162,11 @@ const MainHero = () => {
     setSearchMode({ type: 'location' });
     // Keep the currently selected display category instead of resetting to default
 
-    // Scroll to optimal viewing position
+    // Gentle scroll for mobile, more pronounced for desktop
     setTimeout(() => {
-      window.scrollTo({ top: 300, behavior: 'smooth' });
+      const isMobile = window.innerWidth < 768;
+      const scrollTarget = isMobile ? 150 : 300;
+      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
     }, 100);
 
     if ('geolocation' in navigator) {
@@ -179,17 +181,22 @@ const MainHero = () => {
           setCurrentIndex(0);
           setLoading(false);
           
-          // Ensure results are visible after loading
+          // Only scroll again if results might be off-screen on larger screens
           setTimeout(() => {
-            window.scrollTo({ top: 300, behavior: 'smooth' });
+            const isMobile = window.innerWidth < 768;
+            if (!isMobile) {
+              window.scrollTo({ top: 300, behavior: 'smooth' });
+            }
           }, 200);
         },
         () => {
           setError(t('restaurantFinder.locationError', 'Unable to get your location. Please enable location services.'));
           setLoading(false);
-          // Ensure error message is visible
+          // Minimal scroll for error visibility
           setTimeout(() => {
-            window.scrollTo({ top: 300, behavior: 'smooth' });
+            const isMobile = window.innerWidth < 768;
+            const scrollTarget = isMobile ? 100 : 250;
+            window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
           }, 200);
         },
         {
@@ -201,9 +208,11 @@ const MainHero = () => {
     } else {
       setError(t('restaurantFinder.geolocationNotSupported', 'Geolocation is not supported by this browser.'));
       setLoading(false);
-      // Ensure error message is visible
+      // Minimal scroll for error visibility
       setTimeout(() => {
-        window.scrollTo({ top: 300, behavior: 'smooth' });
+        const isMobile = window.innerWidth < 768;
+        const scrollTarget = isMobile ? 100 : 250;
+        window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
       }, 200);
     }
   };
@@ -216,9 +225,11 @@ const MainHero = () => {
     setSearchMode({ type: 'municipality', selectedMunicipality: municipality });
     // Keep the currently selected display category instead of resetting to default
 
-    // Scroll to optimal viewing position
+    // Responsive scroll based on screen size
     setTimeout(() => {
-      window.scrollTo({ top: 300, behavior: 'smooth' });
+      const isMobile = window.innerWidth < 768;
+      const scrollTarget = isMobile ? 150 : 300;
+      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
     }, 100);
 
     const nearest = findNearestRestaurants(municipality.lat, municipality.lng, 10, selectedDisplayCategory);
@@ -226,9 +237,12 @@ const MainHero = () => {
     setCurrentIndex(0);
     setLoading(false);
     
-    // Ensure results are visible after loading
+    // Skip additional scroll on mobile to avoid over-scrolling
     setTimeout(() => {
-      window.scrollTo({ top: 300, behavior: 'smooth' });
+      const isMobile = window.innerWidth < 768;
+      if (!isMobile) {
+        window.scrollTo({ top: 300, behavior: 'smooth' });
+      }
     }, 200);
   };
 
@@ -241,9 +255,11 @@ const MainHero = () => {
     setError(null);
     // Don't perform search immediately - let user choose search method
     
-    // Scroll back to main interface to show updated category
+    // Gentle scroll back to main interface - minimal on mobile
     setTimeout(() => {
-      window.scrollTo({ top: 100, behavior: 'smooth' });
+      const isMobile = window.innerWidth < 768;
+      const scrollTarget = isMobile ? 50 : 100;
+      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
     }, 100);
   };
 
@@ -253,9 +269,11 @@ const MainHero = () => {
     setShowCategoryList(false);
     setError(null);
     
-    // Scroll to optimal viewing position for location selection
+    // Minimal scroll on mobile, more on desktop for better list viewing
     setTimeout(() => {
-      window.scrollTo({ top: 200, behavior: 'smooth' });
+      const isMobile = window.innerWidth < 768;
+      const scrollTarget = isMobile ? 80 : 200;
+      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
     }, 100);
   };
 
@@ -265,9 +283,11 @@ const MainHero = () => {
     setShowMunicipalityList(false);
     setError(null);
     
-    // Scroll to optimal viewing position for category selection
+    // Minimal scroll on mobile, more on desktop for category selection
     setTimeout(() => {
-      window.scrollTo({ top: 200, behavior: 'smooth' });
+      const isMobile = window.innerWidth < 768;
+      const scrollTarget = isMobile ? 80 : 200;
+      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
     }, 100);
   };
 
@@ -282,9 +302,11 @@ const MainHero = () => {
     setSearchMode({ type: 'location' });
     setSelectedDisplayCategory(defaultCategory); // Reset to default Greek Restaurants
     
-    // Scroll back to main interface
+    // Gentle scroll back to main interface - minimal on mobile
     setTimeout(() => {
-      window.scrollTo({ top: 100, behavior: 'smooth' });
+      const isMobile = window.innerWidth < 768;
+      const scrollTarget = isMobile ? 50 : 100;
+      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
     }, 100);
   };
 
