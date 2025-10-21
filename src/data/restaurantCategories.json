@@ -16,7 +16,7 @@
   },
   {
     "id": "desserts",
-    "name": "Desserts",
+    "name": "Dessert Shops",
     "description": "Sweet treats and traditional Greek desserts",
     "icon": "🍰",
     "color": "from-pink-500 to-rose-600",
@@ -24,7 +24,7 @@
   },
   {
     "id": "coffee-brunch",
-    "name": "Coffee & Brunch",
+    "name": "Coffee & Brunch Spots",
     "description": "Specialty coffee and all-day brunch spots",
     "icon": "☕",
     "color": "from-amber-500 to-orange-600",

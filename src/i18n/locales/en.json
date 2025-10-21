@@ -166,7 +166,7 @@
     "foundCount": "Found",
     "restaurantsNear": "restaurants near",
     "placesNear": "places near",
-    "places": "spots",
+    "places": "",
     "closest": "closest",
     "showingClosest": "Showing",
     "closestTavernas": "closest authentic Greek tavernas",
@@ -183,7 +183,8 @@
   },
   "reviews": {
     "title": "What Our Users Say",
-    "review1": "I used to waste so much time scrolling through reviews. Now I just check Googlementor and know I’ll get a great recommendation!",
+    "subtitle": "Real experiences from travelers who discovered Greece with our curated guides",
+    "review1": "I used to waste so much time scrolling through reviews. Now I just check Googlementor and know I'll get a great recommendation!",
     "author1": "Alex M., Digital Nomad in Athens",
     "review2": "Googlementor helped us find a fish tavern with the most amazing sunset view, it totally made our trip!",
     "author2": "Sophia & Marco, Airbnb Guests from Italy",
@@ -204,9 +205,10 @@
   },
   "product": {
     "title": "Ready-to-Use Google Maps Lists",
+    "subtitle": "Discover Greece through our expertly curated collection of maps and location lists",
     "mustSee": {
       "title": "📍 Must See Attractions",
-      "description": "Embark on a journey through history and nature with our curated list of iconic landmarks, ancient ruins, and breathtaking landscapes that define Greece’s timeless charm. "
+      "description": "Embark on a journey through history and nature with our curated list of iconic landmarks, ancient ruins, and breathtaking landscapes that define Greece's timeless charm. "
     },
     "hiking": {
       "title": "📍 Hiking Trails",
@@ -237,7 +239,7 @@
       "description": "Experience authentic Greek seafood at charming tavernas known for their fresh catch and warm hospitality."
     },
     "desserts": {
-      "title": "📍 Desserts",
+      "title": "📍 Dessert Shops",
       "description": "Treat yourself to Greece’s most irresistible desserts, from creamy baklava to luscious loukoumades, perfect for every sweet tooth."
     },
     "coffee": {
@@ -307,6 +309,7 @@
   },
   "islands": {
     "title": "Explore Destinations",
+    "subtitle": "Explore the most beautiful islands and destinations across Greece",
     "athens": {
       "title": "📍 Athens",
       "description": "Athens, the capital of Greece, where ancient history meets vibrant modern life.  Explore ancient ruins, museums and lively neighborhoods."
@@ -724,6 +727,9 @@
     }
   },
   "productShowcaseTitle": "Essential Travel Items",
+  "productShowcase": {
+    "subtitle": "Carefully selected travel gear and essentials to enhance your Greek adventure"
+  },
   "travelInsurance": {
     "returnHome": "Return to Home",
     "title": "Protect Your Trip",
@@ -833,5 +839,9 @@
     "promoInstruction": "at checkout or click the link below.",
     "ctaButton": "Get Your Airalo eSIM",
     "disclaimer": "Airalo is a trusted solution used by millions of travelers worldwide. Ensure your phone supports eSIM before purchasing."
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "subtitle": "Get the latest travel tips, new destinations, and exclusive offers delivered to your inbox"
   }
 }
