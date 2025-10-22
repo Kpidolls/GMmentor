@@ -145,7 +145,7 @@
     }
   },
   "restaurantFinder": {
-    "title": "Discover Authentic Greek Cuisine",
+    "title": "Discover Authentic Greek Restaurants",
     "subtitle": "Find traditional Greek tavernas and restaurants near you",
     "searchNearLocation": "Search Near My Location",
     "chooseRegion": "Choose Athens Region",
@@ -259,15 +259,15 @@
       "description": "Find the best burger spots serving mouthwatering, juicy burgers made with quality ingredients."
     },
     "italian": {
-      "title": "📍 Italian Cuisine",
+      "title": "📍 Italian Restaurants",
       "description": "Savor Italy’s beloved classics, from wood fired pizzas to fresh pasta at top Italian restaurants across Greece."
     },
     "asian": {
-      "title": "📍 Asian Cuisine",
+      "title": "📍 Asian Restaurants",
       "description": "Explore a world of authentic Asian dishes, from sushi to spicy curries, crafted by talented chefs in Greece."
     },
     "mexican": {
-      "title": "📍 Mexican Cuisine",
+      "title": "📍 Mexican Restaurants",
       "description": "Spice up your palate with bold, colorful Mexican cuisine, featuring tacos, burritos, and more at Greece’s top Mexican eateries."
     },
     "cheapEats": {
