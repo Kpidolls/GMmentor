@@ -544,7 +544,7 @@ const MainHero = () => {
                   </div>
 
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 xs:gap-3 sm:gap-4 mb-4 xs:mb-6 sm:mb-8">
-                    {categoriesData.slice(0, 4).map((category) => (
+                    {categoriesData.slice(0, 10).map((category) => (
                       <button
                         key={category.id}
                         onClick={() => selectCategory(category as RestaurantCategory)}

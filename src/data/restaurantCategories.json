@@ -40,7 +40,7 @@
   },
   {
     "id": "italian",
-    "name": "Italian Cuisine",
+    "name": "Italian Restaurants",
     "description": "Authentic Italian flavors and pasta",
     "icon": "🍝",
     "color": "from-green-500 to-emerald-600",
@@ -56,7 +56,7 @@
   },
   {
     "id": "asian",
-    "name": "Asian Cuisine",
+    "name": "Asian Restaurants",
     "description": "Diverse Asian flavors and dishes",
     "icon": "🥢",
     "color": "from-red-500 to-pink-600",
@@ -69,6 +69,22 @@
     "icon": "🍔",
     "color": "from-yellow-500 to-orange-600",
     "keywords": ["burger", "grill", "casual", "american", "fries"]
+  },
+  {
+    "id": "vegetarian",
+    "name": "Vegetarian Friendly Restaurants",
+    "description": "Plant-based and vegetarian options",
+    "icon": "🌱",
+    "color": "from-green-400 to-emerald-500",
+    "keywords": ["vegetarian", "vegan", "healthy", "organic", "plant-based"]
+  },
+  {
+    "id": "mexican",
+    "name": "Mexican Restaurants",
+    "description": "Authentic Mexican flavors and spices",
+    "icon": "🌮",
+    "color": "from-lime-500 to-green-600",
+    "keywords": ["mexican", "tacos", "burrito", "spicy", "authentic"]
   },
   {
     "id": "luxury-dining",
@@ -87,28 +103,12 @@
     "keywords": ["rooftop", "lounge", "view", "skybar", "terrace"]
   },
   {
-    "id": "vegetarian",
-    "name": "Vegetarian Friendly",
-    "description": "Plant-based and vegetarian options",
-    "icon": "🌱",
-    "color": "from-green-400 to-emerald-500",
-    "keywords": ["vegetarian", "vegan", "healthy", "organic", "plant-based"]
-  },
-  {
     "id": "gyros-souvlaki",
     "name": "Gyros & Souvlaki",
     "description": "Traditional Greek street food",
     "icon": "🥙",
     "color": "from-orange-500 to-red-600",
     "keywords": ["gyros", "souvlaki", "greek", "traditional", "street food"]
-  },
-  {
-    "id": "mexican",
-    "name": "Mexican Cuisine",
-    "description": "Authentic Mexican flavors and spices",
-    "icon": "🌮",
-    "color": "from-lime-500 to-green-600",
-    "keywords": ["mexican", "tacos", "burrito", "spicy", "authentic"]
   },
   {
     "id": "bougatsa",
