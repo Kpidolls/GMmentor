@@ -1,0 +1,26 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with Greek blue -->
+  <circle cx="256" cy="256" r="240" fill="#0066CC" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Greek column silhouette -->
+  <rect x="180" y="180" width="20" height="120" fill="#FFFFFF"/>
+  <rect x="220" y="180" width="20" height="120" fill="#FFFFFF"/>
+  <rect x="260" y="180" width="20" height="120" fill="#FFFFFF"/>
+  <rect x="300" y="180" width="20" height="120" fill="#FFFFFF"/>
+  
+  <!-- Column base -->
+  <rect x="170" y="300" width="160" height="20" fill="#FFFFFF"/>
+  
+  <!-- Column top -->
+  <rect x="170" y="160" width="160" height="20" fill="#FFFFFF"/>
+  
+  <!-- Map pin overlay -->
+  <circle cx="350" cy="150" r="35" fill="#FF4444"/>
+  <circle cx="350" cy="140" r="15" fill="#FFFFFF"/>
+  
+  <!-- App initials -->
+  <text x="256" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FFFFFF">GM</text>
+  
+  <!-- Wave element at bottom -->
+  <path d="M 80 350 Q 160 330 240 350 T 400 350 L 400 400 L 80 400 Z" fill="#FFFFFF" opacity="0.3"/>
+</svg>

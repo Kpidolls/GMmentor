@@ -10,6 +10,11 @@ import restaurantsData from '../data/greekRestaurants.json';
 import municipalitiesData from '../data/municipalities.json';
 import categoriesData from '../data/restaurantCategories.json';
 
+// PWA Components
+import InstallBanner from './InstallBanner';
+import OfflineNotice from './OfflineNotice';
+import { usePWA } from '../hooks/usePWA';
+
 // Import all category-specific restaurant data
 import dessertsData from '../data/dessertsRestaurants.json';
 import coffeeBrunchData from '../data/coffeeBrunchRestaurants.json';
@@ -61,6 +66,9 @@ const MainHero = () => {
   const { mainHero } = config;
   const { t } = useTranslation();
   const [scrollY, setScrollY] = useState(0);
+  
+  // PWA Hook
+  const { isOnline, isStandalone } = usePWA();
   
   // Helper function to get restaurant data by category
   const getRestaurantDataByCategory = (category?: RestaurantCategory): Restaurant[] => {
@@ -163,6 +171,13 @@ const MainHero = () => {
     setSearchMode({ type: 'location' });
     // Keep the currently selected display category instead of resetting to default
 
+    // PWA Enhancement: Check if offline
+    if (!isOnline) {
+      setError(t('pwa.offlineLocationError', 'Location services require an internet connection. Please connect and try again.'));
+      setLoading(false);
+      return;
+    }
+
     // Gentle scroll for mobile, more pronounced for desktop
     setTimeout(() => {
       const isMobile = window.innerWidth < 768;
@@ -182,6 +197,11 @@ const MainHero = () => {
           setCurrentIndex(0);
           setLoading(false);
           
+          // PWA Enhancement: Cache location for offline use
+          if (isStandalone) {
+            localStorage.setItem('lastKnownLocation', JSON.stringify({ lat: latitude, lng: longitude }));
+          }
+          
           // Only scroll again if results might be off-screen on larger screens
           setTimeout(() => {
             const isMobile = window.innerWidth < 768;
@@ -190,7 +210,27 @@ const MainHero = () => {
             }
           }, 200);
         },
-        () => {
+        (geolocationError) => {
+          // PWA Enhancement: Try to use cached location if available
+          if (isStandalone) {
+            const cachedLocation = localStorage.getItem('lastKnownLocation');
+            if (cachedLocation) {
+              try {
+                const { lat, lng } = JSON.parse(cachedLocation);
+                setUserLocation({ lat, lng });
+                const nearest = findNearestRestaurants(lat, lng, 10, selectedDisplayCategory);
+                setNearestRestaurants(nearest);
+                setCurrentIndex(0);
+                setLoading(false);
+                setError(t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.'));
+                return;
+              } catch (e) {
+                console.error('Failed to parse cached location:', e);
+              }
+            }
+          }
+          
+          console.error('Geolocation error:', geolocationError);
           setError(t('restaurantFinder.locationError', 'Unable to get your location. Please enable location services.'));
           setLoading(false);
           // Minimal scroll for error visibility
@@ -517,6 +557,34 @@ const MainHero = () => {
     return false;
   });
 
+  // PWA Share function (ready for implementation)
+  /*
+  const handleShare = async (restaurant?: Restaurant) => {
+    if (!canShare) return;
+
+    const shareData = restaurant ? {
+      title: `${restaurant.name} - Googlementor`,
+      text: `Check out ${restaurant.name} in Athens! Found on Googlementor.`,
+      url: `${window.location.origin}/?restaurant=${encodeURIComponent(restaurant.name)}`
+    } : {
+      title: 'Googlementor - Discover Authentic Greece',
+      text: 'Explore Greece like a local with curated travel maps and authentic restaurant guides.',
+      url: window.location.href
+    };
+
+    const success = await shareContent(shareData);
+    if (!success) {
+      // Fallback to clipboard if share fails
+      try {
+        await navigator.clipboard.writeText(shareData.url || window.location.href);
+        // You could show a toast notification here
+      } catch (e) {
+        console.error('Share failed:', e);
+      }
+    }
+  };
+  */
+
   return (
     <>
       <Head>
@@ -542,6 +610,10 @@ const MainHero = () => {
           type="image/webp"
         />
       </Head>
+
+      {/* PWA Components */}
+      <OfflineNotice position="top" />
+      <InstallBanner position="bottom" showAfterDelay={4000} />
 
       <main className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
         {/* Professional Background */}

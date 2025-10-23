@@ -136,6 +136,24 @@
     "blogTitle": "Travel Blog | Greece Guides, Tips & Hidden Gems | Googlementor",
     "blogDescription": "Discover expert travel guides, insider tips, and hidden gems across Greece. Read authentic stories, local recommendations, and practical advice from experienced Greek travelers."
   },
+  "pwa": {
+    "installTitle": "Install Googlementor",
+    "installDescription": "Get quick access to authentic Greek restaurants and travel guides, even offline!",
+    "install": "Install",
+    "installing": "Installing...",
+    "notNow": "Not now",
+    "benefit1": "Works offline",
+    "benefit2": "Faster loading",
+    "benefit3": "Native app feel",
+    "offline": "You're offline. Some features may be limited.",
+    "offlineStandalone": "You're offline, but cached content is available",
+    "backOnline": "Back online!",
+    "retry": "Retry connection",
+    "offlineFeatures": "Maps & restaurants cached",
+    "offlineDetails": "You can still browse saved restaurants and view cached maps. New searches will be available when you reconnect.",
+    "offlineLocationError": "Location services require an internet connection. Please connect and try again.",
+    "usingCachedLocation": "Using your last known location. Results may not be current."
+  },
   "callToAction": {
     "text": "Get Started"
   },

@@ -3,6 +3,85 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
+const withPWA = require('@ducanh2912/next-pwa').default({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+  disable: false, // Enable PWA for all environments
+  buildExcludes: [/middleware-manifest\.json$/, /routes-manifest\.json$/],
+  fallbacks: {
+    document: '/offline.html',
+  },
+  runtimeCaching: [
+    {
+      urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+      handler: 'CacheFirst',
+      options: {
+        cacheName: 'google-fonts',
+        expiration: {
+          maxEntries: 4,
+          maxAgeSeconds: 365 * 24 * 60 * 60 // 1 year
+        }
+      }
+    },
+    {
+      urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+      handler: 'CacheFirst',
+      options: {
+        cacheName: 'google-fonts-static',
+        expiration: {
+          maxEntries: 4,
+          maxAgeSeconds: 365 * 24 * 60 * 60 // 1 year
+        }
+      }
+    },
+    {
+      urlPattern: /\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,
+      handler: 'StaleWhileRevalidate',
+      options: {
+        cacheName: 'static-font-assets',
+        expiration: {
+          maxEntries: 4,
+          maxAgeSeconds: 7 * 24 * 60 * 60 // 7 days
+        }
+      }
+    },
+    {
+      urlPattern: /\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,
+      handler: 'StaleWhileRevalidate',
+      options: {
+        cacheName: 'static-image-assets',
+        expiration: {
+          maxEntries: 64,
+          maxAgeSeconds: 24 * 60 * 60 // 24 hours
+        }
+      }
+    },
+    {
+      urlPattern: /\/_next\/static.+\.js$/i,
+      handler: 'CacheFirst',
+      options: {
+        cacheName: 'next-static-js',
+        expiration: {
+          maxEntries: 64,
+          maxAgeSeconds: 24 * 60 * 60 // 24 hours
+        }
+      }
+    },
+    {
+      urlPattern: /\/data\/.+\.json$/i,
+      handler: 'StaleWhileRevalidate',
+      options: {
+        cacheName: 'json-data',
+        expiration: {
+          maxEntries: 32,
+          maxAgeSeconds: 24 * 60 * 60 // 24 hours
+        }
+      }
+    }
+  ]
+});
+
 /** @type {import('next').NextConfig} */
 const redirects = async () => [
   {
@@ -21,11 +100,10 @@ const redirects = async () => [
 ];
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withBundleAnalyzer({
+const nextConfig = withPWA(withBundleAnalyzer({
   poweredByHeader: false,
   trailingSlash: true,
   reactStrictMode: true,
-
 
   compiler: {
     styledComponents: true,
@@ -52,6 +130,10 @@ const nextConfig = withBundleAnalyzer({
       '/signup': { page: '/signup' },
     };
   },
-});
+  eslint: {
+    ignoreDuringBuilds: false,
+    dirs: ['src'],
+  },
+}));
 
 module.exports = nextConfig;
