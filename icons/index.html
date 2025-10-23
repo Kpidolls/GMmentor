@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Icon Converter</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .icon-preview { margin: 20px 0; }
+        .icon { border: 1px solid #ddd; margin: 10px; }
+        button { padding: 10px 20px; background: #0066CC; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .instructions { background: #f0f8ff; padding: 15px; border-radius: 5px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>🎨 PWA Icon Generator for Google Maps Mentor</h1>
+    
+    <div class="instructions">
+        <h3>Quick Professional Icon Creation:</h3>
+        <ol>
+            <li><strong>Visit PWA Builder:</strong> <a href="https://www.pwabuilder.com/imageGenerator" target="_blank" rel="noopener">https://www.pwabuilder.com/imageGenerator</a></li>
+            <li><strong>Upload the master SVG</strong> from this folder</li>
+            <li><strong>Download the complete icon set</strong></li>
+            <li><strong>Extract to this icons folder</strong></li>
+        </ol>
+    </div>
+
+    <div class="icon-preview">
+        <h3>Current Icon Preview:</h3>
+        <img src="icon-192x192.svg" class="icon" width="96" height="96" alt="192x192 icon">
+        <img src="icon-512x512.svg" class="icon" width="96" height="96" alt="512x512 icon">
+    </div>
+
+    <div>
+        <h3>Alternative: Design on Canva</h3>
+        <p>For a more professional look:</p>
+        <ul>
+            <li>Go to <a href="https://www.canva.com" target="_blank" rel="noopener">Canva.com</a></li>
+            <li>Search "App Icon" templates</li>
+            <li>Use Greek travel theme (blue colors, columns, maps)</li>
+            <li>Export as 512x512 PNG</li>
+            <li>Use PWA Builder to generate all sizes</li>
+        </ul>
+        <button onclick="window.open('https://www.canva.com/design/play?category=tACZCtWWkF8&type=TACQ-KHaZyo', '_blank', 'noopener')">🎨 Open Canva App Icon Templates</button>
+    </div>
+
+    <div class="instructions">
+        <h3>🚀 Your PWA is Ready!</h3>
+        <p>Even with placeholder icons, your PWA will work. Once you add professional icons, your app will look amazing!</p>
+        <p><strong>Required files (will be generated):</strong></p>
+        <ul>
+            <li>icon-72x72.png</li>
+            <li>icon-96x96.png</li>
+            <li>icon-128x128.png</li>
+            <li>icon-144x144.png</li>
+            <li>icon-152x152.png</li>
+            <li>icon-192x192.png ✅</li>
+            <li>icon-384x384.png</li>
+            <li>icon-512x512.png ✅</li>
+        </ul>
+    </div>
+
+    <script>
+        console.log('PWA Icon Generator Ready!');
+        console.log('Visit: https://www.pwabuilder.com/imageGenerator');
+    </script>
+</body>
+</html>
