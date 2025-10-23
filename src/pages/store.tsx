@@ -21,13 +21,13 @@ const Store: React.FC = () => {
   return (
     <main className="bg-gray-50 min-h-screen">
       <Head>
-        <title>{t('store.meta.title', { defaultValue: 'Travel Gear Store' })}</title>
-        <meta
-          name="description"
-          content={t('store.meta.description', {
-            defaultValue: 'Browse and shop top-rated travel gear, accessories, and essentials from Amazon and Temu. Find curated products to make your journeys easier and more enjoyable with Googlementor.',
-          })}
+        <title>{t('meta.storeTitle')}</title>
+        <meta 
+          name="description" 
+          content={t('meta.storeDescription')} 
         />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://googlementor.com/store" />
         <link rel="canonical" href="https://googlementor.com/store" />
       </Head>
 

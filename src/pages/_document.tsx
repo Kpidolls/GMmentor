@@ -23,16 +23,16 @@ class MyDocument extends Document {
             type="image/png"
           />
 
-          {/* Canonical & SEO meta */}
+          {/* Enhanced SEO meta */}
           <meta
             name="description"
-            content="Travel tools for exploring - lists on Google Maps for travel and everyday life."
+            content="Discover Greece like a local with Googlementor's curated travel maps, authentic restaurant guides, and expert recommendations for Athens, islands, and hidden gems across Greece."
           />
           <meta
             name="keywords"
-            content="travel insurance, mobile data e-sim, mapping services, Google Maps, tourist guides, what to do, sun protection"
+            content="Greece travel guide, Athens restaurants, Greek islands maps, travel insurance, mobile data eSIM, authentic tavernas, Greek destinations, travel planning tools"
           />
-          <meta name="author" content="Travel Tips" />
+          <meta name="author" content="Googlementor Travel Guides" />
           <meta name="google-site-verification" content="cUimG9-WnVYYDC8Tk1Dr6Ieh4ARJp-HzYxrbKTzYxpI" />
 
           {/* Open Graph */}

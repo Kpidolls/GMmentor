@@ -107,11 +107,12 @@
   "navigation": {
     "maps": "Lists",
     "getyourguide": "Top Tours & Activities",
-    "mustSee": "Must See",
+    "mustSee": "Must See Attractions",
     "islands": "Destinations in Greece",
     "food": "Food",
     "hiking": "Hiking",
     "store": "Store",
+    "activities": "Activities",
     "mobileTravelData": "Mobile Travel Data",
     "travelInsurance": "Travel Insurance",
     "travelItems": "Buy Travel Gear",
@@ -122,8 +123,18 @@
     "contact": "Contact"
   },
   "meta": {
-    "homeTitle": "Greek Travel Lists | Top Tours & Activities ",
-    "homeDescription": "Explore Greece with our travel lists. Discover top tours, activities, and top locations for an unforgettable vacation. Explore more!"
+    "homeTitle": "Googlementor | Discover Authentic Greece",
+    "homeDescription": "Explore Greece like a local with curated travel maps, authentic restaurant guides, and expert recommendations for Athens, islands, and hidden gems across the country.",
+    "loginTitle": "Login - Googlementor | Access Your Travel Account",
+    "loginDescription": "Sign in to your Googlementor account to access personalized travel maps, save your favorite destinations, and manage your Greek adventure planning tools.",
+    "searchTitle": "Search Greek Destinations | Find Maps, Restaurants & Activities",
+    "searchDescription": "Search through hundreds of curated Greek destinations, authentic restaurants, travel maps, and local activities. Find exactly what you need for your perfect Greek adventure.",
+    "storeTitle": "Travel Gear Store | Essential Items for Greek Adventures",
+    "storeDescription": "Discover carefully curated travel gear, accessories, and essentials from trusted brands. From sun protection to travel tech, find everything you need for unforgettable Greek holidays.",
+    "signupTitle": "Join Googlementor Team | Travel Content Creator Opportunities",
+    "signupDescription": "Join the Googlementor team and help create amazing travel content for Greece. We're looking for passionate travel enthusiasts and map creators. Apply today!",
+    "blogTitle": "Travel Blog | Greece Guides, Tips & Hidden Gems | Googlementor",
+    "blogDescription": "Discover expert travel guides, insider tips, and hidden gems across Greece. Read authentic stories, local recommendations, and practical advice from experienced Greek travelers."
   },
   "callToAction": {
     "text": "Get Started"

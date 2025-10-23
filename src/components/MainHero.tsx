@@ -520,17 +520,17 @@ const MainHero = () => {
   return (
     <>
       <Head>
-        <title>Googlementor – Travel Better</title>
+        <title>Googlementor – Discover Authentic Greece | Local Travel Guides & Maps</title>
         <meta
           name="description"
-          content="Explore curated Google Maps lists that help you travel like a pro with Googlementor."
+          content="Explore Greece with confidence using our locally-curated maps, authentic restaurant recommendations, and insider travel guides. Discover hidden gems from Athens to the Greek islands."
         />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Googlementor – Travel Better" />
+        <meta property="og:title" content="Googlementor – Discover Authentic Greece" />
         <meta
           property="og:description"
-          content="Curated lists and location tips for smarter travel."
+          content="Locally-curated travel maps and authentic restaurant guides for exploring Greece like a local."
         />
         <meta property="og:image" content="/assets/images/cover.webp" />
         <meta property="og:url" content="https://www.googlementor.com" />
