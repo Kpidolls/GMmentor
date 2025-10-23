@@ -44,5 +44,6 @@ export default function Blog({ posts }: BlogProps) {
         ))}
       </VStack>
     </Container>
+    </>
   )
 }

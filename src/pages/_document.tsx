@@ -1,4 +1,5 @@
 // pages/_document.tsx
+/* eslint-disable @next/next/no-head-element */
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { AppConfig } from '../utils/AppConfig';
 import Script from 'next/script';
@@ -20,8 +21,35 @@ class MyDocument extends Document {
             rel="preload"
             as="image"
             href="/assets/images/newlogo1.webp"
-            type="image/png"
+            type="image/webp"
           />
+
+          {/* PWA Meta Tags */}
+          <meta name="application-name" content="Googlementor" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+          <meta name="apple-mobile-web-app-title" content="Googlementor" />
+          <meta name="format-detection" content="telephone=no" />
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="msapplication-config" content="/browserconfig.xml" />
+          <meta name="msapplication-TileColor" content="#0f172a" />
+          <meta name="msapplication-tap-highlight" content="no" />
+          
+          {/* PWA Manifest */}
+          <link rel="manifest" href="/manifest.json" />
+          
+          {/* Favicons */}
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          
+          {/* Apple PWA Icons */}
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+          {/* Preconnect to external resources for performance */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
 
           {/* Enhanced SEO meta */}
           <meta
@@ -60,11 +88,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-            {/* Preconnect to external resources for performance */}
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-            <link rel="preconnect" href="https://www.googletagmanager.com" />
-            {/* Lazy load CookieYes consent script */}
+          {/* Lazy load CookieYes consent script */}
           <Script
             id="cookieyes"
             src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"
