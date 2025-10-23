@@ -115,6 +115,7 @@ const MainHero = () => {
   const [showRestaurantFinder, setShowRestaurantFinder] = useState(false);
   const [showMunicipalityList, setShowMunicipalityList] = useState(false);
   const [showCategoryList, setShowCategoryList] = useState(false);
+  const [municipalitySearchQuery, setMunicipalitySearchQuery] = useState('');
 
   // Parallax scroll effect
   useEffect(() => {
@@ -272,6 +273,7 @@ const MainHero = () => {
     setShowRestaurantFinder(false);
     setShowCategoryList(false);
     setError(null);
+    setMunicipalitySearchQuery(''); // Clear search when showing municipality list
     
     // Optimal scroll for municipality/region list to show areas better
     setTimeout(() => {
@@ -308,7 +310,33 @@ const MainHero = () => {
     setShowMunicipalityList(false);
     setShowCategoryList(false);
     setSearchMode({ type: 'location' });
+    // Keep the currently selected category instead of resetting to default
+    setMunicipalitySearchQuery(''); // Clear municipality search
+    
+    // Optimal scroll to show all 3 main cards completely in viewport
+    setTimeout(() => {
+      const isMobile = window.innerWidth < 768;
+      if (isMobile) {
+        // Minimal scroll for mobile
+        window.scrollTo({ top: 30, behavior: 'smooth' });
+      } else {
+        // Desktop: scroll to position that shows the 3 main cards optimally
+        window.scrollTo({ top: 280, behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
+  const fullReset = () => {
+    setUserLocation(null);
+    setNearestRestaurants(null);
+    setCurrentIndex(0);
+    setError(null);
+    setShowRestaurantFinder(false);
+    setShowMunicipalityList(false);
+    setShowCategoryList(false);
+    setSearchMode({ type: 'location' });
     setSelectedDisplayCategory(defaultCategory); // Reset to default Greek Restaurants
+    setMunicipalitySearchQuery(''); // Clear municipality search
     
     // Optimal scroll to show all 3 main cards completely in viewport
     setTimeout(() => {
@@ -336,6 +364,158 @@ const MainHero = () => {
   };
 
   const currentRestaurant = nearestRestaurants?.[currentIndex];
+
+  // Enhanced search normalization function
+  const normalizeSearchText = (text: string): string => {
+    if (!text) return '';
+    
+    let normalized = text.toLowerCase().trim();
+    
+    // Remove Greek tone marks (accents)
+    normalized = normalized
+      .replace(/ά/g, 'α')
+      .replace(/έ/g, 'ε')
+      .replace(/ή/g, 'η')
+      .replace(/ί/g, 'ι')
+      .replace(/ό/g, 'ο')
+      .replace(/ύ/g, 'υ')
+      .replace(/ώ/g, 'ω')
+      .replace(/ΐ/g, 'ι')
+      .replace(/ΰ/g, 'υ');
+    
+    return normalized;
+  };
+
+  // Enhanced transliteration mapping (Greek to Latin)
+  const transliterateGreekToLatin = (text: string): string => {
+    const greekToLatin: { [key: string]: string } = {
+      'α': 'a', 'β': 'v', 'γ': 'g', 'δ': 'd', 'ε': 'e', 'ζ': 'z', 'η': 'i', 'θ': 'th',
+      'ι': 'i', 'κ': 'k', 'λ': 'l', 'μ': 'm', 'ν': 'n', 'ξ': 'x', 'ο': 'o', 'π': 'p',
+      'ρ': 'r', 'σ': 's', 'ς': 's', 'τ': 't', 'υ': 'u', 'φ': 'f', 'χ': 'ch', 'ψ': 'ps', 'ω': 'o',
+      // Common combinations
+      'αυ': 'av', 'ευ': 'ev', 'ου': 'ou', 'αι': 'ai', 'ει': 'ei', 'οι': 'oi', 'υι': 'ui',
+      'γγ': 'ng', 'γκ': 'gk', 'γχ': 'nch', 'γξ': 'nx', 'μπ': 'mp', 'ντ': 'nt', 'τσ': 'ts', 'τζ': 'tz'
+    };
+    
+    let result = text.toLowerCase();
+    
+    // Replace multi-character combinations first
+    for (const [greek, latin] of Object.entries(greekToLatin)) {
+      if (greek.length > 1) {
+        result = result.replace(new RegExp(greek, 'g'), latin);
+      }
+    }
+    
+    // Replace single characters
+    for (const [greek, latin] of Object.entries(greekToLatin)) {
+      if (greek.length === 1) {
+        result = result.replace(new RegExp(greek, 'g'), latin);
+      }
+    }
+    
+    return result;
+  };
+
+  // Generate alternative spellings for common variations
+  const generateAlternativeSpellings = (text: string): string[] => {
+    const alternatives: string[] = [text];
+    let working = text.toLowerCase();
+    
+    // Common English transliteration variations
+    const variations: { [key: string]: string[] } = {
+      'agia': ['agía', 'αγία', 'αγια'],
+      'agios': ['agíos', 'άγιος', 'αγιος'], 
+      'nea': ['néa', 'νέα', 'νεα'],
+      'neos': ['néos', 'νέος', 'νεος'],
+      'palaio': ['palaiό', 'παλαιό', 'παλαιο'],
+      'kala': ['kalá', 'καλά', 'καλα'],
+      'mega': ['megá', 'μεγά', 'μεγα'],
+      'mikro': ['mikró', 'μικρό', 'μικρο'],
+      'ano': ['ánο', 'άνω', 'ανω'],
+      'kato': ['káto', 'κάτω', 'κατω']
+    };
+    
+    // Add variations for common prefixes/suffixes
+    for (const [english, greekVariations] of Object.entries(variations)) {
+      if (working.includes(english)) {
+        greekVariations.forEach(variation => {
+          alternatives.push(working.replace(english, variation));
+        });
+      }
+      
+      greekVariations.forEach(variation => {
+        if (working.includes(variation)) {
+          alternatives.push(working.replace(variation, english));
+        }
+      });
+    }
+    
+    return alternatives;
+  };
+
+  // Enhanced search matching function
+  const searchMatches = (searchText: string, targetText: string): boolean => {
+    if (!searchText || !targetText) return false;
+    
+    const normalizedSearch = normalizeSearchText(searchText);
+    const normalizedTarget = normalizeSearchText(targetText);
+    
+    // Direct match (Greek or English)
+    if (normalizedTarget.includes(normalizedSearch)) return true;
+    
+    // Transliterate Greek text to Latin and check
+    const transliteratedTarget = transliterateGreekToLatin(normalizedTarget);
+    const transliteratedSearch = transliterateGreekToLatin(normalizedSearch);
+    
+    // Check if Latin search matches transliterated Greek
+    if (transliteratedTarget.includes(transliteratedSearch)) return true;
+    
+    // Check if Greek search matches transliterated target
+    if (normalizedTarget.includes(transliteratedSearch)) return true;
+    
+    // Check if transliterated search matches original target
+    if (targetText.toLowerCase().includes(transliteratedSearch)) return true;
+    
+    // Check alternative spellings
+    const searchAlternatives = generateAlternativeSpellings(searchText);
+    const targetAlternatives = generateAlternativeSpellings(targetText);
+    
+    for (const searchAlt of searchAlternatives) {
+      const normalizedSearchAlt = normalizeSearchText(searchAlt);
+      if (normalizedTarget.includes(normalizedSearchAlt)) return true;
+      if (transliteratedTarget.includes(normalizedSearchAlt)) return true;
+      
+      for (const targetAlt of targetAlternatives) {
+        const normalizedTargetAlt = normalizeSearchText(targetAlt);
+        if (normalizedTargetAlt.includes(normalizedSearchAlt)) return true;
+      }
+    }
+    
+    return false;
+  };
+
+  // Filter municipalities based on enhanced search query
+  const filteredMunicipalities = municipalitiesData.filter((municipality: Municipality) => {
+    if (!municipalitySearchQuery.trim()) return true;
+    
+    const query = municipalitySearchQuery.trim();
+    
+    // Check municipality name (Greek)
+    if (searchMatches(query, municipality.name)) return true;
+    
+    // Check translated municipality name (English)
+    const translatedName = t(`municipalities.${municipality.name}`, municipality.name);
+    if (searchMatches(query, translatedName)) return true;
+    
+    // Check region name (Greek)
+    if (searchMatches(query, municipality.region)) return true;
+    
+    // Check translated region name (English)
+    const translatedRegion = t(`regions.${municipality.region}`, municipality.region);
+    if (searchMatches(query, translatedRegion)) return true;
+    
+    return false;
+  });
 
   return (
     <>
@@ -406,7 +586,7 @@ const MainHero = () => {
             {/* Enhanced Title - Clickable to reset */}
             <header className="space-y-3 xs:space-y-4 sm:space-y-6">
               <button 
-                onClick={resetSearch}
+                onClick={fullReset}
                 className="font-bold tracking-tight text-white hover:scale-105 transition-transform duration-300 cursor-pointer group"
                 title={t('mainHero.clickToReturnToMain', 'Click to return to main page')}
               >
@@ -578,68 +758,139 @@ const MainHero = () => {
                   </div>
                 </div>
               ) : showMunicipalityList ? (
-              /* Location Selection */
-              <div className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/30 shadow-2xl max-h-[80vh] overflow-hidden">
-                <div className="text-center mb-4 sm:mb-6">
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2 sm:mb-3">
-                    📍 Explore by Location
+              /* Location Selection - User-Friendly Compact Design */
+              <div className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/30 shadow-2xl max-h-[85vh] overflow-hidden">
+                
+                {/* Compact Header */}
+                <div className="text-center mb-4">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 flex items-center justify-center gap-2">
+                    📍 Choose Your Area
                   </h3>
-                  <p className="text-gray-600 text-sm sm:text-base lg:text-lg px-2 max-w-2xl mx-auto leading-relaxed">
+                  <p className="text-gray-600 text-sm px-2">
                     {t('mainHero.choosePreferredArea', 'Choose your preferred area to discover amazing {{category}} nearby', { category: t(`categories.${selectedDisplayCategory.id}`, selectedDisplayCategory.name).toLowerCase() })}
                   </p>
-                  <div className="mt-3 sm:mt-4">
-                    <span className="inline-flex items-center px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-xs sm:text-sm font-medium">
-                      🇬🇷 {t('mainHero.athensAndSurroundings', 'Athens & Surroundings')}
-                    </span>
+                </div>
+
+                {/* Search Box with Helper Text */}
+                <div className="mb-4">
+                  <div className="relative max-w-md mx-auto">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                    </div>
+                    <input
+                      type="text"
+                      value={municipalitySearchQuery}
+                      onChange={(e) => setMunicipalitySearchQuery(e.target.value)}
+                      className="block w-full pl-9 pr-10 py-2.5 border border-gray-300 rounded-lg text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                      placeholder={t('municipalitySearch.placeholder', 'Search locations...')}
+                    />
+                    {municipalitySearchQuery && (
+                      <button
+                        onClick={() => setMunicipalitySearchQuery('')}
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                        title={t('municipalitySearch.clearSearch', 'Clear search')}
+                        aria-label={t('municipalitySearch.clearSearch', 'Clear search')}
+                      >
+                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+                  
+                  {/* Helper Text */}
+                  <div className="text-center mt-2">
+                    {municipalitySearchQuery ? (
+                      <span className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
+                        {t('municipalitySearch.resultsCount', 'Showing {{count}} of {{total}} locations', {
+                          count: filteredMunicipalities.length,
+                          total: municipalitiesData.length
+                        })}
+                      </span>
+                    ) : (
+                      <span className="text-xs text-gray-500">
+                        Type to search or scroll below • {municipalitiesData.length} Athens areas
+                      </span>
+                    )}
                   </div>
                 </div>
 
-                <div className="max-h-[45vh] sm:max-h-[50vh] overflow-y-auto space-y-3 sm:space-y-4 pr-2 custom-scrollbar">
-                  {Object.entries(
-                    municipalitiesData.reduce((acc: Record<string, Municipality[]>, municipality) => {
-                      const region = municipality.region;
-                      if (!acc[region]) acc[region] = [];
-                      acc[region].push(municipality as Municipality);
-                      return acc;
-                    }, {})
-                  ).map(([region, municipalities]) => (
-                    <div key={region} className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                      <h4 className="text-sm sm:text-base font-bold text-gray-800 mb-3 flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                        {t(`regions.${region}`, region)}
-                        <span className="text-xs text-gray-500 font-normal">({municipalities.length} {t('mainHero.areas', 'areas')})</span>
-                      </h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {municipalities.map((municipality) => (
-                          <button
-                            key={municipality.name}
-                            onClick={() => searchByMunicipality(municipality)}
-                            className="text-left p-3 rounded-lg hover:bg-blue-50 hover:border-blue-200 border border-gray-200 transition-all duration-200 group"
-                          >
-                            <div className="flex items-center justify-between">
-                              <span className="font-medium text-gray-800 group-hover:text-blue-600 text-sm leading-tight">
-                                {t(`municipalities.${municipality.name}`, municipality.name)}
-                              </span>
-                              <span className="text-blue-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                →
-                              </span>
-                            </div>
-                          </button>
-                        ))}
+                {/* Main Content Area with Footer - Properly Sized */}
+                <div className="flex flex-col h-[65vh]">
+                  <div className="flex-1 overflow-y-auto space-y-3 pr-2 custom-scrollbar border-t border-gray-100 pt-3 pb-4">
+                    {filteredMunicipalities.length === 0 ? (
+                      <div className="text-center py-20">
+                        <div className="text-4xl mb-4">🔍</div>
+                        <h4 className="text-lg font-semibold text-gray-700 mb-2">
+                          No locations found
+                        </h4>
+                        <p className="text-gray-500 mb-4">
+                          {t('municipalitySearch.noResults', 'No locations found matching your search.')}
+                        </p>
+                        <button
+                          onClick={() => setMunicipalitySearchQuery('')}
+                          className="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
+                        >
+                          {t('municipalitySearch.clearSearchToSeeAll', 'Clear search to see all locations')}
+                        </button>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ) : (
+                      <>
+                        {Object.entries(
+                          filteredMunicipalities.reduce((acc: Record<string, Municipality[]>, municipality) => {
+                            const region = municipality.region;
+                            if (!acc[region]) acc[region] = [];
+                            acc[region].push(municipality as Municipality);
+                            return acc;
+                          }, {})
+                        ).map(([region, municipalities]) => (
+                          <div key={region} className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+                            <h4 className="text-sm font-bold text-gray-800 mb-3 flex items-center gap-2 sticky top-0 bg-white pb-2">
+                              <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                              {t(`regions.${region}`, region)}
+                              <span className="text-xs text-gray-500 font-normal ml-auto">
+                                {municipalities.length} {municipalities.length === 1 ? 'area' : 'areas'}
+                              </span>
+                            </h4>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                              {municipalities.map((municipality) => (
+                                <button
+                                  key={municipality.name}
+                                  onClick={() => searchByMunicipality(municipality)}
+                                  className="text-left p-3 rounded-lg hover:bg-blue-50 hover:border-blue-200 border border-gray-200 transition-all duration-200 group"
+                                >
+                                  <div className="flex items-center justify-between">
+                                    <span className="font-medium text-gray-800 group-hover:text-blue-600 text-sm leading-tight">
+                                      {t(`municipalities.${municipality.name}`, municipality.name)}
+                                    </span>
+                                    <span className="text-blue-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                      →
+                                    </span>
+                                  </div>
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                        {/* Extra spacing to ensure last items are fully visible */}
+                        <div className="h-4"></div>
+                      </>
+                    )}
+                  </div>
 
-                <div className="mt-4 sm:mt-6 pt-4 border-t border-gray-200 text-center">
-                  <button
-                    onClick={() => {
-                      resetSearch();
-                    }}
-                    className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors duration-200 font-medium text-sm sm:text-base px-4 py-2 rounded-lg hover:bg-gray-50"
-                  >
-                    ← {t('mainHero.backToSearchOptions', 'Back to Search Options')}
-                  </button>
+                  {/* Fixed Footer at Bottom */}
+                  <div className="flex-shrink-0 pt-3 border-t border-gray-200 text-center bg-white">
+                    <button
+                      onClick={() => {
+                        resetSearch();
+                      }}
+                      className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors duration-200 font-medium text-sm px-3 py-2 rounded-lg hover:bg-gray-50"
+                    >
+                      ← {t('mainHero.backToSearchOptions', 'Back to Search Options')}
+                    </button>
+                  </div>
                 </div>
               </div>
             ) : (
@@ -696,6 +947,9 @@ const MainHero = () => {
                           ? `${t('restaurantFinder.foundCount', 'Found')} ${nearestRestaurants.length} ${t(`categories.${selectedDisplayCategory.id}`, selectedDisplayCategory.name)} ${t('restaurantFinder.placesNear', 'places near')} ${searchMode.selectedMunicipality?.name ? t(`municipalities.${searchMode.selectedMunicipality.name}`, searchMode.selectedMunicipality.name) : ''}`
                           : `${t('restaurantFinder.showingClosest', 'Showing')} ${nearestRestaurants.length} ${t('restaurantFinder.closest', 'closest')} ${t(`categories.${selectedDisplayCategory.id}`, selectedDisplayCategory.name)} ${t('restaurantFinder.places', 'places')}`
                         }
+                      </p>
+                      <p className="text-gray-500 text-xs sm:text-sm px-2 mt-1">
+                        {t('restaurantFinder.sortedByDistance', 'Results are sorted by distance from location selected')}
                       </p>
                       {searchMode.type === 'municipality' && (
                         <span className="inline-block mt-2 px-2 sm:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs sm:text-sm font-medium">

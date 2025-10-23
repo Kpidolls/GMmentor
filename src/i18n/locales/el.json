@@ -138,7 +138,7 @@
     "areas": "περιοχές",
     "backToSearchOptions": "Επιστροφή στις Επιλογές Αναζήτησης",
     "exploreByLocation": "Εξερεύνηση ανά Τοποθεσία",
-    "choosePreferredArea": "Επιλέξτε την προτιμώμενη περιοχή σας για να ανακαλύψετε καταπληκτικά {{category}} κοντά",
+    "choosePreferredArea": "Επιλέξτε την προτιμώμενη περιοχή σας για να ανακαλύψετε καταπληκτικές {{category}} κοντά",
     "clickToReturnToMain": "Κάντε κλικ για επιστροφή στην κύρια σελίδα",
     "chooseDifferentCuisine": "Επιλέξτε Διαφορετική Κουζίνα",
     "features": {
@@ -200,11 +200,19 @@
     "goToRestaurant": "Πηγαίνετε στο εστιατόριο",
     "searchAgain": "Αναζήτηση Ξανά",
     "restaurantNumber": "#{{current}} από {{total}}",
+    "sortedByDistance": "Τα αποτελέσματα ταξινομούνται κατά απόσταση από την επιλεγμένη τοποθεσία",
     "features": {
       "locationBased": "Βασισμένο στην τοποθεσία",
       "handpicked": "Επιλεγμένα μέρη",
       "directMaps": "Σύνδεση με Google Maps"
     }
+  },
+  "municipalitySearch": {
+    "placeholder": "Αναζήτηση τοποθεσιών...",
+    "clearSearch": "Καθαρισμός αναζήτησης",
+    "resultsCount": "Εμφάνιση {{count}} από {{total}} τοποθεσίες",
+    "noResults": "Δεν βρέθηκαν τοποθεσίες που να ταιριάζουν στην αναζήτησή σας.",
+    "clearSearchToSeeAll": "Καθαρίστε την αναζήτηση για να δείτε όλες τις τοποθεσίες"
   },
   "categorySelection": {
     "chooseYourCuisine": "Επιλέξτε την Κουζίνα σας",

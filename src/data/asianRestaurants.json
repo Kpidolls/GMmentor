@@ -495,5 +495,26 @@
     "address": "KoYaSan In Voula",
     "lat": "37.84038966721299",
     "lng": "23.76668605741755"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3maNnDbbWFJMMN3g8",
+    "name": "The Sushi Bar",
+    "address": "Geor. Vlachou 38, Athina 115 25",
+    "lat": "37.99837563515871",
+    "lng": "23.775522192967475"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zFmxAi6UXscrVrPMA",
+    "name": "Hachikō Sushi Tales & Cocktails Psychiko",
+    "address": "Olimpionikon 280, Neo Psichiko 154 51",
+    "lat": "38.00623355558018",
+    "lng": "23.77693391185833"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9kVHKicLFzyZsbAf8",
+    "name": "Sakura Sushi and Steak House",
+    "address": "Δουκίσσης Πλακεντίας 73, Αθήνα 115 23",
+    "lat": "37.99280756383719",
+    "lng": "23.76520312715072"
   }
 ]

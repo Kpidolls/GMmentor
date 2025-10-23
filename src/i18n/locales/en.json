@@ -175,11 +175,19 @@
     "previous": "Previous",
     "next": "Next",
     "restaurantNumber": "#{{current}} of {{total}}",
+    "sortedByDistance": "Results are sorted by distance from location selected",
     "features": {
       "locationBased": "Location-based",
       "handpicked": "Handpicked venues",
       "directMaps": "Direct to Maps"
     }
+  },
+  "municipalitySearch": {
+    "placeholder": "Search locations...",
+    "clearSearch": "Clear search",
+    "resultsCount": "Showing {{count}} of {{total}} locations",
+    "noResults": "No locations found matching your search.",
+    "clearSearchToSeeAll": "Clear search to see all locations"
   },
   "reviews": {
     "title": "What Our Users Say",
