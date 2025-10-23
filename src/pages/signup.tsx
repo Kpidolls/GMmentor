@@ -1,11 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import { useTranslation } from 'react-i18next';
 
 const SignUp: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <Head>
+        <title>{t('meta.signupTitle')}</title>
+        <meta 
+          name="description" 
+          content={t('meta.signupDescription')} 
+        />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/signup" />
       </Head>
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">

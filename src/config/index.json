@@ -15,8 +15,7 @@
       "submenu": [
         { "name": "navigation.mustSee", "href": "maps" },
         { "name": "navigation.islands", "href": "destinations" },
-        { "name": "navigation.food", "href": "vegan" },
-        { "name": "navigation.hiking", "href": "hiking" }
+        { "name": "navigation.activities", "href": "hiking" }
       ]
     },
     {
@@ -34,7 +33,7 @@
       "submenu": [
         { "name": "navigation.ourStory", "href": "aboutus" },
         { "name": "navigation.faq", "href": "qa-section" },
-        {"name": "navigation.blog", "href": "/blog" },
+        { "name": "navigation.blog", "href": "/blog" },
         { "name": "navigation.contact", "href": "footer" }
       ]
     }

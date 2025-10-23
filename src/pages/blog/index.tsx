@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next'
 import { getAllPosts, Post } from '../../lib/posts'
 import Link from 'next/link'
+import Head from 'next/head'
 import { Box, Heading, Text, VStack, Container } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
@@ -15,7 +16,17 @@ export const getStaticProps: GetStaticProps<BlogProps> = async () => {
 export default function Blog({ posts }: BlogProps) {
   const { t } = useTranslation()
   return (
-    <Container maxW="4xl" py={10}>
+    <>
+      <Head>
+        <title>{t('meta.blogTitle')}</title>
+        <meta 
+          name="description" 
+          content={t('meta.blogDescription')} 
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://googlementor.com/blog" />
+      </Head>
+      <Container maxW="4xl" py={10}>
       <Heading as="h1" size="xl" mb={8}>Blog</Heading>
       <VStack spacing={8} align="stretch">
         {posts.map((post) => (
