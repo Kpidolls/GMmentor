@@ -698,9 +698,9 @@ const MainHero = () => {
           <MyTicker />
         </div>
 
-        {/* Top-Left Install Button - Visible on all screen sizes - DEBUG: Always show for testing */}
+        {/* Top-Left Install Button - Mobile-First Design - DEBUG: Always show for testing */}
         {(isInstallable || process.env.NODE_ENV === 'development') && !isInstalled && (
-          <div className="absolute top-16 xs:top-20 left-4 xs:left-6 z-40">
+          <div className="fixed top-4 left-4 z-50 sm:absolute sm:top-16 sm:left-6">
             <button
               onClick={async () => {
                 try {
@@ -712,24 +712,24 @@ const MainHero = () => {
                   console.error('Failed to install app:', error);
                 }
               }}
-              className="group relative bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold px-3 py-2 xs:px-4 xs:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-pulse hover:animate-none"
+              className="group relative bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold px-3 py-2 sm:px-4 sm:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-pulse hover:animate-none active:scale-95"
               title={t('pwa.installTitle', 'Install Googlementor')}
             >
-              {/* Mobile icon and text */}
-              <div className="flex items-center gap-2">
+              {/* Mobile-optimized content */}
+              <div className="flex items-center gap-1 sm:gap-2">
                 <svg 
-                  className="w-4 h-4 xs:w-5 xs:h-5" 
+                  className="w-4 h-4 sm:w-5 sm:h-5" 
                   fill="currentColor" 
                   viewBox="0 0 20 20"
                 >
                   <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-                <span className="text-xs xs:text-sm font-bold">GET APP</span>
+                <span className="text-xs sm:text-sm font-bold">GET APP</span>
               </div>
               
-              {/* Notification dot */}
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping" />
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-400 rounded-full" />
+              {/* Notification dot - mobile optimized */}
+              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-red-500 rounded-full animate-ping" />
+              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-red-400 rounded-full" />
             </button>
           </div>
         )}
@@ -1274,9 +1274,9 @@ const MainHero = () => {
             )}
           </div>
 
-            {/* Professional Install App CTA - DEBUG: Always show for testing */}
+            {/* Mobile-Optimized Install App CTA - DEBUG: Always show for testing */}
             {(isInstallable || process.env.NODE_ENV === 'development') && !isInstalled && (
-              <div className="flex justify-center max-w-md mx-auto mt-8 sm:mt-12 px-4">
+              <div className="flex justify-center max-w-sm sm:max-w-md mx-auto mt-6 sm:mt-8 lg:mt-12 px-4">
                 <button
                   onClick={async () => {
                     try {
@@ -1288,16 +1288,16 @@ const MainHero = () => {
                       console.error('Failed to install app:', error);
                     }
                   }}
-                  className="group relative overflow-hidden bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white border-2 border-emerald-400/30 px-6 sm:px-8 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105 w-full shadow-xl hover:shadow-2xl"
+                  className="group relative overflow-hidden bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white border-2 border-emerald-400/30 px-4 py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-5 rounded-lg sm:rounded-xl lg:rounded-2xl font-bold text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 active:scale-95 w-full shadow-xl hover:shadow-2xl"
                 >
                   {/* Background animation */}
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
-                  {/* Button content */}
-                  <div className="relative flex items-center justify-center gap-3">
+                  {/* Button content - mobile optimized */}
+                  <div className="relative flex items-center justify-center gap-2 sm:gap-3">
                     {/* Install icon */}
                     <svg 
-                      className="w-5 h-5 sm:w-6 sm:h-6" 
+                      className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" 
                       fill="currentColor" 
                       viewBox="0 0 20 20"
                     >
@@ -1309,8 +1309,8 @@ const MainHero = () => {
                       {t('pwa.install', 'Install App')}
                     </span>
                     
-                    {/* Benefits badge */}
-                    <span className="hidden sm:inline-flex items-center px-2 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">
+                    {/* Benefits badge - hidden on mobile, shown on larger screens */}
+                    <span className="hidden lg:inline-flex items-center px-2 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">
                       {t('pwa.benefit1', 'Works offline')}
                     </span>
                   </div>

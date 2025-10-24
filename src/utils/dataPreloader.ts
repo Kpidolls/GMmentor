@@ -168,14 +168,21 @@ export const getCriticalImages = (): string[] => [
   '/assets/images/chios.webp',
   '/assets/images/corfu.webp',
   '/assets/images/crete.webp',
-  '/assets/images/ios.webp',
-  '/assets/images/milos.webp',
   '/assets/images/mykonos.webp',
   '/assets/images/naxos.webp',
   '/assets/images/paros.webp',
-  '/assets/images/rhodes.webp',
   '/assets/images/santorini.webp',
-  '/assets/images/zakynthos.webp'
+  '/assets/images/zakynthos.webp',
+  // Additional existing images
+  '/assets/images/hydra.webp',
+  '/assets/images/kos.webp',
+  '/assets/images/leukada.webp',
+  '/assets/images/rodos.webp', // This is rhodes in Greek
+  '/assets/images/sifnos.webp',
+  '/assets/images/skiathos.webp',
+  '/assets/images/skyros.webp',
+  '/assets/images/syros.webp',
+  '/assets/images/tinos.webp'
 ];
 
 // Enhanced data fetcher with offline fallback
