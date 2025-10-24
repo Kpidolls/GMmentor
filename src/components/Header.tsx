@@ -30,6 +30,7 @@ import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import config from '../config/index.json';
 import SearchPage from './SearchPage';
+import { usePWA } from '../hooks/usePWA';
 
 const Header = () => {
   const { company, navigation } = config;
@@ -40,6 +41,9 @@ const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure({ defaultIsOpen: false });
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isLanguageReady, setIsLanguageReady] = useState(false);
+  
+  // PWA Hook for install functionality
+  const { isInstallable, isInstalled, installApp } = usePWA();
 
   useEffect(() => {
     setIsLanguageReady(true); // Ensure language is ready before rendering
@@ -77,18 +81,71 @@ const Header = () => {
         align="center"
         justify="space-between"
         flexWrap="wrap"
+        gap={3}
       >
-        <Button
-          size="sm"
-          variant="ghost"
-          onClick={toggleLanguage}
-          color="whiteAlpha.800"
-          _hover={{ bg: hoverBg, color: 'gray.400' }}
-        >
-          {i18n.language === 'en' ? 'Ελληνικά' : 'English'}
-        </Button>
+        <HStack spacing={3}>
+          <Button
+            size="sm"
+            variant="ghost"
+            onClick={toggleLanguage}
+            color="whiteAlpha.800"
+            _hover={{ bg: hoverBg, color: 'gray.400' }}
+          >
+            {i18n.language === 'en' ? 'Ελληνικά' : 'English'}
+          </Button>
+          
+          {/* PWA Install Button */}
+          {(isInstallable || process.env.NODE_ENV === 'development') && !isInstalled && (
+            <Button
+              size="sm"
+              bgGradient="linear(to-r, teal.500, green.500)"
+              color="white"
+              _hover={{ 
+                bgGradient: "linear(to-r, teal.400, green.400)",
+                transform: "scale(1.05)"
+              }}
+              _active={{ transform: "scale(0.95)" }}
+              onClick={async () => {
+                try {
+                  const installed = await installApp();
+                  if (!installed && process.env.NODE_ENV === 'development') {
+                    alert('PWA Install Button Test: In production, this would trigger the install prompt.');
+                  }
+                } catch (error) {
+                  console.error('Failed to install app:', error);
+                }
+              }}
+              leftIcon={
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              }
+              borderRadius="full"
+              fontSize="xs"
+              fontWeight="bold"
+              px={4}
+              position="relative"
+              overflow="hidden"
+              transition="all 0.2s"
+              boxShadow="0 4px 12px rgba(16, 185, 129, 0.3)"
+            >
+              {t('pwa.getApp', 'Get App')}
+              {/* Notification indicator */}
+              <Box
+                position="absolute"
+                top="-1px"
+                right="-1px"
+                w="8px"
+                h="8px"
+                bg="red.400"
+                borderRadius="full"
+                border="1px solid white"
+              />
+            </Button>
+          )}
+        </HStack>
 
-        <Text fontSize="sm" textAlign="center" flex="1">
+        <Text fontSize="sm" textAlign="center" flex="1" display={{ base: 'none', md: 'block' }}>
           {t('header.promo')}
         </Text>
 
