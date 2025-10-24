@@ -698,13 +698,16 @@ const MainHero = () => {
           <MyTicker />
         </div>
 
-        {/* Top-Left Install Button - Visible on all screen sizes */}
-        {isInstallable && !isInstalled && (
+        {/* Top-Left Install Button - Visible on all screen sizes - DEBUG: Always show for testing */}
+        {(isInstallable || process.env.NODE_ENV === 'development') && !isInstalled && (
           <div className="absolute top-16 xs:top-20 left-4 xs:left-6 z-40">
             <button
               onClick={async () => {
                 try {
-                  await installApp();
+                  const installed = await installApp();
+                  if (!installed && process.env.NODE_ENV === 'development') {
+                    alert('PWA Install Button Test: In production, this would trigger the install prompt. The PWA must be served over HTTPS with a valid manifest for the install prompt to appear.');
+                  }
                 } catch (error) {
                   console.error('Failed to install app:', error);
                 }
@@ -1271,13 +1274,16 @@ const MainHero = () => {
             )}
           </div>
 
-            {/* Professional Install App CTA - Only show when installable */}
-            {isInstallable && !isInstalled && (
+            {/* Professional Install App CTA - DEBUG: Always show for testing */}
+            {(isInstallable || process.env.NODE_ENV === 'development') && !isInstalled && (
               <div className="flex justify-center max-w-md mx-auto mt-8 sm:mt-12 px-4">
                 <button
                   onClick={async () => {
                     try {
-                      await installApp();
+                      const installed = await installApp();
+                      if (!installed && process.env.NODE_ENV === 'development') {
+                        alert('PWA Install Button Test: In production, this would trigger the install prompt. The PWA must be served over HTTPS with a valid manifest for the install prompt to appear.');
+                      }
                     } catch (error) {
                       console.error('Failed to install app:', error);
                     }
