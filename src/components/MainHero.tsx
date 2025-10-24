@@ -68,7 +68,7 @@ const MainHero = () => {
   const [scrollY, setScrollY] = useState(0);
   
   // PWA Hook
-  const { isOnline, isStandalone, dataPreloadStatus } = usePWA();
+  const { isOnline, isStandalone, dataPreloadStatus, isInstallable, isInstalled, installApp } = usePWA();
   
   // Helper function to get restaurant data by category
   const getRestaurantDataByCategory = (category?: RestaurantCategory): Restaurant[] => {
@@ -683,6 +683,8 @@ const MainHero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-indigo-900/20" />
         </div>
 
+
+
         {/* Location Badge - Hidden on mobile, visible on tablets and up */}
         <div className="hidden md:block absolute top-6 lg:top-8 right-6 lg:right-8 z-40">
           <span className="inline-flex items-center px-3 py-1.5 bg-white/10 backdrop-blur-sm text-white/70 font-medium rounded-full text-sm gap-1.5 hover:bg-white/15 hover:text-white/90 transition-all duration-300">
@@ -695,6 +697,39 @@ const MainHero = () => {
         <div className="absolute top-0 left-0 w-full z-30">
           <MyTicker />
         </div>
+
+        {/* Top-Left Install Button - Visible on all screen sizes */}
+        {isInstallable && !isInstalled && (
+          <div className="absolute top-16 xs:top-20 left-4 xs:left-6 z-40">
+            <button
+              onClick={async () => {
+                try {
+                  await installApp();
+                } catch (error) {
+                  console.error('Failed to install app:', error);
+                }
+              }}
+              className="group relative bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold px-3 py-2 xs:px-4 xs:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-pulse hover:animate-none"
+              title={t('pwa.installTitle', 'Install Googlementor')}
+            >
+              {/* Mobile icon and text */}
+              <div className="flex items-center gap-2">
+                <svg 
+                  className="w-4 h-4 xs:w-5 xs:h-5" 
+                  fill="currentColor" 
+                  viewBox="0 0 20 20"
+                >
+                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+                <span className="text-xs xs:text-sm font-bold">GET APP</span>
+              </div>
+              
+              {/* Notification dot */}
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping" />
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-400 rounded-full" />
+            </button>
+          </div>
+        )}
 
         {/* Professional Hero Content */}
         <section className="relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 py-12 xs:py-16 sm:py-20 lg:py-32 max-w-7xl w-full mx-auto">
@@ -1236,8 +1271,52 @@ const MainHero = () => {
             )}
           </div>
 
+            {/* Professional Install App CTA - Only show when installable */}
+            {isInstallable && !isInstalled && (
+              <div className="flex justify-center max-w-md mx-auto mt-8 sm:mt-12 px-4">
+                <button
+                  onClick={async () => {
+                    try {
+                      await installApp();
+                    } catch (error) {
+                      console.error('Failed to install app:', error);
+                    }
+                  }}
+                  className="group relative overflow-hidden bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white border-2 border-emerald-400/30 px-6 sm:px-8 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105 w-full shadow-xl hover:shadow-2xl"
+                >
+                  {/* Background animation */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Button content */}
+                  <div className="relative flex items-center justify-center gap-3">
+                    {/* Install icon */}
+                    <svg 
+                      className="w-5 h-5 sm:w-6 sm:h-6" 
+                      fill="currentColor" 
+                      viewBox="0 0 20 20"
+                    >
+                      <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                    
+                    {/* Main text */}
+                    <span className="font-bold tracking-wide">
+                      {t('pwa.install', 'Install App')}
+                    </span>
+                    
+                    {/* Benefits badge */}
+                    <span className="hidden sm:inline-flex items-center px-2 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">
+                      {t('pwa.benefit1', 'Works offline')}
+                    </span>
+                  </div>
+                  
+                  {/* Shimmer effect */}
+                  <div className="absolute inset-0 -top-full bg-gradient-to-b from-transparent via-white/20 to-transparent group-hover:animate-shimmer" />
+                </button>
+              </div>
+            )}
+
             {/* Professional CTA Button */}
-            <div className="flex justify-center max-w-sm mx-auto mt-12 sm:mt-16 px-4">
+            <div className="flex justify-center max-w-sm mx-auto mt-8 sm:mt-12 px-4">
               <a
                 href={mainHero.secondaryAction.href}
                 className="group relative overflow-hidden bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg hover:bg-white/20 hover:border-white/50 transition-all duration-300 hover:scale-105 w-full"
