@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Bougatsa Thessaloniki",
+    "url": "https://maps.app.goo.gl/sample34",
+    "address": "Ermou 86, Athina 105 63",
+    "lat": 37.976,
+    "lng": 23.733
+  },
+  {
+    "name": "Traditional Bougatsa",
+    "url": "https://maps.app.goo.gl/sample35",
+    "address": "Athinas 19, Athina 105 51",
+    "lat": 37.977,
+    "lng": 23.727
+  },
+  {
+    "name": "Bougatsa Corner",
+    "url": "https://maps.app.goo.gl/sample36",
+    "address": "Sofokleous 10, Athina 105 52",
+    "lat": 37.978,
+    "lng": 23.728
+  }
+]
