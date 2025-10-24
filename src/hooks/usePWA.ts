@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { dataPreloader, getCriticalImages } from '../utils/dataPreloader';
 
 interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
@@ -18,6 +19,7 @@ interface PWAHook {
   dismissInstallPrompt: () => void;
   canShare: boolean;
   shareContent: (data: ShareData) => Promise<boolean>;
+  dataPreloadStatus: 'idle' | 'loading' | 'completed' | 'error';
 }
 
 export const usePWA = (): PWAHook => {
@@ -26,6 +28,7 @@ export const usePWA = (): PWAHook => {
   const [isOnline, setIsOnline] = useState(true);
   const [isStandalone, setIsStandalone] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [dataPreloadStatus, setDataPreloadStatus] = useState<'idle' | 'loading' | 'completed' | 'error'>('idle');
 
   useEffect(() => {
     // Check if running as standalone PWA
@@ -41,9 +44,39 @@ export const usePWA = (): PWAHook => {
       return standalone;
     };
 
+    // Initialize data preloading
+    const initializeDataPreloading = async () => {
+      if (dataPreloadStatus === 'idle') {
+        setDataPreloadStatus('loading');
+        
+        try {
+          // Clear expired cache first
+          dataPreloader.clearExpiredCache();
+          
+          // Preload critical data
+          await dataPreloader.preloadCriticalData();
+          
+          // Preload critical images
+          const criticalImages = getCriticalImages();
+          await dataPreloader.preloadImages(criticalImages);
+          
+          setDataPreloadStatus('completed');
+          console.log('🎉 PWA data preloading completed successfully');
+        } catch (error) {
+          console.error('❌ PWA data preloading failed:', error);
+          setDataPreloadStatus('error');
+        }
+      }
+    };
+
     // Initial checks
     checkStandalone();
     setIsOnline(navigator.onLine);
+
+    // Start data preloading after a short delay to not block initial render
+    setTimeout(() => {
+      initializeDataPreloading();
+    }, 1000);
 
     // Listen for install prompt
     const handleBeforeInstallPrompt = (e: Event) => {
@@ -80,12 +113,17 @@ export const usePWA = (): PWAHook => {
 
     // Listen for online/offline changes
     const handleOnline = () => {
-      console.log('PWA: Back online');
+      console.log('PWA: Back online - syncing data...');
       setIsOnline(true);
+      
+      // Refresh data when back online
+      if (dataPreloadStatus === 'completed') {
+        initializeDataPreloading();
+      }
     };
     
     const handleOffline = () => {
-      console.log('PWA: Gone offline');
+      console.log('PWA: Gone offline - using cached data');
       setIsOnline(false);
     };
 
@@ -111,7 +149,7 @@ export const usePWA = (): PWAHook => {
       window.removeEventListener('offline', handleOffline);
       displayModeQuery.removeListener(handleDisplayModeChange);
     };
-  }, []);
+  }, [dataPreloadStatus]);
 
   const installApp = async (): Promise<boolean> => {
     if (!deferredPrompt) {
@@ -191,6 +229,7 @@ export const usePWA = (): PWAHook => {
     installApp,
     dismissInstallPrompt,
     canShare: typeof window !== 'undefined' && !!navigator.share,
-    shareContent
+    shareContent,
+    dataPreloadStatus
   };
 };

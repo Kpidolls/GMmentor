@@ -13,14 +13,18 @@ const withPWA = require('@ducanh2912/next-pwa').default({
     document: '/offline.html',
   },
   runtimeCaching: [
+    // Enhanced Font Caching
     {
       urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
       handler: 'CacheFirst',
       options: {
         cacheName: 'google-fonts',
         expiration: {
-          maxEntries: 4,
+          maxEntries: 10,
           maxAgeSeconds: 365 * 24 * 60 * 60 // 1 year
+        },
+        cacheKeyWillBeUsed: async ({ request }) => {
+          return `${request.url}?${Date.now()}`;
         }
       }
     },
@@ -30,53 +34,181 @@ const withPWA = require('@ducanh2912/next-pwa').default({
       options: {
         cacheName: 'google-fonts-static',
         expiration: {
-          maxEntries: 4,
+          maxEntries: 10,
           maxAgeSeconds: 365 * 24 * 60 * 60 // 1 year
         }
       }
     },
+
+    // Enhanced JSON Data Caching (Critical for offline restaurant finder)
+    {
+      urlPattern: /\/data\/.+\.json$/i,
+      handler: 'StaleWhileRevalidate',
+      options: {
+        cacheName: 'json-data-v2',
+        expiration: {
+          maxEntries: 50, // Increased for all restaurant categories
+          maxAgeSeconds: 7 * 24 * 60 * 60 // 7 days
+        },
+        plugins: [
+          {
+            cacheKeyWillBeUsed: async ({ request }) => {
+              // Create consistent cache keys for JSON files
+              return request.url.replace(/\?.*$/, '');
+            },
+            cachedResponseWillBeUsed: async ({ cachedResponse, request }) => {
+              // Return cached response even if stale for offline usage
+              return cachedResponse;
+            }
+          }
+        ]
+      }
+    },
+
+    // Restaurant Data Specific Caching
+    {
+      urlPattern: /\/(greekRestaurants|municipalities|restaurantCategories|islands|mapOptions|products)\.json$/i,
+      handler: 'CacheFirst',
+      options: {
+        cacheName: 'core-data-v2',
+        expiration: {
+          maxEntries: 20,
+          maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days - longer for core data
+        },
+        plugins: [
+          {
+            cacheWillUpdate: async ({ response }) => {
+              // Cache valid JSON responses
+              return response.status === 200 && response.type === 'basic';
+            }
+          }
+        ]
+      }
+    },
+
+    // Enhanced Image Caching (Including map images)
+    {
+      urlPattern: /\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,
+      handler: 'StaleWhileRevalidate',
+      options: {
+        cacheName: 'static-image-assets-v2',
+        expiration: {
+          maxEntries: 100, // Increased for map images
+          maxAgeSeconds: 7 * 24 * 60 * 60 // 7 days
+        },
+        plugins: [
+          {
+            cacheKeyWillBeUsed: async ({ request }) => {
+              // Normalize image URLs
+              const url = new URL(request.url);
+              url.search = ''; // Remove query parameters for consistent caching
+              return url.href;
+            }
+          }
+        ]
+      }
+    },
+
+    // Map Image Specific Caching (For offline maps)
+    {
+      urlPattern: /\/assets\/images\/.+\.(jpg|jpeg|png|webp|svg)$/i,
+      handler: 'CacheFirst',
+      options: {
+        cacheName: 'map-images-v2',
+        expiration: {
+          maxEntries: 50,
+          maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
+        },
+        plugins: [
+          {
+            cacheWillUpdate: async ({ response }) => {
+              return response.status === 200;
+            },
+            cachedResponseWillBeUsed: async ({ cachedResponse }) => {
+              // Always return cached images for offline use
+              return cachedResponse;
+            }
+          }
+        ]
+      }
+    },
+
+    // Google Maps API Caching (For map tiles and API responses)
+    {
+      urlPattern: /^https:\/\/maps\.googleapis\.com\/.*/i,
+      handler: 'StaleWhileRevalidate',
+      options: {
+        cacheName: 'google-maps-api',
+        expiration: {
+          maxEntries: 100,
+          maxAgeSeconds: 24 * 60 * 60 // 24 hours
+        }
+      }
+    },
+
+    // Static Assets Caching
+    {
+      urlPattern: /\/_next\/static.+\.js$/i,
+      handler: 'CacheFirst',
+      options: {
+        cacheName: 'next-static-js-v2',
+        expiration: {
+          maxEntries: 64,
+          maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
+        }
+      }
+    },
+
+    // CSS Caching
+    {
+      urlPattern: /\/_next\/static.+\.css$/i,
+      handler: 'CacheFirst',
+      options: {
+        cacheName: 'next-static-css',
+        expiration: {
+          maxEntries: 32,
+          maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
+        }
+      }
+    },
+
+    // External APIs that can be cached
+    {
+      urlPattern: /^https:\/\/api\.(mapbox|openstreetmap)\..*$/i,
+      handler: 'StaleWhileRevalidate',
+      options: {
+        cacheName: 'external-maps-api',
+        expiration: {
+          maxEntries: 50,
+          maxAgeSeconds: 12 * 60 * 60 // 12 hours
+        }
+      }
+    },
+
+    // Font Assets
     {
       urlPattern: /\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,
       handler: 'StaleWhileRevalidate',
       options: {
         cacheName: 'static-font-assets',
         expiration: {
-          maxEntries: 4,
+          maxEntries: 10,
           maxAgeSeconds: 7 * 24 * 60 * 60 // 7 days
         }
       }
     },
+
+    // Fallback for all other requests
     {
-      urlPattern: /\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,
-      handler: 'StaleWhileRevalidate',
+      urlPattern: /^https?.*/,
+      handler: 'NetworkFirst',
       options: {
-        cacheName: 'static-image-assets',
-        expiration: {
-          maxEntries: 64,
-          maxAgeSeconds: 24 * 60 * 60 // 24 hours
-        }
-      }
-    },
-    {
-      urlPattern: /\/_next\/static.+\.js$/i,
-      handler: 'CacheFirst',
-      options: {
-        cacheName: 'next-static-js',
-        expiration: {
-          maxEntries: 64,
-          maxAgeSeconds: 24 * 60 * 60 // 24 hours
-        }
-      }
-    },
-    {
-      urlPattern: /\/data\/.+\.json$/i,
-      handler: 'StaleWhileRevalidate',
-      options: {
-        cacheName: 'json-data',
+        cacheName: 'others-v2',
         expiration: {
           maxEntries: 32,
           maxAgeSeconds: 24 * 60 * 60 // 24 hours
-        }
+        },
+        networkTimeoutSeconds: 10
       }
     }
   ]
