@@ -15,6 +15,8 @@ interface PWAHook {
   isInstalled: boolean;
   isOnline: boolean;
   isStandalone: boolean;
+  isMobile: boolean;
+  isIOS: boolean;
   installApp: () => Promise<boolean>;
   dismissInstallPrompt: () => void;
   canShare: boolean;
@@ -27,10 +29,22 @@ export const usePWA = (): PWAHook => {
   const [isInstalled, setIsInstalled] = useState(false);
   const [isOnline, setIsOnline] = useState(true);
   const [isStandalone, setIsStandalone] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [dataPreloadStatus, setDataPreloadStatus] = useState<'idle' | 'loading' | 'completed' | 'error'>('idle');
 
   useEffect(() => {
+    // Mobile device detection
+    const detectMobileDevice = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+      const isMobileDevice = /android|avantgo|blackberry|bb|meego|mobile|iphone|ipad|ipod|opera mini|palm|phone|pocket|psp|symbian|mobile|windows ce|windows phone/i.test(userAgent);
+      const isIOSDevice = /iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream;
+      
+      setIsMobile(isMobileDevice);
+      setIsIOS(isIOSDevice);
+    };
+
     // Check if running as standalone PWA
     const checkStandalone = () => {
       const isStandaloneMode = window.matchMedia('(display-mode: standalone)').matches;
@@ -70,6 +84,7 @@ export const usePWA = (): PWAHook => {
     };
 
     // Initial checks
+    detectMobileDevice();
     checkStandalone();
     setIsOnline(navigator.onLine);
 
@@ -152,6 +167,22 @@ export const usePWA = (): PWAHook => {
   }, [dataPreloadStatus]);
 
   const installApp = async (): Promise<boolean> => {
+    // Handle iOS devices that don't support the standard install prompt
+    if (isIOS && !deferredPrompt) {
+      // For iOS, we can't programmatically install but we can guide users
+      console.log('PWA: iOS device detected - guiding user to install manually');
+      
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'pwa_ios_install_guide', {
+          event_category: 'PWA',
+          event_label: 'iOS user shown install guide'
+        });
+      }
+      
+      // Return false but iOS-specific install instructions should be shown in UI
+      return false;
+    }
+
     if (!deferredPrompt) {
       console.log('PWA: No install prompt available');
       return false;
@@ -226,6 +257,8 @@ export const usePWA = (): PWAHook => {
     isInstalled,
     isOnline,
     isStandalone,
+    isMobile,
+    isIOS,
     installApp,
     dismissInstallPrompt,
     canShare: typeof window !== 'undefined' && !!navigator.share,

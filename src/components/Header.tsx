@@ -43,7 +43,7 @@ const Header = () => {
   const [isLanguageReady, setIsLanguageReady] = useState(false);
   
   // PWA Hook for install functionality
-  const { isInstallable, isInstalled, installApp } = usePWA();
+  const { isInstallable, isInstalled, isStandalone, isMobile, isIOS, isOnline, installApp } = usePWA();
 
   useEffect(() => {
     setIsLanguageReady(true); // Ensure language is ready before rendering
@@ -76,28 +76,35 @@ const Header = () => {
       <Flex
         bg="gray.800"
         color="white"
-        px={{ base: 4, md: 8 }}
+        px={{ base: 2, md: 8 }}
         py={2}
         align="center"
         justify="space-between"
-        flexWrap="wrap"
-        gap={3}
+        flexWrap="nowrap"
+        gap={{ base: 1, md: 3 }}
+        minH="44px"
       >
-        <HStack spacing={3}>
+        <HStack spacing={{ base: 1, md: 3 }} flex="1" minW="0">
           <Button
-            size="sm"
+            size={{ base: "xs", md: "sm" }}
             variant="ghost"
             onClick={toggleLanguage}
             color="whiteAlpha.800"
             _hover={{ bg: hoverBg, color: 'gray.400' }}
+            fontSize={{ base: "xs", md: "sm" }}
+            px={{ base: 2, md: 4 }}
+            minW="0"
+            flexShrink={0}
           >
-            {i18n.language === 'en' ? 'Ελληνικά' : 'English'}
+            {i18n.language === 'en' ? 'ΕΛ' : 'EN'}
           </Button>
           
           {/* PWA Install Button */}
-          {(isInstallable || process.env.NODE_ENV === 'development') && !isInstalled && (
+          {((isInstallable && !isInstalled && !isStandalone) || 
+            (isMobile && isIOS && !isInstalled && !isStandalone) || 
+            process.env.NODE_ENV === 'development') && isOnline && (
             <Button
-              size="sm"
+              size={{ base: "xs", md: "sm" }}
               bgGradient="linear(to-r, teal.500, green.500)"
               color="white"
               _hover={{ 
@@ -107,60 +114,69 @@ const Header = () => {
               _active={{ transform: "scale(0.95)" }}
               onClick={async () => {
                 try {
-                  const installed = await installApp();
-                  if (!installed && process.env.NODE_ENV === 'development') {
-                    alert('PWA Install Button Test: In production, this would trigger the install prompt.');
+                  if (isIOS && isMobile) {
+                    // For iOS, show manual install instructions
+                    alert(`📱 ${t('ios.installInstructions', 'To install this app on your iOS device:\n\n1. Tap the Share button (📤) at the bottom of Safari\n2. Scroll down and tap "Add to Home Screen"\n3. Tap "Add" to confirm\n\nThe app will then appear on your home screen!')}`);
+                  } else {
+                    const installed = await installApp();
+                    if (!installed && process.env.NODE_ENV === 'development') {
+                      alert('PWA Install Button Test: In production, this would trigger the install prompt.');
+                    }
                   }
                 } catch (error) {
                   console.error('Failed to install app:', error);
                 }
               }}
               leftIcon={
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
+                <Box display="inline-flex" w={{ base: "10px", md: "14px" }} h={{ base: "10px", md: "14px" }}>
+                  <svg width="100%" height="100%" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </Box>
               }
               borderRadius="full"
-              fontSize="xs"
+              fontSize={{ base: "2xs", md: "xs" }}
               fontWeight="bold"
-              px={4}
+              px={{ base: 1.5, md: 4 }}
+              py={{ base: 1, md: 2 }}
+              h={{ base: "20px", md: "auto" }}
               position="relative"
               overflow="hidden"
               transition="all 0.2s"
               boxShadow="0 4px 12px rgba(16, 185, 129, 0.3)"
+              minW="0"
+              flexShrink={0}
             >
-              {t('pwa.getApp', 'Get App')}
-              {/* Notification indicator */}
-              <Box
-                position="absolute"
-                top="-1px"
-                right="-1px"
-                w="8px"
-                h="8px"
-                bg="red.400"
-                borderRadius="full"
-                border="1px solid white"
-              />
+              <Box display={{ base: "none", sm: "block" }}>
+                {t('pwa.getApp', 'Get App')}
+              </Box>
+              <Box display={{ base: "block", sm: "none" }}>
+                App
+              </Box>
             </Button>
           )}
         </HStack>
 
-        <Text fontSize="sm" textAlign="center" flex="1" display={{ base: 'none', md: 'block' }}>
+        <Text fontSize="sm" textAlign="center" flex="1" display={{ base: 'none', lg: 'block' }}>
           {t('header.promo')}
         </Text>
 
-        <Box onClick={onOpen} cursor="pointer">
-          <InputGroup maxW="250px" size="sm">
-            <InputLeftElement pointerEvents="none">
-              <SearchIcon color="gray.400" />
+        <Box onClick={onOpen} cursor="pointer" flex="1" maxW={{ base: "100px", sm: "140px", md: "250px" }} minW="0">
+          <InputGroup size={{ base: "xs", md: "sm" }} w="full">
+            <InputLeftElement pointerEvents="none" h={{ base: "20px", md: "32px" }} w={{ base: "20px", md: "32px" }}>
+              <SearchIcon color="gray.400" boxSize={{ base: "10px", md: "16px" }} />
             </InputLeftElement>
             <Input
               isReadOnly
-              placeholder={t('search.placeholder')}
+              placeholder="Search..."
               pointerEvents="none"
               focusBorderColor="blue.400"
               _placeholder={{ color: 'gray.400' }}
               id="header-search"
+              fontSize={{ base: "10px", md: "sm" }}
+              h={{ base: "20px", md: "32px" }}
+              pl={{ base: "20px", md: "32px" }}
+              borderRadius={{ base: "sm", md: "md" }}
             />
           </InputGroup>
         </Box>
