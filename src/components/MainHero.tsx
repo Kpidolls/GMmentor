@@ -68,10 +68,23 @@ const MainHero = () => {
   const [scrollY, setScrollY] = useState(0);
   
   // PWA Hook
-  const { isOnline, isStandalone } = usePWA();
+  const { isOnline, isStandalone, dataPreloadStatus } = usePWA();
   
   // Helper function to get restaurant data by category
   const getRestaurantDataByCategory = (category?: RestaurantCategory): Restaurant[] => {
+    // PWA Enhancement: Try to get data from cache first when offline
+    if (typeof window !== 'undefined' && !navigator.onLine && isStandalone) {
+      const categoryId = category?.id || 'greek-restaurants';
+      const cachedData = localStorage.getItem(`restaurant_data_${categoryId}`);
+      if (cachedData) {
+        try {
+          return normalizeRestaurantData(JSON.parse(cachedData));
+        } catch (e) {
+          console.error('Failed to parse cached restaurant data:', e);
+        }
+      }
+    }
+    
     if (!category) return normalizeRestaurantData(restaurantsData);
     
     switch (category.id) {
@@ -171,8 +184,24 @@ const MainHero = () => {
     setSearchMode({ type: 'location' });
     // Keep the currently selected display category instead of resetting to default
 
-    // PWA Enhancement: Check if offline
+    // PWA Enhancement: Check if offline and use cached data if available
     if (!isOnline) {
+      const cachedLocation = localStorage.getItem('lastKnownLocation');
+      if (cachedLocation && dataPreloadStatus === 'completed') {
+        try {
+          const { lat, lng } = JSON.parse(cachedLocation);
+          setUserLocation({ lat, lng });
+          const nearest = findNearestRestaurants(lat, lng, 10, selectedDisplayCategory);
+          setNearestRestaurants(nearest);
+          setCurrentIndex(0);
+          setLoading(false);
+          setError(t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.'));
+          return;
+        } catch (e) {
+          console.error('Failed to parse cached location:', e);
+        }
+      }
+      
       setError(t('pwa.offlineLocationError', 'Location services require an internet connection. Please connect and try again.'));
       setLoading(false);
       return;
@@ -534,8 +563,23 @@ const MainHero = () => {
     return false;
   };
 
+  // PWA Enhancement: Get municipalities with offline fallback
+  const getMunicipalitiesData = (): Municipality[] => {
+    if (typeof window !== 'undefined' && !navigator.onLine && isStandalone) {
+      const cachedData = localStorage.getItem('municipalities_data');
+      if (cachedData) {
+        try {
+          return JSON.parse(cachedData);
+        } catch (e) {
+          console.error('Failed to parse cached municipalities data:', e);
+        }
+      }
+    }
+    return municipalitiesData;
+  };
+
   // Filter municipalities based on enhanced search query
-  const filteredMunicipalities = municipalitiesData.filter((municipality: Municipality) => {
+  const filteredMunicipalities = getMunicipalitiesData().filter((municipality: Municipality) => {
     if (!municipalitySearchQuery.trim()) return true;
     
     const query = municipalitySearchQuery.trim();
@@ -878,12 +922,12 @@ const MainHero = () => {
                       <span className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
                         {t('municipalitySearch.resultsCount', 'Showing {{count}} of {{total}} locations', {
                           count: filteredMunicipalities.length,
-                          total: municipalitiesData.length
+                          total: getMunicipalitiesData().length
                         })}
                       </span>
                     ) : (
                       <span className="text-xs text-gray-500">
-                        Type to search or scroll below • {municipalitiesData.length} Athens areas
+                        Type to search or scroll below • {getMunicipalitiesData().length} Athens areas
                       </span>
                     )}
                   </div>

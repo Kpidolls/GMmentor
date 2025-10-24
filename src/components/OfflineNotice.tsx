@@ -14,7 +14,7 @@ const OfflineNotice: React.FC<OfflineNoticeProps> = ({
   className = ''
 }) => {
   const { t } = useTranslation();
-  const { isOnline, isStandalone } = usePWA();
+  const { isOnline, isStandalone, dataPreloadStatus } = usePWA();
   const [showNotice, setShowNotice] = useState(false);
   const [wasOffline, setWasOffline] = useState(false);
   const [connectionType, setConnectionType] = useState<string>('');
@@ -55,6 +55,20 @@ const OfflineNotice: React.FC<OfflineNoticeProps> = ({
     ? 'top-0' 
     : 'bottom-0';
 
+  // Show data preloading status for standalone apps
+  if (isStandalone && dataPreloadStatus === 'loading') {
+    return (
+      <div className={`fixed ${positionClasses} left-0 right-0 z-50 ${className}`}>
+        <div className="bg-blue-600 text-white px-4 py-2 text-center text-sm shadow-lg">
+          <div className="flex items-center justify-center space-x-2">
+            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+            <span>{t('pwa.preloadingData', 'Preparing app for offline use...')}</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (showReconnectedMessage) {
     return (
       <div className={`fixed ${positionClasses} left-0 right-0 z-50 ${className}`}>
@@ -80,15 +94,17 @@ const OfflineNotice: React.FC<OfflineNoticeProps> = ({
     return null;
   }
 
+  const hasOfflineData = dataPreloadStatus === 'completed';
+
   return (
     <div className={`fixed ${positionClasses} left-0 right-0 z-50 ${className}`}>
-      <div className="bg-orange-500 text-white px-4 py-3 text-center text-sm shadow-lg border-b border-orange-400">
+      <div className={`${hasOfflineData ? 'bg-orange-500' : 'bg-red-500'} text-white px-4 py-3 text-center text-sm shadow-lg border-b ${hasOfflineData ? 'border-orange-400' : 'border-red-400'}`}>
         <div className="flex items-center justify-center space-x-2 max-w-md mx-auto">
           {/* Offline Icon with Animation */}
           <div className="relative">
-            <div className="w-4 h-4 bg-orange-200 rounded-full animate-pulse"></div>
+            <div className={`w-4 h-4 ${hasOfflineData ? 'bg-orange-200' : 'bg-red-200'} rounded-full animate-pulse`}></div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <svg className="w-3 h-3 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+              <svg className={`w-3 h-3 ${hasOfflineData ? 'text-orange-600' : 'text-red-600'}`} fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
               </svg>
             </div>
@@ -96,34 +112,39 @@ const OfflineNotice: React.FC<OfflineNoticeProps> = ({
           
           <div className="flex-1">
             <span className="font-medium">
-              {isStandalone 
-                ? t('pwa.offlineStandalone', 'You\'re offline, but cached content is available')
-                : t('pwa.offline', 'You\'re offline. Some features may be limited.')
+              {hasOfflineData
+                ? t('pwa.offlineWithData', 'You\'re offline, but restaurants & maps are cached')
+                : isStandalone 
+                  ? t('pwa.offlineStandalone', 'You\'re offline. Limited functionality available.')
+                  : t('pwa.offline', 'You\'re offline. Some features may be limited.')
               }
             </span>
           </div>
-
-          {/* Features Available Offline */}
-          {isStandalone && (
-            <div className="flex items-center space-x-1 text-orange-100 text-xs">
-              <span>•</span>
-              <span>{t('pwa.offlineFeatures', 'Maps & restaurants cached')}</span>
-            </div>
-          )}
         </div>
 
-        {/* Additional Info for PWA Users */}
-        {isStandalone && (
-          <div className="mt-2 text-xs text-orange-100 max-w-sm mx-auto">
-            {t('pwa.offlineDetails', 'You can still browse saved restaurants and view cached maps. New searches will be available when you reconnect.')}
+        {/* Features Available Offline */}
+        {hasOfflineData && (
+          <div className="flex items-center justify-center space-x-4 text-orange-100 text-xs mt-2">
+            <div className="flex items-center space-x-1">
+              <span>🍽️</span>
+              <span>{t('pwa.offlineRestaurants', 'Restaurants')}</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span>🗺️</span>
+              <span>{t('pwa.offlineMaps', 'Maps')}</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span>🏝️</span>
+              <span>{t('pwa.offlineIslands', 'Islands')}</span>
+            </div>
           </div>
         )}
 
-        {/* Retry Connection Button (for very long offline periods) */}
+        {/* Retry Connection Button */}
         <div className="mt-2">
           <button
             onClick={() => window.location.reload()}
-            className="text-orange-100 hover:text-white text-xs underline transition-colors"
+            className={`${hasOfflineData ? 'text-orange-100 hover:text-white' : 'text-red-100 hover:text-white'} text-xs underline transition-colors`}
           >
             {t('pwa.retry', 'Retry connection')}
           </button>
