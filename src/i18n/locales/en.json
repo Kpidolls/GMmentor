@@ -155,6 +155,9 @@
     "offlineLocationError": "Location services require an internet connection. Please connect and try again.",
     "usingCachedLocation": "Using your last known location. Results may not be current."
   },
+  "ios": {
+    "installInstructions": "To install this app on your iOS device:\n\n1. Tap the Share button (📤) at the bottom of Safari\n2. Scroll down and tap \"Add to Home Screen\"\n3. Tap \"Add\" to confirm\n\nThe app will then appear on your home screen!"
+  },
   "callToAction": {
     "text": "Get Started"
   },
