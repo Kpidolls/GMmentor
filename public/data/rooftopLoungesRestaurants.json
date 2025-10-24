@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Galaxy Bar & Restaurant",
+    "url": "https://maps.app.goo.gl/sample22",
+    "address": "Stadiou 10, Athina 105 64",
+    "lat": 37.976,
+    "lng": 23.735
+  },
+  {
+    "name": "A for Athens Rooftop",
+    "url": "https://maps.app.goo.gl/sample23",
+    "address": "Miaouli 2-4, Athina 105 54",
+    "lat": 37.975,
+    "lng": 23.728
+  },
+  {
+    "name": "Point A Bar",
+    "url": "https://maps.app.goo.gl/sample24",
+    "address": "Mitropoleos 2, Athina 105 63",
+    "lat": 37.974,
+    "lng": 23.73
+  }
+]
