@@ -658,6 +658,8 @@ const MainHero = () => {
       {/* PWA Components */}
       <OfflineNotice position="top" />
       <InstallBanner position="bottom" showAfterDelay={4000} />
+      
+
 
       <main className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
         {/* Professional Background */}
@@ -685,11 +687,11 @@ const MainHero = () => {
 
 
 
-        {/* Location Badge - Hidden on mobile, visible on tablets and up */}
-        <div className="hidden md:block absolute top-6 lg:top-8 right-6 lg:right-8 z-40">
-          <span className="inline-flex items-center px-3 py-1.5 bg-white/10 backdrop-blur-sm text-white/70 font-medium rounded-full text-sm gap-1.5 hover:bg-white/15 hover:text-white/90 transition-all duration-300">
-            <span className="text-sm">🇬🇷</span>
-            {t('mainHero.athens', 'Athens')}
+        {/* Location Badge - Clean top-right position */}
+        <div className="absolute top-4 right-4 z-40 xs:top-6 xs:right-6 md:top-6 md:right-8 lg:top-8 lg:right-8">
+          <span className="inline-flex items-center px-2 py-1 xs:px-3 xs:py-1.5 bg-white/10 backdrop-blur-sm text-white/70 font-medium rounded-full text-xs xs:text-sm gap-1 xs:gap-1.5 hover:bg-white/15 hover:text-white/90 transition-all duration-300">
+            <span className="text-xs xs:text-sm">🇬🇷</span>
+            <span className="hidden xs:inline">{t('mainHero.athens', 'Athens')}</span>
           </span>
         </div>
         
@@ -698,41 +700,7 @@ const MainHero = () => {
           <MyTicker />
         </div>
 
-        {/* Top-Left Install Button - Mobile-First Design - DEBUG: Always show for testing */}
-        {(isInstallable || process.env.NODE_ENV === 'development') && !isInstalled && (
-          <div className="fixed top-4 left-4 z-50 sm:absolute sm:top-16 sm:left-6">
-            <button
-              onClick={async () => {
-                try {
-                  const installed = await installApp();
-                  if (!installed && process.env.NODE_ENV === 'development') {
-                    alert('PWA Install Button Test: In production, this would trigger the install prompt. The PWA must be served over HTTPS with a valid manifest for the install prompt to appear.');
-                  }
-                } catch (error) {
-                  console.error('Failed to install app:', error);
-                }
-              }}
-              className="group relative bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold px-3 py-2 sm:px-4 sm:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-pulse hover:animate-none active:scale-95"
-              title={t('pwa.installTitle', 'Install Googlementor')}
-            >
-              {/* Mobile-optimized content */}
-              <div className="flex items-center gap-1 sm:gap-2">
-                <svg 
-                  className="w-4 h-4 sm:w-5 sm:h-5" 
-                  fill="currentColor" 
-                  viewBox="0 0 20 20"
-                >
-                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-                <span className="text-xs sm:text-sm font-bold">GET APP</span>
-              </div>
-              
-              {/* Notification dot - mobile optimized */}
-              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-red-500 rounded-full animate-ping" />
-              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-red-400 rounded-full" />
-            </button>
-          </div>
-        )}
+
 
         {/* Professional Hero Content */}
         <section className="relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 py-12 xs:py-16 sm:py-20 lg:py-32 max-w-7xl w-full mx-auto">
@@ -1276,7 +1244,7 @@ const MainHero = () => {
 
             {/* Mobile-Optimized Install App CTA - DEBUG: Always show for testing */}
             {(isInstallable || process.env.NODE_ENV === 'development') && !isInstalled && (
-              <div className="flex justify-center max-w-sm sm:max-w-md mx-auto mt-6 sm:mt-8 lg:mt-12 px-4">
+              <div className="flex justify-center max-w-xs xs:max-w-sm sm:max-w-md mx-auto mt-4 xs:mt-6 sm:mt-8 lg:mt-12 px-3 xs:px-4">
                 <button
                   onClick={async () => {
                     try {
@@ -1288,16 +1256,16 @@ const MainHero = () => {
                       console.error('Failed to install app:', error);
                     }
                   }}
-                  className="group relative overflow-hidden bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white border-2 border-emerald-400/30 px-4 py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-5 rounded-lg sm:rounded-xl lg:rounded-2xl font-bold text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 active:scale-95 w-full shadow-xl hover:shadow-2xl"
+                  className="group relative overflow-hidden bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white border-2 border-emerald-400/30 px-3 py-2.5 xs:px-4 xs:py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-5 rounded-lg sm:rounded-xl lg:rounded-2xl font-bold text-xs xs:text-sm sm:text-base lg:text-lg transition-all duration-300 hover:scale-105 active:scale-95 w-full shadow-xl hover:shadow-2xl"
                 >
                   {/* Background animation */}
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   {/* Button content - mobile optimized */}
-                  <div className="relative flex items-center justify-center gap-2 sm:gap-3">
+                  <div className="relative flex items-center justify-center gap-1.5 xs:gap-2 sm:gap-3">
                     {/* Install icon */}
                     <svg 
-                      className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" 
+                      className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" 
                       fill="currentColor" 
                       viewBox="0 0 20 20"
                     >
@@ -1309,9 +1277,10 @@ const MainHero = () => {
                       {t('pwa.install', 'Install App')}
                     </span>
                     
-                    {/* Benefits badge - hidden on mobile, shown on larger screens */}
-                    <span className="hidden lg:inline-flex items-center px-2 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">
-                      {t('pwa.benefit1', 'Works offline')}
+                    {/* Benefits badge - mobile responsive */}
+                    <span className="hidden xs:inline-flex items-center px-1.5 py-0.5 xs:px-2 xs:py-1 bg-white/20 backdrop-blur-sm rounded-full text-[10px] xs:text-xs font-medium">
+                      <span className="xs:hidden">📱</span>
+                      <span className="hidden xs:inline">{t('pwa.benefit1', 'Works offline')}</span>
                     </span>
                   </div>
                   
