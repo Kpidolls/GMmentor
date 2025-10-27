@@ -1,23 +1,842 @@
 [
   {
+    "url": "https://maps.app.goo.gl/UynpfTCs73NDwhL67?g_st=ipc",
+    "name": "Hunters Room & Grill Restaurant",
+    "address": "Αριστοτέλους 23, & Παπάγου 17, Χαλάνδρι 152 34",
+    "lat": "38.021923789577265",
+    "lng": "23.8032446662537"
+  },
+  {
+    "url": "https://maps.app.goo.gl/y626YBBGaXmpiJVr9?g_st=ipc",
+    "name": "Innamorata",
+    "address": "Likourgou 5Α, Chalandri 152 31",
+    "lat": "38.01461731619136",
+    "lng": "23.78530839639015"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9QeJrtg4uVD3LnL38?g_st=ipc",
+    "name": "Botrini's Restaurant Athens",
+    "address": "Λεωφ. Βασιλέως Γεωργίου B 24, Χαλάνδρι 152 33",
+    "lat": "38.02321116531418",
+    "lng": "23.793992884008055"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ae2mzr6PphQKvoxT8?g_st=ipc",
+    "name": "Gardenista",
+    "address": "Παπανικολή 18, Χαλάνδρι 152 32",
+    "lat": "38.022288294318166",
+    "lng": "23.791808518147295"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wWwjB1wyAhWAY8CR9?g_st=ipc",
+    "name": "Lolita's Athens",
+    "address": "Λεωφ. Κηφισίας 340, Νέο Ψυχικό 154 51",
+    "lat": "38.00900352290236",
+    "lng": "23.77984898036716"
+  },
+  {
+    "url": "https://maps.app.goo.gl/s1dqcjcL1yJpKM4D7?g_st=ipc",
+    "name": "Dimitris Economides Athens",
+    "address": "Λεωφ. Κηφισίας 340, Νέο Ψυχικό 154 51",
+    "lat": "38.00891269766893",
+    "lng": "23.779612298452548"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iFowB3Xks7e5KZr67?g_st=ipc",
+    "name": "BurntBone",
+    "address": "Αγίου Κωνσταντίνου 50, Μαρούσι 151 24",
+    "lat": "38.04658414578802",
+    "lng": "23.806088897851588"
+  },
+  {
+    "url": "https://maps.app.goo.gl/g7jbxhgYDYFvpnKX6?g_st=ipc",
+    "name": "Αφρόψαρο",
+    "address": "Μαρίνου Αντύπα 62-66, Ηράκλειο 141 21",
+    "lat": "38.04349613246651",
+    "lng": "23.771888846159882"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3rzbE1xBxdLWH9Fm7?g_st=ipc",
+    "name": "Fuga restaurant & Bar",
+    "address": "Πέτρου Κόκκαλη 1, Αθήνα 115 21",
+    "lat": "37.98215631508218",
+    "lng": "23.753698661211164"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VKy2rrBX11ogrt618?g_st=ipc",
+    "name": "Hytra Restaurant & Bar",
+    "address": "1, Πέτρου Κόκκαλη STR, Αθήνα 115 21",
+    "lat": "37.98167691309065",
+    "lng": "23.75272858120184"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jUvgtGYVftJKQUeM7?g_st=ipc",
+    "name": "Ψαροκόκκαλο",
+    "address": "Ελ. Βενιζέλου 19, Μελίσσια 151 27",
+    "lat": "38.05403920943362",
+    "lng": "23.838870568638754"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FDQnvFLEucyn2rft6?g_st=ipc",
+    "name": "Kozi's",
+    "address": "Π. Τσαλδάρη 34, Μελίσσια 151 27",
+    "lat": "38.05410178054939",
+    "lng": "23.84283580469915"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eVWjuM8b4LpyY8yk7?g_st=ipc",
+    "name": "Cookoovaya",
+    "address": "Χατζηγιάννη Μέξη 2a, Αθήνα 115 28",
+    "lat": "37.976921193543475",
+    "lng": "23.751481425496852"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mzwKBdesag7itwYi6?g_st=ipc",
+    "name": "Simul",
+    "address": "Υψηλάντου 63, Αθήνα 115 21",
+    "lat": "37.97792157218587",
+    "lng": "23.750427343616465"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Em7n6W5HcPciEXPN7?g_st=ipc",
+    "name": "Ox Athens",
+    "address": "Χατζηγιάννη Μέξη 9, Αθήνα 115 28",
+    "lat": "37.975866043758764",
+    "lng": "23.75171237040956"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dJm31W4p6fxcPwDr7?g_st=ipc",
+    "name": "Seeds Restaurant",
+    "address": "Oumplianis 14, Diocharous 27, & 161 21",
+    "lat": "37.97301735223458",
+    "lng": "23.75389127288081"
+  },
+  {
+    "url": "https://maps.app.goo.gl/u2HXnXpcXqTUxdbF6?g_st=ipc",
+    "name": "Vezené Athens",
+    "address": "Βρασίδα 11, Αθήνα 115 28",
+    "lat": "37.97470285308878",
+    "lng": "23.751002243210046"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aRWFTJLNa9obfB379?g_st=ipc",
+    "name": "Orizontes Lycabettus",
+    "address": "Αριστίππου 1, Αθήνα 106 76",
+    "lat": "37.98180885773441",
+    "lng": "23.743545726263044"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LvCPT5L2JR5q3a5TA?g_st=ipc",
+    "name": "Forte Charitos Restaurant",
+    "address": "Χάρητος 43, Αθήνα 106 76",
+    "lat": "37.97881342237638",
+    "lng": "23.745155145341098"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VBn4DqpyECKgkc6z7?g_st=ipc",
+    "name": "Trattoria Capanna",
+    "address": "Πλουτάρχου 38, Αθήνα 106 75",
+    "lat": "37.97861725628422",
+    "lng": "23.7449616800858"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gH4BTnSVsyBMroV17?g_st=ipc",
+    "name": "WooWoo Athens",
+    "address": "Πατριάρχου Ιωακείμ 43, Αθήνα 106 75",
+    "lat": "37.97826618328873",
+    "lng": "23.744714006159654"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gjhhSnxNmG8dsNg58?g_st=ipc",
+    "name": "Gorlomi",
+    "address": "Πλουτάρχου 9, Αθήνα 106 75",
+    "lat": "37.97728860760529",
+    "lng": "23.74514103872722"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rXKGxv9snP1gaFVh9?g_st=ipc",
+    "name": "Zurbaran Athens",
+    "address": "Πατριάρχου Ιωακείμ 38, Αθήνα 106 75",
+    "lat": "37.97801172701077",
+    "lng": "23.744349686117033"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xJsngrNWcKcLy6AB6?g_st=ipc",
+    "name": "Iodio",
+    "address": "Λουκιανού 36, Αθήνα 106 75",
+    "lat": "37.97846718508711",
+    "lng": "23.7434152762831"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7nmcpWX3r9sBfd248?g_st=ipc",
+    "name": "Ronin",
+    "address": "Ξανθίππου 2, Αθήνα 106 75",
+    "lat": "37.97868261628751",
+    "lng": "23.74283922763361"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Nw5wbke6z4TMJnQi8?g_st=ipc",
+    "name": "St George Lycabettus Lifestyle Hotel",
+    "address": "Κλεομένους 2, Αθήνα 106 75",
+    "lat": "37.979411883866305",
+    "lng": "23.742302492612982"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NWNaSroxE1Lncry6A?g_st=ipc",
+    "name": "Rooftop Terrace on top of St. George Hotel",
+    "address": "Αθήνα 106 75",
+    "lat": "37.97925289319014",
+    "lng": "23.74214536289671"
+  },
+  {
+    "url": "https://maps.app.goo.gl/okbeASGTeSTwszzP7?g_st=ipc",
+    "name": "NiDo Athens",
+    "address": "Λεβέντη 5, Αθήνα 106 73",
+    "lat": "37.977919345579465",
+    "lng": "23.741770246682712"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9gWFrAvvmqBKsy2bA?g_st=ipc",
+    "name": "Brutus Tavern",
+    "address": "Λεβέντη 3, Αθήνα 106 73",
+    "lat": "37.9778313193549",
+    "lng": "23.741690006593426"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NaWhxNRMrgRxErcs7?g_st=ipc",
+    "name": "Papadakis Restaurant",
+    "address": "Φωκυλίδου 15, Αθήνα 106 73",
+    "lat": "37.979724577899326",
+    "lng": "23.74027811613999"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ybfkAt98uRcmLcZLA?g_st=ipc",
+    "name": "Zanó - Athens",
+    "address": "Παναγιώτου Αναγνωστοπούλου 3, Αθήνα 106 73",
+    "lat": "37.97774961244962",
+    "lng": "23.741221128338456"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LMGwAzhv7RzR34wj6?g_st=ipc",
+    "name": "Drakoulis Dry & Raw Kolonaki",
+    "address": "Πλ. Φιλικής Εταιρείας 14, Αθήνα 106 74",
+    "lat": "37.97718005520891",
+    "lng": "23.741289591081852"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZDppkuU7VyctpKx28?g_st=ipc",
+    "name": "Ακρα",
+    "address": "Αμύντα 12, Αθήνα 116 35",
+    "lat": "37.97187166175863",
+    "lng": "23.745034148490227"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wmG4jDbuv8SWkb2K8?g_st=ipc",
+    "name": "Γιάντες",
+    "address": "Βαλτετσίου 44, Αθήνα 106 81",
+    "lat": "37.985496291273606",
+    "lng": "23.735937070358016"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uyszTjt8NoxFPzGVA?g_st=ipc",
+    "name": "atole",
+    "address": "Γριβαίων 3 &, Δελφών 5, Αθήνα 106 80",
+    "lat": "37.98212745819382",
+    "lng": "23.73709285482029"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EwoNbTNDX9bmfSgf9?g_st=ipc",
+    "name": "10 Urban Roof",
+    "address": "Λεωφ. Αλεξάνδρας 10, Αθήνα 106 82",
+    "lat": "37.99116171206528",
+    "lng": "23.733113789092354"
+  },
+  {
+    "url": "https://maps.app.goo.gl/K2pf3xsJBhwfdAmR8?g_st=ipc",
+    "name": "Amen Gastronomic",
+    "address": "Ηρώνδα 8, Αθήνα 116 35",
+    "lat": "37.970762115684614",
+    "lng": "23.743270249717987"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oJzDuNQyNTeigZtU6?g_st=ipc",
+    "name": "Cinq Sens Athens",
+    "address": "Πύρρου 38, Αθήνα 116 33",
+    "lat": "37.964330906697526",
+    "lng": "23.749169578189175"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pUYvBf9Pyie8Th6y6?g_st=ipc",
+    "name": "NYX Japanese Rooftop Gastrobar",
+    "address": "Ομήρου 19, Αθήνα 106 19",
+    "lat": "37.979692789342245",
+    "lng": "23.73612228752731"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RBuX85zG8FLEfgP38?g_st=ipc",
+    "name": "Τηλέμαχος Athens",
+    "address": "Πανεπιστημίου 10, Αθήνα 106 71",
+    "lat": "37.97762848061713",
+    "lng": "23.73578847774419"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WYq3Lbdn3q9HxutG9?g_st=ipc",
+    "name": "MAPPEMONDE RESTAURANT BAR-LOUNGE",
+    "address": "4 Eleftheriou Venizelou Avenue and, Κριεζώτου 2, Αθήνα 106 71",
+    "lat": "37.97696364697298",
+    "lng": "23.73616989138591"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6F5c77DnjsqmPiiS8?g_st=ipc",
+    "name": "Soil Restaurant",
+    "address": "Φερεκύδου 5, Αθήνα 116 35",
+    "lat": "37.96695852322669",
+    "lng": "23.743066634939197"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XVTtg2fQJZ9BgKwf8?g_st=ipc",
+    "name": "Athénée",
+    "address": "Βουκουρεστίου 9, Αθήνα 106 71",
+    "lat": "37.97732441090204",
+    "lng": "23.73522238103731"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ATToqJxfAUoZ5G9K9?g_st=ipc",
+    "name": "Alexander's Cigar Lounge - Hotel Grande Bretagne",
+    "address": "Ξενοδοχείο Μεγάλη Βρεταννία, Αθήνα 105 64",
+    "lat": "37.9765761269288",
+    "lng": "23.735530035440927"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VcZAREtQXac8Kb7L8?g_st=ipc",
+    "name": "GB Roof Garden Restaurant & Bar",
+    "address": "Γεωρ. Α' 1, Αθήνα 105 64",
+    "lat": "37.97622612223311",
+    "lng": "23.735512001439584"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jhibZwcpc2dwd9vw9?g_st=ipc",
+    "name": "The Winter Garden",
+    "address": "Γεωρ. Α' 1, Αθήνα 105 64",
+    "lat": "37.97623725810017",
+    "lng": "23.735438816517487"
+  },
+  {
+    "url": "https://maps.app.goo.gl/F5z8usANoo63JuD88?g_st=ipc",
+    "name": "Ex Machina",
+    "address": "Εμπεδοκλέους 34, Αθήνα 116 36",
+    "lat": "37.96479312618342",
+    "lng": "23.743989976816355"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cS5CQSpmozciczpaA?g_st=ipc",
+    "name": "Tudor Hall",
+    "address": "Γεωρ. Α' 3, Αθήνα 105 64",
+    "lat": "37.97626476939356",
+    "lng": "23.73492119381686"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yjnQQMfc7oBpEhjn7?g_st=ipc",
     "name": "Spondi Restaurant",
-    "url": "https://maps.app.goo.gl/sample19",
-    "address": "Pyrronos 5, Athina 116 36",
-    "lat": 37.968,
-    "lng": 23.756
+    "address": "Πύρρωνος 5, Αθήνα 116 36",
+    "lat": "37.96512570220306",
+    "lng": "23.743047382502652"
   },
   {
-    "name": "Funky Gourmet",
-    "url": "https://maps.app.goo.gl/sample20",
-    "address": "Paramithias 13, Athina 104 35",
-    "lat": 37.985,
-    "lng": 23.718
+    "url": "https://maps.app.goo.gl/hdE6Uo7UUV1Sx4i76?g_st=ipc",
+    "name": "Il Salumaio d' Atene",
+    "address": "Παναγίτσας 3, Κηφισιά 145 62",
+    "lat": "38.07341261438747",
+    "lng": "23.81279655771526"
   },
   {
-    "name": "Hytra Restaurant",
-    "url": "https://maps.app.goo.gl/sample21",
-    "address": "Navarchou Apostoli 7, Athina 105 54",
-    "lat": 37.971,
-    "lng": 23.729
+    "url": "https://maps.app.goo.gl/p3ytMHs2cKCwK2j76?g_st=ipc",
+    "name": "Geco Athens",
+    "address": "Λέκκα 14, Αθήνα 105 62",
+    "lat": "37.97686179118327",
+    "lng": "23.732026538746123"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AAxiioC4fKMwJFS26?g_st=ipc",
+    "name": "Rick's",
+    "address": "Πεντέλης 1, Κηφισιά 145 62",
+    "lat": "38.073591059792",
+    "lng": "23.818979548150455"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7oxZNbR2DavBC6xc9?g_st=ipc",
+    "name": "Papaioannou Restaurant Kifissia",
+    "address": "Κολοκοτρώνη 32, Κηφισιά 145 62",
+    "lat": "38.0737767420817",
+    "lng": "23.819108183940664"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Dz6PnDZaCe8Db55q7?g_st=ipc",
+    "name": "Θανάσης 1948",
+    "address": "Κων/νου Καβάφη 48, Αθήνα 111 43",
+    "lat": "38.01944995786154",
+    "lng": "23.725569046206015"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZfHvRHaS1QGcXHjR6?g_st=ipc",
+    "name": "NATU",
+    "address": "Λεβίδου 13, Κηφισιά 145 62",
+    "lat": "38.0741668788152",
+    "lng": "23.814758280449073"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ou4XFAAMpTQ3uTaeA?g_st=ipc",
+    "name": "Art Lounge Rooftop",
+    "address": "Ναυάρχου Νικοδήμου 1, Αθήνα 105 57",
+    "lat": "37.97343240978713",
+    "lng": "23.73349750420062"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RDyBCidSMuRkERcq8?g_st=ipc",
+    "name": "ANTHES RESTAURANT",
+    "address": "Σκούφου 3, Αθήνα 105 57",
+    "lat": "37.974547276465074",
+    "lng": "23.732673103940233"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tUuLVQH5grYrdAAZ7?g_st=ipc",
+    "name": "Nolan",
+    "address": "Βουλής 31 - 33, Αθήνα 105 57",
+    "lat": "37.97480222800375",
+    "lng": "23.732371535491776"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zUugGUWG4UDszZX58?g_st=ipc",
+    "name": "Metropolis Roof Garden",
+    "address": "Μητροπόλεως 15, Αθήνα 105 57",
+    "lat": "37.97522262578899",
+    "lng": "23.732019777211896"
+  },
+  {
+    "url": "https://maps.app.goo.gl/N41tm7Rat4DFSsAU7?g_st=ipc",
+    "name": "Sushimou",
+    "address": "Σκούφου 6, Αθήνα 105 57",
+    "lat": "37.97442627061418",
+    "lng": "23.73246036031784"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tZNVrAuGYm6zBKgh9?g_st=ipc",
+    "name": "ΑΝΕΤΟΝ",
+    "address": "Ναυάρχου Νικοδήμου 3, Αθήνα 105 57",
+    "lat": "37.973499757295556",
+    "lng": "23.733045100192022"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Z185a4BudLXiNxEu8?g_st=ipc",
+    "name": "Okio Restaurant Fine Dining Athens",
+    "address": "Nikis 33 &, Ναυάρχου Νικοδήμου 3, Αθήνα 105 57",
+    "lat": "37.973490463159685",
+    "lng": "23.733043418426053"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wX7WWf8KNz7fjSU17?g_st=ipc",
+    "name": "Koumkan Athens",
+    "address": "Χαρ. Τρικούπη 48, Κηφισιά 145 62",
+    "lat": "38.074565539470925",
+    "lng": "23.821323887505876"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DRSR8qGkR5GU1Bts9?g_st=ipc",
+    "name": "Electra Roof Garden",
+    "address": "Ναυάρχου Νικοδήμου 18-20, Αθήνα 105 57",
+    "lat": "37.97379853875271",
+    "lng": "23.731619747681133"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WjuGe8xR7pKk3jr18?g_st=ipc",
+    "name": "Feedέλ Urban Gastronomy",
+    "address": "Κτενά 1, Αθήνα 105 63",
+    "lat": "37.976557315206726",
+    "lng": "23.729921899187712"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zfVsdMVE9KLHsZKR7?g_st=ipc",
+    "name": "Hasapika Central Market",
+    "address": "Αριστογείτονος 1, Αθήνα 105 51",
+    "lat": "37.98004920672925",
+    "lng": "23.72784326093664"
+  },
+  {
+    "url": "https://maps.app.goo.gl/f7xcdqi6HEkGGDrXA?g_st=ipc",
+    "name": "Ateno Cook & Deli",
+    "address": "Αιόλου 52 &, Μιλτιάδου, Αθήνα 105 60",
+    "lat": "37.97838376630937",
+    "lng": "23.72811686512798"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3rX2B6EznK5THCsX9?g_st=ipc",
+    "name": "The Zillers Rooftop Gastronomy",
+    "address": "Μητροπόλεως 54, Αθήνα 105 63",
+    "lat": "37.97561073825588",
+    "lng": "23.729618727455946"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NgSL8U8Jxe2dDBQ17?g_st=ipc",
+    "name": "Ciel Athens",
+    "address": "ΜΝΗΣΙΚΛΕΟΥΣ, Μητροπόλεως 2, Αθήνα 105 56",
+    "lat": "37.97569623880465",
+    "lng": "23.728776192217"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HCtBkZVH9f9shwEp9?g_st=ipc",
+    "name": "Samano Radio Restaurant",
+    "address": "Πλ. Φιλόμουσου Εταιρίας 3, Αθήνα 105 58",
+    "lat": "37.97164530530575",
+    "lng": "23.731079390163124"
+  },
+  {
+    "url": "https://maps.app.goo.gl/otc3c7Va7CjPm1DW6?g_st=ipc",
+    "name": "DOLLI•S",
+    "address": "Μητροπόλεως 49, Αθήνα 105 56",
+    "lat": "37.97581257538226",
+    "lng": "23.728126338151636"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HGyf6NBqrcUdSC2Q6?g_st=ipc",
+    "name": "STOFFA Restaurant",
+    "address": "Βασ. Αμαλίας 20, Κηφισιά 145 61",
+    "lat": "38.07709526139845",
+    "lng": "23.81028232052578"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WKQy9EmSUhqhWCug7?g_st=ipc",
+    "name": "Okra",
+    "address": "Μητροπόλεως 82, Αθήνα 105 55",
+    "lat": "37.976265060511366",
+    "lng": "23.727023267502062"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Z4tvsZgtjtshZ5in8?g_st=ipc",
+    "name": "Wood Restaurant",
+    "address": "Εμμανουήλ Μπενάκη 22, Κηφισιά 145 61",
+    "lat": "38.07791110310903",
+    "lng": "23.811544603806652"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BrJr73pSejAaUrbq6?g_st=ipc",
+    "name": "SENSE Modern Greek Cuisine",
+    "address": "Διονυσίου Αρεοπαγίτου 5, Αθήνα 117 42",
+    "lat": "37.96950501164825",
+    "lng": "23.730857786980206"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GXQoSjefiFBRaDGv7?g_st=ipc",
+    "name": "Monzu Kifisia",
+    "address": "Λεωφ. Κηφισίας 317b, Κηφισιά 145 61",
+    "lat": "38.07940005653839",
+    "lng": "23.813943332774045"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3itc1dgDWbdcs6649?g_st=ipc",
+    "name": "Makris Athens Fine Dining Restaurant",
+    "address": "Astiggos 10, Ερμού 119, Αθήνα 105 55",
+    "lat": "37.97675780023075",
+    "lng": "23.722883040179465"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XJabCFiZNQjmGZzb7?g_st=ipc",
+    "name": "ΜΑΝΗΜΑΝΗ",
+    "address": "Φαλήρου 10, Αθήνα 117 42",
+    "lat": "37.96669521915854",
+    "lng": "23.72836820432756"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ldu5GaEmi8GWuxbX6?g_st=ipc",
+    "name": "Esthio Athens",
+    "address": "Δημητρακοπούλου 7, Αθήνα 117 42",
+    "lat": "37.96676654589047",
+    "lng": "23.72827244889686"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NiwbpnxKE4g22Tzw6?g_st=ipc",
+    "name": "POINT A (Acropolis Point)",
+    "address": "Ροβέρτου Γκάλι 4a, Αθήνα 117 42",
+    "lat": "37.968415622994755",
+    "lng": "23.72706617377212"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SEiQ4TaHrnqFedUp9?g_st=ipc",
+    "name": "Kuzina",
+    "address": "Αδριανού 9, Αθήνα 105 55",
+    "lat": "37.97641837479381",
+    "lng": "23.722069175394093"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4upFvmVgdSbUxB7F8?g_st=ipc",
+    "name": "Aleria Restaurant",
+    "address": "Μεγ. Αλεξάνδρου 57, Αθήνα 104 35",
+    "lat": "37.983083255227115",
+    "lng": "23.717769708530103"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KpcsdbWmQM1rsB9dA?g_st=ipc",
+    "name": "Osteria Mamma",
+    "address": "Σαλαμίνος 64, Αθήνα 104 35",
+    "lat": "37.98294206858995",
+    "lng": "23.71602963121187"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GpnAhWfdMHLu7ZMPA?g_st=ipc",
+    "name": "CTC Urban Gastronomy",
+    "address": "Πλαταιών 15, Αθήνα 104 35",
+    "lat": "37.98049469537203",
+    "lng": "23.71689046945663"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zkqCQmDUHjdt7RX4A?g_st=ipc",
+    "name": "Gallina Athens",
+    "address": "Μαρκ. Μπότσαρη 49, Αθήνα 117 42",
+    "lat": "37.964508186769734",
+    "lng": "23.726121733406966"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FdaHgzGN8Q8h9ubz8?g_st=ipc",
+    "name": "Jerár",
+    "address": "Αγίας Βαρβάρας 55, Δάφνη Αττικής 172 35",
+    "lat": "37.951578580834756",
+    "lng": "23.735160182054084"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kdwd63rguvb581o36?g_st=ipc",
+    "name": "Στα Καλά Καθούμενα",
+    "address": "Ιερά Οδός 25-27-29, Ιερά Οδός 29, Αθήνα 118 54",
+    "lat": "37.97981343858823",
+    "lng": "23.713855292153"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Lw19R1SYRg5uJsbn9?g_st=ipc",
+    "name": "Basegrill Athens",
+    "address": "Λεωφ. Κωνσταντινουπόλεως 64, Περιστέρι 121 33",
+    "lat": "38.011892662985154",
+    "lng": "23.708178655362712"
+  },
+  {
+    "url": "https://maps.app.goo.gl/V3ngNHyJA9qDkeyJ9?g_st=ipc",
+    "name": "Χρώματα Βυθού",
+    "address": "Εκάλης 40, Νέα Ερυθραία 146 71",
+    "lat": "38.0879239564187",
+    "lng": "23.814850193997692"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SyrzTdSeaJcSZMj28?g_st=ipc",
+    "name": "Travolta Athens",
+    "address": "Αγίου Παύλου 33, Περιστέρι 121 32",
+    "lat": "38.005280171628534",
+    "lng": "23.702492953168832"
+  },
+  {
+    "url": "https://maps.app.goo.gl/o5KA9u8fZnaZ9XMY6?g_st=ipc",
+    "name": "Herve Restaurant",
+    "address": "Τριών Ιεραρχών 170, Αθήνα 118 52",
+    "lat": "37.96670241575443",
+    "lng": "23.709370285349806"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YmorNGxoDArPTMg56?g_st=ipc",
+    "name": "Ζάαταρ",
+    "address": "Χειμάρρας 7, Νέα Ερυθραία 146 71",
+    "lat": "38.09899314317068",
+    "lng": "23.81974662163474"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mKgbMMS1cXaQqrtLA?g_st=ipc",
+    "name": "Kenko Japanese Restaurant",
+    "address": "Λεωφ. Ελ. Βενιζέλου 22, Νέα Σμύρνη 171 21",
+    "lat": "37.947294316233865",
+    "lng": "23.71504061514003"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wrkHDhigdmHrrokL8?g_st=ipc",
+    "name": "Meat the Stars",
+    "address": "Λεωφ. Μαραθώνος 63, Πικέρμι 190 09",
+    "lat": "38.00243883538717",
+    "lng": "23.941476693248035"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nAwF6RqCeQF6rY2P9?g_st=ipc",
+    "name": "e&o Pan-Asian Restaurant Athens",
+    "address": "Λεωφ. Ανδρέα Συγγρού 385, Παλαιό Φάληρο 175 64",
+    "lat": "37.94077150497406",
+    "lng": "23.696879786243304"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GSgBvngfewJdVtkA7?g_st=ipc",
+    "name": "Delta Restaurant",
+    "address": "Λεωφ. Ανδρέα Συγγρού 364, Αθήνα 176 74",
+    "lat": "37.939081506016144",
+    "lng": "23.69146940163584"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KrWjCjHhBZcKtAsU9?g_st=ipc",
+    "name": "ΝΕΣΤ Rooftop - Monte Kastella",
+    "address": "Λεωφ. Αλ. Παπαναστασίου 109, Πειραιάς 185 33",
+    "lat": "37.93966255701075",
+    "lng": "23.661584217897186"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rqEtmfcH3ZARtEsf7?g_st=ipc",
+    "name": "Varoulko Seaside Restaurant",
+    "address": "Ακτή Κουμουνδούρου 54, Πειραιάς 185 33",
+    "lat": "37.93728764717136",
+    "lng": "23.658501845885716"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3DKm52Lh2ApKNN1X8?g_st=ipc",
+    "name": "Mitsis N'U Piraeus Port",
+    "address": "Αριστείδου 16-20, Πειραιάς 185 31",
+    "lat": "37.946256281878604",
+    "lng": "23.642735306655823"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2E1n4NVs2CjMsLQo7?g_st=ipc",
+    "name": "BEASTALIS ,Food for proud meat eaters",
+    "address": "Κύπρου 9, Γλυφάδα 166 75",
+    "lat": "37.867214606158306",
+    "lng": "23.7473035874199"
+  },
+  {
+    "url": "https://maps.app.goo.gl/axUbgwvJZkdNUx4n8?g_st=ipc",
+    "name": "FEEDEL ASADOR",
+    "address": "Ν Ζερβα 24 Και, Κύπρου, Γλυφάδα 166 75",
+    "lat": "37.86621086434499",
+    "lng": "23.74871853137983"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KsnmFZ1WnGooiyEV7?g_st=ipc",
+    "name": "Hams & Clams",
+    "address": "Λιμάνι, Μαρίνα Ζέας, Πειραιάς 185 37",
+    "lat": "37.93313157813386",
+    "lng": "23.64744436080488"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Uw1vLRNczCvaVvgf8?g_st=ipc",
+    "name": "Caretta Athens",
+    "address": "Διαδόχου Παύλου 46, Γλυφάδα 166 75",
+    "lat": "37.8628471518072",
+    "lng": "23.74485660521178"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hxrPoafUYa9EUkbw7?g_st=ipc",
+    "name": "Basegrill",
+    "address": "Ζησιμοπούλου 5, Γλυφάδα 166 74",
+    "lat": "37.86050537468002",
+    "lng": "23.752246157817687"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Dx4oajrWFGZwwetZ9?g_st=ipc",
+    "name": "Ark",
+    "address": "Γρ. Λαμπράκη 2, Γλυφάδα 166 74",
+    "lat": "37.85971913916164",
+    "lng": "23.74981043696894"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cZjRzro2aqBguv3EA?g_st=ipc",
+    "name": "Bungalow7 Athens",
+    "address": "Λεωφ. Ποσειδώνος 110, Γλυφάδα 166 75",
+    "lat": "37.85872799573807",
+    "lng": "23.751508806698986"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oUiPt5pCahzP963D8?g_st=ipc",
+    "name": "Barbarossa Athens",
+    "address": "Λεωφ. Αλκυονίδων 4, Βούλα 166 73",
+    "lat": "37.85088920250088",
+    "lng": "23.748814418850717"
+  },
+  {
+    "url": "https://maps.app.goo.gl/keaSEXUAsA2Tk34x9?g_st=ipc",
+    "name": "FAIDON'S Athens",
+    "address": "Αγίου Ιωάννου 28, Βούλα 166 73",
+    "lat": "37.841556503840984",
+    "lng": "23.766513107501794"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Uip41WWw3kvAGzDG9?g_st=ipc",
+    "name": "Sea Satin Athens Riviera",
+    "address": "Λεωφ. Κωνσταντίνου Καραμανλή 14, Βούλα 166 73",
+    "lat": "37.840370182607195",
+    "lng": "23.760387083086915"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uMQc68wzQ6KRLhmv6?g_st=ipc",
+    "name": "Drakoulis Dry & Raw - Butcheries Voula",
+    "address": "Λεωφ. Βασιλέως Παύλου 103, Βούλα 166 73",
+    "lat": "37.837831960071576",
+    "lng": "23.769665916102717"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bgcHWrkEN1tinWgK8?g_st=ipc",
+    "name": "Εστιατόριο Ιθάκη",
+    "address": "Apollonos, Αθήνας 28, Βουλιαγμένη 166 71",
+    "lat": "37.811063360560766",
+    "lng": "23.773264732265726"
+  },
+  {
+    "url": "https://maps.app.goo.gl/H6wg8L7hEhDJU9C38?g_st=ipc",
+    "name": "Labros Restaurant",
+    "address": "Λεωφ. Ποσειδώνος 20, Βουλιαγμένη 166 71",
+    "lat": "37.8081975831625",
+    "lng": "23.78348018457994"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XBCeyEooo1BQ3GPW6?g_st=ipc",
+    "name": "abraOvata",
+    "address": "Εστιατόριο Λίμνης, Αθήνα 166 71",
+    "lat": "37.806852023213075",
+    "lng": "23.785311811319485"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7ZfHDaS8XMMaED3P7?g_st=ipc",
+    "name": "Matsuhisa Athens",
+    "address": "40, Απόλλωνος street, Βουλιαγμένη 166 71",
+    "lat": "37.80698321398831",
+    "lng": "23.772172298341644"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xaizfkEuwTxWbciw7?g_st=ipc",
+    "name": "Taverna 37",
+    "address": "Απόλλωνος 40, Βουλιαγμένη 166 71",
+    "lat": "37.80595380281949",
+    "lng": "23.772585533663307"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QTPENP7kfSJRAMQTA?g_st=ipc",
+    "name": "Pelagos",
+    "address": "Απόλλωνος 40, Βουλιαγμένη 166 71",
+    "lat": "37.805275140067316",
+    "lng": "23.77164308843121"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xvud7RHhQEFXiChq5?g_st=ipc",
+    "name": "Beefbar Athens",
+    "address": "Athens Αστήρ Πάλας, Βουλιαγμένη 166 71",
+    "lat": "37.80501795981881",
+    "lng": "23.770115727453245"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oMKnEgoxXK8SmMSZ9?g_st=ipc",
+    "name": "Moorings",
+    "address": "Μαρινα Βουλιαγμενης, Βουλιαγμένη 166 71",
+    "lat": "37.80205167123695",
+    "lng": "23.77263048977829"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9YgR6NNiMCEfXVTc6?g_st=ipc",
+    "name": "Nakal State of Mind",
+    "address": "Αυλακίου 100, Πόρτο Ράφτη 190 03",
+    "lat": "37.86969888591183",
+    "lng": "24.027576175967926"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Bbcu94gWiDCHZAwH8?g_st=ipc",
+    "name": "Κάβος",
+    "address": "Ίσθμια 201 00",
+    "lat": "37.9019731487588",
+    "lng": "23.01292410391318"
   }
 ]
