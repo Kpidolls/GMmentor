@@ -25,14 +25,14 @@ const App = () => {
   return (
     <div className="bg-white">
       <Head>
-        <title>{`${t('meta.homeTitle')} ${new Date().getFullYear()}`}</title>
+        <title>{t('meta.homeTitle')}</title>
         <meta
           name="description"
           content={t('meta.homeDescription')}
         />
         <link rel="canonical" href="https://googlementor.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content={`${t('meta.homeTitle')} ${new Date().getFullYear()}`} />
+        <meta property="og:title" content={t('meta.homeTitle')} />
         <meta property="og:description" content={t('meta.homeDescription')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://googlementor.com" />
