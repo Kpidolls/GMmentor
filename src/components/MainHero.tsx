@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import Head from 'next/head';
 import restaurantsData from '../data/greekRestaurants.json';
 import municipalitiesData from '../data/municipalities.json';
 import categoriesData from '../data/restaurantCategories.json';
@@ -631,30 +630,6 @@ const MainHero = () => {
 
   return (
     <>
-      <Head>
-        <title>Googlementor – Discover Authentic Greece | Local Travel Guides & Maps</title>
-        <meta
-          name="description"
-          content="Explore Greece with confidence using our locally-curated maps, authentic restaurant recommendations, and insider travel guides. Discover hidden gems from Athens to the Greek islands."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Googlementor – Discover Authentic Greece" />
-        <meta
-          property="og:description"
-          content="Locally-curated travel maps and authentic restaurant guides for exploring Greece like a local."
-        />
-        <meta property="og:image" content="/assets/images/cover.webp" />
-        <meta property="og:url" content="https://www.googlementor.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link
-          rel="preload"
-          as="image"
-          href="/assets/images/cover.webp"
-          type="image/webp"
-        />
-      </Head>
-
       {/* PWA Components */}
       <OfflineNotice position="top" />
       <InstallBanner position="bottom" showAfterDelay={4000} />
