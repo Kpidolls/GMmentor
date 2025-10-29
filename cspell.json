@@ -628,6 +628,7 @@
     "egremni",
     "EKIBEN",
     "ekklisia",
+    "Eleftherios",
     "elegant",
     "Elliniko",
     "Ellovos",
@@ -5375,5 +5376,8 @@
   ],
   "flagWords": [],
   "allowCompoundWords": true,
-  "dictionaries": ["en", "el"]
+  "dictionaries": [
+    "en",
+    "el"
+  ]
 }
