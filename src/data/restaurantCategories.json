@@ -111,11 +111,26 @@
     "keywords": ["gyros", "souvlaki", "greek", "traditional", "street food"]
   },
   {
-    "id": "bougatsa",
-    "name": "Bougatsa Shops",
-    "description": "Traditional Greek pastry specialists",
-    "icon": "🥧",
-    "color": "from-yellow-400 to-amber-500",
-    "keywords": ["bougatsa", "pastry", "traditional", "greek", "thessaloniki"]
+    "id": "family-friendly",
+    "name": "Family Friendly Locations",
+    "description": "Places welcoming families with kids — play areas, family menus, and stroller access",
+    "icon": "👨‍👩‍👧‍👦",
+    "color": "from-emerald-400 to-teal-500",
+    "keywords": [
+      "family",
+      "kids",
+      "child-friendly",
+      "playground",
+      "stroller",
+      "family menu",
+      "kid-friendly",
+      "child-friendly",
+      "playground",
+      "stroller",
+      "family menu",
+      "kid-friendly",
+      "children",
+      "casual"
+    ]
   }
 ]

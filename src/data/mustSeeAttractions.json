@@ -1,0 +1,436 @@
+[
+  {
+    "url": "https://maps.app.goo.gl/8fas6bpPgSs2neZj8?g_st=ipc",
+    "name": "Ολυμπιακό Στάδιο Αθηνών",
+    "address": "Λεωφ. Ολυμπιονίκου Σπύρου Λούη 1, Μαρούσι 151 23",
+    "lat": "38.035910568153284",
+    "lng": "23.786973025948996"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fcKT8gTb8XfWLvDa7?g_st=ipc",
+    "name": "Μέγαρο Μουσικής Αθηνών",
+    "address": "Βασιλίσσης Σοφίας, Πέτρου Κόκκαλη &, Αθήνα",
+    "lat": "37.98113320826234",
+    "lng": "23.754226747419665"
+  },
+  {
+    "url": "https://maps.app.goo.gl/muvvb7CTCn3yFhWj6?g_st=ipc",
+    "name": "Λυκαβηττός",
+    "address": "Σαρανταπήχου, Μονοπατι Λυκαβηττου &, Αθήνα 114 71",
+    "lat": "37.98323503241099",
+    "lng": "23.746500382209337"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BnpGTjqhDuV8Nenn9?g_st=ipc",
+    "name": "Ιερός Ναός Αγίων Ισιδώρων Λυκαβηττού",
+    "address": "Μονοπατι Λυκαβηττου, Αθήνα 114 71",
+    "lat": "37.982294745131696",
+    "lng": "23.74279440377978"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jffFuAXc3Vq1DSsD8?g_st=ipc",
+    "name": "Βυζαντινό και Χριστιανικό Μουσείο",
+    "address": "Λεωφ. Βασιλίσσης Σοφίας 22, Αθήνα 106 75",
+    "lat": "37.9753760157153",
+    "lng": "23.744611863575788"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tPkYqHsHmRpbKSaX9?g_st=ipc",
+    "name": "Μουσείο Μπενάκη Ελληνικού Πολιτισμού | Benaki Museum of Greek Culture",
+    "address": "",
+    "lat": "37.97595332142378",
+    "lng": "23.740446335275582"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yMXMdhRrheqLTtjc9?g_st=ipc",
+    "name": "Εθνικό Αρχαιολογικό Μουσείο",
+    "address": "28ης Οκτωβρίου 44, Αθήνα 106 82",
+    "lat": "37.989024298697544",
+    "lng": "23.73276057362421"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jXVzy7hmkNKGbif26?g_st=ipc",
+    "name": "Βοτανικό Μουσείο Εθνικού Κήπου",
+    "address": "Λεωφ. Βασιλίσσης Σοφίας, Αθήνα 105 57",
+    "lat": "37.97408914636613",
+    "lng": "23.7389299048779"
+  },
+  {
+    "url": "https://maps.app.goo.gl/unRrdoEdMtGJhBhX8?g_st=ipc",
+    "name": "Βουλή των Ελλήνων",
+    "address": "Μέγαρο, Βουλής, Αθήνα 100 21",
+    "lat": "37.97534017568183",
+    "lng": "23.73691601580171"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EoVCRRTzjoVCkEm18?g_st=ipc",
+    "name": "Παναθηναϊκό Στάδιο",
+    "address": "Λεωφ. Βασιλέως Κωνσταντίνου, Αθήνα 116 35",
+    "lat": "37.96833218533537",
+    "lng": "23.741113035876687"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EPdJbYsoM1wXLMLy5?g_st=ipc",
+    "name": "Εθνικός Κήπος",
+    "address": "Αθήνα 105 57",
+    "lat": "37.97258755244098",
+    "lng": "23.73743274111468"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Hb78YQFedU1ZBjDY7?g_st=ipc",
+    "name": "Ζάππειο Μέγαρο",
+    "address": "Λεωφ. Βασιλίσσης Όλγας, Αθήνα 105 57",
+    "lat": "37.971521700592604",
+    "lng": "23.73672254708253"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5RjMWARRwZPM2Kdw6?g_st=ipc",
+    "name": "Κήποι Ζαππείου",
+    "address": "Λεωφ. Βασιλίσσης Όλγας 1, Αθήνα 105 57",
+    "lat": "37.97023042997274",
+    "lng": "23.73586719386634"
+  },
+  {
+    "url": "https://maps.app.goo.gl/umvyXLD9iKw3FVBTA?g_st=ipc",
+    "name": "Ρωμαϊκά Λουτρά Ζαππείου",
+    "address": "Λεωφ. Βασιλίσσης Αμαλίας 405, Αθήνα 105 57",
+    "lat": "37.97157046328902",
+    "lng": "23.73377918203135"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MRiS2rx9HUUxeppD6?g_st=ipc",
+    "name": "Ναός του Ολυμπίου Διός",
+    "address": "Αθήνα 105 57",
+    "lat": "37.96929966455042",
+    "lng": "23.733099967898216"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FgkJ1umuygHQYmoC8?g_st=ipc",
+    "name": "Ολυμπίου Διός",
+    "address": "Αθήνα 105 58",
+    "lat": "37.97177631416209",
+    "lng": "23.731310537974434"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BWatUxUvLvu5LHMP9?g_st=ipc",
+    "name": "Πλατεία Μοναστηρακίου",
+    "address": "Απόλλωνος 21, Αθήνα 105 57",
+    "lat": "37.97640816584317",
+    "lng": "23.725886410870196"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tWCR6cy3umt66P4p6?g_st=ipc",
+    "name": "Αναφιώτικα",
+    "address": "Αθήνα 105 58",
+    "lat": "37.97237012452399",
+    "lng": "23.728116657972198"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Mr5MTi9dXGy4Y8Gt5?g_st=ipc",
+    "name": "Βιβλιοθήκη του Αδριανού",
+    "address": "Κ, Άρεως 3, Τ, Αθήνα 105 55",
+    "lat": "37.975502314737916",
+    "lng": "23.726030220996723"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JcpJbaRT1V7eBHEa9?g_st=ipc",
+    "name": "Ψυρρή",
+    "address": "Αθήνα 105 54",
+    "lat": "37.9780643555903",
+    "lng": "23.723930742700833"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ix2gNhhwsMZiBHES8?g_st=ipc",
+    "name": "Ρωμαϊκή Αγορά Αθηνών",
+    "address": "Πολυγνώτου 3, Αθήνα 105 55",
+    "lat": "37.974304073145795",
+    "lng": "23.72610046442621"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5RAt8qpszUA945pG8?g_st=ipc",
+    "name": "Νότια Κλιτύς Ακρόπολης Αθηνών",
+    "address": "Διονυσίου Αρεοπαγίτου, Αθήνα 105 58",
+    "lat": "37.96962866994438",
+    "lng": "23.729046031418846"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ztHmcesfndwzvFuRA?g_st=ipc",
+    "name": "Παρθενώνας",
+    "address": "Αθήνα 105 58",
+    "lat": "37.97152775110389",
+    "lng": "23.726714874737574"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ij6x92mGVau3FvST9?g_st=ipc",
+    "name": "Roman Basilica",
+    "address": "Αδριανού 27, Αθήνα 105 55",
+    "lat": "37.97583750461877",
+    "lng": "23.723867490000497"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZqiBPBtN3PxoeXmY8?g_st=ipc",
+    "name": "Μουσείο Ακρόπολης",
+    "address": "Διονυσίου Αρεοπαγίτου 15, Αθήνα 117 42",
+    "lat": "37.96845037815513",
+    "lng": "23.728523216398074"
+  },
+  {
+    "url": "https://maps.app.goo.gl/p7J1mcB5DGfqSALg6?g_st=ipc",
+    "name": "Ακρόπολη Αθηνών",
+    "address": "Αθήνα 105 58",
+    "lat": "37.97153381829169",
+    "lng": "23.7257493192379"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rjXRZrpDRp5VnNP2A?g_st=ipc",
+    "name": "Ωδείο Ηρώδου του Αττικού",
+    "address": "Διονυσίου Αρεοπαγίτου, Αθήνα 105 55",
+    "lat": "37.97079439393834",
+    "lng": "23.724582622108812"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ofAbPpuVbSmGyHGy7?g_st=ipc",
+    "name": "Αρχαία Αγορά Αθηνών",
+    "address": "Αθήνα 105 55",
+    "lat": "37.97489898202124",
+    "lng": "23.722093444133804"
+  },
+  {
+    "url": "https://maps.app.goo.gl/auHh3GwXgN8RTikx6?g_st=ipc",
+    "name": "Ναός του Ηφαίστου",
+    "address": "Αθήνα 105 55",
+    "lat": "37.9755941105574",
+    "lng": "23.721451459878914"
+  },
+  {
+    "url": "https://maps.app.goo.gl/i7GUzZ6ceEZCukDC6?g_st=ipc",
+    "name": "Θησείο",
+    "address": "Αθήνα 118 51",
+    "lat": "37.97501242037082",
+    "lng": "23.717080869886306"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oZosE6Kbfk2BP5e67?g_st=ipc",
+    "name": "Λόφος Φιλοπάππου",
+    "address": "Φυλής 215, Αθήνα 117 41",
+    "lat": "37.96711952882775",
+    "lng": "23.721574966297474"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6gQt8KFRg9ZbnwLVA?g_st=ipc",
+    "name": "Εθνικό Αστεροσκοπείο Αθηνών - Κέντρο Επισκεπτών Θησείου",
+    "address": "Λόφος Νυμφών Θησείο, ΤΘ 20048, Αθήνα 118 10",
+    "lat": "37.972744612814594",
+    "lng": "23.717947819468222"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yJCvqZ3YjAxVjgmU6?g_st=ipc",
+    "name": "Πνύκα",
+    "address": "Αθήνα 117 41",
+    "lat": "37.96737351880718",
+    "lng": "23.721158867490345"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pQWTjEcbS98njE48A?g_st=ipc",
+    "name": "Κέντρο Πολιτισμού Ίδρυμα Σταύρος Νιάρχος",
+    "address": "Λεωφ. Ανδρέα Συγγρού 364, Καλλιθέα 176 74",
+    "lat": "37.939856198299935",
+    "lng": "23.69211972785974"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vxdQs7SscGUC98hY9?g_st=ipc",
+    "name": "Μαρίνα Φλοίσβου",
+    "address": "Flisvos Marina, Αθήνα 175 61",
+    "lat": "37.9311951612676",
+    "lng": "23.68504538337465"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wutdpyatwyXBUYRR6?g_st=ipc",
+    "name": "Ιερά Μονή Δαφνίου",
+    "address": "Ιερά Οδός, Χαϊδάρι 124 61",
+    "lat": "38.012987406661985",
+    "lng": "23.63601735879107"
+  },
+  {
+    "url": "https://maps.app.goo.gl/T618Z3KqK9zezNFE9?g_st=ipc",
+    "name": "Το Ρολόι του Πειραιά",
+    "address": "Ακτή Μουτσοπούλου 6, Πειραιάς 185 35",
+    "lat": "37.93913367533199",
+    "lng": "23.648716548781902"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GHxTmYXX8KQuXnnF8?g_st=ipc",
+    "name": "Ναός Βραυρωνίας Αρτέμιδος",
+    "address": "Βραυρώνα 190 03",
+    "lat": "37.925951413998256",
+    "lng": "23.993485515950447"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HJESfC3rnS8i8UYa9?g_st=ipc",
+    "name": "Λίμνη Βουλιαγμένης",
+    "address": "Βουλιαγμένη 166 71",
+    "lat": "37.80708594211009",
+    "lng": "23.78595413697381"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CQEgQ38KdmafS3mN7?g_st=ipc",
+    "name": "Αρχαιολογικός Χώρος Ελευσίνας",
+    "address": "Σωτηρίου Γκιόκα 1, Ελευσίνα 192 00",
+    "lat": "38.04235410298215",
+    "lng": "23.539415339881792"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TEdzv6vPybFxQzP18?g_st=ipc",
+    "name": "Ναός της Αφαίας",
+    "address": "Αίγινα 180 10",
+    "lat": "37.75437516471331",
+    "lng": "23.533121298393443"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YdUw2GvNU3PMRgCM6?g_st=ipc",
+    "name": "Railbiking in Greece",
+    "address": "28ης Οκτωβρίου 197, Μέγαρα 191 00",
+    "lat": "37.98899577004485",
+    "lng": "23.337743851168998"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TiGdJ3goZZvH3vQTA?g_st=ipc",
+    "name": "Ναός Ποσειδώνα",
+    "address": "Σούνιο 195 00",
+    "lat": "37.65020662017392",
+    "lng": "24.024585105239044"
+  },
+  {
+    "url": "https://maps.app.goo.gl/H1hDYWZinAPpvjKR9?g_st=ipc",
+    "name": "Αρχαιολογικός Χώρος Σουνίου",
+    "address": "Λαυρεωτική 195 00",
+    "lat": "37.65015898457581",
+    "lng": "24.02460331248824"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4DoJ6SnBtgDpmScf7",
+    "name": "Αρχαία Επίδαυρος - Βυθισμένη πολιτεία sunken city",
+    "address": "Παραλία Γκλιατη 1, Αρχαία Επίδαυρος 210 59",
+    "lat": "37.62558699316192",
+    "lng": "23.15824375963821"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cmoYHbzQvg5Nv9KN7?g_st=ipc",
+    "name": "Διώρυγα της Κορίνθου",
+    "address": "Λουτράκι 203 00",
+    "lat": "37.934260646159885",
+    "lng": "22.98428860726812"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uSXp93uUxm32U2Ms6?g_st=ipc",
+    "name": "Skydive Athens",
+    "address": "Kopaida Airfield, Kastro Viotias 323 00",
+    "lat": "38.45479327540192",
+    "lng": "23.137313881202427"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4dZguixUu49kmP199?g_st=ipc",
+    "name": "Αρχαίο Θέατρο Ασκληπιείου Επιδαύρου",
+    "address": "Επίδαυρος 210 52",
+    "lat": "37.59612250456949",
+    "lng": "23.079285116251615"
+  },
+  {
+    "url": "https://maps.app.goo.gl/b4Z6adjUcQFQhcNL7?g_st=ipc",
+    "name": "Αρχαιολογικός Χώρος Ασκληπιείου Επιδαύρου",
+    "address": "Επίδαυρος 210 52",
+    "lat": "37.596069935653894",
+    "lng": "23.077204053695286"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Wa4GWgjzXVLMVAyZ7?g_st=ipc",
+    "name": "Αρχαία Κόρινθος",
+    "address": "Αρχαία Κόρινθος 200 07",
+    "lat": "37.90716292407013",
+    "lng": "22.881429703730713"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8vWipRURHj9oGwSj8?g_st=ipc",
+    "name": "Ναός του Απόλλωνα",
+    "address": "Άργους 105, Αρχαία Κόρινθος 200 07",
+    "lat": "37.905934819191934",
+    "lng": "22.879090197503242"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ihjdRvavpYz6Jjd5A?g_st=ipc",
+    "name": "Σπήλαιο Καταφύκι",
+    "address": "Δρυοπίδα 840 06",
+    "lat": "37.381809266398925",
+    "lng": "24.430137129464182"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BqhWK8uyZVNjhnRG8?g_st=ipc",
+    "name": "Αρχαιολογικού Χώρου Μυκηνών",
+    "address": "Μυκήνες 212 00",
+    "lat": "37.73086788150969",
+    "lng": "22.75613319936325"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wvmKvmFpppdNJFd78?g_st=ipc",
+    "name": "Μυκήνες",
+    "address": "Μυκήνες 212 00",
+    "lat": "37.719549554552074",
+    "lng": "22.745771038100788"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PrH4BXCt62jqPBys9?g_st=ipc",
+    "name": "Αρχαιολογικός Χώρος Νεμέας",
+    "address": "Koutsomidi, Nemea 205 00",
+    "lat": "37.808169165276894",
+    "lng": "22.71117627010056"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qq546eKqcWFHVGyWA?g_st=ipc",
+    "name": "Τίρυνθα",
+    "address": "Tirintha 211 00",
+    "lat": "37.596581091934894",
+    "lng": "22.800009234306064"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JVvCKFqv1vyzhKAP7?g_st=ipc",
+    "name": "Φρούριο Παλαμηδίου",
+    "address": "Παλαμηδίου, Ναύπλιο 211 00",
+    "lat": "37.562018953170636",
+    "lng": "22.803816386211206"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DkbZi8R48n8E7Qu76?g_st=ipc",
+    "name": "Κάστρο Ακροναυπλίας",
+    "address": "Άγγελου Τερζάκη 25, Ναύπλιο 211 00",
+    "lat": "37.56407670573787",
+    "lng": "22.793195253729316"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sWU36E9QQXcW8jCP7?g_st=ipc",
+    "name": "Θόλος της Αθηνάς Προναίας",
+    "address": "Δελφοί 330 54",
+    "lat": "38.480181188125016",
+    "lng": "22.507891151559672"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZFhK1WzED1X3rqNX7?g_st=ipc",
+    "name": "Αρχαιολογικός Χώρος Δελφών",
+    "address": "Δελφοί 330 54",
+    "lat": "38.48256715110526",
+    "lng": "22.501447020510593"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vhNTNbS2nJx1YD8n8?g_st=ipc",
+    "name": "Εθνικός Δρυμός Πάρνηθας",
+    "address": "Πάρνηθα 136 72",
+    "lat": "38.15998271976968",
+    "lng": "23.71947970128565"
+  },
+  {
+    "url": "https://maps.app.goo.gl/djGFTxoDCCB83eyN6?g_st=ipc",
+    "name": "Αέρηδες",
+    "address": "Αθήνα 105 55",
+    "lat": "37.97449623338425",
+    "lng": "23.727043202053398"
+  }
+]
