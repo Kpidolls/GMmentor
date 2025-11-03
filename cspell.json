@@ -7,6 +7,7 @@
     "about",
     "About",
     "aboutUs",
+    "abraOvata",
     "absorbent",
     "accept",
     "accessible",
@@ -119,6 +120,7 @@
     "And",
     "andreas",
     "Android",
+    "Anixi",
     "Anker",
     "ankerMultiUsbPort",
     "Annie",
@@ -666,6 +668,7 @@
     "Egialia",
     "egian",
     "egremni",
+    "Ekali",
     "EKIBEN",
     "ekklisia",
     "Electra Roof Garden",
@@ -1567,6 +1570,7 @@
     "Nikolas",
     "Nikos",
     "NINO",
+    "Nireos",
     "nisia",
     "Nissaki",
     "Nissos",
@@ -1591,6 +1595,7 @@
     "nourishing",
     "Now",
     "nowhere",
+    "Ntalias",
     "Nuestro",
     "NYX",
     "OAKA",
@@ -1630,6 +1635,7 @@
     "OR",
     "Order",
     "orderFood",
+    "Oreokastro",
     "Orfeos",
     "Organize",
     "organized",
@@ -1649,7 +1655,6 @@
     "outdoor",
     "Outdoor",
     "ouzeri",
-    "abraOvata",
     "over",
     "OVIO",
     "own",
@@ -5868,5 +5873,8 @@
   ],
   "flagWords": [],
   "allowCompoundWords": true,
-  "dictionaries": ["en", "el"]
+  "dictionaries": [
+    "en",
+    "el"
+  ]
 }
