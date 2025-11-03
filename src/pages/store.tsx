@@ -24,7 +24,7 @@ const Store: React.FC = () => {
         <title>{t('meta.storeTitle')}</title>
         <meta 
           name="description" 
-          content={t('meta.storeDescription')} 
+          content={t('meta.storeDescriptionShort')} 
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/store" />

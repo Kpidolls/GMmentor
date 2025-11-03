@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps<BlogPostProps> = async ({ params }) 
 }
 
 export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostProps) {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const router = useRouter()
 
   // Handle language mismatch
@@ -77,6 +77,14 @@ export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostPro
       router.replace(`/blog/${alternatePost.slug}`)
     }
   }, [i18n.language, post.language, alternatePost, router])
+
+  // Build an SEO-friendly meta description: prefer post.summary but ensure it is <=155 chars
+  const metaDescription = (() => {
+    const summary = post.summary || ''
+    if (!summary) return t('meta.blogDescriptionShort')
+    if (summary.length <= 155) return summary
+    return summary.slice(0, 152).trimEnd() + '…'
+  })()
 
   const handleLanguageSwitch = () => {
     if (alternatePost) {
@@ -94,7 +102,7 @@ export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostPro
     <Container maxW="4xl" py={10}>
       <Head>
         <title>{`${post.title} | Googlementor`}</title>
-        <meta name="description" content={post.summary} />
+        <meta name="description" content={metaDescription} />
         <link rel="canonical" href={`https://googlementor.com/blog/${post.slug}`} />
         {alternatePost && (
           <link 
