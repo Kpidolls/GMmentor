@@ -217,6 +217,13 @@
     "lng": "23.91050612444449"
   },
   {
+    "url": "https://maps.app.goo.gl/UNcvoxBwvBAWVdzs9?g_st=ipc",
+    "name": "Magic Land & Ekali Park Παιδότοπος",
+    "address": "Μαργαρίτας, Ntalias, Anixi 145 69",
+    "lat": "38.12379138800185",
+    "lng": "23.854147928013678"
+  },
+  {
     "url": "https://maps.app.goo.gl/DDga87nVticqm9qYA?g_st=ipc",
     "name": "HADO Δάφνη",
     "address": "Μπουμπουλίνας 6, Αγ. Δημήτριος Αττικής 173 43",
@@ -294,11 +301,18 @@
     "lng": "23.929458278036556"
   },
   {
+    "url": "https://maps.app.goo.gl/ZwXeicz1GRi3AWbh7?g_st=ipc",
+    "name": "Αττικό Ζωολογικό Πάρκο",
+    "address": "Spata 190 04",
+    "lat": "38.00348626369301",
+    "lng": "23.87320165964319"
+  },
+  {
     "url": "https://maps.app.goo.gl/RLSd71ewXvmvT1cB6?g_st=ipc",
     "name": "Άλσος Περιστερίου",
     "address": "Αγίου Βασιλείου 63, Περιστέρι 121 35",
-    "lat": "38.01691760996396",
-    "lng": "23.68608991560274"
+    "lat": "37.98045525702386",
+    "lng": "23.910806100178778"
   },
   {
     "url": "https://maps.app.goo.gl/wwQRT4HuTNPHeVR97?g_st=ipc",
@@ -455,6 +469,13 @@
     "lng": "23.75493366426452"
   },
   {
+    "url": "https://maps.app.goo.gl/Xq1M4jNFvJbAMLXcA?g_st=ipc",
+    "name": "Voula Park",
+    "address": "Nireos, Voula, Athens 166 73",
+    "lat": "37.83964372794451",
+    "lng": "23.76220911315344"
+  },
+  {
     "url": "https://maps.app.goo.gl/b5HKTfYuBC6WE3XP7?g_st=ipc",
     "name": "Jumicar",
     "address": "Λεωφ. Μαραθώνος 1, Νέα Μάκρη 190 05",
@@ -544,5 +565,12 @@
     "address": "ΑΓΡΟΤΙΚΗ ΟΔΟΣ, Βοχαϊκό 200 06",
     "lat": "37.932680344972496",
     "lng": "22.771047365230917"
+  },
+  {
+    "url": "https://maps.app.goo.gl/V4H3u11HfsXeCDvt9?g_st=ipc",
+    "name": "Freedom Interactive Playzone",
+    "address": "Μακεδονικού Αγώνα, Zappa &, Oreokastro 570 13",
+    "lat": "40.70868027538886",
+    "lng": "22.911057899893542"
   }
 ]
