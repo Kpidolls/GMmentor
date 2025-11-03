@@ -12,7 +12,7 @@ const TravelInsurance = () => {
         <title>Travel Insurance for Greece | Affordable Coverage | Googlementor</title>
         <meta
           name="description"
-          content="Get comprehensive travel insurance for your Greek vacation. Protect yourself against medical emergencies, trip cancellations, and lost luggage. Affordable coverage starting from just $1.50/day with worldwide protection including Greece and Greek islands."
+          content="Get comprehensive travel insurance for your Greek vacation. Protect yourself against medical emergencies and lost luggage. Affordable coverage starting from just $1.50/day with worldwide protection including Greece and Greek islands. Compare coverage for medical emergencies, trip cancellations and baggage protection. Simple plans ideal for island-hopping and multi-stop itineraries you will need in Greece; Clear policy details, recommended providers and how to buy. "
         />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
