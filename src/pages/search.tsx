@@ -12,7 +12,7 @@ const Search = () => {
         <title>{t('meta.searchTitle')}</title>
         <meta 
           name="description" 
-          content={t('meta.searchDescription')} 
+          content={t('meta.searchDescriptionShort')} 
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/search" />

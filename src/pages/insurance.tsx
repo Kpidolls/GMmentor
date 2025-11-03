@@ -9,23 +9,17 @@ const TravelInsurance = () => {
   return (
     <main className="bg-gray-50 min-h-screen">
       <Head>
-        <title>Travel Insurance for Greece | Affordable Coverage | Googlementor</title>
-        <meta
-          name="description"
-          content="Get comprehensive travel insurance for your Greek vacation. Protect yourself against medical emergencies and lost luggage. Affordable coverage starting from just $1.50/day with worldwide protection including Greece and Greek islands. Compare coverage for medical emergencies, trip cancellations and baggage protection. Simple plans ideal for island-hopping and multi-stop itineraries you will need in Greece; Clear policy details, recommended providers and how to buy. "
-        />
+        <title>{t('meta.insuranceTitle')}</title>
+  <meta name="description" content={t('meta.insuranceDescriptionShort')} />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Travel Insurance for Greece | Affordable Coverage | Googlementor" />
-        <meta
-          property="og:description"
-          content="Secure affordable travel insurance for your Greek adventure. Coverage for medical emergencies, trip delays, and baggage loss. Perfect for Athens, Santorini, Mykonos and all Greek destinations."
-        />
+        <meta property="og:title" content={t('meta.insuranceTitle')} />
+  <meta property="og:description" content={t('meta.insuranceDescriptionShort')} />
         <meta property="og:image" content="/assets/images/NI-info-2.webp" />
         <meta property="og:url" content="https://www.googlementor.com/insurance" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Travel Insurance for Greece | Affordable Coverage" />
-        <meta name="twitter:description" content="Protect your Greek vacation with comprehensive travel insurance. Medical coverage, trip protection, and baggage insurance for worry-free travel." />
+        <meta name="twitter:title" content={t('meta.insuranceTitle')} />
+  <meta name="twitter:description" content={t('meta.insuranceDescriptionShort')} />
         <link rel="canonical" href="https://googlementor.com/insurance" />
       </Head>
 

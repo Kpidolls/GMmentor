@@ -12,7 +12,7 @@ const SignUp: React.FC = () => {
         <title>{t('meta.signupTitle')}</title>
         <meta 
           name="description" 
-          content={t('meta.signupDescription')} 
+          content={t('meta.signupDescriptionShort')} 
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/signup" />

@@ -28,12 +28,12 @@ const App = () => {
         <title>{t('meta.homeTitle')}</title>
         <meta
           name="description"
-          content={t('meta.homeDescription')}
+          content={t('meta.homeDescriptionShort')}
         />
         <link rel="canonical" href="https://googlementor.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content={t('meta.homeTitle')} />
-        <meta property="og:description" content={t('meta.homeDescription')} />
+        <meta property="og:description" content={t('meta.homeDescriptionShort')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://googlementor.com" />
         <meta property="og:image" content="https://googlementor.com/assets/images/cover.webp" />

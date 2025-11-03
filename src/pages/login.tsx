@@ -12,7 +12,7 @@ const Login: React.FC = () => {
         <title>{t('meta.loginTitle')}</title>
         <meta 
           name="description" 
-          content={t('meta.loginDescription')} 
+          content={t('meta.loginDescriptionShort')} 
         />
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href="https://googlementor.com/login" />

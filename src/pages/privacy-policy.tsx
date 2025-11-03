@@ -1,12 +1,14 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 const PrivacyPolicy = () => {
+  const { t } = useTranslation();
   return (
     <div>
       <Head>
-        <title>Privacy Policy - Googlementor</title>
-        <meta name="description" content="Learn how Googlementor collects, uses, and protects your personal information. Read our privacy policy for details on data usage, cookies, and your rights as a user." />
+        <title>{t('meta.privacyTitle', 'Privacy Policy - Googlementor')}</title>
+        <meta name="description" content={t('meta.privacyDescriptionShort')} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/privacy-policy" />
       </Head>
