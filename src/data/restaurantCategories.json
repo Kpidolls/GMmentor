@@ -113,7 +113,7 @@
   {
     "id": "family-friendly",
     "name": "Family Friendly Locations",
-    "description": "Places welcoming families with kids — play areas, family menus, and stroller access",
+    "description": "Places welcoming families with kids",
     "icon": "👨‍👩‍👧‍👦",
     "color": "from-emerald-400 to-teal-500",
     "keywords": [
@@ -132,5 +132,36 @@
       "children",
       "casual"
     ]
+  },
+  {
+    "id": "attractions",
+    "name": "Must-See Attractions",
+    "description": "Explore iconic landmarks and cultural sites",
+    "icon": "🏛️",
+    "color": "from-blue-500 to-indigo-600",
+    "keywords": [
+      "attractions",
+      "landmarks",
+      "culture",
+      "history",
+      "must-see",
+      "museums"
+    ]
+  },
+  {
+    "id": "monasteries-churches",
+    "name": "Monasteries & Spiritual Sites",
+    "description": "Visit sacred places and spiritual retreats",
+    "icon": "⛪",
+    "color": "from-emerald-500 to-teal-600",
+    "keywords": ["monastery", "church", "spiritual", "retreat", "sacred"]
+  },
+  {
+    "id": "wineries-vineyards",
+    "name": "Wineries & Vineyards",
+    "description": "Taste exceptional Greek wines and visit vineyards",
+    "icon": "🍷",
+    "color": "from-purple-500 to-pink-600",
+    "keywords": ["wine", "vineyard", "tasting", "greek wine", "winery"]
   }
 ]

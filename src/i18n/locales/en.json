@@ -1,4 +1,8 @@
 {
+  "discovery": {
+    "chooseCategory": "Discover Authentic Locations",
+    "selectCategoryFirst": "Choose a category to begin"
+  },
   "header": {
     "promo": "",
     "login": "Login",
@@ -163,7 +167,7 @@
   },
   "mainHero": {
     "title": "Greece",
-    "subtitle": "Travel Lists",
+    "subtitle": "Places worth visiting",
     "viewProduct": "View Product",
     "description": "Google Maps Lists for trip planning.",
     "primaryAction": {
@@ -236,10 +240,42 @@
   },
   "categories": {
     "title": "Lists by Category",
-    "mustSee": "Must See",
-    "islands": "Destinations",
-    "food": "Food",
-    "hiking": "Hiking"
+    "greek-restaurants": "Greek Restaurants",
+    "desserts": "Dessert Shops",
+    "coffee-brunch": "Coffee & Brunch Spots",
+    "fish-tavernas": "Fish Tavernas",
+    "italian": "Italian Restaurants",
+    "cheap-eats": "Cheap Eats",
+    "asian": "Asian Restaurants",
+    "burgers": "Burger Spots",
+    "vegetarian": "Vegetarian Friendly Restaurants",
+    "mexican": "Mexican Restaurants",
+    "luxury-dining": "Luxury Dining",
+    "rooftop-lounges": "Rooftop Lounges",
+    "gyros-souvlaki": "Gyros & Souvlaki",
+    "family-friendly": "Family Friendly Locations",
+    "attractions": "Must-See Attractions",
+    "monasteries-churches": "Monasteries & Spiritual Sites",
+    "wineries-vineyards": "Wineries & Vineyards",
+    "descriptions": {
+      "greek-restaurants": "Authentic traditional Greek cuisine",
+      "desserts": "Sweet treats and traditional Greek desserts",
+      "coffee-brunch": "Specialty coffee and all-day brunch spots",
+      "fish-tavernas": "Fresh seafood and traditional tavernas",
+      "italian": "Authentic Italian flavors and pasta",
+      "cheap-eats": "Budget-friendly delicious meals",
+      "asian": "Diverse Asian flavors and dishes",
+      "burgers": "Gourmet burgers and casual dining",
+      "vegetarian": "Plant-based and vegetarian options",
+      "mexican": "Authentic Mexican flavors and spices",
+      "luxury-dining": "Fine dining and upscale experiences",
+      "rooftop-lounges": "Sky-high dining with stunning views",
+      "gyros-souvlaki": "Traditional Greek street food",
+      "family-friendly": "Places welcoming families with kids",
+      "attractions": "Explore iconic landmarks and cultural sites",
+      "monasteries-churches": "Visit sacred places and spiritual retreats",
+      "wineries-vineyards": "Taste exceptional Greek wines and visit vineyards"
+    }
   },
   "aria": {
     "exploreCategory": "Explore {{name}} category"
@@ -279,7 +315,7 @@
       "title": "📍 Fish Tavernas",
       "description": "Experience authentic Greek seafood at charming tavernas known for their fresh catch and warm hospitality."
     },
-    "desserts": {
+    "descriptions": {
       "title": "📍 Dessert Shops",
       "description": "Treat yourself to Greece’s most irresistible desserts, from creamy baklava to luscious loukoumades, perfect for every sweet tooth."
     },
@@ -880,6 +916,24 @@
     "promoInstruction": "at checkout or click the link below.",
     "ctaButton": "Get Your Airalo eSIM",
     "disclaimer": "Airalo is a trusted solution used by millions of travelers worldwide. Ensure your phone supports eSIM before purchasing."
+  },
+  "experiences": {
+    "attractions": {
+      "name": "Must-See Attractions",
+      "description": "Explore iconic landmarks and cultural sites"
+    },
+    "family-friendly": {
+      "name": "Family Friendly Locations",
+      "description": "Places welcoming families with kids - play areas, family menus, and stroller access"
+    },
+    "monasteries-churches": {
+      "name": "Monasteries & Spiritual Sites",
+      "description": "Visit sacred places and spiritual retreats"
+    },
+    "wineries-vineyards": {
+      "name": "Wineries & Vineyards",
+      "description": "Taste exceptional Greek wines and visit vineyards"
+    }
   },
   "newsletter": {
     "title": "Stay Updated",

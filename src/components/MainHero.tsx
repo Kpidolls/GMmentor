@@ -161,32 +161,32 @@ const MainHero = () => {
   const experienceTypes: ExperienceType[] = [
     {
       id: 'family-friendly',
-      name: t('experiences.familyFriendly.name', 'Family Friendly Locations'),
-      description: t('experiences.familyFriendly.description', 'Places welcoming families with kids - play areas, family menus, and stroller access'),
+  name: t('experiences.family-friendly.name', 'Family Friendly Locations'),
+  description: t('experiences.family-friendly.description', 'Places welcoming families with kids - play areas, family menus, and stroller access'),
       icon: '👨‍👩‍👧‍👦',
       color: 'from-emerald-400 to-teal-500',
       categories: [{ id: 'family-friendly', name: 'Family Friendly Locations', description: 'Family-friendly places', icon: '👨‍👩‍👧‍👦', color: 'from-emerald-400 to-teal-500', keywords: ['family', 'kids', 'child-friendly'] }]
     },
     {
       id: 'attractions',
-      name: t('experiences.attractions.name', 'Must-See Attractions'),
-      description: t('experiences.attractions.description', 'Explore iconic landmarks and cultural sites'),
+  name: t('experiences.attractions.name', 'Must-See Attractions'),
+  description: t('experiences.attractions.description', 'Explore iconic landmarks and cultural sites'),
       icon: '🏛️',
       color: 'from-blue-500 to-indigo-600',
       categories: [] // Will be populated with attractions data when available
     },
     {
       id: 'monasteries',
-      name: t('experiences.monasteries.name', 'Monasteries & Spiritual Sites'),
-      description: t('experiences.monasteries.description', 'Visit sacred places and spiritual retreats'),
+  name: t('experiences.monasteries-churches.name', 'Monasteries & Spiritual Sites'),
+  description: t('experiences.monasteries-churches.description', 'Visit sacred places and spiritual retreats'),
       icon: '⛪',
       color: 'from-emerald-500 to-teal-600',
       categories: [{ id: 'monasteries-churches', name: 'Monasteries & Churches', description: 'Sacred and spiritual places', icon: '⛪', color: 'from-emerald-500 to-teal-600', keywords: ['monastery', 'church', 'spiritual'] }]
     },
     {
       id: 'wineries',
-      name: t('experiences.wineries.name', 'Wineries & Vineyards'),
-      description: t('experiences.wineries.description', 'Taste exceptional Greek wines and visit vineyards'),
+  name: t('experiences.wineries-vineyards.name', 'Wineries & Vineyards'),
+  description: t('experiences.wineries-vineyards.description', 'Taste exceptional Greek wines and visit vineyards'),
       icon: '🍷',
       color: 'from-purple-500 to-pink-600',
       categories: [{ id: 'wineries-vineyards', name: 'Wineries & Vineyards', description: 'Wine tasting and vineyard tours', icon: '🍷', color: 'from-purple-500 to-pink-600', keywords: ['wine', 'vineyard', 'tasting'] }]
@@ -823,7 +823,7 @@ const MainHero = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 blur-lg scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </h2>
                       <p className="text-slate-200 text-sm xs:text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed font-light mb-6">
-                        {t('discovery.selectCategoryFirst', 'Select a cuisine or experience/activity to get started.')}
+                        {t('discovery.selectCategoryFirst')}
                       </p>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 xs:gap-3 sm:gap-4 mb-4 xs:mb-6 sm:mb-8">
@@ -845,10 +845,10 @@ const MainHero = () => {
                               {category.icon}
                             </div>
                             <h4 className="text-white font-bold text-sm sm:text-base lg:text-lg leading-tight">
-                              {category.name}
+                              {t(`categories.${category.id}`, category.name)}
                             </h4>
                             <p className="text-slate-300 text-xs sm:text-sm leading-tight">
-                              {category.description}
+                              {t(`categories.descriptions.${category.id}`, category.description)}
                             </p>
                           </div>
                         </button>
