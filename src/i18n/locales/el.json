@@ -229,7 +229,7 @@
     "geolocationNotSupported": "Η εντοπισμός θέσης δεν υποστηρίζεται από αυτόν τον περιηγητή.",
     "or": "Ή",
     "tryAgain": "Δοκιμάστε ξανά",
-    "resultsTitle": "Ελληνικά Εστιατόρια",
+    "resultsTitle": "{{category}}",
     "restaurants": "Εστιατόρια",
     "found": "Βρέθηκαν",
     "inArea": "στην περιοχή",
@@ -253,6 +253,14 @@
       "handpicked": "Επιλεγμένα μέρη",
       "directMaps": "Σύνδεση με Google Maps"
     }
+  },
+  "locationOptions": {
+    "chooseLocationMethod": "Επιλέξτε περιοχή για αναζήτηση",
+    "selectLocationOption": "Επιλέξτε πώς θέλετε να αναζητήσετε {{experience}}",
+    "nearYou": "Κοντά σας",
+    "nearYouDesc": "Χρησιμοποιήστε την τρέχουσα τοποθεσία σας για να βρείτε κοντινά μέρη",
+    "byRegion": "Ανά Περιοχή",
+    "byRegionDesc": "Επιλέξτε συγκεκριμένη περιοχή ή δήμο"
   },
   "municipalitySearch": {
     "placeholder": "Αναζήτηση τοποθεσιών...",

@@ -214,7 +214,7 @@
     "geolocationNotSupported": "Geolocation is not supported by this browser.",
     "or": "OR",
     "tryAgain": "Try again",
-    "resultsTitle": "Greek Restaurants",
+    "resultsTitle": "{{category}}",
     "inArea": "in",
     "nearYou": "Near You",
     "foundCount": "Found",
@@ -235,6 +235,14 @@
       "handpicked": "Handpicked venues",
       "directMaps": "Direct to Maps"
     }
+  },
+  "locationOptions": {
+    "chooseLocationMethod": "Choose Location Method",
+    "selectLocationOption": "Select how you would like to search for {{experience}}",
+    "nearYou": "Near You",
+    "nearYouDesc": "Use your current location to find nearby places",
+    "byRegion": "By Region",
+    "byRegionDesc": "Select a specific region or municipality"
   },
   "municipalitySearch": {
     "placeholder": "Search locations...",

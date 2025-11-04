@@ -21,6 +21,28 @@ const GetYourGuideWidget = dynamic(() => import('../components/GetYourGuideWidge
 
 const App = () => {
   const { t } = useTranslation();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": t('faq.tavernas.question', 'Where can I find authentic Greek tavernas in Athens?'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('faq.tavernas.answer', "Browse our Greek tavernas list for traditional spots favored by locals — curated maps and real reviews help you find the best spots.")
+        }
+      },
+      {
+        "@type": "Question",
+        "name": t('faq.family.question', 'Are there family-friendly spots near the center of Athens?'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('faq.family.answer', 'Yes — use the Family Friendly category to find stroller-accessible venues, kid menus, and casual family-friendly restaurants.')
+        }
+      }
+    ]
+  } as const;
   
   return (
     <div className="bg-white">
@@ -38,11 +60,24 @@ const App = () => {
         <meta property="og:url" content="https://googlementor.com" />
         <meta property="og:image" content="https://googlementor.com/assets/images/cover.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        {/* FAQPage JSON-LD for common quick questions on the homepage (localized) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
       </Head>
 
       {/* Hero Section */}
       <section className="relative">
         <MainHero />
+      </section>
+
+      {/* Short AI-friendly intro for the homepage */}
+      <section className="bg-white py-8">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">{t('home.intro.question', 'Looking for the best places to eat and explore in Athens?')}</h3>
+          <p className="text-gray-600">{t('home.intro.answer', 'These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike.')}</p>
+        </div>
       </section>
 
       {/* Tours & Activities Section */}
