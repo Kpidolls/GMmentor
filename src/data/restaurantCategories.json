@@ -18,7 +18,7 @@
     "id": "greek-restaurants",
     "name": "Greek Restaurants",
     "description": "Authentic traditional Greek cuisine",
-    "icon": "🇬🇷",
+    "icon": "🍽️",
     "color": "from-blue-500 to-indigo-600",
     "keywords": [
       "greek",
@@ -147,14 +147,6 @@
     "icon": "🌆",
     "color": "from-indigo-500 to-purple-600",
     "keywords": ["rooftop", "lounge", "view", "skybar", "terrace"]
-  },
-  {
-    "id": "gyros-souvlaki",
-    "name": "Gyros & Souvlaki",
-    "description": "Traditional Greek street food",
-    "icon": "🥙",
-    "color": "from-orange-500 to-red-600",
-    "keywords": ["gyros", "souvlaki", "greek", "traditional", "street food"]
   },
   {
     "id": "wineries-vineyards",

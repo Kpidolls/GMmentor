@@ -143,53 +143,56 @@ const MainHero = () => {
 
   // Helper function to get data by experience type
   const getDataByExperienceType = (experienceType: ExperienceType): Restaurant[] => {
-    switch (experienceType.id) {
-      case 'family-friendly':
-        return normalizeRestaurantData(familyFriendlyData);
-      case 'wineries':
-        return normalizeRestaurantData(wineriesVineyardsData);
-      case 'monasteries':
-        return normalizeRestaurantData(monasteriesChurchesData);
-      case 'attractions':
-        return normalizeRestaurantData(mustSeeAttractionsData);
-      default:
-        return normalizeRestaurantData(familyFriendlyData);
+    // Prefer explicit categories defined on the experienceType
+    if (Array.isArray(experienceType.categories) && experienceType.categories.length > 0) {
+      const primary = experienceType.categories[0] as RestaurantCategory | undefined;
+      if (primary) return getRestaurantDataByCategory(primary);
     }
+
+    // Support both short and long ids: 'wineries' | 'wineries-vineyards', 'monasteries' | 'monasteries-churches'
+    const id = experienceType.id || '';
+    if (id.includes('family')) return normalizeRestaurantData(familyFriendlyData);
+    if (id.includes('wineries')) return normalizeRestaurantData(wineriesVineyardsData);
+    if (id.includes('monasteries')) return normalizeRestaurantData(monasteriesChurchesData);
+    if (id.includes('attractions')) return normalizeRestaurantData(mustSeeAttractionsData);
+
+    // Fallback
+    return normalizeRestaurantData(familyFriendlyData);
   };
 
   // Define experience types for different categories of attractions
   const experienceTypes: ExperienceType[] = [
     {
       id: 'family-friendly',
-  name: t('experiences.family-friendly.name', 'Family Friendly Locations'),
-  description: t('experiences.family-friendly.description', 'Places welcoming families with kids - play areas, family menus, and stroller access'),
+      name: t('experiences.family-friendly.name', 'Family Friendly Locations'),
+      description: t('experiences.family-friendly.description', 'Places welcoming families with kids - play areas, family menus, and stroller access'),
       icon: '👨‍👩‍👧‍👦',
       color: 'from-emerald-400 to-teal-500',
-      categories: [{ id: 'family-friendly', name: 'Family Friendly Locations', description: 'Family-friendly places', icon: '👨‍👩‍👧‍👦', color: 'from-emerald-400 to-teal-500', keywords: ['family', 'kids', 'child-friendly'] }]
+      categories: [categoriesData.find((c: RestaurantCategory) => c.id === 'family-friendly') || { id: 'family-friendly', name: 'Family Friendly Locations', description: 'Family-friendly places', icon: '👨‍👩‍👧‍👦', color: 'from-emerald-400 to-teal-500', keywords: ['family', 'kids', 'child-friendly'] }]
     },
     {
       id: 'attractions',
-  name: t('experiences.attractions.name', 'Must-See Attractions'),
-  description: t('experiences.attractions.description', 'Explore iconic landmarks and cultural sites'),
+      name: t('experiences.attractions.name', 'Must-See Attractions'),
+      description: t('experiences.attractions.description', 'Explore iconic landmarks and cultural sites'),
       icon: '🏛️',
       color: 'from-blue-500 to-indigo-600',
-      categories: [] // Will be populated with attractions data when available
+      categories: [categoriesData.find((c: RestaurantCategory) => c.id === 'attractions') || { id: 'attractions', name: 'Must-See Attractions', description: 'Explore iconic landmarks and cultural sites', icon: '🏛️', color: 'from-blue-500 to-indigo-600', keywords: [] }]
     },
     {
-      id: 'monasteries',
-  name: t('experiences.monasteries-churches.name', 'Monasteries & Spiritual Sites'),
-  description: t('experiences.monasteries-churches.description', 'Visit sacred places and spiritual retreats'),
+      id: 'monasteries-churches',
+      name: t('experiences.monasteries-churches.name', 'Monasteries & Spiritual Sites'),
+      description: t('experiences.monasteries-churches.description', 'Visit sacred places and spiritual retreats'),
       icon: '⛪',
       color: 'from-emerald-500 to-teal-600',
-      categories: [{ id: 'monasteries-churches', name: 'Monasteries & Churches', description: 'Sacred and spiritual places', icon: '⛪', color: 'from-emerald-500 to-teal-600', keywords: ['monastery', 'church', 'spiritual'] }]
+      categories: [categoriesData.find((c: RestaurantCategory) => c.id === 'monasteries-churches') || { id: 'monasteries-churches', name: 'Monasteries & Churches', description: 'Sacred and spiritual places', icon: '⛪', color: 'from-emerald-500 to-teal-600', keywords: ['monastery', 'church', 'spiritual'] }]
     },
     {
-      id: 'wineries',
-  name: t('experiences.wineries-vineyards.name', 'Wineries & Vineyards'),
-  description: t('experiences.wineries-vineyards.description', 'Taste exceptional Greek wines and visit vineyards'),
+      id: 'wineries-vineyards',
+      name: t('experiences.wineries-vineyards.name', 'Wineries & Vineyards'),
+      description: t('experiences.wineries-vineyards.description', 'Taste exceptional Greek wines and visit vineyards'),
       icon: '🍷',
       color: 'from-purple-500 to-pink-600',
-      categories: [{ id: 'wineries-vineyards', name: 'Wineries & Vineyards', description: 'Wine tasting and vineyard tours', icon: '🍷', color: 'from-purple-500 to-pink-600', keywords: ['wine', 'vineyard', 'tasting'] }]
+      categories: [categoriesData.find((c: RestaurantCategory) => c.id === 'wineries-vineyards') || { id: 'wineries-vineyards', name: 'Wineries & Vineyards', description: 'Wine tasting and vineyard tours', icon: '🍷', color: 'from-purple-500 to-pink-600', keywords: ['wine', 'vineyard', 'tasting'] }]
     }
   ];
 
@@ -828,7 +831,7 @@ const MainHero = () => {
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 xs:gap-3 sm:gap-4 mb-4 xs:mb-6 sm:mb-8">
                       {/* Show all cuisines and activities in a single grid */}
-                      {categoriesData.slice(0, 12).map((category) => (
+                      {categoriesData.map((category) => (
                         <button
                           key={'category-' + category.id}
                           onClick={() => {
@@ -853,7 +856,9 @@ const MainHero = () => {
                           </div>
                         </button>
                       ))}
-                      {experienceTypes.map((experienceType) => (
+                      {experienceTypes
+                        .filter((et) => !categoriesData.some((c: RestaurantCategory) => c.id === et.id))
+                        .map((experienceType) => (
                         <button
                           key={'experience-' + experienceType.id}
                           onClick={() => {
@@ -882,7 +887,6 @@ const MainHero = () => {
                   </div>
                 </div>
               )}
-              )
               {showMunicipalityList ? (
               /* Location Selection - User-Friendly Compact Design */
               <div className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/30 shadow-2xl max-w-4xl mx-auto">
