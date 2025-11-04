@@ -1,5 +1,20 @@
 [
   {
+    "id": "attractions",
+    "name": "Must-See Attractions",
+    "description": "Explore iconic landmarks and cultural sites",
+    "icon": "🏛️",
+    "color": "from-blue-500 to-indigo-600",
+    "keywords": [
+      "attractions",
+      "landmarks",
+      "culture",
+      "history",
+      "must-see",
+      "museums"
+    ]
+  },
+  {
     "id": "greek-restaurants",
     "name": "Greek Restaurants",
     "description": "Authentic traditional Greek cuisine",
@@ -23,6 +38,29 @@
     "keywords": ["dessert", "sweet", "bakery", "pastry", "ice cream", "gelato"]
   },
   {
+    "id": "family-friendly",
+    "name": "Family Friendly Locations",
+    "description": "Places welcoming families with kids",
+    "icon": "👨‍👩‍👧‍👦",
+    "color": "from-emerald-400 to-teal-500",
+    "keywords": [
+      "family",
+      "kids",
+      "child-friendly",
+      "playground",
+      "stroller",
+      "family menu",
+      "kid-friendly",
+      "child-friendly",
+      "playground",
+      "stroller",
+      "family menu",
+      "kid-friendly",
+      "children",
+      "casual"
+    ]
+  },
+  {
     "id": "coffee-brunch",
     "name": "Coffee & Brunch Spots",
     "description": "Specialty coffee and all-day brunch spots",
@@ -37,6 +75,14 @@
     "icon": "🐟",
     "color": "from-blue-600 to-indigo-700",
     "keywords": ["fish", "seafood", "taverna", "fresh", "mediterranean"]
+  },
+  {
+    "id": "monasteries-churches",
+    "name": "Monasteries & Spiritual Sites",
+    "description": "Visit sacred places and spiritual retreats",
+    "icon": "⛪",
+    "color": "from-emerald-500 to-teal-600",
+    "keywords": ["monastery", "church", "spiritual", "retreat", "sacred"]
   },
   {
     "id": "italian",
@@ -109,52 +155,6 @@
     "icon": "🥙",
     "color": "from-orange-500 to-red-600",
     "keywords": ["gyros", "souvlaki", "greek", "traditional", "street food"]
-  },
-  {
-    "id": "family-friendly",
-    "name": "Family Friendly Locations",
-    "description": "Places welcoming families with kids",
-    "icon": "👨‍👩‍👧‍👦",
-    "color": "from-emerald-400 to-teal-500",
-    "keywords": [
-      "family",
-      "kids",
-      "child-friendly",
-      "playground",
-      "stroller",
-      "family menu",
-      "kid-friendly",
-      "child-friendly",
-      "playground",
-      "stroller",
-      "family menu",
-      "kid-friendly",
-      "children",
-      "casual"
-    ]
-  },
-  {
-    "id": "attractions",
-    "name": "Must-See Attractions",
-    "description": "Explore iconic landmarks and cultural sites",
-    "icon": "🏛️",
-    "color": "from-blue-500 to-indigo-600",
-    "keywords": [
-      "attractions",
-      "landmarks",
-      "culture",
-      "history",
-      "must-see",
-      "museums"
-    ]
-  },
-  {
-    "id": "monasteries-churches",
-    "name": "Monasteries & Spiritual Sites",
-    "description": "Visit sacred places and spiritual retreats",
-    "icon": "⛪",
-    "color": "from-emerald-500 to-teal-600",
-    "keywords": ["monastery", "church", "spiritual", "retreat", "sacred"]
   },
   {
     "id": "wineries-vineyards",
