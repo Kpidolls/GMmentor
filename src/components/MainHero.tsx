@@ -125,6 +125,7 @@ const MainHero = () => {
       case 'vegetarian': return normalizeRestaurantData(vegetarianData);
       case 'gyros-souvlaki': return normalizeRestaurantData(gyrosSouvlakiData);
       case 'mexican': return normalizeRestaurantData(mexicanData);
+      case 'attractions': return normalizeRestaurantData(mustSeeAttractionsData);
       case 'family-friendly': return normalizeRestaurantData(familyFriendlyData);
       case 'wineries-vineyards': return normalizeRestaurantData(wineriesVineyardsData);
       case 'monasteries-churches': return normalizeRestaurantData(monasteriesChurchesData);
@@ -196,10 +197,11 @@ const MainHero = () => {
     }
   ];
 
-  // Get default category (Greek Restaurants) - provide fallback
+  // Get default category (Greek) - provide fallback (avoid redundant "Restaurants" suffix)
   const defaultCategory: RestaurantCategory = categoriesData.find(cat => cat.id === 'greek-restaurants') || {
     id: 'greek-restaurants',
-    name: t('categories.greekRestaurants', 'Greek Restaurants'),
+    // keep the translation key but change the English fallback to a concise label
+    name: t('categories.greekRestaurants', 'Greek'),
     description: t('categories.greekDescription', 'Authentic traditional Greek cuisine'),
     icon: '🇬🇷',
     color: 'from-blue-500 to-indigo-600',
@@ -455,7 +457,7 @@ const MainHero = () => {
     setShowRestaurantFinder(false);
     setShowMunicipalityList(false);
     setSearchMode({ type: 'location' });
-    setSelectedDisplayCategory(defaultCategory); // Reset to default Greek Restaurants
+  setSelectedDisplayCategory(defaultCategory); // Reset to default Greek
     setSelectedExperienceType(defaultExperienceType); // Reset to default Dining experience
     setMunicipalitySearchQuery(''); // Clear municipality search
     
@@ -470,6 +472,64 @@ const MainHero = () => {
         window.scrollTo({ top: 280, behavior: 'smooth' });
       }
     }, 100);
+  };
+
+  // Helper: determine whether a category represents dining/restaurant results
+  const isDiningCategory = (category?: RestaurantCategory): boolean => {
+    if (!category || !Array.isArray(category.keywords)) return false;
+    const diningKeywords = new Set(['restaurant', 'restaurants', 'taverna', 'tavernas', 'food', 'fish', 'dessert', 'burger', 'pasta', 'pizza', 'grill', 'seafood', 'vegan', 'vegetarian']);
+    return category.keywords.some(k => diningKeywords.has(k.toLowerCase()));
+  };
+
+  // Helper: detect if a translated/display label already contains dining words
+  // Normalize Greek accents and case before testing to avoid false negatives
+  const labelContainsDiningWord = (label: string | undefined): boolean => {
+    if (!label) return false;
+
+    // Basic normalization: lowercase and remove common Greek diacritics so
+    // labels like "Εστιατόρια" or "Εστιατόριο" match reliably.
+    let normalized = label.toLowerCase();
+    normalized = normalized
+      .replace(/ά/g, 'α')
+      .replace(/έ/g, 'ε')
+      .replace(/ή/g, 'η')
+      .replace(/ί/g, 'ι')
+      .replace(/ό/g, 'ο')
+      .replace(/ύ/g, 'υ')
+      .replace(/ώ/g, 'ω')
+      .replace(/ΐ/g, 'ι')
+      .replace(/ΰ/g, 'υ')
+      .replace(/Ά/g, 'α')
+      .replace(/Έ/g, 'ε')
+      .replace(/Ή/g, 'η')
+      .replace(/Ί/g, 'ι')
+      .replace(/Ό/g, 'ο')
+      .replace(/Ύ/g, 'υ')
+      .replace(/Ώ/g, 'ω');
+
+    // tokens in english + greek (accent-free)
+    const tokens = [
+      'restaurants', 'restaurant', 'tavernas', 'taverna',
+      'εστιατορια', 'εστιατοριο', 'ταβερνες', 'ταβερνα'
+    ];
+
+    return tokens.some(token => normalized.includes(token));
+  };
+
+  // Helper: get a safe display label for a category — will append 'Restaurants' only when appropriate
+  const getSafeCategoryHeading = (category: RestaurantCategory) => {
+    const raw = t(`categories.${category.id}`, category.name);
+    if (isDiningCategory(category) && !labelContainsDiningWord(raw)) {
+      return `${raw} ${t('restaurantFinder.restaurants', 'Restaurants')}`;
+    }
+    return raw;
+  };
+
+  // Helper: get a safe label for count/places sentences — avoid 'Restaurants places' duplication
+  const getSafeCategoryForCount = (category: RestaurantCategory) => {
+    const raw = t(`categories.${category.id}`, category.name);
+    if (labelContainsDiningWord(raw)) return raw;
+    return `${raw} ${t('restaurantFinder.places', 'places')}`;
   };
 
   const nextRestaurant = () => {
@@ -734,7 +794,7 @@ const MainHero = () => {
           
           <Image
             src="/assets/images/cover.webp"
-            alt="Greek travel destination"
+            alt={t('mainHero.coverAlt', 'Panoramic view of Athens skyline with the Acropolis in the background — travel and dining guide hero image')}
             fill
             priority
             quality={90}
@@ -1154,7 +1214,7 @@ const MainHero = () => {
                         ) : selectedType === 'category' && selectedDisplayCategory ? (
                           <>
                             <span className="text-2xl mr-2">{selectedDisplayCategory.icon}</span>
-                            {t(`categories.${selectedDisplayCategory.id}`, selectedDisplayCategory.name)} {t('restaurantFinder.restaurants', 'Restaurants')}
+                            {getSafeCategoryHeading(selectedDisplayCategory)}
                           </>
                         ) : searchMode.type === 'municipality' && selectedDisplayCategory ? (
                           <>
@@ -1172,7 +1232,7 @@ const MainHero = () => {
                         {selectedType === 'experience' && selectedExperienceType
                           ? `${t('restaurantFinder.found', 'Found')} ${nearestRestaurants.length} ${selectedExperienceType.name} ${t('restaurantFinder.places', 'places')}`
                           : selectedType === 'category' && selectedDisplayCategory
-                          ? `${t('restaurantFinder.found', 'Found')} ${nearestRestaurants.length} ${t(`categories.${selectedDisplayCategory.id}`, selectedDisplayCategory.name)} ${t('restaurantFinder.places', 'places')}`
+                          ? `${t('restaurantFinder.found', 'Found')} ${nearestRestaurants.length} ${getSafeCategoryForCount(selectedDisplayCategory)}`
                           : searchMode.type === 'municipality' && selectedDisplayCategory
                           ? `${t('restaurantFinder.foundCount', 'Found')} ${nearestRestaurants.length} ${selectedDisplayCategory ? t(`categories.${selectedDisplayCategory.id}`, selectedDisplayCategory.name) : ''} ${t('restaurantFinder.placesNear', 'places near')} ${searchMode.selectedMunicipality?.name ? t(`municipalities.${searchMode.selectedMunicipality.name}`, searchMode.selectedMunicipality.name) : ''}`
                           : selectedDisplayCategory
