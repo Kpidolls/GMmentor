@@ -126,6 +126,17 @@
     "blog": "Blog",
     "contact": "Contact"
   },
+  "getyourguide": {
+    "widgetTitle": "Top Tours & Activities",
+    "widgetDescription": "Discover the best experiences Greece has to offer with our curated selection of tours and activities",
+    "subtitle": "Discover the best experiences Greece has to offer with our curated selection of tours and activities"
+  },
+  "home": {
+    "intro": {
+      "question": "Looking for the best places to eat and explore in Athens?",
+      "answer": "These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike."
+    }
+  },
   "meta": {
     "homeTitle": "Googlementor | Discover Authentic Greece",
     "homeDescription": "Places worth visiting.",
@@ -927,7 +938,7 @@
     "parking": "Parking: ParkAround",
     "expenseTracker": "Expense Tracker: Splitwise",
     "welcomePickups": "Airport Transfers: Welcome Pickups",
-    "moovit": "Public Transport: Moovit",
+    "moovit": "Public Transport: Citymapper - Moovit",
     "revolut": "Currency Exchange: Revolut"
   },
   "airalo": {
