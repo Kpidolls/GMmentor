@@ -838,5 +838,376 @@
     "address": "Μπουμπουλίνας 43, Ναύπλιο 211 00",
     "lat": "37.56732416244355",
     "lng": "22.800888651268885"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HHmGQxRgnuihmTyY7?g_st=ipc",
+    "name": "ITRIA Cucina Italiana Restaurant",
+    "address": "Boumpoulinas 81, Nafplio 211 00",
+    "lat": "37.567386909343334",
+    "lng": "22.797290266729004"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wA9xzqnbmvvq1Bqo8?g_st=ipc",
+    "name": "La Gratella",
+    "address": "Vasilissis Olgas, Nafplio 211 00",
+    "lat": "37.56708420040735",
+    "lng": "22.796775177187325"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pvyKHGGD2fbgASCE8?g_st=ipc",
+    "name": "Amvix",
+    "address": "Akti Papagoi 26, Ermoupoli 841 00",
+    "lat": "37.44099934175907",
+    "lng": "24.940807847227685"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KMmm7YcXtzQmk7Zh8?g_st=ipc",
+    "name": "Napule Tinos Restaurant",
+    "address": "Τριαντάρος 842 00",
+    "lat": "37.561247297622636",
+    "lng": "25.19153362351099"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MBu7u1d7kC6PuBVm8?g_st=ipc",
+    "name": "La Cucina di Maria",
+    "address": "Πλατεία Τριών Ιεραρχών, Skiathos 370 02",
+    "lat": "39.16258431460264",
+    "lng": "23.488686516582533"
+  },
+  {
+    "url": "https://maps.app.goo.gl/88fvareZPz1tuDRy7?g_st=ipc",
+    "name": "Mamma Mia - Sifnos - Apollonia",
+    "address": "Απολλωνία 840 03",
+    "lat": "36.97495083578174",
+    "lng": "24.7241131412881"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Cf4S8nv5DHQYNzkR7?g_st=ipc",
+    "name": "Casa di Giorgio Mykonos",
+    "address": "Mitropoleos 1, Hora 846 00",
+    "lat": "37.44560651190884",
+    "lng": "25.326934720051547"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AvAZtykcYFB85kTp6?g_st=ipc",
+    "name": "D'Angelo",
+    "address": "Axioti, Mikonos 846 00",
+    "lat": "37.44362332101064",
+    "lng": "25.32719398144958"
+  },
+  {
+    "url": "https://maps.app.goo.gl/M9VCoMv93LnDJZyTA?g_st=ipc",
+    "name": "Farina Cucina Italiana Ornos Beach",
+    "address": "Beach, Ornos 846 00",
+    "lat": "37.423083029478946",
+    "lng": "25.323628340986495"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jbVQZaFoXT3nCmEQ6?g_st=ipc",
+    "name": "Sistina Mykonos",
+    "address": "Platis Gialos, Mikonos 846 00",
+    "lat": "37.42270720054724",
+    "lng": "25.33392940009779"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sh5TMZCTCw3tQKQP9?g_st=ipc",
+    "name": "Cardamomo",
+    "address": "Unnamed Road, Ano Mera 846 00",
+    "lat": "37.4446572877169",
+    "lng": "25.396868169763824"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Hzvu5t3VhUBHB7JC7?g_st=ipc",
+    "name": "Impasto",
+    "address": "Paros 844 00",
+    "lat": "37.081621983659346",
+    "lng": "25.14571923250388"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ciaf8V2SrHA91Eqw7?g_st=ipc",
+    "name": "Casa Giacomo Paros",
+    "address": "Little Venice, Naousa 844 01",
+    "lat": "37.12454320720165",
+    "lng": "25.238458349168585"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GLP6dYmT8CK2v8Rk9?g_st=ipc",
+    "name": "Dal Professore Naxos",
+    "address": "Sea front - Naxos town Naxos Town, 843 00",
+    "lat": "37.10347764120069",
+    "lng": "25.374650593867482"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hwE3v2eAEfeWwtVD6?g_st=ipc",
+    "name": "ETERE Ristorante•Spritzeria",
+    "address": "Σχοινούσας, Kiprou &, Naxos 843 00",
+    "lat": "37.10293986337665",
+    "lng": "25.375171669884853"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aQBfn7JeavM87SvT6?g_st=ipc",
+    "name": "Caya Italian Cuisine Cocktail Bar",
+    "address": "Πλάκα Ναξος Κυκλάδες, 843 00",
+    "lat": "37.05775350559496",
+    "lng": "25.360162570769955"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jstAML7uYBqEdQYq6?g_st=ipc",
+    "name": "Mitos ARTernative BAR",
+    "address": "Χαλκείο 843 02",
+    "lat": "37.06317254380818",
+    "lng": "25.48274579484659"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JbLqAJKLLdfUdDyN8?g_st=ipc",
+    "name": "Mikres Cyclades",
+    "address": "Άνω, 843 00",
+    "lat": "36.931957255563695",
+    "lng": "25.59902680119125"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tGER5rSkLzH68JTw8?g_st=ipc",
+    "name": "Kasmir",
+    "address": "Mesabelia, Korischades 361 00",
+    "lat": "38.900597180204656",
+    "lng": "21.771398412012726"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TuYwccr3Zm9yxfa36?g_st=ipc",
+    "name": "Matapan",
+    "address": "ΕΠΑΡΧΙΑΚΗ ΟΔΟΣ ΓΕΡΟΛΙΜΕΝΑ ΒΑΘΕΙΑΣ, Alika 230 71",
+    "lat": "36.46823478580051",
+    "lng": "22.433052583594144"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ETYecXBUFzQCRmS47?g_st=ipc",
+    "name": "Nonna Rossa",
+    "address": "Skilosofou 9, Larisa 412 21",
+    "lat": "39.64111484868426",
+    "lng": "22.41428751769153"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BxpBdgAak6UKLRYL7?g_st=ipc",
+    "name": "Pizza Petrino",
+    "address": "Χώρα 840 08",
+    "lat": "36.83162048389455",
+    "lng": "25.898532535817935"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GPBVkCTKG7m2uSNw7?g_st=ipc",
+    "name": "Deluxe Pizza",
+    "address": "Ιωάννη Καρρά, Neos Marmaras 630 81",
+    "lat": "40.09497571247146",
+    "lng": "23.785047733849556"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rZCcxBdEfxEpaj619?g_st=ipc",
+    "name": "Capri Nuovo",
+    "address": "Egialou, Nikiti 630 88",
+    "lat": "40.21248872613691",
+    "lng": "23.671364142442222"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jzS5R55938F8T3nV6?g_st=ipc",
+    "name": "Alexandros Cafe Restaurant Bar",
+    "address": "Egialou 30, Nikiti 630 88",
+    "lat": "40.21526800111842",
+    "lng": "23.667889434197388"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oiQQ7oLzNp1QAEmS9?g_st=ipc",
+    "name": "Pablo Pasta Corner",
+    "address": "G9W3+63, Astipalea 859 00",
+    "lat": "36.545609138218644",
+    "lng": "26.3527289228981"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bPiGaxVDa8GANuXW8?g_st=ipc",
+    "name": "Don Rosario Restaurant",
+    "address": "Πλατάνι 732 00",
+    "lat": "35.47882388836681",
+    "lng": "24.099356912172677"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tNzSrPjrJVJbBhbr6?g_st=ipc",
+    "name": "Loulis Taste Project",
+    "address": "Loulis Taste Project",
+    "lat": "38.83362395321285",
+    "lng": "20.707875524974906"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eGCLTTn1odF58Myt5?g_st=ipc",
+    "name": "Brothers in Law Smash 'n' Pasta Thermi",
+    "address": "5 χλμ, Χαρ. Θέρμης 1ο χλμ, Thermi 570 01",
+    "lat": "40.55612517346044",
+    "lng": "23.012690343386318"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bZQiMSEwbhVFBxUd8?g_st=ipc",
+    "name": "Tonino Esperienza Italiana",
+    "address": "Χαρ. Θέρμης, Thermi 570 01",
+    "lat": "40.56132998598623",
+    "lng": "23.004796368106923"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zebuXsdGAEsViD2MA?g_st=ipc",
+    "name": "Tonino Pizzeria Napoletana",
+    "address": "Iereos Papanikola 13-15, Kalamaria 551 31",
+    "lat": "40.58464427596488",
+    "lng": "22.951802816992593"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gJ7QpRFhLKuDpyFc9?g_st=ipc",
+    "name": "Pizza Plain",
+    "address": "Nik. Plastira 2, Thessaloniki 542 50",
+    "lat": "40.601547606224",
+    "lng": "22.970026389723678"
+  },
+  {
+    "url": "https://maps.app.goo.gl/t8jAxdhgPG7fRJcE7?g_st=ipc",
+    "name": "Raffaele Pizza & Pasta",
+    "address": "Αμφιπόλεως 45, Thessaloniki 544 54",
+    "lat": "40.609052469541666",
+    "lng": "22.97944908191486"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tJ95kQkAp73h9qDi8?g_st=ipc",
+    "name": "Trattoria Santa Rita",
+    "address": "Malakopis 19, Thessaloniki 544 53",
+    "lat": "40.612086768976745",
+    "lng": "22.969846546876834"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XC8KbzgVXxEiYUru8?g_st=ipc",
+    "name": "Dos Margaritas",
+    "address": "Emiliou Riadi 5, Thessaloniki 546 40",
+    "lat": "40.621386723569444",
+    "lng": "22.952891023289123"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QzosxSTGJyN4yoBfA?g_st=ipc",
+    "name": "Signora Trattoria",
+    "address": "P. Mela 38, Paleon Patron Germanou 19, Thessaloniki 546 22",
+    "lat": "40.63157039493222",
+    "lng": "22.94755320492566"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WqcXyq1eyTArWEmP6?g_st=ipc",
+    "name": "Rosticceria di Salonicco",
+    "address": "Armenopoulou 27, Thessaloniki 546 35",
+    "lat": "40.633588139092396",
+    "lng": "22.954063296681706"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TiNtp5tDGN6Eji5d9?g_st=ipc",
+    "name": "MARGHERITA",
+    "address": "Proxenou Koromila 11, Thessaloniki 546 23",
+    "lat": "40.631390383048206",
+    "lng": "22.94264327325537"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gJ5jrWEXwAbU6ynW8?g_st=ipc",
+    "name": "Apallou",
+    "address": "Μητροπόλεως &, Karolou Ntil 10, Thessaloniki 546 23",
+    "lat": "40.6319800622151",
+    "lng": "22.942842887749638"
+  },
+  {
+    "url": "https://maps.app.goo.gl/psKGv2fkZa2YBSRv6?g_st=ipc",
+    "name": "The Last Slice",
+    "address": "Proxenou Koromila 1, Thessaloniki 546 23",
+    "lat": "40.6318911481541",
+    "lng": "22.9419087824566"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ptx8MrTs166UDsu79?g_st=ipc",
+    "name": "Osteria dai Fioi",
+    "address": "Leonida Iasonidou 9, Thessaloniki 546 35",
+    "lat": "40.633770916934814",
+    "lng": "22.950440152016508"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CkxsQoyZaG8gTuWG9?g_st=ipc",
+    "name": "High School Pizza Bar",
+    "address": "Leof. Nikis 9Α, Thessaloniki 546 24",
+    "lat": "40.63257762535487",
+    "lng": "22.939550561883348"
+  },
+  {
+    "url": "https://maps.app.goo.gl/M6cnfrHcMrMNBhMNA?g_st=ipc",
+    "name": "Cena",
+    "address": "Rogkoti 4, Thessaloniki 546 24",
+    "lat": "40.63453379937182",
+    "lng": "22.938924721124444"
+  },
+  {
+    "url": "https://maps.app.goo.gl/i1hQW24s88nE2YPJ6?g_st=ipc",
+    "name": "Pízza Poselli",
+    "address": "Vilara 2, Thessaloniki 546 25",
+    "lat": "40.63738570521256",
+    "lng": "22.93899269726352"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KJDU4WMhcL2vXfup6?g_st=ipc",
+    "name": "Salento Wood Fired Street Food",
+    "address": "El. Venizelou 76, Thessaloniki 546 31",
+    "lat": "40.639269195238484",
+    "lng": "22.94398924661335"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kArqW8YF8BC21Y9r5?g_st=ipc",
+    "name": "Michelangelo.skg",
+    "address": "Riga Feraiou 162, Sikies 566 26",
+    "lat": "40.65053844897359",
+    "lng": "22.956711814564258"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Nhxk1VKn5ej1EsSF6?g_st=ipc",
+    "name": "Freskia zymi,pizza ,pasta fresca",
+    "address": "P. Tsaldari 29, Neapoli 567 27",
+    "lat": "40.654424928028824",
+    "lng": "22.93913723718484"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SJNcMHpxLNtQxnKLA?g_st=ipc",
+    "name": "Funghi Pizza & Pasta",
+    "address": "Iatrou Gogousi 25, κέντρο 564 30",
+    "lat": "40.6605072820276",
+    "lng": "22.9274131044966"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EpFwtHWFaS5GMZ8C9?g_st=ipc",
+    "name": "Raffaele Pizza & Pasta",
+    "address": "40.6655613219397, 22.94711932792721",
+    "lat": "40.66556499607672",
+    "lng": "22.94711551769067"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FjcCcP1uvC3Gxrju5?g_st=ipc",
+    "name": "Pizzicato Osteria",
+    "address": "Eth. Antistaseos 79, Eleftherio Kordelio 563 34",
+    "lat": "40.669954093386394",
+    "lng": "22.89587107388144"
+  },
+  {
+    "url": "https://maps.app.goo.gl/q6frpMcS63aQ6eSu5?g_st=ipc",
+    "name": "Filomila",
+    "address": "Filomila",
+    "lat": "39.28501094493868",
+    "lng": "20.39762732442374"
+  },
+  {
+    "url": "https://maps.app.goo.gl/74rh4sPu3LvCHuk77?g_st=ipc",
+    "name": "Pizzeria MamaRosa",
+    "address": "Kanari 48, Kos 853 00",
+    "lat": "36.899851240204136",
+    "lng": "27.283589360751858"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ENRUpZHsLbcTwuH2A?g_st=ipc",
+    "name": "La Tavola Calda",
+    "address": "Giotopoulou 10-12, Kerkira 491 00",
+    "lat": "39.623370627858776",
+    "lng": "19.923005947570733"
   }
 ]

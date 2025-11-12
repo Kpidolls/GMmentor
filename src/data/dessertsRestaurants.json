@@ -147,7 +147,7 @@
     "lng": "23.818970445559835"
   },
   {
-    "url": "https://maps.app.goo.gl/fFwnMsNms9DPch6d6",
+    "url": "https://maps.app.goo.gl/fFwnMsNms9DPch6d6?g_st=ipc",
     "name": "BREAD B.C. Bread Before Christ",
     "address": "Αγίας Παρασκευής 59, Χαλάνδρι 152 34",
     "lat": "38.02007413497763",
@@ -1484,6 +1484,13 @@
     "lng": "24.942058155197838"
   },
   {
+    "url": "https://maps.app.goo.gl/kDu69AUHWaiUN8MD9?g_st=ipc",
+    "name": "So in d cjdh",
+    "address": "Γεωρ. Γεννηματά, Ερμούπολη 841 00",
+    "lat": "37.4444390329241",
+    "lng": "24.943371459609835"
+  },
+  {
     "url": "https://maps.app.goo.gl/n5hxCbxJp7iEtRnS8?g_st=ipc",
     "name": "Django Gelato Syros",
     "address": "Εμμανουήλ Ροΐδη 10, Ερμούπολη 841 00",
@@ -1510,5 +1517,845 @@
     "address": "Επαρ.Οδ. Τήνου-Καλλονής 1876, Τήνος 842 00",
     "lat": "37.53782261822991",
     "lng": "25.160738844151368"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pfudAWa8vWhrYMxA8?g_st=ipc",
+    "name": "Sol Bake & Coffee Project Tinos",
+    "address": "Drosou, Tinos 842 00",
+    "lat": "37.53735450561746",
+    "lng": "25.16338897699387"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qZaYAac8rhBH69sC8?g_st=ipc",
+    "name": "Dafni's Sweets",
+    "address": "Τέρμα Παπαδιαμάντη, Skiathos 370 02",
+    "lat": "39.16451312827066",
+    "lng": "23.484321078437517"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jrFAxiopPa2HXAPw6?g_st=ipc",
+    "name": "Yellow Bicycle",
+    "address": "Αρτεμώνας 840 03",
+    "lat": "36.981512610738626",
+    "lng": "24.723907398959476"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3Jy7ZAZANHv7j8Zv5?g_st=ipc",
+    "name": "Theodorou",
+    "address": "Αρτεμώνας 840 03",
+    "lat": "36.98032236422911",
+    "lng": "24.725175617740387"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9np4LKVixhfHWSEt6?g_st=ipc",
+    "name": "Yfes",
+    "address": "Απολλωνία 840 03",
+    "lat": "36.971257014168174",
+    "lng": "24.72665696440793"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Sp8BxDU518brNxns5?g_st=ipc",
+    "name": "Dopio Gelato Mykonos",
+    "address": "Dopio Gelato Mykonos",
+    "lat": "37.44519875814453",
+    "lng": "25.327173016826194"
+  },
+  {
+    "url": "https://maps.app.goo.gl/figeZhjJhW1w1WGh6?g_st=ipc",
+    "name": "I SCREAM homemade ice cream-cafe",
+    "address": "20 Street Fabrica Sq, Xenias, Mikonos 846 00",
+    "lat": "37.443153733966156",
+    "lng": "25.32768461351495"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JpGxtdjqrzWaKvb36?g_st=ipc",
+    "name": "N'ice Cream Mykonos",
+    "address": "Κλούβας 846 00",
+    "lat": "37.45205375388753",
+    "lng": "25.358864338055778"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Lr6pCYmiGibrxw1B7?g_st=ipc",
+    "name": "Aggeliki ice cream shop",
+    "address": "Greece, Adamas 848 00",
+    "lat": "36.724956307095454",
+    "lng": "24.446679354720963"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QoqnghnxkCVXxyoT6?g_st=ipc",
+    "name": "Vanilla Gelateria",
+    "address": "Paroikias, Zoodochou Pigis 84400, Paros 844 00",
+    "lat": "37.08455372963838",
+    "lng": "25.14916406230604"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WzK8QW7pCKsm8q7M6?g_st=ipc",
+    "name": "Batistas Bakery",
+    "address": "Naousa 844 01",
+    "lat": "37.12004600596808",
+    "lng": "25.241091128823886"
+  },
+  {
+    "url": "https://maps.app.goo.gl/S3vicBhUXPLLmBEK6?g_st=ipc",
+    "name": "Sweet Smelling Kitchen",
+    "address": "ΧΩΡΙΟ ΛΕΥΚΕΣ Τ.Θ. 50104, Paros 844 00",
+    "lat": "37.05574111764851",
+    "lng": "25.209011772952916"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rAbxWJidxPCZz1CF9?g_st=ipc",
+    "name": "Xilofournos",
+    "address": "Epar.Od. Naoussas-Marpissas, Paros 844 01",
+    "lat": "37.08496749131104",
+    "lng": "25.244272132832048"
+  },
+  {
+    "url": "https://maps.app.goo.gl/C2qoG9g6ogZM9U2H6?g_st=ipc",
+    "name": "Glyko Styllas",
+    "address": "Iasonos 135, Volos 382 21",
+    "lat": "39.358756123978736",
+    "lng": "22.949172631183142"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LYYj8A3erRuK1dFDA?g_st=ipc",
+    "name": "Minerva",
+    "address": "Argonafton 53, Volos 383 33",
+    "lat": "39.35839004627972",
+    "lng": "22.94810636993991"
+  },
+  {
+    "url": "https://maps.app.goo.gl/N1XMSFR7tEBpbki29?g_st=ipc",
+    "name": "Χαλβαδοποιία ΠαπαγιαννόπουλοςΠαπαγιαννόπουλος Ιωάννης",
+    "address": "4, Vassani 2, Volos 383 33",
+    "lat": "39.36370657984136",
+    "lng": "22.937869092104165"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WWUz17HUPNByCsTf9?g_st=ipc",
+    "name": "Aktaion Pastry & Ice Cream | Downtown",
+    "address": "Π. Πρωτοπαπαδάκη, Naxos 843 00",
+    "lat": "37.105490385586045",
+    "lng": "25.375549550238706"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HYZR2GPUwwpWpFCz6?g_st=ipc",
+    "name": "Waffle House",
+    "address": "Naxos 843 00",
+    "lat": "37.10467061317303",
+    "lng": "25.375709513413007"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Phd5ZDeXAdM1ZXne8?g_st=ipc",
+    "name": "Chou-Chouro",
+    "address": "Castle Area, Naxos 843 00",
+    "lat": "37.10481340685538",
+    "lng": "25.376412266991043"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2DJ9CavskAENKDWQ6?g_st=ipc",
+    "name": "Aktaíon",
+    "address": "Naxou, Krinides 843 00",
+    "lat": "37.10978039540428",
+    "lng": "25.383810454464182"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LEeuqgamRoLhRLwm7?g_st=ipc",
+    "name": "Caffe Greco",
+    "address": "Χαλκείο 843 02",
+    "lat": "37.0628393807371",
+    "lng": "25.48217786098"
+  },
+  {
+    "url": "https://maps.app.goo.gl/koEwVV1SwKUtb4o86?g_st=ipc",
+    "name": "GRANDE MYLONAS",
+    "address": "Patron Klaous 54, Patra 263 34",
+    "lat": "38.226507714136424",
+    "lng": "21.749216193252526"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BMT18eHqusic7eRN8?g_st=ipc",
+    "name": "Fasolas Gastrokafeneio",
+    "address": "Filoti 843 02",
+    "lat": "37.05047818826614",
+    "lng": "25.497802541590467"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uHizqRuZ9AFawcUz5?g_st=ipc",
+    "name": "Lotsárēs",
+    "address": "Gerokostopoulou 23, Patra 262 21",
+    "lat": "38.245712406206245",
+    "lng": "21.73585932751544"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vW8aWwnYez1UELdL8?g_st=ipc",
+    "name": "Lotsaris Bros O.E.",
+    "address": "Maizonos 124, Patra 262 22",
+    "lat": "38.24431368433903",
+    "lng": "21.73185220313626"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cgshZD6Sh33x15CL8?g_st=ipc",
+    "name": "DA VINCI",
+    "address": "Dim. Gounari 11, Patra 262 21",
+    "lat": "38.24539440430271",
+    "lng": "21.731371228848985"
+  },
+  {
+    "url": "https://maps.app.goo.gl/S4yCk6avJpgbawKA7?g_st=ipc",
+    "name": "Mama's Sweethouse",
+    "address": "Amfias 20, Kalamata 241 00",
+    "lat": "37.04347618258237",
+    "lng": "22.112767283500112"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CqfQrVAqTCRArs3DA?g_st=ipc",
+    "name": "Chrysánthē",
+    "address": "Ithomis 8, Kalamata 241 00",
+    "lat": "37.04381316216458",
+    "lng": "22.112403710830222"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SRnK7VZPNJJSVHfq6?g_st=ipc",
+    "name": "Fystiki Gelato",
+    "address": "Κουφονησίων, Koufonisi 843 00",
+    "lat": "36.93198529080786",
+    "lng": "25.599118541452043"
+  },
+  {
+    "url": "https://maps.app.goo.gl/srbHuTvaX8jLCjTu8?g_st=ipc",
+    "name": "Κανέλλος Λουκουμάδες",
+    "address": "Dimogerontias 18, Chios 821 00",
+    "lat": "38.36957058310483",
+    "lng": "26.13638358929807"
+  },
+  {
+    "url": "https://maps.app.goo.gl/48s1ijnKaWWrDfMs6?g_st=ipc",
+    "name": "Λουκουμάδες Μανάρας",
+    "address": "ΑΡΧΕΡΜΟΥ 2, Chios 821 00",
+    "lat": "38.370567413138176",
+    "lng": "26.136572614570674"
+  },
+  {
+    "url": "https://maps.app.goo.gl/c2iaJjfqekF4QV9w5?g_st=ipc",
+    "name": "Lolita's Gelato",
+    "address": "Oia 847 02",
+    "lat": "36.46273695850675",
+    "lng": "25.376386479037105"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Qok4Wd3kZZnJC6xv9?g_st=ipc",
+    "name": "Rook's Pastry Lab",
+    "address": "Γαμβέτα, Dim. Lappa 12 - 16, Karditsa 431 00",
+    "lat": "39.36032541859575",
+    "lng": "21.926312209067312"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LLNEhXXp3PJCCKgu7?g_st=ipc",
+    "name": "patisserie Achlatis",
+    "address": "Chaniotis 630 85",
+    "lat": "40.0008948533071",
+    "lng": "23.574509488353804"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zxMDWyaDa8oTgjvt6?g_st=ipc",
+    "name": "Kallisto",
+    "address": "Χώρα 840 08",
+    "lat": "36.83193327608509",
+    "lng": "25.897182643444378"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QD97vczb4ZtE7gzR9?g_st=ipc",
+    "name": "Μικράκι gelato",
+    "address": "Χώρα 840 08",
+    "lat": "36.83144131849213",
+    "lng": "25.898487086486654"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HGnMQLpSqcLam8fR7?g_st=ipc",
+    "name": "Terkenlis",
+    "address": "Δημόσια, Θεσσαλονικής, Kallithea 630 77",
+    "lat": "40.07236945700872",
+    "lng": "23.44461611117606"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SJcXoVQYWqcw91ws8?g_st=ipc",
+    "name": "M&M cafe",
+    "address": "Παλαιο λιμανι, Mirina 814 00",
+    "lat": "39.874546870141494",
+    "lng": "25.06021064657425"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YNZtpmoKz7NF28Uy9?g_st=ipc",
+    "name": "Gelateria Ksilaki",
+    "address": "Unnamed Road, Nikiti 630 88",
+    "lat": "40.21685753813557",
+    "lng": "23.667097053863888"
+  },
+  {
+    "url": "https://maps.app.goo.gl/h2Tc6Wrf9W1Td7877?g_st=ipc",
+    "name": "Revani me Pagoto - Patisserie Anatoli",
+    "address": "Nikiti 630 88",
+    "lat": "40.21741442419358",
+    "lng": "23.666604738726736"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2T2VnbDknHbHu6nF7?g_st=ipc",
+    "name": "Kolokytha",
+    "address": "Unnamed Rd, Astipalea 859 00",
+    "lat": "36.54727053954883",
+    "lng": "26.353646884859614"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cu1BEud71YMnJy2E9?g_st=ipc",
+    "name": "Meltemi",
+    "address": "Astypalaia 859 00",
+    "lat": "36.545357632908505",
+    "lng": "26.352356694518964"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZBAersiUhet96cfT7?g_st=ipc",
+    "name": "Confectioneries Hatzifotiou",
+    "address": "24ο χλμ, Θεσ/νίκης - Μουδανιών, Mikra 575 00",
+    "lat": "40.44091493203973",
+    "lng": "23.01172950209268"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ewEbAmjuJdZBCseQ7?g_st=ipc",
+    "name": "Fresco gelato artigianale",
+    "address": "Ioannou Mela 69, Lefkada 311 00",
+    "lat": "38.833202680203854",
+    "lng": "20.707021375147267"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pdjwM7eD44CCVek79?g_st=ipc",
+    "name": "NICK ALEXOUDAS",
+    "address": "Θέρμη 570 01",
+    "lat": "40.50355208818679",
+    "lng": "22.970983268361184"
+  },
+  {
+    "url": "https://maps.app.goo.gl/akE1bVgaSKcamD5a9?g_st=ipc",
+    "name": "Terkenlis SA",
+    "address": "EO Thessalonikis Poligirou, Thermi 570 01",
+    "lat": "40.53095135339602",
+    "lng": "23.040855842977592"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NfxGujkvPGiZ6Nah7?g_st=ipc",
+    "name": "Terkenlis",
+    "address": "Macedonia, airport, Thessaloniki",
+    "lat": "40.525256969361955",
+    "lng": "22.97500623617725"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BFRCZLpVmbK8YGZm9?g_st=ipc",
+    "name": "Yammy Donuts",
+    "address": "Tsaldari 5, Thermi 570 01",
+    "lat": "40.54588944546194",
+    "lng": "23.02111857717177"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SVoXU7LGnn3dArUNA?g_st=ipc",
+    "name": "NICK ALEXOUDAS",
+    "address": "Agiou Nikolaou 2, Thermi 570 01",
+    "lat": "40.547044888222544",
+    "lng": "23.01874068673441"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iU3xLN5pQr3ggcxF9?g_st=ipc",
+    "name": "Τρίγωνα Πανοράματος Δροσσά (πρώην Γιάννης)",
+    "address": "Tavaki 24, Thermi 570 01",
+    "lat": "40.549930484948774",
+    "lng": "23.019231796608217"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AFtw3E5Sssatu2m37?g_st=ipc",
+    "name": "Gelato fresco italiano",
+    "address": "Ρόκκου, Vergoti 4, Argostoli 281 00",
+    "lat": "38.17749874571835",
+    "lng": "20.48897656776002"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gMytqU2WoyrUyoov8?g_st=ipc",
+    "name": "Pink Dot Cafe",
+    "address": "Leof. Georgikis Scholis 84, Pilea 570 01",
+    "lat": "40.548405696052406",
+    "lng": "22.981865507905024"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vtyePWkmH3e9Cxi2A?g_st=ipc",
+    "name": "OSTEN",
+    "address": "4χλμ, Χαρ. Θέρμης, Thessaloniki 570 01",
+    "lat": "40.55792217779551",
+    "lng": "23.01007689548662"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NCWBKtbPRQENGDWW7?g_st=ipc",
+    "name": "Cinnabon",
+    "address": "11ο Χμ, A/D Thessalonikis Neon Moudanion, 570 01",
+    "lat": "40.55623010232396",
+    "lng": "22.993413011236047"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jz8nuACpM2Fnauw9A?g_st=ipc",
+    "name": "Terkenlis",
+    "address": "11ο χλμ, ΘΕΣΣΑΛΟΝΙΚΗΣ-ΜΟΥΔΑΝΙΩΝ, 555 35",
+    "lat": "40.55633315795377",
+    "lng": "22.993299667914595"
+  },
+  {
+    "url": "https://maps.app.goo.gl/L8fJy8x72XPMwgQC6?g_st=ipc",
+    "name": "Elenidis",
+    "address": "Venizelou 12, Panorama 552 36",
+    "lat": "40.590269244540906",
+    "lng": "23.036630664756583"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4xfcNGGMy4nwoxyR8?g_st=ipc",
+    "name": "Trigona Elenidi",
+    "address": "Leof. Komninon 69, Panorama 552 36",
+    "lat": "40.59208635693994",
+    "lng": "23.041104741607068"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hLPTQRcHhxotqq366?g_st=ipc",
+    "name": "Παγωτά 'Θέμης'",
+    "address": "I. Passalidi 69, Kalamaria 551 32",
+    "lat": "40.58103606730307",
+    "lng": "22.951200963653005"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EpRLs9ycdMXcJNP16?g_st=ipc",
+    "name": "Trigona Elenidi",
+    "address": "Adrianoupoleos 19, Kalamaria 551 33",
+    "lat": "40.58725693671977",
+    "lng": "22.9548680363337"
+  },
+  {
+    "url": "https://maps.app.goo.gl/daRMg1RfmVJcgATKA?g_st=ipc",
+    "name": "Boutique Baking Pepi Beza",
+    "address": "Meg. Alexandrou 3, Pilea 555 35",
+    "lat": "40.59730321322995",
+    "lng": "22.979587033632086"
+  },
+  {
+    "url": "https://maps.app.goo.gl/svQRP7nS7UargNrc9?g_st=ipc",
+    "name": "NICK ALEXOUDAS",
+    "address": "Profitou Ilia 77, Pilea 555 35",
+    "lat": "40.60097575143556",
+    "lng": "22.988160776463623"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xBak2d9JxbKxQpz57?g_st=ipc",
+    "name": "Terkenlis",
+    "address": "Leof. Vasilissis Olgas 235, Thessaloniki 546 55",
+    "lat": "40.59488849299692",
+    "lng": "22.956363253741753"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tbZTnf9V3BccEmubA?g_st=ipc",
+    "name": "Alfa Ice-Cream Cafe",
+    "address": "Delfon 143, Thessaloniki 546 46",
+    "lat": "40.60099594467994",
+    "lng": "22.959526782313244"
+  },
+  {
+    "url": "https://maps.app.goo.gl/f4c7NqVni4s54aXE6?g_st=ipc",
+    "name": "Τρίγωνα Ελενίδης (Ανθέων)",
+    "address": "Geor. Papandreou 6, Thessaloniki 546 45",
+    "lat": "40.601144746020374",
+    "lng": "22.95082783427097"
+  },
+  {
+    "url": "https://maps.app.goo.gl/t2b2XQwYxmP3pkBd6?g_st=ipc",
+    "name": "Pie \"SERRES\" Lambrakis",
+    "address": "Grigoriou Lampraki 222, Thessaloniki 555 34",
+    "lat": "40.611438946577884",
+    "lng": "22.985616518677983"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ifbqMFmsGqy7oaxA8?g_st=ipc",
+    "name": "Nikos Alexoudas",
+    "address": "Makedonias 18, Thessaloniki 546 42",
+    "lat": "40.610389059142975",
+    "lng": "22.958123238836652"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GXNdrvZMon8LLp5Y6?g_st=ipc",
+    "name": "Σαβοϊδάκης Bakery & Patisserie, Ρέθυμνο",
+    "address": "Mark. Portaliou 57, Rethymno 741 50",
+    "lat": "35.3644961337899",
+    "lng": "24.48870910519482"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tnzvbcbCY13DjRZe7?g_st=ipc",
+    "name": "Babalooka-Το Αυθεντικό Γαλακτομπούρεκο Θεσσαλονίκης",
+    "address": "Δίπλα στη στροφή Λαμπράκη, Leof. Kon/nou Karamanli 15, Thessaloniki 546 38",
+    "lat": "40.62123778051854",
+    "lng": "22.962627985179793"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3MMykvcTvkcMNqrA6?g_st=ipc",
+    "name": "Armenonville",
+    "address": "Mitropoleos 102, Thessaloniki 546 21",
+    "lat": "40.62813210913547",
+    "lng": "22.94876500137915"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BWRmuMRqDoq6N7MH8?g_st=ipc",
+    "name": "Sugarela",
+    "address": "Nikiforou Foka 12, Thessaloniki 546 21",
+    "lat": "40.628286349246984",
+    "lng": "22.94919276720608"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CrarZvo5GUHnGW4C7?g_st=ipc",
+    "name": "Trigona Elenidi",
+    "address": "Dim. Gounari 13, Thessaloniki 546 22",
+    "lat": "40.62886737433407",
+    "lng": "22.948457330769024"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KrVfLWu1YhMe94yS8?g_st=ipc",
+    "name": "BOMBOLO",
+    "address": "Mitropoleos 88, Thessaloniki 546 22",
+    "lat": "40.628931168792896",
+    "lng": "22.947385328416402"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vMrAJXJCUj5tn2mDA?g_st=ipc",
+    "name": "Gelati e Amore",
+    "address": "Al. Svolou 44, Thessaloniki 546 21",
+    "lat": "40.63013548543496",
+    "lng": "22.951618020186764"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nU8Tq4Vjr5TS7bBeA?g_st=ipc",
+    "name": "Fatto a Mano",
+    "address": "P. Mela 20, Thessaloniki 546 22",
+    "lat": "40.63009258953706",
+    "lng": "22.9479003155248"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nwvSZePQvBQzGocJ6?g_st=ipc",
+    "name": "Valentino Crepes",
+    "address": "Dim. Gounari 25, Thessaloniki 546 22",
+    "lat": "40.63057112442913",
+    "lng": "22.950154633509246"
+  },
+  {
+    "url": "https://maps.app.goo.gl/a3ZWXrDCAGuMcPwA6?g_st=ipc",
+    "name": "Choureál | Choux & Profiterole",
+    "address": "Paleon Patron Germanou 9, Thessaloniki 546 22",
+    "lat": "40.63128497514692",
+    "lng": "22.94642870495605"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TQFwjdg19bCqCfpz8?g_st=ipc",
+    "name": "Senol",
+    "address": "Paleon Patron Germanou 23, Thessaloniki 546 22",
+    "lat": "40.631655999978115",
+    "lng": "22.9479848979778"
+  },
+  {
+    "url": "https://maps.app.goo.gl/M7r6TuYWcBQ1KPRT8?g_st=ipc",
+    "name": "Magoa Patisserie-Chocolaterie",
+    "address": "Paleon Patron Germanou 29, Thessaloniki 546 22",
+    "lat": "40.63172247185242",
+    "lng": "22.9482457723652"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YatTYWeuGDBfasFT7?g_st=ipc",
+    "name": "Galyfianakis",
+    "address": "Kon/nou Paleologou 3, Thessaloniki 546 22",
+    "lat": "40.63202978741134",
+    "lng": "22.948953049298385"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vemhynL6jAV74wkZA?g_st=ipc",
+    "name": "Trigona Elenidis (Κέντρο)",
+    "address": "Iktinou 1, Thessaloniki 546 22",
+    "lat": "40.631364775002",
+    "lng": "22.945577888917885"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gScJKVggjQfTPnLP8?g_st=ipc",
+    "name": "Exereton",
+    "address": "Mitropoleos 69, Thessaloniki 546 23",
+    "lat": "40.63128878529408",
+    "lng": "22.94431478557479"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tBpAuNdF8KmF9aXe6?g_st=ipc",
+    "name": "Tzeneral Ζαχαροπλαστείο",
+    "address": "P. Mela 44, Thessaloniki 546 22",
+    "lat": "40.631986554661324",
+    "lng": "22.94743879678818"
+  },
+  {
+    "url": "https://maps.app.goo.gl/65SPRQQN5mowAwhw8?g_st=ipc",
+    "name": "Hatzifotiou",
+    "address": "P. Mela 37, Thessaloniki 546 22",
+    "lat": "40.632118329149435",
+    "lng": "22.94703754885986"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hKBcrUZHdy4zfWBD6?g_st=ipc",
+    "name": "Gellissimo Biscoto | Brunch • Coffee | Thessaloniki",
+    "address": "Proxenou Koromila 8, Thessaloniki 546 23",
+    "lat": "40.63140057893351",
+    "lng": "22.942411089115478"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WDjY5yJNSF5kSpkeA?g_st=ipc",
+    "name": "Cookie Man",
+    "address": "Makenzi King 8, Thessaloniki 546 22",
+    "lat": "40.632757475000446",
+    "lng": "22.946181479303316"
+  },
+  {
+    "url": "https://maps.app.goo.gl/x8RmTioRat9tbKBd8?g_st=ipc",
+    "name": "Terkenlis",
+    "address": "Tsimiski 30, Thessaloniki 546 36",
+    "lat": "40.63318101509439",
+    "lng": "22.941941930979123"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bB7Rqx6yTjnB1W5m8?g_st=ipc",
+    "name": "Sweet garden",
+    "address": "Ermou 69, Thessaloniki 546 23",
+    "lat": "40.63410476799262",
+    "lng": "22.94497199045663"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UwfdcZR8Tfa1XRB89?g_st=ipc",
+    "name": "CHOUREAL - Choux & Profiterole",
+    "address": "El. Venizelou 20, Thessaloniki 546 24",
+    "lat": "40.63486867839386",
+    "lng": "22.939852872521865"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BLrPEMBFAqcE5fZP6?g_st=ipc",
+    "name": "Soufflér",
+    "address": "Rogkoti 4, Thessaloniki 546 24",
+    "lat": "40.63479159488401",
+    "lng": "22.93892769842922"
+  },
+  {
+    "url": "https://maps.app.goo.gl/56EQSujX5a55tWkk6?g_st=ipc",
+    "name": "Dorkada",
+    "address": "Kassandrou 66, Thessaloniki 546 33",
+    "lat": "40.63877718781837",
+    "lng": "22.949276397393735"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mqxpWWxFf4unYCA89?g_st=ipc",
+    "name": "NICK ALEXOUDAS",
+    "address": "Kassandrou 48, Thessaloniki 546 33",
+    "lat": "40.640152390023324",
+    "lng": "22.946508561358726"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wxVoFxomNfq7egVX7?g_st=ipc",
+    "name": "Helios Pastry Shop",
+    "address": "Adigonidon 7, Thessaloniki 546 30",
+    "lat": "40.639377492095335",
+    "lng": "22.93909008861793"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QqgTsF7F3e7rFPXh6?g_st=ipc",
+    "name": "Pastelopoiḯon",
+    "address": "Dodekanisou 3, Thessaloniki 546 26",
+    "lat": "40.63949021546042",
+    "lng": "22.936170041434007"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6mo1DJtrfFXMber56?g_st=ipc",
+    "name": "Terkenlis OSE",
+    "address": "Monastiriou, Thessaloniki 546 27",
+    "lat": "40.64470252527838",
+    "lng": "22.92850176756682"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ndu5vJgYbtj4ou9s5?g_st=ipc",
+    "name": "Cinnabon",
+    "address": "Giannitson 61, Thessaloniki 546 27",
+    "lat": "40.646492769432",
+    "lng": "22.920799139987686"
+  },
+  {
+    "url": "https://maps.app.goo.gl/M3GHqH2wSqH8EMUj7?g_st=ipc",
+    "name": "Τερκενλής ΚΤΕΛ Μακεδονίας",
+    "address": "Monastiriou, Menemeni 546 28",
+    "lat": "40.654156711472844",
+    "lng": "22.902064012379874"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vbfuQxUAYJbahN6L9?g_st=ipc",
+    "name": "Rōxánē",
+    "address": "P. Mela 5, Paleokastro 570 13",
+    "lat": "40.72277068014523",
+    "lng": "22.90986284593618"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KeFfiyDrYEvNSjAv8?g_st=ipc",
+    "name": "Hochliourou Traditional Revani",
+    "address": "Agiou Antoniou, Kentrikis 134, Veria 591 32",
+    "lat": "40.52579895116516",
+    "lng": "22.20253231030905"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AAjaiaEXbfkmmMRW6?g_st=ipc",
+    "name": "Bombus Street Loukoumas & Coffee",
+    "address": "Pl. Kornarou 31, Iraklio 712 01",
+    "lat": "35.33637912527502",
+    "lng": "25.133042788251835"
+  },
+  {
+    "url": "https://maps.app.goo.gl/y1ujiW8koq2bhg1NA?g_st=ipc",
+    "name": "Special Zipari",
+    "address": "Zipari 853 00",
+    "lat": "36.87693633011065",
+    "lng": "27.208733925340766"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RP9XvJeTKjnB3SyW7?g_st=ipc",
+    "name": "Evangelou Confectionary",
+    "address": "P. Mela 6, Kavala 653 02",
+    "lat": "40.93760506506312",
+    "lng": "24.410866727456785"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rQDc5X2QHbgntYvk8?g_st=ipc",
+    "name": "Hans & Gretel | Kos",
+    "address": "Kanari 4, Kos 853 00",
+    "lat": "36.89661462547778",
+    "lng": "27.285723193546904"
+  },
+  {
+    "url": "https://maps.app.goo.gl/h4veUyYdxhyumq1b7?g_st=ipc",
+    "name": "Gelateria Nonno Enzo",
+    "address": "Vasileos Georgiou V' 7, Kos 853 00",
+    "lat": "36.89292607123432",
+    "lng": "27.29412898356443"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cvmdPcy2F9CSE1Jx6?g_st=ipc",
+    "name": "Il Capriccio Creperie Gelateria",
+    "address": "Unnamed Road,, Gaios 490 82",
+    "lat": "39.196184264572324",
+    "lng": "20.187150122565953"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jvvGBnLGwBaooftv9?g_st=ipc",
+    "name": "Παύλος Boutique Gelateria",
+    "address": "Eth. Antistasis 88, Igoumenitsa 461 00",
+    "lat": "39.50673573079307",
+    "lng": "20.262695193015087"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7nzHrRoeVuv244XT6?g_st=ipc",
+    "name": "Armenovílle",
+    "address": "1is Iouliou 6, Drama 661 00",
+    "lat": "41.14370182931695",
+    "lng": "24.14876446334483"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Suf5sjaXV3dpf4nq7?g_st=ipc",
+    "name": "Παπαπαρασκευάς",
+    "address": "28is Oktovriou 186, Xanthi 671 00",
+    "lat": "41.13596445158542",
+    "lng": "24.887595282004852"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tLH5nMQN5TJtaAzM8?g_st=ipc",
+    "name": "Cosy",
+    "address": "Αγ. Γεώργιος 490 80",
+    "lat": "39.42695341977823",
+    "lng": "19.943982019426304"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HzPozyu829t1F6kV8?g_st=ipc",
+    "name": "Mitsakakis",
+    "address": "Kon/nou Karamanli 6, Sitia 723 00",
+    "lat": "35.2071841117343",
+    "lng": "26.1068075256644"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tsC3kM3FwzybS2zd6?g_st=ipc",
+    "name": "Papagiorgis Patiserie-Gelateria",
+    "address": "Nikiforou Theotoki 32, Kerkira 491 00",
+    "lat": "39.624442580854314",
+    "lng": "19.922449483485316"
+  },
+  {
+    "url": "https://maps.app.goo.gl/75zMv1NcKb3QY9T4A?g_st=ipc",
+    "name": "Solo Gelato",
+    "address": "Michail Theotoki 3, Kerkira 491 00",
+    "lat": "39.62449131411604",
+    "lng": "19.92192848556591"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KUPjw8WfQrcXZbYA6?g_st=ipc",
+    "name": "Hatzifotiou",
+    "address": "Kanada 69, Rodos 851 32",
+    "lat": "36.436204834104664",
+    "lng": "28.23364904254758"
+  },
+  {
+    "url": "https://maps.app.goo.gl/t2M6Ma6B3LXC2PSo6?g_st=ipc",
+    "name": "Ta Serbetia stou Psyrri",
+    "address": "105 54, Eschilou 3, Athina 105 54",
+    "lat": "37.97876489928662",
+    "lng": "23.725063077362762"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RjyUkSTj6TwcuZnn6?g_st=ipc",
+    "name": "Patisserie Despina",
+    "address": "Patriarchou Ioakim 56, Athina 106 76",
+    "lat": "37.97835834410638",
+    "lng": "23.74575820284903"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2bahw7piY4dbXkYo7?g_st=ipc",
+    "name": "Despina Patisserie",
+    "address": "Leof. Poseidonos 83, Glifada 166 75",
+    "lat": "37.861200491297915",
+    "lng": "23.749911676405425"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9jp6Sh2msw2SifXAA?g_st=ipc",
+    "name": "Mourtzis Pistachio and Traditional Sweets",
+    "address": "Leof. Dimokratias 6, Egina 180 10",
+    "lat": "37.74642667880152",
+    "lng": "23.427540300709033"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UywSucCQ3HFw2LJ1A?g_st=ipc",
+    "name": "Dix Sept",
+    "address": "25is Martiou 17, Cholargos 155 61",
+    "lat": "37.99369642530963",
+    "lng": "23.799524104459625"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jqVCKVDpx8nte58k7?g_st=ipc",
+    "name": "Choureal - Choux & Profiterole",
+    "address": "Lazaraki 39, Glifada 166 75",
+    "lat": "37.86175419711277",
+    "lng": "23.7510964996929"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cHiF8braV8253FBP6?g_st=ipc",
+    "name": "carpo psychiko",
+    "address": "Dim. Vasiliou 1, Neo Psichiko 154 51",
+    "lat": "38.00433299399579",
+    "lng": "23.77588410102084"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3f4yVgyuCXzvh6Ac6?g_st=ipc",
+    "name": "Bueno",
+    "address": "Leof. Kon/nou Karamanli 53, Acharnes 136 72",
+    "lat": "38.101101437687646",
+    "lng": "23.743308167267262"
   }
 ]

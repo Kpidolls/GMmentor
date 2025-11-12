@@ -217,13 +217,6 @@
     "lng": "23.91050612444449"
   },
   {
-    "url": "https://maps.app.goo.gl/UNcvoxBwvBAWVdzs9?g_st=ipc",
-    "name": "Magic Land & Ekali Park Παιδότοπος",
-    "address": "Μαργαρίτας, Ntalias, Anixi 145 69",
-    "lat": "38.12379138800185",
-    "lng": "23.854147928013678"
-  },
-  {
     "url": "https://maps.app.goo.gl/DDga87nVticqm9qYA?g_st=ipc",
     "name": "HADO Δάφνη",
     "address": "Μπουμπουλίνας 6, Αγ. Δημήτριος Αττικής 173 43",
@@ -280,6 +273,13 @@
     "lng": "23.80936117936556"
   },
   {
+    "url": "https://maps.app.goo.gl/iUSz6s7BVEgZACCj9?g_st=ipc",
+    "name": "PLAYMOBIL FunPark",
+    "address": "Αμαλιάδος 4, Κηφισιά 145 64",
+    "lat": "38.101749739078855",
+    "lng": "23.80667805908177"
+  },
+  {
     "url": "https://maps.app.goo.gl/4YmyHX6EqG7wK1GEA?g_st=ipc",
     "name": "ΠΑΙΔΙΚΕΣ ΕΚΔΗΛΩΣΕΙΣ-ΞΕΝΕΣ ΓΛΩΣΣΕΣ | PETIT PARIS",
     "address": "Κρίνων 2, Νέα Ερυθραία 146 71",
@@ -301,18 +301,11 @@
     "lng": "23.929458278036556"
   },
   {
-    "url": "https://maps.app.goo.gl/ZwXeicz1GRi3AWbh7?g_st=ipc",
-    "name": "Αττικό Ζωολογικό Πάρκο",
-    "address": "Spata 190 04",
-    "lat": "38.00348626369301",
-    "lng": "23.87320165964319"
-  },
-  {
     "url": "https://maps.app.goo.gl/RLSd71ewXvmvT1cB6?g_st=ipc",
     "name": "Άλσος Περιστερίου",
     "address": "Αγίου Βασιλείου 63, Περιστέρι 121 35",
-    "lat": "37.98045525702386",
-    "lng": "23.910806100178778"
+    "lat": "38.01691760996396",
+    "lng": "23.68608991560274"
   },
   {
     "url": "https://maps.app.goo.gl/wwQRT4HuTNPHeVR97?g_st=ipc",
@@ -469,13 +462,6 @@
     "lng": "23.75493366426452"
   },
   {
-    "url": "https://maps.app.goo.gl/Xq1M4jNFvJbAMLXcA?g_st=ipc",
-    "name": "Voula Park",
-    "address": "Nireos, Voula, Athens 166 73",
-    "lat": "37.83964372794451",
-    "lng": "23.76220911315344"
-  },
-  {
     "url": "https://maps.app.goo.gl/b5HKTfYuBC6WE3XP7?g_st=ipc",
     "name": "Jumicar",
     "address": "Λεωφ. Μαραθώνος 1, Νέα Μάκρη 190 05",
@@ -567,10 +553,395 @@
     "lng": "22.771047365230917"
   },
   {
-    "url": "https://maps.app.goo.gl/V4H3u11HfsXeCDvt9?g_st=ipc",
+    "url": "https://maps.app.goo.gl/Jk42DbsK7YsoCuVL6?g_st=ipc",
+    "name": "Κεντρο Ελεύθερης Ιππασίας",
+    "address": "Epar.Od. Xilokastrou - Trikalon - Mannas, Ξυλόκαστρο 204 00",
+    "lat": "38.01371091852879",
+    "lng": "22.49660964449245"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BaTm12sUUp1d1c9g8?g_st=ipc",
+    "name": "Γήπεδο Ποδοσφαίρου Πάγου",
+    "address": "Πάγος 841 00",
+    "lat": "37.42646477570567",
+    "lng": "24.907668410293343"
+  },
+  {
+    "url": "https://maps.app.goo.gl/o23ir2rREaRUFiwK9?g_st=ipc",
+    "name": "Area Synest",
+    "address": "Epar.Od. Agorianis-Koronias, Sinevro 250 10",
+    "lat": "38.06576851291907",
+    "lng": "22.340295581454182"
+  },
+  {
+    "url": "https://maps.app.goo.gl/V3SkPjW9XHfNjwvSA?g_st=ipc",
+    "name": "Νύμφες",
+    "address": "Ζαρούχλα - Φενεός, Zarouchla 250 06",
+    "lat": "37.99541884225497",
+    "lng": "22.275355626093795"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Lr7uMbC7sLXRLEP9A?g_st=ipc",
+    "name": "CHERRYLAND - ΚΤΗΜΑ ΦΩΚΑΕΩΝ",
+    "address": "Epar.Od. Pountas - Kalavriton, Kernitsa 250 03",
+    "lat": "38.12752130997816",
+    "lng": "22.216601874987493"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FxXNY1FFj7tEZcaq9?g_st=ipc",
+    "name": "Vagonetto",
+    "address": "51 km National Road Lamia-Amfissa, Amfissa 331 00",
+    "lat": "38.63219190812368",
+    "lng": "22.37159554223315"
+  },
+  {
+    "url": "https://maps.app.goo.gl/f6rw3vWAJG1aAtPU6?g_st=ipc",
+    "name": "Attica Zoological Park",
+    "address": "Spata 190 04",
+    "lat": "37.98044022083859",
+    "lng": "23.910805906852257"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jLUBCzf12Wt3RSRK7?g_st=ipc",
+    "name": "Flisvos Playground",
+    "address": "Palaio Faliro 175 61",
+    "lat": "37.9267608286871",
+    "lng": "23.6891198217997"
+  },
+  {
+    "url": "https://maps.app.goo.gl/V4oZWgECkqhJFkK46?g_st=ipc",
+    "name": "Voula Park",
+    "address": "Nireos, Voula, Athens 166 73",
+    "lat": "37.839630282199295",
+    "lng": "23.762193155062445"
+  },
+  {
+    "url": "https://maps.app.goo.gl/P1JAubEdVdzV1V5Y8?g_st=ipc",
+    "name": "The Pelion Train",
+    "address": "South Pelion 370 10",
+    "lat": "39.327703252626804",
+    "lng": "23.143518252950724"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iHrSULP8wTnmG78AA?g_st=ipc",
+    "name": "HADO Volos",
+    "address": "Sachtouri 3, Volos 383 34",
+    "lat": "39.36503171785606",
+    "lng": "22.930285891313282"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kxZ4WVVMgAh5nHj19?g_st=ipc",
+    "name": "Aqua Fun",
+    "address": "ΣΤΕΛΙΔΑ, Ag. Prokopios 843 00",
+    "lat": "37.082347515027855",
+    "lng": "25.35405984069226"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LrjoDSvaukPFS7Bc7?g_st=ipc",
+    "name": "Saloon Park",
+    "address": "3ο χιλ Καρπενησίου Προυσσου, Karpenisi 361 00",
+    "lat": "38.90092130813555",
+    "lng": "21.772793181199432"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fpNf7FvMpmXwxvRu6?g_st=ipc",
+    "name": "Κάστρο των παραμυθιών",
+    "address": "Αγριλος 243 00",
+    "lat": "37.20812929239709",
+    "lng": "21.590483103667832"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Jsmn7XMyr6zE6XDc6?g_st=ipc",
+    "name": "Κτήμα Βρύση - Πολυχώρος εκδηλώσεων",
+    "address": "Τύρναβος 401 00",
+    "lat": "39.776305858514846",
+    "lng": "22.305702369995416"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZQzmktMRGdV4gQEMA?g_st=ipc",
+    "name": "Sani Adventure",
+    "address": "Sani Resort, Sani 630 77",
+    "lat": "40.10317902398793",
+    "lng": "23.309203578886024"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QGXbvqJ5SBN9ww289?g_st=ipc",
+    "name": "Grecotel La Riviera at Riviera Olympia & Aqua Park",
+    "address": "Λουτρά Κυλλήνης 270 50",
+    "lat": "37.85820173121935",
+    "lng": "21.11005718262559"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pwB8sxfXU5yLbEHY9?g_st=ipc",
+    "name": "Saint George Athletic Park",
+    "address": "Trikala 421 00",
+    "lat": "39.54375380003077",
+    "lng": "21.786690732349854"
+  },
+  {
+    "url": "https://maps.app.goo.gl/39GhkgeydgX7Y7Z5A?g_st=ipc",
+    "name": "Κεραμαριό Παραδοσιακή Ταβέρνα και Ξενώνες",
+    "address": "Συνοικισμός Κεραμαριό, Δρακότρυπα, Mouzaki 430 60",
+    "lat": "39.40971777314896",
+    "lng": "21.605805073179642"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HiNCRKX6yM5iQQuv6?g_st=ipc",
+    "name": "The Mill of the Elves",
+    "address": "Πάρκο Ματσόπουλου, Trikala 421 00",
+    "lat": "39.5462653378013",
+    "lng": "21.758814753478795"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7eqHoia3eNX5CcHv7?g_st=ipc",
+    "name": "Tsoupra",
+    "address": "ΤΘ293, Ag. Paraskevi 570 01",
+    "lat": "40.48659769840057",
+    "lng": "23.041299188559442"
+  },
+  {
+    "url": "https://maps.app.goo.gl/99k4EGKtgjYSqeE99?g_st=ipc",
+    "name": "Anemodoúra",
+    "address": "8η Οδός, Tagarades 570 01",
+    "lat": "40.50002708370587",
+    "lng": "23.026843516964323"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NR3PEtkiCnf5Fkg89?g_st=ipc",
+    "name": "Waterland",
+    "address": "5i Odos, Tagarades 570 01",
+    "lat": "40.510653052442045",
+    "lng": "23.017626650911268"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aNsGddhwQVLYuHvq9?g_st=ipc",
+    "name": "Platanórama",
+    "address": "8χλμ. Γερακαρου-Ζαγκλιβερι, Zagkliveri 570 12",
+    "lat": "40.58774137724462",
+    "lng": "23.252726275052023"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WB5r5nzJStMwqtSV8?g_st=ipc",
+    "name": "Thermi Dam",
+    "address": "Γεφυρα Φράγματος Θέρμης, Thermi 570 01",
+    "lat": "40.55889714492611",
+    "lng": "23.035634918395665"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Uz7ZprsZow6RFsYs7?g_st=ipc",
+    "name": "Les Raquettes Tennis Club",
+    "address": "Σοφοκλέους, Thermi 570 01",
+    "lat": "40.55611851243244",
+    "lng": "23.00759531084474"
+  },
+  {
+    "url": "https://maps.app.goo.gl/b73PDCUhFyJQjo748?g_st=ipc",
+    "name": "Magic Park",
+    "address": "Agias Anastasias 15, Thessaloniki 555 35",
+    "lat": "40.554442078448254",
+    "lng": "22.989769059470625"
+  },
+  {
+    "url": "https://maps.app.goo.gl/r83VD4fLTaPtYU7R6?g_st=ipc",
+    "name": "NOESIS Science Center & Technology Museum",
+    "address": "Θεσσαλονίκης 6 χλμ, Thermi 570 01",
+    "lat": "40.562055011158115",
+    "lng": "22.995596178260882"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5okZMJqh76rUBbgm9?g_st=ipc",
+    "name": "ERGON Agora (East)",
+    "address": "Leof. Georgikis Scholis 50, Pilea Chortiatis 555 35",
+    "lat": "40.55876788324677",
+    "lng": "22.976948972214135"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6g3bBu8datKxsCYq7?g_st=ipc",
+    "name": "Platanakia Natura",
+    "address": "St Paraskevopoulou, Panorama 552 36",
+    "lat": "40.59354583506236",
+    "lng": "23.05309273408505"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KdBGSDP4JgtkbeQQ7?g_st=ipc",
+    "name": "Happy Play",
+    "address": "Ioanninon Rd 9-11, Pilea 555 35",
+    "lat": "40.58463538696909",
+    "lng": "22.98516339267734"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NStAQS6bJYjXPSMi8?g_st=ipc",
+    "name": "Trees Trees",
+    "address": "Ανατολής, Elaionon και, Pilea 555 35",
+    "lat": "40.60274841786202",
+    "lng": "23.00941473830645"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Y3M4X3SLfpUBctf88?g_st=ipc",
+    "name": "HADO ARENA TOUMPA",
+    "address": "Kleanthous 25, Thessaloniki 544 53",
+    "lat": "40.61298475023653",
+    "lng": "22.966163361832432"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jBCqSTmypZMRabtf7?g_st=ipc",
+    "name": "Lake Kournas",
+    "address": "Georgioupoli 730 07",
+    "lat": "35.33085393719484",
+    "lng": "24.275768556511693"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bgFXGA2JPNnDk4Nh8?g_st=ipc",
+    "name": "Biotopoi of Crete Nature Park",
+    "address": "Kalaitzakis Kastelakia, Rethymno 741 33",
+    "lat": "35.36002627927518",
+    "lng": "24.496326916546945"
+  },
+  {
+    "url": "https://maps.app.goo.gl/acAH5pkUBqCJVJGj6?g_st=ipc",
+    "name": "Calcetto",
+    "address": "Ιωάννου Καλαϊτζάκη, Rethymno 741 00",
+    "lat": "35.35988785622983",
+    "lng": "24.496442751230653"
+  },
+  {
+    "url": "https://maps.app.goo.gl/P3RfiqzgWLJwu2HN6?g_st=ipc",
+    "name": "Family Sports Club",
+    "address": "Tositsa 18, Thessaloniki 570 10",
+    "lat": "40.655661119206584",
+    "lng": "22.9951268038431"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zejLUTjQA5bbDHBb6?g_st=ipc",
+    "name": "Ιχνηλάτης Ονείρων - Κτήμα Κλημεντινη",
+    "address": "EO Thessalonikis Kavalas, Volvi 572 00",
+    "lat": "40.67362926471837",
+    "lng": "23.088737171472587"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4acWduunHuC2yzqCA?g_st=ipc",
+    "name": "Κτήμα Χαϊδευτός",
+    "address": "Kavallari 572 00",
+    "lat": "40.70742578041207",
+    "lng": "23.04278762334095"
+  },
+  {
+    "url": "https://maps.app.goo.gl/y5U3WvSQGqnkW6KY7?g_st=ipc",
+    "name": "R'MOTE",
+    "address": "Palaiokomis 22, Evosmos 562 24",
+    "lat": "40.68581196268978",
+    "lng": "22.922356233082034"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jZyLiRLATZktk5dG7?g_st=ipc",
+    "name": "ΠΑΡΚΟ ΔΕΙΝΟΣΑΥΡΩΝ",
+    "address": "Thessaloniki 7ο χλμ, Oreokastro 570 13",
+    "lat": "40.701527729460004",
+    "lng": "22.939792993737786"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GummsjTvyttusdP46?g_st=ipc",
     "name": "Freedom Interactive Playzone",
     "address": "Μακεδονικού Αγώνα, Zappa &, Oreokastro 570 13",
-    "lat": "40.70868027538886",
-    "lng": "22.911057899893542"
+    "lat": "40.70867369830318",
+    "lng": "22.911054983573504"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KgPCpfULKMp7KhMJ7?g_st=ipc",
+    "name": "Bowling City Club",
+    "address": "Bowling City Club, Veria 591 32",
+    "lat": "40.49775337927069",
+    "lng": "22.17239983558456"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SFFV3HjpyPgVaZLc9?g_st=ipc",
+    "name": "PLAY HALL",
+    "address": "Leof. Geor. Gennimata, Ioannina 452 21",
+    "lat": "39.65033321631473",
+    "lng": "20.865657018209728"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4Hf2kigPt77kQGn87?g_st=ipc",
+    "name": "CRETAquarium Thalassokosmos",
+    "address": "Heraklion 710 03",
+    "lat": "35.332361553594524",
+    "lng": "25.282456113974675"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UUXRrELKzb2aEokB8?g_st=ipc",
+    "name": "Sport Point",
+    "address": "Καστρινογιαννάκη 1 και, Dervenakion, Iraklio 714 09",
+    "lat": "35.329005872034685",
+    "lng": "25.15446679791221"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Bv4uWJJC4Gk8ssCE8?g_st=ipc",
+    "name": "Dinosaur Park",
+    "address": "DEKK, Gournes 715 00",
+    "lat": "35.32673458782771",
+    "lng": "25.287539183910724"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VVxJNmLN85fw55Gd7?g_st=ipc",
+    "name": "Gouves Water Park Water Slides",
+    "address": "88J2+J7, Kato Gouves 700 14",
+    "lat": "35.330529620260506",
+    "lng": "25.30109647574127"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hzfaUBDJZ9VG57An9?g_st=ipc",
+    "name": "Labyrinth Park",
+    "address": "Hersonissos 700 14",
+    "lat": "35.2948469322292",
+    "lng": "25.35746794187921"
+  },
+  {
+    "url": "https://maps.app.goo.gl/68ZgyahuDevJAYMF7?g_st=ipc",
+    "name": "Agioi Anargyroi Valley",
+    "address": "Exochon 2, Serres 621 22",
+    "lat": "41.10410121996559",
+    "lng": "23.55204878636089"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hQZWfg9QfnFeMyBTA?g_st=ipc",
+    "name": "Ονειρούπολη Δράμας",
+    "address": "Drama 661 00",
+    "lat": "41.147983932052774",
+    "lng": "24.146200919467475"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JMXqaxKVD3CmU7Ft8?g_st=ipc",
+    "name": "Rafting No Limits GR",
+    "address": "BOURAZANI Konitsa, BOURAZANi KONITSA 441 00",
+    "lat": "40.057225940419336",
+    "lng": "20.627015564275286"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HMY8KCD3WrpUh6xp6?g_st=ipc",
+    "name": "Kerkini Lake National Park",
+    "address": "Κερκίνη, 620 55",
+    "lat": "41.25926151784883",
+    "lng": "23.14040332719198"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NQ1AwXiEg5oZQg359?g_st=ipc",
+    "name": "Aqualand",
+    "address": "Agios Ioannis 491 00",
+    "lat": "39.61697908099727",
+    "lng": "19.837429719404867"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VV66xLTvU3w6LKzy9?g_st=ipc",
+    "name": "Butterflies Valley",
+    "address": "Επάνω Καλαμωνας 851 06",
+    "lat": "36.33937370008562",
+    "lng": "28.059689128523214"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6wgTeh9tgUC2bD1a8?g_st=ipc",
+    "name": "WaterPark",
+    "address": "Athanaton, Rodos 851 05",
+    "lat": "36.36437213652793",
+    "lng": "28.212294371159473"
   }
 ]

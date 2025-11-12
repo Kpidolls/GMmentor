@@ -37,7 +37,7 @@
   {
     "url": "https://maps.app.goo.gl/tPkYqHsHmRpbKSaX9?g_st=ipc",
     "name": "Μουσείο Μπενάκη Ελληνικού Πολιτισμού | Benaki Museum of Greek Culture",
-    "address": "",
+    "address": "Koumpari 1, Athina 106 74",
     "lat": "37.97595332142378",
     "lng": "23.740446335275582"
   },
@@ -308,8 +308,8 @@
     "lng": "24.02460331248824"
   },
   {
-    "url": "https://maps.app.goo.gl/4DoJ6SnBtgDpmScf7",
-    "name": "Αρχαία Επίδαυρος - Βυθισμένη πολιτεία sunken city",
+    "url": "https://maps.app.goo.gl/4DoJ6SnBtgDpmScf7?g_st=ipc",
+    "name": "Αρχαία Επίδαυρος,  Βυθισμένη πολιτεία sunken city",
     "address": "Παραλία Γκλιατη 1, Αρχαία Επίδαυρος 210 59",
     "lat": "37.62558699316192",
     "lng": "23.15824375963821"
@@ -432,5 +432,425 @@
     "address": "Αθήνα 105 55",
     "lat": "37.97449623338425",
     "lng": "23.727043202053398"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AA1yv1yq8fC6CPEt8?g_st=ipc",
+    "name": "Temple of Apollo",
+    "address": "Delphi 330 54",
+    "lat": "38.48229738005722",
+    "lng": "22.501176584203076"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gV2Li4kSvE78UFFC9?g_st=ipc",
+    "name": "Ancient Stadium of Delphi",
+    "address": "Delphi 330 54",
+    "lat": "38.48261130916093",
+    "lng": "22.497897087851854"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8aSHhZk2bT9dK56z5?g_st=ipc",
+    "name": "Delos",
+    "address": "Delos 846 00",
+    "lat": "37.39618494324863",
+    "lng": "25.268932318593706"
+  },
+  {
+    "url": "https://maps.app.goo.gl/a1RARGnxhykKakN29?g_st=ipc",
+    "name": "Καστροπολιτεία Μονεμβασιάς",
+    "address": "Monemvasia 230 70",
+    "lat": "36.687484458767585",
+    "lng": "23.0558013260312"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ad6oLYv7MUahs6GT6?g_st=ipc",
+    "name": "Mystras",
+    "address": "Mistras 231 00",
+    "lat": "37.06880575051119",
+    "lng": "22.375815197260966"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hRfeUmzdQ9kFWn689?g_st=ipc",
+    "name": "Archaeological Site of Mystras",
+    "address": "Lower Town 231 00",
+    "lat": "37.0741056706056",
+    "lng": "22.3669181951106"
+  },
+  {
+    "url": "https://maps.app.goo.gl/baiRLz2tmYaTbVkt8?g_st=ipc",
+    "name": "Temple of Apollo (Portara)",
+    "address": "Naxos 843 00",
+    "lat": "37.110129464281634",
+    "lng": "25.372467767266336"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PVQYbF6evZv9zjAc9?g_st=ipc",
+    "name": "Temple of Apollo Epicurius at Bassae of Phigaleia",
+    "address": "Figaleia 270 61",
+    "lat": "37.42992485152253",
+    "lng": "21.900009196247805"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9vhQhAziWNVFNwudA?g_st=ipc",
+    "name": "Messene",
+    "address": "Unnamed Road, Messene 240 02",
+    "lat": "37.17493508533683",
+    "lng": "21.920008046316784"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XwgzhKtMosL3r1vr5?g_st=ipc",
+    "name": "Archaeological Site of Olympia",
+    "address": "Archaia Olympia 270 65",
+    "lat": "37.638459018633775",
+    "lng": "21.62988056909868"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Quro2ZP1jQNXZ1M5A?g_st=ipc",
+    "name": "Caves of Diros",
+    "address": "Pyrgos Dirou 230 63",
+    "lat": "36.63819892596898",
+    "lng": "22.38069545600633"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qXxKEnky6NL6j8mX7?g_st=ipc",
+    "name": "Cape Tainaron Lighthouse",
+    "address": "Ανατολική Μάνη Ακρωτήριο Ταιναρο Anatoliki Mani, 230 71",
+    "lat": "36.38632728796919",
+    "lng": "22.482904269212387"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GBbQr73zwDAagVaz9?g_st=ipc",
+    "name": "Voidokilia Beach",
+    "address": "Pilos Nestor 240 01",
+    "lat": "36.9635737316201",
+    "lng": "21.662769806906574"
+  },
+  {
+    "url": "https://maps.app.goo.gl/v6AEM7JEAUPMzrvP7?g_st=ipc",
+    "name": "Holy Monastery of the Virgin Mary Chozoviotissa",
+    "address": "Amorgos 840 08",
+    "lat": "36.834565267585596",
+    "lng": "25.909512235575725"
+  },
+  {
+    "url": "https://maps.app.goo.gl/k9fRFDUZV5HCUUQ88?g_st=ipc",
+    "name": "Methoni Castle",
+    "address": "Unnamed Rd, Methoni 240 06",
+    "lat": "36.81667229767631",
+    "lng": "21.705266643313138"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wBKcGui1HWeMLpjPA?g_st=ipc",
+    "name": "Akrotiri",
+    "address": "Fira 847 00",
+    "lat": "36.351796236748676",
+    "lng": "25.403447201033227"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WRBFuHyUphGycx6B6?g_st=ipc",
+    "name": "Holy Cave of the Apocalypse",
+    "address": "Patmos Municipality 855 00",
+    "lat": "37.3145181446206",
+    "lng": "26.544738455388703"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KRvkAKujnAt5Cebt6?g_st=ipc",
+    "name": "Holy Monastery of Saint John the Theologian",
+    "address": "Patmos 855 00",
+    "lat": "37.30929209644781",
+    "lng": "26.547790252510435"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wXzMsUCGyGcDfoW59?g_st=ipc",
+    "name": "Agio Oros",
+    "address": "Ouranoupoli 630 75",
+    "lat": "40.32543105494457",
+    "lng": "23.97840678393634"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cEWrQYsLFdjV6Q239?g_st=ipc",
+    "name": "Dion",
+    "address": "Epar.Od. Katerinis - Limena Litochoriou 910, Dion 601 00",
+    "lat": "40.17394047089396",
+    "lng": "22.491437674242245"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zpazCjEdJ5HpowTp6?g_st=ipc",
+    "name": "Kalabaka",
+    "address": "Kalabaka 422 00",
+    "lat": "39.70661305298489",
+    "lng": "21.628881662192715"
+  },
+  {
+    "url": "https://maps.app.goo.gl/onMRfAUqEwFjaiVWA?g_st=ipc",
+    "name": "Meteora",
+    "address": "Kalabaka 422 00",
+    "lat": "39.72170879350903",
+    "lng": "21.63058881507582"
+  },
+  {
+    "url": "https://maps.app.goo.gl/f8pqZqUtkRrXFShb8?g_st=ipc",
+    "name": "Balos Beach",
+    "address": "Kissamos 734 00",
+    "lat": "35.57925124423901",
+    "lng": "23.588718436351613"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aFhekQczUnCUCkXt7?g_st=ipc",
+    "name": "Blue Caves Zakynthos",
+    "address": "Porthmos Zakinthou",
+    "lat": "37.93034342843555",
+    "lng": "20.705251154680667"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aSS6QjyqGgHanzsj8?g_st=ipc",
+    "name": "Archaeological Site of Heraion of Samos",
+    "address": "Pythagoreio 831 03",
+    "lat": "37.67350522925315",
+    "lng": "26.88799727034567"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9QY7VwS3H1acWG6g8?g_st=ipc",
+    "name": "Pythagoras Statue",
+    "address": "Samos 831 03",
+    "lat": "37.689752282548156",
+    "lng": "26.94490447179151"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7zGrDtLoU6SSdcuS9?g_st=ipc",
+    "name": "Navagio",
+    "address": "Elatia 290 91",
+    "lat": "37.85945060305929",
+    "lng": "20.624902110473712"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DamgwWTndmBhKj5W9?g_st=ipc",
+    "name": "Melissani Cave",
+    "address": "Σάμη 280 80",
+    "lat": "38.25698727901152",
+    "lng": "20.6235483284677"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VMrzqGqwGc2EoieJ7?g_st=ipc",
+    "name": "Byzantine Walls of Nikopolis",
+    "address": "Unnamed Road, 481 00",
+    "lat": "39.0118446526379",
+    "lng": "20.732022944510806"
+  },
+  {
+    "url": "https://maps.app.goo.gl/satDDwkecYRf2TSBA?g_st=ipc",
+    "name": "Nicopolis",
+    "address": "Nicopolis 481 00",
+    "lat": "39.02636525396993",
+    "lng": "20.733626410935955"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vwCXBmq1Cpbwnz9c6?g_st=ipc",
+    "name": "Porto Katsiki",
+    "address": "JH32+48, Apollonioi 310 82",
+    "lat": "38.601119061578444",
+    "lng": "20.550313570650722"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MFq7CxhtGP7Gi8k59?g_st=ipc",
+    "name": "Archaeological Museum of Thessaloniki",
+    "address": "Manoli Andronikou 6, Thessaloniki 546 21",
+    "lat": "40.625561586478966",
+    "lng": "22.953718318827413"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Rpx9LHfqRzCfvkCh8?g_st=ipc",
+    "name": "White Tower of Thessaloniki",
+    "address": "Thessaloniki 546 21",
+    "lat": "40.62644387532891",
+    "lng": "22.948379384273697"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VHhyUKPZMLXo4AeBA?g_st=ipc",
+    "name": "Arch of Galerius",
+    "address": "Egnatia 144, Thessaloniki 546 22",
+    "lat": "40.6322250425038",
+    "lng": "22.95175086035539"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RFapK1M21jxWogbVA?g_st=ipc",
+    "name": "Ataturk Museum of Thessaloniki",
+    "address": "Apostolou Pavlou 17, Thessaloniki 546 34",
+    "lat": "40.63574901751839",
+    "lng": "22.954355092076376"
+  },
+  {
+    "url": "https://maps.app.goo.gl/C3krXMYjPGracAP87?g_st=ipc",
+    "name": "Museum of Illusions Thessaloniki",
+    "address": "Doxis 5, Thessaloniki 546 25",
+    "lat": "40.635429116411395",
+    "lng": "22.93597563245193"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YxX1f2JEnRyib5KP8?g_st=ipc",
+    "name": "Roman Forum of Thessaloniki",
+    "address": "Olympou 75, Thessaloniki 546 31",
+    "lat": "40.637858913960656",
+    "lng": "22.945675325840927"
+  },
+  {
+    "url": "https://maps.app.goo.gl/f1z5P772ZL438rrB9?g_st=ipc",
+    "name": "Holy Church of Saint Demetrius",
+    "address": "Ag. Dimitriou 81-83, Thessaloniki 546 33",
+    "lat": "40.638898161361496",
+    "lng": "22.947614216085658"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Pj3FuXA7LeypGUARA?g_st=ipc",
+    "name": "Thessaloniki Acropolis",
+    "address": "Eptapirgiou 130, Thessaloniki 546 34",
+    "lat": "40.644004048967396",
+    "lng": "22.961770870557544"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1s8aj4cc3MbpvaGq9?g_st=ipc",
+    "name": "Heptapyrgion of Thessaloniki",
+    "address": "Επταπύργιο, Eptapirgiou 40, Thessaloniki 546 34",
+    "lat": "40.64405781477335",
+    "lng": "22.96178016442897"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jFwKES4CcpviH3818?g_st=ipc",
+    "name": "Palace of Aigai (Aegae)",
+    "address": "Vergina 590 31",
+    "lat": "40.47783656530058",
+    "lng": "22.32233617700311"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sig6rYbJ8UK4ZqaX7?g_st=ipc",
+    "name": "Arkadi Monastery",
+    "address": "Arkadi 741 50",
+    "lat": "35.30989822185389",
+    "lng": "24.629043901550116"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5eDCvX8HkvWgXBL19?g_st=ipc",
+    "name": "Archaeological Site of Dodoni",
+    "address": "Dodoni 455 00",
+    "lat": "39.54577918295188",
+    "lng": "20.784950664414183"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tihw1UrAiri8GoD29?g_st=ipc",
+    "name": "Perama Cave",
+    "address": "19, Spilaiou, Σπηλαίου 19, Πέραμα, Perama 455 00",
+    "lat": "39.694982816550095",
+    "lng": "20.846498129141942"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rAusZkVNEW96qAfY9?g_st=ipc",
+    "name": "Knossos Palace",
+    "address": "Knossos 714 09",
+    "lat": "35.29796093261648",
+    "lng": "25.162788626146504"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MwFRaHm4xMSpQ3w87?g_st=ipc",
+    "name": "Pindos National Park",
+    "address": "WXR2+G8 Tymphaea",
+    "lat": "39.94128033875326",
+    "lng": "20.950852335589502"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KY1PY5mwkiEPn6JS6?g_st=ipc",
+    "name": "Asclepieion at Kos",
+    "address": "Kos 853 00",
+    "lat": "36.87634063821304",
+    "lng": "27.25929156442587"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rVafr1wHovCRyoj77?g_st=ipc",
+    "name": "Zagori",
+    "address": "Papingo 440 04",
+    "lat": "39.96846543207807",
+    "lng": "20.729047055658157"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zBjCseaorqmLUWjo6?g_st=ipc",
+    "name": "Paralia Voutoumi",
+    "address": "490 82",
+    "lat": "39.15774095957267",
+    "lng": "20.227494022688056"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1Uc3YFqdrM7dERMj7?g_st=ipc",
+    "name": "Archaeological Site of Philippi",
+    "address": "EO Dramas Kavalas, Filippi 640 03",
+    "lat": "41.012686338997746",
+    "lng": "24.287678993251607"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qCcEvj915iPr2zD37?g_st=ipc",
+    "name": "Minoan Palace of Phaistos",
+    "address": "Άγιος Ιωάννης, Kamilari 702 00",
+    "lat": "35.05129549151393",
+    "lng": "24.81458473558241"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qtxP37nP5GgrXXV27?g_st=ipc",
+    "name": "Aggitis River cave",
+    "address": "Πηγές, Aggitis 662 00",
+    "lat": "41.21974670515024",
+    "lng": "23.89452873558432"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QX4xRZw5TEGCF4oj7?g_st=ipc",
+    "name": "Kerkini Lake National Park",
+    "address": "Κερκίνη, 620 55",
+    "lat": "41.25929416088564",
+    "lng": "23.140424657676153"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iFY1Kcc4UwLiyRGc7?g_st=ipc",
+    "name": "Old Town of Corfu",
+    "address": "Corfu 491 00",
+    "lat": "39.62343987783881",
+    "lng": "19.92891594231962"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CBJzDDUuaoXFiWW6A?g_st=ipc",
+    "name": "Holy Monastery of the Taxiarch Michael Panormitis",
+    "address": "Panormitis 856 00",
+    "lat": "36.548390185765086",
+    "lng": "27.846271064424094"
+  },
+  {
+    "url": "https://maps.app.goo.gl/R9sce6Eydu3PYta2A?g_st=ipc",
+    "name": "Palace of the Grand Master of the Knights of Rhodes",
+    "address": "Ippoton, Rodos 851 00",
+    "lat": "36.44545330682862",
+    "lng": "28.224197135579786"
+  },
+  {
+    "url": "https://maps.app.goo.gl/11HZKgu3Z71ViGrP9?g_st=ipc",
+    "name": "Colossus of Rhodes",
+    "address": "Pl. Neoriou, Rodos 851 00",
+    "lat": "36.451202414947005",
+    "lng": "28.227839764419826"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ni4J6nqoFxCxVhof9?g_st=ipc",
+    "name": "Medieval City of Rhodes",
+    "address": "Pl. Mouson 6, Rodos 851 00",
+    "lat": "36.44472167652259",
+    "lng": "28.227519564434186"
+  },
+  {
+    "url": "https://maps.app.goo.gl/W5joNY37bu7NJ8Hz8?g_st=ipc",
+    "name": "Syntagma Square",
+    "address": "Pl. Sintagmatos, Athina 105 63",
+    "lat": "37.97554970639471",
+    "lng": "23.734713366778323"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RRXmkZ72CeNufyB66?g_st=ipc",
+    "name": "Monument to the Unknown Soldier",
+    "address": "Leof. Vasilisis Amalias 133, Athina 105 57",
+    "lat": "37.97535428174513",
+    "lng": "23.736259428820603"
   }
 ]
