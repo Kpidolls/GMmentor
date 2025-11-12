@@ -574,6 +574,13 @@
     "lng": "23.734805099489133"
   },
   {
+    "url": "https://maps.app.goo.gl/mFU9ypU9R2NajcX87?g_st=ipc",
+    "name": "ZAMBRI",
+    "address": "Αγίου Δημητρίου 9, Κηφισιά 145 62",
+    "lat": "38.0705711422009",
+    "lng": "23.812755176637886"
+  },
+  {
     "url": "https://maps.app.goo.gl/2zHj3YHoNrWUYk8f8?g_st=ipc",
     "name": "PAUL Athens",
     "address": "Πανεπιστημίου 10, Αθήνα 106 71",
@@ -1671,5 +1678,1643 @@
     "address": "Βότση, Ύδρα 180 40",
     "lat": "37.34970734644238",
     "lng": "23.46509825080948"
+  },
+  {
+    "url": "https://maps.app.goo.gl/atz6NCMG1oEDawJu9?g_st=ipc",
+    "name": "Hamsa Beach Bar - Restaurant",
+    "address": "Μαρτινακια Κυθνος, 840 06",
+    "lat": "37.39312552655256",
+    "lng": "24.3982581144625"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6LXk9Z8yUCSVckb96?g_st=ipc",
+    "name": "Margiora",
+    "address": "Κύθνος 840 06",
+    "lat": "37.412930533564115",
+    "lng": "24.430074872526156"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AbpuvqbsTCXHg2oa7?g_st=ipc",
+    "name": "Apokalipsi Kythnos",
+    "address": "Κυκλαδες, Kithnos 840 06",
+    "lat": "37.4124761463021",
+    "lng": "24.431457541279233"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FGzjfcUPBsXsNNqj9?g_st=ipc",
+    "name": "Sourloulou Kythnos",
+    "address": "Θεολόγος, Kithnos 840 06",
+    "lat": "37.41243148353528",
+    "lng": "24.43143339817302"
+  },
+  {
+    "url": "https://maps.app.goo.gl/P46Mc4PY3VqCeaVF8?g_st=ipc",
+    "name": "Maistrali",
+    "address": "Merihas 840 06",
+    "lat": "37.38947704282166",
+    "lng": "24.39834020618754"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1vCbzZRojT45SSX8A?g_st=ipc",
+    "name": "Jagger",
+    "address": "Dryopida 840 06",
+    "lat": "37.382500546041285",
+    "lng": "24.430664724576324"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZB4UYRxyx55zXBkS9?g_st=ipc",
+    "name": "Liberty View Of Nafplio",
+    "address": "Sidiras Merarchias 39, Nafplio 211 00",
+    "lat": "37.56620305969031",
+    "lng": "22.806201213990434"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VsqimzGRSLvrL3FN7?g_st=ipc",
+    "name": "Ar&Ko",
+    "address": "Πάρκο Κολοκοτρώνη, Vasileos Pavlou, Nafplio 211 00",
+    "lat": "37.565832099209665",
+    "lng": "22.80288803557191"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ndoCdemDkTB3EdpU7?g_st=ipc",
+    "name": "Yamma All Day Bar - Restaurant",
+    "address": "Συρου, Galissas 841 00",
+    "lat": "37.42130665540869",
+    "lng": "24.87954060251137"
+  },
+  {
+    "url": "https://maps.app.goo.gl/o27dRVLq4yNqsqfV6?g_st=ipc",
+    "name": "Exo meria",
+    "address": "Isternia 842 01",
+    "lat": "37.621680604479764",
+    "lng": "25.051831582375698"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MQWdjK1DGr9YXoey5?g_st=ipc",
+    "name": "Mayou all day bar",
+    "address": "Isternia, Tinos 842 01, Tinos Island 842 01",
+    "lat": "37.6225070567129",
+    "lng": "25.05248500203228"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zBtgvSEn5xc7LXJYA?g_st=ipc",
+    "name": "Artisti Προζύμι",
+    "address": "Ermoupoli 841 00",
+    "lat": "37.44450469447684",
+    "lng": "24.94200878171083"
+  },
+  {
+    "url": "https://maps.app.goo.gl/67zZLni25BkifsZy6?g_st=ipc",
+    "name": "Epta - Syros Island",
+    "address": "Peloponnisou 7, Ermoupoli 841 00",
+    "lat": "37.443982055478656",
+    "lng": "24.941782056394448"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1CcqyVuzhyYwut3Y7?g_st=ipc",
+    "name": "Armadillo coffee brewery",
+    "address": "Emmanouil Roidi 9, Ermoupoli 841 00",
+    "lat": "37.44456566950848",
+    "lng": "24.94393269848808"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MAU2ryGQrQMcWyvh7?g_st=ipc",
+    "name": "NURU Casual Dine Bar",
+    "address": "Coast Petrou Ralli, Ermoupoli 841 00",
+    "lat": "37.44349077641299",
+    "lng": "24.94447380869693"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ak5n1GwVGESyRydk7?g_st=ipc",
+    "name": "AGORA",
+    "address": "Χώρα - κεντρική πλατεία, Skiros 340 07",
+    "lat": "38.90450343769536",
+    "lng": "24.564405519725188"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nrqc18TzCiFo5osh7?g_st=ipc",
+    "name": "“O Mitsos” Bakery and Bougatsa pies",
+    "address": "Αγορά Σκυρου, Skiros 340 07",
+    "lat": "38.906123668565485",
+    "lng": "24.565786457853836"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ToCtxBp1UXx9DGvx7?g_st=ipc",
+    "name": "Kanela | Homemade Delicacies",
+    "address": "El. Venizelou, Skopelos 370 03",
+    "lat": "39.119057575812455",
+    "lng": "23.730567589663472"
+  },
+  {
+    "url": "https://maps.app.goo.gl/L1JDBzithBcgv3Qj7?g_st=ipc",
+    "name": "Decimo Coffee & Brunch",
+    "address": "Σκόπελος 370 03",
+    "lat": "39.11943395916134",
+    "lng": "23.73078206958329"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PWyPVsJkGM6y8EdR9?g_st=ipc",
+    "name": "Κροκ Μεσιέ | All day Bistrot {Πρωινό & Brunch στο χωριό}",
+    "address": "Epar.Od. Tripotamou-Kallonis, Krokos 842 00",
+    "lat": "37.58939959185263",
+    "lng": "25.160526432646503"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fceHF61HD8ctgCdK7?g_st=ipc",
+    "name": "καφέ-ναι",
+    "address": "Unnamed Road, Volakas 842 00",
+    "lat": "37.59217889938765",
+    "lng": "25.17817299063689"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zgVordiqFYChj8ee9?g_st=ipc",
+    "name": "Cantina Analogue Bohemian WIne Gallery Tinos",
+    "address": "Καρολου, Vitali 5, Tinos 842 00",
+    "lat": "37.53889977873259",
+    "lng": "25.160674453389994"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JZWV3eGAAkm1yYKZ9?g_st=ipc",
+    "name": "Antilalos",
+    "address": "Αφεντούλη, Paxamadi και, Tinos 842 00",
+    "lat": "37.53878225540917",
+    "lng": "25.160792308573363"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WEWXxoC44GxvXT9t9?g_st=ipc",
+    "name": "Moxa Espresso Bar",
+    "address": "ΝΙΚΗΦΟΡΟΥ ΛΥΤΡΑ 10, Tinos 842 00",
+    "lat": "37.53892047512739",
+    "lng": "25.161704068402724"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2bBZEK7Z5id58XNP8?g_st=ipc",
+    "name": "Mikro Tinos",
+    "address": "Evaggelistrias 42, Tinos 842 00",
+    "lat": "37.53905011947504",
+    "lng": "25.162412761350158"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GthTcgeC9P8iYKHF6?g_st=ipc",
+    "name": "The Roosters Tinos",
+    "address": "Ακτή Γ. Δρόσου 0, Tinos 842 00",
+    "lat": "37.53564368153088",
+    "lng": "25.16363638828339"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GBkSRUkYZhjgkkFo9?g_st=ipc",
+    "name": "Κλούκι (Klouki)",
+    "address": "Φαλατάδος 842 00",
+    "lat": "37.58260089712488",
+    "lng": "25.191149960754956"
+  },
+  {
+    "url": "https://maps.app.goo.gl/biyFuX6UBoZ8TcJc9?g_st=ipc",
+    "name": "Bourtzi Skiathos",
+    "address": "Port of, Skiathos 370 02",
+    "lat": "39.16082655884958",
+    "lng": "23.49110174510934"
+  },
+  {
+    "url": "https://maps.app.goo.gl/isrdd8GJ3jpsZQ7W7?g_st=ipc",
+    "name": "Cafe Prago",
+    "address": "Apollonias, Artemona 840 03",
+    "lat": "36.975461059633815",
+    "lng": "24.7240519346836"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PqpVut6E24nuqAUq6?g_st=ipc",
+    "name": "Threefolds sifnos",
+    "address": "Απολλωνία 840 03",
+    "lat": "36.974665514362115",
+    "lng": "24.72381923558153"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uYWL7LrV5mmCq24M8?g_st=ipc",
+    "name": "To Stavri bakery (Το Σταυρί)",
+    "address": "Epar.Od. Limani Kamaron-Artemonas, Apollonia 840 03",
+    "lat": "36.97380305039157",
+    "lng": "24.72319061672324"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Lb3CYfu5rPNFtURu7?g_st=ipc",
+    "name": "Fasolu Restaurant - Beach Bar",
+    "address": "Fassolou Beach, 840 03",
+    "lat": "36.941116049216255",
+    "lng": "24.753293392899685"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qaooHUUn5SotjYdJA?g_st=ipc",
+    "name": "Dalu",
+    "address": "Dalu, Mikonos 846 00",
+    "lat": "37.44946196330255",
+    "lng": "25.332037598705416"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HfixfBMZYH8oTEGWA?g_st=ipc",
+    "name": "Ola Mykonos - Breakfast, Tacos, Cocktails",
+    "address": "Korfos Beach, Mikonos 846 00",
+    "lat": "37.42580212278426",
+    "lng": "25.322386656781635"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JnZa27RuEpaKVL4p6?g_st=ipc",
+    "name": "Έαρ Cafe Bar",
+    "address": "Τρύφωνα Ζαχαρόπουλου, Vitina 220 10",
+    "lat": "37.67079207904159",
+    "lng": "22.182043630957757"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ytWHokwwmW4y1Baq5?g_st=ipc",
+    "name": "The Liberty Breakfast Room",
+    "address": "the liberty breakfast room, Mikonos 846 00",
+    "lat": "37.44002249548534",
+    "lng": "25.33319976309242"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mFrsGY4rfvzHZgy28?g_st=ipc",
+    "name": "El Burro Mykonos",
+    "address": "37°26'30.4\"N 25°20'06.2\"E, Mikonos 846 00",
+    "lat": "37.44164494565894",
+    "lng": "25.3350374340187"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kkRCE3TrjrxBPfbB7?g_st=ipc",
+    "name": "The Morning Table",
+    "address": "Vrysi, Mikonos 846 00",
+    "lat": "37.43394266189418",
+    "lng": "25.331625555430822"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8BRmDPmozseUfqLY6?g_st=ipc",
+    "name": "Velanos Mykonos - Brunch, Breakfast & Cocktails",
+    "address": "Skalado, Mikonos 846 00",
+    "lat": "37.43406109514676",
+    "lng": "25.3414091685473"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5Mzweh8YnbTNhVaQ9?g_st=ipc",
+    "name": "Mosaic Milos",
+    "address": "Plaka 848 00",
+    "lat": "36.74431276131015",
+    "lng": "24.421917244173116"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iW2VgvcVsbQ7K6rVA?g_st=ipc",
+    "name": "come back",
+    "address": "Beach, Agios Dimitrios, Naousa 844 01",
+    "lat": "37.12451513145797",
+    "lng": "25.239009860245982"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VX68GiVxifYLzhWu6?g_st=ipc",
+    "name": "Batistas Bakery",
+    "address": "Naousa 844 01",
+    "lat": "37.120044252975426",
+    "lng": "25.241091509858137"
+  },
+  {
+    "url": "https://maps.app.goo.gl/whtVq9izZXDLCZ8k7?g_st=ipc",
+    "name": "Isalos Beach Club",
+    "address": "Plastira 17b, Volos 382 22",
+    "lat": "39.35159082602954",
+    "lng": "22.9581356571748"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uEvFEaZxa3VWrgDA7?g_st=ipc",
+    "name": "Aeriko cafe bar - Makrinitsa",
+    "address": "1o km PORTARIAS-MAKRINITSAS, PELION 370 11",
+    "lat": "39.396275519682625",
+    "lng": "22.994190417214696"
+  },
+  {
+    "url": "https://maps.app.goo.gl/69BkMU2pWVao3FWX7?g_st=ipc",
+    "name": "HURMAS | All Day Bistro & Restaurant",
+    "address": "Protopapadaki, Naxos 843 00",
+    "lat": "37.105038240518304",
+    "lng": "25.37570759141786"
+  },
+  {
+    "url": "https://maps.app.goo.gl/31ofe6z6fLcDE8U48?g_st=ipc",
+    "name": "AVATON 1739 - Coffee & Wine Roof",
+    "address": "Kastro, Naxos 843 00",
+    "lat": "37.10529514165084",
+    "lng": "25.377380277769117"
+  },
+  {
+    "url": "https://maps.app.goo.gl/24h3FMgmoD9y36B69?g_st=ipc",
+    "name": "Melimilon Naxos",
+    "address": "Naxos 843 00",
+    "lat": "37.1012124273558",
+    "lng": "25.373816192509402"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VMcfVNerQn3tSzED8?g_st=ipc",
+    "name": "Macao beach naxos",
+    "address": "Agios Prokopios 843 00",
+    "lat": "37.07477452112851",
+    "lng": "25.350720849700185"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ExrjzA4WbcAXVt436?g_st=ipc",
+    "name": "Pantry coffee and brunch spot",
+    "address": "Naxos 843 00",
+    "lat": "37.10537841466819",
+    "lng": "25.380795502578987"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pycw7dvrTdi8yEicA?g_st=ipc",
+    "name": "Naxaki Beach Lounge Bar & Restaurant",
+    "address": "Agios Georgios Beach - Naxos, Naxos 843 00",
+    "lat": "37.096820663451155",
+    "lng": "25.37554032822482"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RjakHZ5s5a6HV2Rj8?g_st=ipc",
+    "name": "goat in a boat",
+    "address": "Αγ. Αννα 843 00",
+    "lat": "37.06717854640464",
+    "lng": "25.356316886639643"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6st7M6E2gAiTKTuK7?g_st=ipc",
+    "name": "Yazoo Summer Bliss",
+    "address": "Beach, Plaka 843 00",
+    "lat": "37.05936629317493",
+    "lng": "25.358292075823126"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sMRnKogU1qsVLy5N7?g_st=ipc",
+    "name": "Cedar Naxos",
+    "address": "Plaka beach island, Cyclades, Town 84300, 843 00",
+    "lat": "37.05894909734054",
+    "lng": "25.359010791260953"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zpHeyfTFhxTR1uEU8?g_st=ipc",
+    "name": "Petrino Beach Restaurant",
+    "address": "Μαραγκας 843 00",
+    "lat": "37.05234820744201",
+    "lng": "25.368775961363156"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bvxkDLgLP2gCrEDeA?g_st=ipc",
+    "name": "Caffe Greco",
+    "address": "Χαλκείο 843 02",
+    "lat": "37.06283829210554",
+    "lng": "25.482179694372245"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EM1dP9kHW3eWkooMA?g_st=ipc",
+    "name": "Halki Cafe Bistro",
+    "address": "Epar.Od. Naxou-Apiranthou, Chalkio 843 00",
+    "lat": "37.0642321945567",
+    "lng": "25.484940977880758"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QSbpTWeVNhvVqhFt6?g_st=ipc",
+    "name": "Pounta",
+    "address": "Folegandros 840 11",
+    "lat": "36.62857034644093",
+    "lng": "24.920634222757425"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GftgqDRmHM6GREdg9?g_st=ipc",
+    "name": "Platanos Cafe Restaurant",
+    "address": "Epar.Od. Naxou-Apiranthou, Filoti 843 02",
+    "lat": "37.0520184479865",
+    "lng": "25.4980988789785"
+  },
+  {
+    "url": "https://maps.app.goo.gl/s28qFqLPN9on9SZy8?g_st=ipc",
+    "name": "Fasolas Gastrokafeneio",
+    "address": "Filoti 843 02",
+    "lat": "37.05047829842748",
+    "lng": "25.497802752574465"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CVfadsvfxt5JGHVb8?g_st=ipc",
+    "name": "Rotonda - Cafe Bar Restaurant in Naxos",
+    "address": "ai giannis, Apirathos 843 00",
+    "lat": "37.05872571074158",
+    "lng": "25.510854348333638"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2ULzYbujrWoB52n26?g_st=ipc",
+    "name": "zeabakery",
+    "address": "Korinthou 302, Patra 262 22",
+    "lat": "38.24285092491478",
+    "lng": "21.73125949400658"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cmXtN3A11tRUN13MA?g_st=ipc",
+    "name": "Patriko Pub-Cafe",
+    "address": "Παραλία Στούπας, Stoupa 240 24",
+    "lat": "36.844945849235245",
+    "lng": "22.259663624938703"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8DUAGWFE2uqSxjoi6?g_st=ipc",
+    "name": "Bouka Bouka Mare",
+    "address": "Παραλία, Messini 242 00",
+    "lat": "37.013989599006756",
+    "lng": "21.99717016667302"
+  },
+  {
+    "url": "https://maps.app.goo.gl/upgNqgqMcearc7wRA?g_st=ipc",
+    "name": "Koufonisia Bakery",
+    "address": "Koufonisia 843 00",
+    "lat": "36.933430589719315",
+    "lng": "25.601645574976523"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZSCvQWpooUkkCF4K7?g_st=ipc",
+    "name": "The Paradosiakón (Traditional)",
+    "address": "Eolou 1, Karpenisi 361 00",
+    "lat": "38.912425769319995",
+    "lng": "21.803412059232368"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rmkYbTkw4mzL6Ws7A?g_st=ipc",
+    "name": "Το καφέ της Χαράς",
+    "address": "Κλαυσί 361 00",
+    "lat": "38.86839469803581",
+    "lng": "21.760838169390635"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ou4ZLrrH5JymyBSH7?g_st=ipc",
+    "name": "Saloon Park",
+    "address": "3ο χιλ Καρπενησίου Προυσσου, Karpenisi 361 00",
+    "lat": "38.90092398449493",
+    "lng": "21.77279442117925"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Er8efE1gu29TMxxG9?g_st=ipc",
+    "name": "Paranga",
+    "address": "Epar.Od. Agiokampou-Sklithrou, Agiokampos 400 03",
+    "lat": "39.69289300756039",
+    "lng": "22.880848477388575"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RS2SUMtbtY8WCrnF9?g_st=ipc",
+    "name": "825 eat and coffee Karpenissi",
+    "address": "Voutyro 361 00",
+    "lat": "38.879552565898926",
+    "lng": "21.74418375846026"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TYafQiUuDWknuAyTA?g_st=ipc",
+    "name": "Villaggio café - mezé",
+    "address": "ΚΟΡΥΣΧΑΔΕΣ 1, Karpenisi 361 00",
+    "lat": "38.903233129898815",
+    "lng": "21.759044154104334"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iSBXdhHpi1DBgMea7?g_st=ipc",
+    "name": "Αλκυόνη Cafe",
+    "address": "Μικκιάδων 6, Chios 821 31",
+    "lat": "38.37005085250784",
+    "lng": "26.135181501058845"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CmTSEDR1jZPW7D6x6?g_st=ipc",
+    "name": "Alatiera",
+    "address": "Epar.Od. Mesologgiou - Alikon Tourlidas 27, Missolonghi 302 00",
+    "lat": "38.36054133352401",
+    "lng": "21.42496004301919"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ijDMxEmSaLdDH7FR8?g_st=ipc",
+    "name": "La Mer",
+    "address": "Larisos 270 52",
+    "lat": "38.15655535964722",
+    "lng": "21.36777415023951"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4qjSp1aZXXsPHmu16?g_st=ipc",
+    "name": "Pink Banana & OPA Greek cuisine",
+    "address": "Λουτρά, Ag. Paraskevi 630 85",
+    "lat": "39.928119861265856",
+    "lng": "23.5848530921533"
+  },
+  {
+    "url": "https://maps.app.goo.gl/k1GdJrNWZuw6bw1y7?g_st=ipc",
+    "name": "Navagos beach bar Paliouri",
+    "address": "Navagos Beach-Restaurant, Paliouri 630 85",
+    "lat": "39.93652533814293",
+    "lng": "23.688978937103037"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Q7a2SEfBJaFYitVS7?g_st=ipc",
+    "name": "Lemonis Bakery",
+    "address": "Epar.Od. Paliouriou-Afitou, Paliouri 630 85",
+    "lat": "39.94203436230197",
+    "lng": "23.66329350381582"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kxSvMZBHgQaQt2dS8?g_st=ipc",
+    "name": "Season beach house (KOURSAROS)",
+    "address": "Koursaros, Paliouri 630 85",
+    "lat": "39.95767524817121",
+    "lng": "23.67935820697653"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xySqYYNGHWHqAXNeA?g_st=ipc",
+    "name": "Leuki Ammos Beach bar",
+    "address": "Akti xenia, Paliouri 630 85",
+    "lat": "39.96367051219052",
+    "lng": "23.675446495469675"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5BvhEbLtGovxPUe36?g_st=ipc",
+    "name": "Lago Seaside Experience",
+    "address": "Unnamed Road, Kassandra 630 85",
+    "lat": "39.97322433297595",
+    "lng": "23.675843364420007"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6Hendm5FAtJv4EAK9?g_st=ipc",
+    "name": "Daluz Beach Bar Restaurant",
+    "address": "Toroni 630 72",
+    "lat": "39.98516645216742",
+    "lng": "23.903296724219445"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5ksxtuxSYejYXXSq9?g_st=ipc",
+    "name": "Glarokavos BeachBar",
+    "address": "Παραλία Γλαρόκαβος, Pefkochori 630 85",
+    "lat": "39.982564469579565",
+    "lng": "23.643613894999742"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Zgv1m6A2CegCXBdv5?g_st=ipc",
+    "name": "Elephant Beach Bar",
+    "address": "Peufkohori",
+    "lat": "39.985586279749114",
+    "lng": "23.627614034601162"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SSzGcihWSHuskGnj9?g_st=ipc",
+    "name": "Ethnik Beach Bar",
+    "address": "Τριστινικα 630 72",
+    "lat": "39.99629866369205",
+    "lng": "23.87260948520653"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nQhhBcx28bHKgifj6?g_st=ipc",
+    "name": "Fiki Beach Bar & Restaurant",
+    "address": "Pefkochori 630 85",
+    "lat": "39.99215878950949",
+    "lng": "23.607017748480928"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aPnsSZ9vtDLsCtCKA?g_st=ipc",
+    "name": "Canela Restaurant by Blue Carpet",
+    "address": "Παραλία, Pefkochori 630 85",
+    "lat": "39.99355871861254",
+    "lng": "23.60104135467034"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PoTnpjRujbpdssuq7?g_st=ipc",
+    "name": "Mamalouka Beach Bar",
+    "address": "Unnamed Road, Kassandra 630 85",
+    "lat": "39.99397355305258",
+    "lng": "23.600497598852627"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XPRD9cmkNsd1XQCDA?g_st=ipc",
+    "name": "Eldoris Restaurant Beach Bar Possidi",
+    "address": "Possidi 630 77",
+    "lat": "39.971163869266604",
+    "lng": "23.3680455032056"
+  },
+  {
+    "url": "https://maps.app.goo.gl/M2pxCK9uxiBVApkD7?g_st=ipc",
+    "name": "Anemos Cafe Bar",
+    "address": "Kourouta 272 00",
+    "lat": "37.77116024105471",
+    "lng": "21.29250825374054"
+  },
+  {
+    "url": "https://maps.app.goo.gl/USkZzCwrNThX7hj88?g_st=ipc",
+    "name": "Encore Beach Bar",
+    "address": "Αιγαιοπελαγίτικα, Posidi 630 77",
+    "lat": "39.97745669933178",
+    "lng": "23.37333323221752"
+  },
+  {
+    "url": "https://maps.app.goo.gl/diBbGVkfHMvFE7VE7?g_st=ipc",
+    "name": "Achinos Tuti Beach Halkidiki",
+    "address": "Nisos Beach, Chaniotis 630 85",
+    "lat": "39.999483989821414",
+    "lng": "23.582157727223603"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BuoQtJYMzAyirA8L6?g_st=ipc",
+    "name": "Golden Beach Near Paliouri",
+    "address": "Pallini 630 85",
+    "lat": "40.00000157623716",
+    "lng": "23.566669631082956"
+  },
+  {
+    "url": "https://maps.app.goo.gl/W2NJQiPuDrDGXEQw5?g_st=ipc",
+    "name": "Arleta",
+    "address": "Κατάπολα 840 08",
+    "lat": "36.82638304281154",
+    "lng": "25.864058083086626"
+  },
+  {
+    "url": "https://maps.app.goo.gl/d978qu99YawDBboB8?g_st=ipc",
+    "name": "Zattero Seaside Bar",
+    "address": "Σκάλα Φούρκας 630 77",
+    "lat": "39.989902440234324",
+    "lng": "23.37887042765103"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5y3h9wHEBbAE7ydNA?g_st=ipc",
+    "name": "Sinaloa Beach Club",
+    "address": "Neos Marmaras 630 81",
+    "lat": "40.02439528883169",
+    "lng": "23.83477732325125"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xaGsvgZfv5mMRi2e6?g_st=ipc",
+    "name": "Lemonis Bakery",
+    "address": "Polychrono 630 85",
+    "lat": "40.01696151934303",
+    "lng": "23.52512566073754"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Q863Q6e1e1985SvJ9?g_st=ipc",
+    "name": "Crystal Beach Bar",
+    "address": "Unnamed Road, Kassandra 630 85",
+    "lat": "40.02336409343884",
+    "lng": "23.51395324156485"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YcQVqpGJyQtWEuk59?g_st=ipc",
+    "name": "Jazzmin",
+    "address": "Χώρα 840 08",
+    "lat": "36.83137874729602",
+    "lng": "25.898307325862916"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DziL4jUhyUbQGmrNA?g_st=ipc",
+    "name": "Amaya Beach Club",
+    "address": "2GG4+9J, Pallini 630 85",
+    "lat": "40.026446407870004",
+    "lng": "23.507188076460846"
+  },
+  {
+    "url": "https://maps.app.goo.gl/K7ieijzQ2tNdrR3y5?g_st=ipc",
+    "name": "Seladi cafe bar",
+    "address": "Epar.Od. Katapola-Thalarias, Lagada 840 08",
+    "lat": "36.91575288586461",
+    "lng": "25.98223632900659"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EQeLPXrV9KJNt6Ut5?g_st=ipc",
+    "name": "embassa cafe bar",
+    "address": "Aigiali, Ormos Egialis 840 08",
+    "lat": "36.901100293710016",
+    "lng": "25.976110975169213"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UiCZYg6Gt2wABcPE8?g_st=ipc",
+    "name": "Svoronos Bakery",
+    "address": "Greece, 25is Martiou, Thira 847 00",
+    "lat": "36.419048608663665",
+    "lng": "25.432096523213673"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JbLEpGNTnyAChWqY7?g_st=ipc",
+    "name": "Pergalídi",
+    "address": "Lagada 840 08",
+    "lat": "36.9063101851879",
+    "lng": "25.998609552916683"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cd42keBiiYDufY3k8?g_st=ipc",
+    "name": "Agora Beach - Greek Kouzina & Beach Bar",
+    "address": "Κρυοπηγη Χαλκιδική 630 77",
+    "lat": "40.05004401134577",
+    "lng": "23.47152357517926"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JVA5L8YnHzkTjoQq5?g_st=ipc",
+    "name": "Kohi beach",
+    "address": "PORTO KARRAS, Neos Marmaras 630 81",
+    "lat": "40.074443417965654",
+    "lng": "23.790085630034497"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GU9DYNTRrV3ugcbq6?g_st=ipc",
+    "name": "Beach Bar Pantelis",
+    "address": "Λημνος, Thanos 814 00",
+    "lat": "39.842026669826275",
+    "lng": "25.07833979185058"
+  },
+  {
+    "url": "https://maps.app.goo.gl/E5yFsVWCjLx3EVVM8?g_st=ipc",
+    "name": "Almira beach bar",
+    "address": "Kassandra 630 77",
+    "lat": "40.072040605174976",
+    "lng": "23.452332342777385"
+  },
+  {
+    "url": "https://maps.app.goo.gl/b3KTgBobUtSzbYRQ8?g_st=ipc",
+    "name": "Molos",
+    "address": "25is Martiou 20, Neos Marmaras 630 81",
+    "lat": "40.09415334263866",
+    "lng": "23.78475325827316"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6JePMXECkf2soAvE9?g_st=ipc",
+    "name": "Karavi Beach Bar",
+    "address": "Nea Koutali 814 01",
+    "lat": "39.85090912842053",
+    "lng": "25.123611423243542"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XpuXpx6W5o54Ee8g9?g_st=ipc",
+    "name": "Το Σοκάκι",
+    "address": "Π.Κυδά 95, Mirina 814 00",
+    "lat": "39.8775422598192",
+    "lng": "25.06020004123801"
+  },
+  {
+    "url": "https://maps.app.goo.gl/c8yCK9js6cNHpCoA9?g_st=ipc",
+    "name": "Ίσαλος",
+    "address": "Navarchou Kountourioti 44, Mirina 814 00",
+    "lat": "39.87908391847142",
+    "lng": "25.06099156906446"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ek2Zc3cWzQTwhHRT9?g_st=ipc",
+    "name": "Thokos Cafe Bar Bistro",
+    "address": "Nea. Fokea, Halkidiki, Nea Fokea 630 77",
+    "lat": "40.13335777699941",
+    "lng": "23.402877403357074"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vTT1YVpou5DWsbZ16?g_st=ipc",
+    "name": "Manassu Beach Bar and Restaurant",
+    "address": "12ο χλμ. Βουρβουρού, Sarti 630 78",
+    "lat": "40.15983560901836",
+    "lng": "23.895238695639563"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JWDuoC5xfuaZE3qx7?g_st=ipc",
+    "name": "Rodia Beach Bar",
+    "address": "Vourvourou 630 78",
+    "lat": "40.16728294783182",
+    "lng": "23.87753516622083"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8k67FJFCG4gbZRCz7?g_st=ipc",
+    "name": "ERGON Beach House Nikiti",
+    "address": "Egialou 1, Nikiti 630 88",
+    "lat": "40.203661627704044",
+    "lng": "23.679869228615946"
+  },
+  {
+    "url": "https://maps.app.goo.gl/se2S5w6DbhwcLuF89?g_st=ipc",
+    "name": "Kukunari Beach Bar",
+    "address": "Nikiti 630 88",
+    "lat": "40.20543398224347",
+    "lng": "23.678472123060402"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3iczx4sTEWWz3ZCY9?g_st=ipc",
+    "name": "Alexandros Cafe Restaurant Bar",
+    "address": "Egialou 30, Nikiti 630 88",
+    "lat": "40.21526877453814",
+    "lng": "23.66789134136706"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mg7jdoneLKkUwxSz7?g_st=ipc",
+    "name": "Gallaria",
+    "address": "Panteleimonas 600 65",
+    "lat": "40.00824042648882",
+    "lng": "22.59872088063863"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HcoxLeAt4x4SJsFy8?g_st=ipc",
+    "name": "Day by Day",
+    "address": "Λεωφόρος Σιθωνίας, Nikiti 630 88",
+    "lat": "40.222448904043915",
+    "lng": "23.669671135590562"
+  },
+  {
+    "url": "https://maps.app.goo.gl/K8vAnFPwrCRyavzCA?g_st=ipc",
+    "name": "Lemonis Bakery",
+    "address": "Epar.Od. Poligirou - Neas Potideas, Nea Propontida 632 00",
+    "lat": "40.19513294653809",
+    "lng": "23.330689010754938"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ufdEfkab77wbekDB9?g_st=ipc",
+    "name": "La Luna",
+    "address": "Παραλία Τρανή Αμμούδα, Ormos Panagias 630 78",
+    "lat": "40.23930190869367",
+    "lng": "23.72686046824902"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JzQ8QxBHm1Z7RWLz6?g_st=ipc",
+    "name": "Le Mantri Beach Bar",
+    "address": "Ακτή Τρανή Αμμούδα, Λιβροχιό good, Ag. Nikolaos 630 78",
+    "lat": "40.24711352255949",
+    "lng": "23.722806749285716"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LM9ZDTfgxjSUVZASA?g_st=ipc",
+    "name": "Makai Beach Bar",
+    "address": "7MQV+29, Eleonas 630 78",
+    "lat": "40.28754129654397",
+    "lng": "23.69344494313625"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1TG8uMAi1MTZQgiY8?g_st=ipc",
+    "name": "Jenkins Lounge Eatery",
+    "address": "Psaron 3, Zakinthos 291 00",
+    "lat": "37.786543893628924",
+    "lng": "20.898568985854595"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Anc3Yu4uRzD8XagR9?g_st=ipc",
+    "name": "Madisons Kitchen Bar",
+    "address": "Lomvardou 36, Zakinthos 291 00",
+    "lat": "37.78371523709895",
+    "lng": "20.898097278049377"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Q4BHLN3SEhu3gcD48?g_st=ipc",
+    "name": "Anemos Beach Bar & Restaurant",
+    "address": "Ouranoupoli 630 75",
+    "lat": "40.34319122046617",
+    "lng": "23.96653818078894"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SxeeHeaBpXq8VgZe8?g_st=ipc",
+    "name": "Ammos Beach Bar & Restaurant | Kefalonia",
+    "address": "Κεφαλληνίας, Skala 281 00",
+    "lat": "38.08122535953636",
+    "lng": "20.800056619766497"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Xqncmn24rvoWBwBP9?g_st=ipc",
+    "name": "Voulitsa Beach Bar",
+    "address": "Nea Roda 630 75",
+    "lat": "40.38145872405999",
+    "lng": "23.94007429302176"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DJjkbdzn9Sg4yrHY7?g_st=ipc",
+    "name": "Ρεμετζο καφέ",
+    "address": "Metaxa, Kefalonia 280 82",
+    "lat": "38.14775445639953",
+    "lng": "20.7788036615171"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kqkoFkCe2U9nzS2E6?g_st=ipc",
+    "name": "Sahara Resort",
+    "address": "Νέα Ηράκλεια 630 80",
+    "lat": "40.3253593585324",
+    "lng": "23.020574138293206"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3wzoip2GSNybngj77?g_st=ipc",
+    "name": "Poco Loco Beach BARaCantina",
+    "address": "Beach, Ierissos, thessaloniki 570 19",
+    "lat": "40.405548594123",
+    "lng": "23.873476264424372"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eSiPfaS2cFYBfyQS9?g_st=ipc",
+    "name": "Historic lounge bar",
+    "address": "Νεάπολη 811 00",
+    "lat": "39.07222186010532",
+    "lng": "26.58938683579369"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YdqcocS9SrPhoykt5?g_st=ipc",
+    "name": "Beach House by flamingo",
+    "address": "Ποταμός, Epanomi 575 00",
+    "lat": "40.38155085132963",
+    "lng": "22.921580696023792"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5NWTh15BbgeGgYsx6?g_st=ipc",
+    "name": "Carte Postale",
+    "address": "Michail Kalorizikou 2, Chania 731 33",
+    "lat": "35.523454895956455",
+    "lng": "24.056556730944372"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Fog59qRdXL1VwbPKA?g_st=ipc",
+    "name": "Anax - Brunch & All day bar",
+    "address": "Island, Astipalea 859 00",
+    "lat": "36.54881053562097",
+    "lng": "26.352767048461835"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6FaxgMCjdWj9EPA48?g_st=ipc",
+    "name": "Kolokytha",
+    "address": "Unnamed Rd, Astipalea 859 00",
+    "lat": "36.54726990012019",
+    "lng": "26.353646413648903"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nFrvN47758pZXWzT8?g_st=ipc",
+    "name": "Meltemi",
+    "address": "Astypalaia 859 00",
+    "lat": "36.545359250189506",
+    "lng": "26.352356416685993"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qBPXWtniji8hcKB88?g_st=ipc",
+    "name": "Red Jαne Bakery",
+    "address": "Kidonias 101, Chania 731 36",
+    "lat": "35.51226915120583",
+    "lng": "24.01521028800191"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2aoNej1nWQNAJniB7?g_st=ipc",
+    "name": "bonobo",
+    "address": "Miaouli 78, Plagiari 575 00",
+    "lat": "40.469049217975595",
+    "lng": "22.95592261642206"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qftMEppMQDEhweUP7?g_st=ipc",
+    "name": "Zimis",
+    "address": "Efstathiou Zakka 12, Lefkada 311 00",
+    "lat": "38.83034594976957",
+    "lng": "20.704090375704506"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YKFX8hPovFNGt9pDA?g_st=ipc",
+    "name": "Kafepoleion",
+    "address": "Κοκύλια, Kefalonia 281 00",
+    "lat": "38.14255916452544",
+    "lng": "20.54310186456745"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jceQN1dFVGYrVSaFA?g_st=ipc",
+    "name": "myrtillo",
+    "address": "Divarata 280 81",
+    "lat": "38.33016504186232",
+    "lng": "20.54543331787743"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yzerSoB1WzcjYnKq5?g_st=ipc",
+    "name": "Espresso house",
+    "address": "Devosetou 15, Argostoli 281 00",
+    "lat": "38.17163745193254",
+    "lng": "20.492476064422643"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CG2fgJcxKmWaKuAV6?g_st=ipc",
+    "name": "Pink Dot Cafe",
+    "address": "Leof. Georgikis Scholis 84, Pilea 570 01",
+    "lat": "40.548406580479465",
+    "lng": "22.98186227348721"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TgFrHfc8nxYVBh9z7?g_st=ipc",
+    "name": "Costa Costa Beach Bar",
+    "address": "Lassi, Argostoli 281 00",
+    "lat": "38.15380761963389",
+    "lng": "20.4824739703724"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VvKcZzDAukezDVie8?g_st=ipc",
+    "name": "JOIN juice bars",
+    "address": "11ο χλμ εθνικής οδού, A/D Thessalonikis Neon Moudanion, Thessaloniki 570 01",
+    "lat": "40.555069982077164",
+    "lng": "22.99254169325442"
+  },
+  {
+    "url": "https://maps.app.goo.gl/um7bZpan68i3iqsx7?g_st=ipc",
+    "name": "ERGON Agora (East)",
+    "address": "Leof. Georgikis Scholis 50, Pilea Chortiatis 555 35",
+    "lat": "40.55876847950934",
+    "lng": "22.976949760424034"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9R5MQ6z3jfLnmMwu7?g_st=ipc",
+    "name": "Café Plateia",
+    "address": "Mitropolitou Chrisanthou 0, Kalamaria 551 32",
+    "lat": "40.58219813646138",
+    "lng": "22.94932374129252"
+  },
+  {
+    "url": "https://maps.app.goo.gl/timwhn386UbaBApm7?g_st=ipc",
+    "name": "Les Zazous",
+    "address": "Themistokli Sofouli 108, Kalamaria 551 31",
+    "lat": "40.58600004577793",
+    "lng": "22.93944264109209"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Rk9qKb5jkoYV7x6HA?g_st=ipc",
+    "name": "ΘΕΓΙΑ more than a bakery",
+    "address": "Themistokli Sofouli 65, Kalamaria 551 31",
+    "lat": "40.59152214019956",
+    "lng": "22.948474846251315"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UuEUGrB58srruWFPA?g_st=ipc",
+    "name": "Laterna",
+    "address": "Voulgari 64, Thessaloniki 542 49",
+    "lat": "40.597256928464596",
+    "lng": "22.96766795433404"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WNgG79yhRyL6k5GA9?g_st=ipc",
+    "name": "Morrison • The Premium Rooftop",
+    "address": "17is Noemvriou 87, Pilea 555 35",
+    "lat": "40.60821540217915",
+    "lng": "22.998740403846558"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LQXcNjB3LwE4q56r7?g_st=ipc",
+    "name": "JOIN juice bars",
+    "address": "Marias Kallas 1, Thessaloniki 546 45",
+    "lat": "40.60107511267006",
+    "lng": "22.949804539088774"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6bHEuH2VrUaoPjxN6?g_st=ipc",
+    "name": "The Coffee Rawsters",
+    "address": "Delfon 117, Thessaloniki 546 44",
+    "lat": "40.605074813300206",
+    "lng": "22.958339804305506"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GxRckrquv1sShJp28?g_st=ipc",
+    "name": "Rou Leisure Gatherings",
+    "address": "Praxagora 22, Thessaloniki 543 51",
+    "lat": "40.612773277438485",
+    "lng": "22.97595730543709"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Gesp19RwCPBWQ9s58?g_st=ipc",
+    "name": "Butterflies And Hurricanes",
+    "address": "Pindarou 1, Thessaloniki 546 39",
+    "lat": "40.61464844201882",
+    "lng": "22.960841697890658"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GeBX3Ci17XiZV9go6?g_st=ipc",
+    "name": "Orange",
+    "address": "Konstantinoupoleos 21, Thessaloniki 546 40",
+    "lat": "40.61657039911688",
+    "lng": "22.959405836121938"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sbWsHkcndnd2Zv547?g_st=ipc",
+    "name": "AVENUE - Modern Cuisine",
+    "address": "Leof. Meg. Alexandrou 6, Thessaloniki 546 41",
+    "lat": "40.6155426258885",
+    "lng": "22.952060123633387"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JMMKwevbapcLZ5jw5?g_st=ipc",
+    "name": "Σαβοϊδάκης Bakery & Patisserie, Ρέθυμνο",
+    "address": "Mark. Portaliou 57, Rethymno 741 50",
+    "lat": "35.364498475258735",
+    "lng": "24.48871039963828"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bFpP1KB6naw1VbYr7?g_st=ipc",
+    "name": "Πλατεία Θεάτρου, Καφέ / Μπαρ/Εστιατόριο",
+    "address": "Eth. Aminis 4, Thessaloniki 546 21",
+    "lat": "40.62692292313497",
+    "lng": "22.94981349501023"
+  },
+  {
+    "url": "https://maps.app.goo.gl/imD2Az1gRrNyzqz79?g_st=ipc",
+    "name": "Parco",
+    "address": "D' Esperey 1, Thessaloniki 546 21",
+    "lat": "40.62747189738441",
+    "lng": "22.952606136312443"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6d8e2D2YLjsqGz9H8?g_st=ipc",
+    "name": "ΤΙΤΑΝΙΑ",
+    "address": "Tsimiski 139, Thessaloniki 546 21",
+    "lat": "40.62745635041655",
+    "lng": "22.95172436992036"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7fKny43wd3q96T1s5?g_st=ipc",
+    "name": "JOIN juice bars",
+    "address": "Leof. Nikis 73, Thessaloniki 546 22",
+    "lat": "40.62769069211422",
+    "lng": "22.947117280367095"
+  },
+  {
+    "url": "https://maps.app.goo.gl/M7potW66EBLTEfRx7?g_st=ipc",
+    "name": "Canteen All day Bar Restaurant",
+    "address": "Dim. Gounari 7, Thessaloniki 546 22",
+    "lat": "40.62803673619556",
+    "lng": "22.94769963358214"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9KxXxviA2D5JhcSW7?g_st=ipc",
+    "name": "In House Project",
+    "address": "Mitropoleos 96, Thessaloniki 546 22",
+    "lat": "40.62870471135404",
+    "lng": "22.947776924849798"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sYa6XLi3t6oC2LCj7?g_st=ipc",
+    "name": "Because Bagel",
+    "address": "Al. Svolou 41, Thessaloniki 546 21",
+    "lat": "40.63057390062951",
+    "lng": "22.95125439347093"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Q2XyfbaALKZttmXn7?g_st=ipc",
+    "name": "MLRT Sourdough microbakery",
+    "address": "Mitropolitou Iosif 15, Thessaloniki 546 22",
+    "lat": "40.630290634546846",
+    "lng": "22.946095540648265"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kPU1qrdrjXANCqMt7?g_st=ipc",
+    "name": "Fluffy Brunch",
+    "address": "Pl. Navarinou 10, Thessaloniki 546 22",
+    "lat": "40.630856001242115",
+    "lng": "22.948097521947723"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xY83zLTaRAhzVGBo8?g_st=ipc",
+    "name": "72H Artisanal Bakery",
+    "address": "Paleon Patron Germanou 2, Thessaloniki 546 22",
+    "lat": "40.630980814351275",
+    "lng": "22.946106919469365"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oQiMBEdPePBk3uAQ9?g_st=ipc",
+    "name": "Brunchsin",
+    "address": "Paleon Patron Germanou 26, Thessaloniki 546 22",
+    "lat": "40.63142362221095",
+    "lng": "22.94824040063862"
+  },
+  {
+    "url": "https://maps.app.goo.gl/N6nKzENHvyunx5Mi6?g_st=ipc",
+    "name": "JOIN Juice bars",
+    "address": "Paleon Patron Germanou 10, Thessaloniki 546 22",
+    "lat": "40.63111893989398",
+    "lng": "22.94663938125253"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GrJYGuBQazoFTfHm9?g_st=ipc",
+    "name": "Garçon Brasserie",
+    "address": "Agias Sofias 2, Thessaloniki 546 22",
+    "lat": "40.630505389559524",
+    "lng": "22.943205623552505"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RCLyEycZ8dqaLJjT6?g_st=ipc",
+    "name": "LOCAL Thessaloniki",
+    "address": "Paleon Patron Germanou 17, Thessaloniki 546 22",
+    "lat": "40.63143794324686",
+    "lng": "22.94699527001704"
+  },
+  {
+    "url": "https://maps.app.goo.gl/22Pm73g59e2LeoJQ7?g_st=ipc",
+    "name": "Spoon",
+    "address": "P. Mela 38, Thessaloniki 546 22",
+    "lat": "40.631612141451626",
+    "lng": "22.94743751548318"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FxsAHzVitWKgJyqY8?g_st=ipc",
+    "name": "Tabya",
+    "address": "Kon/nou Melenikou 14, Thessaloniki 546 35",
+    "lat": "40.6330498721733",
+    "lng": "22.954427623261545"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Haiqh54dCVYmVume9?g_st=ipc",
+    "name": "Valenio",
+    "address": "Iktinou 6, Thessaloniki 546 22",
+    "lat": "40.63145586275098",
+    "lng": "22.945904864010572"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ozYptsUfXEMA3PdNA?g_st=ipc",
+    "name": "ERGON Agora",
+    "address": "P. Mela 42, Thessaloniki 546 22",
+    "lat": "40.63187081672803",
+    "lng": "22.94735121723834"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CEdKb7KcdrPJwXZdA?g_st=ipc",
+    "name": "Mandarini_skg",
+    "address": "Zefxidos 6, Thessaloniki 546 22",
+    "lat": "40.63174083169372",
+    "lng": "22.946676387172698"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uer9gPdcnKtNqaiA8?g_st=ipc",
+    "name": "CANELA KAMARA",
+    "address": "Vasou 2, Thessaloniki 546 35",
+    "lat": "40.63288705394979",
+    "lng": "22.951924664943846"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mW7fQGRSkeQqkwf8A?g_st=ipc",
+    "name": "Tribeca",
+    "address": "Leof. Nikis 21, Thessaloniki 546 23",
+    "lat": "40.631124138525365",
+    "lng": "22.9420760162127"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Kev7Tos1LbMdirKcA?g_st=ipc",
+    "name": "Donkey Garden",
+    "address": "Skra 3, Thessaloniki 546 22",
+    "lat": "40.63233978923016",
+    "lng": "22.94821185116991"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xymcn1s9hE8P57deA?g_st=ipc",
+    "name": "COUNTRY BREADERY",
+    "address": "Proxenou Koromila 13, Thessaloniki 546 23",
+    "lat": "40.63135416254277",
+    "lng": "22.942765966640508"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wcnUMwvELMBCafND6?g_st=ipc",
+    "name": "Gellissimo Biscoto | Brunch • Coffee | Thessaloniki",
+    "address": "Proxenou Koromila 8, Thessaloniki 546 23",
+    "lat": "40.63140115464137",
+    "lng": "22.942410197737622"
+  },
+  {
+    "url": "https://maps.app.goo.gl/n6rxkXLoJv7xWQhy9?g_st=ipc",
+    "name": "Cin Cin",
+    "address": "Iktinou 22, Thessaloniki 546 22",
+    "lat": "40.632298193619214",
+    "lng": "22.946596687138204"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9EzJNfobuDEBDMXt9?g_st=ipc",
+    "name": "Pantheon Bar",
+    "address": "Proxenou Koromila 8, Thessaloniki 546 23",
+    "lat": "40.631470349652666",
+    "lng": "22.942304739075517"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5s2tkstCJrJZyR4TA?g_st=ipc",
+    "name": "Bunny Tail",
+    "address": "Αλεξάνδρου Σβώλου 1, Patriarchou Ioakim 2, Thessaloniki 546 22",
+    "lat": "40.63263326905148",
+    "lng": "22.947686149858708"
+  },
+  {
+    "url": "https://maps.app.goo.gl/34HUt3Zqr1wPaAQUA?g_st=ipc",
+    "name": "Moonkiz Café",
+    "address": "Geor. Stavrou 8, Thessaloniki 546 23",
+    "lat": "40.63268245780202",
+    "lng": "22.944199601012993"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Qxj6VN1pGyEntd7A9?g_st=ipc",
+    "name": "Candybar",
+    "address": "Ag. Theodoras 4, Thessaloniki 546 23",
+    "lat": "40.63307970052453",
+    "lng": "22.944591933924332"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jjCCeEkXCKm7ow7v6?g_st=ipc",
+    "name": "Olympion Cafe Bar 1951",
+    "address": "Aristotelous Sq 10, Thessaloniki 546 23",
+    "lat": "40.632694674088896",
+    "lng": "22.941732044946015"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yNB87tJxbm51sRh69?g_st=ipc",
+    "name": "Cedar",
+    "address": "Leof. Ochi 25, Ag. Pavlos 554 38",
+    "lat": "40.637496852872374",
+    "lng": "22.964756224661162"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7wXxWHC7mrvUfoqf8?g_st=ipc",
+    "name": "Peach Boy",
+    "address": "Ermou 44, Thessaloniki 546 23",
+    "lat": "40.633714458831285",
+    "lng": "22.944751777282193"
+  },
+  {
+    "url": "https://maps.app.goo.gl/knBD4VWoUZYBGGow7?g_st=ipc",
+    "name": "Kitchen Bar",
+    "address": "Αποθήκη Β2 Α' Προβλήτα Λιμένα, Thessaloniki 541 10",
+    "lat": "40.632030588138356",
+    "lng": "22.935513540083463"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hhweii9Uj8Q5zzg69?g_st=ipc",
+    "name": "Το Μαντάνι Ανθοχώρι",
+    "address": "Ανθοχώρι 442 00",
+    "lat": "39.736473800129",
+    "lng": "21.128099892927416"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tVt4qfxaTjfyP7oG8?g_st=ipc",
+    "name": "NAKED",
+    "address": "Filippou 62, Thessaloniki 546 35",
+    "lat": "40.6351156138034",
+    "lng": "22.949358819047884"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bczd7kAPu1ihwt9fA?g_st=ipc",
+    "name": "shed",
+    "address": "Patriarchoi Dionisii E 11, Thessaloniki 546 35",
+    "lat": "40.63516182787635",
+    "lng": "22.9483681936243"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EDFEAtyxnASt6ymy5?g_st=ipc",
+    "name": "Rafiki Outdoors",
+    "address": "Tsimiski 33, Thessaloniki 546 34",
+    "lat": "40.63384593288072",
+    "lng": "22.94144670060357"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aWDb6qE5HF6MmFreA?g_st=ipc",
+    "name": "Mangiare Gastro Pizza Pasta Bar",
+    "address": "Mitropoleos 20, Thessaloniki 546 24",
+    "lat": "40.63353783457787",
+    "lng": "22.939678053388604"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BHbV75bnMGdxWnv68?g_st=ipc",
+    "name": "Hush - Coffee & Brunch",
+    "address": "First pier, Thessaloniki 546 25",
+    "lat": "40.63288453550874",
+    "lng": "22.935483076967117"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GT8Fja523tketn1A7?g_st=ipc",
+    "name": "Limani Maritime Museum and Restaurant",
+    "address": "Leof. Nikis, Thessaloniki 546 25",
+    "lat": "40.63343048206997",
+    "lng": "22.936992932592755"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PGp8KLsttADm6bE79?g_st=ipc",
+    "name": "Hue Roastery",
+    "address": "Filippou 38, Thessaloniki 546 31",
+    "lat": "40.63626725764962",
+    "lng": "22.94719442659408"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KEZ45GJ89m9DDXvb6?g_st=ipc",
+    "name": "The Garden Bar",
+    "address": "Ag. Mina 16, Thessaloniki 546 24",
+    "lat": "40.63514609058183",
+    "lng": "22.939331222845976"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Wi79HnpxEWDrQr5A8?g_st=ipc",
+    "name": "Mi Me Lismonei Art Café",
+    "address": "El. Venizelou 23, Thessaloniki 546 24",
+    "lat": "40.63629409662354",
+    "lng": "22.940981395583297"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7LvTZEdhDkTAMmp78?g_st=ipc",
+    "name": "Υpsilon",
+    "address": "Edessis 5, Thessaloniki 546 25",
+    "lat": "40.636365825174295",
+    "lng": "22.93811663555069"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Gn3B2PxeEE5tHcph8?g_st=ipc",
+    "name": "Bannie",
+    "address": "Ionos Dragoumi 35, Thessaloniki 546 25",
+    "lat": "40.63708508226566",
+    "lng": "22.94022952790158"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zZG88R3tqQ4iE2m6A?g_st=ipc",
+    "name": "The Caravan Cafe | Brunch",
+    "address": "Βαμβακά 3, Thessaloniki 546 31",
+    "lat": "40.637809490842486",
+    "lng": "22.9414945910073"
+  },
+  {
+    "url": "https://maps.app.goo.gl/v2Xnqi1U2R9tS4bz7?g_st=ipc",
+    "name": "Beetroot",
+    "address": "Siggrou 8, Thessaloniki 546 25",
+    "lat": "40.637551412889685",
+    "lng": "22.939748987657307"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bvxf6vbBiEtuPwrh9?g_st=ipc",
+    "name": "Castra- All Day Terrace Bar",
+    "address": "Eptapirgiou 122, Thessaloniki 546 34",
+    "lat": "40.641322666802424",
+    "lng": "22.958308851938888"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xTf6UJFe7tcY4vHU7?g_st=ipc",
+    "name": "Romantzo",
+    "address": "Veroias 2, Thessaloniki 546 25",
+    "lat": "40.637344096207045",
+    "lng": "22.93721658740342"
+  },
+  {
+    "url": "https://maps.app.goo.gl/p8QR7tTcw9DAMN2e9?g_st=ipc",
+    "name": "BEYOND The Walls",
+    "address": "Fragkon 2, Thessaloniki 546 26",
+    "lat": "40.63839199621431",
+    "lng": "22.934457510684794"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AiQwHhGbA2vVd8nH7?g_st=ipc",
+    "name": "Merenda Coffee Wine & More",
+    "address": "Flogiton 2, Neapoli 567 28",
+    "lat": "40.651073348117436",
+    "lng": "22.945590441346173"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pSgB53k7vyQwHX78A?g_st=ipc",
+    "name": "JOIN juice bars",
+    "address": "Giannitson 61, Thessaloniki 546 27",
+    "lat": "40.646571727400875",
+    "lng": "22.92141339579847"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fcosc9VFnpPap1qs5?g_st=ipc",
+    "name": "Tsitsanki",
+    "address": "Λαγκαδά 116, Neapoli 567 27",
+    "lat": "40.65105910915655",
+    "lng": "22.93545214874879"
+  },
+  {
+    "url": "https://maps.app.goo.gl/awEDoCCaNWaCXmC17?g_st=ipc",
+    "name": "Αυλή Open Air Coffee Bar",
+    "address": "Πάρκο, Davaki, Neapoli 567 27",
+    "lat": "40.65671676420057",
+    "lng": "22.939866059031072"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ct3Z2v1aCBYrtE5k9?g_st=ipc",
+    "name": "MAHARAJA SKG - Heaven of Shisha",
+    "address": "Agnostou Stratiotou 36, Polichni 565 33",
+    "lat": "40.658033849704225",
+    "lng": "22.941967646222036"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tFoh177Q4oimL9Ny7?g_st=ipc",
+    "name": "Πεϊνιρλί Καστανιάς",
+    "address": "Kastania 591 32",
+    "lat": "40.40779656305863",
+    "lng": "22.118956878515576"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kRz7a3AxwDHMinRU6?g_st=ipc",
+    "name": "Model Urban Style Bar",
+    "address": "P. Mela 26, Evosmos 562 24",
+    "lat": "40.66742278574293",
+    "lng": "22.91124275092617"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8h5SFGtMUr8hFemr9?g_st=ipc",
+    "name": "ΖΕΩ ΑΡΤΟΠΟΙΙΑ-ZEO BAKERS",
+    "address": "Ilioupoleos 2, Oreokastro 570 13",
+    "lat": "40.69174182669169",
+    "lng": "22.913440204115485"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tqo3zEFB2jssR8Md9?g_st=ipc",
+    "name": "Lovly Bar",
+    "address": "Mastihari",
+    "lat": "36.8298552621884",
+    "lng": "27.052523615328724"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xLPQPWyVrDszRuA8A?g_st=ipc",
+    "name": "Metoxi Cafe",
+    "address": "Κως ζια, Lagoudi Zia 853 00",
+    "lat": "36.84261561910303",
+    "lng": "27.207757730254055"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6uVUCsAW9roKZ7jd6?g_st=ipc",
+    "name": "Mylos Beach Bar Kos",
+    "address": "Akti Zouroudi, Kos 853 00",
+    "lat": "36.910338645379476",
+    "lng": "27.282292405147036"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1UACMfNmgegpjXm16?g_st=ipc",
+    "name": "Sklaris",
+    "address": "Serron 17, Ag. Christoforos 640 01",
+    "lat": "40.972805070668926",
+    "lng": "24.140591861373508"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AMMGdvJMkRwqCrFP6?g_st=ipc",
+    "name": "Ammos Beach Cocktail Bar Kos",
+    "address": "Psalidi, Kos 853 00",
+    "lat": "36.87331617313251",
+    "lng": "27.35149999959042"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MD2gmED1xtQRvMJS6?g_st=ipc",
+    "name": "River Cafe",
+    "address": "Άνω Κεφαλάρι 660 32",
+    "lat": "41.06113826137017",
+    "lng": "24.26515962969056"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xoXNN9GSVDDfAxxk9?g_st=ipc",
+    "name": "Café Kafé (Konstantinos Mich. Katsamboxakis)",
+    "address": "Kon/nou Karamanli 6, Sitia 723 00",
+    "lat": "35.20722771587482",
+    "lng": "26.10675728610521"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RBi9fUSj1gvzz2E86?g_st=ipc",
+    "name": "Cafe Kanoni",
+    "address": "κανόνι, Kerkira 491 00",
+    "lat": "39.59150641307164",
+    "lng": "19.917314978086413"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gJZYAD9gs6uvp4U49?g_st=ipc",
+    "name": "Surf Beach - Snack Bar Kouremenos",
+    "address": "Ιτανίων, Kouremenos 723 00",
+    "lat": "35.20624912822425",
+    "lng": "26.26983256244183"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3cEBJnGDVun8x3Pu5?g_st=ipc",
+    "name": "Kumquat / speciality coffee / brunch / cocktails",
+    "address": "Σπύρου Σαμαρά 3 και, Kerkira 491 00",
+    "lat": "39.62122356019077",
+    "lng": "19.919537643557778"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ybTzaZNb6KvEBPUb8?g_st=ipc",
+    "name": "Cavo Bianco",
+    "address": "Dragon's Way, Ierapetra 720 59",
+    "lat": "35.02143360163328",
+    "lng": "26.015024448599853"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PKB7mWwJ4UmNHnbT8?g_st=ipc",
+    "name": "Lyra and friends",
+    "address": "Beach, Lefkos 857 00",
+    "lat": "35.58763583749891",
+    "lng": "27.06911664685815"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HyZmnveaEpuiN62j8?g_st=ipc",
+    "name": "La Grotta Bar",
+    "address": "La Grotta Bay, Paleokastritsa 490 83",
+    "lat": "39.67381089427264",
+    "lng": "19.718606911052376"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YrUQcKuXeVaBkqFR7?g_st=ipc",
+    "name": "Bakalokafenio - Michalas Kostas",
+    "address": "Lakones 490 83",
+    "lat": "39.681013717064104",
+    "lng": "19.71063796584377"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uW2pukpfg5XpBrAM9?g_st=ipc",
+    "name": "Dolce Café",
+    "address": "Lakones 490 83",
+    "lat": "39.68046834433433",
+    "lng": "19.703113468558957"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VM4D4LHe7KtZRNhD7?g_st=ipc",
+    "name": "Hermanos",
+    "address": "Karlathos, Karpathos 857 00",
+    "lat": "35.50685735423936",
+    "lng": "27.21125864185446"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dt7qJTSnp7FR8RJV9?g_st=ipc",
+    "name": "Lambrinos",
+    "address": "Unnamed Road, Karpathos 857 00",
+    "lat": "35.50838000876403",
+    "lng": "27.215982914873237"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LEtJZTyLhqkrZEGE7?g_st=ipc",
+    "name": "NAVAL Cafe Bar Restaurant",
+    "address": "Rhodes",
+    "lat": "36.43323816273261",
+    "lng": "28.237832164715215"
   }
 ]

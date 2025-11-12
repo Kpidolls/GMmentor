@@ -1,6 +1,7 @@
 {
   "version": "0.2",
   "language": "en,el",
+  "ignorePaths": ["src/data/**"],
   "words": [
     "10 Urban Roof",
     "50ράκι",
@@ -5873,8 +5874,5 @@
   ],
   "flagWords": [],
   "allowCompoundWords": true,
-  "dictionaries": [
-    "en",
-    "el"
-  ]
+  "dictionaries": ["en", "el"]
 }
