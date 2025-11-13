@@ -42,6 +42,8 @@ import wineriesVineyardsData from '../data/wineriesVineyards.json';
 import monasteriesChurchesData from '../data/monasteriesChurches.json';
 import mustSeeAttractionsData from '../data/mustSeeAttractions.json';
 
+// Region matching utilities no longer needed - using coordinate-based distance
+
 const MyTicker = dynamic(() => import('../components/Ticker'), { ssr: false });
 
 interface Restaurant {
@@ -54,9 +56,11 @@ interface Restaurant {
 
 interface Municipality {
   name: string;
+  name_en?: string;
   lat: number;
   lng: number;
   region: string;
+  region_en?: string;
 }
 
 interface RestaurantCategory {
@@ -135,11 +139,39 @@ const MainHero = () => {
 
   // Helper function to normalize restaurant data and ensure lat/lng are numbers
   const normalizeRestaurantData = (data: any[]): Restaurant[] => {
-    return data.map((restaurant: any) => ({
-      ...restaurant,
-      lat: typeof restaurant.lat === 'string' ? parseFloat(restaurant.lat) : restaurant.lat,
-      lng: typeof restaurant.lng === 'string' ? parseFloat(restaurant.lng) : restaurant.lng,
-    }));
+    if (!data || !Array.isArray(data)) {
+      console.error('Invalid data provided to normalizeRestaurantData');
+      return [];
+    }
+
+    return data
+      .filter(item => {
+        if (!item || typeof item !== 'object') return false;
+        if (!item.name) return false;
+        
+        const lat = typeof item.lat === 'string' ? parseFloat(item.lat) : item.lat;
+        const lng = typeof item.lng === 'string' ? parseFloat(item.lng) : item.lng;
+        
+        if (isNaN(lat) || isNaN(lng)) {
+          console.warn(`Skipping ${item.name}: invalid coordinates`, { lat: item.lat, lng: item.lng });
+          return false;
+        }
+        
+        // Validate Greece coordinate ranges (34°N to 42°N, 19°E to 30°E)
+        if (lat < 34 || lat > 42 || lng < 19 || lng > 30) {
+          console.warn(`Skipping ${item.name}: coordinates outside Greece`, { lat, lng });
+          return false;
+        }
+        
+        return true;
+      })
+      .map(item => ({
+        name: item.name || 'Unknown',
+        url: item.url || '',
+        address: item.address || '',
+        lat: typeof item.lat === 'string' ? parseFloat(item.lat) : item.lat,
+        lng: typeof item.lng === 'string' ? parseFloat(item.lng) : item.lng
+      }));
   };
 
   // Helper function to get data by experience type
@@ -225,6 +257,8 @@ const MainHero = () => {
   const [selectedType, setSelectedType] = useState<'category' | 'experience' | undefined>(undefined);
   const [_userLocation, setUserLocation] = useState<{lat: number, lng: number} | null>(null);
   const [nearestRestaurants, setNearestRestaurants] = useState<Array<{ restaurant: Restaurant; distance: number }> | null>(null);
+  const [allAvailableResults, setAllAvailableResults] = useState<Array<{ restaurant: Restaurant; distance: number }>>([]);
+  const [displayedCount, setDisplayedCount] = useState(10);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -233,6 +267,8 @@ const MainHero = () => {
   // Removed unused showCategoryList and showExperienceTypeList
   const [showLocationOptions, setShowLocationOptions] = useState(false);
   const [municipalitySearchQuery, setMunicipalitySearchQuery] = useState('');
+  const [searchRadius, setSearchRadius] = useState(12);
+  const [maxResults, setMaxResults] = useState(10);
 
   // Parallax scroll effect
   useEffect(() => {
@@ -247,13 +283,24 @@ const MainHero = () => {
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLng = (lng2 - lng1) * Math.PI / 180;
     const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-              Math.sin(dLng/2) * Math.sin(dLng/2);
+      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+      Math.sin(dLng/2) * Math.sin(dLng/2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
     return R * c;
   };
 
-  const formatDistance = (distance: number): string => {
+  const loadMoreResults = () => {
+    const nextBatchSize = 10;
+    const newDisplayedCount = displayedCount + nextBatchSize;
+    
+    if (allAvailableResults.length > displayedCount) {
+      const newResults = allAvailableResults.slice(0, Math.min(newDisplayedCount, allAvailableResults.length));
+      setNearestRestaurants(newResults);
+      setDisplayedCount(newDisplayedCount);
+      // Move to first card of newly loaded batch
+      setCurrentIndex(displayedCount);
+    }
+  };  const formatDistance = (distance: number): string => {
     if (distance < 1) {
       return `${Math.round(distance * 1000)}m`;
     }
@@ -291,8 +338,10 @@ const MainHero = () => {
         try {
           const { lat, lng } = JSON.parse(cachedLocation);
           setUserLocation({ lat, lng });
-        const nearest = findNearestPlaces(lat, lng, 10);
-          setNearestRestaurants(nearest);
+        const nearest = findNearestPlaces(lat, lng, 50);
+          setAllAvailableResults(nearest);
+          setNearestRestaurants(nearest.slice(0, 10));
+          setDisplayedCount(10);
           setCurrentIndex(0);
           setLoading(false);
           setError(t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.'));
@@ -321,8 +370,10 @@ const MainHero = () => {
           setUserLocation({ lat: latitude, lng: longitude });
           
           // Use the currently selected experience type for location search
-        const nearest = findNearestPlaces(latitude, longitude, 10);
-          setNearestRestaurants(nearest);
+        const nearest = findNearestPlaces(latitude, longitude, 50); // Fetch up to 50 results
+          setAllAvailableResults(nearest);
+          setNearestRestaurants(nearest.slice(0, 10)); // Display first 10
+          setDisplayedCount(10);
           setCurrentIndex(0);
           setLoading(false);
           
@@ -347,8 +398,10 @@ const MainHero = () => {
               try {
                 const { lat, lng } = JSON.parse(cachedLocation);
                 setUserLocation({ lat, lng });
-                const nearest = findNearestPlaces(lat, lng, 10);
-                setNearestRestaurants(nearest);
+                const nearest = findNearestPlaces(lat, lng, 50);
+                setAllAvailableResults(nearest);
+                setNearestRestaurants(nearest.slice(0, 10));
+                setDisplayedCount(10);
                 setCurrentIndex(0);
                 setLoading(false);
                 setError(t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.'));
@@ -393,7 +446,6 @@ const MainHero = () => {
     setShowRestaurantFinder(true);
     setShowMunicipalityList(false);
     setSearchMode({ type: 'municipality', selectedMunicipality: municipality });
-    // Keep the currently selected display category instead of resetting to default
 
     // Responsive scroll based on screen size
     setTimeout(() => {
@@ -402,18 +454,140 @@ const MainHero = () => {
       window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
     }, 100);
 
-  const nearest = findNearestPlaces(municipality.lat, municipality.lng, 10);
-    setNearestRestaurants(nearest);
+    // Get all data for current category/experience
+    let sourceData: Restaurant[] = [];
+    if (selectedType === 'experience' && selectedExperienceType) {
+      sourceData = getDataByExperienceType(selectedExperienceType);
+    } else if (selectedType === 'category' && selectedDisplayCategory) {
+      sourceData = getRestaurantDataByCategory(selectedDisplayCategory);
+    } else {
+      // Fallback: if no category/experience selected, use all restaurants
+      sourceData = getRestaurantDataByCategory(undefined);
+    }
+    
+    // Validate that we have data
+    if (!sourceData || sourceData.length === 0) {
+      console.warn('No data available for selected category/experience');
+      setNearestRestaurants([]);
+      setCurrentIndex(0);
+      setLoading(false);
+      setError(t('restaurantFinder.noDataAvailable', 'No data available for this selection'));
+      return;
+    }
+    
+    // Define default search radius based on region type
+    const getDefaultSearchRadius = (region: string): number => {
+      const regionLower = region.toLowerCase();
+      
+      // Major city centers - 15km radius
+      if (regionLower.includes('κέντρο') || regionLower.includes('center')) {
+        return 15;
+      }
+      
+      // Suburbs and surrounding areas - 10km radius
+      if (regionLower.includes('προάστια') || regionLower.includes('suburbs') || 
+          regionLower.includes('ανατολικ') || regionLower.includes('east') ||
+          regionLower.includes('δυτικ') || regionLower.includes('west') ||
+          regionLower.includes('βόρει') || regionLower.includes('north') ||
+          regionLower.includes('νότι') || regionLower.includes('south')) {
+        return 10;
+      }
+      
+      // Islands and Crete - 20km radius (larger areas, attractions more spread out)
+      if (regionLower.includes('νησ') || regionLower.includes('island') ||
+          regionLower.includes('κρήτη') || regionLower.includes('crete') ||
+          regionLower.includes('cyclades') || regionLower.includes('κυκλάδ') ||
+          regionLower.includes('dodecanese') || regionLower.includes('δωδεκάνησ')) {
+        return 20;
+      }
+      
+      // Default radius - 12km
+      return 12;
+    };
+    
+    // Use custom radius if set, otherwise use region-based default
+    const effectiveRadius = searchRadius > 0 ? searchRadius : getDefaultSearchRadius(municipality.region);
+    
+    // Filter and validate data before distance calculation
+    const validPlaces = sourceData.filter(place => {
+      const hasValidLat = place.lat !== undefined && place.lat !== null && 
+                         typeof place.lat === 'number' && !isNaN(place.lat);
+      const hasValidLng = place.lng !== undefined && place.lng !== null && 
+                         typeof place.lng === 'number' && !isNaN(place.lng);
+      
+      if (!hasValidLat || !hasValidLng) {
+        console.warn('Invalid coordinates for place:', place.name);
+        return false;
+      }
+      
+      return true;
+    });
+
+    console.log(`Searching in ${municipality.name} (${municipality.region})`);
+    console.log(`Radius: ${effectiveRadius}km, Max results: ${maxResults}`);
+    console.log(`Valid places: ${validPlaces.length}/${sourceData.length}`);
+    
+    // Calculate distances and filter by radius
+    const placesWithinRadius = validPlaces
+      .map((place) => ({
+        restaurant: place,
+        distance: calculateDistance(municipality.lat, municipality.lng, place.lat, place.lng)
+      }))
+      .filter(item => {
+        const withinRadius = item.distance <= effectiveRadius;
+        if (withinRadius) {
+          console.log(`✓ ${item.restaurant.name} - ${item.distance.toFixed(2)}km`);
+        }
+        return withinRadius;
+      })
+      .sort((a, b) => a.distance - b.distance);
+
+    console.log(`Found ${placesWithinRadius.length} places within ${effectiveRadius}km`);
+    
+    // Store all results and display first 10
+    setAllAvailableResults(placesWithinRadius);
+    setNearestRestaurants(placesWithinRadius.slice(0, 10));
+    setDisplayedCount(10);
     setCurrentIndex(0);
     setLoading(false);
     
-    // Skip additional scroll on mobile to avoid over-scrolling
-    setTimeout(() => {
-      const isMobile = window.innerWidth < 768;
-      if (!isMobile) {
-        window.scrollTo({ top: 300, behavior: 'smooth' });
+    // Show appropriate message if no results found
+    if (placesWithinRadius.length === 0) {
+      const categoryName = selectedExperienceType?.name || selectedDisplayCategory?.name || 'places';
+      setError(
+        t('restaurantFinder.noResultsInArea', 
+          'No {{type}} found within {{radius}}km of {{location}}. Try increasing the search radius.', {
+            type: categoryName,
+            radius: effectiveRadius,
+            location: municipality.name
+          }
+        )
+      );
+    }
+    
+    // PWA Enhancement: Cache the search results for offline use
+    if (isStandalone) {
+      try {
+        localStorage.setItem('lastMunicipalitySearch', JSON.stringify({
+          municipality: municipality.name,
+          results: placesWithinRadius,
+          timestamp: Date.now()
+        }));
+      } catch (e) {
+        console.error('Failed to cache municipality search:', e);
       }
-    }, 200);
+    }
+    
+    // Scroll to results section
+    setTimeout(() => {
+      const resultsSection = document.getElementById('results-section');
+      if (resultsSection) {
+        const offset = window.innerWidth < 768 ? 20 : 80;
+        const elementPosition = resultsSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    }, 300);
   };
 
   // Removed unused selectCategory
@@ -699,15 +873,21 @@ const MainHero = () => {
     // Check municipality name (Greek)
     if (searchMatches(query, municipality.name)) return true;
     
-    // Check translated municipality name (English)
-    const translatedName = t(`municipalities.${municipality.name}`, municipality.name);
+    // Check municipality name_en field
+    if (municipality.name_en && searchMatches(query, municipality.name_en)) return true;
+    
+    // Check translated municipality name (English from i18n)
+    const translatedName = t(`municipalities.${municipality.name}`, municipality.name_en || municipality.name);
     if (searchMatches(query, translatedName)) return true;
     
     // Check region name (Greek)
     if (searchMatches(query, municipality.region)) return true;
     
-    // Check translated region name (English)
-    const translatedRegion = t(`regions.${municipality.region}`, municipality.region);
+    // Check region_en field
+    if (municipality.region_en && searchMatches(query, municipality.region_en)) return true;
+    
+    // Check translated region name (English from i18n)
+    const translatedRegion = t(`regions.${municipality.region}`, municipality.region_en || municipality.region);
     if (searchMatches(query, translatedRegion)) return true;
     
     return false;
@@ -1170,7 +1350,7 @@ const MainHero = () => {
             ) : null}
             {showRestaurantFinder && (
               /* Restaurant Finder Results */
-              <div className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 xs:p-4 sm:p-6 lg:p-8 border border-white/30 shadow-2xl max-w-4xl mx-auto">
+              <div id="results-section" className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 xs:p-4 sm:p-6 lg:p-8 border border-white/30 shadow-2xl max-w-4xl mx-auto">
                 {loading && (
                   <div className="text-center py-4 xs:py-6 sm:py-8">
                     <div className="inline-block animate-spin rounded-full h-5 w-5 xs:h-6 xs:w-6 sm:h-8 sm:w-8 border-b-2 border-[#0878fe] mb-2 xs:mb-3 sm:mb-4"></div>
@@ -1189,21 +1369,174 @@ const MainHero = () => {
                 )}
 
                 {error && (
-                  <div className="text-center py-3 xs:py-4 sm:py-6">
-                    <div className="bg-red-50 border border-red-200 rounded-xl p-3 xs:p-4 sm:p-6 mb-2 xs:mb-3 sm:mb-4">
-                      <p className="text-red-600 mb-2 sm:mb-3 text-sm sm:text-base">{error}</p>
-                      <button
-                        onClick={getUserLocation}
-                        className="text-[#0878fe] font-medium hover:underline text-sm sm:text-base"
-                      >
-                        {t('restaurantFinder.tryAgain', 'Try again')}
-                      </button>
+                  <div className="text-center py-6">
+                    <div className="bg-gradient-to-br from-orange-50 to-yellow-50 border-2 border-orange-200 rounded-2xl p-6 sm:p-8">
+                      <div className="text-5xl mb-4">🔍</div>
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">
+                        {t('restaurantFinder.noResultsTitle', 'No Results Found')}
+                      </h3>
+                      <p className="text-gray-600 mb-4 text-sm sm:text-base">{error}</p>
+                      
+                      {searchMode.type === 'municipality' && searchMode.selectedMunicipality && (
+                        <div className="bg-white rounded-xl p-4 mb-4 border border-orange-200">
+                          <p className="text-sm text-gray-700 mb-3 font-medium">
+                            💡 {t('restaurantFinder.tryThese', 'Try these options:')}
+                          </p>
+                          <div className="space-y-3">
+                            <div className="flex items-center gap-3">
+                              <span className="text-2xl">📏</span>
+                              <div className="flex-1">
+                                <label className="block text-xs font-semibold text-gray-700 mb-2">
+                                  {t('restaurantFinder.expandRadius', 'Expand Search Radius')}: <span className="text-blue-600">{searchRadius}km</span>
+                                </label>
+                                <input
+                                  type="range"
+                                  min="5"
+                                  max="50"
+                                  step="5"
+                                  value={searchRadius}
+                                  onChange={(e) => setSearchRadius(parseInt(e.target.value))}
+                                  className="w-full h-2 bg-gradient-to-r from-blue-200 to-blue-400 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                                  aria-label={t('restaurantFinder.searchRadius', 'Search Radius')}
+                                  title={`${t('restaurantFinder.searchRadius', 'Search Radius')}: ${searchRadius}km`}
+                                />
+                                <div className="flex justify-between text-xs text-gray-500 mt-1">
+                                  <span>5km</span>
+                                  <span className="font-semibold text-blue-600">{searchRadius}km</span>
+                                  <span>50km</span>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div className="flex items-center gap-3">
+                              <span className="text-2xl">🔢</span>
+                              <div className="flex-1">
+                                <label className="block text-xs font-semibold text-gray-700 mb-2">
+                                  {t('restaurantFinder.showMore', 'Show More Results')}: <span className="text-blue-600">{maxResults}</span>
+                                </label>
+                                <input
+                                  type="range"
+                                  min="5"
+                                  max="30"
+                                  step="5"
+                                  value={maxResults}
+                                  onChange={(e) => setMaxResults(parseInt(e.target.value))}
+                                  className="w-full h-2 bg-gradient-to-r from-green-200 to-green-400 rounded-lg appearance-none cursor-pointer accent-green-600"
+                                  aria-label={t('restaurantFinder.maxResults', 'Max Results')}
+                                  title={`${t('restaurantFinder.maxResults', 'Max Results')}: ${maxResults}`}
+                                />
+                                <div className="flex justify-between text-xs text-gray-500 mt-1">
+                                  <span>5</span>
+                                  <span className="font-semibold text-green-600">{maxResults}</span>
+                                  <span>30</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <button
+                            onClick={() => searchByMunicipality(searchMode.selectedMunicipality!)}
+                            className="mt-4 w-full px-5 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-[1.02] shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                          >
+                            <span>🔄</span>
+                            {t('restaurantFinder.searchAgain', 'Search Again')}
+                          </button>
+                        </div>
+                      )}
+                      
+                      <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                        <button
+                          onClick={resetSearch}
+                          className="px-5 py-2.5 bg-white border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                        >
+                          {t('restaurantFinder.chooseAnotherArea', 'Choose Another Area')}
+                        </button>
+                        {searchMode.type !== 'location' && (
+                          <button
+                            onClick={getUserLocation}
+                            className="px-5 py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-green-700 transition-colors duration-200"
+                          >
+                            📍 {t('restaurantFinder.useMyLocation', 'Use My Location')}
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
                 )}
 
-                {currentRestaurant && nearestRestaurants && (
+                {currentRestaurant && nearestRestaurants && nearestRestaurants.length > 0 && (
                   <div className="space-y-3 xs:space-y-4 sm:space-y-6">
+                    {/* Collapsible Advanced Settings */}
+                    {searchMode.type === 'municipality' && (
+                      <details className="group mb-4">
+                        <summary className="cursor-pointer list-none">
+                          <div className="flex items-center justify-between p-3 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors duration-200">
+                            <div className="flex items-center gap-2">
+                              <span className="text-lg">⚙️</span>
+                              <span className="text-sm font-medium text-gray-700">
+                                {t('restaurantFinder.advancedSettings', 'Advanced Settings')}
+                              </span>
+                              <span className="text-xs text-gray-500">({searchRadius}km, {maxResults} max)</span>
+                            </div>
+                            <svg className="w-5 h-5 text-gray-500 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </div>
+                        </summary>
+                        <div className="mt-3 p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                            <div>
+                              <label className="block text-xs font-semibold text-gray-700 mb-2">
+                                📏 {t('restaurantFinder.searchRadius', 'Search Radius')}: <span className="text-blue-600">{searchRadius}km</span>
+                              </label>
+                              <input
+                                type="range"
+                                min="5"
+                                max="50"
+                                step="5"
+                                value={searchRadius}
+                                onChange={(e) => setSearchRadius(parseInt(e.target.value))}
+                                className="w-full h-2 bg-gradient-to-r from-blue-200 to-blue-400 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                                aria-label={t('restaurantFinder.searchRadius', 'Search Radius')}
+                                title={`${t('restaurantFinder.searchRadius', 'Search Radius')}: ${searchRadius}km`}
+                              />
+                              <div className="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>5km</span>
+                                <span>50km</span>
+                              </div>
+                            </div>
+                            <div>
+                              <label className="block text-xs font-semibold text-gray-700 mb-2">
+                                🔢 {t('restaurantFinder.maxResults', 'Max Results')}: <span className="text-green-600">{maxResults}</span>
+                              </label>
+                              <input
+                                type="range"
+                                min="5"
+                                max="30"
+                                step="5"
+                                value={maxResults}
+                                onChange={(e) => setMaxResults(parseInt(e.target.value))}
+                                className="w-full h-2 bg-gradient-to-r from-green-200 to-green-400 rounded-lg appearance-none cursor-pointer accent-green-600"
+                                aria-label={t('restaurantFinder.maxResults', 'Max Results')}
+                                title={`${t('restaurantFinder.maxResults', 'Max Results')}: ${maxResults}`}
+                              />
+                              <div className="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>5</span>
+                                <span>30</span>
+                              </div>
+                            </div>
+                          </div>
+                          <button
+                            onClick={() => searchByMunicipality(searchMode.selectedMunicipality!)}
+                            className="w-full px-4 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-[1.02] shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+                          >
+                            <span>🔄</span>
+                            {t('restaurantFinder.applyChanges', 'Apply Changes')}
+                          </button>
+                        </div>
+                      </details>
+                    )}
+                    
                     <div className="text-center mb-3 xs:mb-4 sm:mb-6">
                       <h3 className="text-base xs:text-lg sm:text-2xl font-bold text-gray-800 mb-2 px-2">
                         {selectedType === 'experience' && selectedExperienceType ? (
@@ -1361,7 +1694,7 @@ const MainHero = () => {
                           
                           <button
                             onClick={nextRestaurant}
-                            disabled={currentIndex === nearestRestaurants.length - 1}
+                            disabled={currentIndex === nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0) - 1}
                             aria-label={t('restaurantFinder.next', 'Next restaurant')}
                             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 shadow-lg rounded-full p-2 sm:p-3 text-gray-600 disabled:text-gray-400 hover:text-[#0878fe] transition-all duration-200 disabled:opacity-50"
                             style={{ marginRight: '-16px' }}
@@ -1379,7 +1712,7 @@ const MainHero = () => {
                           className="flex gap-4 transition-transform duration-300 ease-in-out"
                           style={{ 
                             transform: `translateX(-${currentIndex * (280 + 16)}px)`,
-                            width: `${nearestRestaurants.length * (280 + 16)}px`
+                            width: `${(nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0)) * (280 + 16)}px`
                           }}
                         >
                           {nearestRestaurants.map((restaurantData, index) => {
@@ -1440,6 +1773,32 @@ const MainHero = () => {
                               </div>
                             );
                           })}
+                          
+                          {/* Load More Card - Show as 11th card if more results available */}
+                          {allAvailableResults.length > displayedCount && (
+                            <div
+                              className="min-w-[280px] h-[240px] sm:h-[260px] bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-4 sm:p-6 border-2 border-blue-300 transition-all duration-200 flex flex-col items-center justify-center cursor-pointer hover:shadow-xl hover:scale-105"
+                              onClick={loadMoreResults}
+                            >
+                              <div className="text-center space-y-3">
+                                <div className="text-5xl mb-2">🔍</div>
+                                <h4 className="text-lg font-bold text-gray-800">
+                                  {t('restaurantFinder.loadMoreResults', 'Load More Results')}
+                                </h4>
+                                <p className="text-sm text-gray-600 px-2">
+                                  {t('restaurantFinder.moreAvailable', '{{count}} more places available', {
+                                    count: allAvailableResults.length - displayedCount
+                                  })}
+                                </p>
+                                <button
+                                  className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold rounded-xl transition-all duration-200 shadow-lg flex items-center gap-2 mx-auto"
+                                >
+                                  <span>➕</span>
+                                  {t('restaurantFinder.loadNext10', 'Load Next 10')}
+                                </button>
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -1448,10 +1807,10 @@ const MainHero = () => {
                     {nearestRestaurants.length > 1 && (
                       <div className="flex justify-center items-center gap-2 px-4">
                         <span className="text-xs text-gray-500 mr-2 hidden sm:inline">
-                          {currentIndex + 1} / {nearestRestaurants.length}
+                          {currentIndex + 1} / {nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0)}
                         </span>
                         <div className="flex gap-1 sm:gap-2 max-w-full justify-center">
-                          {nearestRestaurants.slice(0, Math.min(15, nearestRestaurants.length)).map((_, index) => (
+                          {[...Array(Math.min(15, nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0)))].map((_, index) => (
                             <button
                               key={index}
                               onClick={() => setCurrentIndex(index)}
@@ -1461,7 +1820,7 @@ const MainHero = () => {
                               aria-label={`${t('restaurantFinder.goToRestaurant', 'Go to restaurant')} ${index + 1}`}
                             />
                           ))}
-                          {nearestRestaurants.length > 15 && (
+                          {nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0) > 15 && (
                             <span className="text-gray-400 text-xs self-center ml-1">...</span>
                           )}
                         </div>
@@ -1480,12 +1839,12 @@ const MainHero = () => {
                         </button>
                         
                         <span className="text-gray-500 text-sm">
-                          {currentIndex + 1} {t('restaurantFinder.of', 'of')} {nearestRestaurants.length}
+                          {currentIndex + 1} {t('restaurantFinder.of', 'of')} {nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0)}
                         </span>
                         
                         <button
                           onClick={nextRestaurant}
-                          disabled={currentIndex === nearestRestaurants.length - 1}
+                          disabled={currentIndex === nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0) - 1}
                           className="flex items-center gap-2 px-4 py-2 text-gray-600 disabled:text-gray-400 hover:text-[#0878fe] transition duration-200 font-medium"
                         >
                           {t('restaurantFinder.next', 'Next')} →
