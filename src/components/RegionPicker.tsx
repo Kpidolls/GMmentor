@@ -17,32 +17,33 @@ const RegionPicker: React.FC<Props> = ({ onSelect }) => {
 
   useEffect(() => {
     let cancelled = false;
-    // fetch the flat municipalities list from public/data
-    // Try to fetch a precomputed hierarchical file first (faster). If not
-    // available, fall back to the flat municipalities file and build client-side.
+    // Import data directly from src/data (bundled at build time)
     (async () => {
       try {
-        const hierarchicalResp = await fetch('/data/greeceRegions.json');
-        if (hierarchicalResp.ok) {
-          const hierarchical = await hierarchicalResp.json();
-          // Flatten back to Municipality[] for downstream compatibility
-          const normalized: Municipality[] = [];
-          for (const region of hierarchical) {
-            for (const area of region.areas) {
-              for (const m of area.municipalities) {
-                normalized.push({ name: m.name, lat: Number(m.lat), lng: Number(m.lng), region: area.name });
-              }
+        // Try to import hierarchical data first (faster)
+        const hierarchicalData = (await import('../data/greeceRegions.json')).default;
+        // Flatten back to Municipality[] for downstream compatibility
+        const normalized: Municipality[] = [];
+        for (const region of hierarchicalData) {
+          for (const area of region.areas) {
+            for (const m of area.municipalities) {
+              normalized.push({ name: m.name, lat: Number(m.lat), lng: Number(m.lng), region: area.name });
             }
           }
-          if (!cancelled) setFlat(normalized);
-          return;
         }
+        if (!cancelled) setFlat(normalized);
+        return;
+      } catch (error) {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Failed to load greeceRegions.json, falling back to municipalities.json');
+        }
+      }
 
-        const resp = await fetch('/data/municipalities.json');
-        if (!resp.ok) throw new Error('Failed to fetch municipalities.json');
-        const data = await resp.json();
+      try {
+        // Fallback: import municipalities directly
+        const municipalitiesData = (await import('../data/municipalities.json')).default;
         if (cancelled) return;
-        const normalized = data.map((d: any) => ({
+        const normalized = municipalitiesData.map((d: any) => ({
           name: d.name,
           lat: Number(d.lat),
           lng: Number(d.lng),
@@ -58,7 +59,7 @@ const RegionPicker: React.FC<Props> = ({ onSelect }) => {
       }
     })();
     return () => { cancelled = true; };
-  }, []);
+  }, [t]);
 
   const greeceData: GreeceRegion[] = useMemo(() => {
     if (!flat) return [];

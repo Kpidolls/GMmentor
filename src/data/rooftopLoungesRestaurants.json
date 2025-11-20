@@ -425,5 +425,110 @@
     "address": "Σιδηράς Μεραρχίας 39, Ναύπλιο 211 00",
     "lat": "37.56620313105519",
     "lng": "22.806200235013893"
+  },
+  {
+    "url": "https://maps.app.goo.gl/w6QH5tCXxfavUiaSA?g_st=ipc",
+    "name": "Mosaic Milos",
+    "address": "Plaka 848 00",
+    "lat": "36.744311630154215",
+    "lng": "24.421917685649166"
+  },
+  {
+    "url": "https://maps.app.goo.gl/afKAwGAeEkWcEeYE9?g_st=ipc",
+    "name": "Bebop",
+    "address": "Paros 844 00",
+    "lat": "37.08434926553262",
+    "lng": "25.146838769043043"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xGrZAJx1PKMWWCnU7?g_st=ipc",
+    "name": "Musique Cafe - Restaurant",
+    "address": "Ariadnis, Naxos 843 00",
+    "lat": "37.10327388720912",
+    "lng": "25.374720099192075"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wrFubAW9MXvR6z5Y6?g_st=ipc",
+    "name": "Swing Cocktail Bar Naxos",
+    "address": "Protopapadaki, Naxos 843 00",
+    "lat": "37.10397730324002",
+    "lng": "25.375517434266428"
+  },
+  {
+    "url": "https://maps.app.goo.gl/T7jbKyc9RSyKYmeG8?g_st=ipc",
+    "name": "AVATON 1739 - Coffee & Wine Roof",
+    "address": "Kastro, Naxos 843 00",
+    "lat": "37.10529463592704",
+    "lng": "25.37737954083749"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gucKqbib1YPXfXRd8?g_st=ipc",
+    "name": "Taratsa Open",
+    "address": "EO Amfilochias Lefkadas, Lefkada 311 00",
+    "lat": "38.83493516503128",
+    "lng": "20.711610210825643"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JPyojcjpAj6bXV746?g_st=ipc",
+    "name": "Allegro",
+    "address": "25 Martiou & Coastal Road, Thessaloniki 546 46",
+    "lat": "40.597207319655574",
+    "lng": "22.9475710644147"
+  },
+  {
+    "url": "https://maps.app.goo.gl/U2kiDC3n5qDpiFoG6?g_st=ipc",
+    "name": "Morrison • The Premium Rooftop",
+    "address": "17is Noemvriou 87, Pilea 555 35",
+    "lat": "40.60821653387287",
+    "lng": "22.99874350808088"
+  },
+  {
+    "url": "https://maps.app.goo.gl/k4RMBTJaYnWPwHrU7?g_st=ipc",
+    "name": "Orizontes Roof Garden",
+    "address": "Aristotelous Sq 9, Thessaloniki 546 24",
+    "lat": "40.63324843271599",
+    "lng": "22.94121400261453"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BC4vj2HMkPaRWUJY6?g_st=ipc",
+    "name": "Ennea Rooftop Bar",
+    "address": "MonAsty Thessaloniki Autograph Collection, Vasileos Irakleiou 45, Thessaloniki 546 23",
+    "lat": "40.63386856558694",
+    "lng": "22.943170697637683"
+  },
+  {
+    "url": "https://maps.app.goo.gl/962RzcGYY41GffHm7?g_st=ipc",
+    "name": "Bey Hamam",
+    "address": "Εγνατία, Mitropolitou Gennadiou 34, Thessaloniki 546 25",
+    "lat": "40.635414762374545",
+    "lng": "22.945319011313067"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WnmhcnyR1pUzpjBc9?g_st=ipc",
+    "name": "Margarita At the Top of Sense",
+    "address": "Pl. Morichovou 11, Thessaloniki 546 25",
+    "lat": "40.63545426028475",
+    "lng": "22.93700542047033"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Rej46ZikGi16jCPa6?g_st=ipc",
+    "name": "Avocado Cocktail Bar",
+    "address": "23ης Φεβρουαρίου, Parga 480 60",
+    "lat": "39.28423915622935",
+    "lng": "20.39914061806164"
+  },
+  {
+    "url": "https://maps.app.goo.gl/u2rtEnenzWiQA1C79?g_st=ipc",
+    "name": "Swell Roof Garden",
+    "address": "El. Venizelou 17, Kavala 653 02",
+    "lat": "40.93644468023091",
+    "lng": "24.41131352952831"
+  },
+  {
+    "url": "https://maps.app.goo.gl/q9X7pZzbyKPo8wEb6?g_st=ipc",
+    "name": "Athens Gate Rooftop Bar & Restaurant",
+    "address": "Leof. Andrea Siggrou 10, Athina 117 41",
+    "lat": "37.968775997362016",
+    "lng": "23.73145032913701"
   }
 ]

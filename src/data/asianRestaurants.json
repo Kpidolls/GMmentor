@@ -497,24 +497,108 @@
     "lng": "23.76668605741755"
   },
   {
-    "url": "https://maps.app.goo.gl/3maNnDbbWFJMMN3g8",
-    "name": "The Sushi Bar",
-    "address": "Geor. Vlachou 38, Athina 115 25",
-    "lat": "37.99837563515871",
-    "lng": "23.775522192967475"
+    "url": "https://maps.app.goo.gl/nhnQHRdFpemqgYAX8?g_st=ipc",
+    "name": "Zuma Mykonos",
+    "address": "Mykonos 846 00",
+    "lat": "37.45854067158448",
+    "lng": "25.32953811092672"
   },
   {
-    "url": "https://maps.app.goo.gl/zFmxAi6UXscrVrPMA",
-    "name": "Hachikō Sushi Tales & Cocktails Psychiko",
-    "address": "Olimpionikon 280, Neo Psichiko 154 51",
-    "lat": "38.00623355558018",
-    "lng": "23.77693391185833"
+    "url": "https://maps.app.goo.gl/5qdrvDCYUmZRn2Jf6?g_st=ipc",
+    "name": "Bambao Mykonos",
+    "address": "Fabrika, Mikonos 846 00",
+    "lat": "37.44323173271624",
+    "lng": "25.328446119011353"
   },
   {
-    "url": "https://maps.app.goo.gl/9kVHKicLFzyZsbAf8",
-    "name": "Sakura Sushi and Steak House",
-    "address": "Δουκίσσης Πλακεντίας 73, Αθήνα 115 23",
-    "lat": "37.99280756383719",
-    "lng": "23.76520312715072"
+    "url": "https://maps.app.goo.gl/SbcxFuCJ6NAhCk248?g_st=ipc",
+    "name": "Tokyo Joe Mykonos",
+    "address": "Ano Vrisi, My Mall, Mikonos 846 00",
+    "lat": "37.43430209897853",
+    "lng": "25.33164889840815"
+  },
+  {
+    "url": "https://maps.app.goo.gl/o98h6Mb7JAp58wHN7?g_st=ipc",
+    "name": "Bebop",
+    "address": "Paros 844 00",
+    "lat": "37.08435266337157",
+    "lng": "25.146838121018355"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QAY53CMCsWPZJ1nX7?g_st=ipc",
+    "name": "Tao's Asian Restaurant",
+    "address": "Ambelas 844 01",
+    "lat": "37.1152419319295",
+    "lng": "25.264893830214174"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hpPuEp42bUMb6wxz5?g_st=ipc",
+    "name": "Asian House",
+    "address": "Vasilikis Tavaki 27, Thermi 570 01",
+    "lat": "40.54562547325916",
+    "lng": "23.019251018244844"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cFAfVvor8tZQsjbz6?g_st=ipc",
+    "name": "Asian House",
+    "address": "Koromila 3, Thessaloniki 546 45",
+    "lat": "40.6013142217221",
+    "lng": "22.95026357792361"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RZUt6eATfNjJBVMW9?g_st=ipc",
+    "name": "Asian House",
+    "address": "Kleanthous 49, Thessaloniki 544 53",
+    "lat": "40.61406863205144",
+    "lng": "22.96925982276085"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GNVEYmU2FT2611vx5?g_st=ipc",
+    "name": "Huang",
+    "address": "Geor. Theotoka 1, Thessaloniki 546 21",
+    "lat": "40.62746881479162",
+    "lng": "22.95210600219236"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6cq2gTB2UTEdBKux5?g_st=ipc",
+    "name": "Wen Zhou Specialties",
+    "address": "Grigoriou Palama 16, Thessaloniki 546 22",
+    "lat": "40.63090950249029",
+    "lng": "22.94800772208168"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3FZQEKYHJjXKCNKcA?g_st=ipc",
+    "name": "Ramen Tales",
+    "address": "Al. Svolou 16, Thessaloniki 546 22",
+    "lat": "40.63194421660545",
+    "lng": "22.948458874656616"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QoHkvVMWp7YGca2T8?g_st=ipc",
+    "name": "Hanaya Sushi",
+    "address": "Rogkoti 4, Thessaloniki 546 24 (Bourla-Levi Building)",
+    "lat": "40.6345384090758",
+    "lng": "22.93892478438703"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xtgjstGFH9sAG6Ya7?g_st=ipc",
+    "name": "Εmpire Sushi Bar",
+    "address": "Oplopiou 3, Thessaloniki 546 25",
+    "lat": "40.63454338249302",
+    "lng": "22.937599876944155"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uTVSPYHZ31yXdaY57?g_st=ipc",
+    "name": "Asian House",
+    "address": "Καποδιστρίου 7 &, Paikou, Thessaloniki 546 25",
+    "lat": "40.63703399499959",
+    "lng": "22.939883592923085"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zEYfCsMm5fXf8Dd78?g_st=ipc",
+    "name": "Ikigai - The Dumpling Experience",
+    "address": "Veroias 5, Thessaloniki 546 25",
+    "lat": "40.637093410026516",
+    "lng": "22.93763984161015"
   }
 ]

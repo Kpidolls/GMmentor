@@ -163,7 +163,7 @@ async function main() {
 
   // Build minimal greeceRegions.json grouping by region
   const regions = buildRegionsFromFlat(final.map(f => ({ name: f.name, lat: f.lat, lng: f.lng, region: f.region })));
-  const outRegions = path.join(process.cwd(), 'public', 'data', 'greeceRegions.json');
+  const outRegions = path.join(process.cwd(), 'src', 'data', 'greeceRegions.json');
   const outDir = path.dirname(outRegions);
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(outRegions, JSON.stringify(regions, null, 2), 'utf8');
