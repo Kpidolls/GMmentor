@@ -838,5 +838,579 @@
     "address": "Ίσθμια 201 00",
     "lat": "37.9019731487588",
     "lng": "23.01292410391318"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3WVLVVZ3Za8oDxQz6?g_st=ipc",
+    "name": "Wild Duck",
+    "address": "Boumpoulinas 67, Nafplio 211 00",
+    "lat": "37.56734308437463",
+    "lng": "22.797850601824372"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9jUDwjniZiSHynrk9?g_st=ipc",
+    "name": "Valaora Resto Nafplio",
+    "address": "Mpanieres, Boumpoulinas, Nafplio 211 00",
+    "lat": "37.56519719151896",
+    "lng": "22.793079460983854"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bq8XEdkjQTKveFWo7?g_st=ipc",
+    "name": "Hygge Ano Syros",
+    "address": "Ano Syros 841 00",
+    "lat": "37.45063025961707",
+    "lng": "24.93672789045308"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rqnMSjkRjYm2rfCw6?g_st=ipc",
+    "name": "Elexis restaurant",
+    "address": "Apollonos 11, Ermoupoli 841 00",
+    "lat": "37.44565058814321",
+    "lng": "24.944776847765887"
+  },
+  {
+    "url": "https://maps.app.goo.gl/P7xp29Uhw71Tk9J3A?g_st=ipc",
+    "name": "O Ntinos",
+    "address": "Όρμος Γιαννάκη, Kardiani 842 01",
+    "lat": "37.59381409443961",
+    "lng": "25.069991170783855"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CMED59Cpim8jo3r38?g_st=ipc",
+    "name": "Like salt",
+    "address": "Ir. Politechniou, Tinos 842 00",
+    "lat": "37.53276319748214",
+    "lng": "25.17213619296478"
+  },
+  {
+    "url": "https://maps.app.goo.gl/z6dNFZSTVxYxMGNn6?g_st=ipc",
+    "name": "Napule Tinos Restaurant",
+    "address": "Τριαντάρος 842 00",
+    "lat": "37.56124770125158",
+    "lng": "25.191534762008526"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bVHwisskrmA58dT18?g_st=ipc",
+    "name": "The Borzoi",
+    "address": "Papadiamanti, Skiathos 370 02",
+    "lat": "39.16344583170151",
+    "lng": "23.487355001180887"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4ZzNn5XN7C4AnWHF9?g_st=ipc",
+    "name": "The Windmill Restaurant Skiathos",
+    "address": "Pension Margarita, Kontroni Opposite, Skiathos 370 02",
+    "lat": "39.16543805944577",
+    "lng": "23.490849932444878"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iAutDnpTgMPkufBt7?g_st=ipc",
+    "name": "Perivoli Restaurant",
+    "address": "Αρτεμώνας 840 03",
+    "lat": "36.98184971359456",
+    "lng": "24.72167247742077"
+  },
+  {
+    "url": "https://maps.app.goo.gl/s5s1BcxwRoxjRnrv7?g_st=ipc",
+    "name": "Bostani Bar & Restaurant",
+    "address": "Poulati, Sifnos 840 03",
+    "lat": "36.983114036475556",
+    "lng": "24.733935585542696"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LgALa3qo2pc4x9pP6?g_st=ipc",
+    "name": "Cantina",
+    "address": "Seralia, Kastro 840 03",
+    "lat": "36.97219283235427",
+    "lng": "24.74596680838354"
+  },
+  {
+    "url": "https://maps.app.goo.gl/B9Sap96yo6EiNoxB7?g_st=ipc",
+    "name": "Maiòlica Sifnos",
+    "address": "Πλατύς Γιαλός 840 03",
+    "lat": "36.9320107600118",
+    "lng": "24.73115373110344"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZQF2Z95MsiUa9YY38?g_st=ipc",
+    "name": "Botrini's Restaurant Mykonos",
+    "address": "Agios Ioannis Mykonos, Cyclades, 846 00",
+    "lat": "37.42357245673207",
+    "lng": "25.30823643743267"
+  },
+  {
+    "url": "https://maps.app.goo.gl/soco5KSQywsn86Ls8?g_st=ipc",
+    "name": "Hippie Fish Mykonos",
+    "address": "Agios Ioannis, Mikonos 846 00",
+    "lat": "37.42161523221791",
+    "lng": "25.31152471778021"
+  },
+  {
+    "url": "https://maps.app.goo.gl/K5Lrunurc26by6vJ6?g_st=ipc",
+    "name": "Drakoulis Dry & Raw Mykonos",
+    "address": "Mykonos 846 00",
+    "lat": "37.447121066093636",
+    "lng": "25.329034852890235"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hS1c8JjDNAyUufSc6?g_st=ipc",
+    "name": "Lío Mykonos",
+    "address": "Enoplon Dinameon 6, Mikonos 846 00",
+    "lat": "37.44500603308255",
+    "lng": "25.32823624391178"
+  },
+  {
+    "url": "https://maps.app.goo.gl/x3D3HYwjgPTE7gGp6?g_st=ipc",
+    "name": "Interni Restaurant",
+    "address": "Matogianni, Mikonos 846 00",
+    "lat": "37.44559204956145",
+    "lng": "25.328710304133274"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Zjd8gVv5zkQ4UZxa9?g_st=ipc",
+    "name": "Noema",
+    "address": "Panachra, Mikonos 846 00",
+    "lat": "37.44557471142449",
+    "lng": "25.32948165492457"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WTcgX6M9Jp2R7YGdA?g_st=ipc",
+    "name": "Matsuhisa Mykonos",
+    "address": "Belvedere Hotel School of Fine Arts District, Agiou Ioannou 1, Mikonos 846 00",
+    "lat": "37.44329085125445",
+    "lng": "25.330097754352987"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dgiE2BaNVt8Jhb1F6?g_st=ipc",
+    "name": "YĒVO By Bill&Coo Mykonos",
+    "address": "Μεγάλη Άμμος, Mikonos 846 00",
+    "lat": "37.43758072227673",
+    "lng": "25.32795511521471"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BQon51NoPRn4CLnY6?g_st=ipc",
+    "name": "BAOS Greek Restaurant",
+    "address": "Myconian Korali Mykonos Town, Mikonos 846 00",
+    "lat": "37.43694847921598",
+    "lng": "25.32914124723638"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yzNhGWDT9xeBAQaK9?g_st=ipc",
+    "name": "Tokyo Joe Mykonos",
+    "address": "Ano Vrisi, My Mall, Mikonos 846 00",
+    "lat": "37.43430228443007",
+    "lng": "25.33164896331214"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ru8EWbLUas6Xvf7K9?g_st=ipc",
+    "name": "Principote Mykonos",
+    "address": "Panormos Beach, Mikonos 846 00",
+    "lat": "37.47661163546428",
+    "lng": "25.359897401386203"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CFqVN5ZTnDi5b6gYA?g_st=ipc",
+    "name": "Alemagou",
+    "address": "Greece, Mikonos",
+    "lat": "37.4646482904714",
+    "lng": "25.380862426799272"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BWoH4D79nkxuwHvt9?g_st=ipc",
+    "name": "Scorpios",
+    "address": "Paraga, Mikonos 846 00",
+    "lat": "37.40690634816725",
+    "lng": "25.347629445529506"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DyjWXnMeBVwqWcfy6?g_st=ipc",
+    "name": "Makris Milos Fine Dining Restaurant",
+    "address": "Mytakas, Island 848 00",
+    "lat": "36.744626545035004",
+    "lng": "24.481317634143164"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dn2BSTCZPyK4NYU26?g_st=ipc",
+    "name": "Cabbanes Mykonos",
+    "address": "Elia Beach, Mikonos 846 00",
+    "lat": "37.42267215380325",
+    "lng": "25.39444539705876"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wBvne3NHDcjfz27V8?g_st=ipc",
+    "name": "Spilia Mykonos Seaside Restaurant",
+    "address": "Καλαφάτη 846 00",
+    "lat": "37.43465682282159",
+    "lng": "25.419256442099208"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XvstBKLEfdRFvAHv7?g_st=ipc",
+    "name": "Mario Restaurant",
+    "address": "Λιβάδια, Paros 844 00",
+    "lat": "37.091334008503296",
+    "lng": "25.156686500869714"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MmRAPTUjpZ9ev73JA?g_st=ipc",
+    "name": "Matsuhisa Paros",
+    "address": "Avant Mar Hotel, Paros 844 01",
+    "lat": "37.122332088945846",
+    "lng": "25.232444794394056"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cdTNGtzo6JQDuLoVA?g_st=ipc",
+    "name": "Barbarossa Restaurant",
+    "address": "Παλιό Λιμάνι Νάουσας, Limanaki, Naousa 844 01",
+    "lat": "37.12519351534626",
+    "lng": "25.23748367778552"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VTdFDVhfiq6yFy2q6?g_st=ipc",
+    "name": "Siparos Seaside Restaurant",
+    "address": "Ξιφαρά 844 01",
+    "lat": "37.12641991370185",
+    "lng": "25.266628395086137"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yvA5KkBJg5eZfsvV9?g_st=ipc",
+    "name": "Teloneio",
+    "address": "Limeni 230 62",
+    "lat": "36.679751486113695",
+    "lng": "22.377303718290054"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8GTiiHfZwjCgosfT6?g_st=ipc",
+    "name": "Varoulko Santorini (within Grace Hotel)",
+    "address": "Imerovigli Thira, Santorini 847 00",
+    "lat": "36.432959672130295",
+    "lng": "25.420955482423597"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FmHg6YqwP5dXkFBw9?g_st=ipc",
+    "name": "Anama Restaurant",
+    "address": "Anama Restaurant, Gialova 240 01",
+    "lat": "36.94955133528612",
+    "lng": "21.70334046442158"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ehAKLfSTD13fa851A?g_st=ipc",
+    "name": "Elements Restaurant Bar",
+    "address": "Oia 847 02",
+    "lat": "36.46364006260335",
+    "lng": "25.371104539849476"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qsriKPJsQcgJ43x46?g_st=ipc",
+    "name": "Lauda Restaurant",
+    "address": "Oia 847 02",
+    "lat": "36.461955784508554",
+    "lng": "25.377938602582883"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2mrH4kakyMDha6iV9?g_st=ipc",
+    "name": "Lycabettus Restaurant",
+    "address": "Nik. Nomikou, Oía 847 02",
+    "lat": "36.4620987049079",
+    "lng": "25.379910060169035"
+  },
+  {
+    "url": "https://maps.app.goo.gl/e9tmihEjv2QRq6DKA?g_st=ipc",
+    "name": "Botrini's Santorini",
+    "address": "Main Street, Nik. Nomikou, Oía 847 02",
+    "lat": "36.46201811215205",
+    "lng": "25.382543844805166"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AgtoebQMipRCvd587?g_st=ipc",
+    "name": "Onuki Restaurant",
+    "address": "Costa Navarino Navarino Dunes, Pilos 240 01",
+    "lat": "36.99629499662255",
+    "lng": "21.648335751415473"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cdvxRddZhQ9h2WQR8?g_st=ipc",
+    "name": "Afropsaro Santorini",
+    "address": "Imerovigli 847 00",
+    "lat": "36.443734809577506",
+    "lng": "25.42604676962597"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uc1kbLbBqgnUhLot7?g_st=ipc",
+    "name": "Koukoumavlos Restaurant",
+    "address": "Imerovigli 847 00",
+    "lat": "36.43146159101605",
+    "lng": "25.424418520966256"
+  },
+  {
+    "url": "https://maps.app.goo.gl/j3TAqCiUnajPnQUUA?g_st=ipc",
+    "name": "Apospero",
+    "address": "Χώρα 840 08",
+    "lat": "36.83183844559143",
+    "lng": "25.899499966261363"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WMAKe6khJLqtbDgo7?g_st=ipc",
+    "name": "Selene Restaurant",
+    "address": "Old catholic monastery, Thira 847 00",
+    "lat": "36.4214954695669",
+    "lng": "25.43077555199888"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bj4VGwDTK6k29a2h8?g_st=ipc",
+    "name": "Alali Restaurant",
+    "address": "epar. od. akrotiriou, Akrotiri 847 00",
+    "lat": "36.36348374683768",
+    "lng": "25.385971079626298"
+  },
+  {
+    "url": "https://maps.app.goo.gl/n2fTsV6Gr8NWKq3k7?g_st=ipc",
+    "name": "Bubo",
+    "address": "5RR3+FH, Sithonia 630 78 (within Ekies All Senses Resort)",
+    "lat": "40.19127812556052",
+    "lng": "23.80445470083623"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ozns5EfUF1bBobta7?g_st=ipc",
+    "name": "Arsanas Restaurant",
+    "address": "Epar.Od. Nikitis-Sartis, Sithonia 630 88",
+    "lat": "40.21412369806133",
+    "lng": "23.668831407001306"
+  },
+  {
+    "url": "https://maps.app.goo.gl/D9QsWypNZeRP7Tdi7?g_st=ipc",
+    "name": "The Squirrel (within THE DANAI)",
+    "address": "6JGH+XM, Sithonia 630 88",
+    "lat": "40.227442786976205",
+    "lng": "23.62922543555653"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ubyLMAurXvicrjVq5?g_st=ipc",
+    "name": "Prosilio Restaurant",
+    "address": "Ag. Panton 15, Zakinthos 291 00",
+    "lat": "37.788001222025756",
+    "lng": "20.899925444650034"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vE8rWsiQpSVYvijD9?g_st=ipc",
+    "name": "Melia fine dining",
+    "address": "Τραγάκι 291 00",
+    "lat": "37.828072825552965",
+    "lng": "20.841384143587636"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6Db89EHL2DCe7XDbA?g_st=ipc",
+    "name": "Thalassino Ageri",
+    "address": "Vivilaki str 35 Tabakaria, Chania 731 33",
+    "lat": "35.51984802590005",
+    "lng": "24.037120467560246"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8TWdBgQzLn6EaTaWA?g_st=ipc",
+    "name": "Restaurant Thymari",
+    "address": "Πηνελόπης 19, Lefkada 311 00",
+    "lat": "38.835357324233975",
+    "lng": "20.708797217981044"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3X5uukpGejXWctER8?g_st=ipc",
+    "name": "Mastelo Restaurant & Bar",
+    "address": "Mitropoleos 11, Lefkada 311 00",
+    "lat": "38.83239517619771",
+    "lng": "20.705692089105533"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gfJazr3nBs7Z4eio6?g_st=ipc",
+    "name": "Amente Restaurant & Cocktail bar",
+    "address": "Varagas, Drimonas 311 00",
+    "lat": "38.772581566319595",
+    "lng": "20.61911835255244"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RiQip9TNX7v886747?g_st=ipc",
+    "name": "UMA chefs home experience",
+    "address": "Ελευθερίας, Πανόραμα - Θέρμη, Τ.Θ.Δ3026, Thessaloniki 570 01",
+    "lat": "40.560444872075784",
+    "lng": "23.032058735745576"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Py5DhXkzzrWSZ9VV6?g_st=ipc",
+    "name": "Maiami Seafood Restaurant",
+    "address": "Thetidos 18, Kalamaria 551 32",
+    "lat": "40.56607027401273",
+    "lng": "22.958428998890472"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CFRMztsRLco8Wy1G9?g_st=ipc",
+    "name": "Mavri Thalassa",
+    "address": "Nik. Plastira 3, Kalamaria 551 32",
+    "lat": "40.57843617435474",
+    "lng": "22.943234064415787"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FvCAxwABwuAsxZP59?g_st=ipc",
+    "name": "Les Zazous",
+    "address": "Themistokli Sofouli 108, Kalamaria 551 31",
+    "lat": "40.58599940349592",
+    "lng": "22.939440752876596"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rYECyH9YH5sKjowm8?g_st=ipc",
+    "name": "Marrone Restaurant",
+    "address": "Themistokli Sofouli 111, Kalamaria 551 31",
+    "lat": "40.587514625354714",
+    "lng": "22.942944126653384"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2G43HnJbauPH1htJ6?g_st=ipc",
+    "name": "Akti Ntovil sea taste",
+    "address": "Themistokli Sofouli 86, Kalamaria 551 31",
+    "lat": "40.59022322149795",
+    "lng": "22.945258035177847"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gugoZEiFmeixR8B67?g_st=ipc",
+    "name": "SHARK Bar | Restaurant - Thessaloniki",
+    "address": "Argonafton 2, Kalamaria 551 31",
+    "lat": "40.59118558847925",
+    "lng": "22.946520720029824"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bY2dGZAgk6wxVc1e9?g_st=ipc",
+    "name": "Opsopoion Maganeiai",
+    "address": "Komotinis 6, Thessaloniki 546 55",
+    "lat": "40.59504961870734",
+    "lng": "22.950911901497957"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gPHcQmEJJv1GDCXa7?g_st=ipc",
+    "name": "The Secret Gorge - Restaurant & Wine Tasting Experience",
+    "address": "3rd Klm. National Road, Rethymno 741 50",
+    "lat": "35.36437434920116",
+    "lng": "24.419370445837004"
+  },
+  {
+    "url": "https://maps.app.goo.gl/m2U4xxrF3WyY7WwP7?g_st=ipc",
+    "name": "Salonika Restaurant & Bar",
+    "address": "Leof. Meg. Alexandrou 2, Thessaloniki 546 40",
+    "lat": "40.618706388830155",
+    "lng": "22.951992243395964"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NUgNPs38t8Wn1YP49?g_st=ipc",
+    "name": "Moldee Bar Restaurant",
+    "address": "Proksenou Koromila &, Mitropolitou Iosif 8, Thessaloniki 546 22",
+    "lat": "40.629517298749846",
+    "lng": "22.945471093260796"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dnRtTeQACnMMpm9n9?g_st=ipc",
+    "name": "Olympos Naoussa",
+    "address": "Leof. Nikis 5, Thessaloniki 546 24",
+    "lat": "40.63309915839342",
+    "lng": "22.938647906596046"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fXNq3Zy4BtgpHxi49?g_st=ipc",
+    "name": "Kritikos Restaurant Port",
+    "address": "Leof. Nikis 03, Thessaloniki 546 21",
+    "lat": "40.633121638352506",
+    "lng": "22.938681038898274"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9fapz5w3wurryrPX7?g_st=ipc",
+    "name": "Grada nuevo",
+    "address": "Kalapothaki 14, Thessaloniki 546 24",
+    "lat": "40.633267680962305",
+    "lng": "22.939391543461607"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kbkr5X52jL9fcqFi7?g_st=ipc",
+    "name": "Clochard",
+    "address": "Κομνηνών 10, Mitropoleos 23, Thessaloniki 546 24",
+    "lat": "40.63347961221164",
+    "lng": "22.940223853089645"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fPcaWDwx3ave8G8F6?g_st=ipc",
+    "name": "7 Thalasses",
+    "address": "Kalapothaki 10, Thessaloniki 546 24",
+    "lat": "40.633353589714964",
+    "lng": "22.939202548189815"
+  },
+  {
+    "url": "https://maps.app.goo.gl/X4RLEkPp4XfoJhpx9?g_st=ipc",
+    "name": "L'Albero",
+    "address": "Filippou 17, Thessaloniki 546 31",
+    "lat": "40.6387415311347",
+    "lng": "22.94294998162837"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sEppZY8VozoSaAt86?g_st=ipc",
+    "name": "Maestranza.skg",
+    "address": "Ptolemeon 29Β, Thessaloniki 546 30",
+    "lat": "40.63893402490513",
+    "lng": "22.939949733334775"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zswCQ5dz9hpLhfwE6?g_st=ipc",
+    "name": "Iberico",
+    "address": "Νικ. Μάντζαρου 18 &, Kotta Roulia, Thessaloniki 546 27",
+    "lat": "40.644771791421974",
+    "lng": "22.920737302788805"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5ZKMq3CQuLYPt9qu7?g_st=ipc",
+    "name": "Makris Elounda Fine Dining Restaurant by Domes",
+    "address": "Domes of Elounda, Tsifliki, Schisma Elountas 720 53",
+    "lat": "35.289457611664844",
+    "lng": "25.729231449277293"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XzHLEvGxzDciEKDY8?g_st=ipc",
+    "name": "Dionysos restaurant elounda",
+    "address": "Unnamed Road, Ag. Nikolaos 720 53",
+    "lat": "35.24868944871254",
+    "lng": "25.730385349919736"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GPZUEnWWjrQuRVWr7?g_st=ipc",
+    "name": "Makris Restaurant",
+    "address": "Miramare Beach, Moraitika 491 00",
+    "lat": "39.490901721836174",
+    "lng": "19.92628299466604"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XLhEQFknHoz231GF7?g_st=ipc",
+    "name": "Ora Day",
+    "address": "Agoniston Politechniou, Kerkira 491 00",
+    "lat": "39.62198349556085",
+    "lng": "19.925172942691578"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PRwrcwQFNPVZjFsk6?g_st=ipc",
+    "name": "Spianada Meats & Greens",
+    "address": "Kapodistriou 32, Kerkira 491 00",
+    "lat": "39.62310170311375",
+    "lng": "19.923385713237856"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HLnA6MPvVh9foYtK6?g_st=ipc",
+    "name": "Venetian Well",
+    "address": "Πλατεια Λίλη Δεσύλλα 1, Kerkira 491 00",
+    "lat": "39.62641881073211",
+    "lng": "19.921842707953036"
+  },
+  {
+    "url": "https://maps.app.goo.gl/x3VsqPUTtkawiKFC7?g_st=ipc",
+    "name": "Etrusco",
+    "address": "Κάτω Κορακιάνα 490 83",
+    "lat": "39.6891414540143",
+    "lng": "19.834904657627558"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ymJ2kfjKBHsihXtt9?g_st=ipc",
+    "name": "Noble Gourmet Restaurant",
+    "address": "Elysium Resort & Spa | 5 star hotel in Rhodes, Leoforos Rodou - Kallitheas, Ammoudes 851 00",
+    "lat": "36.37247796232997",
+    "lng": "28.224879049367335"
   }
 ]

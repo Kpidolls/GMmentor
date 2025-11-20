@@ -292,5 +292,54 @@
     "address": "Πετειναρος, Μύκονος 846 00",
     "lat": "37.445318743092045",
     "lng": "25.33424731325651"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Z4qdJprni1KMQm3YA?g_st=ipc",
+    "name": "El Dorado",
+    "address": "Epar.Od. Mikonou, Mikonos 846 00",
+    "lat": "37.4384356377363",
+    "lng": "25.332482232008008"
+  },
+  {
+    "url": "https://maps.app.goo.gl/x9fF3ksZjKbckcRR9?g_st=ipc",
+    "name": "Appaloosa Bar Restaurant",
+    "address": "Άνω Μερά 846 00",
+    "lat": "37.45234589794245",
+    "lng": "25.38409135881813"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dyPRjYQnHRARiSJ79?g_st=ipc",
+    "name": "Picasso on the beach - Naxos",
+    "address": "Beach, Plaka, Ag. Anna 843 00",
+    "lat": "37.05943119973437",
+    "lng": "25.358989286042366"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vzHGYj8eJe66F2838?g_st=ipc",
+    "name": "El Burrito \"Ο μικρός γάιδαρος\"",
+    "address": "Chrisostomou Smirnis 5, Thessaloniki 546 22",
+    "lat": "40.62900649727638",
+    "lng": "22.94570753133818"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CR5HGqHbohFG88847?g_st=ipc",
+    "name": "Taco Mazama (Californian Style Mexican Street Food)",
+    "address": "Paleon Patron Germanou 28, Thessaloniki 546 22",
+    "lat": "40.6314937411916",
+    "lng": "22.94839696039383"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pYid3ZEGTyzFePMP6?g_st=ipc",
+    "name": "Crats Mexican",
+    "address": "Giannitson 61, Thessaloniki 546 27",
+    "lat": "40.64644154324893",
+    "lng": "22.920914799027102"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gry6ZeCUAGqm9E3X7?g_st=ipc",
+    "name": "Picante Mexican - Cocktail Bar",
+    "address": "Benitses 490 84",
+    "lat": "39.54688963792196",
+    "lng": "19.912527827268715"
   }
 ]

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const inputPath = path.join(__dirname, '..', 'src', 'data', 'municipalities.json');
-const outDir = path.join(__dirname, '..', 'public', 'data');
+const outDir = path.join(__dirname, '..', 'src', 'data');
 const outPath = path.join(outDir, 'greeceRegions.json');
 
 function inferTopRegion(areaName) {

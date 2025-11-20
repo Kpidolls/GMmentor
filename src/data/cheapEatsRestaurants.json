@@ -105,7 +105,7 @@
     "lng": "23.798012966612305"
   },
   {
-    "url": "https://maps.app.goo.gl/f47SevFfDgNbNtWk7",
+    "url": "https://maps.app.goo.gl/f47SevFfDgNbNtWk7?g_st=ipc",
     "name": "Taco Bell",
     "address": "Κολοκοτρώνη 13, Χαλάνδρι 152 33",
     "lat": "38.0228052820458",
@@ -1937,5 +1937,768 @@
     "address": "Μπουμπουλίνας 41, Ναύπλιο 211 00",
     "lat": "37.56727361524451",
     "lng": "22.801083825814366"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iaJ7WLVkfAWX8uMY7?g_st=ipc",
+    "name": "Stavropoulos Meat & Grill Nafplio",
+    "address": "Μπουμπουλίνας 43, Ναύπλιο 211 00",
+    "lat": "37.56729472413989",
+    "lng": "22.801012947686594"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5vu438KzmoWTk1dRA?g_st=ipc",
+    "name": "Souvlakia KARGAS",
+    "address": "Naousa 844 01",
+    "lat": "37.124561868830334",
+    "lng": "25.238091044543676"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5xzuz9k7GPVzTJnDA?g_st=ipc",
+    "name": "Shoreditch Burgers & Sandwiches",
+    "address": "Dimitriados 186, Volos 382 21",
+    "lat": "39.358292162660355",
+    "lng": "22.950837613452617"
+  },
+  {
+    "url": "https://maps.app.goo.gl/c4a3sw59T33zdhDU8?g_st=ipc",
+    "name": "R The Original fast food",
+    "address": "Iasonos 118, Volos 382 21",
+    "lat": "39.35863953139754",
+    "lng": "22.949097785508563"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RfPoKrLrjoUUEA32A?g_st=ipc",
+    "name": "Rainbow",
+    "address": "Iasonos 135, Volos 382 21",
+    "lat": "39.358716294857",
+    "lng": "22.949235444566693"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Dd1J2caUfwteeWVJA?g_st=ipc",
+    "name": "Makis",
+    "address": "Dimitriados 126, Volos 382 21",
+    "lat": "39.35994931747672",
+    "lng": "22.947511340680645"
+  },
+  {
+    "url": "https://maps.app.goo.gl/i3EkwXq8bXbY5rfm8?g_st=ipc",
+    "name": "To souvlaki tis Alexandras",
+    "address": "El. Venizelou 3, Volos 383 33",
+    "lat": "39.360700263391244",
+    "lng": "22.945330534308695"
+  },
+  {
+    "url": "https://maps.app.goo.gl/B6fuRTJ3jQNZCZMJ8?g_st=ipc",
+    "name": "Yasouvlaki!",
+    "address": "Naxos 843 00",
+    "lat": "37.104045402591176",
+    "lng": "25.37553445494035"
+  },
+  {
+    "url": "https://maps.app.goo.gl/poWZpbGwDcXD9udJ6?g_st=ipc",
+    "name": "Sweet and Salty",
+    "address": "Καναβού και Κλεονίκου, Nafpaktos 303 00",
+    "lat": "38.3929233936639",
+    "lng": "21.828605110521075"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tVknNoCtf1VeNxVy7?g_st=ipc",
+    "name": "FBI Food Truck",
+    "address": "X9JQ+3J, Naxos 843 02",
+    "lat": "36.98018032275085",
+    "lng": "25.38911877245444"
+  },
+  {
+    "url": "https://maps.app.goo.gl/p9VptZqYVY3ELr9j8?g_st=ipc",
+    "name": "Rigas",
+    "address": "Αγίου Ανδρέου κ, Zaimi, Patra 262 23",
+    "lat": "38.250839822865835",
+    "lng": "21.737567051131727"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kQo4C3a3QHbyJMpq6?g_st=ipc",
+    "name": "Χοιροποίητο Σουβλακοποιείο",
+    "address": "Riga Fereou 139, Patra 262 21",
+    "lat": "38.2456567707955",
+    "lng": "21.73248119818369"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VEjvVPTR3XkkoZxW8?g_st=ipc",
+    "name": "Souvlakia o Tzimis",
+    "address": "Mpenaki 1, Kalamata 241 00",
+    "lat": "37.04342911583992",
+    "lng": "22.113254908943482"
+  },
+  {
+    "url": "https://maps.app.goo.gl/r2Vfu2hZFXLEjrmk8?g_st=ipc",
+    "name": "Kalotaritissa Beach canteen",
+    "address": "Καλοταρίτισσα 840 08",
+    "lat": "36.79366881646542",
+    "lng": "25.743376582113193"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Xyq1DhyUhw2mJaPq9?g_st=ipc",
+    "name": "Pitogyros Traditional Grill House - Gyros, souvlaki, kebab.",
+    "address": "Oia 847 02",
+    "lat": "36.462570266691884",
+    "lng": "25.37797515114607"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AswmP29i78TmQa9F9?g_st=ipc",
+    "name": "Garry's",
+    "address": "plateia, Chaniotis 630 85",
+    "lat": "40.000628811076744",
+    "lng": "23.573772244228277"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JYSXRpKjkMx7aNHS7?g_st=ipc",
+    "name": "Bloom Brothers canteen",
+    "address": "Λιμάνι, Lagada 840 08",
+    "lat": "36.90173482477818",
+    "lng": "25.977068594760553"
+  },
+  {
+    "url": "https://maps.app.goo.gl/L8R286xrXF2isCzv6?g_st=ipc",
+    "name": "Andoni's Gyros Feed",
+    "address": "Καλλιθέα 630 77",
+    "lat": "40.07464288630586",
+    "lng": "23.448992983256165"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tK8o5vXTSUBvD7U3A?g_st=ipc",
+    "name": "Ο Γύρος της Νικήτης",
+    "address": "Egialou, Nikiti 630 88",
+    "lat": "40.21635208465205",
+    "lng": "23.666421853120887"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UfCwCDqjCiAuobpi9?g_st=ipc",
+    "name": "Delish Food Streat Story",
+    "address": "Tsouderon 69, Chania 731 32",
+    "lat": "35.515029891736845",
+    "lng": "24.02042482402925"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cmq1VkqB1tUYSWUX9?g_st=ipc",
+    "name": "Oasis",
+    "address": "Voloudaki 4, Chania 731 34",
+    "lat": "35.51332964693983",
+    "lng": "24.021015604554556"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BCA2nTq76iJ2grhB7?g_st=ipc",
+    "name": "Chicktok",
+    "address": "Papanastasiou 2, Chania 731 34",
+    "lat": "35.509944678509925",
+    "lng": "24.031396796267106"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tcGBs6FexGiv7Ju47?g_st=ipc",
+    "name": "GYROVOLIES",
+    "address": "Eleytherias 1, Perea 570 19",
+    "lat": "40.50927064423355",
+    "lng": "22.925792825198258"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BCe5MC2HVtopgoEH7?g_st=ipc",
+    "name": "Maestro Cantina",
+    "address": "EO Thessalonikis Poligirou 32, Thermi 570 01",
+    "lat": "40.539866600210786",
+    "lng": "23.020757982919235"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3FBZX7roU6fjgkTS6?g_st=ipc",
+    "name": "Lordon",
+    "address": "Πλατεία Παραμάνα 18, Thermi 570 01",
+    "lat": "40.546997157219394",
+    "lng": "23.020384247436283"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uCq2bBxGLbG7MnvB6?g_st=ipc",
+    "name": "ΓΡΝ Θέρμη",
+    "address": "Agiou Nikolaou 30, Thermi 570 01",
+    "lat": "40.54741782851475",
+    "lng": "23.01948092443365"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KSYp7smPeLPMNF7y6?g_st=ipc",
+    "name": "Οψάριον fish bar",
+    "address": "Drakopoulou 2, Argostoli 281 00",
+    "lat": "38.17459374377572",
+    "lng": "20.491243945671638"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZucBkKNWduhhUbyv9?g_st=ipc",
+    "name": "Hot Pot Pasteria",
+    "address": "Mediterranean Cosmos, Thessaloniki",
+    "lat": "40.555245602641975",
+    "lng": "22.992913714606928"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ivkmYsPpBSwDCJHG7?g_st=ipc",
+    "name": "Theologos Fast Food",
+    "address": "18, Aidiniou 14, Kalamaria 551 32",
+    "lat": "40.56936513403147",
+    "lng": "22.960477178944696"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cae1kAh8s933Ed8E6?g_st=ipc",
+    "name": "Sinners Smash Burgers",
+    "address": "Στέλιου Καζαντζίδη 31, Pilea 555 35",
+    "lat": "40.576087681457956",
+    "lng": "22.989359058851456"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HnPEQCvY87w7EXK28?g_st=ipc",
+    "name": "MAVERICK Handmade Street Food",
+    "address": "Eth. Antistaseos 179, Kalamaria 551 34",
+    "lat": "40.57336217336095",
+    "lng": "22.971758064415795"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UxFcV7SWYu9feyef9?g_st=ipc",
+    "name": "Thess...Gyro",
+    "address": "Smirnis 14, Kalamaria 551 32",
+    "lat": "40.57305742887387",
+    "lng": "22.955729191150056"
+  },
+  {
+    "url": "https://maps.app.goo.gl/feYupefB1V32NxiX7?g_st=ipc",
+    "name": "Jacaranda",
+    "address": "Στέλιου Καζαντζίδη 24, Pilea 555 35",
+    "lat": "40.583004580048126",
+    "lng": "22.98255759646119"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zwY1QQTAGPf4oH7s8?g_st=ipc",
+    "name": "Food Plaza",
+    "address": "Skra 16, Kalamaria 551 32",
+    "lat": "40.57666918251193",
+    "lng": "22.94927301198073"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eUYE4q3etTD9FkZs6?g_st=ipc",
+    "name": "Fina Kota kai Souvlaki",
+    "address": "Al. Papanastasiou 164, Thessaloniki 542 49",
+    "lat": "40.59910110403599",
+    "lng": "22.970582136003614"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dfbEJidizuzLLALq8?g_st=ipc",
+    "name": "O Giros Tis Ellados",
+    "address": "Leof. Vasilissis Olgas 176, Thessaloniki 546 46",
+    "lat": "40.59770145420411",
+    "lng": "22.9555911779157"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AezkPnQB7kKjE1Cr5?g_st=ipc",
+    "name": "Paul’s Burger",
+    "address": "Geor. Papandreou 38, Thessaloniki 546 46",
+    "lat": "40.59788238085435",
+    "lng": "22.952162245113325"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LhdTXdShbHy87PAv9?g_st=ipc",
+    "name": "Devido",
+    "address": "Nik. Plastira 2, Thessaloniki 542 50",
+    "lat": "40.6015548155933",
+    "lng": "22.97004729221759"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hJJxUbRut66xbMFs5?g_st=ipc",
+    "name": "subito",
+    "address": "Delfon 145, Thessaloniki 542 48",
+    "lat": "40.6000123876882",
+    "lng": "22.959807900547272"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2EFX2fMBPiwhmmAv5?g_st=ipc",
+    "name": "Devido",
+    "address": "25is Martiou 17, Thessaloniki 546 45",
+    "lat": "40.599230791467505",
+    "lng": "22.95314409507896"
+  },
+  {
+    "url": "https://maps.app.goo.gl/osKm1rqFwwfzqdrLA?g_st=ipc",
+    "name": "Thanasis & Sons",
+    "address": "Al. Papanastasiou 133, Thessaloniki 542 50",
+    "lat": "40.60379888554604",
+    "lng": "22.969062086462387"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vkLu33M5Ct15FeXa6?g_st=ipc",
+    "name": "Steakhouse Costas",
+    "address": "Emmanouil Fili 15, Pilea 555 34",
+    "lat": "40.607757700164754",
+    "lng": "22.984167654560377"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hfoXLoQmnjaHwpUB7?g_st=ipc",
+    "name": "Food Truck Park SKG",
+    "address": "Kapetan Ntogra 31, Pilea 555 35",
+    "lat": "40.609281906480575",
+    "lng": "22.989500884434833"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xNHbtpHz8gpf4vYR6?g_st=ipc",
+    "name": "ΓΡΝ Τούμπα",
+    "address": "Michail Chourmouzi 41, Thessaloniki 544 53",
+    "lat": "40.606092536657584",
+    "lng": "22.971298180015925"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8hPpQdZA8iNRAksd7?g_st=ipc",
+    "name": "Souvlaki Street",
+    "address": "Geor. Drosini 14, Thessaloniki 546 44",
+    "lat": "40.60499215993171",
+    "lng": "22.95914208357667"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bUnuC1Vh9ysa2VhL6?g_st=ipc",
+    "name": "Kostas",
+    "address": "Mark. Mpotsari 120, Thessaloniki 546 43",
+    "lat": "40.608571752720515",
+    "lng": "22.967969048628863"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EWmSLiCCxYM2N33x6?g_st=ipc",
+    "name": "Giotis",
+    "address": "Mark. Mpotsari 150, Thessaloniki 544 53",
+    "lat": "40.60922266804071",
+    "lng": "22.97064673048183"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cajfpJVBkeREe7FNA?g_st=ipc",
+    "name": "Prassas",
+    "address": "Mark. Mpotsari 89, Thessaloniki 546 44",
+    "lat": "40.60822104515919",
+    "lng": "22.96538292733955"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qmEdiZfcHrQAp8pU7?g_st=ipc",
+    "name": "Petridis And Sons - Grill House",
+    "address": "Grigoriou Lampraki 206, Thessaloniki 555 34",
+    "lat": "40.61189681851916",
+    "lng": "22.984212166296615"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KNA3DuGAxNV9SYMs8?g_st=ipc",
+    "name": "ΤΟ ΚΟΚΟΡΑΚΙ",
+    "address": "Mark. Mpotsari 105, Thessaloniki 544 53",
+    "lat": "40.6088349903696",
+    "lng": "22.967918512345722"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6Bmdb1UVvVyTyyNdA?g_st=ipc",
+    "name": "Gyradiko",
+    "address": "Grigoriou Lampraki 125, Thessaloniki 543 51",
+    "lat": "40.615031188130764",
+    "lng": "22.97695657295727"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9AT6QmGaM1pLwsRb9?g_st=ipc",
+    "name": "Tost Spesial",
+    "address": "Paraskevopoulou 12, Thessaloniki 546 40",
+    "lat": "40.616314670176166",
+    "lng": "22.955059124656405"
+  },
+  {
+    "url": "https://maps.app.goo.gl/u5NXam3TJPXTBEGQ6?g_st=ipc",
+    "name": "Το Μυρμήγκι - HOT-DOG - Βραστά Λουκάνικα",
+    "address": "Konstantinoupoleos 8, Thessaloniki 546 40",
+    "lat": "40.61789526919397",
+    "lng": "22.95852389027651"
+  },
+  {
+    "url": "https://maps.app.goo.gl/taG7ENcMfbyzazQX7?g_st=ipc",
+    "name": "Pizza Sakis",
+    "address": "Leof. Stratou 26, Thessaloniki 546 40",
+    "lat": "40.6189040866906",
+    "lng": "22.958041870578818"
+  },
+  {
+    "url": "https://maps.app.goo.gl/82yxHEuuzhZ7bD1T9?g_st=ipc",
+    "name": "Το Έτση",
+    "address": "Nikiforou Foka 2, Thessaloniki 546 21",
+    "lat": "40.627697688934035",
+    "lng": "22.94868143840882"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pedu5yTx6WHSFd5MA?g_st=ipc",
+    "name": "Feyrouz SKG",
+    "address": "Mitropoleos 125, Nikiforou Foka 8, Thessaloniki 546 21",
+    "lat": "40.62813032194449",
+    "lng": "22.94911089919006"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1CjK5eGEVn2bdjxz8?g_st=ipc",
+    "name": "Giok Balik",
+    "address": "Eth. Aminis 34, Thessaloniki 546 21",
+    "lat": "40.62972191102995",
+    "lng": "22.952456612586893"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZU1we2eajmmkHarSA?g_st=ipc",
+    "name": "SUN DO EACH",
+    "address": "Pl. Ippodromiou 12, Thessaloniki 546 21",
+    "lat": "40.629855288469905",
+    "lng": "22.95097907140209"
+  },
+  {
+    "url": "https://maps.app.goo.gl/F867e4fDb8YFQcHN9?g_st=ipc",
+    "name": "Because Bagel",
+    "address": "Al. Svolou 41, Thessaloniki 546 21",
+    "lat": "40.63057520882739",
+    "lng": "22.951254328665513"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NQPjMfCoN4AKJD3m8?g_st=ipc",
+    "name": "Christos",
+    "address": "Egnatia 150, Thessaloniki 546 21",
+    "lat": "40.63147006963023",
+    "lng": "22.952399705195514"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hi9XxDarzuTKvZmD8?g_st=ipc",
+    "name": "Argophageío",
+    "address": "Apellou 6, Thessaloniki 546 22",
+    "lat": "40.631121382402085",
+    "lng": "22.94963262184118"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VGaiUJdvDDnid5Kk9?g_st=ipc",
+    "name": "Hot Pot Pasteria City Center",
+    "address": "Paleon Patron Germanou 12, Thessaloniki 546 22",
+    "lat": "40.63116120039778",
+    "lng": "22.946781922089382"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zE2aLejbpEyQpDvq8?g_st=ipc",
+    "name": "Taco Mazama (Californian Style Mexican Street Food)",
+    "address": "Paleon Patron Germanou 28, Thessaloniki 546 22",
+    "lat": "40.63149354851285",
+    "lng": "22.94839774432504"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nooaQmgbY9VX2WGv7?g_st=ipc",
+    "name": "Derlicatesen all Souvlaki",
+    "address": "John Kouskoura 3, Thessaloniki 546 22",
+    "lat": "40.630948535574674",
+    "lng": "22.944881639476645"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oFPYJzUU4rgqitwB7?g_st=ipc",
+    "name": "Balboa Thessaloniki",
+    "address": "P. Mela 42, Thessaloniki 546 22",
+    "lat": "40.631903473697065",
+    "lng": "22.947513989325277"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cRpaEqK3F7inKXVy5?g_st=ipc",
+    "name": "Jackaroo",
+    "address": "Mitropoleos 67, Thessaloniki 546 22",
+    "lat": "40.631343527256554",
+    "lng": "22.944174715835555"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rccueDiq6UHSWjB86?g_st=ipc",
+    "name": "Dakee spot",
+    "address": "P. Mela 48, Thessaloniki 546 22",
+    "lat": "40.6322179094533",
+    "lng": "22.947351485022043"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fczSwQFG8SAVzjsu7?g_st=ipc",
+    "name": "Life And Chicken",
+    "address": "Κέντρο, Θεσσαλονίκη, Patriarchou Ioakim 26, Thessaloniki 546 35",
+    "lat": "40.63311964993022",
+    "lng": "22.951739765062324"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gyhw2UWMtxWKgMui6?g_st=ipc",
+    "name": "Cong | Vietasian Street Food",
+    "address": "Proxenou Koromila 9, Thessaloniki 546 23",
+    "lat": "40.63147206727124",
+    "lng": "22.942501320363125"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iyZQfPWo4E2pskqX8?g_st=ipc",
+    "name": "The Last Slice",
+    "address": "Proxenou Koromila 1, Thessaloniki 546 23",
+    "lat": "40.63188753569458",
+    "lng": "22.94190837965703"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dAaaqBN4npr7HBBU7?g_st=ipc",
+    "name": "22 Σουβλάκια",
+    "address": "Aristotelous Sq 8, Thessaloniki 546 23",
+    "lat": "40.632325575157445",
+    "lng": "22.941533229878075"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KNAkyJUgnkqkuPQs9?g_st=ipc",
+    "name": "Liga ke kala",
+    "address": "Kassandrou 132, Thessaloniki 546 34",
+    "lat": "40.63627784998205",
+    "lng": "22.954179728027064"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eQJvB2FMkUEghr9y7?g_st=ipc",
+    "name": "Thess Bao",
+    "address": "Kalapothaki 3, Thessaloniki 546 45",
+    "lat": "40.633724315611715",
+    "lng": "22.93899137586201"
+  },
+  {
+    "url": "https://maps.app.goo.gl/a5enHSGzpNb2rYAJ7?g_st=ipc",
+    "name": "Bombídia - Bombs",
+    "address": "Vasileos Irakleiou 35, 37, Thessaloniki 546 24",
+    "lat": "40.63441434318281",
+    "lng": "22.94206825187552"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SWEWMLbzJrveMUjT7?g_st=ipc",
+    "name": "Ohmami - Street Food / Thessaloniki",
+    "address": "Patriarchoi Dionisii E 1, Thessaloniki 546 31",
+    "lat": "40.63556315760708",
+    "lng": "22.947563243318125"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dBrKhYFMn7bdAAyAA?g_st=ipc",
+    "name": "Κύριος Μπαμπάτσικος",
+    "address": "Vasileos Irakleiou 33, Thessaloniki 546 24",
+    "lat": "40.63461122232153",
+    "lng": "22.941727966275263"
+  },
+  {
+    "url": "https://maps.app.goo.gl/j8pVp1d58tFR3FKR6?g_st=ipc",
+    "name": "Ο Γύρος της Αριστοτέλους",
+    "address": "Aristotélous 24, Thessaloniki 546 23",
+    "lat": "40.63507047582695",
+    "lng": "22.94368729541851"
+  },
+  {
+    "url": "https://maps.app.goo.gl/B68oxS5kPucvmKVy7?g_st=ipc",
+    "name": "Ochsenkopf German Delicatessen",
+    "address": "Αγορά Μοδιανο, Thessaloniki 546 24",
+    "lat": "40.634945471087235",
+    "lng": "22.941783687986916"
+  },
+  {
+    "url": "https://maps.app.goo.gl/831RBk3hM78pZN1a8?g_st=ipc",
+    "name": "SESOULA Street Food",
+    "address": "Mitropoleos 6, Thessaloniki 546 25",
+    "lat": "40.63477422793839",
+    "lng": "22.937577409662797"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jXzXhjGZbZTLHvnd9?g_st=ipc",
+    "name": "Laikon",
+    "address": "Politechniou 24, Thessaloniki 546 25",
+    "lat": "40.63567516803373",
+    "lng": "22.93753817677912"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gUdJfgvKc5M5F6TR7?g_st=ipc",
+    "name": "Raw Street Burger - Thessaloniki",
+    "address": "Politechniou 53, Thessaloniki 546 25",
+    "lat": "40.63602099868007",
+    "lng": "22.937352405537926"
+  },
+  {
+    "url": "https://maps.app.goo.gl/D5vAgy9G1TNsAAyJ9?g_st=ipc",
+    "name": "Cantina Manara",
+    "address": "Στοά, Ermou 1, Thessaloniki 546 25",
+    "lat": "40.637111408911565",
+    "lng": "22.9392252159668"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Z7BYjUBJYcnFTaEm9?g_st=ipc",
+    "name": "Η Βρωμιάρα - The Gourmet Street Food | Θεσσαλονικη",
+    "address": "Siggrou 7, Thessaloniki 546 25",
+    "lat": "40.63730784042486",
+    "lng": "22.939114096509012"
+  },
+  {
+    "url": "https://maps.app.goo.gl/msSh5RZw3k81mKHWA?g_st=ipc",
+    "name": "Pízza Poselli",
+    "address": "Vilara 2, Thessaloniki 546 25",
+    "lat": "40.63738632422352",
+    "lng": "22.938994583377827"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Pr2NGoHPa59C1JPVA?g_st=ipc",
+    "name": "FAVELA Bit Bazar",
+    "address": "Olympou 72, Thessaloniki 546 31",
+    "lat": "40.63897345242983",
+    "lng": "22.94448760793796"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HfoTaA81WJgTcqWp6?g_st=ipc",
+    "name": "Plateia Bit pazar",
+    "address": "Προσφυγική Αγορά 16 Β, Thessaloniki 546 31",
+    "lat": "40.63891956491642",
+    "lng": "22.94393646377273"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6mWAWHUbEwXuAb589?g_st=ipc",
+    "name": "Salento Wood Fired Street Food",
+    "address": "El. Venizelou 76, Thessaloniki 546 31",
+    "lat": "40.639269734572295",
+    "lng": "22.943990430297482"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ck9L5Pz4C9MGKVbV7?g_st=ipc",
+    "name": "Crats Fried Chicken Egnatia",
+    "address": "Egnatia 27, Thessaloniki 546 30",
+    "lat": "40.63898844732417",
+    "lng": "22.938638631354078"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GvH8vhGT4BrR9x9WA?g_st=ipc",
+    "name": "PORKITTO - ΓΥΡΑΔΙΚΟ - ΣΟΥΒΛΑΚΙ - ΣΤΕΦΑΝΟΥ ΠΑΡΘΕΝΑ - ΘΕΣΣΑΛΟΝΙΚΗ",
+    "address": "Καραολή και Δημητρίου 52, Thessaloniki 546 30",
+    "lat": "40.64044750261407",
+    "lng": "22.942776573082938"
+  },
+  {
+    "url": "https://maps.app.goo.gl/p1mkurFCqsY7XC3w5?g_st=ipc",
+    "name": "Το Πρυτανείο",
+    "address": "Alexandras Papadopoulou 72, Thessaloniki 546 33",
+    "lat": "40.64303995879506",
+    "lng": "22.947630622213342"
+  },
+  {
+    "url": "https://maps.app.goo.gl/huQUwoVx5eZ9dY357?g_st=ipc",
+    "name": "Μαμά Τερέζα",
+    "address": "26is Oktovriou 15, Thessaloniki 546 27",
+    "lat": "40.64077907495011",
+    "lng": "22.91819947384191"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nAwyYBALch1ybbQSA?g_st=ipc",
+    "name": "Michelangelo.skg",
+    "address": "Riga Feraiou 162, Sikies 566 26",
+    "lat": "40.65053808833563",
+    "lng": "22.95671243903333"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gB9jG1sW8aaCssEs7?g_st=ipc",
+    "name": "Ta Babatsika Giro",
+    "address": "Αγίων Πάντων 28, Thessaloniki 561 23",
+    "lat": "40.647745410832044",
+    "lng": "22.928067747195957"
+  },
+  {
+    "url": "https://maps.app.goo.gl/L84rScHZkgehJUri7?g_st=ipc",
+    "name": "Crats Mexican",
+    "address": "Giannitson 61, Thessaloniki 546 27",
+    "lat": "40.646440943227944",
+    "lng": "22.920915607467233"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HehrRz31yKnDYNa49?g_st=ipc",
+    "name": "Karbouniáriko",
+    "address": "Nik. Plastira 11, Ampelokipi 561 23",
+    "lat": "40.65687885553669",
+    "lng": "22.9247874320993"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zrQxzEjiyGHcJGXt5?g_st=ipc",
+    "name": "Κοτόπουλα Δέρας",
+    "address": "Karaoli ke Dimitriou 154, Evosmos 562 24",
+    "lat": "40.6664983188531",
+    "lng": "22.919495227155743"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BYpMVurWN1yMNmFh8?g_st=ipc",
+    "name": "Crats Fried Chicken Ευόσμου",
+    "address": "Aristotélous 67, Evosmos 562 24",
+    "lat": "40.66578126903803",
+    "lng": "22.911725635585793"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ghxqsvRTJj4mWN988?g_st=ipc",
+    "name": "Devido",
+    "address": "Karaoli ke Dimitriou 89, Evosmos 562 24",
+    "lat": "40.66696798830783",
+    "lng": "22.91206522121093"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Keom9mTvrZ5H3Nat7?g_st=ipc",
+    "name": "ΨΗΤΟΠΩΛΕΙΑ ΕΥΟΣΜΟΣ- ΑΝΩ ΚΑΤΩ",
+    "address": "Tzavella 2, Evosmos 562 24",
+    "lat": "40.66706897454817",
+    "lng": "22.912010033587894"
+  },
+  {
+    "url": "https://maps.app.goo.gl/h5xQF5VfomnJ621E6?g_st=ipc",
+    "name": "Rookie.skg",
+    "address": "P. Mela 28, Evosmos 562 24",
+    "lat": "40.66725409679953",
+    "lng": "22.911543036523838"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aaKTJZJokUXTmmru9?g_st=ipc",
+    "name": "STIVOS BURGER & STEAK",
+    "address": "Ευαγγελισμού της Θεοτόκου 43, Evosmos 562 24",
+    "lat": "40.66959322745075",
+    "lng": "22.911385519403897"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qCiHQcXfuVPpbvs5A?g_st=ipc",
+    "name": "Η Βρωμιάρα - The Gourmet Street Food",
+    "address": "Averof 60, Ioannina 452 21",
+    "lat": "39.6691471152778",
+    "lng": "20.85696993484649"
+  },
+  {
+    "url": "https://maps.app.goo.gl/p8LFpYc2vTdDWnYp6?g_st=ipc",
+    "name": "Filia Giannari",
+    "address": "kavpevtan Mavnoli Mpantouva 65, Iraklio 713 07",
+    "lat": "35.33111188005716",
+    "lng": "25.144727327039348"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3RSn2LjzUnKrQc289?g_st=ipc",
+    "name": "Holy Smoke BBQ Streetfood",
+    "address": "Eth. Antistaseos 136, Alexandroupoli 681 00",
+    "lat": "40.846113407445806",
+    "lng": "25.871107111584706"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YaQiwsqM5G144MKZ8?g_st=ipc",
+    "name": "King Food",
+    "address": "Kilkis 12-14, Komotini 691 00",
+    "lat": "41.119343380363595",
+    "lng": "25.40306406826728"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bBz55JsBTZudAbHR9?g_st=ipc",
+    "name": "Di Santo Premium Sandwiches",
+    "address": "Evgeniou Voulgareos 3, Kerkira 491 00",
+    "lat": "39.6237687550092",
+    "lng": "19.923112693259046"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3x2uABEYb4yf4U9ZA?g_st=ipc",
+    "name": "Pitta pappou",
+    "address": "ΑΓΙΩΝ ΠΑΝΤΩΝ 12, agion panton 12, Kerkira 491 00",
+    "lat": "39.62391916981706",
+    "lng": "19.9227027256586"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Zz9LDsNcF9KHLgfX6?g_st=ipc",
+    "name": "Vlassis",
+    "address": "Vasileos Georgiou, Soufli 684 00",
+    "lat": "41.1944139413849",
+    "lng": "26.305196580284058"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HQkLX39r1Ru88dxq8?g_st=ipc",
+    "name": "Mr.G's - Ψητοπωλείο - Greek Street Food",
+    "address": "Geor. Papanikolaou 8, Rodos 851 00",
+    "lat": "36.45328895287043",
+    "lng": "28.221248936648102"
   }
 ]
