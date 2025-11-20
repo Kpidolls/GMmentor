@@ -281,7 +281,7 @@
     "coffee-brunch": "Coffee & Brunch Spots",
     "fish-tavernas": "Fish Tavernas",
     "italian": "Italian Restaurants",
-    "cheap-eats": "Cheap Eats",
+    "cheap-eats": "Gyros & Cheap Eats",
     "asian": "Asian Restaurants",
     "burgers": "Burger Spots",
     "vegetarian": "Vegetarian Friendly Restaurants",
@@ -384,7 +384,7 @@
       "description": "Spice up your palate with bold, colorful Mexican cuisine, featuring tacos, burritos, and more at Greece’s top Mexican eateries."
     },
     "cheapEats": {
-      "title": "📍 Cheap Eats",
+      "title": "📍 Gyros & Cheap Eats",
       "description": "Enjoy tasty meals that won’t stretch your wallet, perfect picks for budget travelers and food lovers on the go."
     },
     "luxury": {
