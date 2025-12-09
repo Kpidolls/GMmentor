@@ -234,7 +234,7 @@ const redirects = async () => [
 /** @type {import('next').NextConfig} */
 const nextConfig = withPWA(withBundleAnalyzer({
   poweredByHeader: false,
-  trailingSlash: true,
+  trailingSlash: false,
   reactStrictMode: true,
 
   compiler: {

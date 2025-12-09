@@ -1,9 +1,12 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /pwa-test
 
 # Host
-Host: https://googlementor.com/
+Host: https://googlementor.com
 
 # Sitemaps
 Sitemap: https://googlementor.com/sitemap.xml

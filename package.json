@@ -5,14 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "postbuild": "next-sitemap --config next-sitemap.config.js && node scripts/submit-to-indexnow.js",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "build-prod": "run-s clean build",
     "clean": "rimraf .next out",
     "lint": "next lint",
     "build-types": "tsc --noEmit --pretty",
-    "predeploy": "yarn clean && yarn build",
+    "indexnow:generate-key": "node scripts/generate-indexnow-key.js",
+    "indexnow:submit": "node scripts/submit-to-indexnow.js",
+    "predeploy": "npm run clean && npm run build",
     "deploy": "gh-pages -d out",
     "preview": "serve out"
   },
