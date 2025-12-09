@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
+import { metaDescriptions } from '../config/metaDescriptions';
 
 const Login: React.FC = () => {
   const { t } = useTranslation();
@@ -12,7 +13,7 @@ const Login: React.FC = () => {
         <title>{t('meta.loginTitle')}</title>
         <meta 
           name="description" 
-          content={t('meta.loginDescriptionShort')} 
+          content={metaDescriptions.login} 
         />
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href="https://googlementor.com/login" />

@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import NextLink from 'next/link'
+import { generateBlogMetaDescription } from '../../config/metaDescriptions'
 
 const MarkdownComponents = {
   h1: (props: ComponentProps<'h1'>) => <Heading as="h1" size="xl" mt={8} mb={4} {...props} />,
@@ -66,7 +67,7 @@ export const getStaticProps: GetStaticProps<BlogPostProps> = async ({ params }) 
 }
 
 export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostProps) {
-  const { i18n, t } = useTranslation()
+  const { i18n } = useTranslation()
   const router = useRouter()
 
   // Handle language mismatch
@@ -78,13 +79,12 @@ export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostPro
     }
   }, [i18n.language, post.language, alternatePost, router])
 
-  // Build an SEO-friendly meta description: prefer post.summary but ensure it is <=155 chars
-  const metaDescription = (() => {
-    const summary = post.summary || ''
-    if (!summary) return t('meta.blogDescriptionShort')
-    if (summary.length <= 155) return summary
-    return summary.slice(0, 152).trimEnd() + '…'
-  })()
+  // Build an SEO-friendly meta description using the helper function
+  const metaDescription = generateBlogMetaDescription(
+    post.title,
+    post.summary,
+    post.content
+  )
 
   const handleLanguageSwitch = () => {
     if (alternatePost) {

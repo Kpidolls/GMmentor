@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import productsData from '../data/products.json';
+import { metaDescriptions } from '../config/metaDescriptions';
 
 const Store: React.FC = () => {
   const { t } = useTranslation();
@@ -24,7 +25,7 @@ const Store: React.FC = () => {
         <title>{t('meta.storeTitle')}</title>
         <meta 
           name="description" 
-          content={t('meta.storeDescriptionShort')} 
+          content={metaDescriptions.store} 
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/store" />
