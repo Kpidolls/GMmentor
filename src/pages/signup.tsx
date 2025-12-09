@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
+import { metaDescriptions } from '../config/metaDescriptions';
 
 const SignUp: React.FC = () => {
   const { t } = useTranslation();
@@ -12,7 +13,7 @@ const SignUp: React.FC = () => {
         <title>{t('meta.signupTitle')}</title>
         <meta 
           name="description" 
-          content={t('meta.signupDescriptionShort')} 
+          content={metaDescriptions.signup} 
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/signup" />

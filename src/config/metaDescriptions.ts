@@ -1,0 +1,95 @@
+/**
+ * Unique meta descriptions for each page
+ * SEO best practice: Each page should have a unique, descriptive meta description
+ * Optimal length: 150-160 characters
+ */
+
+export const metaDescriptions = {
+  // Main pages
+  home: "Discover authentic Greek restaurants, curated travel maps, and local guides for Athens, Santorini, Mykonos, and all Greek islands. Plan your perfect Greek adventure.",
+  
+  search: "Search through 200+ curated Greek locations, restaurants, and travel destinations. Find authentic tavernas, hidden beaches, and local experiences across Greece.",
+  
+  store: "Browse travel essentials and gear recommended by experienced Greece travelers. From packing lists to must-have gadgets for island hopping and city exploration.",
+  
+  blog: "Expert travel guides for Greece covering Athens restaurants, island hopping tips, transportation guides, and insider secrets for authentic Greek experiences.",
+  
+  insurance: "Get comprehensive travel insurance for your Greek vacation. Coverage for medical emergencies, trip cancellations, and lost luggage with SafetyWing - starting at $45/month.",
+  
+  airalo: "Stay connected in Greece with Airalo eSIM data plans. No SIM card swap needed - instant activation, affordable rates, €3 off your first purchase with code GOOGLE4204.",
+  
+  login: "Access your Googlementor account to save favorite restaurants, create custom travel itineraries, and manage your Greek travel plans.",
+  
+  signup: "Join Googlementor's community of Greece travelers. Get exclusive access to curated maps, travel tips, and special offers for authentic Greek experiences.",
+  
+  terms: "Terms of Service for Googlementor. Learn about our commitment to authentic Greek travel recommendations, user privacy, and responsible tourism practices.",
+  
+  privacyPolicy: "Privacy Policy for Googlementor. We protect your data while helping you discover authentic Greece. GDPR-compliant, transparent data practices.",
+  
+  // Blog posts - English versions
+  blogAthensAirportEn: "Complete guide to Athens Airport (ATH) transfers: Metro, bus, taxi, and private options. Travel times, costs, and insider tips for 2025.",
+  
+  blogAthensHopOnEn: "Athens Hop-On Hop-Off bus guide: Routes, pricing, best stops, and whether it's worth it. Compare operators and find the best deals for 2025.",
+  
+  blogAcropolisEn: "Ultimate Acropolis guide: Skip-the-line tickets, best visiting times, what to see, and historical context. Make the most of Greece's top attraction.",
+  
+  blogPerfectIslandEn: "Choose the perfect Greek island for your trip: Compare Santorini, Mykonos, Crete, and hidden gems. Match your travel style to the ideal destination.",
+  
+  blogHowToUseEn: "How to use Googlementor's interactive maps: Save locations, plan itineraries, and discover authentic Greek restaurants. Complete tutorial for travelers.",
+  
+  blogPlanFunEn: "Plan unforgettable weekend adventures in Greece using Googlementor's curated maps. Find hidden beaches, authentic tavernas, and local experiences.",
+  
+  // Blog posts - Greek versions
+  blogAthensAirportEl: "Πλήρης οδηγός για τις μεταφορές από το Αεροδρόμιο Αθηνών: Μετρό, λεωφορείο, ταξί και ιδιωτικές επιλογές. Χρόνοι διαδρομής, κόστη και συμβουλές.",
+  
+  blogAthensHopOnEl: "Οδηγός για τα λεωφορεία Hop-On Hop-Off στην Αθήνα: Διαδρομές, τιμές, καλύτερες στάσεις. Συγκρίνετε εταιρείες και βρείτε τις καλύτερες προσφορές.",
+  
+  blogAcropolisEl: "Πλήρης οδηγός Ακρόπολης: Εισιτήρια χωρίς αναμονή, καλύτερες ώρες επίσκεψης, τι να δείτε και ιστορικό πλαίσιο. Αξιοποιήστε το κορυφαίο αξιοθέατο της Ελλάδας.",
+  
+  blogPerfectIslandEl: "Επιλέξτε το τέλειο ελληνικό νησί για το ταξίδι σας: Συγκρίνετε Σαντορίνη, Μύκονο, Κρήτη και κρυφά διαμάντια. Βρείτε τον ιδανικό προορισμό.",
+  
+  blogHowToUseEl: "Πώς να χρησιμοποιήσετε τους διαδραστικούς χάρτες του Googlementor: Αποθηκεύστε τοποθεσίες, σχεδιάστε δρομολόγια και ανακαλύψτε αυθεντικά ελληνικά εστιατόρια.",
+  
+  blogPlanFunEl: "Σχεδιάστε αξέχαστες περιπέτειες Σαββατοκύριακου στην Ελλάδα με τους επιμελημένους χάρτες του Googlementor. Βρείτε κρυφές παραλίες και τοπικές εμπειρίες.",
+};
+
+/**
+ * Generate a unique meta description for blog posts
+ * Falls back to truncated summary or generated description
+ */
+export function generateBlogMetaDescription(
+  title: string,
+  summary?: string,
+  content?: string
+): string {
+  // Use summary if available and under 155 chars
+  if (summary && summary.length > 0 && summary.length <= 155) {
+    return summary;
+  }
+  
+  // Truncate summary to 152 chars if too long
+  if (summary && summary.length > 155) {
+    return summary.slice(0, 152).trimEnd() + '...';
+  }
+  
+  // Extract first paragraph from content
+  if (content) {
+    const firstParagraph = content
+      .replace(/^#+\s+.*/gm, '') // Remove headers
+      .replace(/!\[.*?\]\(.*?\)/g, '') // Remove images
+      .replace(/\[.*?\]\(.*?\)/g, '') // Remove links
+      .split('\n\n')
+      .find(p => p.trim().length > 50);
+    
+    if (firstParagraph) {
+      const cleaned = firstParagraph.trim();
+      if (cleaned.length <= 155) {
+        return cleaned;
+      }
+      return cleaned.slice(0, 152).trimEnd() + '...';
+    }
+  }
+  
+  // Generate from title as last resort
+  return `${title} - Expert guide for travelers exploring Greece. Practical tips, insider recommendations, and authentic experiences from Googlementor.`;
+}

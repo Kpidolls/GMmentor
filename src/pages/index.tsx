@@ -13,6 +13,7 @@ import '../i18n';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import Reviews from '../components/Reviews';
+import { metaDescriptions } from '../config/metaDescriptions';
 import dynamic from 'next/dynamic';
 import { GetStaticProps } from 'next';
 
@@ -50,7 +51,7 @@ const App = () => {
         <title>{t('meta.homeTitle')}</title>
         <meta
           name="description"
-          content={t('meta.homeDescriptionShort')}
+          content={metaDescriptions.home}
         />
         <link rel="canonical" href="https://googlementor.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

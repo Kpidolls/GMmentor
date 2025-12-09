@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { metaDescriptions } from '../config/metaDescriptions';
 
 const TravelInsurance = () => {
   const { t } = useTranslation();
@@ -10,7 +11,7 @@ const TravelInsurance = () => {
     <main className="bg-gray-50 min-h-screen">
       <Head>
         <title>{t('meta.insuranceTitle')}</title>
-  <meta name="description" content={t('meta.insuranceDescriptionShort')} />
+  <meta name="description" content={metaDescriptions.insurance} />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={t('meta.insuranceTitle')} />

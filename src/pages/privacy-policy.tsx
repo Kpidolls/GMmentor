@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import { metaDescriptions } from '../config/metaDescriptions';
 
 const PrivacyPolicy = () => {
   const { t } = useTranslation();
@@ -8,7 +9,7 @@ const PrivacyPolicy = () => {
     <div>
       <Head>
         <title>{t('meta.privacyTitle', 'Privacy Policy - Googlementor')}</title>
-        <meta name="description" content={t('meta.privacyDescriptionShort')} />
+        <meta name="description" content={metaDescriptions.privacyPolicy} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/privacy-policy" />
       </Head>

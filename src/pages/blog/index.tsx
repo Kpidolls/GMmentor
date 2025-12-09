@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { Box, Heading, Text, Container, HStack, Button, Grid, GridItem, Image, Badge, Flex, Tag, TagLabel } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
+import { metaDescriptions } from '../../config/metaDescriptions'
 
 type BlogProps = {
   allPosts: Post[]
@@ -76,7 +77,7 @@ export default function Blog({ allPosts }: BlogProps) {
         <title>{t('meta.blogTitle')}</title>
         <meta 
           name="description" 
-          content={t('meta.blogDescriptionShort')} 
+          content={metaDescriptions.blog} 
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/blog" />
