@@ -13,9 +13,9 @@ import NextLink from 'next/link'
 import { generateBlogMetaDescription } from '../../config/metaDescriptions'
 
 const MarkdownComponents = {
-  h1: (props: ComponentProps<'h1'>) => <Heading as="h1" size="xl" mt={8} mb={4} {...props} />,
-  h2: (props: ComponentProps<'h2'>) => <Heading as="h2" size="lg" mt={6} mb={3} {...props} />,
-  h3: (props: ComponentProps<'h3'>) => <Heading as="h3" size="md" mt={5} mb={2} {...props} />,
+  h1: (props: ComponentProps<'h1'>) => <Heading as="h2" size="lg" mt={6} mb={3} {...props} />,
+  h2: (props: ComponentProps<'h2'>) => <Heading as="h3" size="md" mt={5} mb={2} {...props} />,
+  h3: (props: ComponentProps<'h3'>) => <Heading as="h4" size="sm" mt={4} mb={2} {...props} />,
   p: (props: ComponentProps<'p'>) => <Text mb={4} lineHeight="1.8" {...props} />,
   a: (props: ComponentProps<'a'>) => <Link color="teal.500" isExternal {...props} />,
   img: (props: ComponentProps<'img'>) =>

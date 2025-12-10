@@ -1025,9 +1025,12 @@ const MainHero = () => {
               {/* Decorative elements */}
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent rounded-full opacity-60" />
               
-              <button 
+              <div 
                 onClick={fullReset}
                 className="font-bold tracking-tight text-white hover:scale-[1.02] transition-all duration-500 cursor-pointer group relative"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') fullReset(); }}
                 title={t('mainHero.clickToReturnToMain', 'Click to return to main page')}
               >
                 {/* Glow effect behind title */}
@@ -1039,11 +1042,11 @@ const MainHero = () => {
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </span>
                   
-                  <span className="block text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-[0.9] px-1 group-hover:from-blue-100 group-hover:via-white group-hover:to-blue-100 transition-all duration-500 drop-shadow-2xl">
+                  <h1 className="block text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-[0.9] px-1 group-hover:from-blue-100 group-hover:via-white group-hover:to-blue-100 transition-all duration-500 drop-shadow-2xl">
                     {t('mainHero.title')}
-                  </span>
+                  </h1>
                 </div>
-              </button>
+              </div>
               
               {/* Decorative dots */}
               <div className="flex justify-center space-x-2 mt-6">

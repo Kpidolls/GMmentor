@@ -76,8 +76,8 @@ const App = () => {
       {/* Short AI-friendly intro for the homepage */}
       <section className="bg-white py-8">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h3 className="text-lg font-semibold text-gray-800 mb-2">{t('home.intro.question', 'Looking for the best places to eat and explore in Athens?')}</h3>
-          <p className="text-gray-600">{t('home.intro.answer', 'These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike.')}</p>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('home.intro.question', 'Looking for the best places to eat and explore in Athens?')}</h2>
+          <p className="text-gray-600 leading-relaxed">{t('home.intro.answer', 'These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike.')}</p>
         </div>
       </section>
 

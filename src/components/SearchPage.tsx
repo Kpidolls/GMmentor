@@ -146,6 +146,10 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
 
   return (
     <Box maxW="100%" px={{ base: 3, md: 4 }} py={{ base: 4, md: 8 }}>
+      <Heading as="h1" size="xl" mb={6} textAlign="center" color="gray.800">
+        {t('search.title', 'Search Destinations, Maps & Travel Gear')}
+      </Heading>
+      
       <InputGroup mb={6} onClick={handleFocus} w="100%" maxW="600px" mx="auto">
         <Input
           ref={searchInputRef}
