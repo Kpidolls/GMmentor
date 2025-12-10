@@ -241,6 +241,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
     styledComponents: true,
   },
   output: 'export',
+  trailingSlash: false,
   images: {
     unoptimized: true,
     qualities: [75, 90, 95, 100],
@@ -260,6 +261,8 @@ const nextConfig = withPWA(withBundleAnalyzer({
       '/insurance': { page: '/insurance' },
       '/search': { page: '/search' },
       '/signup': { page: '/signup' },
+      '/blog': { page: '/blog' },
+      '/pwa-test': { page: '/pwa-test' },
     };
   },
   eslint: {

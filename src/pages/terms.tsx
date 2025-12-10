@@ -20,7 +20,7 @@ const Terms = () => {
         <link rel="canonical" href="https://googlementor.com/terms" />
       </Head>
       <div className="container mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">Terms and Conditions</h1>
+        <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">Terms and Conditions</h1>
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">1. Access</h2>
         <p className="mb-4 text-gray-600">
           <strong>User Consent:</strong>  Welcome to Googlementor! These Terms of Use govern your access to and use of Googlementor's mapping services and shopping platform. By using our site, you agree to these terms. If you do not agree, please do not use our services.
