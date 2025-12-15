@@ -600,5 +600,96 @@
     "address": "Veroias 5, Thessaloniki 546 25",
     "lat": "40.637093410026516",
     "lng": "22.93763984161015"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zRs2QPwRWoXnA8cn9",
+    "name": "Hachikō Sushi Tales & Cocktails Psychiko",
+    "address": "Olimpionikon 280, Neo Psichiko 154 51",
+    "lat": "38.0061489322681",
+    "lng": "23.777100959451648"
+  },
+  {
+    "url": "https://maps.app.goo.gl/US8MP4C24AbbzMtL9",
+    "name": "The Sushi Bar",
+    "address": "Geor. Vlachou 38, Athina 115 25",
+    "lat": "37.99837454773829",
+    "lng": "23.77552075939677"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qjninjaDQmMf2fNU7",
+    "name": "Sakura Sushi and Steak House",
+    "address": "Doukissis Plakentias 73, Athina 115 23",
+    "lat": "37.992808848594535",
+    "lng": "23.76520165923385"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mX2bUrDUmSpXcEdF7",
+    "name": "Noodle Bar Zografou",
+    "address": "Geor. Papandreou 31, Zografou 157 73",
+    "lat": "37.98033900085368",
+    "lng": "23.7645797480279"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MU1e8JQujzPUM5ZN6",
+    "name": "Garum Athens",
+    "address": "Kelsou 10, Athina 116 36",
+    "lat": "37.96322815000365",
+    "lng": "23.734456659008355"
+  },
+  {
+    "url": "https://maps.app.goo.gl/u5z1UYphrgpUNHe16",
+    "name": "Mayman",
+    "address": "Dodekanisou 1, Peristeri 121 36",
+    "lat": "38.01237886315462",
+    "lng": "23.686035629770352"
+  },
+  {
+    "url": "https://maps.app.goo.gl/j57HrF6nf6youYLV8",
+    "name": "RawBata",
+    "address": "Lakonias 33, Athina 115 23",
+    "lat": "37.991621984562435",
+    "lng": "23.76287776299424"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zBAUew3tfQKdJ3yX9",
+    "name": "Sushi City",
+    "address": "Kalapothaki 7, Thessaloniki 546 45",
+    "lat": "40.633479553417104",
+    "lng": "22.939350429758118"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sb6JL78bVoxjZHir9",
+    "name": "Mongo Asian Food",
+    "address": "John Kouskoura 6, Thessaloniki 546 22",
+    "lat": "40.63082745054034",
+    "lng": "22.945340872957278"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bR7jaQSkxn33eLgq7",
+    "name": "Ekiben Kitchen Glyfada",
+    "address": "Laodikis 41, Glifada 166 74",
+    "lat": "37.861176848381916",
+    "lng": "23.75639518380584"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5vFVT9HMbgmQ6Erc6",
+    "name": "Sushaki | Greek Sushi Experience",
+    "address": "Eptapirgiou 75, Sikies 566 26",
+    "lat": "40.650072445284856",
+    "lng": "22.958835229549017"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Tfd55EpuS182EpUw7",
+    "name": "Sushaki | Greek Sushi Experience",
+    "address": "Petrou Sindika 11, Thessaloniki 546 43",
+    "lat": "40.60428165420744",
+    "lng": "22.954061100104322"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ggCr6zagpbao1wwt9",
+    "name": "Sushaki | Greek Sushi Experience",
+    "address": "Komninon 3, Thessaloniki 546 24",
+    "lat": "40.63309136297845",
+    "lng": "22.939152229553493"
   }
 ]

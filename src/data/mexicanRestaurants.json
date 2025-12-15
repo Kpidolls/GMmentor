@@ -341,5 +341,26 @@
     "address": "Benitses 490 84",
     "lat": "39.54688963792196",
     "lng": "19.912527827268715"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HmeGfenDmu6xhBo27",
+    "name": "La Casa Azul",
+    "address": "Thivon 143, Peristeri 121 34",
+    "lat": "38.01237602759444",
+    "lng": "23.68855969778912"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vZsWgNz2ht7aShcY9",
+    "name": "Ancho",
+    "address": "Attiki Odos, Spata Artemida 190 04",
+    "lat": "37.93619879432701",
+    "lng": "23.947326529806652"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vjssVZ1V39bo4zex6",
+    "name": "La Sirena",
+    "address": "Fasianou 1, Thessaloniki 546 25",
+    "lat": "40.63444270479013",
+    "lng": "22.93646283547866"
   }
 ]

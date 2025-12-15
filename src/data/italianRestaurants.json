@@ -1209,5 +1209,103 @@
     "address": "Giotopoulou 10-12, Kerkira 491 00",
     "lat": "39.623370627858776",
     "lng": "19.923005947570733"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wzivni6cAptzeBTTA",
+    "name": "Nebbiolo",
+    "address": "Leof. Thiseos 111, Ekali 145 78",
+    "lat": "38.114438017917074",
+    "lng": "23.849732672241302"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yeGNTXa4VUk4Paqs5",
+    "name": "Dilien",
+    "address": "Stournari 43, Athina 106 82",
+    "lat": "37.98733679240523",
+    "lng": "23.730994400110465"
+  },
+  {
+    "url": "https://maps.app.goo.gl/q6hjeusYdDxNxDkB9",
+    "name": "Barolo Athens",
+    "address": "Davaki 1, Psichiko 154 52",
+    "lat": "38.00586689220605",
+    "lng": "23.766484829557008"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pg641ieu7sSBX3fa7",
+    "name": "Goloso Cucina e Pizza Italiana",
+    "address": "Petroupoleos 68-70, Petroupoli 131 23",
+    "lat": "38.034154813582916",
+    "lng": "23.69590782983928"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fx2nPPeJ6gGMBbSBA",
+    "name": "GOLOSO - ΑΧΑΡΝΕΣ",
+    "address": "Agiou Eleftheriou 18, Acharnes 136 74",
+    "lat": "38.09475606530576",
+    "lng": "23.739483205778253"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kpW87YGKNcL27Bhi9",
+    "name": "GOLOSO ristorante pizzeria",
+    "address": "Grigoriou Lampraki 6, Ag. Stefanos 145 65",
+    "lat": "38.139099968736645",
+    "lng": "23.85960963696723"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WygPaRiVJpzqrZBi8",
+    "name": "Mercato",
+    "address": "Apollonos 40, Vouliagmeni 166 71",
+    "lat": "37.804876583131545",
+    "lng": "23.768732488679262"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1dA2z4yKDCdZQUGbA",
+    "name": "da Bruno",
+    "address": "Agiou Alexandrou 46, Paleo Faliro 175 61",
+    "lat": "37.92917795499007",
+    "lng": "23.694489698206436"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3jMcfyGkfYbxGbps9",
+    "name": "Cicchetti Prosciutteria & Spritzeria",
+    "address": "Fivis 11, Glifada 166 74",
+    "lat": "37.859684523196464",
+    "lng": "23.75386502955931"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oPmtz2JTaw4nxWtp6",
+    "name": "Navona Restaurant Bar",
+    "address": "Leof. Meg. Alexandrou 2, Thessaloniki 546 40",
+    "lat": "40.617883104732",
+    "lng": "22.952114230685524"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aQ6nFJz5CrVrnaNv6",
+    "name": "Raffaele Pizza & Pasta",
+    "address": "P. Mela 8, Evosmos 562 24",
+    "lat": "40.66835766189394",
+    "lng": "22.909237229764354"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PSUf6oyYdwKAkgEFA",
+    "name": "Pizza Hood",
+    "address": "Ernestou Emprar 2, Thessaloniki 546 25",
+    "lat": "40.63650781158609",
+    "lng": "22.937112758246737"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tYaU41CZfgnnQu8V7",
+    "name": "Pasta La Vista KALA NERA",
+    "address": "Kala Nera 370 10",
+    "lat": "39.3056996345145",
+    "lng": "23.120100052879696"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mj3rDwuGXJXV42F6A",
+    "name": "Funky's Thessaloniki",
+    "address": "Grigoriou Lampraki 110, Thessaloniki 543 51",
+    "lat": "40.61554997696099",
+    "lng": "22.97491381907505"
   }
 ]

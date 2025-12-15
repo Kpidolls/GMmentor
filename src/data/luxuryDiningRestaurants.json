@@ -1412,5 +1412,47 @@
     "address": "Elysium Resort & Spa | 5 star hotel in Rhodes, Leoforos Rodou - Kallitheas, Ammoudes 851 00",
     "lat": "36.37247796232997",
     "lng": "28.224879049367335"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1WxR8XYsFmsyuWyp7?g_st=ipc",
+    "name": "Pharaoh",
+    "address": "Solomou 54, Athina 106 82",
+    "lat": "37.986974430593506",
+    "lng": "23.73075500920587"
+  },
+  {
+    "url": "https://maps.app.goo.gl/k73tHBUDttLaWRM89?g_st=ipc",
+    "name": "Garum Athens",
+    "address": "Kelsou 10, Athina 116 36",
+    "lat": "37.96322742533772",
+    "lng": "23.734456867983734"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fFD9yZrQ2kZ4LxTn9?g_st=ipc",
+    "name": "Mercato",
+    "address": "Apollonos 40, Vouliagmeni 166 71",
+    "lat": "37.80487446390269",
+    "lng": "23.76873382977138"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5gpSyYcYprQvjjq88?g_st=ipc",
+    "name": "Duck",
+    "address": "Chalkis 3, Pilea Chortiatis 570 01",
+    "lat": "40.56052899575869",
+    "lng": "22.986792720078764"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HwBgLRsMdgFuqNJTA?g_st=ipc",
+    "name": "MOO CASA steak & lobster",
+    "address": "Marinou Antipa 66, Iraklio 141 21",
+    "lat": "38.04344953562119",
+    "lng": "23.772025529553066"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CjAYjU4oYoEDKsXh6?g_st=ipc",
+    "name": "Son",
+    "address": "Leof. El. Venizelou 197, Ilioupoli 163 41",
+    "lat": "37.92472593519205",
+    "lng": "23.751887900106137"
   }
 ]

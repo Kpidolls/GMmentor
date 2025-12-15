@@ -761,5 +761,47 @@
     "address": "Griechenland, Epar.Od. Strovlon-Paleochoras 28, Paleochora 730 01",
     "lat": "35.23035637395369",
     "lng": "23.680431168077206"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Zb8o7YTUmMMx7EVx8?g_st=ipc",
+    "name": "Τhe Sweet Lab",
+    "address": "Λεωφ. Δημοκρατίας 81, Kapodistriou 1, Athina 154 51",
+    "lat": "38.002062661373884",
+    "lng": "23.785233324910163"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jiBKwgUUBwo3VEnp7?g_st=ipc",
+    "name": "Nudie Foodie Psiri only gluten free",
+    "address": "Eschilou 42, Athina 105 54",
+    "lat": "37.97969129802119",
+    "lng": "23.72517165012706"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JXiyguWxrWe1Wgrf9?g_st=ipc",
+    "name": "Fairytale Athens Café & Suites",
+    "address": "Leokoriou 16, Athina 105 54",
+    "lat": "37.97804693538564",
+    "lng": "23.721754929553363"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Wa7FtgvMdTD2Q6oT7?g_st=ipc",
+    "name": "Naya Lebanese Kitchen",
+    "address": "Kolokotroni 10, Chalandri 152 33",
+    "lat": "38.02310312613848",
+    "lng": "23.798978117354526"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JBEM9qi3Gh27zDWa9?g_st=ipc",
+    "name": "Pink Elephant",
+    "address": "Sokratous 4Α, Chalandri 152 32",
+    "lat": "38.02048886312005",
+    "lng": "23.79851470032454"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aNRwgGJgRT99wmHt5?g_st=ipc",
+    "name": "Jaipur Palace Plaka",
+    "address": "Mnisikleous 7B, Athina 105 56",
+    "lat": "37.9746957700778",
+    "lng": "23.728563859316758"
   }
 ]
