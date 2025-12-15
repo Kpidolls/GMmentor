@@ -39,7 +39,7 @@ const NearestGreekRestaurant: React.FC = () => {
   const findNearestRestaurants = (userLat: number, userLng: number, count: number = 10) => {
     const restaurantsWithDistance = restaurantsData.map((restaurant) => ({
       restaurant: restaurant as Restaurant,
-      distance: calculateDistance(userLat, userLng, restaurant.lat, restaurant.lng)
+      distance: calculateDistance(userLat, userLng, parseFloat(restaurant.lat.toString()), parseFloat(restaurant.lng.toString()))
     }));
 
     return restaurantsWithDistance
