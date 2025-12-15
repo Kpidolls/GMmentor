@@ -2700,5 +2700,327 @@
     "address": "Geor. Papanikolaou 8, Rodos 851 00",
     "lat": "36.45328895287043",
     "lng": "28.221248936648102"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ABkEH8DF9EdZoXkb6?g_st=ipc",
+    "name": "Argophageío",
+    "address": "Apellou 6, Thessaloniki 546 22",
+    "lat": "40.63112076930673",
+    "lng": "22.949631886815304"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LdnLWyeBqVd2Tcme7?g_st=ipc",
+    "name": "Wolfie’s West Side",
+    "address": "Kosta Varnali 6, Peristeri 121 32",
+    "lat": "38.01077144638466",
+    "lng": "23.697740028763043"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MuZFA3dXT4LnZFtL7?g_st=ipc",
+    "name": "Piccola",
+    "address": "Keramikou 111, Athina 104 35",
+    "lat": "37.980127892484575",
+    "lng": "23.715865229557284"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QMAXfCna6DxXHDpcA?g_st=ipc",
+    "name": "Mozzart Pizza Center",
+    "address": "Chrisospiliotissis 1, Athina 105 60",
+    "lat": "37.97910186394194",
+    "lng": "23.729304129555086"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NkyDdLxK9uDyWwpD7?g_st=ipc",
+    "name": "Life And Chicken",
+    "address": "Κέντρο, Θεσσαλονίκη, Patriarchou Ioakim 26, Thessaloniki 546 35",
+    "lat": "40.633119640565006",
+    "lng": "22.95173924738418"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fxfKxZEHaxRaJ2HfA?g_st=ipc",
+    "name": "STIVOS BURGER & STEAK",
+    "address": "Ευαγγελισμού της Θεοτόκου 43, Evosmos 562 24",
+    "lat": "40.66959404535745",
+    "lng": "22.911384200102038"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nrXvTuy8yr3sWi7k8?g_st=ipc",
+    "name": "Smasheat'o",
+    "address": "Meg. Alexandrou 2, Athina 172 35",
+    "lat": "37.95001486404743",
+    "lng": "23.73773292955517"
+  },
+  {
+    "url": "https://maps.app.goo.gl/haKrAci9tVQtSodQ6?g_st=ipc",
+    "name": "SESOULA Street Food",
+    "address": "Mitropoleos 6, Thessaloniki 546 25",
+    "lat": "40.63477525409266",
+    "lng": "22.93757742955132"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Yc8gq3PhahDVKDreA?g_st=ipc",
+    "name": "Thanasis & Sons",
+    "address": "Al. Papanastasiou 133, Thessaloniki 542 50",
+    "lat": "40.60379849059069",
+    "lng": "22.96906169951488"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DHgsKVMBHknJk7xq9?g_st=ipc",
+    "name": "Jacaranda",
+    "address": "Στέλιου Καζαντζίδη 24, Pilea 555 35",
+    "lat": "40.58300466355052",
+    "lng": "22.982557429553488"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PmAaFLYLL5VBMRSWA?g_st=ipc",
+    "name": "Souvlaki Street",
+    "address": "Geor. Drosini 14, Thessaloniki 546 44",
+    "lat": "40.604992472392965",
+    "lng": "22.959141629555784"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GHNR3JPnavP3hDJJ8?g_st=ipc",
+    "name": "Pízza Poselli",
+    "address": "Vilara 2, Thessaloniki 546 25",
+    "lat": "40.63738614523292",
+    "lng": "22.938994770654872"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GFvVfqZw2Pr8rjDM9?g_st=ipc",
+    "name": "Chicktok",
+    "address": "Papanastasiou 2, Chania 731 34",
+    "lat": "35.50994487194263",
+    "lng": "24.03139722977992"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rMq3J3GrNZNoRMpZ9?g_st=ipc",
+    "name": "Pizza Chris",
+    "address": "Armenopoulou 17, Thessaloniki 546 35",
+    "lat": "40.634238789767664",
+    "lng": "22.952894059300746"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BFLYuybZSdJEwfK87?g_st=ipc",
+    "name": "Kyr Giorgis",
+    "address": "Βενιζέλου 54, Thessaloniki 546 31",
+    "lat": "40.63768120747627",
+    "lng": "22.942676100417227"
+  },
+  {
+    "url": "https://maps.app.goo.gl/m8WS13tHpdvSyxE99?g_st=ipc",
+    "name": "Mimis",
+    "address": "Ag. Dimitriou 126, Thessaloniki 546 35",
+    "lat": "40.63706330748784",
+    "lng": "22.950306559309492"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ce9N11e1dVKsZ2t17?g_st=ipc",
+    "name": "Δια Χειρός Αρέτου",
+    "address": "Kon/nou Karamanli 37, Eleftherio Kordelio 563 34",
+    "lat": "40.66705307967295",
+    "lng": "22.898083719400002"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4YvZLZyRTdLs8Tpz7?g_st=ipc",
+    "name": "Dia Xoiros Polixni",
+    "address": "Agnostou Stratiotou 13, Polichni 565 33",
+    "lat": "40.658685525095265",
+    "lng": "22.942609620515523"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dKu85q9fYtc6krXf7?g_st=ipc",
+    "name": "Souvlatzidiko",
+    "address": "Διαγορα, με Λαμπρακη, Thessaloniki 543 51",
+    "lat": "40.615140054166176",
+    "lng": "22.976602700104493"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9ryfqmhFoEZjSBu89?g_st=ipc",
+    "name": "Steakhouse \"Stelios\"",
+    "address": "Agnostou Stratiotou 40, Polichni 565 33",
+    "lat": "40.65823566269056",
+    "lng": "22.942075529553357"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jsFLzjxU7rbpCatGA?g_st=ipc",
+    "name": "Pizza Romea",
+    "address": "Ag. Dimitriou 135, Thessaloniki 546 35",
+    "lat": "40.636170436374",
+    "lng": "22.952743400099628"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LWSzARXmcX6GhcQdA?g_st=ipc",
+    "name": "\"AIGLI\" 24h CREPE-toast-coffee-BOUGATSA",
+    "address": "Ag. Dimitriou 89, Thessaloniki 546 33",
+    "lat": "40.638115571761915",
+    "lng": "22.948717629555613"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QeUW3QZjeTvschnB8?g_st=ipc",
+    "name": "ΓΡΝ",
+    "address": "Ermou 24, Thessaloniki 546 24",
+    "lat": "40.634922554090494",
+    "lng": "22.9424405001041"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Jp9h1Xe2kPqJT7td9?g_st=ipc",
+    "name": "Ωμέγα Grill",
+    "address": "Αμφιπόλεως 34, Thessaloniki 544 54",
+    "lat": "40.6085969632586",
+    "lng": "22.97871142955339"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qLtPEtu7Ux91nEnP8?g_st=ipc",
+    "name": "LAST BITE",
+    "address": "Kiriakou Manolaki 1, Thessaloniki 546 35",
+    "lat": "40.63432876296427",
+    "lng": "22.95290522955353"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wecLJ1nJGGgQYeLg9?g_st=ipc",
+    "name": "Mouza grill house",
+    "address": "Chora Skyrou, Skiros 340 07",
+    "lat": "38.90439949082661",
+    "lng": "24.564789359234034"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QNUEoQzqLuXtrpVc7?g_st=ipc",
+    "name": "Funky's Thessaloniki",
+    "address": "Grigoriou Lampraki 110, Thessaloniki 543 51",
+    "lat": "40.615543107651526",
+    "lng": "22.974915159309568"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AqaCxycK19KfYLPcA?g_st=ipc",
+    "name": "Terpsilarýngio",
+    "address": "Mark. Mpotsari 14, Thessaloniki 546 43",
+    "lat": "40.60676570771858",
+    "lng": "22.953926859309924"
+  },
+  {
+    "url": "https://maps.app.goo.gl/N2y5cFSV48wgtN7g7?g_st=ipc",
+    "name": "Καλοφαγάς Ψητοπωλείο",
+    "address": "Politechniou 24, Thessaloniki 546 25",
+    "lat": "40.635544989771915",
+    "lng": "22.937363400408646"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Y7VQCwH5JjChrXDb9?g_st=ipc",
+    "name": "HOT DOG Land",
+    "address": "Ag. Dimitriou 100, Thessaloniki 546 31",
+    "lat": "40.63820917018459",
+    "lng": "22.947895316027907"
+  },
+  {
+    "url": "https://maps.app.goo.gl/M1gK3j7aiDegVjjs6?g_st=ipc",
+    "name": "Serafino",
+    "address": "Metamorfoseos 11, Kalamaria 551 32",
+    "lat": "40.58386899036688",
+    "lng": "22.951506267568906"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ATqXPJfCjdXR8wes9?g_st=ipc",
+    "name": "Steakhouse MAKIS",
+    "address": "Aristotélous 35, Evosmos 562 24",
+    "lat": "40.663898455247235",
+    "lng": "22.911569590344406"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LAQoYu8du3ZFbwSR7?g_st=ipc",
+    "name": "Ψητοπωλείο \"ΝΙΚΟΣ\"",
+    "address": "Meg. Alexandrou 56, Evosmos 562 24",
+    "lat": "40.66963563529277",
+    "lng": "22.908013940571315"
+  },
+  {
+    "url": "https://maps.app.goo.gl/okGWtgt8ngD1WL4a9?g_st=ipc",
+    "name": "Peter Steakhouse",
+    "address": "Protomagias 21, Evosmos 562 24",
+    "lat": "40.67380649867122",
+    "lng": "22.919338610112415"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KmNipqE8jJT8qrZ17?g_st=ipc",
+    "name": "Grill Junior",
+    "address": "Thermopilon 31, Thessaloniki 542 48",
+    "lat": "40.60286928963285",
+    "lng": "22.956953349868357"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fo4Tf9Q9F4pnn1rn9?g_st=ipc",
+    "name": "ΜΑΝΤΡΙ ΑΕ",
+    "address": "Eth. Aminis 18, Thessaloniki 546 21",
+    "lat": "40.62840905411716",
+    "lng": "22.95104812955137"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8t8Wb8QaYGPzQ1F76?g_st=ipc",
+    "name": "Yum Tree",
+    "address": "Dim. Gounari 5, Thessaloniki 546 22",
+    "lat": "40.62786595411914",
+    "lng": "22.947554429551257"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sNmZpvpUx9Yt5Avj6?g_st=ipc",
+    "name": "Ο Γύρος του Μιχάλη",
+    "address": "Makedonias 105, Thessaloniki 542 48",
+    "lat": "40.60335488153119",
+    "lng": "22.961687059004745"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EppjR6X5bpodm5MR7?g_st=ipc",
+    "name": "PAPERBAG || street food",
+    "address": "Achiropiitou 2, Thessaloniki 546 35",
+    "lat": "40.634629758562504",
+    "lng": "22.948314502108076"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Mew4X3m69PgK4Y2TA?g_st=ipc",
+    "name": "Salu Deli Bar",
+    "address": "Manousagiannaki 20, Thessaloniki 546 21",
+    "lat": "40.62815289802217",
+    "lng": "22.952006929781376"
+  },
+  {
+    "url": "https://maps.app.goo.gl/j2KRM4BYgZPKkWer5?g_st=ipc",
+    "name": "Beeftekopolis",
+    "address": "Marasli 23, Athina 106 76",
+    "lat": "37.97774283666473",
+    "lng": "23.746360813383102"
+  },
+  {
+    "url": "https://maps.app.goo.gl/K3sutrhR1ozDJoT67?g_st=ipc",
+    "name": "PRATINA Burger Project",
+    "address": "Veroias 5, Thessaloniki 546 25",
+    "lat": "40.63713687744245",
+    "lng": "22.93759768195784"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ytds7DdcMdh2G5oA8?g_st=ipc",
+    "name": "ΕΥΛΟΓΗΣΟΝ-ΨΗΤΟΠΩΛΕΙΑ ΙΛΙΟΝ",
+    "address": "Thivon 481, Ilion 131 21",
+    "lat": "38.029256363760155",
+    "lng": "23.699607500108378"
+  },
+  {
+    "url": "https://maps.app.goo.gl/swPLtX8A41RYYYN68?g_st=ipc",
+    "name": "MANGIA MI",
+    "address": "El. Venizelou 60, Thessaloniki 546 31",
+    "lat": "40.63806065407829",
+    "lng": "22.943092100104018"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PgrDAEWAFbwF6go48?g_st=ipc",
+    "name": "Jackaroo",
+    "address": "Leof. Kifisias 70, Marousi 151 25",
+    "lat": "38.04618103563096",
+    "lng": "23.807668129553196"
+  },
+  {
+    "url": "https://maps.app.goo.gl/R1wrCFqhDWYwJViQ7?g_st=ipc",
+    "name": "Krispy by Jackaroo",
+    "address": "Evripidou 15, Athina 105 60",
+    "lat": "37.97957426393904",
+    "lng": "23.728377000107947"
   }
 ]

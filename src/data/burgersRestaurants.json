@@ -789,5 +789,75 @@
     "address": "Karpathos 857 00",
     "lat": "35.508363631854614",
     "lng": "27.212474239373883"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Yu7VLwDA42Wp7pZo8",
+    "name": "SmashTag",
+    "address": "Michalakopoulou 68, Athina 115 28",
+    "lat": "37.97799517923772",
+    "lng": "23.75631086140523"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cTKmuer8pw34Mj4m6",
+    "name": "Queen Burger",
+    "address": "Giannitsopoulou 3, Glifada 166 74",
+    "lat": "37.8629143636926",
+    "lng": "23.754961929770175"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1hcPfQeHfJrzqf8KA",
+    "name": "What They Said",
+    "address": "Eth. Antistaseos 37, Drapetsona 186 48",
+    "lat": "37.94935179980419",
+    "lng": "23.633928811446484"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NzN9wf8WYr2rjWbd7",
+    "name": "Ohmami - Street Food / Thessaloniki",
+    "address": "Patriarchoi Dionisii E 1, Thessaloniki 546 31",
+    "lat": "40.63556199320903",
+    "lng": "22.947562092920837"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yBjtwqxUfodA37Zy6",
+    "name": "ΜΠΙΦΤΕΚΑΔΙΚΟ \"ΤΟ ΠΑΓΓΑΙΟ\"",
+    "address": "Mark. Mpotsari 49, Thessaloniki 546 44",
+    "lat": "40.60721344429672",
+    "lng": "22.960412947590548"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yKgLKc4LFJhxaawY6",
+    "name": "MPEAR",
+    "address": "Ευφράνορος 8, Athina 116 35",
+    "lat": "37.96750105563297",
+    "lng": "23.744555646756957"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bR7jaQSkxn33eLgq7",
+    "name": "Ekiben Kitchen Glyfada",
+    "address": "Laodikis 41, Glifada 166 74",
+    "lat": "37.86117702366519",
+    "lng": "23.756394837020224"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rE8kgxhDvdzbh9hw7",
+    "name": "PRATINA Burger Project",
+    "address": "Veroias 5, Thessaloniki 546 25",
+    "lat": "40.63713764523389",
+    "lng": "22.937597600102066"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jQiZ1pYw63j3q8zG9",
+    "name": "Ryōtei118",
+    "address": "Dim. Gounari 118, Glifada 166 74",
+    "lat": "37.87936856839685",
+    "lng": "23.763367179515893"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Lys3ApFbCS6C7HCt8",
+    "name": "Balboa Thessaloniki",
+    "address": "P. Mela 42, Thessaloniki 546 22",
+    "lat": "40.631911246314864",
+    "lng": "22.947511059222414"
   }
 ]

@@ -1452,8 +1452,8 @@
     "url": "https://maps.app.goo.gl/g3BuCBsD757ceaUU6?g_st=ipc",
     "name": "gigil",
     "address": "Κύθνος 840 06",
-    "lat": "37.41243810678377",
-    "lng": "24.43096558752403"
+    "lat": "37.41243516402313",
+    "lng": "24.430965794947877"
   },
   {
     "url": "https://maps.app.goo.gl/QbRR2HA2G4VUjkbb9?g_st=ipc",
@@ -1473,8 +1473,8 @@
     "url": "https://maps.app.goo.gl/MoMdkmCiYwwuTbUi7?g_st=ipc",
     "name": "Το Κεντρικόν",
     "address": "Unnamed Road, Πύργος 842 01",
-    "lat": "37.63923870725932",
-    "lng": "25.042031373032007"
+    "lat": "37.63921354793122",
+    "lng": "25.04200584233484"
   },
   {
     "url": "https://maps.app.goo.gl/QqZKei5CzCtJaWFv7?g_st=ipc",
@@ -2357,5 +2357,201 @@
     "address": "Leof. Kon/nou Karamanli 53, Acharnes 136 72",
     "lat": "38.101101437687646",
     "lng": "23.743308167267262"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ipvrg2WYGAj3yFzR6?g_st=ipc",
+    "name": "carpo psychiko",
+    "address": "Dim. Vasiliou 1, Neo Psichiko 154 51",
+    "lat": "38.004332008333996",
+    "lng": "23.775883928805627"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PTmrU95w2y1tQWmE7?g_st=ipc",
+    "name": "Choureal - Choux & Profiterole",
+    "address": "Lazaraki 39, Glifada 166 75",
+    "lat": "37.86175367207503",
+    "lng": "23.751100149395214"
+  },
+  {
+    "url": "https://maps.app.goo.gl/X3YKFWNvxVgu7W8Z9?g_st=ipc",
+    "name": "Dix Sept",
+    "address": "25is Martiou 17, Cholargos 155 61",
+    "lat": "37.99369747729579",
+    "lng": "23.799520990696347"
+  },
+  {
+    "url": "https://maps.app.goo.gl/coEx1V66UyCjngKx6?g_st=ipc",
+    "name": "Mourtzis Pistachio and Traditional Sweets",
+    "address": "Leof. Dimokratias 6, Egina 180 10",
+    "lat": "37.746386834552986",
+    "lng": "23.4275254000964"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bgt7zDJhQUaUd4AZA?g_st=ipc",
+    "name": "Ta Serbetia stou Psyrri",
+    "address": "105 54, Eschilou 3, Athina 105 54",
+    "lat": "37.97876293538819",
+    "lng": "23.725047329543127"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XHKFgkbY5UCwMxmd9?g_st=ipc",
+    "name": "Patisserie Despina",
+    "address": "Patriarchou Ioakim 56, Athina 106 76",
+    "lat": "37.97835746394538",
+    "lng": "23.745758729545067"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BcZzqDj73wXq14WVA?g_st=ipc",
+    "name": "Despina Patisserie",
+    "address": "Leof. Poseidonos 83, Glifada 166 75",
+    "lat": "37.86120193496575",
+    "lng": "23.74991092954331"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XHKFgkbY5UCwMxmd9?g_st=ipc",
+    "name": "Patisserie Despina",
+    "address": "Patriarchou Ioakim 56, Athina 106 76",
+    "lat": "37.97835746394538",
+    "lng": "23.745758729545067"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qqDCoKK1WRYwRxk99?g_st=ipc",
+    "name": "Loukoumadaki Athens",
+    "address": "Miaouli 18, Athina 105 54",
+    "lat": "37.977901135383384",
+    "lng": "23.725373600096002"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DuCK5b9RjUfShnnG8?g_st=ipc",
+    "name": "Marantidis Konstantinos",
+    "address": "Sappeon 7, Kavala 652 01",
+    "lat": "40.940415746394464",
+    "lng": "24.418722029538895"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZJHSRbMxNSqCmdKCA?g_st=ipc",
+    "name": "Sugar Confectionery",
+    "address": "Lordou Vironos 7, Thessaloniki 546 22",
+    "lat": "40.63028200470032",
+    "lng": "22.948376451004588"
+  },
+  {
+    "url": "https://maps.app.goo.gl/c3y6StatonhrUYj26?g_st=ipc",
+    "name": "Glykoplasteío",
+    "address": "1ο χιλιόμετρο Εθνικής Οδού Καρπενησίου Λαμίας, Καρπενήσι, Karpenisi 361 00",
+    "lat": "38.91264896054346",
+    "lng": "21.80246572954374"
+  },
+  {
+    "url": "https://maps.app.goo.gl/k1igYo9JRosLStDy7?g_st=ipc",
+    "name": "Ntinos Patisserie",
+    "address": "El. Venizelou 25, Kavala 653 02",
+    "lat": "40.93677597847986",
+    "lng": "24.41089117085129"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HZ2MFbKvrx1G3nXf9?g_st=ipc",
+    "name": "Ntinos Patisserie",
+    "address": "El. Venizelou 93, Drama 661 00",
+    "lat": "41.151585513355016",
+    "lng": "24.14300415927613"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aPDKbL8fF37cA1M1A?g_st=ipc",
+    "name": "Chatzi",
+    "address": "ΘΕΜΙΣΤΟΚΛΗ ΣΟΦΟΥΛΗ 73, Argonafton 2, Kalamaria 551 31",
+    "lat": "40.590808607832805",
+    "lng": "22.947461000377523"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8r6UrDNn4r78Tkat6?g_st=ipc",
+    "name": "Saráï",
+    "address": "Pierion 204, Veria 591 00",
+    "lat": "40.50964221813708",
+    "lng": "22.21709810148732"
+  },
+  {
+    "url": "https://maps.app.goo.gl/m9owYPpFDRCrPtgq6?g_st=ipc",
+    "name": "Sugarini",
+    "address": "Grigoriou Lampraki 169, Thessaloniki 543 52",
+    "lat": "40.61332571258828",
+    "lng": "22.981104601509724"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rLUYdjZbHgFX6Su38?g_st=ipc",
+    "name": "LAST BITE",
+    "address": "Kiriakou Manolaki 1, Thessaloniki 546 35",
+    "lat": "40.634328604356924",
+    "lng": "22.952904924897112"
+  },
+  {
+    "url": "https://maps.app.goo.gl/z5pR8EZkJS12MpdQ9?g_st=ipc",
+    "name": "BOMBOLO",
+    "address": "Grigoriou Lampraki 150, Thessaloniki 543 51",
+    "lat": "40.614466360968855",
+    "lng": "22.977765505829847"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3YNsRZFm5KexaNhJ7?g_st=ipc",
+    "name": "Siropiasta Michailidis",
+    "address": "Grigoriou Lampraki 160, Thessaloniki 543 52",
+    "lat": "40.61392951977613",
+    "lng": "22.979367441197244"
+  },
+  {
+    "url": "https://maps.app.goo.gl/U3wBWwpBXDhPzkpc6?g_st=ipc",
+    "name": "Αγαπάμε το κατσικίσιο γάλα",
+    "address": "P. Mela 28, Thessaloniki 546 22",
+    "lat": "40.63062994509152",
+    "lng": "22.947679865531065"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zfkjDiD3iU8Rv19E6?g_st=ipc",
+    "name": "Yum Tree",
+    "address": "Dim. Gounari 5, Thessaloniki 546 22",
+    "lat": "40.62786519012478",
+    "lng": "22.94755218130747"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RefSjsyuU49WN5f89?g_st=ipc",
+    "name": "Σαράντης Bakery Patisserie",
+    "address": "Ag. Dimitriou 98, Thessaloniki 546 31",
+    "lat": "40.63827380747778",
+    "lng": "22.947664759270584"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xgjKYkQmNmr9oVeU6?g_st=ipc",
+    "name": "Il Panino",
+    "address": "Leof. Kon/nou Karamanli 154, Thessaloniki 542 48",
+    "lat": "40.60111282600128",
+    "lng": "22.964094400386756"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tNhNJReBE4oYvZx6A?g_st=ipc",
+    "name": "ΖΑΧΑΡΟΠΛΑΣΤΕΙΟ ΗΛΙΟΣ ΚΛΕΑΝΘΟΥΣ /Hlios Pastry Shop Kleanthous",
+    "address": "Kleanthous 60, Thessaloniki 544 53",
+    "lat": "40.61382568960551",
+    "lng": "22.969099400369018"
+  },
+  {
+    "url": "https://maps.app.goo.gl/h3es1mjnAZfnhipp6?g_st=ipc",
+    "name": "My Cookie Dough Athens",
+    "address": "Petraki 7, Athina 105 63",
+    "lat": "37.97549732457017",
+    "lng": "23.731646460060947"
+  },
+  {
+    "url": "https://maps.app.goo.gl/umohxobBLijQzZis5?g_st=ipc",
+    "name": "Fresh Mail Παγκρατίου",
+    "address": "Filolaou 124Α, Athina 116 33",
+    "lat": "37.963053181322294",
+    "lng": "23.74589240163266"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qwbSWbdWTMN4EmVKA?g_st=ipc",
+    "name": "MrSofty",
+    "address": "Miaouli 19, Athina 105 54",
+    "lat": "37.97794945664196",
+    "lng": "23.72507127899626"
   }
 ]

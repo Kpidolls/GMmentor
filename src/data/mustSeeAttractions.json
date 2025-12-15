@@ -852,5 +852,61 @@
     "address": "Leof. Vasilisis Amalias 133, Athina 105 57",
     "lat": "37.97535428174513",
     "lng": "23.736259428820603"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4mH8BGK5UQuAHaXf6?g_st=ipc",
+    "name": "Philopappos Monument",
+    "address": "Athens 117 41",
+    "lat": "37.96735214641467",
+    "lng": "23.72141968401236"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XDM6bEzic8EMa3FX7?g_st=ipc",
+    "name": "Arch of Hadrian",
+    "address": "Leof. Vasilisis Amalias 50, Athina 105 58",
+    "lat": "37.970210610652515",
+    "lng": "23.73198089152641"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DQtGJPqpneygKtHk7?g_st=ipc",
+    "name": "Gate of Athena Archegetis",
+    "address": "Διοσκούρων, Epaminonda &, Athina 105 55",
+    "lat": "37.974568649716346",
+    "lng": "23.725518029561396"
+  },
+  {
+    "url": "https://maps.app.goo.gl/431NuRe11zxrUqR89?g_st=ipc",
+    "name": "Prison of Socrates",
+    "address": "43, Rovertou Galli 39, Athina 117 41",
+    "lat": "37.96945283540711",
+    "lng": "23.72099752982901"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7Xgk65sqPNFM93Sy9?g_st=ipc",
+    "name": "Choragic Monument of Lysicrates",
+    "address": "Epimenidou 3, Athina 105 58",
+    "lat": "37.97108971386169",
+    "lng": "23.72994596958006"
+  },
+  {
+    "url": "https://maps.app.goo.gl/21oaLw9mApwFReVy7?g_st=ipc",
+    "name": "Kerameikos Archaeological Site",
+    "address": "Ermou 148, Athina 105 53",
+    "lat": "37.97803082106626",
+    "lng": "23.717271800112048"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Tia41NbJ94S1YJYNA?g_st=ipc",
+    "name": "Bibliothēkē",
+    "address": "Athens 106 79",
+    "lat": "37.98086714889517",
+    "lng": "23.732640659233777"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ggPZ2e3QeajFYXJX8?g_st=ipc",
+    "name": "Academy of Athens",
+    "address": "Panepistimiou 28, Athina 106 79",
+    "lat": "37.980052000475574",
+    "lng": "23.73401307902472"
   }
 ]

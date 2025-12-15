@@ -2280,5 +2280,33 @@
     "address": "Leof. Vravronos 367, Artemis 190 16",
     "lat": "37.93546332991727",
     "lng": "24.012144070196292"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7KH5KmXVrcaeNEh36",
+    "name": "To steki tou psara",
+    "address": "Agnostou Stratiotou 33, Polichni 565 33",
+    "lat": "40.66006472959922",
+    "lng": "22.944806880091097"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Q6ReNhghxPSgvRJX6",
+    "name": "Tsipouro Restaurants \"Germanos\"",
+    "address": "Leof. Dimokratias 41, Oreokastro 570 13",
+    "lat": "40.731011417439056",
+    "lng": "22.920109091479663"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xAJUBaZ5Hv4Rggaw9",
+    "name": "Tsouknída",
+    "address": "28is Oktovriou 0, Asvestochori 570 10",
+    "lat": "40.64197017301936",
+    "lng": "23.01608188028885"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Za7BJdXKEyy2FFiM7",
+    "name": "ΜΙΚΡΕΣ ΚΥΚΛΑΔΕΣ",
+    "address": "Pantazi 56, Ilioupoli 163 46",
+    "lat": "37.938213721782944",
+    "lng": "23.745141100112257"
   }
 ]
