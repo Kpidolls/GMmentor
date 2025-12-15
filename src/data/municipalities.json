@@ -2502,5 +2502,61 @@
     "lng": 25.511,
     "region": "Κρήτη",
     "region_en": "Crete"
+  },
+  {
+    "name": "Αράχωβα",
+    "lat": 38.4794,
+    "lng": 22.5883,
+    "region": "Στερεά Ελλάδα",
+    "region_en": "Central Greece",
+    "name_en": "Arachova"
+  },
+  {
+    "name": "Μέτσοβο",
+    "lat": 39.7703,
+    "lng": 21.1825,
+    "region": "Ήπειρος",
+    "region_en": "Epirus",
+    "name_en": "Metsovo"
+  },
+  {
+    "name": "Ζαγοροχώρια",
+    "lat": 39.9167,
+    "lng": 20.7333,
+    "region": "Ήπειρος",
+    "region_en": "Epirus",
+    "name_en": "Zagorochoria"
+  },
+  {
+    "name": "Καρπενήσι",
+    "lat": 38.9167,
+    "lng": 21.7833,
+    "region": "Στερεά Ελλάδα",
+    "region_en": "Central Greece",
+    "name_en": "Karpenisi"
+  },
+  {
+    "name": "Πήλιο",
+    "lat": 39.4167,
+    "lng": 23.0833,
+    "region": "Θεσσαλία",
+    "region_en": "Thessaly",
+    "name_en": "Pelion"
+  },
+  {
+    "name": "Καλάβρυτα",
+    "lat": 38.0333,
+    "lng": 22.1167,
+    "region": "Πελοπόννησος",
+    "region_en": "Peloponnese",
+    "name_en": "Kalavryta"
+  },
+  {
+    "name": "Πάπιγκο",
+    "lat": 39.9667,
+    "lng": 20.7833,
+    "region": "Ήπειρος",
+    "region_en": "Epirus",
+    "name_en": "Papingo"
   }
 ]
