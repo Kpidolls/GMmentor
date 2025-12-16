@@ -257,8 +257,6 @@ const MainHero = () => {
   const [selectedType, setSelectedType] = useState<'category' | 'experience' | undefined>(undefined);
   const [_userLocation, setUserLocation] = useState<{lat: number, lng: number} | null>(null);
   const [nearestRestaurants, setNearestRestaurants] = useState<Array<{ restaurant: Restaurant; distance: number }> | null>(null);
-  const [allAvailableResults, setAllAvailableResults] = useState<Array<{ restaurant: Restaurant; distance: number }>>([]);
-  const [displayedCount, setDisplayedCount] = useState(10);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -267,8 +265,10 @@ const MainHero = () => {
   // Removed unused showCategoryList and showExperienceTypeList
   const [showLocationOptions, setShowLocationOptions] = useState(false);
   const [municipalitySearchQuery, setMunicipalitySearchQuery] = useState('');
-  const [searchRadius, setSearchRadius] = useState(12);
-  const [maxResults, setMaxResults] = useState(10);
+  const [searchRadius, setSearchRadius] = useState(5);
+  const [maxResults, setMaxResults] = useState(50);
+  const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
+  const [initialSearchDone, setInitialSearchDone] = useState(false);
 
   // Parallax scroll effect
   useEffect(() => {
@@ -289,18 +289,7 @@ const MainHero = () => {
     return R * c;
   };
 
-  const loadMoreResults = () => {
-    const nextBatchSize = 10;
-    const newDisplayedCount = displayedCount + nextBatchSize;
-    
-    if (allAvailableResults.length > displayedCount) {
-      const newResults = allAvailableResults.slice(0, Math.min(newDisplayedCount, allAvailableResults.length));
-      setNearestRestaurants(newResults);
-      setDisplayedCount(newDisplayedCount);
-      // Move to first card of newly loaded batch
-      setCurrentIndex(displayedCount);
-    }
-  };  const formatDistance = (distance: number): string => {
+  const formatDistance = (distance: number): string => {
     if (distance < 1) {
       return `${Math.round(distance * 1000)}m`;
     }
@@ -339,9 +328,7 @@ const MainHero = () => {
           const { lat, lng } = JSON.parse(cachedLocation);
           setUserLocation({ lat, lng });
         const nearest = findNearestPlaces(lat, lng, 50);
-          setAllAvailableResults(nearest);
-          setNearestRestaurants(nearest.slice(0, 10));
-          setDisplayedCount(10);
+          setNearestRestaurants(nearest);
           setCurrentIndex(0);
           setLoading(false);
           setError(t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.'));
@@ -371,9 +358,7 @@ const MainHero = () => {
           
           // Use the currently selected experience type for location search
         const nearest = findNearestPlaces(latitude, longitude, 50); // Fetch up to 50 results
-          setAllAvailableResults(nearest);
-          setNearestRestaurants(nearest.slice(0, 10)); // Display first 10
-          setDisplayedCount(10);
+          setNearestRestaurants(nearest); // Display all results within 5km
           setCurrentIndex(0);
           setLoading(false);
           
@@ -399,9 +384,7 @@ const MainHero = () => {
                 const { lat, lng } = JSON.parse(cachedLocation);
                 setUserLocation({ lat, lng });
                 const nearest = findNearestPlaces(lat, lng, 50);
-                setAllAvailableResults(nearest);
-                setNearestRestaurants(nearest.slice(0, 10));
-                setDisplayedCount(10);
+                setNearestRestaurants(nearest);
                 setCurrentIndex(0);
                 setLoading(false);
                 setError(t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.'));
@@ -527,38 +510,46 @@ const MainHero = () => {
     console.log(`Radius: ${effectiveRadius}km, Max results: ${maxResults}`);
     console.log(`Valid places: ${validPlaces.length}/${sourceData.length}`);
     
-    // Calculate distances and filter by radius
-    const placesWithinRadius = validPlaces
+    // Calculate distances for all places
+    const allPlacesWithDistance = validPlaces
       .map((place) => ({
         restaurant: place,
         distance: calculateDistance(municipality.lat, municipality.lng, place.lat, place.lng)
       }))
-      .filter(item => {
-        const withinRadius = item.distance <= effectiveRadius;
-        if (withinRadius) {
-          console.log(`✓ ${item.restaurant.name} - ${item.distance.toFixed(2)}km`);
-        }
-        return withinRadius;
-      })
       .sort((a, b) => a.distance - b.distance);
 
-    console.log(`Found ${placesWithinRadius.length} places within ${effectiveRadius}km`);
+    // For initial search, use 5km radius. For subsequent searches, use selected radius
+    const initialRadius = initialSearchDone ? effectiveRadius : 5;
     
-    // Store all results and display first 10
-    setAllAvailableResults(placesWithinRadius);
-    setNearestRestaurants(placesWithinRadius.slice(0, 10));
-    setDisplayedCount(10);
+    // Filter by radius
+    const placesWithinRadius = allPlacesWithDistance.filter(item => {
+      const withinRadius = item.distance <= initialRadius;
+      if (withinRadius) {
+        console.log(`✓ ${item.restaurant.name} - ${item.distance.toFixed(2)}km`);
+      }
+      return withinRadius;
+    });
+
+    console.log(`Found ${placesWithinRadius.length} places within ${initialRadius}km`);
+    
+    // Store and display all results within the search radius
+    setNearestRestaurants(placesWithinRadius);
     setCurrentIndex(0);
     setLoading(false);
+    
+    // Mark that initial search is complete
+    if (!initialSearchDone) {
+      setInitialSearchDone(true);
+    }
     
     // Show appropriate message if no results found
     if (placesWithinRadius.length === 0) {
       const categoryName = selectedExperienceType?.name || selectedDisplayCategory?.name || 'places';
       setError(
         t('restaurantFinder.noResultsInArea', 
-          'No {{type}} found within {{radius}}km of {{location}}. Try increasing the search radius.', {
+          'No {{type}} found within {{radius}}km of {{location}}. Try adjusting the search settings below.', {
             type: categoryName,
-            radius: effectiveRadius,
+            radius: initialRadius,
             location: municipality.name
           }
         )
@@ -609,6 +600,9 @@ const MainHero = () => {
     setSearchMode({ type: 'location' });
     // Keep the currently selected category and experience type instead of resetting to default
     setMunicipalitySearchQuery(''); // Clear municipality search
+    setSelectedRestaurants(new Set()); // Clear selection
+    setSearchRadius(2); // Reset to initial 2km
+    setInitialSearchDone(false); // Reset initial search flag
     
     // Optimal scroll to show all 4 main cards completely in viewport
     setTimeout(() => {
@@ -634,6 +628,9 @@ const MainHero = () => {
   setSelectedDisplayCategory(defaultCategory); // Reset to default Greek
     setSelectedExperienceType(defaultExperienceType); // Reset to default Dining experience
     setMunicipalitySearchQuery(''); // Clear municipality search
+    setSelectedRestaurants(new Set()); // Clear selection
+    setSearchRadius(2); // Reset to initial 2km
+    setInitialSearchDone(false); // Reset initial search flag
     
     // Optimal scroll to show all 4 main cards completely in viewport
     setTimeout(() => {
@@ -646,6 +643,35 @@ const MainHero = () => {
         window.scrollTo({ top: 280, behavior: 'smooth' });
       }
     }, 100);
+  };
+
+  // Selection helper functions
+  const toggleRestaurantSelection = (index: number) => {
+    setSelectedRestaurants(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        if (newSet.size < 10) {
+          newSet.add(index);
+        }
+      }
+      return newSet;
+    });
+  };
+
+  const selectAllVisible = () => {
+    if (!nearestRestaurants) return;
+    const newSet = new Set<number>();
+    const limit = Math.min(10, nearestRestaurants.length);
+    for (let i = 0; i < limit; i++) {
+      newSet.add(i);
+    }
+    setSelectedRestaurants(newSet);
+  };
+
+  const clearSelection = () => {
+    setSelectedRestaurants(new Set());
   };
 
   // Helper: determine whether a category represents dining/restaurant results
@@ -1269,91 +1295,188 @@ const MainHero = () => {
                 </div>
               </div>
             ) : showLocationOptions ? (
-              /* Location Options Selection */
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl xs:rounded-2xl sm:rounded-3xl p-4 xs:p-6 sm:p-8 lg:p-12 border border-white/20 shadow-2xl">
-                <div className="text-center mb-6 xs:mb-8 lg:mb-10">
-                  <h3 className="text-lg xs:text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-2 xs:mb-3 sm:mb-4">
-                    {t('locationOptions.chooseLocationMethod', 'Choose Location Method')}
-                  </h3>
-                  <p className="text-slate-300 text-sm xs:text-base sm:text-lg px-2">
-                    {selectedExperienceType
-                      ? t('locationOptions.selectLocationOption', 'Select how you would like to search for {{experience}}', { experience: selectedExperienceType.name?.toLowerCase?.() || '' })
-                      : t('locationOptions.selectLocationOption', 'Select how you would like to search for an experience', { experience: '' })}
-                  </p>
-                </div>
+              /* Location Options Selection - Enhanced UI */
+              <div className="relative">
+                {/* Background Glow Effect */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-teal-500/20 rounded-3xl blur-3xl opacity-50" />
+                
+                <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-6 xs:p-8 sm:p-10 lg:p-14 border border-white/25 shadow-2xl">
+                  {/* Header Section */}
+                  <div className="text-center mb-8 xs:mb-10 lg:mb-14 relative">
+                    <div className="w-24 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto mb-6 opacity-60 rounded-full" />
+                    <h3 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-4 xs:mb-5 relative">
+                      <span className="relative z-10 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                        {t('locationOptions.chooseLocationMethod', 'Choose Location Method')}
+                      </span>
+                    </h3>
+                    <p className="text-slate-200 text-sm xs:text-base sm:text-lg lg:text-xl max-w-2xl mx-auto px-4 leading-relaxed font-light">
+                      {selectedExperienceType
+                        ? t('locationOptions.selectLocationOption', 'Select how you would like to search for {{experience}}', { experience: selectedExperienceType.name?.toLowerCase?.() || '' })
+                        : t('locationOptions.selectLocationOption', 'Select how you would like to search for an experience', { experience: '' })}
+                    </p>
+                  </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xs:gap-5 sm:gap-6 mb-4 xs:mb-6 sm:mb-8">
-                  {/* Near You Option */}
-                  <button
-                    onClick={() => {
-                      setShowLocationOptions(false);
-                      setShowRestaurantFinder(true);
-                      setSearchMode({
-                        type: 'location',
-                        selectedCategory: selectedDisplayCategory,
-                        selectedExperienceType: selectedExperienceType
-                      });
-                      getUserLocation();
-                      alignViewport();
-                    }}
-                    className="group relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-700 text-white p-5 xs:p-6 sm:p-8 rounded-lg xs:rounded-xl sm:rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-xl transform-gpu"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="relative text-center space-y-3 xs:space-y-4">
-                      <div className="text-3xl xs:text-4xl sm:text-5xl drop-shadow-lg group-hover:scale-110 transition-transform duration-300">📍</div>
-                      <h4 className="text-lg xs:text-xl sm:text-2xl font-bold leading-tight">
-                        {t('locationOptions.nearYou', 'Near You')}
-                      </h4>
-                      <p className="text-blue-100 text-xs xs:text-sm sm:text-base font-medium leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                        {t('locationOptions.nearYouDesc', 'Use your current location to find nearby places')}
-                      </p>
-                    </div>
-                  </button>
+                  {/* Options Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 xs:gap-6 sm:gap-8 lg:gap-10 mb-6 xs:mb-8 max-w-5xl mx-auto">
+                    {/* Near You Option - Enhanced */}
+                    <button
+                      onClick={() => {
+                        setShowLocationOptions(false);
+                        setShowRestaurantFinder(true);
+                        setSearchMode({
+                          type: 'location',
+                          selectedCategory: selectedDisplayCategory,
+                          selectedExperienceType: selectedExperienceType
+                        });
+                        getUserLocation();
+                        alignViewport();
+                      }}
+                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98]"
+                    >
+                      {/* Animated gradient background */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 transition-all duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      
+                      {/* Shine effect */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="relative p-6 xs:p-8 sm:p-10 lg:p-12 text-white">
+                        {/* Icon with badge */}
+                        <div className="flex justify-center mb-6">
+                          <div className="relative">
+                            <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl scale-150 group-hover:scale-[2] transition-transform duration-500" />
+                            <div className="relative bg-white/10 backdrop-blur-sm rounded-full p-4 xs:p-5 sm:p-6 border-2 border-white/30 group-hover:border-white/50 transition-all duration-300 group-hover:rotate-12">
+                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-110 transition-transform duration-300">
+                                📍
+                              </div>
+                            </div>
+                            {/* Pulse effect */}
+                            <div className="absolute inset-0 bg-white/20 rounded-full animate-ping opacity-0 group-hover:opacity-20" />
+                          </div>
+                        </div>
+                        
+                        {/* Badge */}
+                        <div className="flex justify-center mb-4">
+                          <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold tracking-wider uppercase border border-white/30">
+                            Fastest
+                          </span>
+                        </div>
+                        
+                        {/* Title */}
+                        <h4 className="text-xl xs:text-2xl sm:text-3xl font-black mb-4 leading-tight">
+                          {t('locationOptions.nearYou', 'Near You')}
+                        </h4>
+                        
+                        {/* Description */}
+                        <p className="text-blue-100 text-sm xs:text-base sm:text-lg font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                          {t('locationOptions.nearYouDesc', 'Use your current location to find nearby places')}
+                        </p>
+                        
+                        {/* Arrow indicator */}
+                        <div className="flex justify-center">
+                          <div className="flex items-center gap-2 text-sm font-bold group-hover:gap-4 transition-all duration-300">
+                            <span>Get Started</span>
+                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
 
-                  {/* By Region Option */}
-                  <button
-                    onClick={() => {
-                      setShowLocationOptions(false);
-                      setShowMunicipalityList(true);
-                      setSearchMode({
-                        type: 'municipality',
-                        selectedCategory: selectedDisplayCategory,
-                        selectedExperienceType: selectedExperienceType
-                      });
-                      alignViewport();
-                    }}
-                    className="group relative overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-700 text-white p-5 xs:p-6 sm:p-8 rounded-lg xs:rounded-xl sm:rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-xl transform-gpu"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="relative text-center space-y-3 xs:space-y-4">
-                      <div className="text-3xl xs:text-4xl sm:text-5xl drop-shadow-lg group-hover:scale-110 transition-transform duration-300">🗺️</div>
-                      <h4 className="text-lg xs:text-xl sm:text-2xl font-bold leading-tight">
-                        {t('locationOptions.byRegion', 'By Region')}
-                      </h4>
-                      <p className="text-emerald-100 text-xs xs:text-sm sm:text-base font-medium leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                        {t('locationOptions.byRegionDesc', 'Choose a specific region or municipality')}
-                      </p>
-                    </div>
-                  </button>
-                </div>
+                    {/* By Region Option - Enhanced */}
+                    <button
+                      onClick={() => {
+                        setShowLocationOptions(false);
+                        setShowMunicipalityList(true);
+                        setSearchMode({
+                          type: 'municipality',
+                          selectedCategory: selectedDisplayCategory,
+                          selectedExperienceType: selectedExperienceType
+                        });
+                        alignViewport();
+                      }}
+                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98]"
+                    >
+                      {/* Animated gradient background */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-teal-700 to-cyan-800 transition-all duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      
+                      {/* Shine effect */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="relative p-6 xs:p-8 sm:p-10 lg:p-12 text-white">
+                        {/* Icon with badge */}
+                        <div className="flex justify-center mb-6">
+                          <div className="relative">
+                            <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl scale-150 group-hover:scale-[2] transition-transform duration-500" />
+                            <div className="relative bg-white/10 backdrop-blur-sm rounded-full p-4 xs:p-5 sm:p-6 border-2 border-white/30 group-hover:border-white/50 transition-all duration-300 group-hover:rotate-12">
+                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-110 transition-transform duration-300">
+                                🗺️
+                              </div>
+                            </div>
+                            {/* Pulse effect */}
+                            <div className="absolute inset-0 bg-white/20 rounded-full animate-ping opacity-0 group-hover:opacity-20" />
+                          </div>
+                        </div>
+                        
+                        {/* Badge */}
+                        <div className="flex justify-center mb-4">
+                          <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold tracking-wider uppercase border border-white/30">
+                            Most Accurate
+                          </span>
+                        </div>
+                        
+                        {/* Title */}
+                        <h4 className="text-xl xs:text-2xl sm:text-3xl font-black mb-4 leading-tight">
+                          {t('locationOptions.byRegion', 'By Region')}
+                        </h4>
+                        
+                        {/* Description */}
+                        <p className="text-emerald-100 text-sm xs:text-base sm:text-lg font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                          {t('locationOptions.byRegionDesc', 'Choose a specific region or municipality')}
+                        </p>
+                        
+                        {/* Arrow indicator */}
+                        <div className="flex justify-center">
+                          <div className="flex items-center gap-2 text-sm font-bold group-hover:gap-4 transition-all duration-300">
+                            <span>Browse Areas</span>
+                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
 
-                {/* Footer */}
-                <div className="text-center pt-4 border-t border-white/20">
-                  <button
-                    onClick={() => {
-                      resetSearch();
-                      alignViewport();
-                    }}
-                    className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors duration-200 font-medium text-sm px-3 py-2 rounded-lg hover:bg-white/10"
-                  >
-                    ← {t('mainHero.backToSearchOptions', 'Back to Search Options')}
-                  </button>
+                  {/* Footer */}
+                  <div className="text-center pt-6 border-t border-white/20">
+                    <button
+                      onClick={() => {
+                        resetSearch();
+                        alignViewport();
+                      }}
+                      className="group inline-flex items-center gap-2 text-slate-300 hover:text-white transition-all duration-200 font-semibold text-sm sm:text-base px-4 py-2.5 rounded-xl hover:bg-white/10 hover:scale-105"
+                    >
+                      <svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                      </svg>
+                      {t('mainHero.backToSearchOptions', 'Back to Search Options')}
+                    </button>
+                  </div>
                 </div>
               </div>
             ) : null}
             {showRestaurantFinder && (
               /* Restaurant Finder Results */
-              <div id="results-section" className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 xs:p-4 sm:p-6 lg:p-8 border border-white/30 shadow-2xl max-w-4xl mx-auto">
+              <div id="results-section" className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/30 shadow-2xl max-w-6xl mx-auto">
                 {loading && (
                   <div className="text-center py-4 xs:py-6 sm:py-8">
                     <div className="inline-block animate-spin rounded-full h-5 w-5 xs:h-6 xs:w-6 sm:h-8 sm:w-8 border-b-2 border-[#0878fe] mb-2 xs:mb-3 sm:mb-4"></div>
@@ -1394,9 +1517,9 @@ const MainHero = () => {
                                 </label>
                                 <input
                                   type="range"
-                                  min="5"
+                                  min="2"
                                   max="50"
-                                  step="5"
+                                  step="1"
                                   value={searchRadius}
                                   onChange={(e) => setSearchRadius(parseInt(e.target.value))}
                                   className="w-full h-2 bg-gradient-to-r from-blue-200 to-blue-400 rounded-lg appearance-none cursor-pointer accent-blue-600"
@@ -1404,7 +1527,7 @@ const MainHero = () => {
                                   title={`${t('restaurantFinder.searchRadius', 'Search Radius')}: ${searchRadius}km`}
                                 />
                                 <div className="flex justify-between text-xs text-gray-500 mt-1">
-                                  <span>5km</span>
+                                  <span>2km</span>
                                   <span className="font-semibold text-blue-600">{searchRadius}km</span>
                                   <span>50km</span>
                                 </div>
@@ -1469,79 +1592,9 @@ const MainHero = () => {
 
                 {currentRestaurant && nearestRestaurants && nearestRestaurants.length > 0 && (
                   <div className="space-y-3 xs:space-y-4 sm:space-y-6">
-                    {/* Collapsible Advanced Settings */}
-                    {searchMode.type === 'municipality' && (
-                      <details className="group mb-4">
-                        <summary className="cursor-pointer list-none">
-                          <div className="flex items-center justify-between p-3 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors duration-200">
-                            <div className="flex items-center gap-2">
-                              <span className="text-lg">⚙️</span>
-                              <span className="text-sm font-medium text-gray-700">
-                                {t('restaurantFinder.advancedSettings', 'Advanced Settings')}
-                              </span>
-                              <span className="text-xs text-gray-500">({searchRadius}km, {maxResults} max)</span>
-                            </div>
-                            <svg className="w-5 h-5 text-gray-500 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                          </div>
-                        </summary>
-                        <div className="mt-3 p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                            <div>
-                              <label className="block text-xs font-semibold text-gray-700 mb-2">
-                                📏 {t('restaurantFinder.searchRadius', 'Search Radius')}: <span className="text-blue-600">{searchRadius}km</span>
-                              </label>
-                              <input
-                                type="range"
-                                min="5"
-                                max="50"
-                                step="5"
-                                value={searchRadius}
-                                onChange={(e) => setSearchRadius(parseInt(e.target.value))}
-                                className="w-full h-2 bg-gradient-to-r from-blue-200 to-blue-400 rounded-lg appearance-none cursor-pointer accent-blue-600"
-                                aria-label={t('restaurantFinder.searchRadius', 'Search Radius')}
-                                title={`${t('restaurantFinder.searchRadius', 'Search Radius')}: ${searchRadius}km`}
-                              />
-                              <div className="flex justify-between text-xs text-gray-500 mt-1">
-                                <span>5km</span>
-                                <span>50km</span>
-                              </div>
-                            </div>
-                            <div>
-                              <label className="block text-xs font-semibold text-gray-700 mb-2">
-                                🔢 {t('restaurantFinder.maxResults', 'Max Results')}: <span className="text-green-600">{maxResults}</span>
-                              </label>
-                              <input
-                                type="range"
-                                min="5"
-                                max="30"
-                                step="5"
-                                value={maxResults}
-                                onChange={(e) => setMaxResults(parseInt(e.target.value))}
-                                className="w-full h-2 bg-gradient-to-r from-green-200 to-green-400 rounded-lg appearance-none cursor-pointer accent-green-600"
-                                aria-label={t('restaurantFinder.maxResults', 'Max Results')}
-                                title={`${t('restaurantFinder.maxResults', 'Max Results')}: ${maxResults}`}
-                              />
-                              <div className="flex justify-between text-xs text-gray-500 mt-1">
-                                <span>5</span>
-                                <span>30</span>
-                              </div>
-                            </div>
-                          </div>
-                          <button
-                            onClick={() => searchByMunicipality(searchMode.selectedMunicipality!)}
-                            className="w-full px-4 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-[1.02] shadow-md hover:shadow-lg flex items-center justify-center gap-2"
-                          >
-                            <span>🔄</span>
-                            {t('restaurantFinder.applyChanges', 'Apply Changes')}
-                          </button>
-                        </div>
-                      </details>
-                    )}
                     
-                    <div className="text-center mb-3 xs:mb-4 sm:mb-6">
-                      <h3 className="text-base xs:text-lg sm:text-2xl font-bold text-gray-800 mb-2 px-2">
+                    <div className="text-center mb-6 max-w-3xl mx-auto">
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-3">
                         {selectedType === 'experience' && selectedExperienceType ? (
                           <>
                             <span className="text-2xl mr-2">{selectedExperienceType.icon}</span>
@@ -1564,7 +1617,7 @@ const MainHero = () => {
                           <>{t('restaurantFinder.nearYou', 'Near You')}</>
                         )}
                       </h3>
-                      <p className="text-gray-600 text-sm sm:text-base px-2">
+                      <p className="text-gray-600 text-base sm:text-lg font-medium">
                         {selectedType === 'experience' && selectedExperienceType
                           ? `${t('restaurantFinder.found', 'Found')} ${nearestRestaurants.length} ${selectedExperienceType.name} ${t('restaurantFinder.places', 'places')}`
                           : selectedType === 'category' && selectedDisplayCategory
@@ -1576,12 +1629,12 @@ const MainHero = () => {
                           : `${t('restaurantFinder.showingClosest', 'Showing')} ${nearestRestaurants.length} ${t('restaurantFinder.closest', 'closest')} ${t('restaurantFinder.places', 'places')}`
                         }
                       </p>
-                      <p className="text-gray-500 text-xs sm:text-sm px-2 mt-1">
+                      <p className="text-gray-500 text-sm sm:text-base mt-2">
                         {t('restaurantFinder.sortedByDistance', 'Results are sorted by distance from location selected')}
                       </p>
                       {searchMode.type === 'municipality' && (
                         <span className="inline-block mt-2 px-2 sm:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs sm:text-sm font-medium">
-                          📍 {searchMode.selectedMunicipality?.region ? t(`regions.${searchMode.selectedMunicipality.region}`, searchMode.selectedMunicipality.region) : ''}
+                          📍 {searchMode.selectedMunicipality?.name ? t(`municipalities.${searchMode.selectedMunicipality.name}`, searchMode.selectedMunicipality.name) : ''}{searchMode.selectedMunicipality?.region ? `, ${t(`regions.${searchMode.selectedMunicipality.region}`, searchMode.selectedMunicipality.region)}` : ''}
                         </span>
                       )}
                       {searchMode.type === 'category' && searchMode.selectedCategory && (
@@ -1591,69 +1644,112 @@ const MainHero = () => {
                       )}
                     </div>
 
-                    {/* Share Results Button */}
+                    {/* Selection and Share Controls */}
                     {(nearestRestaurants && nearestRestaurants.length > 0) && (
                       <>
-                        <div className="flex justify-end mb-2">
-                          <button
-                            onClick={async () => {
-                              const top10 = nearestRestaurants.slice(0, 10);
-                              const shareText = top10
-                                .map((r, i) => `${i + 1}. ${r.restaurant.name}\n${r.restaurant.url}`)
-                                .join('\n\n');
-                              const fullText = `${t('restaurantFinder.shareTitle', 'Check out these places:')}\n\n${shareText}`;
-                              let copied = false;
-                              let shared = false;
-                              let message = '';
-                              let type = 'info';
-                              try {
-                                await navigator.clipboard.writeText(fullText);
-                                copied = true;
-                              } catch (e) {
-                                copied = false;
-                              }
-                              try {
-                                if (navigator.share) {
-                                  await navigator.share({
-                                    title: t('restaurantFinder.shareTitle', 'Check out these places!'),
-                                    text: fullText
-                                  });
-                                  shared = true;
-                                }
-                              } catch (e) {
-                                shared = false;
-                              }
-                              if (copied && shared) {
-                                message = t('restaurantFinder.copiedAndShared', 'Top 10 results copied and ready to share!');
-                                type = 'success';
-                              } else if (shared && !copied) {
-                                message = t('restaurantFinder.sharedButNotCopied', 'Shared successfully, but could not copy to clipboard.');
-                                type = 'warning';
-                              } else if (copied && !shared) {
-                                message = t('restaurantFinder.copiedToClipboard', 'Top 10 results copied to clipboard!');
-                                type = 'success';
-                              } else {
-                                message = t('restaurantFinder.shareFailed', 'Unable to share or copy results. Please try again.');
-                                type = 'error';
-                              }
-                              setShareSnackbar({ open: true, message, type });
-                              setTimeout(() => {
-                                setShareSnackbar((prev) => ({ ...prev, open: false }));
-                              }, 5000);
-                            }}
-                            className="relative overflow-hidden group inline-flex items-center gap-2 px-4 py-2 rounded-xl font-bold text-sm sm:text-base bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-lg border-2 border-blue-400/30 transition-all duration-300 hover:scale-[1.03] active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                            title={t('restaurantFinder.shareResults', 'Share these results')}
-                          >
-                            {/* Animated background overlay */}
-                            <span className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            {/* Shimmer effect */}
-                            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                            <span className="relative flex items-center gap-2">
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 8a3 3 0 11-6 0 3 3 0 016 0zm6 8a3 3 0 11-6 0 3 3 0 016 0zm-6 4v-4m0 0V8m0 8l-4-4m4 4l4-4" /></svg>
-                              {t('restaurantFinder.shareResults', 'Share Results')}
-                            </span>
-                          </button>
+                        <div className="flex flex-col items-center gap-4 mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+                          {/* Selection Info */}
+                          <div className="text-center w-full">
+                            <p className="text-sm sm:text-base font-semibold text-gray-700 mb-3">
+                              {selectedRestaurants.size > 0 
+                                ? `✓ ${selectedRestaurants.size} ${t('restaurantFinder.selected', 'selected')} ${selectedRestaurants.size < 10 ? `(${t('restaurantFinder.selectUpTo', 'select up to')} ${10 - selectedRestaurants.size} ${t('restaurantFinder.more', 'more')})` : ''}`
+                                : `📍 ${t('restaurantFinder.selectUpTo10', 'Select up to 10 locations to share')}`}
+                            </p>
+                          </div>
+
+                          {/* Selection Actions */}
+                          <div className="flex items-center justify-center gap-3 flex-wrap">
+                            <button
+                              onClick={selectAllVisible}
+                              disabled={selectedRestaurants.size >= 10}
+                              className="px-4 py-2 text-sm sm:text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed border-2 border-blue-200 hover:border-blue-300 shadow-sm"
+                              title={t('restaurantFinder.selectFirst10', 'Select first 10')}
+                            >
+                              {nearestRestaurants.length >= 10 
+                                ? t('restaurantFinder.selectUpTo10', 'Select up to 10')
+                                : t('restaurantFinder.selectUpTo', `Select up to ${nearestRestaurants.length}`)}
+                            </button>
+                            
+                            {selectedRestaurants.size > 0 && (
+                              <>
+                                <button
+                                  onClick={clearSelection}
+                                  className="px-4 py-2 text-sm sm:text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 rounded-lg transition-all duration-200 border-2 border-gray-300 hover:border-gray-400 shadow-sm"
+                                >
+                                  {t('restaurantFinder.clearSelection', 'Clear')}
+                                </button>
+                                
+                                <button
+                                  onClick={async () => {
+                                    const selectedItems = Array.from(selectedRestaurants)
+                                      .sort((a, b) => a - b)
+                                      .map(index => nearestRestaurants[index])
+                                      .filter((item): item is { restaurant: Restaurant; distance: number } => item !== undefined);
+                                    
+                                    const shareText = selectedItems
+                                      .map((r, i) => `${i + 1}. ${r.restaurant.name}\n${r.restaurant.url}`)
+                                      .join('\n\n');
+                                    const fullText = `${t('restaurantFinder.shareTitle', 'Check out these places:')}\n\n${shareText}`;
+                                    
+                                    let copied = false;
+                                    let shared = false;
+                                    let message = '';
+                                    let type = 'info';
+                                    
+                                    try {
+                                      await navigator.clipboard.writeText(fullText);
+                                      copied = true;
+                                    } catch (e) {
+                                      copied = false;
+                                    }
+                                    
+                                    try {
+                                      if (navigator.share) {
+                                        await navigator.share({
+                                          title: t('restaurantFinder.shareTitle', 'Check out these places!'),
+                                          text: fullText
+                                        });
+                                        shared = true;
+                                      }
+                                    } catch (e) {
+                                      shared = false;
+                                    }
+                                    
+                                    if (copied && shared) {
+                                      message = t('restaurantFinder.copiedAndShared', 'Selected locations copied and ready to share!');
+                                      type = 'success';
+                                    } else if (shared && !copied) {
+                                      message = t('restaurantFinder.sharedButNotCopied', 'Shared successfully, but could not copy to clipboard.');
+                                      type = 'warning';
+                                    } else if (copied && !shared) {
+                                      message = t('restaurantFinder.copiedToClipboard', 'Selected locations copied to clipboard!');
+                                      type = 'success';
+                                    } else {
+                                      message = t('restaurantFinder.shareFailed', 'Unable to share or copy results. Please try again.');
+                                      type = 'error';
+                                    }
+                                    
+                                    setShareSnackbar({ open: true, message, type });
+                                    setTimeout(() => {
+                                      setShareSnackbar((prev) => ({ ...prev, open: false }));
+                                    }, 5000);
+                                  }}
+                                  className="relative overflow-hidden group inline-flex items-center gap-2 px-6 py-2.5 rounded-lg font-bold text-sm sm:text-base bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-lg border border-blue-400/30 transition-all duration-300 hover:scale-105 active:scale-95"
+                                  title={t('restaurantFinder.shareSelected', 'Share selected locations')}
+                                >
+                                  <span className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                  <span className="relative flex items-center gap-2">
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                    </svg>
+                                    {t('restaurantFinder.shareSelected', `Share (${selectedRestaurants.size})`)}
+                                  </span>
+                                </button>
+                              </>
+                            )}
+                          </div>
                         </div>
+
                         {/* Snackbar/Toast for share feedback */}
                         {shareSnackbar.open && (
                           <div
@@ -1679,7 +1775,7 @@ const MainHero = () => {
                       </>
                     )}
                     {/* Horizontal Scrollable Restaurant Cards */}
-                    <div className="relative">
+                    <div className="relative max-w-5xl mx-auto">
                       {/* Navigation Arrows for Mobile */}
                       {nearestRestaurants.length > 1 && (
                         <>
@@ -1687,8 +1783,8 @@ const MainHero = () => {
                             onClick={previousRestaurant}
                             disabled={currentIndex === 0}
                             aria-label={t('restaurantFinder.previous', 'Previous restaurant')}
-                            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 shadow-lg rounded-full p-2 sm:p-3 text-gray-600 disabled:text-gray-400 hover:text-[#0878fe] transition-all duration-200 disabled:opacity-50"
-                            style={{ marginLeft: '-16px' }}
+                            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-xl rounded-full p-3 text-gray-700 disabled:text-gray-300 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed border-2 border-gray-200"
+                            style={{ marginLeft: '-12px' }}
                           >
                             <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -1697,10 +1793,10 @@ const MainHero = () => {
                           
                           <button
                             onClick={nextRestaurant}
-                            disabled={currentIndex === nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0) - 1}
+                            disabled={currentIndex === nearestRestaurants.length - 1}
                             aria-label={t('restaurantFinder.next', 'Next restaurant')}
-                            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 shadow-lg rounded-full p-2 sm:p-3 text-gray-600 disabled:text-gray-400 hover:text-[#0878fe] transition-all duration-200 disabled:opacity-50"
-                            style={{ marginRight: '-16px' }}
+                            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-xl rounded-full p-3 text-gray-700 disabled:text-gray-300 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed border-2 border-gray-200"
+                            style={{ marginRight: '-12px' }}
                           >
                             <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -1710,64 +1806,89 @@ const MainHero = () => {
                       )}
                       
                       {/* Scrollable Container */}
-                      <div className="overflow-x-auto scrollbar-hide px-4">
+                      <div className="overflow-x-auto scrollbar-hide px-2 sm:px-8 py-4">
                         <div 
-                          className="flex gap-4 transition-transform duration-300 ease-in-out"
+                          className="flex gap-6 transition-transform duration-300 ease-in-out justify-center"
                           style={{ 
-                            transform: `translateX(-${currentIndex * (280 + 16)}px)`,
-                            width: `${(nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0)) * (280 + 16)}px`
+                            transform: `translateX(-${currentIndex * (320 + 24)}px)`,
+                            width: nearestRestaurants.length === 1 ? 'auto' : `${nearestRestaurants.length * (320 + 24)}px`
                           }}
                         >
                           {nearestRestaurants.map((restaurantData, index) => {
                             // Check for vegan/vegetarian and luxury flags
                             const isVegan = vegetarianData.some(v => v.name === restaurantData.restaurant.name && v.address === restaurantData.restaurant.address);
                             const isLuxury = luxuryDiningData.some(l => l.name === restaurantData.restaurant.name && l.address === restaurantData.restaurant.address);
+                            const isSelected = selectedRestaurants.has(index);
                             return (
                               <div
                                 key={index}
-                                className={`min-w-[280px] h-[240px] sm:h-[260px] bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 sm:p-6 border border-blue-200 transition-all duration-200 flex flex-col ${
-                                  index === currentIndex ? 'ring-2 ring-[#0878fe] shadow-lg' : 'opacity-80'
+                                className={`min-w-[320px] max-w-[320px] h-[300px] bg-gradient-to-br from-white via-blue-50 to-indigo-50 rounded-2xl p-6 border-2 transition-all duration-300 flex flex-col shadow-lg hover:shadow-xl ${
+                                  isSelected 
+                                    ? 'border-green-500 ring-4 ring-green-200 scale-[1.02]' 
+                                    : index === currentIndex 
+                                    ? 'border-blue-400 scale-[1.02]' 
+                                    : 'border-blue-200 opacity-90'
                                 }`}
                               >
+                                {/* Checkbox for selection */}
+                                <div className="flex items-start justify-between mb-3">
+                                  <label className="flex items-center gap-2 cursor-pointer group">
+                                    <input
+                                      type="checkbox"
+                                      checked={isSelected}
+                                      onChange={() => toggleRestaurantSelection(index)}
+                                      disabled={!isSelected && selectedRestaurants.size >= 10}
+                                      className="w-5 h-5 rounded-md border-2 border-gray-400 text-green-600 focus:ring-2 focus:ring-green-500 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                                    />
+                                    <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-900">
+                                      {isSelected ? t('restaurantFinder.selected', 'Selected') : t('restaurantFinder.select', 'Select')}
+                                    </span>
+                                  </label>
+                                  {(isVegan || isLuxury) && (
+                                    <div className="flex gap-1">
+                                      {isVegan && (
+                                        <span title="Vegan Friendly" className="px-2 py-0.5 rounded-full bg-green-200 text-green-800 text-xs font-semibold border border-green-300">🌱</span>
+                                      )}
+                                      {isLuxury && (
+                                        <span title="Luxury/Pricey" className="px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 text-xs font-semibold border border-yellow-300">💎</span>
+                                      )}
+                                    </div>
+                                  )}
+                                </div>
+
                                 {/* Content Container - Flex grow to push button to bottom */}
                                 <div className="flex-1 flex flex-col">
                                   {/* Restaurant Info - Fixed height sections */}
-                                  <div className="flex-1 space-y-2 sm:space-y-3">
+                                  <div className="flex-1 space-y-3">
                                     {/* Restaurant Name - Fixed height with line clamping */}
-                                    <div className="h-[40px] sm:h-[48px] flex items-center gap-2">
-                                      <h4 className="font-bold text-gray-800 text-base sm:text-lg flex items-start gap-2 line-clamp-2 leading-tight">
+                                    <div className="h-[52px] flex items-center gap-2">
+                                      <h4 className="font-bold text-gray-900 text-lg flex items-start gap-2 line-clamp-2 leading-tight">
                                         🍽️ <span className="flex-1">{restaurantData.restaurant.name}</span>
                                       </h4>
-                                      {isVegan && (
-                                        <span title="Vegan Friendly" className="ml-1 px-2 py-0.5 rounded-full bg-green-200 text-green-800 text-xs font-semibold border border-green-300">Vegan</span>
-                                      )}
-                                      {isLuxury && (
-                                        <span title="Luxury/Pricey" className="ml-1 px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 text-xs font-semibold border border-yellow-300">Luxury</span>
-                                      )}
                                     </div>
                                     {/* Address - Fixed height with line clamping */}
-                                    <div className="h-[32px] sm:h-[40px]">
-                                      <p className="text-gray-600 text-sm sm:text-base flex items-start gap-2 line-clamp-2 leading-tight">
+                                    <div className="h-[44px]">
+                                      <p className="text-gray-600 text-sm flex items-start gap-2 line-clamp-2 leading-snug">
                                         📍 <span className="flex-1">{restaurantData.restaurant.address}</span>
                                       </p>
                                     </div>
                                     {/* Distance and Index Info */}
-                                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-1">
-                                      <span className="bg-[#0878fe] text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap">
+                                    <div className="flex flex-wrap items-center gap-3 pt-2">
+                                      <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-3 py-1.5 rounded-full text-sm font-bold whitespace-nowrap shadow-md">
                                         📏 {formatDistance(restaurantData.distance)}
                                       </span>
-                                      <span className="text-gray-500 text-xs sm:text-sm whitespace-nowrap">
+                                      <span className="text-gray-600 text-sm font-medium whitespace-nowrap">
                                         #{index + 1} {t('restaurantFinder.of', 'of')} {nearestRestaurants.length}
                                       </span>
                                     </div>
                                   </div>
                                   {/* Button - Always at bottom */}
-                                  <div className="mt-3 sm:mt-4">
+                                  <div className="mt-4">
                                     <a
                                       href={restaurantData.restaurant.url}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="block w-full bg-green-600 text-white py-2 sm:py-3 px-3 sm:px-4 rounded-lg font-medium hover:bg-green-700 transition duration-200 text-center text-sm sm:text-base"
+                                      className="block w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-3 px-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200 text-center text-base transform hover:scale-[1.02] active:scale-95"
                                     >
                                       {t('restaurantFinder.viewOnMaps', 'View on Google Maps')}
                                     </a>
@@ -1776,44 +1897,18 @@ const MainHero = () => {
                               </div>
                             );
                           })}
-                          
-                          {/* Load More Card - Show as 11th card if more results available */}
-                          {allAvailableResults.length > displayedCount && (
-                            <div
-                              className="min-w-[280px] h-[240px] sm:h-[260px] bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-4 sm:p-6 border-2 border-blue-300 transition-all duration-200 flex flex-col items-center justify-center cursor-pointer hover:shadow-xl hover:scale-105"
-                              onClick={loadMoreResults}
-                            >
-                              <div className="text-center space-y-3">
-                                <div className="text-5xl mb-2">🔍</div>
-                                <h4 className="text-lg font-bold text-gray-800">
-                                  {t('restaurantFinder.loadMoreResults', 'Load More Results')}
-                                </h4>
-                                <p className="text-sm text-gray-600 px-2">
-                                  {t('restaurantFinder.moreAvailable', '{{count}} more places available', {
-                                    count: allAvailableResults.length - displayedCount
-                                  })}
-                                </p>
-                                <button
-                                  className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold rounded-xl transition-all duration-200 shadow-lg flex items-center gap-2 mx-auto"
-                                >
-                                  <span>➕</span>
-                                  {t('restaurantFinder.loadNext10', 'Load Next 10')}
-                                </button>
-                              </div>
-                            </div>
-                          )}
                         </div>
                       </div>
                     </div>
 
                     {/* Dots Navigation */}
                     {nearestRestaurants.length > 1 && (
-                      <div className="flex justify-center items-center gap-2 px-4">
+                      <div className="flex justify-center items-center gap-3 px-4 mt-4">
                         <span className="text-xs text-gray-500 mr-2 hidden sm:inline">
-                          {currentIndex + 1} / {nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0)}
+                          {currentIndex + 1} / {nearestRestaurants.length}
                         </span>
                         <div className="flex gap-1 sm:gap-2 max-w-full justify-center">
-                          {[...Array(Math.min(15, nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0)))].map((_, index) => (
+                          {[...Array(Math.min(15, nearestRestaurants.length))].map((_, index) => (
                             <button
                               key={index}
                               onClick={() => setCurrentIndex(index)}
@@ -1823,7 +1918,7 @@ const MainHero = () => {
                               aria-label={`${t('restaurantFinder.goToRestaurant', 'Go to restaurant')} ${index + 1}`}
                             />
                           ))}
-                          {nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0) > 15 && (
+                          {nearestRestaurants.length > 15 && (
                             <span className="text-gray-400 text-xs self-center ml-1">...</span>
                           )}
                         </div>
@@ -1842,12 +1937,12 @@ const MainHero = () => {
                         </button>
                         
                         <span className="text-gray-500 text-sm">
-                          {currentIndex + 1} {t('restaurantFinder.of', 'of')} {nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0)}
+                          {currentIndex + 1} {t('restaurantFinder.of', 'of')} {nearestRestaurants.length}
                         </span>
                         
                         <button
                           onClick={nextRestaurant}
-                          disabled={currentIndex === nearestRestaurants.length + (allAvailableResults.length > displayedCount ? 1 : 0) - 1}
+                          disabled={currentIndex === nearestRestaurants.length - 1}
                           className="flex items-center gap-2 px-4 py-2 text-gray-600 disabled:text-gray-400 hover:text-[#0878fe] transition duration-200 font-medium"
                         >
                           {t('restaurantFinder.next', 'Next')} →
@@ -1855,13 +1950,71 @@ const MainHero = () => {
                       </div>
                     )}
 
-                    <div className="text-center pt-4 border-t border-gray-200">
+                    <div className="text-center pt-6 mt-6 border-t-2 border-gray-200">
                       <button
                         onClick={resetSearch}
-                        className="inline-flex items-center gap-2 px-4 py-2 text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium text-sm sm:text-base cursor-pointer"
+                        className="inline-flex items-center gap-2 px-6 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200 font-semibold text-base border-2 border-gray-300 hover:border-blue-400 shadow-sm hover:shadow-md"
                       >
                         🔄 {t('restaurantFinder.searchAgain', 'Search Again')}
                       </button>
+                    </div>
+
+                    {/* Search Settings Panel */}
+                    <div className="mt-6 p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border-2 border-blue-200 shadow-sm max-w-2xl mx-auto">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg">📏</span>
+                          <h4 className="text-sm font-bold text-gray-800">
+                            {t('restaurantFinder.adjustSearchSettings', 'Adjust Search Settings')}
+                          </h4>
+                        </div>
+                        {nearestRestaurants.length > 0 && (
+                          <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
+                            {nearestRestaurants.length} {t('restaurantFinder.found', 'found')}
+                          </span>
+                        )}
+                      </div>
+                      
+                      <p className="text-xs text-gray-600 mb-3">
+                        {t('restaurantFinder.currentSearchRadius', `Current search radius`)}: <span className="font-semibold text-blue-600">{searchRadius}km</span>
+                      </p>
+
+                      <div className="space-y-3">
+                        <div>
+                          <div className="flex items-center justify-between mb-2">
+                            <label className="block text-xs font-semibold text-gray-700">
+                              {t('restaurantFinder.searchRadius', 'Search Radius')}
+                            </label>
+                            <span className="text-sm font-bold text-blue-600">{searchRadius}km</span>
+                          </div>
+                          <input
+                            type="range"
+                            min="2"
+                            max="50"
+                            step="1"
+                            value={searchRadius}
+                            onChange={(e) => setSearchRadius(parseInt(e.target.value))}
+                            className="w-full h-2 bg-gradient-to-r from-blue-200 to-blue-400 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                            aria-label={t('restaurantFinder.searchRadius', 'Search Radius')}
+                            title={`${t('restaurantFinder.searchRadius', 'Search Radius')}: ${searchRadius}km`}
+                          />
+                          <div className="flex justify-between text-xs text-gray-500 mt-1">
+                            <span>2km</span>
+                            <span className="font-semibold text-blue-600">{searchRadius}km</span>
+                            <span>50km</span>
+                          </div>
+                        </div>
+                        
+                        <button
+                          onClick={() => searchByMunicipality(searchMode.selectedMunicipality!)}
+                          className="w-full px-4 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-[1.02] shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                          </svg>
+                          {t('restaurantFinder.updateResults', 'Update Results')}
+                        </button>
+                      </div>
                     </div>
                   </div>
                 )}
