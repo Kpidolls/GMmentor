@@ -1,0 +1,2312 @@
+[
+  {
+    "url": "https://maps.app.goo.gl/qf5FPeY2czx43z2TA?g_st=ipc",
+    "name": "Ψητός Μπακαλιάρος",
+    "address": "Εθ. Αντιστάσεως 9, Χαλάνδρι 152 32",
+    "lat": "38.01692370219889",
+    "lng": "23.79499254813244"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eEbHLBANhp5td8HH9?g_st=ipc",
+    "name": "Καπετάνισσα",
+    "address": "Ομήρου 24, Χαλάνδρι 152 32",
+    "lat": "38.01937904398287",
+    "lng": "23.79769429563829"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WKwKfmp9nBvnCPzT9?g_st=ipc",
+    "name": "Ψαράκια & Θαλασσινά",
+    "address": "Κώστα Βάρναλη 5, Χαλάνδρι 152 33",
+    "lat": "38.02324309009889",
+    "lng": "23.800101703415542"
+  },
+  {
+    "url": "https://maps.app.goo.gl/abzrUsQsRH3gKTL2A?g_st=ipc",
+    "name": "Φοιτητής",
+    "address": "Θεμιστοκλέους 72-74, Νέο Ψυχικό 154 51",
+    "lat": "38.00738588877098",
+    "lng": "23.783442614729104"
+  },
+  {
+    "url": "https://maps.app.goo.gl/h2KMfix1JBmXpQQB9?g_st=ipc",
+    "name": "Ψαρομανία",
+    "address": "Δάφνης 57, Μαρούσι 151 25",
+    "lat": "38.048408639606166",
+    "lng": "23.81356249118105"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RoRVKdrKmqxNRkrs5?g_st=ipc",
+    "name": "Καφενείο Ουζερί Λέσβιον",
+    "address": "Βαρδουσίων 3, Γαλάτσι 111 47",
+    "lat": "38.008048120056024",
+    "lng": "23.753608668653317"
+  },
+  {
+    "url": "https://maps.app.goo.gl/z4bfrFA8WgPgak7Q6?g_st=ipc",
+    "name": "ΣΤΕΚΙ ΨΑΡΟΦΑΓΑΔΩΝ",
+    "address": "Παπαφλέσσα 36, Γαλάτσι 111 46",
+    "lat": "38.0206189578116",
+    "lng": "23.753464770079276"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JGxgiBHhNLEpm7F8A?g_st=ipc",
+    "name": "Μεζεδοπωλείο Ψαροταβέρνα Καραβίδας",
+    "address": "Δεμιρδεσίου 89, Νέα Ιωνία 142 33",
+    "lat": "38.03096216854331",
+    "lng": "23.75947032164881"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TQBY6fhE1DqGovNJ9?g_st=ipc",
+    "name": "ΠΟΡΦΥΡΑ",
+    "address": "Leof. Dimokratias 29, Melissia 151 27",
+    "lat": "38.05133265699478",
+    "lng": "23.83230614489945"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4KPzMCG1HKq5Gpdw6?g_st=ipc",
+    "name": "Ψάριστον",
+    "address": "Καλαβρύτων 16, Ηράκλειο 141 21, 141 21",
+    "lat": "38.05007046502227",
+    "lng": "23.781403693268317"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GRmK1dMStEro6P898?g_st=ipc",
+    "name": "Νησιώτισσα | Ταβέρνα - Βριλήσσια",
+    "address": "Λεωφ. Πεντέλης 168, Βριλήσσια 152 35",
+    "lat": "38.049892048450445",
+    "lng": "23.844559347971032"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yjqJBhxZ9XwdkDBv7?g_st=ipc",
+    "name": "Ψαροκόκκαλο",
+    "address": "Ελ. Βενιζέλου 19, Μελίσσια 151 27",
+    "lat": "38.05407148936591",
+    "lng": "23.838879406158195"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fHgyjqw3Rn6yqq6N6?g_st=ipc",
+    "name": "Ψαράδικο-Ψαροφαγείο Βλάσης",
+    "address": "Φωκίωνος Νέγρη 47, Αθήνα 113 61",
+    "lat": "38.00159683768883",
+    "lng": "23.739141642286196"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uvjoui4AHeT11Xzo7?g_st=ipc",
+    "name": "Τα Ψαράκια",
+    "address": "Πλατεία Ελευθερίας 2, Νέστορος 4, Μελίσσια 151 27",
+    "lat": "38.060545213135285",
+    "lng": "23.836609678627113"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kujR9b76mkGXYeFM6?g_st=ipc",
+    "name": "Papadakis Restaurant",
+    "address": "Φωκυλίδου 15, Αθήνα 106 73",
+    "lat": "37.97973026422826",
+    "lng": "23.740290543738375"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zGLD1EQEqkqawMvG7?g_st=ipc",
+    "name": "Ουζερί Η Λέσβος",
+    "address": "Εμμανουήλ Μπενάκη 38, Αθήνα 106 78",
+    "lat": "37.98449752332163",
+    "lng": "23.73299796536249"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hterjoYbDhkZzWVF7?g_st=ipc",
+    "name": "ΤΡΑΤΑ",
+    "address": "Νικηταρά, Αθήνα 106 78",
+    "lat": "37.9842462216536",
+    "lng": "23.73093735061636"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SAabW9ijLcFRSozJ6?g_st=ipc",
+    "name": "Η Στοά Αλλιώς",
+    "address": "Γαμβέτα 14, Αθήνα 106 77",
+    "lat": "37.984455169051934",
+    "lng": "23.73057480489291"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HyEob8x31HSBRG4G6?g_st=ipc",
+    "name": "Το κουτούκι του Νικόλα",
+    "address": "Καλλιπόλεως 1, Βύρωνας 162 32",
+    "lat": "37.957390018378845",
+    "lng": "23.748097249841244"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4i8vjPk72WB5DQgR6?g_st=ipc",
+    "name": "Αθηναϊκόν",
+    "address": "34, Μητροπόλεως str, Αθήνα 105 63",
+    "lat": "37.97539194175071",
+    "lng": "23.731456162944593"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FNypnyT1fTicRews8?g_st=ipc",
+    "name": "ΜΠΑΛΚΟΝΙ ΣΤΙΣ ΚΥΚΛΑΔΕΣ",
+    "address": "Π. Μελά 13, Βύρωνας 162 33",
+    "lat": "37.943007346903",
+    "lng": "23.772380593489483"
+  },
+  {
+    "url": "https://maps.app.goo.gl/B6NXu9TchhZNtX1m9?g_st=ipc",
+    "name": "Ζήσης",
+    "address": "Αθηναΐδος 3, Αθήνα 105 63",
+    "lat": "37.97677236195616",
+    "lng": "23.729130321852065"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VGsVN7MnXG9J2joA7?g_st=ipc",
+    "name": "lsandsia",
+    "address": "Μελανθίου 2, Αθήνα 105 54",
+    "lat": "37.97936959687578",
+    "lng": "23.725957904871184"
+  },
+  {
+    "url": "https://maps.app.goo.gl/K7omqvkBiNsvXTkW8?g_st=ipc",
+    "name": "ΛΙΝΟΥ ΣΟΥΜΠΑΣΗΣ ΚΑΙ ΣΙΑ",
+    "address": "Μελανθίου 2, Αθήνα 105 54 &, Καλαμίδα 9, Αθήνα 105 54",
+    "lat": "37.97931845245544",
+    "lng": "23.725978511536088"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZNPzCDATcCosWfhTA?g_st=ipc",
+    "name": "Ανεφάνη",
+    "address": "Μνησικλέους 24, Αθήνα 105 56",
+    "lat": "37.973535712152035",
+    "lng": "23.727823659961384"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zBgRFUhoxGYetbQc8?g_st=ipc",
+    "name": "Nissos Seafood Tavern",
+    "address": "Χριστοκοπίδου 1, Αθήνα 105 54",
+    "lat": "37.97768489940087",
+    "lng": "23.72367935167617"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1DKYSrvWDbxUg3YT6?g_st=ipc",
+    "name": "Ατλαντικός",
+    "address": "Αυλητών 7, Αθήνα 105 54",
+    "lat": "37.977418949870525",
+    "lng": "23.72294155796201"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YqFQJr3r4XRFXyq17?g_st=ipc",
+    "name": "Annie - Fine Cooking",
+    "address": "Μεναίχμου 4, Αθήνα 117 43",
+    "lat": "37.96499642405186",
+    "lng": "23.73068347975073"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8rz5Adk17ejAsxHP6?g_st=ipc",
+    "name": "Χρώματα Βυθού",
+    "address": "Εκάλης 40, Νέα Ερυθραία 146 71",
+    "lat": "38.087925786455884",
+    "lng": "23.814850327043008"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZwWcfuMochSRxPUk8?g_st=ipc",
+    "name": "PARKBENCH",
+    "address": "Πραμάντων 10, Αθήνα 117 41",
+    "lat": "37.96471554544835",
+    "lng": "23.714402162518947"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JpVSQDpzvzWZWivJ9?g_st=ipc",
+    "name": "Παπαλίνα",
+    "address": "Πραμάντων 20, Αθήνα 117 41",
+    "lat": "37.96476188274757",
+    "lng": "23.713898599739846"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gCMLdURmK8mriaGKA?g_st=ipc",
+    "name": "Το Παλιό Ποδήλατο",
+    "address": "Ανδρονίκου 11, Αθήνα 118 54",
+    "lat": "37.97490750365618",
+    "lng": "23.706970638600303"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sT6Yu3rAWgUrsdMe6?g_st=ipc",
+    "name": "Λαγουδέρα εντός ΠΟΝ",
+    "address": "Εντός ΠΟΝ 102Α, Ιερά Οδός, Αθήνα 104 47",
+    "lat": "37.98593668485229",
+    "lng": "23.70145910830469"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uLKm2p4zN326i9gP8?g_st=ipc",
+    "name": "Λιόγερμα της Αθήνας",
+    "address": "Νέστορος 21, Παλαιό Φάληρο 175 61",
+    "lat": "37.938563581924875",
+    "lng": "23.703200039765804"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Acz6F4ajfzUYXq7y7?g_st=ipc",
+    "name": "Ψιψίνα - Αθηναϊκή Ψαροταβέρνα",
+    "address": "Colonel Zisimopoulos, 96, Athina 175 61",
+    "lat": "37.932530674886344",
+    "lng": "23.698986064990937"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wNokkeuemmPoYfgR7?g_st=ipc",
+    "name": "ΠΕΖΟΥΛΑΣ (από το 1951)",
+    "address": "Πεισίστρατου 11, Καλλιθέα 176 74",
+    "lat": "37.941197029624846",
+    "lng": "23.689708276473834"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1kvNDFxr5cv6uWZC9?g_st=ipc",
+    "name": "Άργουρα",
+    "address": "Αγησιλάου 49, Καλλιθέα 176 75",
+    "lat": "37.94571544668026",
+    "lng": "23.686046120341317"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DbA3c4zjWgt9uetk7?g_st=ipc",
+    "name": "Porto Spyros Ψαροταβέρνα",
+    "address": "Μαρίνα, Άλιμος 174 55",
+    "lat": "37.912061800224556",
+    "lng": "23.708912866162887"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tT9ydwBCoa2EgT5d7?g_st=ipc",
+    "name": "Το Αγκίστρι",
+    "address": "Παλμύρας 2, Γλυφάδα 165 61",
+    "lat": "37.88417743586951",
+    "lng": "23.75467629204283"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sSz3YRigMVCbLBcq6?g_st=ipc",
+    "name": "Τσιπουράδικο \"Άνοιξη παρά Τέταρτο\"",
+    "address": "Αθηνών Χαλκίδος 17, Άνοιξη 145 69",
+    "lat": "38.13115537085702",
+    "lng": "23.860540472523713"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NBfwV1GcmoeRk6M28?g_st=ipc",
+    "name": "ΖΑΡΚΑΔΟΥΛΑΣ - ΤΑ ΚΑΒΟΥΡΑΚΙΑ",
+    "address": "Βιθυνίας 32, Νίκαια 184 50",
+    "lat": "37.966878654895595",
+    "lng": "23.649066817348377"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xP92x5imjgkE5bYk8?g_st=ipc",
+    "name": "Ψαράκι μεζέ",
+    "address": "Αραχώβης 21, Πειραιάς 185 40",
+    "lat": "37.954110812866894",
+    "lng": "23.653950848247767"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ynWdVgiTz6C4H7y9A?g_st=ipc",
+    "name": "ΚΕΜΠΑΠΤΖΙΔΙΚΟ ΜΑΧΑΛΑΣ",
+    "address": "Π. Τσαλδάρη, 241-243, Νίκαια 184 50",
+    "lat": "37.97098229288963",
+    "lng": "23.644519445693433"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MsZEdpRYJ8p1nqmj9?g_st=ipc",
+    "name": "PISCIS (Mikrolimano)",
+    "address": "Ακτή Κουμουνδούρου 30, Πειραιάς 185 33",
+    "lat": "37.938490522505944",
+    "lng": "23.659032074228165"
+  },
+  {
+    "url": "https://maps.app.goo.gl/14E3gTprwmDfYzgz9?g_st=ipc",
+    "name": "Jimmy's Fish",
+    "address": "Ακτή Κουμουνδούρου 52, Πειραιάς 185 33",
+    "lat": "37.937411300998484",
+    "lng": "23.658441347658343"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hXejEzhnCFuwNgQb8?g_st=ipc",
+    "name": "Varoulko Seaside Restaurant",
+    "address": "Ακτή Κουμουνδούρου 54, Πειραιάς 185 33",
+    "lat": "37.93728962950612",
+    "lng": "23.658502308499486"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SNmz2TBABsNaydEj9?g_st=ipc",
+    "name": "Καπετάν Γιώργης «Ο Μυτιληνιός»",
+    "address": "Κωνσταντινουπόλεως 9, Γλυφάδα 166 75",
+    "lat": "37.86441144968363",
+    "lng": "23.748467238824272"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Fqinu6WnUcLK6Pe87?g_st=ipc",
+    "name": "ΨΑΡΟΚΟΚΚΑΛΟ ΤΗΣ ΑΝΝΑΣ",
+    "address": "Τσακάλωφ, Βίκτωρος Ουγκώ και, Κερατσίνι 187 57",
+    "lat": "37.969120176200505",
+    "lng": "23.623070103225206"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZCrtkSHsj9hx9EuQA?g_st=ipc",
+    "name": "Astakos",
+    "address": "Διαδόχου Παύλου 46, Γλυφάδα 166 75",
+    "lat": "37.861679317741114",
+    "lng": "23.746806965342177"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KZucjQ49PpF8K1GL7?g_st=ipc",
+    "name": "Μπαρμπουνάκι Γλυφάδα",
+    "address": "Λεωφ. Δημάρχου Αγγέλου Μεταξά 48, Γλυφάδα 166 74",
+    "lat": "37.85833613514832",
+    "lng": "23.75466359649667"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aW7neYrejPJDa4ZB6?g_st=ipc",
+    "name": "ΨΑΡΟΤΑΒΕΡΝΑ \"Ο ΒΑΣΙΛΗΣ\"",
+    "address": "Κουντουριώτου 12, Κερατσίνι 187 56",
+    "lat": "37.963242750995164",
+    "lng": "23.620073628540776"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eNuQNp1jpPTuF4Zp6?g_st=ipc",
+    "name": "Ψαροταβέρνα Ο Γιάννης",
+    "address": "Λεωφ. Χατζηκυριάκου 107, Πειραιάς 185 39",
+    "lat": "37.93499994150365",
+    "lng": "23.63212553676847"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8UkxMc6urxkVhCf28?g_st=ipc",
+    "name": "Το Υπερωκεάνιον",
+    "address": "Μαρίας Χατζηκυριάκου 48, Πειραιάς 185 38",
+    "lat": "37.937027133979264",
+    "lng": "23.630306101455314"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sYJ5yzi7qXwu1PYh8?g_st=ipc",
+    "name": "Ε/Γ Ταξιδεύοντας",
+    "address": "Πλάτωνος 72, Κερατσίνι 187 55",
+    "lat": "37.953699461411354",
+    "lng": "23.621203196911647"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4cT7yir2FyLEmVPB8?g_st=ipc",
+    "name": "ΤΡΑΤΑ (Η)",
+    "address": "Λεωφ. Ποσειδώνος 30, Νέα Μάκρη 190 05",
+    "lat": "38.09030258735327",
+    "lng": "23.982252068927664"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZboR52iNUWtrrWe79?g_st=ipc",
+    "name": "Μαργαρώ",
+    "address": "Λεωφ. Χατζηκυριάκου 126, Πειραιάς 185 38",
+    "lat": "37.934632942041354",
+    "lng": "23.629156640005732"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QuJBtKF3QD3n78sW8?g_st=ipc",
+    "name": "Το πλοκάμι",
+    "address": "Λεωφ. Ποσειδώνος, Νέα Μάκρη 190 05",
+    "lat": "38.09102735114395",
+    "lng": "23.981804303325717"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xsBV1faj5k58gwi47?g_st=ipc",
+    "name": "Ακρογιάλι",
+    "address": "Μιαούλη 8, Νέα Μάκρη 190 05",
+    "lat": "38.07176023911009",
+    "lng": "23.99585573289976"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pREKQTkahQ7imgAJ9?g_st=ipc",
+    "name": "ΨΑΡΟΤΑΒΕΡΝΑ ΜΕΖΕΔΟΠΩΛΕΙΟ ΟΥΖΕΡΙ - Ο ΦΑΡΟΣ",
+    "address": "Ακτή Θεμιστοκλέους 234, Πειραιάς 185 39",
+    "lat": "37.927084276139034",
+    "lng": "23.632290513272565"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Qd74p6vmhVLEfQxg7?g_st=ipc",
+    "name": "Αύρα",
+    "address": "Τέρμα, Λεωφ. Ποσειδώνος, Νέα Μάκρη 190 05",
+    "lat": "38.09393032588583",
+    "lng": "23.981355142971612"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FLne7XAZGedTHEkr6?g_st=ipc",
+    "name": "Ακτή",
+    "address": "Ακτή Θεμιστοκλέους 348, Πειραιάς 185 39",
+    "lat": "37.93233701473676",
+    "lng": "23.627879006589673"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GGis7goggoeEf7AZA?g_st=ipc",
+    "name": "Όρμος Αφροδίτης",
+    "address": "Ακτή Θεμιστοκλέους 288, Πειραιάς 185 39",
+    "lat": "37.92911543576971",
+    "lng": "23.62978900614557"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oH5KxTbr8PoKNwwL6?g_st=ipc",
+    "name": "Θέα Θάλασσα",
+    "address": "Ακτή Θεμιστοκλέους 344, Πειραιάς 185 39",
+    "lat": "37.93204953324016",
+    "lng": "23.62769564704017"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Po7BZ7burLRsugAE6?g_st=ipc",
+    "name": "Το Ακρί",
+    "address": "Ακτή Θεμιστοκλέους 298, Πειραιάς 185 39",
+    "lat": "37.928885346895214",
+    "lng": "23.628917142027834"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4oTzKcL1ekxnFPHm6?g_st=ipc",
+    "name": "Διάσημος",
+    "address": "Ακτή Θεμιστοκλέους 308, Πειραιάς 185 39",
+    "lat": "37.929473936509254",
+    "lng": "23.628330360905995"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wezeHrVUP5bEMGZo6?g_st=ipc",
+    "name": "Θαλασσάκι Πειραϊκή",
+    "address": "Ακτή Θεμιστοκλέους 310, Πειραιάς 185 39",
+    "lat": "37.92967354930952",
+    "lng": "23.62815798430667"
+  },
+  {
+    "url": "https://maps.app.goo.gl/a3BE4Jby4PK3CikYA?g_st=ipc",
+    "name": "ΟΙΝΟΜΑΓΕΙΡΕΙΟ Ο ΒΑΣΙΛΗΣ",
+    "address": "Ιχθυόσκαλα, Κερατσίνι 187 55",
+    "lat": "37.95641057665237",
+    "lng": "23.61228914458667"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1QEDPDZdZC7GT8ne9?g_st=ipc",
+    "name": "Sea Satin Athens Riviera",
+    "address": "Λεωφ. Κωνσταντίνου Καραμανλή 14, Βούλα 166 73",
+    "lat": "37.840376863615674",
+    "lng": "23.760387360489776"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Z6jt2F2sqvbCMw5DA?g_st=ipc",
+    "name": "Ξυπόλητος",
+    "address": "25ης Μαρτίου Αγιος Νικολας, Άρτεμις 190 16",
+    "lat": "37.99242931751304",
+    "lng": "24.031438739737503"
+  },
+  {
+    "url": "https://maps.app.goo.gl/USycaJUwTZTzMdADA?g_st=ipc",
+    "name": "Ισιδώρα",
+    "address": "Περικλέους ΠΑΡΑΛΙΑ, Μαραθώνας 190 07",
+    "lat": "38.11335499841936",
+    "lng": "23.98507325460099"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZtfRTs2EoQpXQkyy8?g_st=ipc",
+    "name": "Μεζεδοπωλείο «Η Χηρα»",
+    "address": "Αγίου Κωνσταντίνου και Ελένης, Άρτεμις 190 16",
+    "lat": "37.939079061504245",
+    "lng": "24.016183745998713"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fSjcPNAg9aRVEF926?g_st=ipc",
+    "name": "Ο Ψαράς Restaurant",
+    "address": "Παραλία Μαραθώνα, Λεωφ. Ποσειδώνος 3, Αγ. Παντελεήμων 190 07",
+    "lat": "38.11793561687655",
+    "lng": "23.99065580006594"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aXSXemiooEkkE8AKA?g_st=ipc",
+    "name": "Πανορμίτης",
+    "address": "Λεωφ. Ποσειδώνος 55, Αγ. Παντελεήμων 190 07",
+    "lat": "38.121572702191",
+    "lng": "23.99671729866393"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RqqP9EwfK4qQLD1v5?g_st=ipc",
+    "name": "ψαΡΑΚΙ",
+    "address": "Ευαγγελίστριας, Καλύβια Θορικού 190 10",
+    "lat": "37.83998892168737",
+    "lng": "23.92872058927444"
+  },
+  {
+    "url": "https://maps.app.goo.gl/f74w2o4iUn9xQDDs8?g_st=ipc",
+    "name": "Ψαροταβέρνα Χαμολιά",
+    "address": "Κλειούς, Βραυρώνα 190 03",
+    "lat": "37.920806600246216",
+    "lng": "24.027771872272915"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6zBxpoBupuA67wwt8?g_st=ipc",
+    "name": "Σαρδελάκι με θέα",
+    "address": "Λεωφ. Ποσειδώνος 18, Βουλιαγμένη 166 71",
+    "lat": "37.80897457022261",
+    "lng": "23.782330412997638"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZwRnw6egRaawky1TA?g_st=ipc",
+    "name": "Ο Τάκης",
+    "address": "Ηπείρου 66, Πέραμα 188 63",
+    "lat": "37.965219250882924",
+    "lng": "23.56442918090091"
+  },
+  {
+    "url": "https://maps.app.goo.gl/H8GUjvvHpXMG9g9D8?g_st=ipc",
+    "name": "ΧΑΡΤΙ ΚΑΙ ΚΑΛΑΜΑΡΙ",
+    "address": "Λεωφ. Ειρήνης 33, Πέραμα 188 63",
+    "lat": "37.964880612781556",
+    "lng": "23.561831186974818"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kX1Hohg5k4FcqjgeA?g_st=ipc",
+    "name": "Matsuhisa Athens",
+    "address": "40, Απόλλωνος street, Βουλιαγμένη 166 71",
+    "lat": "37.806991167366505",
+    "lng": "23.7721702530857"
+  },
+  {
+    "url": "https://maps.app.goo.gl/osnWCGuQG8gn8L3B9?g_st=ipc",
+    "name": "Ουζερί Λαγουδέρα",
+    "address": "Λεωφ. Δημοκρατίας 33, Πέραμα 188 63",
+    "lat": "37.96427992970154",
+    "lng": "23.558753968080776"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UabcyR39Vi7C4sYK7?g_st=ipc",
+    "name": "Τα Καλάμια",
+    "address": "Αθηνων, Καλύβια Θορικού 190 10",
+    "lat": "37.79114152759292",
+    "lng": "23.879331978178946"
+  },
+  {
+    "url": "https://maps.app.goo.gl/inr16Vqi6f4XARj86?g_st=ipc",
+    "name": "Κυρά Πόπη Ταβέρνα",
+    "address": "40.5, Λεωφ. Αθηνών Σουνίου, Καλύβια Θορικού 190 10",
+    "lat": "37.78165801312647",
+    "lng": "23.89057104630703"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ofvaTy2Fz5my1RhL9?g_st=ipc",
+    "name": "TOM Psarotaverna",
+    "address": "Παραλία Κακής Θαλάσσης 190 01",
+    "lat": "37.83896686862904",
+    "lng": "24.048707414360276"
+  },
+  {
+    "url": "https://maps.app.goo.gl/84sjRRsuicEhYQth9?g_st=ipc",
+    "name": "Ψαροταβέρνα Το Σέσι",
+    "address": "Λεωφ. Ποσειδώνος 53, Σέσι 190 07",
+    "lat": "38.24842775538029",
+    "lng": "23.99464421753432"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zRnJu32Cpbu5tH579?g_st=ipc",
+    "name": "ΑΚΡΟΓΙΑΛΙ",
+    "address": "Λεωφ. Αθηνών Σουνίου 5, Παλαιά Φώκαια 190 13",
+    "lat": "37.71656419364308",
+    "lng": "23.94570181232825"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HmragYkeYQJ2VW7G6?g_st=ipc",
+    "name": "Ταβερνα Αντιγόνη",
+    "address": "Μακροδημητραίων, Θυμάρι 190 13",
+    "lat": "37.69076965870636",
+    "lng": "23.94467815593701"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3QEEjs3jdS92q1p9A?g_st=ipc",
+    "name": "Ο Φόρος Ψαροταβέρνα",
+    "address": "Θορικό 195 00",
+    "lat": "37.730230476020374",
+    "lng": "24.052869189449837"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vTuWH4xsgnxg1ctN7?g_st=ipc",
+    "name": "Ρέρρας",
+    "address": "Κων/νου Πλειώνη, Ανδρέα Αλεξάνδρου και, Λαύριο 195 00",
+    "lat": "37.714742366222666",
+    "lng": "24.055779972024514"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FXSCcGp2kJVSweSb7?g_st=ipc",
+    "name": "Άγκυρα",
+    "address": "Ψαραγορά Λαύριο 3, Ανδρέα Αλεξάνδρου, Λαύριο 195 00",
+    "lat": "37.714457783213085",
+    "lng": "24.05577913623349"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UjGxTE3NH62racTj6?g_st=ipc",
+    "name": "Coralli sea food & more",
+    "address": "Γεωρ. Παπανικολάου, Γκίκα Παναγιώτου και, Νέα Στύρα 340 15",
+    "lat": "38.17680309383435",
+    "lng": "24.20738938198672"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Xe4ATvjns7X2yC947?g_st=ipc",
+    "name": "Σαρδε...λίτσα Νέα Στύρα / Sardelitsa Nea Styra Restaurant",
+    "address": "Λιμεναρχείο, Γκίκα Παναγιώτου, Νέα Στύρα 340 15",
+    "lat": "38.17743257826927",
+    "lng": "24.207403041603783"
+  },
+  {
+    "url": "https://maps.app.goo.gl/y16s54T91w6wpMWN8?g_st=ipc",
+    "name": "Ακρογιάλι,Νέα Στύρα, Γεώργιος Σάκκας",
+    "address": "Επαρ.Οδ. Στυρών - Τσακαίων, Νέα Στύρα 340 15",
+    "lat": "38.18207049369658",
+    "lng": "24.205304816688248"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5HLB654RHJNN8sJg6?g_st=ipc",
+    "name": "Θεόδωρος & Ελένη",
+    "address": "Λεωφ. Λεγραινών, Λαυρεωτική 195 00",
+    "lat": "37.66821016175742",
+    "lng": "23.995505349183023"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8emqMV9UqAiZvW9q9?g_st=ipc",
+    "name": "Μαρίδα Σούνιο",
+    "address": "64,5 χλμ. παραλιακη Αθηνων-Σουνίου, Λεγραινα, Σούνιο 195 00",
+    "lat": "37.663243704417745",
+    "lng": "24.000465853725956"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gJf1KcE3sZPjDyz8A?g_st=ipc",
+    "name": "Ταβέρνα Σταμάτης",
+    "address": "Λεωφόρος Αθηνών Σουνίου,Εσπερίδες, Σούνιο 195 00",
+    "lat": "37.662782663333054",
+    "lng": "24.004791713992123"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YDzUffe7ge8q4jKf9?g_st=ipc",
+    "name": "Vallis Restaurant Syrtaki",
+    "address": "195 00, Λεωφ. Σουνίου 114, Κάτω Σούνιο 195 00",
+    "lat": "37.66509395086791",
+    "lng": "24.035863264626645"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oqv397oz79KFz6w69?g_st=ipc",
+    "name": "Ρεμέτζο",
+    "address": "Λεωφ. Αρχαίου Θεάτρου 42, Ερέτρια 340 08",
+    "lat": "38.39112282038602",
+    "lng": "23.797236892149673"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HjnPeLQuxSvNKiyCA?g_st=ipc",
+    "name": "Ψαροταβέρνα Ο Ηλίας",
+    "address": "Σούνιο 195 00",
+    "lat": "37.65514957480802",
+    "lng": "24.024008483511512"
+  },
+  {
+    "url": "https://maps.app.goo.gl/79yGx1u8SDf1eccW7?g_st=ipc",
+    "name": "Ακρογιάλι",
+    "address": "Lavrion 195 00",
+    "lat": "37.65493906656911",
+    "lng": "24.024336259308715"
+  },
+  {
+    "url": "https://maps.app.goo.gl/123Yma2QRjswTuuD9?g_st=ipc",
+    "name": "Το Λιμανάκι Της Αμαρύνθου",
+    "address": "Μιαούλη, Αμάρυνθος 340 06",
+    "lat": "38.391630088057546",
+    "lng": "23.87976016192821"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Q3hYqnNSaAEfk5UH8?g_st=ipc",
+    "name": "Gorgona Di Stefano Amarythos Oυζερι Psarotaverna",
+    "address": "Κων/νου Καραμανλή 2, Αμάρυνθος 340 06",
+    "lat": "38.391896520308414",
+    "lng": "23.883711972578777"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cumYAkYMefX2wAAH9?g_st=ipc",
+    "name": "Ουζερί ο Σκοτάδης",
+    "address": "Λεωφ. Δημοκρατίας 46, Αίγινα 180 10",
+    "lat": "37.745028514829414",
+    "lng": "23.42967138367635"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zm3QJEgpXF2deJBSA?g_st=ipc",
+    "name": "AMMOS Restaurant",
+    "address": "Μαραθώνας, ΑΙΓΙΝΑ, Αίγινα 180 10",
+    "lat": "37.719362798936",
+    "lng": "23.459117899142395"
+  },
+  {
+    "url": "https://maps.app.goo.gl/G7eazVK35sNwj5Jm7?g_st=ipc",
+    "name": "Το 50ράκι του Ξενία",
+    "address": "παραλιακός, 1ος, Μαρμάρι 340 13",
+    "lat": "38.04899426758984",
+    "lng": "24.31914838714323"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Wvbm3uFeQe4HDRTB9?g_st=ipc",
+    "name": "Ψαροταβέρνα Αιγινήτισσα",
+    "address": "Αιγινίτισσας, Αίγινα 180 10",
+    "lat": "37.700098544992514",
+    "lng": "23.468697694131777"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dCAASevZrACGwEgU7?g_st=ipc",
+    "name": "Βράχος",
+    "address": "Αρχιεπισκόπου Μακαρίου 13, Ξηρόβρυση 341 00",
+    "lat": "38.4643775006023",
+    "lng": "23.588227655624095"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LQtQYgZXaYX7b86f7?g_st=ipc",
+    "name": "Nontas Fish Restaurant Aegina",
+    "address": "Perdika, Perdika, Aegina 180 10",
+    "lat": "37.69108297293718",
+    "lng": "23.45380750830205"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fAYcLjvxJmM1brLc9?g_st=ipc",
+    "name": "Ψαροταβέρνα ο Μίλτος",
+    "address": "Πέρδικα, Αίγινα 180 10",
+    "lat": "37.69125643205692",
+    "lng": "23.452985316664172"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Xcjr5cpx6UGWAkLQ7?g_st=ipc",
+    "name": "Εστιατόριο Γιοβίτα",
+    "address": "Περδικα, Αίγινα 180 10",
+    "lat": "37.69141494985634",
+    "lng": "23.45251808446286"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nQGXrzboUPgm58NX9?g_st=ipc",
+    "name": "Το κουτούκι του Περικλή",
+    "address": "Νέα Λάμψακος 341 00",
+    "lat": "38.43468667088763",
+    "lng": "23.62151189556845"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JQSmhWPQjaPxMKdR8?g_st=ipc",
+    "name": "Καπετάνιος",
+    "address": "Παραλία Λαμψάκου 341 00",
+    "lat": "38.43674651836107",
+    "lng": "23.6218638887793"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EE6oa72MB34puz5e8?g_st=ipc",
+    "name": "Το κύμα του Λουκά",
+    "address": "Δημοσθένη, Τόσκα, Νέα Λάμψακος 341 00",
+    "lat": "38.43818318214878",
+    "lng": "23.621937029677294"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iJW3zjT5zf2LYsK16?g_st=ipc",
+    "name": "Ουζερί \"Ακρογιάλι\"",
+    "address": "λοχία Ρωμιόπουλου 13, Χαλκίδα Νέα Λάμψακος 341 00",
+    "lat": "38.440313479921635",
+    "lng": "23.621738281701006"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7p2KKH1ay3AcjzQf6?g_st=ipc",
+    "name": "Γευσίπλους",
+    "address": "Θεοχάρη Κότσικα 3, Κάρυστος 340 01",
+    "lat": "38.01363391931526",
+    "lng": "24.41848605895524"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DTL79NVCVS4exKdr9?g_st=ipc",
+    "name": "ΤΟ ΘΑΛΑΜΙ",
+    "address": "Εθ. Συμφιλίωσης, Χαλκίδα 341 00",
+    "lat": "38.47386855302924",
+    "lng": "23.60361544187376"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EU5w8nGgmktzo3Gq8?g_st=ipc",
+    "name": "Ουζερί Απάνεμο",
+    "address": "Εθ. Συμφιλίωσης 78, Χαλκίδα 341 00",
+    "lat": "38.473971555271454",
+    "lng": "23.603700122583223"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cVt18H2LKwwAMxpC7?g_st=ipc",
+    "name": "Ψαροταβέρνα \"Το Πετράδι\"",
+    "address": "Άγιοι Απόστολοι 340 17",
+    "lat": "38.41006072552465",
+    "lng": "24.197994037205248"
+  },
+  {
+    "url": "https://maps.app.goo.gl/imZ9FsHT92dDgX1n6?g_st=ipc",
+    "name": "ΚΟΥΤΣΗ ΚΑΡΑΒΙΔΑ",
+    "address": "ΑΓΙΟΙ ΑΠΟΣΤΟΛΟΙ, ΕΥΒΟΙΑ 340 17",
+    "lat": "38.41081459324057",
+    "lng": "24.196977288543714"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fFb2Q8BVpKvPF6gTA?g_st=ipc",
+    "name": "ΤΕΣΚΟΣ",
+    "address": "Αγίου Νικολάου 42, Νέα Αρτάκη 346 00",
+    "lat": "38.513309644695795",
+    "lng": "23.63544291330188"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1Th6rJgnvtfqZg6q7?g_st=ipc",
+    "name": "Poseidon Restaurant",
+    "address": "Πλατεία Βιρβίλη, Πόρος 180 20",
+    "lat": "37.50071286982713",
+    "lng": "23.45417804690704"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PptKq3WRsYvpTsqu5?g_st=ipc",
+    "name": "Κάβος",
+    "address": "Ίσθμια 201 00",
+    "lat": "37.9019948722367",
+    "lng": "23.01292994879006"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hdAPtt1dSNxNigaPA?g_st=ipc",
+    "name": "ΑΛΜΥΡΙΚΙ",
+    "address": "R2X3+G5, Epar.Od. Moni Taxiarchon - Kato Almiri, Kato Almiri 201 00",
+    "lat": "37.852743518617515",
+    "lng": "23.00215185401227"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9WDCt3PAuTfMs7ke8?g_st=ipc",
+    "name": "Ουζερί ο Γιάννης",
+    "address": "Γεωρ. Λέκκα 3, Λουτράκι 203 00",
+    "lat": "37.97847865950633",
+    "lng": "22.976754663547947"
+  },
+  {
+    "url": "https://maps.app.goo.gl/55rvgJM2cg2quvQr9?g_st=ipc",
+    "name": "Paolo Nikos Restaurant",
+    "address": "Ποσειδώνος, Λουτράκι 203 00",
+    "lat": "37.97387325898538",
+    "lng": "22.97577321461108"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fTiUsZtuT7FzXx5m8?g_st=ipc",
+    "name": "Φάνης",
+    "address": "Γεωρ. Παπανδρέου 87, Κόρινθος 201 00",
+    "lat": "37.93929883889628",
+    "lng": "22.920388237170222"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WChcxQZZeaRjrCgLA?g_st=ipc",
+    "name": "Omilos Restaurant Bar",
+    "address": "Epar.Od. Mandrakiou-Molou, Idra 180 40",
+    "lat": "37.35145736724594",
+    "lng": "23.46444594181709"
+  },
+  {
+    "url": "https://maps.app.goo.gl/24WnQ3Q4oomRkZm38?g_st=ipc",
+    "name": "Sunset Restaurant",
+    "address": "Eparxiaki odos Hydra, 180 40",
+    "lat": "37.35168822648852",
+    "lng": "23.46274301702218"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iEjEefYGNPNwNDDy6?g_st=ipc",
+    "name": "Psaropoula",
+    "address": "Miaouli 454, Idra 180 40",
+    "lat": "37.349711329596715",
+    "lng": "23.46495669234671"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LkcL3YyhTtP2AGh39?g_st=ipc",
+    "name": "Téchnē Restaurant & Social",
+    "address": "Epar.Od. Mandrakiou-Molou, Idra 180 40",
+    "lat": "37.3499478063",
+    "lng": "23.461255663187938"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mPqqGc7qF5ff2aPP9?g_st=ipc",
+    "name": "Πετροκάραβο Κώστας Δόσχορης",
+    "address": "Κορινθιακός κόλπος Στέρνα, Loutraki Perachora 203 00",
+    "lat": "38.05084603587256",
+    "lng": "22.892852891023853"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GWWwUXx8q4vncoUU7?g_st=ipc",
+    "name": "Arias restaurant Kythnos",
+    "address": "Unnamed Road, Ag. Irini, Kithnos 840 06",
+    "lat": "37.43805920967631",
+    "lng": "24.433681333413276"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Aaq7XhnhCgZUhsH29?g_st=ipc",
+    "name": "Θέαλος - Thealos",
+    "address": "Unnamed Rd, Kato Assos 200 06",
+    "lat": "37.94991846803997",
+    "lng": "22.83722013675207"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6pEnXsNrPXAaNQPu8?g_st=ipc",
+    "name": "Mastello",
+    "address": "Μπατσί 845 01",
+    "lat": "37.85819226338292",
+    "lng": "24.78588365168363"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mBX3JbJMAWJA4x3Y7?g_st=ipc",
+    "name": "Stamatis Tavern",
+    "address": "Κυκλάδων Ανδρος, Mpatsi 845 03",
+    "lat": "37.85607023280217",
+    "lng": "24.78575728988094"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NHF5wztHFXbNzzkG6?g_st=ipc",
+    "name": "Oti Kalo",
+    "address": "Μπατσί 845 01",
+    "lat": "37.8562893028016",
+    "lng": "24.785922766571392"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LBNaRdz7e7zbNDVz5?g_st=ipc",
+    "name": "Arodou Seafood Taverna",
+    "address": "Unnamed Road, Kithnos 840 06",
+    "lat": "37.39685622322288",
+    "lng": "24.459369243856617"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EEU9XawrL4yhTEhm7?g_st=ipc",
+    "name": "Tripia Sayionara Tavern",
+    "address": "εισοδος απο παραλια, Elevtheriou Veniavelou 4, Tolo 210 56",
+    "lat": "37.51747745166334",
+    "lng": "22.85839744503769"
+  },
+  {
+    "url": "https://maps.app.goo.gl/g7MbV8Cu1pjFFz8b7?g_st=ipc",
+    "name": "Binelikia",
+    "address": "Νειμποριό, Andros 845 00",
+    "lat": "37.83942195557314",
+    "lng": "24.93605561916826"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UE7bKqxToKu8gHZ56?g_st=ipc",
+    "name": "Anemoia",
+    "address": "Evia Island, Rovies 340 05",
+    "lat": "38.80770176326322",
+    "lng": "23.228365127072003"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AdyzF8weXRZVC15f6?g_st=ipc",
+    "name": "Λιθοδομή",
+    "address": "Αλίκης Ψάλτη, Ormos Korthiou 845 02",
+    "lat": "37.7730077055442",
+    "lng": "24.95123511430265"
+  },
+  {
+    "url": "https://maps.app.goo.gl/J6rBsvJ8fqbki2T77?g_st=ipc",
+    "name": "Pharos Restaurant",
+    "address": "Ilia, Ilia, Edipsos 343 00",
+    "lat": "38.84777841501031",
+    "lng": "23.122079543325817"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fZarxkpuFnFbzYFR6?g_st=ipc",
+    "name": "Allou Yialou",
+    "address": "Κίνι 841 00",
+    "lat": "37.446952094396515",
+    "lng": "24.900261999085988"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tQ8KG4SFF8YgjTwr9?g_st=ipc",
+    "name": "Kalis Seafood Restaurant",
+    "address": "Λιβάδι 840 05",
+    "lat": "37.142642900528166",
+    "lng": "24.514223256740497"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gop1o8sLeZBAttGy7?g_st=ipc",
+    "name": "ORA baresto",
+    "address": "Επαρχιακή Οδός Ερμούπολης-Φοίνικων,Φοίνικας 841 00 ΣΥΡΟΣ, 841 00",
+    "lat": "37.398407848807196",
+    "lng": "24.87840275006321"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FhoWaSrsyrypuExG8?g_st=ipc",
+    "name": "Táma",
+    "address": "Όρμος Πανόρμου 842 01",
+    "lat": "37.651655752579366",
+    "lng": "25.051591259144875"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eqUQ8oiZuscvzKLaA?g_st=ipc",
+    "name": "To Θαλασσάκι",
+    "address": "bay, Isternia 842 01",
+    "lat": "37.615230690872465",
+    "lng": "25.0428843541274"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hQcCLsq7XdBziH8Y6?g_st=ipc",
+    "name": "Maravelis Tavern",
+    "address": "Paraliaki Agiou Nikolaou, Paralia Agiou Nikolaou 343 00",
+    "lat": "38.87783676050129",
+    "lng": "23.034445964763474"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DpvC9bsrL18rv9WD9?g_st=ipc",
+    "name": "Korali Seafood Restaurant . Agnontas Skopelos",
+    "address": "Epar.Od. Agnontas, Skopelos 370 03",
+    "lat": "39.08302676907846",
+    "lng": "23.71151668170709"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CV5VQnagTSebUic97?g_st=ipc",
+    "name": "Bolas Restaurant Syros",
+    "address": "Βάρη 841 00",
+    "lat": "37.390186602163425",
+    "lng": "24.945820061380417"
+  },
+  {
+    "url": "https://maps.app.goo.gl/D5L2xNDUmBf9SdfQ9?g_st=ipc",
+    "name": "STELIOS",
+    "address": "Γυρίσματα, Skiros 340 07",
+    "lat": "38.92732372527763",
+    "lng": "24.574549606903982"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vF6q9SxKr2jVHXpy7?g_st=ipc",
+    "name": "Έσπερος ΙΧΘΥΣ Ψαροταβέρνα",
+    "address": "Derveni 200 09",
+    "lat": "38.13318899935724",
+    "lng": "22.423103842089304"
+  },
+  {
+    "url": "https://maps.app.goo.gl/G8KXo81mCU6jbPnZ8?g_st=ipc",
+    "name": "Antonis Greek Traditional Cuisine",
+    "address": "Αγ.Γεώργιος 34, Οδός Κάβου 300, Ag. Georgios 343 00",
+    "lat": "38.83737186575876",
+    "lng": "22.887933091146778"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GYPTidFzoXiRNDdCA?g_st=ipc",
+    "name": "Infinity Blue Restaurant",
+    "address": "Kolios, 370 02",
+    "lat": "39.142389727462664",
+    "lng": "23.44573084758166"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DardoapX9Zoh1VF77?g_st=ipc",
+    "name": "Carnayo Restaurant Skiathos",
+    "address": "Paraliakos, Skiathos 370 02",
+    "lat": "39.165824279351774",
+    "lng": "23.493041550704223"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tUiEEByDucNo1PfbA?g_st=ipc",
+    "name": "Kehria Tarsanas Taverna",
+    "address": "Unnamed Road, Skiathos 370 02",
+    "lat": "39.18412173483994",
+    "lng": "23.445119695165598"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tHMerUFf4UU2S8jr8?g_st=ipc",
+    "name": "Taverna Areti - Stamoulis",
+    "address": "Αγ. Γεώργιος 370 06",
+    "lat": "39.172445737181256",
+    "lng": "23.342568733517215"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9qZMAALf8EZ6XnGKA?g_st=ipc",
+    "name": "To Karnagio / Το Καρνάγιο - Αγία Κυριακή Νοτίου Πηλίου",
+    "address": "Epar.Od. Trikeriou-Agias Kiriakis 212, Ag. Kiriaki 370 09",
+    "lat": "39.09262802220784",
+    "lng": "23.06864421145359"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HKBpdAh3KxQWGaRr8?g_st=ipc",
+    "name": "Argo Restaurant",
+    "address": "Epar.Od. Milina-Trikeri, Milina 370 13",
+    "lat": "39.17227725570198",
+    "lng": "23.22064957150471"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XvLMJtYJDb2Y3mQR7?g_st=ipc",
+    "name": "Captain George",
+    "address": "Κάστρο 840 03",
+    "lat": "36.972680765040145",
+    "lng": "24.746232108057637"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bGogp723rTJwR3cx7?g_st=ipc",
+    "name": "ANGIE seaside restaurant",
+    "address": "Φαρος, Faros 840 03",
+    "lat": "36.944136259291675",
+    "lng": "24.751012764820505"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xbF6ZRisum4Kfmgz5?g_st=ipc",
+    "name": "Pelicanos",
+    "address": "beach, Faros 840 03",
+    "lat": "36.94422039775623",
+    "lng": "24.751254852785607"
+  },
+  {
+    "url": "https://maps.app.goo.gl/R8Jg72P8QchmsSubA?g_st=ipc",
+    "name": "Alyelo Bar Restaurant",
+    "address": "Φάρος 840 03",
+    "lat": "36.944070932851574",
+    "lng": "24.75112565793777"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hct1BV2oGe6F3cM97?g_st=ipc",
+    "name": "Yalos Sifnos",
+    "address": "Πλατύς Γιαλός 840 03",
+    "lat": "36.93198313076824",
+    "lng": "24.73092559432301"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RsiuxKtR7W21BNnb8?g_st=ipc",
+    "name": "Maiòlica Sifnos",
+    "address": "Πλατύς Γιαλός 840 03",
+    "lat": "36.93201088219794",
+    "lng": "24.731152746803176"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jioScJGAm2izK6a49?g_st=ipc",
+    "name": "Omega3",
+    "address": "Πλατύς Γιαλός 840 03",
+    "lat": "36.932052168795934",
+    "lng": "24.731352405475214"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cVYzE7woRBCoPvRG9?g_st=ipc",
+    "name": "Captain's - Food for Sharing",
+    "address": "Mykonos Waterfront, Mikonos 846 00",
+    "lat": "37.44729761897664",
+    "lng": "25.32716222892849"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zGu4QC3RAJ8qwFzE6?g_st=ipc",
+    "name": "Kounelas Fish Tavern",
+    "address": "ODOS SVORONOU, Mikonos 846 00",
+    "lat": "37.447078731895196",
+    "lng": "25.327109291093613"
+  },
+  {
+    "url": "https://maps.app.goo.gl/P1ey2vdmerWsiMqXA?g_st=ipc",
+    "name": "Hippie Fish Mykonos",
+    "address": "Agios Ioannis, Mikonos 846 00",
+    "lat": "37.4216168444124",
+    "lng": "25.3115215810695"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FeCit9aZLtZzL7DP8?g_st=ipc",
+    "name": "To Maereio",
+    "address": "Ν, Kalogera 16, Mikonos 846 00",
+    "lat": "37.44594592016657",
+    "lng": "25.32865488584039"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zDFvBri1oSmdB6aV8?g_st=ipc",
+    "name": "Kiki's Tavern",
+    "address": "Κυκλαδες μυκονος, Ag. Sostis 846 00",
+    "lat": "37.48580571700608",
+    "lng": "25.36037551259411"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xEc3zgbQENWmj7bk8?g_st=ipc",
+    "name": "Pelao Tavern",
+    "address": "Stopelao@gmail.com, Πάνορμος 846 00",
+    "lat": "37.47762741859572",
+    "lng": "25.360085295125813"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GfjsFWp6Rpr3hZyH8?g_st=ipc",
+    "name": "Nikolas Tavern Mykonos - Seafood Restaurant",
+    "address": "Paraga Mykonos, Mikonos 846 00",
+    "lat": "37.409158532586275",
+    "lng": "25.34844810083572"
+  },
+  {
+    "url": "https://maps.app.goo.gl/97rM65KFuFY4e1Wc9?g_st=ipc",
+    "name": "Tasos Taverna",
+    "address": "Paraga Beach, Mikonos 846 00",
+    "lat": "37.40810167705386",
+    "lng": "25.350310426097927"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KNjSWtb43DnSGnxU7?g_st=ipc",
+    "name": "Ακρογιαλι Γαλανος",
+    "address": "Epar.Od. Lefokastrou-Afisou, Afissos 370 10",
+    "lat": "39.26649482814042",
+    "lng": "23.166733047141467"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NuKJCrD5oxJ47mE18?g_st=ipc",
+    "name": "Fokos Taverna",
+    "address": "Fokos Φωκός, Ano Mera 846 00",
+    "lat": "37.48058147464832",
+    "lng": "25.4091552850878"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kJps23htN4HRkisa6?g_st=ipc",
+    "name": "Tsaf",
+    "address": "Πλατεία Ανω μερας, Ano Mera 846 00",
+    "lat": "37.44718665279816",
+    "lng": "25.39108104189754"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WjiGf9HWCLVQssrK7?g_st=ipc",
+    "name": "Spilia Mykonos Seaside Restaurant",
+    "address": "Καλαφάτη 846 00",
+    "lat": "37.4346532807744",
+    "lng": "25.419253772230018"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tS93xJU8Wr7t5Kdn6?g_st=ipc",
+    "name": "Lia Tavern",
+    "address": "Unnamed Road, Mikonos 846 00",
+    "lat": "37.44620505587329",
+    "lng": "25.435439300552154"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ScnZGixdZ4dqUL3V6?g_st=ipc",
+    "name": "Taverna Mouragio",
+    "address": "Παροικία - Παραλιακός Δρόμος Παροικίας Παρος, 844 00",
+    "lat": "37.08418771728996",
+    "lng": "25.146730718001848"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YqeBLughpHcPmHy19?g_st=ipc",
+    "name": "Bluefish Paros",
+    "address": "Naoussa, Paros 844 01",
+    "lat": "37.12385227854004",
+    "lng": "25.235378897681453"
+  },
+  {
+    "url": "https://maps.app.goo.gl/a8XzzgdiGdqnwgxp6?g_st=ipc",
+    "name": "Sigi Ikthios",
+    "address": "Limanaki Naousa, Naousa 844 01",
+    "lat": "37.12488461984584",
+    "lng": "25.2375451186848"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ywWETxsWSPkbUx8eA?g_st=ipc",
+    "name": "Psaravolada Restaurant",
+    "address": "Ψαραβολάδα, Αγία Κυριακη 848 00",
+    "lat": "36.67157549974308",
+    "lng": "24.505578356845632"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TXanhReoHFTGYtHL9?g_st=ipc",
+    "name": "Aggelika Fish Taverna",
+    "address": "Μαγνησία Πήλιο Τσαγκαράδα Μυλοπόταμος, Πήλιο Μυλοπόταμος 370 12",
+    "lat": "39.37460340431694",
+    "lng": "23.203276067077514"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Y5FqpWpLwoZYaHni9?g_st=ipc",
+    "name": "Siparos Seaside Restaurant",
+    "address": "Ξιφαρά 844 01",
+    "lat": "37.12641356420799",
+    "lng": "25.266629540061626"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oZW4nirAsKmE2gbg8?g_st=ipc",
+    "name": "Ο ΚΑΤΣΟΥΝΑΣ",
+    "address": "Σάντα Μαρια 844 01",
+    "lat": "37.13969481378141",
+    "lng": "25.28757143574355"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Akkg1SwxQNzQ7Qxb7?g_st=ipc",
+    "name": "Apoplous Greek Restaurant",
+    "address": "Αλυκη Παρος, Aliki 844 00",
+    "lat": "36.99681929753503",
+    "lng": "25.136496141109756"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cqX5H5Ys7cUSx38m7?g_st=ipc",
+    "name": "Ouzeri Halaris",
+    "address": "Epar.Od. Parikias-Piso Livadiou, Piso Livadi 844 00",
+    "lat": "37.03514430348778",
+    "lng": "25.26011593103973"
+  },
+  {
+    "url": "https://maps.app.goo.gl/12A4RBbA4PBszZC29?g_st=ipc",
+    "name": "Tsipouradiko Jim",
+    "address": "Miaouli 75, Volos 383 34",
+    "lat": "39.369800719515084",
+    "lng": "22.92725362558626"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oxZs4qMQgE4Km14y6?g_st=ipc",
+    "name": "BOKOS OUZERI",
+    "address": "Meandrou 143, Nea Ionia 384 45",
+    "lat": "39.37238019955491",
+    "lng": "22.928830138574348"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FCsJjFS6FdS2hgQ86?g_st=ipc",
+    "name": "Apanemi Town",
+    "address": "Leof. Naxou Eggaron, Naxos 843 00",
+    "lat": "37.10834996586582",
+    "lng": "25.376821223396767"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AXzYwLeXrYvTjRri8?g_st=ipc",
+    "name": "Sarris Tavern",
+    "address": "Sarris Tavern 8, Naxos 843 00",
+    "lat": "37.10364861622317",
+    "lng": "25.37580990635783"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BH3za9tuZUwNeCz87?g_st=ipc",
+    "name": "Café Ouzerie Barabbas",
+    "address": "Naxos 843 00",
+    "lat": "37.10204187531306",
+    "lng": "25.37502616238965"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yMHNpMahUsVq7kRRA?g_st=ipc",
+    "name": "Nissaki Restaurant est. 1971",
+    "address": "Agiou Georgiou, Naxos 843 00",
+    "lat": "37.10031334389294",
+    "lng": "25.37366043300574"
+  },
+  {
+    "url": "https://maps.app.goo.gl/f5SYBYZkLKJhZSov6?g_st=ipc",
+    "name": "Akrogiali Restaurant- Studios",
+    "address": "Αγ. Αννα 843 00",
+    "lat": "37.06850212174682",
+    "lng": "25.355709551048015"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GtDv9b8CT74i2V498?g_st=ipc",
+    "name": "Ταβέρνα Πλυμάρι",
+    "address": "Analipsi, Zagora 370 01",
+    "lat": "39.47033473010399",
+    "lng": "23.111161118498085"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pjwBsRKTeWC7U2RX6?g_st=ipc",
+    "name": "SAGA FISH RESTAURANT",
+    "address": "ΤΖΑΝΝΗ ΤΖΑΝΕΤΑΚΗ, Githio 232 00",
+    "lat": "36.75609227671703",
+    "lng": "22.56974766830783"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vfCEnss3wGtRVEwf8?g_st=ipc",
+    "name": "Antamoma DeliCuisine",
+    "address": "Ai Giannis, Apirathos 843 00",
+    "lat": "37.05815377728116",
+    "lng": "25.5110845454022"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SyckXnzEqa1w9FPR9?g_st=ipc",
+    "name": "Μουρτάς Ψαροταβέρνα",
+    "address": "Palea EO Patras Pyrgou 35-45, Paralia 265 00",
+    "lat": "38.19791064176577",
+    "lng": "21.696505177930376"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oDvDW47p75wDgfpm6?g_st=ipc",
+    "name": "Apanemi",
+    "address": "Moutsouna, Naxos 843 02",
+    "lat": "37.07828569738803",
+    "lng": "25.58750367173503"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Mp22UWxr4LuQZaQa6?g_st=ipc",
+    "name": "για ψαράκι",
+    "address": "Stavropoulou 101, Monodendri 250 02",
+    "lat": "38.16996316334188",
+    "lng": "21.67408353856444"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UZ9gptAC7Z6jkYbL6?g_st=ipc",
+    "name": "KITRO beach bar",
+    "address": "Kitries 240 16",
+    "lat": "36.929308748219135",
+    "lng": "22.141911839670122"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kT2ULB9zvGfgQDHr6?g_st=ipc",
+    "name": "Koubara Seafood Bar Restaurant",
+    "address": "Κουμπάρα 840 01",
+    "lat": "36.72514063337273",
+    "lng": "25.257265066552723"
+  },
+  {
+    "url": "https://maps.app.goo.gl/heQpgB74pYJ6gzkA7?g_st=ipc",
+    "name": "Black Pirate",
+    "address": "Νέο Οίτυλο 230 62",
+    "lat": "36.690856383249425",
+    "lng": "22.389756995558262"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5J1tsPBuPnJDQAsV7?g_st=ipc",
+    "name": "CAPETAN NIKOLAS",
+    "address": "Koufonisia 843 00",
+    "lat": "36.931591561962186",
+    "lng": "25.597135247422372"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PmLKrE9T1eDy9JUy7?g_st=ipc",
+    "name": "Ouzeri The Mills",
+    "address": "Kalouta 113, Chios 821 00",
+    "lat": "38.38206090575411",
+    "lng": "26.137518038647382"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EvoRNfkp6kGNwvRZ9?g_st=ipc",
+    "name": "Mouria Taverna, Vrontados, Chios",
+    "address": "Κωστή Λω 2, Vrontados 82150",
+    "lat": "38.41467488328915",
+    "lng": "26.13506103413844"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kLJEBwW1UwPjBLb57?g_st=ipc",
+    "name": "Pantoukios",
+    "address": "Παντουκιός 821 00",
+    "lat": "38.46363263361025",
+    "lng": "26.135082897089756"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DN12c6YKymvAuHE9A?g_st=ipc",
+    "name": "Villa Stasa Sea Restaurant",
+    "address": "Loutra, Agia Paraskeui, Kassandra Chalkidiki 630 85",
+    "lat": "39.925439038727305",
+    "lng": "23.588406494329757"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tGn4Eecy7SmLvgcn9?g_st=ipc",
+    "name": "Porto Marina / Πόρτο Μαρίνα",
+    "address": "Porto Koufo 630 72",
+    "lat": "39.971313118009334",
+    "lng": "23.918182244358935"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xM3w3kkvbVhTTiVCA?g_st=ipc",
+    "name": "Taverna Tzitzikas",
+    "address": "Porto Koufo 630 72",
+    "lat": "39.97131621436269",
+    "lng": "23.918318099276224"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xDr9PEeg36c9PLKh7?g_st=ipc",
+    "name": "Restaurant Sidera",
+    "address": "Possidi 630 77",
+    "lat": "39.96314971393841",
+    "lng": "23.382915590015017"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Mv522SonrUt6TBiLA?g_st=ipc",
+    "name": "Fish Tavern Tsaparis",
+    "address": "Unnamed Rd, Greece, Pefkochori 630 85",
+    "lat": "39.98759758204977",
+    "lng": "23.614455119611083"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TYraAejWnPa3R12Q9?g_st=ipc",
+    "name": "Bakalis",
+    "address": "Pefkochori 630 85",
+    "lat": "39.98870698412509",
+    "lng": "23.62008792284829"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jLfeA7GVxX2adg1N7?g_st=ipc",
+    "name": "Mamalouka Beach Bar",
+    "address": "Unnamed Road, Kassandra 630 85",
+    "lat": "39.99397320123866",
+    "lng": "23.600495836465395"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eknLukeQuWd7G4fW8?g_st=ipc",
+    "name": "Almyriki",
+    "address": "Katapola, Xilokeratidi 840 08",
+    "lat": "36.83118579310379",
+    "lng": "25.86459980269408"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qeiMhDDAhTy881ZMA?g_st=ipc",
+    "name": "Mouragio Taverna",
+    "address": "Κατάπολα 840 08",
+    "lat": "36.82713304585838",
+    "lng": "25.86300862920973"
+  },
+  {
+    "url": "https://maps.app.goo.gl/J1yUSdS75CdNMzon8?g_st=ipc",
+    "name": "Capetan Dimos",
+    "address": "Κατάπολα 840 08",
+    "lat": "36.826649786040434",
+    "lng": "25.864391545420993"
+  },
+  {
+    "url": "https://maps.app.goo.gl/59Aq6jZbxYFVPEPU7?g_st=ipc",
+    "name": "Mple Seaside Gastrobar",
+    "address": "Σκάλα Φούρκας 630 77",
+    "lat": "39.996322262418225",
+    "lng": "23.38211842182523"
+  },
+  {
+    "url": "https://maps.app.goo.gl/77jkhaQtjejhyNVk9?g_st=ipc",
+    "name": "Panos Fish Tavern",
+    "address": "63081, Neos Marmaras 630 81",
+    "lat": "40.02825871317535",
+    "lng": "23.814126287287745"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ocoYehgdG9tZzoCd6?g_st=ipc",
+    "name": "Afropsaro Santorini",
+    "address": "Imerovigli 847 00",
+    "lat": "36.44373697181477",
+    "lng": "25.4260466585142"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7zcGKcrt65G6bQFf6?g_st=ipc",
+    "name": "Γλυκάνισος",
+    "address": "Fourka 630 77",
+    "lat": "40.005631717428024",
+    "lng": "23.415752772781822"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iP8wYvDkitTVjfa76?g_st=ipc",
+    "name": "5 steps in the sand",
+    "address": "Unnamed Rd, Sithonia 630 72",
+    "lat": "40.034668702268604",
+    "lng": "23.99606130491612"
+  },
+  {
+    "url": "https://maps.app.goo.gl/E5GA7Cu7XS5a5jut9?g_st=ipc",
+    "name": "Roza's",
+    "address": "Vourvoulos Santorini Island, 847 00",
+    "lat": "36.43483486218363",
+    "lng": "25.4369605787624"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aQ4u4RqjucDESjM66?g_st=ipc",
+    "name": "Askas Restaurant",
+    "address": "Epar.Od. Katapola-Thalarias, Paralia Tholarion 840 08",
+    "lat": "36.90689335338981",
+    "lng": "25.97877118696508"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XzSf26up7JduLUrV9?g_st=ipc",
+    "name": "Amorgialos",
+    "address": "αιγιαλη, αμοργος 840 08",
+    "lat": "36.90135301074789",
+    "lng": "25.97627688507805"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CFKDV9FzeK4koTmt5?g_st=ipc",
+    "name": "Limani Restaurant",
+    "address": "Αιγιάλη 840 08",
+    "lat": "36.901162221052765",
+    "lng": "25.976288792173918"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TbVXDeBneUxZKZxp7?g_st=ipc",
+    "name": "Trizoni Sea Treasures",
+    "address": "Trizoni Sea Treasures, Kriopigi 630 77",
+    "lat": "40.03314898834852",
+    "lng": "23.476924334583536"
+  },
+  {
+    "url": "https://maps.app.goo.gl/FwBmnh2RPeVaK64U6?g_st=ipc",
+    "name": "Triana Tavern",
+    "address": "25is Martiou 405, Thira 847 00",
+    "lat": "36.42013344956067",
+    "lng": "25.432032180485958"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LaFf3b4PU7b9Fdin8?g_st=ipc",
+    "name": "Yalos",
+    "address": "Έξω Γιαλός Θήρας 847 00",
+    "lat": "36.429358736881454",
+    "lng": "25.45892129944303"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pXxiEsVASm4fz94F7?g_st=ipc",
+    "name": "Giannakaros",
+    "address": "Παραλία Θάνους 814 00",
+    "lat": "39.84054300748565",
+    "lng": "25.08178620013765"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2y3hfnQFk6jPWzpm7?g_st=ipc",
+    "name": "Ta Kymata - Fresh Fish & Seafood Restaurant",
+    "address": "Ιωάννη, Karra, Neos Marmaras 630 81",
+    "lat": "40.09465479356917",
+    "lng": "23.781009690936443"
+  },
+  {
+    "url": "https://maps.app.goo.gl/s3bXAQZmTZm8mRD49?g_st=ipc",
+    "name": "Ta Vrahakia",
+    "address": "Sarti, 630 72",
+    "lat": "40.097540490283095",
+    "lng": "23.98106959598484"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gcPprUPwwjyMys6K6?g_st=ipc",
+    "name": "Romeo Restaurant",
+    "address": "Navarchou Kountourioti 4, Mirina 814 00",
+    "lat": "39.877624727759105",
+    "lng": "25.0589103454787"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WeAqEXpj73UsAVaH8?g_st=ipc",
+    "name": "To Psaraki",
+    "address": "Marina, Vlichada 847 00",
+    "lat": "36.33792749755298",
+    "lng": "25.43489591016144"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qubazwv6QdLJPnuv6?g_st=ipc",
+    "name": "Oceanides Seafood Restaurant",
+    "address": "Epar.Od. Paliouriou-Afitou, Afitos 630 77",
+    "lat": "40.10031320438252",
+    "lng": "23.437354189641624"
+  },
+  {
+    "url": "https://maps.app.goo.gl/M9XGJaEeSqKPrPLY9?g_st=ipc",
+    "name": "Thea Thalassa",
+    "address": "Greece, Afitos 630 77",
+    "lat": "40.100933443260715",
+    "lng": "23.43657383110183"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jm2dpd1gs6ZU1Gb48?g_st=ipc",
+    "name": "Fratzeskos tavern",
+    "address": "Perissa 847 03",
+    "lat": "36.35690375814628",
+    "lng": "25.475715801192347"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AnRAQzdyuWf59ypc6?g_st=ipc",
+    "name": "To Kyma",
+    "address": "Epar.Od. Paliouriou-Afitou, Afitos 630 77",
+    "lat": "40.102311716094015",
+    "lng": "23.436768440109095"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mjn9nrVY8o8u2BtBA?g_st=ipc",
+    "name": "Rizá",
+    "address": "Ιωάννη ξυραδη, Mirina 814 00",
+    "lat": "39.884706865069624",
+    "lng": "25.06758130540464"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RiiBmieqG8r1Dh4o9?g_st=ipc",
+    "name": "Τhe Nets",
+    "address": "Perivolos Beach, Santorini 847 00",
+    "lat": "36.340213032449526",
+    "lng": "25.45472858487458"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Y8MNEpBKf9pJKHNg8?g_st=ipc",
+    "name": "Barbounaki | Lemnos",
+    "address": "Λημνος, Αγιος Ιωαννης, Kaspakas 814 00",
+    "lat": "39.922645057066866",
+    "lng": "25.071051886904925"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tCAL6L44HZbqrniJ6?g_st=ipc",
+    "name": "Glykanisos",
+    "address": "Unnamed Road, Limnos 814 00",
+    "lat": "39.89189656070638",
+    "lng": "25.20287613011476"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oD1rDfLpCw74E1w19?g_st=ipc",
+    "name": "Bubo",
+    "address": "5RR3+FH, Sithonia 630 78",
+    "lat": "40.19122023224205",
+    "lng": "23.803994678989536"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RAaNDUnjFSAhBEiK6?g_st=ipc",
+    "name": "Arsanas Restaurant",
+    "address": "Epar.Od. Nikitis-Sartis, Sithonia 630 88",
+    "lat": "40.2141250129841",
+    "lng": "23.668831311582355"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PcZJeEER8XQLBzFZ8?g_st=ipc",
+    "name": "Thymari taverna",
+    "address": "παραλία Νικήτης, Nikiti 630 88",
+    "lat": "40.21611233902217",
+    "lng": "23.666893873150787"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oid3twRv2Aw1mCyb9?g_st=ipc",
+    "name": "Akrogiali 2",
+    "address": "Neakitou 1, Nikiti 630 88",
+    "lat": "40.21686489057887",
+    "lng": "23.665587945674364"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6oh9CPXimxwQ4vdG6?g_st=ipc",
+    "name": "Marina",
+    "address": "POTIDAIA, Nea Potidea 632 00",
+    "lat": "40.19552411690556",
+    "lng": "23.323836693602985"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LnFKcNNyuXLtSFgcA?g_st=ipc",
+    "name": "Aristos Fish Restaurant",
+    "address": "Ormos Panagias 630 78",
+    "lat": "40.23383447373684",
+    "lng": "23.73191385396379"
+  },
+  {
+    "url": "https://maps.app.goo.gl/G6hKXeSWoodnwXMF6?g_st=ipc",
+    "name": "Taverna Flomari",
+    "address": "Gomati Beach, Limnos 814 01",
+    "lat": "39.98832919487252",
+    "lng": "25.155079152226218"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HGXiHZbraHwDeFFm9?g_st=ipc",
+    "name": "Traditional seafood tavern o Nontas",
+    "address": "Unnamed Rd,, Achladeri 813 00",
+    "lat": "39.15391104091165",
+    "lng": "26.279429768715392"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Y8y6JAFkf3x52TAJA?g_st=ipc",
+    "name": "Tavern Restaurant GIANNAKAROS",
+    "address": "ΛΙΜΑΝΑΚΙ, Kotsinas 814 01",
+    "lat": "39.94049535145995",
+    "lng": "25.283557993247516"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PxsWuCmfXd3XNHAx7?g_st=ipc",
+    "name": "FISH TAVERN LAMPI",
+    "address": "Patmos 855 00",
+    "lat": "37.36640737144112",
+    "lng": "26.576359128489035"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3BT8ProALQ6GPVvR6?g_st=ipc",
+    "name": "Ψαροταβέρνα Εστιατόριο Γλάρος",
+    "address": "Plakas, Litochoro 602 00",
+    "lat": "40.102076689108266",
+    "lng": "22.563489373632812"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gztDX78ELvSAM2Bu8?g_st=ipc",
+    "name": "Tzanis",
+    "address": "Αμμουλιανή, Ammouliani 630 75",
+    "lat": "40.33107915875693",
+    "lng": "23.922485829473047"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CXU1CqZyZ9zhpU6p6?g_st=ipc",
+    "name": "Psarokokkalo",
+    "address": "Limenas Litochorou 602 00",
+    "lat": "40.15708814326953",
+    "lng": "22.54870187929804"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TDkDp1LztBnJyFX67?g_st=ipc",
+    "name": "Άγιος Χαράλαμπος Ταβέρνα",
+    "address": "Λημνος, Plaka 814 01",
+    "lat": "40.01540251451066",
+    "lng": "25.41273241641246"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HjkJrMsUJs1jtgvL6?g_st=ipc",
+    "name": "Ostria",
+    "address": "Παλιός Σιδηροδρομικός Σταθμός Λιτοχώρου, Litochoro 600 63",
+    "lat": "40.156304802159944",
+    "lng": "22.54629048810169"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zpgr1Pu7huw8UAn16?g_st=ipc",
+    "name": "Sunrise fish restaurant",
+    "address": "Sunrise, Skala 280 86",
+    "lat": "38.069862361650536",
+    "lng": "20.798458806990475"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5DwsHksg1ZHKzA62A?g_st=ipc",
+    "name": "Keri Lighthouse Restaurant",
+    "address": "Φάρος κεριού, Keri 290 92",
+    "lat": "37.6544155286365",
+    "lng": "20.810506312482314"
+  },
+  {
+    "url": "https://maps.app.goo.gl/w2imtD4bnSK6jDox6?g_st=ipc",
+    "name": "Blue Sea Restaurant",
+    "address": "Κάτω Κατελειός 280 86",
+    "lat": "38.06482061618168",
+    "lng": "20.749944356791246"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AedknEgNXiKh3D7W7?g_st=ipc",
+    "name": "Kafeneion O Ermis",
+    "address": "Kornarou 2, Mitilini 811 00",
+    "lat": "39.111645067065645",
+    "lng": "26.55736353945392"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eUpNF4puzYCqSTBL7?g_st=ipc",
+    "name": "Mṓlos",
+    "address": "Τέρμα, Ολύμπου, Paralia 601 00",
+    "lat": "40.26080750924372",
+    "lng": "22.59489795073653"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Exf4TBgcUy5RfeRQA?g_st=ipc",
+    "name": "Errikos Fish Tavern",
+    "address": "Meganisi 310 83",
+    "lat": "38.66357210962554",
+    "lng": "20.783477705259653"
+  },
+  {
+    "url": "https://maps.app.goo.gl/5dazC7iQuRSBAe5g8?g_st=ipc",
+    "name": "Ouzeri Agkyrovoli",
+    "address": "Άγνωστη Οδός, Ποταμός Επανωμής 575 00",
+    "lat": "40.3816010668938",
+    "lng": "22.930017992829136"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6SKxxTD4XKy95nvdA?g_st=ipc",
+    "name": "Thalassino Ageri",
+    "address": "Vivilaki str 35 Tabakaria, Chania 731 33",
+    "lat": "35.519850213268185",
+    "lng": "24.037118927264085"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8xxh7iRxAnHBuD868?g_st=ipc",
+    "name": "Almyra",
+    "address": "Ανάληψη 859 00",
+    "lat": "36.57689109395972",
+    "lng": "26.38668535748424"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rCLbi5kVttqKQ5gH7?g_st=ipc",
+    "name": "Tavern Agnanti",
+    "address": "Παραλία Επανομής 575 00",
+    "lat": "40.41084248795629",
+    "lng": "22.891152463357457"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tsdwoX24ZG7uLKB6A?g_st=ipc",
+    "name": "Tavern Zolithros",
+    "address": "Epar.Od. Porou, Lefkada 311 00",
+    "lat": "38.63883302731558",
+    "lng": "20.699578514278645"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dycgkVizrbH5BJsH7?g_st=ipc",
+    "name": "Hippocampus Restaurant",
+    "address": "Γενί 311 00",
+    "lat": "38.68645020644706",
+    "lng": "20.712029545342183"
+  },
+  {
+    "url": "https://maps.app.goo.gl/EbWqYiGwVkKbLu5h6?g_st=ipc",
+    "name": "Ta Kanioria Tavern",
+    "address": "Λυγιά 311 00",
+    "lat": "38.79179727346099",
+    "lng": "20.720165771019264"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SQELaoZ53HgSaqhs6?g_st=ipc",
+    "name": "Retselis Restaurant",
+    "address": "Politechniou 1, Nea Michaniona 570 04",
+    "lat": "40.46564721234731",
+    "lng": "22.856472838512083"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VsctpgJ15cGguUW59?g_st=ipc",
+    "name": "Archipelagos",
+    "address": "P. Kountouriotou 37, Perea 575 00",
+    "lat": "40.51031154332882",
+    "lng": "22.92896116717673"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bCTBJDRFAeRcLaM56?g_st=ipc",
+    "name": "Πρίγκιπας 2",
+    "address": "Οικονομίου και, Neapoleos 1, Ag. Triada 570 19",
+    "lat": "40.50076912252891",
+    "lng": "22.874276414295796"
+  },
+  {
+    "url": "https://maps.app.goo.gl/64Q772kGwY6K6Mps8?g_st=ipc",
+    "name": "Psaropoúla",
+    "address": "Τσουκαλαδες, Tsoukalades Λευκαδα, Lefkada 311 00",
+    "lat": "38.82126467879608",
+    "lng": "20.655911390455394"
+  },
+  {
+    "url": "https://maps.app.goo.gl/usLMqjcjtFy6fTWd6?g_st=ipc",
+    "name": "Kalyva tou Psara",
+    "address": "Unnamed Rd, Zola 281 00",
+    "lat": "38.30990002692816",
+    "lng": "20.4759773849458"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iH1kytUDBvfY1Xmu5?g_st=ipc",
+    "name": "Maiami Seafood Restaurant",
+    "address": "Thetidos 18, Kalamaria 551 32",
+    "lat": "40.5660781564898",
+    "lng": "22.958426191574933"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fGHKAJK8MvBqvND6A?g_st=ipc",
+    "name": "Θερμαϊκός Ψαροταβέρνα | Καλαμαρία, Θεσσαλονίκη",
+    "address": "Thetidos, Kalamaria 551 32",
+    "lat": "40.56643535238568",
+    "lng": "22.958306698225478"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1PTePSM62TKyXYyd9?g_st=ipc",
+    "name": "Aródo",
+    "address": "Thetidos 25, Θεσσαλονίκη 551 32",
+    "lat": "40.566822399097624",
+    "lng": "22.957889078590952"
+  },
+  {
+    "url": "https://maps.app.goo.gl/CftYQWb7WS78EL267?g_st=ipc",
+    "name": "Prigkipas",
+    "address": "Chanion 8, Kalamaria 551 32",
+    "lat": "40.56870307397198",
+    "lng": "22.96042239278236"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6TCCV8GEPKaHee5b6?g_st=ipc",
+    "name": "Hamodrakas - Seafood Restaurant",
+    "address": "Μ. Γαγύλη 13, Παραλία, Kalamaria 551 32",
+    "lat": "40.571711946022305",
+    "lng": "22.95231475803018"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RdVPPysbg8jmJ1gT7?g_st=ipc",
+    "name": "Kritikos Gallery & Restaurants",
+    "address": "Venizelou 5B, Panorama 552 36",
+    "lat": "40.58943046352144",
+    "lng": "23.037107897488713"
+  },
+  {
+    "url": "https://maps.app.goo.gl/veiyM1VvYLvbo86r8?g_st=ipc",
+    "name": "En Plo",
+    "address": "Nik. Plastira 14Β, Kalamaria 551 32",
+    "lat": "40.57398660392286",
+    "lng": "22.949456391166105"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pPBVRQW1crZFz6ho8?g_st=ipc",
+    "name": "Το Καρνάγιο",
+    "address": "Agiou Nikolaou 4, Thessaloniki 551 32",
+    "lat": "40.574881874460935",
+    "lng": "22.94956377176227"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zWRjvQW7U7jg2RVz9?g_st=ipc",
+    "name": "\"Petros\" Ouzo Tavern",
+    "address": "Evelpidou 12, Kalamaria 551 32",
+    "lat": "40.5758568701644",
+    "lng": "22.94955610306511"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BS4tZgxTYFAhXywDA?g_st=ipc",
+    "name": "Mavri Thalassa",
+    "address": "Nik. Plastira 3, Kalamaria 551 32",
+    "lat": "40.57843253808032",
+    "lng": "22.94322807682347"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Bgo34mDRNnqGBqcn6?g_st=ipc",
+    "name": "Gialos Fish & Seafood Tavern",
+    "address": "Ν.Πλαστήρα - Μ. Εμβολο - Ν.Α.Ο.Κ, Thessaloniki 551 31",
+    "lat": "40.57948809433507",
+    "lng": "22.938505206144782"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uuxCBL4zdiCK3Cui9?g_st=ipc",
+    "name": "Glykanisos",
+    "address": "Meg. Alexandrou 46, Pilea 555 35",
+    "lat": "40.59789425560311",
+    "lng": "22.984970079796003"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qLvCE8t6ieDmXdt57?g_st=ipc",
+    "name": "Akti Ntovil sea taste",
+    "address": "Themistokli Sofouli 86, Kalamaria 551 31",
+    "lat": "40.590227199252006",
+    "lng": "22.94525345267167"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2xVCRJ82JXQ9xNYm7?g_st=ipc",
+    "name": "Panos Cafe",
+    "address": "Alkamenous 5, Thessaloniki 542 50",
+    "lat": "40.59910171918994",
+    "lng": "22.972711652033485"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fMUK2hozw9hQG8zN8?g_st=ipc",
+    "name": "Αλεπού Μεζεδοπωλείο",
+    "address": "17is Noemvriou 26, Thessaloniki 555 34",
+    "lat": "40.607668350364605",
+    "lng": "22.993173165196392"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PC1XeAa9i5F1wcwX7?g_st=ipc",
+    "name": "Kritamos Meze-Bar",
+    "address": "Tirolois 38, Thessaloniki 543 51",
+    "lat": "40.61409377580344",
+    "lng": "22.97473899193856"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mWZS1wKdUUfV8Ris7?g_st=ipc",
+    "name": "Trizoni Exclusive",
+    "address": "Leof. Meg. Alexandrou 2, Thessaloniki 546 40",
+    "lat": "40.6187461914036",
+    "lng": "22.951970459036858"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ck1Kd1PfuHwFhziJ6?g_st=ipc",
+    "name": "MAREA sea spirit",
+    "address": "Margariti Lori 13, Thessaloniki 546 22",
+    "lat": "40.628341964657956",
+    "lng": "22.947576121389986"
+  },
+  {
+    "url": "https://maps.app.goo.gl/idPwmz3cDUMQDRf87?g_st=ipc",
+    "name": "Ouzerie Lola",
+    "address": "Agapinou 10, Thessaloniki 546 21",
+    "lat": "40.63145175292193",
+    "lng": "22.952078380847976"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gjbLLdPASWWyhgcMA?g_st=ipc",
+    "name": "New Galerius",
+    "address": "Apellou 3, Thessaloniki 546 22",
+    "lat": "40.631035931747235",
+    "lng": "22.949361572047398"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4a7sWdZdLkA9MqcNA?g_st=ipc",
+    "name": "Kritikos Restaurant Port",
+    "address": "Leof. Nikis 03, Thessaloniki 546 21",
+    "lat": "40.63312219901904",
+    "lng": "22.938682406464917"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rQ6F7EFgSPvzE7iK6?g_st=ipc",
+    "name": "Grada nuevo",
+    "address": "Kalapothaki 14, Thessaloniki 546 24",
+    "lat": "40.63326503370027",
+    "lng": "22.939389299837984"
+  },
+  {
+    "url": "https://maps.app.goo.gl/u7q8zzuEjPhJ53mR7?g_st=ipc",
+    "name": "Mourga",
+    "address": "Christopoulou 12, Thessaloniki 546 35",
+    "lat": "40.635412338789585",
+    "lng": "22.94963013274726"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Y7xSN6vCv7jLy7oPA?g_st=ipc",
+    "name": "7 Thalasses",
+    "address": "Kalapothaki 10, Thessaloniki 546 24",
+    "lat": "40.63335235155445",
+    "lng": "22.93920259335502"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QXynDpqsYRkbv9EK8?g_st=ipc",
+    "name": "Frutti Di Mare",
+    "address": "Komninon 20, Thessaloniki 546 24",
+    "lat": "40.63438694848729",
+    "lng": "22.940888460152426"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Y3cfc1d6DqQAP2VX9?g_st=ipc",
+    "name": "Bakaliarakia tou Aristou",
+    "address": "Katouni 3, Thessaloniki 546 25",
+    "lat": "40.634280544207144",
+    "lng": "22.93689333971641"
+  },
+  {
+    "url": "https://maps.app.goo.gl/gwG2QG5GLKMHTAKd8?g_st=ipc",
+    "name": "Mezen Salonica",
+    "address": "Rogkoti 3, Thessaloniki 546 24",
+    "lat": "40.634689809940646",
+    "lng": "22.93869474433628"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2gKngBbQebvZETCi6?g_st=ipc",
+    "name": "Σουρτουκω μεζεδοπωλειο",
+    "address": "Likourgou 3, Thessaloniki 546 25",
+    "lat": "40.63587084309679",
+    "lng": "22.93649033295163"
+  },
+  {
+    "url": "https://maps.app.goo.gl/B9KYRcx4RDrq1Zh48?g_st=ipc",
+    "name": "Koukida Fun-Seafood",
+    "address": "Agrafon 13, Thessaloniki 546 34",
+    "lat": "40.643445839214266",
+    "lng": "22.95570392041812"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vEURBm27mFZ4pGJfA?g_st=ipc",
+    "name": "Ouzeri \"Kosmas\"",
+    "address": "Vasilikis Papathanasiou 74, Thessaloniki 546 29",
+    "lat": "40.64801268123014",
+    "lng": "22.93043130003418"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dET6AhcimdU74KXm7?g_st=ipc",
+    "name": "Καρνάγιο ΨΑΡΟΤΑΒΕΡΝΑ",
+    "address": "Akriton 15, Ampelokipi 561 23",
+    "lat": "40.65672226446403",
+    "lng": "22.929289665430808"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hvKpXiAYMeS5Y9za8?g_st=ipc",
+    "name": "Nisaki",
+    "address": "Akriton 13, Ampelokipi 561 23",
+    "lat": "40.656777734821844",
+    "lng": "22.92922500008805"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sSPrTBB7crBhtfLs6?g_st=ipc",
+    "name": "Ouzo Jordan",
+    "address": "Stadiou 6, Thessaloniki 565 33",
+    "lat": "40.66214244715697",
+    "lng": "22.949433655289134"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Gtf6Gmdcb6wNtEXw5?g_st=ipc",
+    "name": "Το Νυδρί - Εστιατόριο θαλασσινών",
+    "address": "Achilleos 34, Θεσσαλονίκη 562 24",
+    "lat": "40.67126625480558",
+    "lng": "22.91091682845982"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4hp3qTvHqzD6ZvsJ7?g_st=ipc",
+    "name": "Taverna Ta Tria Pitharia",
+    "address": "Nikis, Nea Peramos 640 07",
+    "lat": "40.83585839690305",
+    "lng": "24.305213402843865"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Zzo1Mb3E832t3J2V6?g_st=ipc",
+    "name": "Ta Kalitera",
+    "address": "Arkadias 33, Xeropotamos 713 03",
+    "lat": "35.33845050978141",
+    "lng": "25.108732834642794"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ETfcRkUohCySZ7987?g_st=ipc",
+    "name": "Anemos Restaurant",
+    "address": "Kardamaina 853 02",
+    "lat": "36.78756037978204",
+    "lng": "27.14925448197459"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KGXyYVAfE8JET5vr6?g_st=ipc",
+    "name": "Agkyra Fish Restaurant in Kos Town",
+    "address": "Dimokritou, Kos 853 00",
+    "lat": "36.90011061296023",
+    "lng": "27.285534090346363"
+  },
+  {
+    "url": "https://maps.app.goo.gl/h4RrYHzL4aEiHani7?g_st=ipc",
+    "name": "Barbouni",
+    "address": "26 G, Geor. Averof st, Kos 853 00",
+    "lat": "36.89866949363194",
+    "lng": "27.286449875003193"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HRHjPKGDuwcWxApM7?g_st=ipc",
+    "name": "Savvas",
+    "address": "Thasou 29, Kavala 652 01",
+    "lat": "40.942255728565115",
+    "lng": "24.425243186310322"
+  },
+  {
+    "url": "https://maps.app.goo.gl/msTJXXzwPB9WeT5y5?g_st=ipc",
+    "name": "Mavromatis",
+    "address": "Vasileos Georgiou V', Kos 853 00",
+    "lat": "36.88606447717142",
+    "lng": "27.309477185520073"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UjAp1padEHJ7Q3nQ7?g_st=ipc",
+    "name": "Ionion Fish Restaurant",
+    "address": "Mega Ammos, Sivota 461 00",
+    "lat": "39.39885130705451",
+    "lng": "20.25621796602664"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Lq4bMhx6VUhzaNx37?g_st=ipc",
+    "name": "St George's Tavern",
+    "address": "RQX4+HP, Makri 68150",
+    "lat": "40.84895697847809",
+    "lng": "25.756806933273776"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ChvtYGB6ww8Z241n6?g_st=ipc",
+    "name": "Pelagos Sea Side Restaurant",
+    "address": "Κουτσουνάρι, Αγ. Ιωάννης 722 00",
+    "lat": "35.01090317014822",
+    "lng": "25.837523741431433"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jMHKwGmxZZd6mhuh8?g_st=ipc",
+    "name": "Andromeda Restaurant",
+    "address": "Άγιος Στέφανος επίσκεψης, Acharavi 491 00",
+    "lat": "39.79259047776619",
+    "lng": "19.8046234596079"
+  },
+  {
+    "url": "https://maps.app.goo.gl/g4myc8br4L4gAcNGA?g_st=ipc",
+    "name": "Thalassa",
+    "address": "Unnamed Road, Karpathos 857 00",
+    "lat": "35.511927785488425",
+    "lng": "27.202335161311264"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bB5NM791bDAKeYYP8?g_st=ipc",
+    "name": "Traditional Cafe Symi",
+    "address": "Nea Agora 109, Rodos 851 00",
+    "lat": "36.447396932123645",
+    "lng": "28.225462639664087"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bmjrpg6PxNfVuRyLA?g_st=ipc",
+    "name": "Pizanias The Sea Star",
+    "address": "Sofokleous 24, Rodos 851 31",
+    "lat": "36.44219184483265",
+    "lng": "28.227392660524885"
+  },
+  {
+    "url": "https://maps.app.goo.gl/uGAqX7jPtUdH564r6?g_st=ipc",
+    "name": "Taverna To Steki",
+    "address": "Mezedopwleio To steki, Archaggelos 851 02",
+    "lat": "36.21481289800798",
+    "lng": "28.116223331846093"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BQHAxew1vaRjgSqj8?g_st=ipc",
+    "name": "Perigiali Sea Food Restaurant",
+    "address": "Archangelos 851 02",
+    "lat": "36.20335875535593",
+    "lng": "28.1401896188144"
+  },
+  {
+    "url": "https://maps.app.goo.gl/LrMfAiKJ9cCQAH6v7?g_st=ipc",
+    "name": "The Coral",
+    "address": "Leof. Vravronos 367, Artemis 190 16",
+    "lat": "37.93546332991727",
+    "lng": "24.012144070196292"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7KH5KmXVrcaeNEh36",
+    "name": "To steki tou psara",
+    "address": "Agnostou Stratiotou 33, Polichni 565 33",
+    "lat": "40.66006472959922",
+    "lng": "22.944806880091097"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Q6ReNhghxPSgvRJX6",
+    "name": "Tsipouro Restaurants \"Germanos\"",
+    "address": "Leof. Dimokratias 41, Oreokastro 570 13",
+    "lat": "40.731011417439056",
+    "lng": "22.920109091479663"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xAJUBaZ5Hv4Rggaw9",
+    "name": "Tsouknída",
+    "address": "28is Oktovriou 0, Asvestochori 570 10",
+    "lat": "40.64197017301936",
+    "lng": "23.01608188028885"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Za7BJdXKEyy2FFiM7",
+    "name": "ΜΙΚΡΕΣ ΚΥΚΛΑΔΕΣ",
+    "address": "Pantazi 56, Ilioupoli 163 46",
+    "lat": "37.938213721782944",
+    "lng": "23.745141100112257"
+  }
+]

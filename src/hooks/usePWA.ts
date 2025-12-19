@@ -60,26 +60,33 @@ export const usePWA = (): PWAHook => {
 
     // Initialize data preloading
     const initializeDataPreloading = async () => {
-      if (dataPreloadStatus === 'idle') {
-        setDataPreloadStatus('loading');
+      // Check if already completed to prevent duplicate runs
+      const alreadyPreloaded = sessionStorage.getItem('pwa_data_preloaded');
+      if (alreadyPreloaded || dataPreloadStatus !== 'idle') {
+        return;
+      }
+      
+      setDataPreloadStatus('loading');
+      
+      try {
+        // Clear expired cache first
+        dataPreloader.clearExpiredCache();
         
-        try {
-          // Clear expired cache first
-          dataPreloader.clearExpiredCache();
-          
-          // Preload critical data
-          await dataPreloader.preloadCriticalData();
-          
-          // Preload critical images
-          const criticalImages = getCriticalImages();
-          await dataPreloader.preloadImages(criticalImages);
-          
-          setDataPreloadStatus('completed');
-          console.log('🎉 PWA data preloading completed successfully');
-        } catch (error) {
-          console.error('❌ PWA data preloading failed:', error);
-          setDataPreloadStatus('error');
+        // Preload critical data
+        await dataPreloader.preloadCriticalData();
+        
+        // Preload critical images
+        const criticalImages = getCriticalImages();
+        await dataPreloader.preloadImages(criticalImages);
+        
+        setDataPreloadStatus('completed');
+        sessionStorage.setItem('pwa_data_preloaded', 'true');
+        if (process.env.NODE_ENV === 'development') {
+          console.log('🎉 PWA data preloading completed');
         }
+      } catch (error) {
+        console.error('❌ PWA data preloading failed:', error);
+        setDataPreloadStatus('error');
       }
     };
 
@@ -95,7 +102,9 @@ export const usePWA = (): PWAHook => {
 
     // Listen for install prompt
     const handleBeforeInstallPrompt = (e: Event) => {
-      console.log('PWA: Install prompt available');
+      if (process.env.NODE_ENV === 'development') {
+        console.log('PWA: Install prompt available');
+      }
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setIsInstallable(true);

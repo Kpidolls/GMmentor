@@ -7,7 +7,7 @@ const withPWA = require('@ducanh2912/next-pwa').default({
   dest: 'public',
   register: true,
   skipWaiting: true,
-  disable: false, // Enable PWA for all environments
+  disable: process.env.NODE_ENV === 'development', // Disable in development to avoid fetch errors
   buildExcludes: [/middleware-manifest\.json$/, /routes-manifest\.json$/],
   fallbacks: {
     document: '/offline.html',
