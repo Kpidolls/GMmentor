@@ -8,6 +8,7 @@ const withPWA = require('@ducanh2912/next-pwa').default({
   register: true,
   skipWaiting: true,
   disable: process.env.NODE_ENV === 'development', // Disable in development to avoid fetch errors
+  navigationPreload: false, // Disable navigation preload to avoid preloadResponse cancellation warning
   buildExcludes: [/middleware-manifest\.json$/, /routes-manifest\.json$/],
   fallbacks: {
     document: '/offline.html',
