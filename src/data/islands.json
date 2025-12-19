@@ -581,5 +581,34 @@
       "kyklades",
       "kuklades"
     ]
+  },
+  {
+    "id": "pelion",
+    "title": "islands.pelion.title",
+    "img": "/assets/images/pelion.webp",
+    "description": "islands.pelion.description",
+    "link": "https://maps.app.goo.gl/ehUaDdgGCFvotTRw7",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "pilion",
+      "pelion",
+      "tsagarada",
+      "portaria",
+      "volos",
+      "pelion greece",
+      "makrinitsa",
+      "milikas",
+      "pinakates",
+      "milies",
+      "zagora",
+      "pelion beaches",
+      "vizitsa",
+      "chorefto",
+      "afissos",
+      "agios ioannis",
+      "xorychti",
+      "mouresi"
+    ]
   }
 ]
