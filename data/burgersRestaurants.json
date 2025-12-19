@@ -1,0 +1,863 @@
+[
+  {
+    "url": "https://maps.app.goo.gl/KoWkVLRYW6WDrfte9?g_st=ipc",
+    "name": "Juicy Grill Athens",
+    "address": "Λεωφ. Περικλέους 37, Χολαργός 155 61",
+    "lat": "37.999820550809126",
+    "lng": "23.797970198704302"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VHtz6unCWyzdNiiZ8?g_st=ipc",
+    "name": "F* Smashing Cholargos",
+    "address": "Λεωφ. Μεσογείων 206, Χολαργός 155 61",
+    "lat": "38.00204211707431",
+    "lng": "23.791067777673266"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NnWhxpUGcKRnuxNb6?g_st=ipc",
+    "name": "Butcher's Burger Halandri & Steak House",
+    "address": "Αγίας Παρασκευής 17, Χαλάνδρι 152 34",
+    "lat": "38.02102226567013",
+    "lng": "23.79979731523688"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vHwx7oKoUfgScAFL9?g_st=ipc",
+    "name": "Enkelt Eatery Drinkery",
+    "address": "Ανδρέα Παπανδρέου 9, Χαλάνδρι 152 34",
+    "lat": "38.02213524779596",
+    "lng": "23.799867459817303"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1oUJJNhHwJDfzkoK6?g_st=ipc",
+    "name": "Benjamin Burger House",
+    "address": "Ανδρέα Γκίνη 8-12, Χαλάνδρι 152 33",
+    "lat": "38.02349485615921",
+    "lng": "23.79940305236398"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zX4seBG8wnwkkKZo6?g_st=ipc",
+    "name": "The Burger Joint",
+    "address": "Σολωμού 4, Νέο Ψυχικό 154 51",
+    "lat": "38.00432835767844",
+    "lng": "23.776577706406886"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bo55c6wZEvkSgiHn7?g_st=ipc",
+    "name": "Akoko Athens",
+    "address": "Σολωμού 1, Νέο Ψυχικό 154 51",
+    "lat": "38.00485425312051",
+    "lng": "23.776133914107284"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qDrH9onsxTkW9iau8?g_st=ipc",
+    "name": "BarBara Que",
+    "address": "Εθ. Αντιστάσεως 27, Βριλήσσια 152 35",
+    "lat": "38.035803199648754",
+    "lng": "23.82668456854574"
+  },
+  {
+    "url": "https://maps.app.goo.gl/17z1ma6NXSDvgsM2A?g_st=ipc",
+    "name": "Melt Burgers",
+    "address": "Λεωφ. Κηφισίας 59, Μαρούσι 151 24",
+    "lat": "38.037895872437886",
+    "lng": "23.799602975307902"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ms7N2dUnnPDHDSW29?g_st=ipc",
+    "name": "Taz Smash Burger",
+    "address": "Περικλή Σταύρου 3, Αθήνα 115 24",
+    "lat": "37.9974813634221",
+    "lng": "23.768005845039937"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nCm18QqReRW4TNmb6?g_st=ipc",
+    "name": "The Burger Dudes",
+    "address": "Θέτιδος 1, Βριλήσσια 152 35",
+    "lat": "38.037808685524865",
+    "lng": "23.82651013380888"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bjsnq9fK7qPHgAum7?g_st=ipc",
+    "name": "Criminal Taste - Smash Burger",
+    "address": "Πανόρμου 10, Αθήνα 115 23",
+    "lat": "37.98830387219437",
+    "lng": "23.758246415299563"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nhc6uHCi6xq6oZKL7?g_st=ipc",
+    "name": "Serial Grillers",
+    "address": "Τράλλεων 130, Γαλάτσι 111 46",
+    "lat": "38.01971897283902",
+    "lng": "23.753398114124796"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZPYfcdYHMWXyKwF16?g_st=ipc",
+    "name": "Busty's Burger",
+    "address": "Οδός Πεντέλης, Μαρούσι 151 26",
+    "lat": "38.05283037769694",
+    "lng": "23.815776704443905"
+  },
+  {
+    "url": "https://maps.app.goo.gl/YDf78cc6DThEFAdSA?g_st=ipc",
+    "name": "F* Smashing Marousi (Delivery & Take away Only!)",
+    "address": "Π. Κυριακού 18, Μαρούσι 151 24",
+    "lat": "38.05659414043942",
+    "lng": "23.807978426457023"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WyovvCKHo17WtrPb8?g_st=ipc",
+    "name": "Godgilla umami street food",
+    "address": "Γεωρ. Κοτζιά 2, Μαρούσι 151 26",
+    "lat": "38.056565975998105",
+    "lng": "23.814008768575892"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tj3ojXGmrnTvMA9c7?g_st=ipc",
+    "name": "Taz Smash Burger",
+    "address": "Περικλέους 2, Μαρούσι 151 22",
+    "lat": "38.05644521597169",
+    "lng": "23.804667787562405"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GxR6tX8MHegtVPLA7?g_st=ipc",
+    "name": "Agora Select",
+    "address": "Χατζηγιάννη Μέξη 8 και, Κων/νου Βεντήρη 9, Αθήνα 115 28",
+    "lat": "37.97626574663726",
+    "lng": "23.751456733864202"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7yT5TAqAFBttQ8yZ7?g_st=ipc",
+    "name": "Comet Street Gourmet Athens",
+    "address": "Σωκράτους 3, Μελίσσια 151 27",
+    "lat": "38.05458806834009",
+    "lng": "23.84252767987863"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DKedv8F3cHKd27me9?g_st=ipc",
+    "name": "Serial Grillers",
+    "address": "Νεότητος 4, Ηράκλειο 141 22",
+    "lat": "38.04771274952107",
+    "lng": "23.76539665009085"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4n21xowaSG1Zg8d79?g_st=ipc",
+    "name": "Smash'n Bun",
+    "address": "Πατριάρχου Ιωακείμ 48, Αθήνα 106 76",
+    "lat": "37.97817483675376",
+    "lng": "23.745292656199194"
+  },
+  {
+    "url": "https://maps.app.goo.gl/kMJu1ePUZJzGwAJdA?g_st=ipc",
+    "name": "X11 Burgers",
+    "address": "Αρχελάου 14, Αθήνα 116 35",
+    "lat": "37.97115113774925",
+    "lng": "23.746564304670212"
+  },
+  {
+    "url": "https://maps.app.goo.gl/y9qpEuxuYdxvEzYY9?g_st=ipc",
+    "name": "Chicken Queen",
+    "address": "Ευτυχίδου 47, Αθήνα 116 34",
+    "lat": "37.96764787341708",
+    "lng": "23.749271201498335"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WsNpm6Ti1nzJiYwd7?g_st=ipc",
+    "name": "RAW Street Burger",
+    "address": "Υμηττού 130, Αθήνα 116 34",
+    "lat": "37.96608078812892",
+    "lng": "23.747084457131937"
+  },
+  {
+    "url": "https://maps.app.goo.gl/671QPGYqt87fhozt8?g_st=ipc",
+    "name": "Exberg",
+    "address": "Θεμιστοκλέους 56, Αθήνα 106 81",
+    "lat": "37.985722017039464",
+    "lng": "23.73377568835493"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fEvt3vsxx19nFxqw8?g_st=ipc",
+    "name": "Πρiγκιπας",
+    "address": "Χαρ. Τρικούπη 23, Αθήνα 106 81",
+    "lat": "37.983677017107105",
+    "lng": "23.73451147367233"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7ty7gMmfJYVeTM5H9?g_st=ipc",
+    "name": "nob.burger",
+    "address": "Ερατοσθένους 3, Αθήνα 116 35",
+    "lat": "37.97058357459842",
+    "lng": "23.741857084173848"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XqS8cuX3SxVKDWRr8?g_st=ipc",
+    "name": "Koutsi Katsika Street Food Νέα Φιλαδέλφεια",
+    "address": "Λεωφ. Δεκελείας 109, Νέα Φιλαδέλφεια Αττικής 143 41",
+    "lat": "38.03629712914596",
+    "lng": "23.73867302573474"
+  },
+  {
+    "url": "https://maps.app.goo.gl/crkq6yzRLRbaTy288?g_st=ipc",
+    "name": "Hippy Joe",
+    "address": "Καραολή και Δημητρίου 5, Βύρωνας 162 31",
+    "lat": "37.95458600508715",
+    "lng": "23.75943276506492"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dpwZgAJWWe2cfPeG9?g_st=ipc",
+    "name": "Guerilla Chef Burgers",
+    "address": "Σολωμού 33, Αθήνα 106 82",
+    "lat": "37.98670260429295",
+    "lng": "23.731789751446545"
+  },
+  {
+    "url": "https://maps.app.goo.gl/qGwCStnKNtrJzrtm6?g_st=ipc",
+    "name": "Meat n Roses Kolonaki",
+    "address": "Αμερικής 7, Αθήνα 106 72",
+    "lat": "37.97828442263524",
+    "lng": "23.735087640545906"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Nb6on5D2zYtdFLqw7?g_st=ipc",
+    "name": "juicygrill_Athens (downtown)",
+    "address": "Παλαιών Πατρών Γερμανού 7, Αθήνα 105 61",
+    "lat": "37.97921135341064",
+    "lng": "23.730357458956963"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tRpSe3harTyJVBVg7?g_st=ipc",
+    "name": "Starlight Burgers",
+    "address": "Πραξιτέλους 1, Αθήνα 105 62",
+    "lat": "37.97768708628673",
+    "lng": "23.730973383072776"
+  },
+  {
+    "url": "https://maps.app.goo.gl/McpvxRFgv3HSY4VF6?g_st=ipc",
+    "name": "Lobby Athens",
+    "address": "Βουλής 30, Αθήνα 105 57",
+    "lat": "37.97480226330857",
+    "lng": "23.732216902854162"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hqjbsZtLtS6aPvv9A?g_st=ipc",
+    "name": "Birdman",
+    "address": "Βουλής 35, Αθήνα 105 57",
+    "lat": "37.97462442043903",
+    "lng": "23.73232607660368"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UYx5LEnNcAUkY8XX8?g_st=ipc",
+    "name": "EKIBEN KITCHEN",
+    "address": "Σκούφου 15, Αθήνα 105 57",
+    "lat": "37.97373737994253",
+    "lng": "23.732680748460968"
+  },
+  {
+    "url": "https://maps.app.goo.gl/N76y7HGoU6TuZHcW8?g_st=ipc",
+    "name": "ONE BURGER",
+    "address": "Αγάθωνος 7, Αθήνα 105 51",
+    "lat": "37.97831953861062",
+    "lng": "23.727493287060057"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tbzr2ePrf29seJBFA?g_st=ipc",
+    "name": "Cadillac Burgers",
+    "address": "Μνησικλέους 6, Αθήνα 105 56",
+    "lat": "37.97549144814891",
+    "lng": "23.728731411277973"
+  },
+  {
+    "url": "https://maps.app.goo.gl/w3oRJbpwaMiNHFW39?g_st=ipc",
+    "name": "Pax burgers",
+    "address": "Αιόλου 34, Αθήνα 105 63",
+    "lat": "37.97692157366875",
+    "lng": "23.727728305189554"
+  },
+  {
+    "url": "https://maps.app.goo.gl/xqbjAq65izWtnBT18?g_st=ipc",
+    "name": "Balboa Athens",
+    "address": "Αρτέμιδος 1-3, Αθήνα 105 54",
+    "lat": "37.977044741999016",
+    "lng": "23.724391193177723"
+  },
+  {
+    "url": "https://maps.app.goo.gl/j39YQoSzREu8gQk77?g_st=ipc",
+    "name": "PO'BOYS BBQ",
+    "address": "Agatharchou 12 &, Λεπενιώτου, Αθήνα 105 54",
+    "lat": "37.97837875741083",
+    "lng": "23.723280392822467"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ypf3MAMpnquGQSrr6?g_st=ipc",
+    "name": "Street Habit Burgers & Sandwiches",
+    "address": "Λεωνίδου 41, Μαραθώνος 20, Αθήνα 104 36",
+    "lat": "37.982308190228395",
+    "lng": "23.718935233979323"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SzYTBZRaHtH1zEgv6?g_st=ipc",
+    "name": "Tarantino Burgers Athens",
+    "address": "Δημητρακοπούλου 17, Αθήνα 117 42",
+    "lat": "37.96648556958662",
+    "lng": "23.727729975927073"
+  },
+  {
+    "url": "https://maps.app.goo.gl/j5eRwkA5Uf2bwVHs7?g_st=ipc",
+    "name": "Big Nick",
+    "address": "Λεωφόρος Βουλιαγμένης 145, Αθήνα 116 31",
+    "lat": "37.956445331565305",
+    "lng": "23.73566615673783"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dfoGjBoXnHtHAokj9?g_st=ipc",
+    "name": "ΣΤΗΒΣ Α.Ε. Κεραμεικός - ΧΑΜΠΟΥΡΓΚΕΡ & ΠΙΤΣΕΣ",
+    "address": "Σαλαμίνος 42, Αθήνα 104 35",
+    "lat": "37.981862507718745",
+    "lng": "23.71676727771988"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Ty754KFyBeh5iYD99?g_st=ipc",
+    "name": "ORTSAG - NextGen Street Resto",
+    "address": "Κεραμεικού 93-95, Αθήνα 104 35",
+    "lat": "37.980720186478266",
+    "lng": "23.716880146435926"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ppbxAjV7hVEDbZiV7?g_st=ipc",
+    "name": "Four Hands",
+    "address": "Κεραμεικού 111, Αθήνα 104 35",
+    "lat": "37.98010264048048",
+    "lng": "23.71572330295299"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pYEUc4KHraPYUmvN8?g_st=ipc",
+    "name": "Sam burgers",
+    "address": "Δημητρακοπούλου 82, Αθήνα 117 41",
+    "lat": "37.96388468249238",
+    "lng": "23.72312062221316"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nvzgc7zjFUEkgZMN8?g_st=ipc",
+    "name": "Ψυχιατρείο",
+    "address": "Αγίου Κωνσταντίνου 16, Ηλιούπολη 163 46",
+    "lat": "37.941454787946455",
+    "lng": "23.74643002685345"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cE9CbEn5LYoZ6WKj7?g_st=ipc",
+    "name": "Τρύφωνας Κεμπαπτζίδικoν - Hamburgerie",
+    "address": "Παρασκευοπούλου 51, Περιστέρι 121 34",
+    "lat": "38.0125506362582",
+    "lng": "23.70608974489792"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JjXo3mQwSBz49WBp9?g_st=ipc",
+    "name": "MVP RESTAURANT",
+    "address": "Χαρ. Τρικούπη 127, Νέα Ερυθραία 146 71",
+    "lat": "38.08823770971798",
+    "lng": "23.816227663317804"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cYunjwXkadMCnitz6?g_st=ipc",
+    "name": "Guilty Adam",
+    "address": "Χαριλάου Τρικούπη, Στροφυλίου 146, Νέα Ερυθραία 146 71",
+    "lat": "38.08882457129293",
+    "lng": "23.81690449930271"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mDaB4XdfNqu4hp5i8?g_st=ipc",
+    "name": "LAYERS",
+    "address": "Αναξαγόρα 7, Νέα Ερυθραία 146 71",
+    "lat": "38.089833221029615",
+    "lng": "23.818428541225927"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nQP3ShaVnqxgTCSC7?g_st=ipc",
+    "name": "HankyPanky",
+    "address": "Δεινοχαρους 1, Αθήνα 118 52",
+    "lat": "37.967400114692225",
+    "lng": "23.71303845092353"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HZTQZzXmyYMQ3mzX9?g_st=ipc",
+    "name": "Butcher's Burger Peristeri & Steak House",
+    "address": "Αιμιλίου Βεάκη 41, Περιστέρι 121 34",
+    "lat": "38.01156289236995",
+    "lng": "23.69228404120557"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4dN2cUdHdLqSEgRQA?g_st=ipc",
+    "name": "Μπαρ Μπεε Κιου",
+    "address": "Λεωφ. Ελ. Βενιζέλου 18, Νέα Σμύρνη 171 23",
+    "lat": "37.947758433049515",
+    "lng": "23.715813044078192"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ESAdNAhkQW7WvLqWA?g_st=ipc",
+    "name": "Arch Beer House",
+    "address": "Εθ. Αντιστάσεως 91, Περιστέρι 121 34",
+    "lat": "38.013998175642",
+    "lng": "23.688328178434592"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4gyyrfZJhxvHeHNj8?g_st=ipc",
+    "name": "The Burger Joint",
+    "address": "Λεωφ. Ελ. Βενιζέλου 93, Νέα Σμύρνη 171 22",
+    "lat": "37.942262724437896",
+    "lng": "23.71398429679752"
+  },
+  {
+    "url": "https://maps.app.goo.gl/psmqWjAqwrakd1ww7?g_st=ipc",
+    "name": "Hanky Panky Palaio Faliro",
+    "address": "Πλ. Νταβάρη 2, Παλαιό Φάληρο 175 64",
+    "lat": "37.93089466239992",
+    "lng": "23.703396088291395"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hySSSjtTD5s23KKdA?g_st=ipc",
+    "name": "Street Burger",
+    "address": "Λεωφ. Αλίμου 56, Άλιμος 174 55",
+    "lat": "37.907177869982185",
+    "lng": "23.732883953097378"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fAsTx4mwCTHC78t86?g_st=ipc",
+    "name": "ΑΜΑΜ - ΕΣΤΙΑΤΟΡΙΟ - ΓΛΥΦΑΔΑ",
+    "address": "Γεωρ. Γεννηματά 11, Γλυφάδα 165 62",
+    "lat": "37.895880681449796",
+    "lng": "23.761095559330744"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BsuHdbYYc8dsSTwn8?g_st=ipc",
+    "name": "Hashtag#Burger",
+    "address": "Γεωρ. Γεννηματά 26, Γλυφάδα 165 62",
+    "lat": "37.89371001882756",
+    "lng": "23.763217485797266"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Nzdtzrh2vbG4T4VM8?g_st=ipc",
+    "name": "Con Voi Brunch - Burgers & Cocktails",
+    "address": "Λεωφ. Δροσιάς Σταματάς 2, Δροσιά 145 72",
+    "lat": "38.12062536277459",
+    "lng": "23.858921152377892"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4KM3cF4mGHbENQpa6?g_st=ipc",
+    "name": "Ryōtei 118",
+    "address": "Δημ. Γούναρη 118, Γλυφάδα 166 74",
+    "lat": "37.879368551864765",
+    "lng": "23.76330532043917"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vTHoe9jC12FnQ9ZE9?g_st=ipc",
+    "name": "PAX Burgers Chalandri",
+    "address": "Κολοκοτρώνη 18, Χαλάνδρι 152 33",
+    "lat": "38.0226758104374",
+    "lng": "23.797664927683787"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JHVusoRbYHy3Y7vt5?g_st=ipc",
+    "name": "Just Burgers",
+    "address": "Βασ. Γεωργίου Β 10, Γλυφάδα 166 74",
+    "lat": "37.86233017342334",
+    "lng": "23.756048198703365"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UkJPpNzXrBGL944RA?g_st=ipc",
+    "name": "Μπαρ Μπεε Κιου - Φρεαττύδα",
+    "address": "Λεωφ. Φρεάττυδος 13, Πειραιάς 185 37",
+    "lat": "37.93450645446817",
+    "lng": "23.642685440187794"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4ebsLmRmHgQAtXCy5?g_st=ipc",
+    "name": "the burger joint",
+    "address": "Πλ. Νυμφών 1, Γλυφάδα 166 74",
+    "lat": "37.85975416543059",
+    "lng": "23.75632935360373"
+  },
+  {
+    "url": "https://maps.app.goo.gl/magEHZdr4AeKTeT69?g_st=ipc",
+    "name": "Ala Burger",
+    "address": "Ταξιαρχών 14, Κορυδαλλός 181 20",
+    "lat": "37.976136624110225",
+    "lng": "23.64953319647224"
+  },
+  {
+    "url": "https://maps.app.goo.gl/G6x3d2ZUCEMQrN3k7?g_st=ipc",
+    "name": "BBC Burger Barbeque Corner",
+    "address": "Ἀναπαύσεως 90, Κερατσίνι 187 55",
+    "lat": "37.952390409927204",
+    "lng": "23.625437904614223"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eGL3Mk2KpVNgRAzn6?g_st=ipc",
+    "name": "BURGERILLA.VOULAS",
+    "address": "Λεωφ. Βασιλέως Παύλου 0, Βούλα 166 73",
+    "lat": "37.84784984477906",
+    "lng": "23.754080911973716"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XPM5TwgWvpZmGQUh6?g_st=ipc",
+    "name": "GODGILLA ΚΕΡΑΤΣΙΝΙ",
+    "address": "Θεόφραστου 54, Κερατσίνι 187 56",
+    "lat": "37.95895954039208",
+    "lng": "23.62512429010796"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JBWKzEThZyPeN81d8?g_st=ipc",
+    "name": "Diner 72",
+    "address": "Παλαιά ΕΟ Αθηνών Κορίνθου, Δήμος Λουτρακίου - Αγίων Θεοδώρων 200 03",
+    "lat": "37.92372598231459",
+    "lng": "23.045537436860897"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1QRrTYXfUm7MCQ5cA?g_st=ipc",
+    "name": "Shoreditch Burgers & Sandwiches",
+    "address": "Δημητριάδος 186, Βόλος 382 21",
+    "lat": "39.358294664127236",
+    "lng": "22.9508396365885"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Hj1LZsKmFMwoeDYk8?g_st=ipc",
+    "name": "Urban Burger Co.",
+    "address": "Δημάρχου Κονταράτου 8, Βόλος 382 21",
+    "lat": "39.359716759351",
+    "lng": "22.950932981495203"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hv2UknNHtTHVpeFG6?g_st=ipc",
+    "name": "Jazz Burger Bar Νέο Ηρακλειο",
+    "address": "Μαρίνου Αντύπα 59, Ηράκλειο 141 21",
+    "lat": "38.04095577978939",
+    "lng": "23.776308324847815"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eZb9zRu5ZEKX8jLZ6?g_st=ipc",
+    "name": "The Smashers Athens",
+    "address": "Καλαμιώτου 7, Αθήνα 105 63",
+    "lat": "37.976855263908405",
+    "lng": "23.728850035341498"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BoNocomx2EgJt83f6?g_st=ipc",
+    "name": "Raw Street Burger - Chalandri",
+    "address": "Αγίας Παρασκευής 2, Χαλάνδρι 152 32",
+    "lat": "38.02124916375188",
+    "lng": "23.799011494235714"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WJTaYcJdPxACzwkXA?g_st=ipc",
+    "name": "Maestro Cantina",
+    "address": "EO Thessalonikis Poligirou 32, Thermi 570 01",
+    "lat": "40.539870288194706",
+    "lng": "23.0207573353921"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tDetHtpfpgzNvuNC7?g_st=ipc",
+    "name": "Brothers in Law Smash 'n' Pasta Thermi",
+    "address": "5 χλμ, Χαρ. Θέρμης 1ο χλμ, Thermi 570 01",
+    "lat": "40.5561230976469",
+    "lng": "23.012690012150046"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JrNCtkPthNJns9L16?g_st=ipc",
+    "name": "OSTEN",
+    "address": "4χλμ, Χαρ. Θέρμης, Thessaloniki 570 01",
+    "lat": "40.55792173583846",
+    "lng": "23.01007604885629"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TuduB4i2geBy2cb58?g_st=ipc",
+    "name": "Pax Burgers",
+    "address": "ΘΕΣΣΑΛΟΝΙΚΗΣ-ΜΟΥΔΑΝΙΩΝ, Thermi 570 01",
+    "lat": "40.55495597120905",
+    "lng": "22.992844598481618"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Y2NDJtMWMoJrutpZ6?g_st=ipc",
+    "name": "Sinners Smash Burgers",
+    "address": "Στέλιου Καζαντζίδη 31, Pilea 555 35",
+    "lat": "40.57608642412674",
+    "lng": "22.98935981589618"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TuduB4i2geBy2cb58?g_st=ipc",
+    "name": "Pax Burgers",
+    "address": "ΘΕΣΣΑΛΟΝΙΚΗΣ-ΜΟΥΔΑΝΙΩΝ, Thermi 570 01",
+    "lat": "40.554974978986735",
+    "lng": "22.992839835594616"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Y2NDJtMWMoJrutpZ6?g_st=ipc",
+    "name": "Sinners Smash Burgers",
+    "address": "Στέλιου Καζαντζίδη 31, Pilea 555 35",
+    "lat": "40.576089708999454",
+    "lng": "22.989358987182698"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Bc8D8iLK2oBQoFcm8?g_st=ipc",
+    "name": "MAVERICK Handmade Street Food",
+    "address": "Eth. Antistaseos 179, Kalamaria 551 34",
+    "lat": "40.5733294711661",
+    "lng": "22.971759802516267"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1GxBYUFXBeTUU8iq6?g_st=ipc",
+    "name": "Jacaranda",
+    "address": "Στέλιου Καζαντζίδη 24, Pilea 555 35",
+    "lat": "40.583007556132294",
+    "lng": "22.982557958626895"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yMSfiMNTRFpJoskdA?g_st=ipc",
+    "name": "Burgler",
+    "address": "Metamorfoseos 5, Kalamaria 551 31",
+    "lat": "40.584120623109904",
+    "lng": "22.951979743044145"
+  },
+  {
+    "url": "https://maps.app.goo.gl/71PatbkFTVXX7R3w9?g_st=ipc",
+    "name": "Brothers In Law",
+    "address": "Leof. Vasilissis Olgas 275, Thessaloniki 551 33",
+    "lat": "40.59054130309985",
+    "lng": "22.959087966385763"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9L8fryr5EiA3D5rR9?g_st=ipc",
+    "name": "Paul’s Burger",
+    "address": "Geor. Papandreou 38, Thessaloniki 546 46",
+    "lat": "40.59788362738132",
+    "lng": "22.95216160608432"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VFJTVUrK126W1Uku9?g_st=ipc",
+    "name": "Brothers In Law",
+    "address": "Grigoriou Lampraki 244, Pilea 543 52",
+    "lat": "40.610811655039555",
+    "lng": "22.98741536304393"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ECaRWM59W66g3f6h8?g_st=ipc",
+    "name": "Dunk Smash Burgers",
+    "address": "Peston 82, Thessaloniki 544 53",
+    "lat": "40.614049656844195",
+    "lng": "22.968949553843263"
+  },
+  {
+    "url": "https://maps.app.goo.gl/nXZzhY9yFR2kDUGA9?g_st=ipc",
+    "name": "Evora Eatery",
+    "address": "Diogenous 13, Thessaloniki 544 53",
+    "lat": "40.616537415041016",
+    "lng": "22.969055137519607"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XvoKi6u2LSYH1F6o7?g_st=ipc",
+    "name": "Parco",
+    "address": "D' Esperey 1, Thessaloniki 546 21",
+    "lat": "40.62746957872299",
+    "lng": "22.95260526619064"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yAwLNa5CdKfv7HBD9?g_st=ipc",
+    "name": "Pommes",
+    "address": "Isavron 5, Thessaloniki 546 22",
+    "lat": "40.629725176106746",
+    "lng": "22.948477539796873"
+  },
+  {
+    "url": "https://maps.app.goo.gl/oEwzze7SyKh5AJ3t9?g_st=ipc",
+    "name": "Brothers in Law",
+    "address": "P. Mela 30, Thessaloniki 546 22",
+    "lat": "40.630770113023615",
+    "lng": "22.947666977943033"
+  },
+  {
+    "url": "https://maps.app.goo.gl/us6tkdjDeYvzDx2u6?g_st=ipc",
+    "name": "Μπιφτεκάδικο Κυρ Γιώργης",
+    "address": "Zefxidos 4, Thessaloniki 546 22",
+    "lat": "40.63182341170209",
+    "lng": "22.946558572416308"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wEhesXG82XpaGLNY6?g_st=ipc",
+    "name": "Bulldogs & the Beast",
+    "address": "Al. Svolou 1, Thessaloniki 546 23",
+    "lat": "40.632462059908974",
+    "lng": "22.947729021811423"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WZscxBG8wSCngxdz8?g_st=ipc",
+    "name": "Pax",
+    "address": "Eleftheriou Venizelou &, Kalapothaki 8, Thessaloniki 546 24",
+    "lat": "40.63378366371667",
+    "lng": "22.938802932281405"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bUgobpjQbL4yxA2J7?g_st=ipc",
+    "name": "Tarantino Modiano",
+    "address": "Vasileos Irakleiou 33, Thessaloniki 546 24",
+    "lat": "40.63523520193276",
+    "lng": "22.941893523743314"
+  },
+  {
+    "url": "https://maps.app.goo.gl/g2t2qtDt95d9ETNRA?g_st=ipc",
+    "name": "PO‘ BOYS skg",
+    "address": "Ag. Mina 7, Thessaloniki 546 25",
+    "lat": "40.63567624458847",
+    "lng": "22.93883473827237"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wDKEYQZL9F4crVQk9?g_st=ipc",
+    "name": "Austin smokehouse bbq",
+    "address": "Katouni 25, Thessaloniki 546 25",
+    "lat": "40.63591485801073",
+    "lng": "22.93805727931312"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8jf35cPRudvWnsoP7?g_st=ipc",
+    "name": "Raw Street Burger - Thessaloniki",
+    "address": "Politechniou 53, Thessaloniki 546 25",
+    "lat": "40.6360216575253",
+    "lng": "22.93735358036402"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NKZaYUsTivGGc1mU7?g_st=ipc",
+    "name": "Tarantino Sandwiches & Fries",
+    "address": "Ernestou Emprar 5, Thessaloniki 546 25",
+    "lat": "40.63667870510283",
+    "lng": "22.93716261995098"
+  },
+  {
+    "url": "https://maps.app.goo.gl/51NLWv682h6DK989A?g_st=ipc",
+    "name": "Cantina Manara",
+    "address": "Στοά, Ermou 1, Thessaloniki 546 25",
+    "lat": "40.6371113197463",
+    "lng": "22.93922534676657"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ka8qRW51kJox7mce6?g_st=ipc",
+    "name": "Broz.Skg burger house",
+    "address": "Aristotélous 39, Evosmos 562 24",
+    "lat": "40.664244931546285",
+    "lng": "22.911627282487927"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UbXbrxK1VEFkvDdp7?g_st=ipc",
+    "name": "Rookie.skg",
+    "address": "P. Mela 28, Evosmos 562 24",
+    "lat": "40.66725084444489",
+    "lng": "22.911546340289146"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Mz4wckU7VyfPoiNe7?g_st=ipc",
+    "name": "JOKERMAN",
+    "address": "Meg. Alexandrou 87, Evosmos 562 24",
+    "lat": "40.668414646990946",
+    "lng": "22.912364509174097"
+  },
+  {
+    "url": "https://maps.app.goo.gl/7TUUVwTEcxqLX9347?g_st=ipc",
+    "name": "STIVOS BURGER & STEAK",
+    "address": "Ευαγγελισμού της Θεοτόκου 43, Evosmos 562 24",
+    "lat": "40.669593987579994",
+    "lng": "22.91138406394072"
+  },
+  {
+    "url": "https://maps.app.goo.gl/QRyzxeSuPPkZ7om56?g_st=ipc",
+    "name": "Holy Smoke BBQ Streetfood",
+    "address": "Eth. Antistaseos 136, Alexandroupoli 681 00",
+    "lat": "40.846110747356505",
+    "lng": "25.87110606697465"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Xvc6UCxi2LxHq36TA?g_st=ipc",
+    "name": "PANBURGER",
+    "address": "Karpathos 857 00",
+    "lat": "35.50835121764677",
+    "lng": "27.212476234633463"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jzcVrFqav7KsRnsy7?g_st=ipc",
+    "name": "Nom street food & smashed burgers",
+    "address": "Sofokli Venizelou 30, Rodos 851 00",
+    "lat": "36.44818806230804",
+    "lng": "28.221540618444198"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Xvc6UCxi2LxHq36TA?g_st=ipc",
+    "name": "PANBURGER",
+    "address": "Karpathos 857 00",
+    "lat": "35.508363631854614",
+    "lng": "27.212474239373883"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Yu7VLwDA42Wp7pZo8",
+    "name": "SmashTag",
+    "address": "Michalakopoulou 68, Athina 115 28",
+    "lat": "37.97799517923772",
+    "lng": "23.75631086140523"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cTKmuer8pw34Mj4m6",
+    "name": "Queen Burger",
+    "address": "Giannitsopoulou 3, Glifada 166 74",
+    "lat": "37.8629143636926",
+    "lng": "23.754961929770175"
+  },
+  {
+    "url": "https://maps.app.goo.gl/1hcPfQeHfJrzqf8KA",
+    "name": "What They Said",
+    "address": "Eth. Antistaseos 37, Drapetsona 186 48",
+    "lat": "37.94935179980419",
+    "lng": "23.633928811446484"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NzN9wf8WYr2rjWbd7",
+    "name": "Ohmami - Street Food / Thessaloniki",
+    "address": "Patriarchoi Dionisii E 1, Thessaloniki 546 31",
+    "lat": "40.63556199320903",
+    "lng": "22.947562092920837"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yBjtwqxUfodA37Zy6",
+    "name": "ΜΠΙΦΤΕΚΑΔΙΚΟ \"ΤΟ ΠΑΓΓΑΙΟ\"",
+    "address": "Mark. Mpotsari 49, Thessaloniki 546 44",
+    "lat": "40.60721344429672",
+    "lng": "22.960412947590548"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yKgLKc4LFJhxaawY6",
+    "name": "MPEAR",
+    "address": "Ευφράνορος 8, Athina 116 35",
+    "lat": "37.96750105563297",
+    "lng": "23.744555646756957"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bR7jaQSkxn33eLgq7",
+    "name": "Ekiben Kitchen Glyfada",
+    "address": "Laodikis 41, Glifada 166 74",
+    "lat": "37.86117702366519",
+    "lng": "23.756394837020224"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rE8kgxhDvdzbh9hw7",
+    "name": "PRATINA Burger Project",
+    "address": "Veroias 5, Thessaloniki 546 25",
+    "lat": "40.63713764523389",
+    "lng": "22.937597600102066"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jQiZ1pYw63j3q8zG9",
+    "name": "Ryōtei118",
+    "address": "Dim. Gounari 118, Glifada 166 74",
+    "lat": "37.87936856839685",
+    "lng": "23.763367179515893"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Lys3ApFbCS6C7HCt8",
+    "name": "Balboa Thessaloniki",
+    "address": "P. Mela 42, Thessaloniki 546 22",
+    "lat": "40.631911246314864",
+    "lng": "22.947511059222414"
+  }
+]

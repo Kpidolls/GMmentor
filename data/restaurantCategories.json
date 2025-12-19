@@ -1,0 +1,159 @@
+[
+  {
+    "id": "attractions",
+    "name": "Must-See Attractions",
+    "description": "Explore iconic landmarks and cultural sites",
+    "icon": "🏛️",
+    "color": "from-blue-500 to-indigo-600",
+    "keywords": [
+      "attractions",
+      "landmarks",
+      "culture",
+      "history",
+      "must-see",
+      "museums"
+    ]
+  },
+  {
+    "id": "greek-restaurants",
+    "name": "Greek Restaurants",
+    "description": "Authentic traditional Greek cuisine",
+    "icon": "🍽️",
+    "color": "from-blue-500 to-indigo-600",
+    "keywords": [
+      "greek",
+      "traditional",
+      "authentic",
+      "taverna",
+      "mediterranean",
+      "hellenic"
+    ]
+  },
+  {
+    "id": "desserts",
+    "name": "Dessert Shops",
+    "description": "Sweet treats and traditional Greek desserts",
+    "icon": "🍰",
+    "color": "from-pink-500 to-rose-600",
+    "keywords": ["dessert", "sweet", "bakery", "pastry", "ice cream", "gelato"]
+  },
+  {
+    "id": "family-friendly",
+    "name": "Family Friendly Locations",
+    "description": "Places welcoming families with kids",
+    "icon": "👨‍👩‍👧‍👦",
+    "color": "from-emerald-400 to-teal-500",
+    "keywords": [
+      "family",
+      "kids",
+      "child-friendly",
+      "playground",
+      "stroller",
+      "family menu",
+      "kid-friendly",
+      "child-friendly",
+      "playground",
+      "stroller",
+      "family menu",
+      "kid-friendly",
+      "children",
+      "casual"
+    ]
+  },
+  {
+    "id": "coffee-brunch",
+    "name": "Coffee & Brunch Spots",
+    "description": "Specialty coffee and all-day brunch spots",
+    "icon": "☕",
+    "color": "from-amber-500 to-orange-600",
+    "keywords": ["coffee", "brunch", "breakfast", "cafe", "espresso"]
+  },
+  {
+    "id": "fish-tavernas",
+    "name": "Fish Tavernas",
+    "description": "Fresh seafood and traditional tavernas",
+    "icon": "🐟",
+    "color": "from-blue-600 to-indigo-700",
+    "keywords": ["fish", "seafood", "taverna", "fresh", "mediterranean"]
+  },
+  {
+    "id": "monasteries-churches",
+    "name": "Monasteries & Spiritual Sites",
+    "description": "Visit sacred places and spiritual retreats",
+    "icon": "⛪",
+    "color": "from-emerald-500 to-teal-600",
+    "keywords": ["monastery", "church", "spiritual", "retreat", "sacred"]
+  },
+  {
+    "id": "italian",
+    "name": "Italian Restaurants",
+    "description": "Authentic Italian flavors and pasta",
+    "icon": "🍝",
+    "color": "from-green-500 to-emerald-600",
+    "keywords": ["italian", "pasta", "pizza", "risotto", "trattoria"]
+  },
+  {
+    "id": "cheap-eats",
+    "name": "Gyros & Cheap Eats",
+    "description": "Budget-friendly delicious meals",
+    "icon": "💰",
+    "color": "from-blue-500 to-cyan-600",
+    "keywords": ["cheap", "budget", "affordable", "value", "economical"]
+  },
+  {
+    "id": "asian",
+    "name": "Asian Restaurants",
+    "description": "Diverse Asian flavors and dishes",
+    "icon": "🥢",
+    "color": "from-red-500 to-pink-600",
+    "keywords": ["asian", "chinese", "japanese", "thai", "sushi", "ramen"]
+  },
+  {
+    "id": "burgers",
+    "name": "Burger Spots",
+    "description": "Gourmet burgers and casual dining",
+    "icon": "🍔",
+    "color": "from-yellow-500 to-orange-600",
+    "keywords": ["burger", "grill", "casual", "american", "fries"]
+  },
+  {
+    "id": "vegetarian",
+    "name": "Vegetarian Friendly Restaurants",
+    "description": "Plant-based and vegetarian options",
+    "icon": "🌱",
+    "color": "from-green-400 to-emerald-500",
+    "keywords": ["vegetarian", "vegan", "healthy", "organic", "plant-based"]
+  },
+  {
+    "id": "mexican",
+    "name": "Mexican Restaurants",
+    "description": "Authentic Mexican flavors and spices",
+    "icon": "🌮",
+    "color": "from-lime-500 to-green-600",
+    "keywords": ["mexican", "tacos", "burrito", "spicy", "authentic"]
+  },
+  {
+    "id": "luxury-dining",
+    "name": "Luxury Dining",
+    "description": "Fine dining and upscale experiences",
+    "icon": "🥂",
+    "color": "from-purple-600 to-indigo-700",
+    "keywords": ["luxury", "fine dining", "upscale", "gourmet", "michelin"]
+  },
+  {
+    "id": "rooftop-lounges",
+    "name": "Rooftop Lounges",
+    "description": "Sky-high dining with stunning views",
+    "icon": "🌆",
+    "color": "from-indigo-500 to-purple-600",
+    "keywords": ["rooftop", "lounge", "view", "skybar", "terrace"]
+  },
+  {
+    "id": "wineries-vineyards",
+    "name": "Wineries & Vineyards",
+    "description": "Taste exceptional Greek wines and visit vineyards",
+    "icon": "🍷",
+    "color": "from-purple-500 to-pink-600",
+    "keywords": ["wine", "vineyard", "tasting", "greek wine", "winery"]
+  }
+]
