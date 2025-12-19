@@ -29,12 +29,13 @@ class DataPreloaderService implements DataPreloader {
     '/data/rooftopLoungesRestaurants.json',
     '/data/vegetarianRestaurants.json',
     '/data/gyrosSouvlakiRestaurants.json',
-    '/data/mexicanRestaurants.json',
-    '/data/bougatsaRestaurants.json'
+    '/data/mexicanRestaurants.json'
   ];
 
   async preloadCriticalData(): Promise<void> {
-    console.log('🚀 Preloading critical data for offline use...');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🚀 Preloading critical data for offline use...');
+    }
     
     const promises = this.criticalDataFiles.map(async (url) => {
       try {
@@ -42,7 +43,6 @@ class DataPreloaderService implements DataPreloader {
         const cached = this.getCachedData<any>(cacheKey);
         
         if (cached && !this.isExpired(cached.timestamp)) {
-          console.log(`✅ Using cached data for ${url}`);
           return cached.data;
         }
 
@@ -54,7 +54,6 @@ class DataPreloaderService implements DataPreloader {
             timestamp: Date.now(),
             url
           });
-          console.log(`📦 Cached data for ${url}`);
           return data;
         }
       } catch (error) {
@@ -67,11 +66,15 @@ class DataPreloaderService implements DataPreloader {
     });
 
     await Promise.allSettled(promises);
-    console.log('✅ Critical data preloading complete');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('✅ Critical data preloading complete');
+    }
   }
 
   async preloadImages(imageUrls: string[]): Promise<void> {
-    console.log('🖼️ Preloading images for offline use...');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🖼️ Preloading images for offline use...');
+    }
     
     const promises = imageUrls.map(async (url) => {
       try {
@@ -80,7 +83,6 @@ class DataPreloaderService implements DataPreloader {
         
         return new Promise<void>((resolve) => {
           img.onload = () => {
-            console.log(`✅ Preloaded image: ${url}`);
             resolve();
           };
           img.onerror = () => {
@@ -95,7 +97,9 @@ class DataPreloaderService implements DataPreloader {
     });
 
     await Promise.allSettled(promises);
-    console.log('✅ Image preloading complete');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('✅ Image preloading complete');
+    }
   }
 
   getCachedData<T>(key: string): T | null {
@@ -142,7 +146,9 @@ class DataPreloaderService implements DataPreloader {
     }
 
     keysToRemove.forEach(key => localStorage.removeItem(key));
-    console.log(`🧹 Cleared ${keysToRemove.length} expired cache entries`);
+    if (keysToRemove.length > 0) {
+      console.log(`🧹 Cleared ${keysToRemove.length} expired cache entries`);
+    }
   }
 
   private getCacheKey(url: string): string {

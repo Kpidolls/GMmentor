@@ -88,12 +88,14 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {/* Lazy load CookieYes consent script */}
-          <Script
-            id="cookieyes"
-            src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"
-            strategy="lazyOnload"
-          />
+          {/* Lazy load CookieYes consent script (production only) */}
+          {process.env.NODE_ENV === 'production' && (
+            <Script
+              id="cookieyes"
+              src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"
+              strategy="lazyOnload"
+            />
+          )}
           {/* Lazy load reCAPTCHA */}
           <Script
             id="recaptcha"

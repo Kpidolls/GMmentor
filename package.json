@@ -4,6 +4,7 @@
   "homepage": "https://googlementor.com",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node -e \"const fs = require('fs'); const path = require('path'); const src = 'src/data'; const dest = 'public/data'; if (!fs.existsSync(dest)) fs.mkdirSync(dest, {recursive: true}); fs.readdirSync(src).filter(f => f.endsWith('.json')).forEach(f => fs.copyFileSync(path.join(src, f), path.join(dest, f)));\"",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js && node scripts/submit-to-indexnow.js",
     "start": "next start",

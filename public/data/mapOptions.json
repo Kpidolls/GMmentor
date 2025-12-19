@@ -1,0 +1,168 @@
+[
+  {
+    "id": "must-see",
+    "title": "product.mustSee.title",
+    "img": "/assets/images/must.webp",
+    "description": "product.mustSee.description",
+    "link": "https://maps.app.goo.gl/iDRPEgDRk7v8rpJj6",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "must see",
+      "greece",
+      "sights",
+      "attractions",
+      "landmarks",
+      "tourist attractions",
+      "acropolis",
+      "parthenon",
+      "temple of olympian zeus",
+      "ancient agora",
+      "plaka",
+      "monastiraki",
+      "sightseeing",
+      "historical sites",
+      "cultural sites"
+    ]
+  },
+  {
+    "id": "hiking",
+    "title": "product.hiking.title",
+    "img": "/assets/images/hiking.webp",
+    "description": "product.hiking.description",
+    "link": "https://maps.app.goo.gl/1qjPVDcEhx1p4dcy8",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "hiking",
+      "greece",
+      "trails",
+      "nature",
+      "outdoors",
+      "adventure",
+      "mountains",
+      "landscapes",
+      "exploration"
+    ]
+  },
+  {
+    "id": "churches",
+    "title": "product.churches.title",
+    "img": "/assets/images/church.webp",
+    "description": "product.churches.description",
+    "link": "https://maps.app.goo.gl/y7bCep89uvZN7d9U9",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "churches",
+      "greece",
+      "religion",
+      "culture",
+      "history",
+      "architecture",
+      "ekklisia",
+      "agios",
+      "agias"
+    ]
+  },
+  {
+    "id": "wineries",
+    "title": "product.wineries.title",
+    "img": "/assets/images/winery.webp",
+    "description": "product.wineries.description",
+    "link": "https://maps.app.goo.gl/izXJ2jaSSueHwrML8",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "wineries",
+      "greece",
+      "food",
+      "restaurants",
+      "wine",
+      "vineyards",
+      "tasting",
+      "vineyard",
+      "krasi",
+      "wine tasting",
+      "wine tours"
+    ]
+  },
+  {
+    "id": "bars",
+    "title": "product.bars.title",
+    "img": "/assets/images/drinks.webp",
+    "description": "product.bars.description",
+    "link": "https://maps.app.goo.gl/GzgU8nPbzbJE8K7P8",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "bars",
+      "greece",
+      "nightlife",
+      "drinks",
+      "cocktails",
+      "pubs",
+      "mpar"
+    ]
+  },
+  {
+    "id": "bougatsa",
+    "title": "product.bougatsa.title",
+    "img": "/assets/images/bougatsa.webp",
+    "description": "product.bougatsa.description",
+    "link": "https://maps.app.goo.gl/EdZ87NgMbE25Qk7f8",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "bougatsa",
+      "greece",
+      "food",
+      "restaurants",
+      "pastries",
+      "snacks",
+      "mpougatsa",
+      "gluko"
+    ]
+  },
+  {
+    "id": "surf",
+    "title": "product.surf.title",
+    "img": "/assets/images/surf.webp",
+    "description": "product.surf.description",
+    "link": "https://maps.app.goo.gl/C9vQfGhZTVE5phpa6",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "surf",
+      "greece",
+      "water sports",
+      "beach",
+      "ocean",
+      "adventure",
+      "serf",
+      "thalassa"
+    ]
+  },
+  {
+    "id": "bouzoukia",
+    "title": "product.bouzoukia.title",
+    "img": "/assets/images/bouzoukia.webp",
+    "description": "product.bouzoukia.description",
+    "link": "https://maps.app.goo.gl/EockHSJsHcWGRk7j8",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "keywords": [
+      "bouzoukia",
+      "greece",
+      "nightlife",
+      "music",
+      "entertainment",
+      "culture",
+      "live music",
+      "dancing",
+      "greek music",
+      "traditional music",
+      "mpouzoukia"
+    ]
+  }
+]
