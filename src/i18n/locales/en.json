@@ -552,6 +552,10 @@
       "title": "📍 Hydra",
       "description": "Hydra is a refined gem of the Argosaronic Gulf, celebrated for its elegant stone mansions, vibrant artistic spirit, and enchanting alleys untouched by cars. A perfect blend of history, culture, and serenity."
     },
+    "pelion": {
+      "title": "📍Pelion",
+      "description": "Pelion is a green peninsula where mountains roll gently into the sea. Its stone-built villages, hidden coves, and age-old traditions create a place that feels both timeless and inviting, a haven for anyone who loves nature, stories and a touch of adventure."
+    },
     "exploreButton": "Open Map",
     "shareButton": "Share",
     "shareText": "Recommendations for {{title}} from googlementor",
