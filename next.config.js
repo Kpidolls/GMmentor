@@ -269,7 +269,6 @@ const nextConfig = withPWA(withBundleAnalyzer({
       '/search': { page: '/search' },
       '/signup': { page: '/signup' },
       '/blog': { page: '/blog' },
-      '/pwa-test': { page: '/pwa-test' },
     };
   },
   eslint: {
