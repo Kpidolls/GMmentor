@@ -10,12 +10,6 @@ class MyDocument extends Document {
       <Html lang={AppConfig.locale}>
         <Head>
           <meta charSet="utf-8" />
-          {/* <link
-            rel="preload"
-            as="image"
-            href="/assets/images/cover.webp"
-            type="image/webp"
-          /> */}
           {/* Preload key assets */}
           <link
             rel="preload"
@@ -79,11 +73,6 @@ class MyDocument extends Document {
           <meta name="twitter:image" content="/assets/images/newlogo1.webp" />
 
 
-          {/* External form styles (can be removed if inlined) */}
-          {/* <link
-            rel="stylesheet"
-            href="https://sibforms.com/forms/end-form/build/sib-styles.css"
-          /> */}
         </Head>
         <body>
           <Main />

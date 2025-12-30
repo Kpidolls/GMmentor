@@ -919,34 +919,6 @@ const MainHero = () => {
     return false;
   });
 
-  // PWA Share function (ready for implementation)
-  /*
-  const handleShare = async (restaurant?: Restaurant) => {
-    if (!canShare) return;
-
-    const shareData = restaurant ? {
-      title: `${restaurant.name} - Googlementor`,
-      text: `Check out ${restaurant.name} in Athens! Found on Googlementor.`,
-      url: `${window.location.origin}/?restaurant=${encodeURIComponent(restaurant.name)}`
-    } : {
-      title: 'Googlementor - Discover Authentic Greece',
-      text: 'Explore Greece like a local with curated travel maps and authentic restaurant guides.',
-      url: window.location.href
-    };
-
-    const success = await shareContent(shareData);
-    if (!success) {
-      // Fallback to clipboard if share fails
-      try {
-        await navigator.clipboard.writeText(shareData.url || window.location.href);
-        // You could show a toast notification here
-      } catch (e) {
-        console.error('Share failed:', e);
-      }
-    }
-  };
-  */
-
   return (
     <>
       {/* Custom Animation Styles */}
