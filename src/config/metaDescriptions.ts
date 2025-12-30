@@ -33,6 +33,8 @@ export const metaDescriptions = {
   
   blogAcropolisEn: "Ultimate Acropolis guide: Skip-the-line tickets, best visiting times, what to see, and historical context. Make the most of Greece's top attraction.",
   
+  blogLuxuryRooftopEn: "Athens luxury rooftop restaurants guide: Michelin-level dining, Acropolis views, and elegant cocktail lounges. Best high-end rooftops for special occasions.",
+  
   blogPerfectIslandEn: "Choose the perfect Greek island for your trip: Compare Santorini, Mykonos, Crete, and hidden gems. Match your travel style to the ideal destination.",
   
   blogHowToUseEn: "How to use Googlementor's interactive maps: Save locations, plan itineraries, and discover authentic Greek restaurants. Complete tutorial for travelers.",
@@ -45,6 +47,8 @@ export const metaDescriptions = {
   blogAthensHopOnEl: "Οδηγός για τα λεωφορεία Hop-On Hop-Off στην Αθήνα: Διαδρομές, τιμές, καλύτερες στάσεις. Συγκρίνετε εταιρείες και βρείτε τις καλύτερες προσφορές.",
   
   blogAcropolisEl: "Πλήρης οδηγός Ακρόπολης: Εισιτήρια χωρίς αναμονή, καλύτερες ώρες επίσκεψης, τι να δείτε και ιστορικό πλαίσιο. Αξιοποιήστε το κορυφαίο αξιοθέατο της Ελλάδας.",
+  
+  blogLuxuryRooftopEl: "Πολυτελή rooftop εστιατόρια Αθήνας: Fine dining επιπέδου Michelin, θέα Ακρόπολης και κομψά cocktail lounges. Τα καλύτερα high-end rooftops για ειδικές περιστάσεις.",
   
   blogPerfectIslandEl: "Επιλέξτε το τέλειο ελληνικό νησί για το ταξίδι σας: Συγκρίνετε Σαντορίνη, Μύκονο, Κρήτη και κρυφά διαμάντια. Βρείτε τον ιδανικό προορισμό.",
   
