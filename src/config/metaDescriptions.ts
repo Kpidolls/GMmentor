@@ -48,6 +48,10 @@ export const metaDescriptions = {
   
   blogAcropolisEl: "Πλήρης οδηγός Ακρόπολης: Εισιτήρια χωρίς αναμονή, καλύτερες ώρες επίσκεψης, τι να δείτε και ιστορικό πλαίσιο. Αξιοποιήστε το κορυφαίο αξιοθέατο της Ελλάδας.",
   
+  blogMeteora: "Complete Meteora travel guide: Monasteries, hiking trails, best seasons, 2-day itinerary. Practical Q&A for visiting Greece's spiritual rock formations.",
+  
+  blogMeteoraEl: "Πλήρης οδηγός Μετεώρων: Μοναστήρια, μονοπάτια πεζοπορίας, καλύτερες εποχές, 2ήμερο πρόγραμμα. Πρακτικές ερωτήσεις για τους πνευματικούς βράχους της Ελλάδας.",
+  
   blogLuxuryRooftopEl: "Πολυτελή rooftop εστιατόρια Αθήνας: Fine dining επιπέδου Michelin, θέα Ακρόπολης και κομψά cocktail lounges. Τα καλύτερα high-end rooftops για ειδικές περιστάσεις.",
   
   blogPerfectIslandEl: "Επιλέξτε το τέλειο ελληνικό νησί για το ταξίδι σας: Συγκρίνετε Σαντορίνη, Μύκονο, Κρήτη και κρυφά διαμάντια. Βρείτε τον ιδανικό προορισμό.",
