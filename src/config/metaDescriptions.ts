@@ -59,6 +59,10 @@ export const metaDescriptions = {
   blogHowToUseEl: "Πώς να χρησιμοποιήσετε τους διαδραστικούς χάρτες του Googlementor: Αποθηκεύστε τοποθεσίες, σχεδιάστε δρομολόγια και ανακαλύψτε αυθεντικά ελληνικά εστιατόρια.",
   
   blogPlanFunEl: "Σχεδιάστε αξέχαστες περιπέτειες Σαββατοκύριακου στην Ελλάδα με τους επιμελημένους χάρτες του Googlementor. Βρείτε κρυφές παραλίες και τοπικές εμπειρίες.",
+  
+  blogGreece2026En: "Complete 2026 Greece holiday calendar: Month-by-month guide to public holidays, festivals, transport disruptions, and smart travel planning around Greek celebrations.",
+  
+  blogGreece2026El: "Πλήρες ημερολόγιο αργιών Ελλάδας 2026: Μηνιαίος οδηγός για δημόσιες αργίες, γιορτές, διακοπές μεταφορών και έξυπνο σχεδιασμό ταξιδιού.",
 };
 
 /**
