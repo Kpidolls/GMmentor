@@ -63,6 +63,10 @@ export const metaDescriptions = {
   blogGreece2026En: "Complete 2026 Greece holiday calendar: Month-by-month guide to public holidays, festivals, transport disruptions, and smart travel planning around Greek celebrations.",
   
   blogGreece2026El: "Πλήρες ημερολόγιο αργιών Ελλάδας 2026: Μηνιαίος οδηγός για δημόσιες αργίες, γιορτές, διακοπές μεταφορών και έξυπνο σχεδιασμό ταξιδιού.",
+  
+  blogWeatherSwimmingEn: "Greece weather guide: Swimming season dates, sea temperatures, business hours, and ferry schedules by month. Plan your perfect Greek trip with confidence.",
+  
+  blogWeatherSwimmingEl: "Οδηγός καιρού Ελλάδας: Περίοδοι κολύμβησης, θερμοκρασίες θάλασσας, ωράρια επιχειρήσεων και δρομολόγια πλοίων ανά μήνα. Προγραμματίστε το τέλειο ταξίδι.",
 };
 
 /**
