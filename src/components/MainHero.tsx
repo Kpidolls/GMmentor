@@ -14,7 +14,6 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 import restaurantsData from '../data/greekRestaurants.json';
 import municipalitiesData from '../data/municipalities.json';
 import categoriesData from '../data/restaurantCategories.json';
@@ -970,26 +969,20 @@ const MainHero = () => {
             <div className="absolute bottom-10 left-40 w-72 h-72 bg-slate-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000" />
           </div>
           
-          <Image
-            src="/assets/images/cover.webp"
-            alt={t('mainHero.coverAlt', 'Panoramic view of Athens skyline with the Acropolis in the background — travel and dining guide hero image')}
-            fill
-            priority
-            quality={90}
-            placeholder="empty"
-            sizes="100vw"
-            style={{
-              objectFit: 'cover',
-              objectPosition: 'center',
-              transform: `translateY(${scrollY * 0.2}px)`,
-              opacity: 0.15,
-            }}
-          />
+          <picture className="absolute inset-0 block w-full h-full">
+            <source srcSet="/assets/images/cover.webp" type="image/webp" />
+            <img
+              src="/assets/images/cover-fallback.svg"
+              alt={t('mainHero.coverAlt', 'Panoramic view of Athens skyline with the Acropolis in the background — travel and dining guide hero image')}
+              className="w-full h-full object-cover"
+              style={{ objectFit: 'cover', objectPosition: 'center', transform: `translateY(${scrollY * 0.2}px)`, opacity: 0.15 }}
+            />
+          </picture>
           
-          {/* Enhanced gradient overlay with better depth */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/60 to-slate-900/40" />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-transparent to-slate-900/80" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/50" />
+          {/* Enhanced gradient overlay with better depth (muted so image is visible) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/45 via-slate-900/25 to-slate-900/15 pointer-events-none" />
+          {/* removed heavy horizontal rail to reveal cover image */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/30 pointer-events-none" />
         </div>
 
 
@@ -1019,14 +1012,15 @@ const MainHero = () => {
         <section role="main" aria-label="Homepage" className="relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center">
           {/* Background image for a professional feel (uses existing cover image) */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
-            <Image
-              src="/assets/images/cover.webp"
-              alt={t('mainHero.coverAlt', 'Greece travel scene')}
-              priority={true}
-              fill
-              sizes="(max-width: 768px) 100vw, 100vw"
-              className="object-cover brightness-90"
-            />
+            <picture className="absolute inset-0 block w-full h-full">
+              <source srcSet="/assets/images/cover.webp" type="image/webp" />
+              <img
+                src="/assets/images/cover-fallback.svg"
+                alt={t('mainHero.coverAlt', 'Greece travel scene')}
+                className="w-full h-full object-cover brightness-90"
+                style={{ objectFit: 'cover' }}
+              />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-b from-[#052A6B]/25 via-[#0B7285]/10 to-[#071438]/35" />
           </div>
           <div className="text-center space-y-6 xs:space-y-8 sm:space-y-10 lg:space-y-12 w-full">

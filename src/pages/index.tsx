@@ -18,7 +18,7 @@ import dynamic from 'next/dynamic';
 import { GetStaticProps } from 'next';
 import { Post, getAllPosts } from '../lib/posts';
 import BlogHighlight from '../components/BlogHighlight';
-const FeaturedCarousel = dynamic(() => import('../components/FeaturedCarousel'), { ssr: false })
+// FeaturedCarousel removed — using static blog highlight only
 
 const BrevoForm = dynamic(() => import('../components/BrevoForm'), { ssr: false });
 const GetYourGuideWidget = dynamic(() => import('../components/GetYourGuideWidget'), { ssr: false });
@@ -81,8 +81,6 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       {/* Make Blog more prominent: place BlogHighlight higher on the page */}
       {/* Blog highlight inserted here (minimal posts passed) */}
       <BlogHighlight allPosts={allPosts} />
-      {/* Lightweight featured carousel (client-side) */}
-      <FeaturedCarousel />
 
       {/* Short AI-friendly intro for the homepage */}
       <section className="bg-white py-8">

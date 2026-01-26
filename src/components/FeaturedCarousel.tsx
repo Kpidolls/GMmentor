@@ -77,10 +77,12 @@ export default function FeaturedCarousel() {
     <div className="mt-8 max-w-3xl mx-auto text-center">
       <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/20 shadow-md">
         <h3 className="text-sm text-blue-100 uppercase tracking-wider font-semibold mb-2">{t('blog.highlightTitle', 'From the Blog')}</h3>
-        <Link href={`/blog/${p.slug}`} className="block">
-          <h4 className="text-lg sm:text-xl font-bold text-white hover:underline">{p.title}</h4>
-          {p.summary && <p className="text-sm text-slate-200 mt-2 line-clamp-2">{p.summary}</p>}
-          <div className="mt-3 text-xs text-slate-300">{new Date(p.date).toLocaleDateString(p.language === 'el' ? 'el-GR' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</div>
+        <Link href={`/blog/${p.slug}`} legacyBehavior passHref>
+          <a className="block w-full text-left" role="link" aria-label={p.title} tabIndex={0}>
+            <h4 className="text-lg sm:text-xl font-bold text-white hover:underline">{p.title}</h4>
+            {p.summary && <p className="text-sm text-slate-200 mt-2 line-clamp-2">{p.summary}</p>}
+            <div className="mt-3 text-xs text-slate-300">{new Date(p.date).toLocaleDateString(p.language === 'el' ? 'el-GR' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</div>
+          </a>
         </Link>
         <div className="mt-3 flex items-center justify-center gap-2">
           {posts.map((_, i) => (
