@@ -27,7 +27,7 @@ export const metaDescriptions = {
   privacyPolicy: "Privacy Policy for Googlementor. We protect your data while helping you discover authentic Greece. GDPR-compliant, transparent data practices.",
   
   // Blog posts - English versions
-  blogAthensAirportEn: "Complete guide to Athens Airport (ATH) transfers: Metro, bus, taxi, and private options. Travel times, costs, and insider tips for 2025.",
+  blogAthensAirportEn: "Athens Airport (ATH) transfers: Metro, bus, taxi, and private options. Travel times, costs, and insider tips for 2025.",
   
   blogAthensHopOnEn: "Athens Hop-On Hop-Off bus guide: Routes, pricing, best stops, and whether it's worth it. Compare operators and find the best deals for 2025.",
   
