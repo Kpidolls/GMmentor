@@ -158,7 +158,7 @@
     "privacyTitle": "Privacy Policy | Googlementor",
     "privacyDescription": "How Googlementor collects, stores and uses personal data, cookies and analytics. Learn your rights, third-party integrations (Google Maps, ads, analytics) and how to manage privacy settings.",
     "homeDescriptionShort": "Explore Greece with Googlementor — curated Google Maps lists, island and city itineraries, restaurant guides and offline-ready maps. Save favorites and plan trips across Athens, Santorini and Mykonos.",
-    "blogDescriptionShort": "Googlementor Blog — in-depth, map-backed guides and local tips for Greece. Find itineraries, dining recommendations and bilingual articles to plan better trips across the islands and mainland.",
+    "blogDescriptionShort": "In-depth, map-backed guides and local tips for Greece. Find itineraries, dining recommendations and bilingual articles to plan better trips across the islands and mainland.",
     "storeDescriptionShort": "Shop vetted travel gear and packing essentials recommended for island-hopping and city breaks in Greece. Compact, durable picks that make travel easier and more comfortable.",
     "searchDescriptionShort": "Search curated Greek destinations, handpicked restaurants and themed map lists. Fast multilingual results with direct links to Google Maps and saved lists for easy planning.",
     "loginDescriptionShort": "Sign in to access saved maps, sync favorites across devices and manage purchases. Secure account access to keep your trip planning in one place.",
@@ -196,6 +196,8 @@
   "mainHero": {
     "title": "Greece",
     "subtitle": "Places worth visiting",
+    "tagline": "Curated maps, local guides and vetted lists to help you explore Greece with confidence.",
+    "coverAlt": "Greece travel scene",
     "viewProduct": "View Product",
     "description": "Google Maps Lists for trip planning.",
     "primaryAction": {
@@ -207,7 +209,10 @@
     },
     "secondaryAction": {
       "text": "Buy Travel Gear"
-    }
+    },
+    "fastestBadge": "Quick",
+    "useMyLocation": "Use my location",
+    "browseAreas": "Browse areas"
   },
   "restaurantFinder": {
     "title": "Discover Authentic Greek Restaurants",
@@ -846,6 +851,10 @@
     }
   },
   "blog": {
+    "backToBlog": "Back to Blog",
+    "noEnglishVersion": "This article is not available in English.",
+    "noGreekVersion": "This article is not available in Greek.",
+    "langSwitchLabel": "{{label}}",
     "giveBestRecommendations": {
       "title": "Share the Best Places and Make Travel Easier",
       "summary": "test",
@@ -854,7 +863,9 @@
       "missing": "And if there’s a spot you love that’s missing from our lists, we’d love to hear about it. Your input helps us grow, and it helps others travel better.",
       "contact": "Got a question, suggestion or need help using the lists? 📲 Reach out to us anytime on Facebook, Instagram or TikTok — we’re here to make sure your journey is as smooth as possible.",
       "cta": "Travel smarter. Share your finds. Be a Googlementor."
-    }
+    },
+    "readMore": "Read more",
+    "viewAll": "View all articles"
   },
   "productShowcaseTitle": "Essential Travel Items",
   "productShowcase": {

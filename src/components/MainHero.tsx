@@ -962,12 +962,12 @@ const MainHero = () => {
 
       <main className="relative min-h-screen w-full flex items-center justify-center">
         {/* Professional Background with Enhanced Visual Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
           {/* Animated background pattern */}
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000" />
-            <div className="absolute bottom-10 left-40 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000" />
+            <div className="absolute top-10 left-10 w-72 h-72 bg-slate-700 rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
+            <div className="absolute top-40 right-10 w-72 h-72 bg-slate-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000" />
+            <div className="absolute bottom-10 left-40 w-72 h-72 bg-slate-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000" />
           </div>
           
           <Image
@@ -988,7 +988,7 @@ const MainHero = () => {
           
           {/* Enhanced gradient overlay with better depth */}
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/60 to-slate-900/40" />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-transparent to-slate-900/80" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/50" />
         </div>
 
@@ -1016,7 +1016,19 @@ const MainHero = () => {
 
 
         {/* Professional Hero Content */}
-        <section className="relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 py-12 xs:py-16 sm:py-20 lg:py-32 max-w-7xl w-full mx-auto min-h-screen flex flex-col justify-center">
+        <section role="main" aria-label="Homepage" className="relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center">
+          {/* Background image for a professional feel (uses existing cover image) */}
+          <div className="absolute inset-0 -z-10 overflow-hidden">
+            <Image
+              src="/assets/images/cover.webp"
+              alt={t('mainHero.coverAlt', 'Greece travel scene')}
+              priority={true}
+              fill
+              sizes="(max-width: 768px) 100vw, 100vw"
+              className="object-cover brightness-90"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#052A6B]/25 via-[#0B7285]/10 to-[#071438]/35" />
+          </div>
           <div className="text-center space-y-6 xs:space-y-8 sm:space-y-10 lg:space-y-12 w-full">
             {/* Enhanced Title with Modern Typography */}
             <header className="space-y-4 xs:space-y-5 sm:space-y-7 relative">
@@ -1040,9 +1052,12 @@ const MainHero = () => {
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </span>
                   
-                  <h1 className="block text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-[0.9] px-1 group-hover:from-blue-100 group-hover:via-white group-hover:to-blue-100 transition-all duration-500 drop-shadow-2xl">
+                  <h1 className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight px-1 group-hover:from-blue-100 group-hover:via-white group-hover:to-blue-100 transition-all duration-500 drop-shadow-lg">
                     {t('mainHero.title')}
                   </h1>
+                  <p className="mt-3 text-sm sm:text-base md:text-lg text-blue-100 max-w-2xl mx-auto font-medium">
+                    {t('mainHero.tagline', 'Curated maps, local guides and vetted lists to help you explore Greece with confidence.')}
+                  </p>
                 </div>
               </div>
               
@@ -1332,8 +1347,8 @@ const MainHero = () => {
                         
                         {/* Badge */}
                         <div className="flex justify-center mb-4">
-                          <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold tracking-wider uppercase border border-white/30">
-                            Fastest
+                          <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider uppercase border border-white/30">
+                            {t('mainHero.fastestBadge', 'Quick')}
                           </span>
                         </div>
                         
@@ -1349,8 +1364,8 @@ const MainHero = () => {
                         
                         {/* Arrow indicator */}
                         <div className="flex justify-center">
-                          <div className="flex items-center gap-2 text-sm font-bold group-hover:gap-4 transition-all duration-300">
-                            <span>Get Started</span>
+                          <div className="flex items-center gap-2 text-sm font-semibold group-hover:gap-4 transition-all duration-300">
+                            <span>{t('mainHero.useMyLocation', 'Use my location')}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>

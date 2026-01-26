@@ -67,7 +67,7 @@ export const getStaticProps: GetStaticProps<BlogPostProps> = async ({ params }) 
 }
 
 export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostProps) {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const router = useRouter()
 
   // Handle language mismatch
@@ -114,45 +114,45 @@ export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostPro
       </Head>
       
       {/* Navigation and Language Switcher */}
-      <HStack justify="space-between" align="center" mb={6}>
-        <NextLink href="/blog" passHref>
-          <Button variant="ghost" size="sm">
-            ← {post.language === 'el' ? 'Πίσω στο Blog' : 'Back to Blog'}
-          </Button>
-        </NextLink>
-        <HStack spacing={2}>
-          {alternatePost ? (
-            <Button 
-              variant="outline" 
-              size="sm"
-              onClick={handleLanguageSwitch}
-            >
-              {alternatePost.language === 'el' ? 'ΕΛ' : 'EN'}
-            </Button>
-          ) : (
-            <Button 
-              variant="outline" 
-              size="sm"
-              onClick={() => {
-                const newLang = i18n.language === 'en' ? 'el' : 'en'
-                i18n.changeLanguage(newLang)
-                router.push('/blog')
-              }}
-              opacity={0.6}
-            >
-              {i18n.language === 'en' ? 'ΕΛ' : 'EN'}
-            </Button>
-          )}
-        </HStack>
-      </HStack>
+          <HStack justify="space-between" align="center" mb={6}>
+            <NextLink href="/blog" passHref>
+              <Button variant="ghost" size="sm">
+                ← {t('blog.backToBlog', 'Back to Blog')}
+              </Button>
+            </NextLink>
+            <HStack spacing={2}>
+              {alternatePost ? (
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={handleLanguageSwitch}
+                >
+                  {t('blog.langSwitchLabel', { label: alternatePost.language === 'el' ? 'ΕΛ' : 'EN', defaultValue: alternatePost.language === 'el' ? 'ΕΛ' : 'EN' })}
+                </Button>
+              ) : (
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => {
+                    const newLang = i18n.language === 'en' ? 'el' : 'en'
+                    i18n.changeLanguage(newLang)
+                    router.push('/blog')
+                  }}
+                  opacity={0.6}
+                >
+                  {t('blog.langSwitchLabel', { label: i18n.language === 'en' ? 'ΕΛ' : 'EN', defaultValue: i18n.language === 'en' ? 'ΕΛ' : 'EN' })}
+                </Button>
+              )}
+            </HStack>
+          </HStack>
 
       {/* Alert if no translation available */}
       {!alternatePost && (
         <Alert status="info" mb={4} borderRadius="md">
           <AlertIcon />
           {post.language === 'el' 
-            ? 'Αυτό το άρθρο δεν είναι διαθέσιμο στα αγγλικά.' 
-            : 'This article is not available in Greek.'}
+            ? t('blog.noEnglishVersion', 'This article is not available in English.')
+            : t('blog.noGreekVersion', 'This article is not available in Greek.')}
         </Alert>
       )}
       

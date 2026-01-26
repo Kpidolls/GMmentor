@@ -16,11 +16,16 @@ import Reviews from '../components/Reviews';
 import { metaDescriptions } from '../config/metaDescriptions';
 import dynamic from 'next/dynamic';
 import { GetStaticProps } from 'next';
+import { Post, getAllPosts } from '../lib/posts';
+import BlogHighlight from '../components/BlogHighlight';
+const FeaturedCarousel = dynamic(() => import('../components/FeaturedCarousel'), { ssr: false })
 
 const BrevoForm = dynamic(() => import('../components/BrevoForm'), { ssr: false });
 const GetYourGuideWidget = dynamic(() => import('../components/GetYourGuideWidget'), { ssr: false });
 
-const App = () => {
+type MinimalPost = Pick<Post, 'slug' | 'title' | 'date' | 'summary' | 'language' | 'originalSlug'>
+
+const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
   const { t } = useTranslation();
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -73,6 +78,12 @@ const App = () => {
         <MainHero />
       </section>
 
+      {/* Make Blog more prominent: place BlogHighlight higher on the page */}
+      {/* Blog highlight inserted here (minimal posts passed) */}
+      <BlogHighlight allPosts={allPosts} />
+      {/* Lightweight featured carousel (client-side) */}
+      <FeaturedCarousel />
+
       {/* Short AI-friendly intro for the homepage */}
       <section className="bg-white py-8">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -99,7 +110,7 @@ const App = () => {
           
           {/* Widget Container */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl transform rotate-1" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white to-slate-50 rounded-3xl transform rotate-1" />
             <div className="relative bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
               <GetYourGuideWidget />
             </div>
@@ -153,7 +164,7 @@ const App = () => {
           
           {/* Product Showcase Container */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-50 to-pink-50 rounded-3xl transform -rotate-1" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white to-slate-50 rounded-3xl transform -rotate-1" />
             <div className="relative bg-white rounded-3xl shadow-xl border border-gray-100 p-8">
               <ProductShowcase />
             </div>
@@ -229,8 +240,14 @@ const App = () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  const posts = getAllPosts()
+  // only send minimal fields to reduce page payload
+  const minimal = posts
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .map((p) => ({ slug: p.slug, title: p.title, date: p.date, summary: p.summary, language: p.language, originalSlug: p.originalSlug }))
+
   return {
-    props: {},
+    props: { allPosts: minimal },
   };
 };
 
