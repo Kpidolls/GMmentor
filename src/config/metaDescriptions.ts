@@ -67,6 +67,10 @@ export const metaDescriptions = {
   blogWeatherSwimmingEn: "Greece weather guide: Swimming season dates, sea temperatures, business hours, and ferry schedules by month. Plan your perfect Greek trip with confidence.",
   
   blogWeatherSwimmingEl: "Οδηγός καιρού Ελλάδας: Περίοδοι κολύμβησης, θερμοκρασίες θάλασσας, ωράρια επιχειρήσεων και δρομολόγια πλοίων ανά μήνα. Προγραμματίστε το τέλειο ταξίδι.",
+  
+  blogAthensDayTripsEn: "Best day trip ideas from Athens: Cape Sounion, Aegina, Chalkida, Loutraki. Complete guide with travel times, what to expect, and practical tips.",
+  
+  blogAthensDayTripsEl: "Καλύτερες ημερήσιες εκδρομές από Αθήνα: Σούνιο, Αίγινα, Χαλκίδα, Λουτράκι. Πλήρης οδηγός με χρόνους διαδρομής, τι να περιμένετε και πρακτικές συμβουλές.",
 };
 
 /**
