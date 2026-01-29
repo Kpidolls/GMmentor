@@ -731,18 +731,6 @@ const MainHero = () => {
     return `${raw} ${t('restaurantFinder.places', 'places')}`;
   };
 
-  const nextRestaurant = () => {
-    if (nearestRestaurants && currentIndex < nearestRestaurants.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  const previousRestaurant = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
   const currentRestaurant = nearestRestaurants?.[currentIndex];
 
   // Enhanced search normalization function
@@ -1755,181 +1743,84 @@ const MainHero = () => {
                         )}
                       </>
                     )}
-                    {/* Horizontal Scrollable Restaurant Cards */}
-                    <div className="relative max-w-5xl mx-auto">
-                      {/* Navigation Arrows for Mobile */}
-                      {nearestRestaurants.length > 1 && (
-                        <>
-                          <button
-                            onClick={previousRestaurant}
-                            disabled={currentIndex === 0}
-                            aria-label={t('restaurantFinder.previous', 'Previous restaurant')}
-                            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-xl rounded-full p-3 text-gray-700 disabled:text-gray-300 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed border-2 border-gray-200"
-                            style={{ marginLeft: '-12px' }}
-                          >
-                            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                            </svg>
-                          </button>
-                          
-                          <button
-                            onClick={nextRestaurant}
-                            disabled={currentIndex === nearestRestaurants.length - 1}
-                            aria-label={t('restaurantFinder.next', 'Next restaurant')}
-                            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-xl rounded-full p-3 text-gray-700 disabled:text-gray-300 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed border-2 border-gray-200"
-                            style={{ marginRight: '-12px' }}
-                          >
-                            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                          </button>
-                        </>
-                      )}
-                      
-                      {/* Scrollable Container */}
-                      <div className="overflow-x-auto scrollbar-hide px-2 sm:px-8 py-4">
-                        <div 
-                          className="flex gap-6 transition-transform duration-300 ease-in-out justify-center"
-                          style={{ 
-                            transform: `translateX(-${currentIndex * (320 + 24)}px)`,
-                            width: nearestRestaurants.length === 1 ? 'auto' : `${nearestRestaurants.length * (320 + 24)}px`
-                          }}
-                        >
-                          {nearestRestaurants.map((restaurantData, index) => {
-                            // Check for vegan/vegetarian and luxury flags
-                            const isVegan = vegetarianData.some(v => v.name === restaurantData.restaurant.name && v.address === restaurantData.restaurant.address);
-                            const isLuxury = luxuryDiningData.some(l => l.name === restaurantData.restaurant.name && l.address === restaurantData.restaurant.address);
-                            const isSelected = selectedRestaurants.has(index);
-                            return (
-                              <div
-                                key={index}
-                                className={`min-w-[320px] max-w-[320px] h-[300px] bg-gradient-to-br from-white via-blue-50 to-indigo-50 rounded-2xl p-6 border-2 transition-all duration-300 flex flex-col shadow-lg hover:shadow-xl ${
-                                  isSelected 
-                                    ? 'border-green-500 ring-4 ring-green-200 scale-[1.02]' 
-                                    : index === currentIndex 
-                                    ? 'border-blue-400 scale-[1.02]' 
-                                    : 'border-blue-200 opacity-90'
-                                }`}
-                              >
-                                {/* Checkbox for selection */}
-                                <div className="flex items-start justify-between mb-3">
+                    {/* Vertical Scrollable Restaurant Cards */}
+                    <div className="relative max-w-4xl mx-auto">
+                      <div className="rounded-2xl border border-slate-200/70 bg-white/70 backdrop-blur-sm shadow-lg">
+                        <div className="max-h-[72vh] overflow-y-auto px-3 sm:px-4 py-4 space-y-4 sm:space-y-5 custom-scrollbar">
+                        {nearestRestaurants.map((restaurantData, index) => {
+                          const isVegan = vegetarianData.some(v => v.name === restaurantData.restaurant.name && v.address === restaurantData.restaurant.address);
+                          const isLuxury = luxuryDiningData.some(l => l.name === restaurantData.restaurant.name && l.address === restaurantData.restaurant.address);
+                          const isSelected = selectedRestaurants.has(index);
+                          return (
+                            <div
+                              key={index}
+                              className={`relative w-full bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-2xl p-5 sm:p-6 border transition-all duration-300 flex flex-col shadow-md hover:shadow-xl ${
+                                isSelected
+                                  ? 'border-emerald-500 ring-2 ring-emerald-200'
+                                  : 'border-slate-200 hover:border-blue-300'
+                              }`}
+                            >
+                              <div className="absolute inset-y-3 left-0 w-1.5 rounded-r-full bg-gradient-to-b from-blue-400 via-indigo-500 to-purple-500 opacity-70" />
+                              <div className="flex items-start gap-4 pl-3">
+                                <div className="flex-1 space-y-3">
+                                  <div className="flex items-start gap-2">
+                                    <h4 className="font-semibold text-slate-900 text-lg sm:text-xl flex items-start gap-2 line-clamp-2 leading-tight">
+                                      🍽️ <span className="flex-1">{restaurantData.restaurant.name}</span>
+                                    </h4>
+                                  </div>
+                                  <div>
+                                    <p className="text-slate-600 text-sm sm:text-[15px] flex items-start gap-2 line-clamp-2 leading-snug">
+                                      📍 <span className="flex-1">{restaurantData.restaurant.address}</span>
+                                    </p>
+                                  </div>
+                                  <div className="flex flex-wrap items-center gap-2 pt-1">
+                                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap shadow-sm">
+                                      📏 {formatDistance(restaurantData.distance)}
+                                    </span>
+                                    <span className="text-slate-500 text-sm font-medium whitespace-nowrap">
+                                      #{index + 1} {t('restaurantFinder.of', 'of')} {nearestRestaurants.length}
+                                    </span>
+                                    {isVegan && (
+                                      <span title="Vegan Friendly" className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-semibold border border-emerald-200">🌿 Vegan</span>
+                                    )}
+                                    {isLuxury && (
+                                      <span title="Luxury/Pricey" className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-xs font-semibold border border-amber-200">✨ Luxury</span>
+                                    )}
+                                  </div>
+                                </div>
+
+                                <div className="flex flex-col items-end gap-2">
                                   <label className="flex items-center gap-2 cursor-pointer group">
                                     <input
                                       type="checkbox"
                                       checked={isSelected}
                                       onChange={() => toggleRestaurantSelection(index)}
                                       disabled={!isSelected && selectedRestaurants.size >= 10}
-                                      className="w-5 h-5 rounded-md border-2 border-gray-400 text-green-600 focus:ring-2 focus:ring-green-500 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                                      className="w-5 h-5 rounded-md border-2 border-slate-400 text-emerald-600 focus:ring-2 focus:ring-emerald-500 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                                     />
-                                    <span className="text-sm font-semibold text-gray-700 group-hover:text-gray-900">
+                                    <span className="text-sm font-semibold text-slate-700 group-hover:text-slate-900">
                                       {isSelected ? t('restaurantFinder.selected', 'Selected') : t('restaurantFinder.select', 'Select')}
                                     </span>
                                   </label>
-                                  {(isVegan || isLuxury) && (
-                                    <div className="flex gap-1">
-                                      {isVegan && (
-                                        <span title="Vegan Friendly" className="px-2 py-0.5 rounded-full bg-green-200 text-green-800 text-xs font-semibold border border-green-300">🌱</span>
-                                      )}
-                                      {isLuxury && (
-                                        <span title="Luxury/Pricey" className="px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 text-xs font-semibold border border-yellow-300">💎</span>
-                                      )}
-                                    </div>
-                                  )}
-                                </div>
-
-                                {/* Content Container - Flex grow to push button to bottom */}
-                                <div className="flex-1 flex flex-col">
-                                  {/* Restaurant Info - Fixed height sections */}
-                                  <div className="flex-1 space-y-3">
-                                    {/* Restaurant Name - Fixed height with line clamping */}
-                                    <div className="h-[52px] flex items-center gap-2">
-                                      <h4 className="font-bold text-gray-900 text-lg flex items-start gap-2 line-clamp-2 leading-tight">
-                                        🍽️ <span className="flex-1">{restaurantData.restaurant.name}</span>
-                                      </h4>
-                                    </div>
-                                    {/* Address - Fixed height with line clamping */}
-                                    <div className="h-[44px]">
-                                      <p className="text-gray-600 text-sm flex items-start gap-2 line-clamp-2 leading-snug">
-                                        📍 <span className="flex-1">{restaurantData.restaurant.address}</span>
-                                      </p>
-                                    </div>
-                                    {/* Distance and Index Info */}
-                                    <div className="flex flex-wrap items-center gap-3 pt-2">
-                                      <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-3 py-1.5 rounded-full text-sm font-bold whitespace-nowrap shadow-md">
-                                        📏 {formatDistance(restaurantData.distance)}
-                                      </span>
-                                      <span className="text-gray-600 text-sm font-medium whitespace-nowrap">
-                                        #{index + 1} {t('restaurantFinder.of', 'of')} {nearestRestaurants.length}
-                                      </span>
-                                    </div>
-                                  </div>
-                                  {/* Button - Always at bottom */}
-                                  <div className="mt-4">
-                                    <a
-                                      href={restaurantData.restaurant.url}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="block w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white py-3 px-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200 text-center text-base transform hover:scale-[1.02] active:scale-95"
-                                    >
-                                      {t('restaurantFinder.viewOnMaps', 'View on Google Maps')}
-                                    </a>
-                                  </div>
                                 </div>
                               </div>
-                            );
-                          })}
+
+                              <div className="mt-4">
+                                <a
+                                  href={restaurantData.restaurant.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white py-3 px-4 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-200 text-center text-base transform hover:scale-[1.01] active:scale-95"
+                                >
+                                  {t('restaurantFinder.viewOnMaps', 'View on Google Maps')}
+                                </a>
+                              </div>
+                            </div>
+                          );
+                        })}
                         </div>
                       </div>
                     </div>
-
-                    {/* Dots Navigation */}
-                    {nearestRestaurants.length > 1 && (
-                      <div className="flex justify-center items-center gap-3 px-4 mt-4">
-                        <span className="text-xs text-gray-500 mr-2 hidden sm:inline">
-                          {currentIndex + 1} / {nearestRestaurants.length}
-                        </span>
-                        <div className="flex gap-1 sm:gap-2 max-w-full justify-center">
-                          {[...Array(Math.min(15, nearestRestaurants.length))].map((_, index) => (
-                            <button
-                              key={index}
-                              onClick={() => setCurrentIndex(index)}
-                              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition duration-200 flex-shrink-0 ${
-                                index === currentIndex ? 'bg-[#0878fe]' : 'bg-gray-300 hover:bg-gray-400'
-                              }`}
-                              aria-label={`${t('restaurantFinder.goToRestaurant', 'Go to restaurant')} ${index + 1}`}
-                            />
-                          ))}
-                          {nearestRestaurants.length > 15 && (
-                            <span className="text-gray-400 text-xs self-center ml-1">...</span>
-                          )}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Desktop Navigation (Hidden on Mobile) */}
-                    {nearestRestaurants.length > 1 && (
-                      <div className="hidden sm:flex justify-center items-center gap-4">
-                        <button
-                          onClick={previousRestaurant}
-                          disabled={currentIndex === 0}
-                          className="flex items-center gap-2 px-4 py-2 text-gray-600 disabled:text-gray-400 hover:text-[#0878fe] transition duration-200 font-medium"
-                        >
-                          ← {t('restaurantFinder.previous', 'Previous')}
-                        </button>
-                        
-                        <span className="text-gray-500 text-sm">
-                          {currentIndex + 1} {t('restaurantFinder.of', 'of')} {nearestRestaurants.length}
-                        </span>
-                        
-                        <button
-                          onClick={nextRestaurant}
-                          disabled={currentIndex === nearestRestaurants.length - 1}
-                          className="flex items-center gap-2 px-4 py-2 text-gray-600 disabled:text-gray-400 hover:text-[#0878fe] transition duration-200 font-medium"
-                        >
-                          {t('restaurantFinder.next', 'Next')} →
-                        </button>
-                      </div>
-                    )}
 
                     <div className="text-center pt-6 mt-6 border-t-2 border-gray-200">
                       <button
