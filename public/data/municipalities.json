@@ -5,7 +5,12 @@
     "lng": 23.7417,
     "region": "Κέντρο Αθήνας",
     "region_en": "Athens Center",
-    "name_en": "Kypseli"
+    "name_en": "Kypseli",
+    "aliases": [
+      "Kipseli",
+      "Kupseli",
+      "Κυψελη"
+    ]
   },
   {
     "name": "Αμπελόκηποι",
@@ -13,7 +18,14 @@
     "lng": 23.753,
     "region": "Κέντρο Αθήνας",
     "region_en": "Athens Center",
-    "name_en": "Ambelokipi"
+    "name_en": "Ambelokipi",
+    "aliases": [
+      "Ampelopoi",
+      "Ampelokipoi",
+      "Ampelokipi",
+      "Αμπελοκηποι",
+      "Αμπελοκηπι"
+    ]
   },
   {
     "name": "Εξάρχεια",
@@ -21,7 +33,13 @@
     "lng": 23.7365,
     "region": "Κέντρο Αθήνας",
     "region_en": "Athens Center",
-    "name_en": "Exarcheia"
+    "name_en": "Exarcheia",
+    "aliases": [
+      "Exarchia",
+      "Eksarheia",
+      "Εξαρχεια",
+      "Εξαρχειά"
+    ]
   },
   {
     "name": "Ζωγράφου",
@@ -125,7 +143,17 @@
     "lng": 23.8111,
     "region": "Βόρεια Προάστια",
     "name_en": "Kifisia",
-    "region_en": "Northern Suburbs"
+    "region_en": "Northern Suburbs",
+    "aliases": [
+      "Kifissia",
+      "Cephisia",
+      "Kephisia",
+      "Κηφησία",
+      "Κηφηση",
+      "Κηφισια",
+      "Κηφησια",
+      "Κηφησιά"
+    ]
   },
   {
     "name": "Λυκόβρυση",
@@ -133,7 +161,11 @@
     "lng": 23.788,
     "region": "Βόρεια Προάστια",
     "name_en": "Lykovrysi",
-    "region_en": "Northern Suburbs"
+    "region_en": "Northern Suburbs",
+    "aliases": [
+      "Likovrysi",
+      "Likovrissi"
+    ]
   },
   {
     "name": "Μεταμόρφωση",
@@ -141,7 +173,12 @@
     "lng": 23.7544,
     "region": "Βόρεια Προάστια",
     "name_en": "Metamorfosi",
-    "region_en": "Northern Suburbs"
+    "region_en": "Northern Suburbs",
+    "aliases": [
+      "Metamorfosi",
+      "Metamorphosi",
+      "Μεταμορφωση"
+    ]
   },
   {
     "name": "Πεύκη",
@@ -149,7 +186,12 @@
     "lng": 23.792,
     "region": "Βόρεια Προάστια",
     "name_en": "Pefki",
-    "region_en": "Northern Suburbs"
+    "region_en": "Northern Suburbs",
+    "aliases": [
+      "Pefki",
+      "Pefkakia",
+      "Πευκη"
+    ]
   },
   {
     "name": "Μαρούσι",
@@ -157,7 +199,14 @@
     "lng": 23.808,
     "region": "Βόρεια Προάστια",
     "name_en": "Marousi",
-    "region_en": "Northern Suburbs"
+    "region_en": "Northern Suburbs",
+    "aliases": [
+      "Marousi",
+      "Maroussi",
+      "Μαρουσι",
+      "Αμαρουσιο",
+      "Αμαρούσιο"
+    ]
   },
   {
     "name": "Μελίσσια",
@@ -165,7 +214,12 @@
     "lat": 38.05,
     "lng": 23.8333,
     "region": "Βόρεια Προάστια",
-    "region_en": "Northern Suburbs"
+    "region_en": "Northern Suburbs",
+    "aliases": [
+      "Melissia",
+      "Melissa",
+      "Μελισσια"
+    ]
   },
   {
     "name": "Νέα Ιωνία",
@@ -173,7 +227,11 @@
     "lng": 23.7573,
     "region": "Βόρεια Προάστια",
     "name_en": "Nea Ionia",
-    "region_en": "Northern Suburbs"
+    "region_en": "Northern Suburbs",
+    "aliases": [
+      "Nea Ionia",
+      "Νεα Ιωνια"
+    ]
   },
   {
     "name": "Νέα Φιλαδέλφεια",
@@ -189,7 +247,12 @@
     "lng": 23.766,
     "region": "Βόρεια Προάστια",
     "name_en": "Filothei",
-    "region_en": "Northern Suburbs"
+    "region_en": "Northern Suburbs",
+    "aliases": [
+      "Filothei",
+      "Filothee",
+      "Φιλοθεη"
+    ]
   },
   {
     "name": "Χαλάνδρι",
@@ -197,7 +260,17 @@
     "lng": 23.8007,
     "region": "Βόρεια Προάστια",
     "name_en": "Chalandri",
-    "region_en": "Northern Suburbs"
+    "region_en": "Northern Suburbs",
+    "aliases": [
+      "Chalandr",
+      "Halandri",
+      "Khalandri",
+      "Halandra",
+      "Khalandra",
+      "Χαλάνδρα",
+      "Χαλάνδρη",
+      "Χαλανδρι"
+    ]
   },
   {
     "name": "Αγία Παρασκευή",
@@ -213,7 +286,12 @@
     "lng": 23.765,
     "region": "Βόρεια Προάστια",
     "name_en": "Psychiko",
-    "region_en": "Northern Suburbs"
+    "region_en": "Northern Suburbs",
+    "aliases": [
+      "Psychiko",
+      "Psychicon",
+      "Ψυχικο"
+    ]
   },
   {
     "name": "Γαλάτσι",
@@ -221,11 +299,16 @@
     "lng": 23.75,
     "region": "Βόρεια Προάστια",
     "name_en": "Galatsi",
-    "region_en": "Northern Suburbs"
+    "region_en": "Northern Suburbs",
+    "aliases": [
+      "Galatsi",
+      "Galatsia",
+      "Γαλατσι"
+    ]
   },
   {
     "name": "Παπάγου - Χολαργός",
-    "lat": 38.0,
+    "lat": 38,
     "lng": 23.8,
     "region": "Βόρεια Προάστια",
     "name_en": "Papagou - Cholargos",
@@ -237,7 +320,12 @@
     "lng": 23.7667,
     "region": "Νότια Προάστια",
     "name_en": "Vyronas",
-    "region_en": "Southern Suburbs"
+    "region_en": "Southern Suburbs",
+    "aliases": [
+      "Vyronas",
+      "Vyrona",
+      "Βυρωνας"
+    ]
   },
   {
     "name": "Υμηττός",
@@ -245,7 +333,12 @@
     "lng": 23.7511,
     "region": "Νότια Προάστια",
     "name_en": "Ymittos",
-    "region_en": "Southern Suburbs"
+    "region_en": "Southern Suburbs",
+    "aliases": [
+      "Ymittos",
+      "Hymettos",
+      "Υμηττος"
+    ]
   },
   {
     "name": "Καλλιθέα",
@@ -253,7 +346,12 @@
     "lng": 23.6985,
     "region": "Νότια Προάστια",
     "name_en": "Kallithea",
-    "region_en": "Southern Suburbs"
+    "region_en": "Southern Suburbs",
+    "aliases": [
+      "Kallithea",
+      "Kalithea",
+      "Καλλιθεα"
+    ]
   },
   {
     "name": "Δάφνη",
@@ -261,7 +359,12 @@
     "lng": 23.732,
     "region": "Νότια Προάστια",
     "name_en": "Dafni",
-    "region_en": "Southern Suburbs"
+    "region_en": "Southern Suburbs",
+    "aliases": [
+      "Dafni",
+      "Daphni",
+      "Δαφνη"
+    ]
   },
   {
     "name": "Νέα Σμύρνη",
@@ -269,7 +372,12 @@
     "lng": 23.7142,
     "region": "Νότια Προάστια",
     "name_en": "Nea Smyrni",
-    "region_en": "Southern Suburbs"
+    "region_en": "Southern Suburbs",
+    "aliases": [
+      "Nea Smyrni",
+      "Nea Smirni",
+      "Νεα Σμυρνη"
+    ]
   },
   {
     "name": "Ηλιούπολη",
@@ -277,7 +385,13 @@
     "lng": 23.7506,
     "region": "Νότια Προάστια",
     "name_en": "Ilioupoli",
-    "region_en": "Southern Suburbs"
+    "region_en": "Southern Suburbs",
+    "aliases": [
+      "Ilioupoli",
+      "Heliopoli",
+      "Ηλιουπολη",
+      "Ηλιουπολις"
+    ]
   },
   {
     "name": "Παλαιό Φάληρο",
@@ -317,7 +431,12 @@
     "lng": 23.743,
     "region": "Νότια Προάστια",
     "name_en": "Glyfada",
-    "region_en": "Southern Suburbs"
+    "region_en": "Southern Suburbs",
+    "aliases": [
+      "Glyfada",
+      "Gliphada",
+      "Γλυφαδα"
+    ]
   },
   {
     "name": "Βούλα",
@@ -325,7 +444,12 @@
     "lng": 23.7763,
     "region": "Νότια Προάστια",
     "name_en": "Voula",
-    "region_en": "Southern Suburbs"
+    "region_en": "Southern Suburbs",
+    "aliases": [
+      "Voula",
+      "Voyla",
+      "Βουλα"
+    ]
   },
   {
     "name": "Βάρη",
@@ -401,7 +525,7 @@
   },
   {
     "name": "Πικέρμι",
-    "lat": 38.0,
+    "lat": 38,
     "lng": 23.9,
     "region": "Ανατολικά Προάστια",
     "name_en": "Pikermi",
@@ -409,8 +533,8 @@
   },
   {
     "name": "Ραφήνα",
-    "lat": 38.0,
-    "lng": 24.0,
+    "lat": 38,
+    "lng": 24,
     "region": "Ανατολικά Προάστια",
     "name_en": "Rafina",
     "region_en": "Eastern Suburbs"
@@ -426,7 +550,7 @@
   {
     "name": "Αρτέμιδα",
     "lat": 37.95,
-    "lng": 24.0,
+    "lng": 24,
     "region": "Ανατολικά Προάστια",
     "name_en": "Artemida",
     "region_en": "Eastern Suburbs"
@@ -541,7 +665,11 @@
     "lng": 23.6465,
     "region": "Πειραιάς",
     "name_en": "Piraeus",
-    "region_en": "Piraeus"
+    "region_en": "Piraeus",
+    "aliases": [
+      "Πειραιας",
+      "Πειραια"
+    ]
   },
   {
     "name": "Φυλή",
@@ -573,7 +701,10 @@
     "lng": 23.5333,
     "region": "Δυτική Αττική",
     "name_en": "Elefsina",
-    "region_en": "West Attica"
+    "region_en": "West Attica",
+    "aliases": [
+      "Ελευσινα"
+    ]
   },
   {
     "name": "Μέγαρα",
@@ -581,7 +712,10 @@
     "lng": 23.3333,
     "region": "Δυτική Αττική",
     "name_en": "Megara",
-    "region_en": "West Attica"
+    "region_en": "West Attica",
+    "aliases": [
+      "Μεγαρα"
+    ]
   },
   {
     "name": "Θεσσαλονίκη",
@@ -589,7 +723,16 @@
     "lat": 40.6401,
     "lng": 22.9444,
     "region": "Κέντρο Θεσσαλονίκης",
-    "region_en": "Thessaloniki Center"
+    "region_en": "Thessaloniki Center",
+    "aliases": [
+      "Salonika",
+      "Salonica",
+      "Θεσσαλονίκα",
+      "Θεσσαλια",
+      "Θεσσαλονικη",
+      "Σαλονίκα",
+      "Σαλονικα"
+    ]
   },
   {
     "name": "Βόλβη",
@@ -933,7 +1076,16 @@
     "lat": 39.6675,
     "lng": 20.85,
     "region": "Ήπειρος",
-    "region_en": "Epirus"
+    "region_en": "Epirus",
+    "aliases": [
+      "Ioannina",
+      "Janina",
+      "Ιωάννινα",
+      "Γιάννινα",
+      "Ιωαννινα",
+      "Γιαννενα",
+      "Γιάννενα"
+    ]
   },
   {
     "name": "Λάρισα",
@@ -941,7 +1093,12 @@
     "lat": 39.64,
     "lng": 22.42,
     "region": "Θεσσαλία",
-    "region_en": "Thessaly"
+    "region_en": "Thessaly",
+    "aliases": [
+      "Larissa",
+      "Λάρισσα",
+      "Λαρισα"
+    ]
   },
   {
     "name": "Κέρκυρα",
@@ -949,7 +1106,14 @@
     "lat": 39.6243,
     "lng": 19.9217,
     "region": "Ιόνιο",
-    "region_en": "Ionian Islands"
+    "region_en": "Ionian Islands",
+    "aliases": [
+      "Kerkira",
+      "Corcyra",
+      "Κερκύρα",
+      "Κερκύρη",
+      "Κερκυρα"
+    ]
   },
   {
     "name": "Δωδώνη",
@@ -997,7 +1161,10 @@
     "lat": 39.36,
     "lng": 22.95,
     "region": "Θεσσαλία",
-    "region_en": "Thessaly"
+    "region_en": "Thessaly",
+    "aliases": [
+      "Βολος"
+    ]
   },
   {
     "name": "Φάρσαλα",
@@ -1029,7 +1196,12 @@
     "lat": 39.165,
     "lng": 26.28,
     "region": "Βόρειο Αιγαίο",
-    "region_en": "North Aegean"
+    "region_en": "North Aegean",
+    "aliases": [
+      "Λεσβος",
+      "Μυτιλήνη",
+      "Μυτιληνη"
+    ]
   },
   {
     "name": "Σκιάθος",
@@ -1093,7 +1265,10 @@
     "lat": 38.95,
     "lng": 23.15,
     "region": "Στερεά Ελλάδα",
-    "region_en": "Central Greece"
+    "region_en": "Central Greece",
+    "aliases": [
+      "Ιστιαίων"
+    ]
   },
   {
     "name": "Καρπενήσι",
@@ -1149,7 +1324,10 @@
     "lat": 38.48,
     "lng": 22.5,
     "region": "Στερεά Ελλάδα",
-    "region_en": "Central Greece"
+    "region_en": "Central Greece",
+    "aliases": [
+      "Δελφοι"
+    ]
   },
   {
     "name": "Χαλκίδα",
@@ -1157,7 +1335,10 @@
     "lat": 38.4639,
     "lng": 23.6022,
     "region": "Στερεά Ελλάδα",
-    "region_en": "Central Greece"
+    "region_en": "Central Greece",
+    "aliases": [
+      "Χαλκιδα"
+    ]
   },
   {
     "name": "Λιβαδειά",
@@ -1205,7 +1386,10 @@
     "lat": 38.367,
     "lng": 26.135,
     "region": "Βόρειο Αιγαίο",
-    "region_en": "North Aegean"
+    "region_en": "North Aegean",
+    "aliases": [
+      "Χιος"
+    ]
   },
   {
     "name": "Ιθάκη",
@@ -1245,7 +1429,14 @@
     "lat": 38.2466,
     "lng": 21.7346,
     "region": "Δυτική Ελλάδα",
-    "region_en": "Western Greece"
+    "region_en": "Western Greece",
+    "aliases": [
+      "Patra",
+      "Patrae",
+      "Πάτραι",
+      "Πάτρη",
+      "Πατρα"
+    ]
   },
   {
     "name": "Κεφαλονιά",
@@ -1309,7 +1500,10 @@
     "lat": 37.9401,
     "lng": 22.9513,
     "region": "Κορινθία",
-    "region_en": "Corinthia"
+    "region_en": "Corinthia",
+    "aliases": [
+      "Κορινθος"
+    ]
   },
   {
     "name": "Άνδρος",
@@ -1333,7 +1527,15 @@
     "lat": 37.787,
     "lng": 20.899,
     "region": "Ιόνιο",
-    "region_en": "Ionian Islands"
+    "region_en": "Ionian Islands",
+    "aliases": [
+      "Zakynthos",
+      "Zante",
+      "Ζακύνθη",
+      "Ζακύνθια",
+      "Ζακυνθος",
+      "Ζακυνθο"
+    ]
   },
   {
     "name": "Σάμος",
@@ -1341,7 +1543,10 @@
     "lat": 37.754,
     "lng": 26.977,
     "region": "Βόρειο Αιγαίο",
-    "region_en": "North Aegean"
+    "region_en": "North Aegean",
+    "aliases": [
+      "Σαμος"
+    ]
   },
   {
     "name": "Αμαλιάδα",
@@ -1373,7 +1578,14 @@
     "lat": 37.6333,
     "lng": 22.7333,
     "region": "Αργολίδα",
-    "region_en": "Argolis"
+    "region_en": "Argolis",
+    "aliases": [
+      "Argos",
+      "Argos city",
+      "Άργη",
+      "Αργε",
+      "Αργος"
+    ]
   },
   {
     "name": "Κέα",
@@ -1381,7 +1593,13 @@
     "lat": 37.6333,
     "lng": 24.3333,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Kea",
+      "Keios",
+      "Κέιος",
+      "Κεα"
+    ]
   },
   {
     "name": "Ικαρία",
@@ -1389,7 +1607,10 @@
     "lat": 37.6167,
     "lng": 26.1667,
     "region": "Βόρειο Αιγαίο",
-    "region_en": "North Aegean"
+    "region_en": "North Aegean",
+    "aliases": [
+      "Ικαρια"
+    ]
   },
   {
     "name": "Ναύπλιο",
@@ -1397,7 +1618,15 @@
     "lat": 37.567,
     "lng": 22.801,
     "region": "Αργολίδα",
-    "region_en": "Argolis"
+    "region_en": "Argolis",
+    "aliases": [
+      "Nafplio",
+      "Nauplia",
+      "Ναυπλία",
+      "Ναυπλίων",
+      "Ναυπλιο",
+      "Ναυπλια"
+    ]
   },
   {
     "name": "Τήνος",
@@ -1405,7 +1634,10 @@
     "lat": 37.5374,
     "lng": 25.1634,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Τηνος"
+    ]
   },
   {
     "name": "Τρίπολη",
@@ -1413,7 +1645,10 @@
     "lat": 37.5099,
     "lng": 22.3794,
     "region": "Αρκαδία",
-    "region_en": "Arcadia"
+    "region_en": "Arcadia",
+    "aliases": [
+      "Τριπολη"
+    ]
   },
   {
     "name": "Αγαθονήσι",
@@ -1429,7 +1664,12 @@
     "lat": 37.4467,
     "lng": 25.3289,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Mikonos",
+      "Μύκονα",
+      "Μυκονος"
+    ]
   },
   {
     "name": "Σύρος",
@@ -1437,7 +1677,14 @@
     "lat": 37.4442,
     "lng": 24.9428,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Syros",
+      "Siros",
+      "Σύρα",
+      "Συρος",
+      "Συρο"
+    ]
   },
   {
     "name": "Μεγαλόπολη",
@@ -1469,7 +1716,10 @@
     "lat": 37.308,
     "lng": 26.547,
     "region": "Δωδεκάνησα",
-    "region_en": "Dodecanese"
+    "region_en": "Dodecanese",
+    "aliases": [
+      "Πατμος"
+    ]
   },
   {
     "name": "Λειψοί",
@@ -1501,7 +1751,10 @@
     "lat": 37.1537,
     "lng": 24.5197,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Σεριφος"
+    ]
   },
   {
     "name": "Λέρος",
@@ -1509,7 +1762,10 @@
     "lat": 37.133,
     "lng": 26.85,
     "region": "Δωδεκάνησα",
-    "region_en": "Dodecanese"
+    "region_en": "Dodecanese",
+    "aliases": [
+      "Λερος"
+    ]
   },
   {
     "name": "Νάξος",
@@ -1517,7 +1773,12 @@
     "lat": 37.1042,
     "lng": 25.3772,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Naxos",
+      "Νάξιον",
+      "Ναξος"
+    ]
   },
   {
     "name": "Δονούσα",
@@ -1533,7 +1794,12 @@
     "lat": 37.085,
     "lng": 25.15,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Paros",
+      "Πάριος",
+      "Παρος"
+    ]
   },
   {
     "name": "Σπάρτη",
@@ -1541,7 +1807,14 @@
     "lat": 37.0745,
     "lng": 22.4301,
     "region": "Λακωνία",
-    "region_en": "Laconia"
+    "region_en": "Laconia",
+    "aliases": [
+      "Sparta",
+      "Sparti",
+      "Σπάρτα",
+      "Σπαρτιάτες",
+      "Σπαρτη"
+    ]
   },
   {
     "name": "Καλαμάτα",
@@ -1549,7 +1822,11 @@
     "lat": 37.0389,
     "lng": 22.1142,
     "region": "Μεσσηνία",
-    "region_en": "Messinia"
+    "region_en": "Messinia",
+    "aliases": [
+      "Kalamata",
+      "Καλαματα"
+    ]
   },
   {
     "name": "Σίφνος",
@@ -1557,7 +1834,10 @@
     "lat": 36.9717,
     "lng": 24.7036,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Σιφνος"
+    ]
   },
   {
     "name": "Κάλυμνος",
@@ -1565,7 +1845,10 @@
     "lat": 36.951,
     "lng": 26.98,
     "region": "Δωδεκάνησα",
-    "region_en": "Dodecanese"
+    "region_en": "Dodecanese",
+    "aliases": [
+      "Καλυμνος"
+    ]
   },
   {
     "name": "Κουφονήσι",
@@ -1589,7 +1872,13 @@
     "lat": 36.892,
     "lng": 27.287,
     "region": "Δωδεκάνησα",
-    "region_en": "Dodecanese"
+    "region_en": "Dodecanese",
+    "aliases": [
+      "Kos",
+      "Κώς",
+      "Κω",
+      "Κος"
+    ]
   },
   {
     "name": "Σχοινούσα",
@@ -1621,7 +1910,10 @@
     "lat": 36.7783,
     "lng": 24.575,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Κιμωλος"
+    ]
   },
   {
     "name": "Γύθειο",
@@ -1637,7 +1929,10 @@
     "lat": 36.7446,
     "lng": 24.426,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Μηλος"
+    ]
   },
   {
     "name": "Ίος",
@@ -1645,7 +1940,12 @@
     "lat": 36.7333,
     "lng": 25.2833,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Ios",
+      "Ios island",
+      "Ιος"
+    ]
   },
   {
     "name": "Μονεμβασιά",
@@ -1677,7 +1977,10 @@
     "lat": 36.6167,
     "lng": 24.9167,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Φολεγανδρος"
+    ]
   },
   {
     "name": "Σύμη",
@@ -1685,7 +1988,11 @@
     "lat": 36.6167,
     "lng": 27.8333,
     "region": "Δωδεκάνησα",
-    "region_en": "Dodecanese"
+    "region_en": "Dodecanese",
+    "aliases": [
+      "Συμη",
+      "Συμι"
+    ]
   },
   {
     "name": "Νίσυρος",
@@ -1693,7 +2000,10 @@
     "lat": 36.6,
     "lng": 27.1667,
     "region": "Δωδεκάνησα",
-    "region_en": "Dodecanese"
+    "region_en": "Dodecanese",
+    "aliases": [
+      "Νισυρος"
+    ]
   },
   {
     "name": "Αστυπάλαια",
@@ -1709,7 +2019,13 @@
     "lat": 36.434,
     "lng": 28.217,
     "region": "Δωδεκάνησα",
-    "region_en": "Dodecanese"
+    "region_en": "Dodecanese",
+    "aliases": [
+      "Rodos",
+      "Rhodos",
+      "Ρόδη",
+      "Ροδος"
+    ]
   },
   {
     "name": "Τήλος",
@@ -1717,7 +2033,10 @@
     "lat": 36.4167,
     "lng": 27.3833,
     "region": "Δωδεκάνησα",
-    "region_en": "Dodecanese"
+    "region_en": "Dodecanese",
+    "aliases": [
+      "Τηλος"
+    ]
   },
   {
     "name": "Σαντορίνη",
@@ -1725,7 +2044,16 @@
     "lat": 36.3932,
     "lng": 25.4615,
     "region": "Κυκλάδες",
-    "region_en": "Cyclades"
+    "region_en": "Cyclades",
+    "aliases": [
+      "Thira",
+      "Thera",
+      "Santorin",
+      "Σαντορίνα",
+      "Σαντορινη",
+      "Θήρα",
+      "Θηρα"
+    ]
   },
   {
     "name": "Ανάφη",
@@ -1741,7 +2069,10 @@
     "lat": 36.2167,
     "lng": 27.6167,
     "region": "Δωδεκάνησα",
-    "region_en": "Dodecanese"
+    "region_en": "Dodecanese",
+    "aliases": [
+      "Χαλκη"
+    ]
   },
   {
     "name": "Καστελλόριζο",
@@ -1765,7 +2096,14 @@
     "lat": 35.5138,
     "lng": 24.018,
     "region": "Δυτική Κρήτη",
-    "region_en": "West Crete"
+    "region_en": "West Crete",
+    "aliases": [
+      "Chania",
+      "Hania",
+      "Χάνια",
+      "Χανιών",
+      "Χανια"
+    ]
   },
   {
     "name": "Κάρπαθος",
@@ -1773,7 +2111,10 @@
     "lat": 35.507,
     "lng": 27.213,
     "region": "Δωδεκάνησα",
-    "region_en": "Dodecanese"
+    "region_en": "Dodecanese",
+    "aliases": [
+      "Καρπαθος"
+    ]
   },
   {
     "name": "Κίσσαμος",
@@ -1797,7 +2138,10 @@
     "lat": 35.424,
     "lng": 27.813,
     "region": "Νότιο Αιγαίο",
-    "region_en": "South Aegean"
+    "region_en": "South Aegean",
+    "aliases": [
+      "Κασος"
+    ]
   },
   {
     "name": "Ρέθυμνο",
@@ -1805,7 +2149,10 @@
     "lat": 35.3647,
     "lng": 24.4821,
     "region": "Κεντρική Κρήτη",
-    "region_en": "Central Crete"
+    "region_en": "Central Crete",
+    "aliases": [
+      "Ρεθυμνο"
+    ]
   },
   {
     "name": "Ηράκλειο",
@@ -1813,7 +2160,13 @@
     "lat": 35.3403,
     "lng": 25.1442,
     "region": "Κεντρική Κρήτη",
-    "region_en": "Central Crete"
+    "region_en": "Central Crete",
+    "aliases": [
+      "Heraklion",
+      "Ηράκλειον",
+      "Ηράκλια",
+      "Ηρακλειο"
+    ]
   },
   {
     "name": "Μαλεβίζι",
@@ -1861,7 +2214,10 @@
     "lat": 35.2078,
     "lng": 26.106,
     "region": "Ανατολική Κρήτη",
-    "region_en": "East Crete"
+    "region_en": "East Crete",
+    "aliases": [
+      "Σητεια"
+    ]
   },
   {
     "name": "Άγιος Νικόλαος",
@@ -1869,7 +2225,10 @@
     "lat": 35.191,
     "lng": 25.715,
     "region": "Ανατολική Κρήτη",
-    "region_en": "East Crete"
+    "region_en": "East Crete",
+    "aliases": [
+      "Αγιος Νικολαος"
+    ]
   },
   {
     "name": "Αρχάνες - Αστερούσια",
@@ -2077,7 +2436,10 @@
     "lat": 37.746,
     "lng": 23.4273,
     "region": "Νησιά Αργοσαρωνικού",
-    "region_en": "Saronic Islands"
+    "region_en": "Saronic Islands",
+    "aliases": [
+      "Αιγινα"
+    ]
   },
   {
     "name": "Αγκίστρι",
@@ -2101,7 +2463,10 @@
     "lat": 37.4996,
     "lng": 23.4534,
     "region": "Νησιά Αργοσαρωνικού",
-    "region_en": "Saronic Islands"
+    "region_en": "Saronic Islands",
+    "aliases": [
+      "Πορος"
+    ]
   },
   {
     "name": "Ύδρα",
@@ -2109,7 +2474,10 @@
     "lat": 37.35,
     "lng": 23.4667,
     "region": "Νησιά Αργοσαρωνικού",
-    "region_en": "Saronic Islands"
+    "region_en": "Saronic Islands",
+    "aliases": [
+      "Υδρα"
+    ]
   },
   {
     "name": "Σπέτσες",
@@ -2117,7 +2485,10 @@
     "lat": 37.2634,
     "lng": 23.1564,
     "region": "Νησιά Αργοσαρωνικού",
-    "region_en": "Saronic Islands"
+    "region_en": "Saronic Islands",
+    "aliases": [
+      "Σπετσες"
+    ]
   },
   {
     "name": "Λαδάδικα",
@@ -2509,7 +2880,10 @@
     "lng": 22.5883,
     "region": "Στερεά Ελλάδα",
     "region_en": "Central Greece",
-    "name_en": "Arachova"
+    "name_en": "Arachova",
+    "aliases": [
+      "Αραχοβα"
+    ]
   },
   {
     "name": "Μέτσοβο",
@@ -2517,7 +2891,10 @@
     "lng": 21.1825,
     "region": "Ήπειρος",
     "region_en": "Epirus",
-    "name_en": "Metsovo"
+    "name_en": "Metsovo",
+    "aliases": [
+      "Μετσοβο"
+    ]
   },
   {
     "name": "Ζαγοροχώρια",
@@ -2541,7 +2918,10 @@
     "lng": 23.0833,
     "region": "Θεσσαλία",
     "region_en": "Thessaly",
-    "name_en": "Pelion"
+    "name_en": "Pelion",
+    "aliases": [
+      "Πηλιο"
+    ]
   },
   {
     "name": "Καλάβρυτα",
@@ -2549,7 +2929,10 @@
     "lng": 22.1167,
     "region": "Πελοπόννησος",
     "region_en": "Peloponnese",
-    "name_en": "Kalavryta"
+    "name_en": "Kalavryta",
+    "aliases": [
+      "Καλαβρυτα"
+    ]
   },
   {
     "name": "Πάπιγκο",
