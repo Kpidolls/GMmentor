@@ -1777,9 +1777,6 @@ const MainHero = () => {
                                     <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap shadow-sm">
                                       📏 {formatDistance(restaurantData.distance)}
                                     </span>
-                                    <span className="text-slate-500 text-sm font-medium whitespace-nowrap">
-                                      #{index + 1} {t('restaurantFinder.of', 'of')} {nearestRestaurants.length}
-                                    </span>
                                     {isVegan && (
                                       <span title="Vegan Friendly" className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-semibold border border-emerald-200">🌿 Vegan</span>
                                     )}
