@@ -60,6 +60,7 @@ interface Municipality {
   lng: number;
   region: string;
   region_en?: string;
+  aliases?: string[];
 }
 
 interface RestaurantCategory {
@@ -888,6 +889,11 @@ const MainHero = () => {
     
     // Check municipality name_en field
     if (municipality.name_en && searchMatches(query, municipality.name_en)) return true;
+    
+    // Check aliases if they exist
+    if (municipality.aliases && Array.isArray(municipality.aliases)) {
+      if (municipality.aliases.some(alias => searchMatches(query, alias))) return true;
+    }
     
     // Check translated municipality name (English from i18n)
     const translatedName = t(`municipalities.${municipality.name}`, municipality.name_en || municipality.name);
