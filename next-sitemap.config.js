@@ -46,11 +46,39 @@ module.exports = {
       changefreq = 'weekly';
     }
 
+    // Add alternateRefs for blog posts with language variants
+    const alternateRefs = [];
+    if (path.startsWith('/blog/')) {
+      // Determine if this is English or Greek version
+      const isGreek = path.endsWith('-el');
+      const basePath = isGreek ? path.replace('-el', '') : path;
+      const alternatePath = isGreek ? basePath : `${path}-el`;
+      
+      // Add hreflang for current page
+      alternateRefs.push({
+        href: `https://googlementor.com${path}`,
+        hreflang: isGreek ? 'el' : 'en',
+      });
+      
+      // Add hreflang for alternate language
+      alternateRefs.push({
+        href: `https://googlementor.com${alternatePath}`,
+        hreflang: isGreek ? 'en' : 'el',
+      });
+      
+      // Add x-default (English version)
+      alternateRefs.push({
+        href: `https://googlementor.com${basePath}`,
+        hreflang: 'x-default',
+      });
+    }
+
     return {
       loc: path,
       changefreq,
       priority,
       lastmod: new Date().toISOString(),
+      alternateRefs: alternateRefs.length > 0 ? alternateRefs : undefined,
     };
   },
 }

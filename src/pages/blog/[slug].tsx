@@ -103,7 +103,18 @@ export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostPro
       <Head>
         <title>{`${post.title} | Googlementor`}</title>
         <meta name="description" content={metaDescription} />
+        
+        {/* Self-referencing canonical - each language version is its own canonical */}
         <link rel="canonical" href={`https://googlementor.com/blog/${post.slug}`} />
+        
+        {/* Add hreflang for current page */}
+        <link 
+          rel="alternate" 
+          hrefLang={post.language} 
+          href={`https://googlementor.com/blog/${post.slug}`} 
+        />
+        
+        {/* Add hreflang for alternate language if it exists */}
         {alternatePost && (
           <link 
             rel="alternate" 
@@ -111,6 +122,13 @@ export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostPro
             href={`https://googlementor.com/blog/${alternatePost.slug}`} 
           />
         )}
+        
+        {/* Add x-default to point to English version (or most appropriate default) */}
+        <link 
+          rel="alternate" 
+          hrefLang="x-default" 
+          href={`https://googlementor.com/blog/${post.language === 'en' ? post.slug : (alternatePost?.slug || post.slug)}`} 
+        />
       </Head>
       
       {/* Navigation and Language Switcher */}
