@@ -71,6 +71,10 @@ export const metaDescriptions = {
   blogAthensDayTripsEn: "Best day trip ideas from Athens: Cape Sounion, Aegina, Chalkida, Loutraki. Complete guide with travel times, what to expect, and practical tips.",
   
   blogAthensDayTripsEl: "Καλύτερες ημερήσιες εκδρομές από Αθήνα: Σούνιο, Αίγινα, Χαλκίδα, Λουτράκι. Πλήρης οδηγός με χρόνους διαδρομής, τι να περιμένετε και πρακτικές συμβουλές.",
+  
+  blogBakeriesBrunchEn: "Greek bakeries, brunch & coffee culture guide: Discover tiropita, bougatsa, loukoumades, freddo espresso. Find the best neighborhood bakeries and brunch spots across Greece.",
+  
+  blogBakeriesBrunchEl: "Ελληνικές αρτοποιίες, brunch & κουλτούρα καφέ: Ανακαλύψτε τυρόπιτα, μπουγάτσα, λουκουμάδες, freddo espresso. Βρείτε τις καλύτερες αρτοποιίες γειτονιάς σε Αθήνα, Θεσσαλονίκη, Κρήτη.",
 };
 
 /**
