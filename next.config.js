@@ -269,6 +269,10 @@ const nextConfig = withPWA(withBundleAnalyzer({
       '/search': { page: '/search' },
       '/signup': { page: '/signup' },
       '/blog': { page: '/blog' },
+      '/blog/greek-bakeries-brunch-coffee-guide': {
+        page: '/blog/[slug]',
+        params: { slug: 'greek-bakeries-brunch-coffee-guide' },
+      },
     };
   },
   eslint: {
