@@ -19,7 +19,7 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ products = defaultPro
   // Reset index if products length changes
   useEffect(() => {
     setCurrentIndex(0);
-  }, [products.length]);
+  }, [products]);
 
   // Cycle through products every 5 seconds
   useEffect(() => {
@@ -28,7 +28,7 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ products = defaultPro
       setCurrentIndex((prev) => (prev + 1) % products.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [products.length]);
+  }, [products]);
 
   if (!products || products.length === 0) return null;
   const safeIndex = Math.min(currentIndex, products.length - 1);

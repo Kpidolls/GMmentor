@@ -2,11 +2,16 @@ import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
 import { motion, MotionProps, useAnimation } from 'framer-motion';
 
 
-const MotionDiv = motion(
-  React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & MotionProps>(
-    (props, ref) => <div ref={ref} {...props} />
-  )
-);
+const MotionDivBase = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement> & MotionProps
+>(function MotionDivBase(props, ref) {
+  return <div ref={ref} {...props} />;
+});
+MotionDivBase.displayName = 'MotionDivBase';
+
+const MotionDiv = motion(MotionDivBase);
+MotionDiv.displayName = 'MotionDiv';
 
 function useOnScreen(
   ref: MutableRefObject<HTMLDivElement | null>,

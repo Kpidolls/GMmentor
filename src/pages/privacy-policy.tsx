@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
               <strong>Payment Information:</strong> We store payment information securely for transactions made through our platform.
             </p>
             <p className="mb-4 text-gray-600">
-              <strong>Geolocation Data:</strong> With your consent, we may access your device's geolocation to provide location-specific suggestions and directions.
+              <strong>Geolocation Data:</strong> With your consent, we may access your device&apos;s geolocation to provide location-specific suggestions and directions.
             </p>
             <p className="mb-4 text-gray-600">
               <strong>Cookies and Tracking Technologies:</strong>
@@ -57,7 +57,7 @@ const PrivacyPolicy = () => {
             </p>
             <ul className="list-disc list-inside mb-4 text-gray-600">
               <li><strong>Affiliate Products:</strong> When recommending affiliated products or services, we might share basic contact details like email addresses.</li>
-              <li><strong>Service Providers:</strong> We employ third-party companies to facilitate our services ("Service Providers"), provide payment processing solutions, perform service-related tasks, or assist us in analyzing usage trends.</li>
+              <li><strong>Service Providers:</strong> We employ third-party companies to facilitate our services (&quot;Service Providers&quot;), provide payment processing solutions, perform service-related tasks, or assist us in analyzing usage trends.</li>
             </ul>
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">Your Rights</h2>
             <p className="mb-4 text-gray-600">

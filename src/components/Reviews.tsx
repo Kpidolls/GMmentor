@@ -110,7 +110,7 @@ const Reviews = () => {
           <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-gray-100 overflow-hidden">
             {/* Quote Mark */}
             <div className="absolute top-6 left-6 text-6xl text-[#0878fe]/10 font-serif leading-none">
-              "
+              &ldquo;
             </div>
             
             <div className="relative z-10">
@@ -124,7 +124,7 @@ const Reviews = () => {
               {/* Review Text */}
               <blockquote className="text-center mb-8">
                 <p className="text-lg lg:text-xl text-gray-700 leading-relaxed font-secondary italic">
-                  "{currentReview.text}"
+                  &ldquo;{currentReview.text}&rdquo;
                 </p>
               </blockquote>
 
