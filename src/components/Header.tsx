@@ -23,8 +23,9 @@ import {
   InputLeftElement,
   useDisclosure,
   Text,
+  Icon,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, SearchIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, SearchIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
@@ -54,7 +55,217 @@ const Header = () => {
   const bg = 'white'; // Default background color
   const textColor = 'gray.800'; // Default text color
   const hoverBg = 'gray.100'; // Default hover background color
-  const submenuHover = 'gray.200'; // Default submenu hover background color
+  const navButtonStyles = {
+    bg: 'white',
+    border: '1px solid',
+    borderColor: 'gray.200',
+    borderRadius: 'full',
+    fontWeight: 'semibold',
+    letterSpacing: '0.02em',
+    px: 4,
+    h: 10,
+    boxShadow: 'sm',
+    transition: 'all 0.2s',
+    _hover: {
+      bg: 'gray.50',
+      borderColor: 'gray.300',
+      transform: 'translateY(-1px)',
+      boxShadow: 'md'
+    },
+    _active: {
+      bg: 'gray.100',
+      transform: 'translateY(0)'
+    },
+    _focusVisible: {
+      boxShadow: '0 0 0 3px rgba(66, 153, 225, 0.3)'
+    }
+  };
+  const mobileNavButtonStyles = {
+    ...navButtonStyles,
+    w: 'full',
+    justifyContent: 'flex-start',
+    h: 11,
+    px: 4,
+    fontSize: 'sm'
+  };
+
+  const renderNavIcon = (name: string) => {
+    switch (name) {
+      case 'navigation.maps':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3.5} color="blue.400">
+            <path
+              d="M9 20l-5-2.5V4l5 2.5 6-3 5 2.5V20l-5-2.5-6 3Z"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Icon>
+        );
+      case 'navigation.store':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3.5} color="blue.400">
+            <path
+              d="M6 9h12l-1 11H7L6 9Zm2-4h8l1 4H7l1-4Zm-3 4h14"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Icon>
+        );
+      case 'navigation.aboutUs':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3.5} color="blue.400">
+            <path
+              d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-7 8a7 7 0 0 1 14 0"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Icon>
+        );
+      default:
+        return null;
+    }
+  };
+
+  const renderSubNavIcon = (name: string) => {
+    switch (name) {
+      case 'navigation.mustSee':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <path
+              d="M12 4l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 16l-4.8 2.9.9-5.4-3.9-3.8 5.4-.8L12 4Z"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Icon>
+        );
+      case 'navigation.islands':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <path
+              d="M5 18c3-1 4-6 7-9 3-3 6-3 7-2-1 3-3 8-6 10s-5 2-8 1Zm0 0c2 1 4 2 7 2"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Icon>
+        );
+      case 'navigation.activities':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <path
+              d="M5 19l5-5 3 3 6-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <circle cx="17" cy="8" r="2" fill="currentColor" />
+          </Icon>
+        );
+      case 'navigation.travelItems':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <path
+              d="M7 7h10v12H7V7Zm2-3h6v3H9V4Z"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Icon>
+        );
+      case 'navigation.mobileTravelData':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <rect x="7" y="3" width="10" height="18" rx="2" ry="2" fill="none" stroke="currentColor" strokeWidth="1.5" />
+            <circle cx="12" cy="17" r="1" fill="currentColor" />
+          </Icon>
+        );
+      case 'navigation.travelInsurance':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <path
+              d="M12 4l7 3v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-3Z"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Icon>
+        );
+      case 'navigation.ourStory':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <path
+              d="M6 4h9l3 3v13H6V4Zm9 0v3h3"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Icon>
+        );
+      case 'navigation.faq':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <path
+              d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-7 8a7 7 0 0 1 14 0"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Icon>
+        );
+      case 'navigation.blog':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <path
+              d="M6 5h8l4 4v10H6V5Zm8 0v4h4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Icon>
+        );
+      case 'navigation.contact':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <path
+              d="M4 6h16v12H4V6Zm0 0 8 6 8-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </Icon>
+        );
+      default:
+        return null;
+    }
+  };
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'el' : 'en';
@@ -215,7 +426,8 @@ const Header = () => {
                   key={item.name}
                   variant="ghost"
                   onClick={() => handleNavigation(item.href)}
-                  _hover={{ bg: hoverBg }}
+                  leftIcon={renderNavIcon(item.name) || undefined}
+                  {...navButtonStyles}
                   color={textColor}
                 >
                   {t(item.name)}
@@ -225,29 +437,42 @@ const Header = () => {
                   <MenuButton
                     as={Button}
                     variant="ghost"
-                    _hover={{ bg: hoverBg }}
+                    rightIcon={<ChevronDownIcon />}
+                    leftIcon={renderNavIcon(item.name) || undefined}
+                    {...navButtonStyles}
                     color={textColor}
                   >
                     {t(item.name)}
                   </MenuButton>
                   <MenuList
-                    bg={bg}
-                    borderColor="gray.300"
-                    shadow="lg"
+                    bg="white"
+                    borderColor="gray.200"
+                    shadow="2xl"
                     py={2}
-                    borderRadius="md"
+                    px={2}
+                    borderRadius="xl"
+                    minW="220px"
                   >
                     {item.submenu.map((subItem) => (
                       <MenuItem
                         key={subItem.name}
                         onClick={() => handleNavigation(subItem.href)}
-                        _hover={{ bg: submenuHover, color: 'blue.500' }}
+                        _hover={{ bg: 'blue.50', color: 'blue.700' }}
+                        _focus={{ bg: 'blue.50', color: 'blue.700' }}
                         fontSize="sm"
-                        fontWeight="medium"
-                        px={4}
-                        py={2}
+                        fontWeight="semibold"
+                        px={3}
+                        py={2.5}
+                        borderRadius="md"
                       >
-                        {t(subItem.name)}
+                        {renderSubNavIcon(subItem.name) ? (
+                          <HStack spacing={2}>
+                            {renderSubNavIcon(subItem.name)}
+                            <Text>{t(subItem.name)}</Text>
+                          </HStack>
+                        ) : (
+                          <Text>{t(subItem.name)}</Text>
+                        )}
                       </MenuItem>
                     ))}
                   </MenuList>
@@ -269,17 +494,22 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <Box mt={4} display={{ base: 'block', md: 'none' }}>
+          <Box
+            mt={4}
+            display={{ base: 'block', md: 'none' }}
+            maxH="70vh"
+            overflowY="auto"
+            pr={1}
+          >
             <VStack spacing={2} align="stretch">
               {navigation.map((item) => (
                 <Box key={item.name}>
                   <Button
                     variant="ghost"
-                    w="full"
-                    justifyContent="flex-start"
                     onClick={() => handleNavigation(item.href)}
                     color={textColor}
-                    _hover={{ bg: hoverBg }}
+                    leftIcon={renderNavIcon(item.name) || undefined}
+                    {...mobileNavButtonStyles}
                   >
                     {t(item.name)}
                   </Button>
@@ -293,8 +523,11 @@ const Header = () => {
                           fontSize="sm"
                           justifyContent="flex-start"
                           onClick={() => handleNavigation(subItem.href)}
-                          _hover={{ bg: submenuHover }}
+                          leftIcon={renderSubNavIcon(subItem.name) || undefined}
+                          _hover={{ bg: 'blue.50' }}
                           color={textColor}
+                          borderRadius="lg"
+                          px={3}
                         >
                           {t(subItem.name)}
                         </Button>
