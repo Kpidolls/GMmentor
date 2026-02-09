@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { Box, Heading, Text, Container, HStack, Button, Grid, GridItem, Image, Badge, Flex, Tag, TagLabel } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
-import { useState, useEffect } from 'react'
+import { useMemo } from 'react'
 import { metaDescriptions } from '../../config/metaDescriptions'
 
 type BlogListPost = Omit<Post, 'content'> & {
@@ -77,14 +77,15 @@ export const getStaticProps: GetStaticProps<BlogProps> = async () => {
 
 export default function Blog({ allPosts }: BlogProps) {
   const { t, i18n } = useTranslation()
-  const [posts, setPosts] = useState<BlogListPost[]>([])
+  const currentLanguage = useMemo(() => {
+    const lang = i18n.resolvedLanguage || i18n.language || 'en'
+    return lang.split('-')[0]
+  }, [i18n.language, i18n.resolvedLanguage])
 
-  useEffect(() => {
-    // Filter posts by current language
-    const currentLanguage = i18n.language || 'en'
-    const filteredPosts = allPosts.filter(post => post.language === currentLanguage)
-    setPosts(filteredPosts)
-  }, [i18n.language, allPosts])
+  const posts = useMemo(
+    () => allPosts.filter((post) => post.language === currentLanguage),
+    [allPosts, currentLanguage]
+  )
 
   return (
     <>
@@ -135,7 +136,7 @@ export default function Blog({ allPosts }: BlogProps) {
                 {posts.length} {posts.length === 1 ? 'Article' : 'Articles'}
               </Badge>
               <Badge colorScheme="green" px={3} py={1} borderRadius="full" fontSize="sm">
-                {i18n.language === 'en' ? 'English' : 'Ελληνικά'}
+                {currentLanguage === 'en' ? 'English' : 'Ελληνικά'}
               </Badge>
             </HStack>
             <Button 
@@ -161,8 +162,11 @@ export default function Blog({ allPosts }: BlogProps) {
             <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }} gap={8}>
               {posts.map((post) => (
                 <GridItem key={post.slug}>
-                  <Link href={`/blog/${post.slug}`} passHref>
+                  {/* Wrap entire card in Link for consistent clickability */}
+                  <Link href={`/blog/${post.slug}`} passHref legacyBehavior>
                     <Box
+                      as="a"
+                      className="group"
                       bg="white"
                       borderRadius="2xl"
                       overflow="hidden"
@@ -171,7 +175,13 @@ export default function Blog({ allPosts }: BlogProps) {
                       _hover={{ 
                         transform: "translateY(-4px)", 
                         shadow: "2xl",
-                        borderColor: "blue.200"
+                        borderColor: "blue.200",
+                        textDecoration: "none"
+                      }}
+                      _focus={{ 
+                        outline: "2px solid",
+                        outlineColor: "blue.500",
+                        outlineOffset: "2px"
                       }}
                       cursor="pointer"
                       border="1px solid"
@@ -179,9 +189,11 @@ export default function Blog({ allPosts }: BlogProps) {
                       h="full"
                       display="flex"
                       flexDirection="column"
+                      role="link"
+                      tabIndex={0}
                     >
                       {/* Image Section */}
-                      <Box position="relative" overflow="hidden" h="200px">
+                      <Box position="relative" overflow="hidden" h="200px" pointerEvents="none">
                         <Image
                           src={post.image}
                           alt={post.title}
@@ -191,6 +203,7 @@ export default function Blog({ allPosts }: BlogProps) {
                           transition="transform 0.3s"
                           _hover={{ transform: "scale(1.05)" }}
                           fallbackSrc="/assets/images/newlogo1.webp"
+                          pointerEvents="none"
                         />
                         {/* Reading time badge */}
                         <Badge
@@ -204,6 +217,7 @@ export default function Blog({ allPosts }: BlogProps) {
                           fontSize="xs"
                           bg="blackAlpha.700"
                           color="white"
+                          pointerEvents="none"
                         >
                           📖 {post.readTime} min read
                         </Badge>
@@ -212,7 +226,7 @@ export default function Blog({ allPosts }: BlogProps) {
                         {/* Content Section */}
                         <Box p={6} flex="1" display="flex" flexDirection="column">
                           {/* Date */}
-                          <Text fontSize="sm" color="gray.500" mb={2}>
+                          <Text fontSize="sm" color="gray.500" mb={2} pointerEvents="none">
                             📅 {new Date(post.date).toLocaleDateString(i18n.language === 'el' ? 'el-GR' : 'en-US', { 
                               year: 'numeric', 
                               month: 'long', 
@@ -220,7 +234,7 @@ export default function Blog({ allPosts }: BlogProps) {
                             })}
                           </Text>
 
-                          {/* Title */}
+                          {/* Title - Fully clickable */}
                           <Heading 
                             as="h2" 
                             size="md" 
@@ -230,11 +244,12 @@ export default function Blog({ allPosts }: BlogProps) {
                             _hover={{ color: 'blue.600' }}
                             transition="color 0.2s"
                             noOfLines={2}
+                            pointerEvents="none"
                           >
                             {post.title}
                           </Heading>
 
-                          {/* Summary */}
+                          {/* Summary - Fully clickable */}
                           <Text 
                             color="gray.600" 
                             fontSize="sm" 
@@ -242,13 +257,16 @@ export default function Blog({ allPosts }: BlogProps) {
                             flex="1"
                             noOfLines={3}
                             mb={4}
+                            _hover={{ color: 'gray.700' }}
+                            transition="color 0.2s"
+                            pointerEvents="none"
                           >
                             {post.summary}
                           </Text>
 
                           {/* Tags from post tags */}
                           {post.tags && post.tags.length > 0 && (
-                            <Flex gap={1} flexWrap="wrap" mb={3}>
+                            <Flex gap={1} flexWrap="wrap" mb={3} pointerEvents="none">
                               {post.tags.slice(0, 2).map((tag, index) => (
                                 <Tag key={index} size="sm" colorScheme="blue" variant="subtle" borderRadius="full">
                                   <TagLabel fontSize="xs" isTruncated maxW="20">
@@ -259,18 +277,19 @@ export default function Blog({ allPosts }: BlogProps) {
                             </Flex>
                           )}
 
-                          {/* Read More */}
+                          {/* Read More indicator */}
                           <Flex align="center" justify="space-between" mt="auto">
                             <Text 
                               fontSize="sm" 
                               color="blue.600" 
                               fontWeight="medium"
                               _hover={{ color: 'blue.700' }}
+                              transition="color 0.2s"
                             >
-                              Read More →
+                              {t('blog.readMore', 'Read More')} →
                             </Text>
                             <Text fontSize="xs" color="gray.400">
-                              {post.language === 'el' ? '🇬🇷' : '🇺🇸'}
+                              {post.language === 'el' ? '🇬🇷' : '🇬🇧'}
                             </Text>
                           </Flex>
                         </Box>

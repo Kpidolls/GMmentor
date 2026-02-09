@@ -209,9 +209,6 @@ gyg-widget-container {
   flex-direction: column;
   justify-content: space-between;
 }
-#blog-highlight article h3 {
-  color: #0b2545;
-}
 #blog-highlight article p {
   color: #475569;
 }
