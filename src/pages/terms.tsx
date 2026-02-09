@@ -23,7 +23,7 @@ const Terms = () => {
         <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">Terms and Conditions</h1>
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">1. Access</h2>
         <p className="mb-4 text-gray-600">
-          <strong>User Consent:</strong>  Welcome to Googlementor! These Terms of Use govern your access to and use of Googlementor's mapping services and shopping platform. By using our site, you agree to these terms. If you do not agree, please do not use our services.
+          <strong>User Consent:</strong>  Welcome to Googlementor! These Terms of Use govern your access to and use of Googlementor&apos;s mapping services and shopping platform. By using our site, you agree to these terms. If you do not agree, please do not use our services.
         </p>
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">2. Age requirements</h2>
         <p className="mb-4 text-gray-600">
@@ -72,7 +72,7 @@ const Terms = () => {
           </p>
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">8. Disclaimers and Limitation of Liability</h2>
           <p className="mb-4 text-gray-600">
-            <strong>Disclaimer:</strong> Our services are provided "as is" without warranties of any kind. We do not guarantee uninterrupted or error-free service.
+            <strong>Disclaimer:</strong> Our services are provided &quot;as is&quot; without warranties of any kind. We do not guarantee uninterrupted or error-free service.
           </p>
           <p className="mb-4 text-gray-600">
             <strong>Limitation of Liability:</strong> To the fullest extent permitted by law, Googlementor shall not be liable for any indirect, incidental, special, consequential damages arising from your use of our services.
@@ -104,10 +104,10 @@ const Terms = () => {
             To ensure effective promotion and integration between Googlementor and Matcharisma while adhering to ethical standards:
           </p>
           <p className="mb-4 text-gray-600">
-            <strong>Transparency in Promotion:</strong> All promotional materials must clearly indicate that they are sponsored by or affiliated with the parent company owning both platforms (e.g., "Promotion brought to you by Parent Company, owner of Matcharisma").
+            <strong>Transparency in Promotion:</strong> All promotional materials must clearly indicate that they are sponsored by or affiliated with the parent company owning both platforms (e.g., &quot;Promotion brought to you by Parent Company, owner of Matcharisma&quot;).
           </p>
           <p className="mb-4 text-gray-600">
-            <strong>User Consent:</strong> Obtain explicit user consent before collecting any data specifically related to promoting Matcharisma services within Googlementor’s ecosystem.
+            <strong>User Consent:</strong> Obtain explicit user consent before collecting any data specifically related to promoting Matcharisma services within Googlementor&apos;s ecosystem.
           </p>
           <p className="mb-4 text-gray-600">
             <strong>Data Protection Compliance:</strong> Comply fully with relevant privacy regulations such as GDPR and other applicable laws regarding data protection and user privacy.

@@ -7,8 +7,13 @@ import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
 import { metaDescriptions } from '../../config/metaDescriptions'
 
+type BlogListPost = Omit<Post, 'content'> & {
+  image: string
+  readTime: number
+}
+
 type BlogProps = {
-  allPosts: Post[]
+  allPosts: BlogListPost[]
 }
 
 // Helper function to extract first image from MDX content
@@ -56,13 +61,23 @@ const getFallbackImage = (post: Post): string => {
 };
 
 export const getStaticProps: GetStaticProps<BlogProps> = async () => {
-  const allPosts = getAllPosts()
+  const allPosts = getAllPosts().map((post) => {
+    const image = extractFirstImage(post.content) || getFallbackImage(post)
+    const readTime = Math.max(1, Math.ceil(post.content.length / 1000))
+    const { content, ...rest } = post
+
+    return {
+      ...rest,
+      image,
+      readTime
+    }
+  })
   return { props: { allPosts } }
 }
 
 export default function Blog({ allPosts }: BlogProps) {
   const { t, i18n } = useTranslation()
-  const [posts, setPosts] = useState<Post[]>([])
+  const [posts, setPosts] = useState<BlogListPost[]>([])
 
   useEffect(() => {
     // Filter posts by current language
@@ -144,59 +159,55 @@ export default function Blog({ allPosts }: BlogProps) {
             </Box>
           ) : (
             <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }} gap={8}>
-              {posts.map((post) => {
-                const postImage = extractFirstImage(post.content) || getFallbackImage(post);
-                const readTime = Math.ceil(post.content.length / 1000); // Rough reading time calculation
-                
-                return (
-                  <GridItem key={post.slug}>
-                    <Link href={`/blog/${post.slug}`} passHref>
-                      <Box
-                        bg="white"
-                        borderRadius="2xl"
-                        overflow="hidden"
-                        shadow="lg"
-                        transition="all 0.3s"
-                        _hover={{ 
-                          transform: "translateY(-4px)", 
-                          shadow: "2xl",
-                          borderColor: "blue.200"
-                        }}
-                        cursor="pointer"
-                        border="1px solid"
-                        borderColor="gray.100"
-                        h="full"
-                        display="flex"
-                        flexDirection="column"
-                      >
-                        {/* Image Section */}
-                        <Box position="relative" overflow="hidden" h="200px">
-                          <Image
-                            src={postImage}
-                            alt={post.title}
-                            w="full"
-                            h="full"
-                            objectFit="cover"
-                            transition="transform 0.3s"
-                            _hover={{ transform: "scale(1.05)" }}
-                            fallbackSrc="/assets/images/newlogo1.webp"
-                          />
-                          {/* Reading time badge */}
-                          <Badge
-                            position="absolute"
-                            top={3}
-                            right={3}
-                            colorScheme="blackAlpha"
-                            borderRadius="full"
-                            px={2}
-                            py={1}
-                            fontSize="xs"
-                            bg="blackAlpha.700"
-                            color="white"
-                          >
-                            📖 {readTime} min read
-                          </Badge>
-                        </Box>
+              {posts.map((post) => (
+                <GridItem key={post.slug}>
+                  <Link href={`/blog/${post.slug}`} passHref>
+                    <Box
+                      bg="white"
+                      borderRadius="2xl"
+                      overflow="hidden"
+                      shadow="lg"
+                      transition="all 0.3s"
+                      _hover={{ 
+                        transform: "translateY(-4px)", 
+                        shadow: "2xl",
+                        borderColor: "blue.200"
+                      }}
+                      cursor="pointer"
+                      border="1px solid"
+                      borderColor="gray.100"
+                      h="full"
+                      display="flex"
+                      flexDirection="column"
+                    >
+                      {/* Image Section */}
+                      <Box position="relative" overflow="hidden" h="200px">
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          w="full"
+                          h="full"
+                          objectFit="cover"
+                          transition="transform 0.3s"
+                          _hover={{ transform: "scale(1.05)" }}
+                          fallbackSrc="/assets/images/newlogo1.webp"
+                        />
+                        {/* Reading time badge */}
+                        <Badge
+                          position="absolute"
+                          top={3}
+                          right={3}
+                          colorScheme="blackAlpha"
+                          borderRadius="full"
+                          px={2}
+                          py={1}
+                          fontSize="xs"
+                          bg="blackAlpha.700"
+                          color="white"
+                        >
+                          📖 {post.readTime} min read
+                        </Badge>
+                      </Box>
 
                         {/* Content Section */}
                         <Box p={6} flex="1" display="flex" flexDirection="column">
@@ -263,11 +274,10 @@ export default function Blog({ allPosts }: BlogProps) {
                             </Text>
                           </Flex>
                         </Box>
-                      </Box>
-                    </Link>
-                  </GridItem>
-                );
-              })}
+                    </Box>
+                  </Link>
+                </GridItem>
+              ))}
             </Grid>
           )}
 
