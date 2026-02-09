@@ -19,48 +19,28 @@ export default function FeaturedCarousel() {
   useEffect(() => {
     let mounted = true
     const load = async () => {
-      const lang = i18n.language || 'en'
+      const lang = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0]
       try {
-        const r = await fetch(`/api/featured-posts?lang=${lang}`)
-        const ct = r.headers.get('content-type') || ''
-        if (r.ok && ct.includes('application/json')) {
-          const data = await r.json()
-          if (mounted && Array.isArray(data)) { setPosts(data); return }
-        } else {
-          // Try static fallback files generated at build time
-          const staticPath = `/data/featured-posts-${lang}.json`
-          try {
-            const sr = await fetch(staticPath)
-            const sct = sr.headers.get('content-type') || ''
-            if (sr.ok && sct.includes('application/json')) {
-              const sdata = await sr.json()
-              if (mounted && Array.isArray(sdata)) { setPosts(sdata); return }
-            }
-          } catch (se) {
-            console.warn('Failed to load static featured posts', se)
+        const staticPath = `/data/featured-posts-${lang}.json`
+        const sr = await fetch(staticPath)
+        const sct = sr.headers.get('content-type') || ''
+        if (sr.ok && sct.includes('application/json')) {
+          const sdata = await sr.json()
+          if (mounted && Array.isArray(sdata)) {
+            setPosts(sdata)
+            return
           }
         }
         if (mounted) setPosts([])
       } catch (err) {
         console.error('Failed to load featured posts', err)
-        // Try static fallback if API failed
-        try {
-          const staticPath = `/data/featured-posts-${i18n.language || 'en'}.json`
-          const sr = await fetch(staticPath)
-          if (sr.ok) {
-            const sdata = await sr.json()
-            if (mounted && Array.isArray(sdata)) { setPosts(sdata); return }
-          }
-        } catch (se) {
-          console.warn('Static fallback failed', se)
-        }
         if (mounted) setPosts([])
       }
     }
 
     load()
     return () => { mounted = false }
-  }, [i18n.language])
+  }, [i18n.language, i18n.resolvedLanguage])
 
   useEffect(() => {
     if (posts.length <= 1) return

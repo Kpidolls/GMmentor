@@ -37,7 +37,11 @@ type BlogPostProps = {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getAllPosts()
-  const paths = posts.map((post) => ({ params: { slug: post.slug } }))
+  // Create paths for both the original slug and the full slug with language suffix
+  const paths = posts.flatMap((post) => [
+    { params: { slug: post.originalSlug || post.slug } },
+    ...(post.slug !== (post.originalSlug || post.slug) ? [{ params: { slug: post.slug } }] : [])
+  ])
   return { paths, fallback: false }
 }
 
@@ -48,7 +52,14 @@ export const getStaticProps: GetStaticProps<BlogPostProps> = async ({ params }) 
 
   // Get all posts to find the right one
   const posts = getAllPosts()
-  const post = posts.find((p): p is Post => p.slug === slug)
+  
+  // Try to find by originalSlug first (handles both language versions)
+  let post = posts.find((p): p is Post => p.originalSlug === slug && p.language === 'en')
+  
+  // Fall back to exact slug match (handles -el versions)
+  if (!post) {
+    post = posts.find((p): p is Post => p.slug === slug)
+  }
 
   if (!post) return { notFound: true }
 

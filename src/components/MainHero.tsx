@@ -1,15 +1,5 @@
 'use client';
 
-
-// Helper function to align viewport for all steps before results
-const alignViewport = () => {
-  setTimeout(() => {
-    const isMobile = window.innerWidth < 768;
-    const scrollTarget = isMobile ? 150 : 300;
-    window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
-  }, 100);
-};
-
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
@@ -44,6 +34,16 @@ import mustSeeAttractionsData from '../data/mustSeeAttractions.json';
 // Region matching utilities no longer needed - using coordinate-based distance
 
 const MyTicker = dynamic(() => import('../components/Ticker'), { ssr: false });
+
+// Helper function to align viewport for all steps before results
+const alignViewport = () => {
+  if (typeof window === 'undefined') return;
+  setTimeout(() => {
+    const isMobile = window.innerWidth < 768;
+    const scrollTarget = isMobile ? 150 : 300;
+    window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+  }, 100);
+};
 
 interface Restaurant {
   name: string;
