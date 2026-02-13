@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
 import dynamic from 'next/dynamic';
-import restaurantsData from '../data/greekRestaurants.json';
 import municipalitiesData from '../data/municipalities.json';
 import categoriesData from '../data/restaurantCategories.json';
 
@@ -12,24 +11,6 @@ import categoriesData from '../data/restaurantCategories.json';
 import InstallBanner from './InstallBanner';
 import OfflineNotice from './OfflineNotice';
 import { usePWA } from '../hooks/usePWA';
-
-// Import all category-specific restaurant data
-import dessertsData from '../data/dessertsRestaurants.json';
-import coffeeBrunchData from '../data/coffeeBrunchRestaurants.json';
-import italianData from '../data/italianRestaurants.json';
-import cheapEatsData from '../data/cheapEatsRestaurants.json';
-import asianData from '../data/asianRestaurants.json';
-import fishTavernasData from '../data/fishTavernasRestaurants.json';
-import burgersData from '../data/burgersRestaurants.json';
-import luxuryDiningData from '../data/luxuryDiningRestaurants.json';
-import rooftopLoungesData from '../data/rooftopLoungesRestaurants.json';
-import vegetarianData from '../data/vegetarianRestaurants.json';
-import gyrosSouvlakiData from '../data/gyrosSouvlakiRestaurants.json';
-import mexicanData from '../data/mexicanRestaurants.json';
-import familyFriendlyData from '../data/familyFriendly.json';
-import wineriesVineyardsData from '../data/wineriesVineyards.json';
-import monasteriesChurchesData from '../data/monasteriesChurches.json';
-import mustSeeAttractionsData from '../data/mustSeeAttractions.json';
 
 // Region matching utilities no longer needed - using coordinate-based distance
 
@@ -97,46 +78,28 @@ const MainHero = () => {
   
   // PWA Hook
   const { isOnline, isStandalone, dataPreloadStatus, isInstallable, isInstalled, installApp } = usePWA();
-  
-  // Helper function to get restaurant data by category
-  const getRestaurantDataByCategory = (category?: RestaurantCategory): Restaurant[] => {
-    // PWA Enhancement: Try to get data from cache first when offline
-    if (typeof window !== 'undefined' && !navigator.onLine && isStandalone) {
-      const categoryId = category?.id || 'greek-restaurants';
-      const cachedData = localStorage.getItem(`restaurant_data_${categoryId}`);
-      if (cachedData) {
-        try {
-          return normalizeRestaurantData(JSON.parse(cachedData));
-        } catch (e) {
-          console.error('Failed to parse cached restaurant data:', e);
-        }
-      }
-    }
-    
-    if (!category) return normalizeRestaurantData(restaurantsData);
-    
-    switch (category.id) {
-      case 'greek-restaurants': return normalizeRestaurantData(restaurantsData);
-      case 'desserts': return normalizeRestaurantData(dessertsData);
-      case 'coffee-brunch': return normalizeRestaurantData(coffeeBrunchData);
-      case 'italian': return normalizeRestaurantData(italianData);
-      case 'cheap-eats': return normalizeRestaurantData(cheapEatsData);
-      case 'asian': return normalizeRestaurantData(asianData);
-      case 'fish-tavernas': return normalizeRestaurantData(fishTavernasData);
-      case 'burgers': return normalizeRestaurantData(burgersData);
-      case 'luxury-dining': return normalizeRestaurantData(luxuryDiningData);
-      case 'rooftop-lounges': return normalizeRestaurantData(rooftopLoungesData);
-      case 'vegetarian': return normalizeRestaurantData(vegetarianData);
-      case 'gyros-souvlaki': return normalizeRestaurantData(gyrosSouvlakiData);
-      case 'mexican': return normalizeRestaurantData(mexicanData);
-      case 'attractions': return normalizeRestaurantData(mustSeeAttractionsData);
-      case 'family-friendly': return normalizeRestaurantData(familyFriendlyData);
-      case 'wineries-vineyards': return normalizeRestaurantData(wineriesVineyardsData);
-      case 'monasteries-churches': return normalizeRestaurantData(monasteriesChurchesData);
-      default: return normalizeRestaurantData(restaurantsData);
-    }
-  };
 
+  const categoryDataCacheRef = useRef<Record<string, Restaurant[]>>({});
+  const categoryDataUrls: Record<string, string> = {
+    'greek-restaurants': '/data/greekRestaurants.json',
+    desserts: '/data/dessertsRestaurants.json',
+    'coffee-brunch': '/data/coffeeBrunchRestaurants.json',
+    italian: '/data/italianRestaurants.json',
+    'cheap-eats': '/data/cheapEatsRestaurants.json',
+    asian: '/data/asianRestaurants.json',
+    'fish-tavernas': '/data/fishTavernasRestaurants.json',
+    burgers: '/data/burgersRestaurants.json',
+    'luxury-dining': '/data/luxuryDiningRestaurants.json',
+    'rooftop-lounges': '/data/rooftopLoungesRestaurants.json',
+    vegetarian: '/data/vegetarianRestaurants.json',
+    'gyros-souvlaki': '/data/gyrosSouvlakiRestaurants.json',
+    mexican: '/data/mexicanRestaurants.json',
+    attractions: '/data/mustSeeAttractions.json',
+    'family-friendly': '/data/familyFriendly.json',
+    'wineries-vineyards': '/data/wineriesVineyards.json',
+    'monasteries-churches': '/data/monasteriesChurches.json'
+  };
+  
   // Helper function to normalize restaurant data and ensure lat/lng are numbers
   const normalizeRestaurantData = (data: any[]): Restaurant[] => {
     if (!data || !Array.isArray(data)) {
@@ -174,23 +137,92 @@ const MainHero = () => {
       }));
   };
 
+  const loadRestaurantDataByCategory = async (category?: RestaurantCategory): Promise<Restaurant[]> => {
+    const categoryId = category?.id || 'greek-restaurants';
+    const cached = categoryDataCacheRef.current[categoryId];
+    if (cached) return cached;
+
+    const localStorageKey = `restaurant_data_${categoryId}`;
+
+    if (typeof window !== 'undefined' && !navigator.onLine && isStandalone) {
+      const cachedData = localStorage.getItem(localStorageKey);
+      if (cachedData) {
+        try {
+          const parsed = normalizeRestaurantData(JSON.parse(cachedData));
+          categoryDataCacheRef.current[categoryId] = parsed;
+          return parsed;
+        } catch (e) {
+          console.error('Failed to parse cached restaurant data:', e);
+        }
+      }
+      return [];
+    }
+
+    const dataUrl = categoryDataUrls[categoryId] ?? '/data/greekRestaurants.json';
+    try {
+      const response = await fetch(dataUrl);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch ${dataUrl}: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const normalized = normalizeRestaurantData(data);
+      categoryDataCacheRef.current[categoryId] = normalized;
+
+      if (isStandalone && typeof window !== 'undefined') {
+        localStorage.setItem(localStorageKey, JSON.stringify(data));
+      }
+
+      return normalized;
+    } catch (error) {
+      console.error('Failed to load category data:', error);
+
+      if (typeof window !== 'undefined') {
+        const cachedData = localStorage.getItem(localStorageKey);
+        if (cachedData) {
+          try {
+            const parsed = normalizeRestaurantData(JSON.parse(cachedData));
+            categoryDataCacheRef.current[categoryId] = parsed;
+            return parsed;
+          } catch {
+            return [];
+          }
+        }
+      }
+
+      return [];
+    }
+  };
+
   // Helper function to get data by experience type
-  const getDataByExperienceType = (experienceType: ExperienceType): Restaurant[] => {
+  const getDataByExperienceType = async (experienceType: ExperienceType): Promise<Restaurant[]> => {
     // Prefer explicit categories defined on the experienceType
     if (Array.isArray(experienceType.categories) && experienceType.categories.length > 0) {
       const primary = experienceType.categories[0] as RestaurantCategory | undefined;
-      if (primary) return getRestaurantDataByCategory(primary);
+      if (primary) return loadRestaurantDataByCategory(primary);
     }
 
     // Support both short and long ids: 'wineries' | 'wineries-vineyards', 'monasteries' | 'monasteries-churches'
     const id = experienceType.id || '';
-    if (id.includes('family')) return normalizeRestaurantData(familyFriendlyData);
-    if (id.includes('wineries')) return normalizeRestaurantData(wineriesVineyardsData);
-    if (id.includes('monasteries')) return normalizeRestaurantData(monasteriesChurchesData);
-    if (id.includes('attractions')) return normalizeRestaurantData(mustSeeAttractionsData);
+    if (id.includes('family')) return loadRestaurantDataByCategory({ id: 'family-friendly' } as RestaurantCategory);
+    if (id.includes('wineries')) return loadRestaurantDataByCategory({ id: 'wineries-vineyards' } as RestaurantCategory);
+    if (id.includes('monasteries')) return loadRestaurantDataByCategory({ id: 'monasteries-churches' } as RestaurantCategory);
+    if (id.includes('attractions')) return loadRestaurantDataByCategory({ id: 'attractions' } as RestaurantCategory);
 
     // Fallback
-    return normalizeRestaurantData(familyFriendlyData);
+    return loadRestaurantDataByCategory({ id: 'family-friendly' } as RestaurantCategory);
+  };
+
+  const loadCurrentSourceData = async (): Promise<Restaurant[]> => {
+    if (selectedType === 'experience' && selectedExperienceType) {
+      return getDataByExperienceType(selectedExperienceType);
+    }
+
+    if (selectedType === 'category' && selectedDisplayCategory) {
+      return loadRestaurantDataByCategory(selectedDisplayCategory);
+    }
+
+    return loadRestaurantDataByCategory(undefined);
   };
 
   // Define experience types for different categories of attractions
@@ -269,12 +301,25 @@ const MainHero = () => {
   const [maxResults, setMaxResults] = useState(50);
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
   const [initialSearchDone, setInitialSearchDone] = useState(false);
+  const scrollFrameRef = useRef<number | null>(null);
 
   // Parallax scroll effect
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
+    const handleScroll = () => {
+      if (scrollFrameRef.current !== null) return;
+      scrollFrameRef.current = window.requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+        scrollFrameRef.current = null;
+      });
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollFrameRef.current !== null) {
+        window.cancelAnimationFrame(scrollFrameRef.current);
+      }
+    };
   }, []);
 
   // Restaurant finder functions
@@ -297,13 +342,8 @@ const MainHero = () => {
   };
 
   // Use selectedType to determine which data to use for search
-  const findNearestPlaces = (userLat: number, userLng: number, count: number = 10) => {
-    let sourceData: Restaurant[] = [];
-    if (selectedType === 'experience' && selectedExperienceType) {
-      sourceData = getDataByExperienceType(selectedExperienceType);
-    } else if (selectedType === 'category' && selectedDisplayCategory) {
-      sourceData = getRestaurantDataByCategory(selectedDisplayCategory);
-    }
+  const findNearestPlaces = async (userLat: number, userLng: number, count: number = 10) => {
+    const sourceData = await loadCurrentSourceData();
     const placesWithDistance = sourceData.map((place) => ({
       restaurant: place,
       distance: calculateDistance(userLat, userLng, place.lat, place.lng)
@@ -327,11 +367,13 @@ const MainHero = () => {
         try {
           const { lat, lng } = JSON.parse(cachedLocation);
           setUserLocation({ lat, lng });
-        const nearest = findNearestPlaces(lat, lng, 50);
-          setNearestRestaurants(nearest);
+          findNearestPlaces(lat, lng, 50).then((nearest) => {
+            setNearestRestaurants(nearest);
+            setCurrentIndex(0);
+            setLoading(false);
+            setError(t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.'));
+          });
           setCurrentIndex(0);
-          setLoading(false);
-          setError(t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.'));
           return;
         } catch (e) {
           console.error('Failed to parse cached location:', e);
@@ -352,12 +394,12 @@ const MainHero = () => {
 
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
-        (position) => {
+        async (position) => {
           const { latitude, longitude } = position.coords;
           setUserLocation({ lat: latitude, lng: longitude });
           
           // Use the currently selected experience type for location search
-        const nearest = findNearestPlaces(latitude, longitude, 50); // Fetch up to 50 results
+          const nearest = await findNearestPlaces(latitude, longitude, 50); // Fetch up to 50 results
           setNearestRestaurants(nearest); // Display all results within 5km
           setCurrentIndex(0);
           setLoading(false);
@@ -375,7 +417,7 @@ const MainHero = () => {
             }
           }, 200);
         },
-        (geolocationError) => {
+        async (geolocationError) => {
           // PWA Enhancement: Try to use cached location if available
           if (isStandalone) {
             const cachedLocation = localStorage.getItem('lastKnownLocation');
@@ -383,7 +425,7 @@ const MainHero = () => {
               try {
                 const { lat, lng } = JSON.parse(cachedLocation);
                 setUserLocation({ lat, lng });
-                const nearest = findNearestPlaces(lat, lng, 50);
+                const nearest = await findNearestPlaces(lat, lng, 50);
                 setNearestRestaurants(nearest);
                 setCurrentIndex(0);
                 setLoading(false);
@@ -423,7 +465,7 @@ const MainHero = () => {
     }
   };
 
-  const searchByMunicipality = (municipality: Municipality) => {
+  const searchByMunicipality = async (municipality: Municipality) => {
     setLoading(true);
     setError(null);
     setShowRestaurantFinder(true);
@@ -438,15 +480,7 @@ const MainHero = () => {
     }, 100);
 
     // Get all data for current category/experience
-    let sourceData: Restaurant[] = [];
-    if (selectedType === 'experience' && selectedExperienceType) {
-      sourceData = getDataByExperienceType(selectedExperienceType);
-    } else if (selectedType === 'category' && selectedDisplayCategory) {
-      sourceData = getRestaurantDataByCategory(selectedDisplayCategory);
-    } else {
-      // Fallback: if no category/experience selected, use all restaurants
-      sourceData = getRestaurantDataByCategory(undefined);
-    }
+    const sourceData = await loadCurrentSourceData();
     
     // Validate that we have data
     if (!sourceData || sourceData.length === 0) {
@@ -969,6 +1003,9 @@ const MainHero = () => {
               src="/assets/images/cover-fallback.svg"
               alt={t('mainHero.coverAlt', 'Panoramic view of Athens skyline with the Acropolis in the background — travel and dining guide hero image')}
               className="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               style={{ objectFit: 'cover', objectPosition: 'center', transform: `translateY(${scrollY * 0.2}px)`, opacity: 0.15 }}
             />
           </picture>
@@ -1754,8 +1791,10 @@ const MainHero = () => {
                       <div className="rounded-2xl border border-slate-200/70 bg-white/70 backdrop-blur-sm shadow-lg">
                         <div className="max-h-[72vh] overflow-y-auto px-3 sm:px-4 py-4 space-y-4 sm:space-y-5 custom-scrollbar">
                         {nearestRestaurants.map((restaurantData, index) => {
-                          const isVegan = vegetarianData.some(v => v.name === restaurantData.restaurant.name && v.address === restaurantData.restaurant.address);
-                          const isLuxury = luxuryDiningData.some(l => l.name === restaurantData.restaurant.name && l.address === restaurantData.restaurant.address);
+                          const vegetarianData = categoryDataCacheRef.current['vegetarian'] || [];
+                          const luxuryDiningData = categoryDataCacheRef.current['luxury-dining'] || [];
+                          const isVegan = vegetarianData.some((v) => v.name === restaurantData.restaurant.name && v.address === restaurantData.restaurant.address);
+                          const isLuxury = luxuryDiningData.some((l) => l.name === restaurantData.restaurant.name && l.address === restaurantData.restaurant.address);
                           const isSelected = selectedRestaurants.has(index);
                           return (
                             <div

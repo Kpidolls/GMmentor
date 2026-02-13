@@ -14,7 +14,7 @@ class MyDocument extends Document {
           <link
             rel="preload"
             as="image"
-            href="/assets/images/newlogo1.webp"
+            href="/assets/images/cover.webp"
             type="image/webp"
           />
 
@@ -39,11 +39,6 @@ class MyDocument extends Document {
           
           {/* Apple PWA Icons */}
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
-          {/* Preconnect to external resources for performance */}
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link rel="preconnect" href="https://www.googletagmanager.com" />
 
           {/* Enhanced SEO meta */}
           <meta
