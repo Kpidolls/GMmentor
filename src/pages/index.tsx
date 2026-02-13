@@ -1,7 +1,6 @@
 // import Link from 'next/link';
 import React from 'react';
 import AboutUs from '../components/AboutUs';
-import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
@@ -117,6 +116,7 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       </section>
 
       {/* Islands/Destinations Section */}
+      <LazyShow>
       <section className="py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
@@ -135,6 +135,7 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
           <IslandList />
         </div>
       </section>
+      </LazyShow>
 
       {/* Canvas Divider */}
       <div className="relative h-24">
@@ -142,9 +143,12 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       </div>
 
       {/* Reviews Section */}
+      <LazyShow>
       <Reviews />
+      </LazyShow>
 
       {/* Product Showcase Section */}
+      <LazyShow>
       <section className="py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
@@ -169,6 +173,7 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
           </div>
         </div>
       </section>
+      </LazyShow>
 
       {/* Canvas Divider */}
       <div className="relative h-24">
@@ -176,6 +181,7 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       </div>
 
       {/* Maps & Lists Section */}
+      <LazyShow>
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
@@ -194,6 +200,7 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
           <Product />
         </div>
       </section>
+      </LazyShow>
 
       {/* Canvas Divider */}
       <div className="relative h-24">
@@ -201,12 +208,17 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       </div>
 
       {/* About Us Section */}
+      <LazyShow>
       <AboutUs />
+      </LazyShow>
 
       {/* FAQ Section */}
+      <LazyShow>
       <QASection />
+      </LazyShow>
 
       {/* Newsletter Section */}
+      <LazyShow>
       <section className="py-16 lg:py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -223,6 +235,7 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
           </div>
         </div>
       </section>
+      </LazyShow>
 
       {/* Final Section with lazy loading */}
       <LazyShow>
@@ -230,9 +243,6 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
           <Canvas />
         </div>
       </LazyShow>
-
-      {/* Analytics */}
-      <Analytics />
     </div>
   );
 };

@@ -92,13 +92,16 @@ export const usePWA = (): PWAHook => {
 
     // Initial checks
     detectMobileDevice();
-    checkStandalone();
+    const standaloneAtLoad = checkStandalone();
     setIsOnline(navigator.onLine);
 
-    // Start data preloading after a short delay to not block initial render
-    setTimeout(() => {
-      initializeDataPreloading();
-    }, 1000);
+    // Start data preloading only for installed/standalone sessions to reduce
+    // first-load cost for regular web visitors.
+    if (standaloneAtLoad) {
+      setTimeout(() => {
+        initializeDataPreloading();
+      }, 1200);
+    }
 
     // Listen for install prompt
     const handleBeforeInstallPrompt = (e: Event) => {
@@ -120,6 +123,7 @@ export const usePWA = (): PWAHook => {
     const handleAppInstalled = () => {
       console.log('PWA: App was installed');
       setIsInstalled(true);
+      setIsStandalone(true);
       setIsInstallable(false);
       setDeferredPrompt(null);
       
@@ -133,6 +137,11 @@ export const usePWA = (): PWAHook => {
           event_label: 'User installed PWA'
         });
       }
+
+      // Prime offline data after installation completes.
+      setTimeout(() => {
+        initializeDataPreloading();
+      }, 1000);
     };
 
     // Listen for online/offline changes

@@ -45,13 +45,21 @@ function useOnScreen(
   return isIntersecting;
 }
 
-const LazyShow = ({ children }: { children: React.ReactNode }) => {
+interface LazyShowProps {
+  children: React.ReactNode;
+  deferRender?: boolean;
+  rootMargin?: string;
+}
+
+const LazyShow = ({ children, deferRender = false, rootMargin = '0px' }: LazyShowProps) => {
   const controls = useAnimation();
   const rootRef = useRef<HTMLDivElement>(null);
-  const onScreen = useOnScreen(rootRef);
+  const onScreen = useOnScreen(rootRef, rootMargin);
+  const [hasShown, setHasShown] = useState(false);
 
   useEffect(() => {
     if (onScreen) {
+      setHasShown(true);
       controls.start({
         x: 0,
         opacity: 1,
@@ -62,6 +70,10 @@ const LazyShow = ({ children }: { children: React.ReactNode }) => {
       });
     }
   }, [onScreen, controls]);
+
+  if (deferRender && !hasShown) {
+    return <div ref={rootRef} className="lazy-div min-h-px" aria-hidden="true" />;
+  }
 
   return (
     <MotionDiv

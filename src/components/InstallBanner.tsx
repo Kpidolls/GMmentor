@@ -118,7 +118,7 @@ const InstallBanner: React.FC<InstallBannerProps> = ({
               </div>
               <div className="flex items-center space-x-1 text-xs text-blue-100">
                 <span className="w-1 h-1 bg-blue-200 rounded-full"></span>
-                <span>{t('pwa.benefit3', 'Native app feel')}</span>
+                <span>{t('pwa.benefit3', 'Save time and avoid tourist traps')}</span>
               </div>
             </div>
 
