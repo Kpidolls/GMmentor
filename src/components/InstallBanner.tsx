@@ -13,6 +13,12 @@ const InstallBanner: React.FC<InstallBannerProps> = ({
   showAfterDelay = 3000,
   className = ''
 }) => {
+  const logDevWarning = (...args: unknown[]) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(...args);
+    }
+  };
+
   const { t } = useTranslation();
   const { isInstallable, installApp, isInstalled, dismissInstallPrompt } = usePWA();
   const [isVisible, setIsVisible] = useState(false);
@@ -55,7 +61,7 @@ const InstallBanner: React.FC<InstallBannerProps> = ({
         setIsVisible(false);
       }
     } catch (error) {
-      console.error('Install failed:', error);
+      logDevWarning('Install failed:', error);
     } finally {
       setIsInstalling(false);
     }

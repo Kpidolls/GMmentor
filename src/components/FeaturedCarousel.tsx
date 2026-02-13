@@ -12,6 +12,11 @@ type MinimalPost = {
 
 export default function FeaturedCarousel() {
   const { t, i18n } = useTranslation()
+  const logDevWarning = (...args: unknown[]) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(...args)
+    }
+  }
   const [posts, setPosts] = useState<MinimalPost[]>([])
   const [index, setIndex] = useState(0)
   const timer = useRef<number | null>(null)
@@ -21,19 +26,21 @@ export default function FeaturedCarousel() {
     const load = async () => {
       const lang = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0]
       try {
-        const staticPath = `/data/featured-posts-${lang}.json`
-        const sr = await fetch(staticPath)
-        const sct = sr.headers.get('content-type') || ''
-        if (sr.ok && sct.includes('application/json')) {
-          const sdata = await sr.json()
-          if (mounted && Array.isArray(sdata)) {
-            setPosts(sdata)
-            return
+        const pathsToTry = [`/data/featured-posts-${lang}.json`, '/data/featured-posts-en.json']
+        for (const staticPath of pathsToTry) {
+          const sr = await fetch(staticPath)
+          const sct = sr.headers.get('content-type') || ''
+          if (sr.ok && sct.includes('application/json')) {
+            const sdata = await sr.json()
+            if (mounted && Array.isArray(sdata)) {
+              setPosts(sdata)
+              return
+            }
           }
         }
         if (mounted) setPosts([])
       } catch (err) {
-        console.error('Failed to load featured posts', err)
+        logDevWarning('Failed to load featured posts', err)
         if (mounted) setPosts([])
       }
     }

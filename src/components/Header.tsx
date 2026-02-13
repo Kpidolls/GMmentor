@@ -34,6 +34,12 @@ import SearchPage from './SearchPage';
 import { usePWA } from '../hooks/usePWA';
 
 const Header = () => {
+  const logDevWarning = (...args: unknown[]) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(...args);
+    }
+  };
+
   const { company, navigation } = config;
   const { logo } = company;
 
@@ -335,7 +341,7 @@ const Header = () => {
                     }
                   }
                 } catch (error) {
-                  console.error('Failed to install app:', error);
+                  logDevWarning('Failed to install app:', error);
                 }
               }}
               leftIcon={

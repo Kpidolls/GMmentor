@@ -8,6 +8,12 @@ type Props = {
 };
 
 const RegionPicker: React.FC<Props> = ({ onSelect }) => {
+  const logDevWarning = (...args: unknown[]) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(...args);
+    }
+  };
+
   const { t } = useTranslation();
   const [flat, setFlat] = useState<Municipality[] | null>(null);
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
@@ -52,7 +58,7 @@ const RegionPicker: React.FC<Props> = ({ onSelect }) => {
         setFlat(normalized);
       } catch (e: any) {
         if (!cancelled) {
-          console.error('RegionPicker load error', e);
+          logDevWarning('RegionPicker load error', e);
           setError(t('regionPicker.loadError', 'Failed to load locations'));
           setFlat([]);
         }
