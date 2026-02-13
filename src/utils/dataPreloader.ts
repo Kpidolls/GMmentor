@@ -122,7 +122,7 @@ class DataPreloaderService implements DataPreloader {
       try {
         localStorage.setItem(this.cachePrefix + key, JSON.stringify(data));
       } catch (retryError) {
-        console.error('Failed to cache data after cleanup:', retryError);
+        console.warn('Failed to cache data after cleanup:', retryError);
       }
     }
   }

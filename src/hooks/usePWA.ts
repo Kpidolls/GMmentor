@@ -25,6 +25,12 @@ interface PWAHook {
 }
 
 export const usePWA = (): PWAHook => {
+  const logDevWarning = (...args: unknown[]) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(...args);
+    }
+  };
+
   const [isInstallable, setIsInstallable] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
   const [isOnline, setIsOnline] = useState(true);
@@ -85,7 +91,7 @@ export const usePWA = (): PWAHook => {
           console.log('🎉 PWA data preloading completed');
         }
       } catch (error) {
-        console.error('❌ PWA data preloading failed:', error);
+        logDevWarning('PWA data preloading failed:', error);
         setDataPreloadStatus('error');
       }
     };
@@ -239,7 +245,7 @@ export const usePWA = (): PWAHook => {
       
       return false;
     } catch (error) {
-      console.error('PWA: Install failed:', error);
+      logDevWarning('PWA: Install failed:', error);
       return false;
     }
   };
@@ -263,7 +269,10 @@ export const usePWA = (): PWAHook => {
         await navigator.share(data);
         return true;
       } catch (error) {
-        console.error('PWA: Share failed:', error);
+        const shareError = error as DOMException;
+        if (shareError?.name !== 'AbortError') {
+          logDevWarning('PWA: Share failed:', error);
+        }
         return false;
       }
     }

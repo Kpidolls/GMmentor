@@ -70,6 +70,12 @@ interface ExperienceType {
 }
 
 const MainHero = () => {
+  const logDevWarning = (...args: unknown[]) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(...args);
+    }
+  };
+
   // Snackbar state for share feedback (fix ReferenceError)
   const [shareSnackbar, setShareSnackbar] = useState({ open: false, message: '', type: 'info' });
   const { mainHero } = config;
@@ -103,7 +109,7 @@ const MainHero = () => {
   // Helper function to normalize restaurant data and ensure lat/lng are numbers
   const normalizeRestaurantData = (data: any[]): Restaurant[] => {
     if (!data || !Array.isArray(data)) {
-      console.error('Invalid data provided to normalizeRestaurantData');
+      logDevWarning('Invalid data provided to normalizeRestaurantData');
       return [];
     }
 
@@ -152,7 +158,7 @@ const MainHero = () => {
           categoryDataCacheRef.current[categoryId] = parsed;
           return parsed;
         } catch (e) {
-          console.error('Failed to parse cached restaurant data:', e);
+          logDevWarning('Failed to parse cached restaurant data:', e);
         }
       }
       return [];
@@ -175,7 +181,7 @@ const MainHero = () => {
 
       return normalized;
     } catch (error) {
-      console.error('Failed to load category data:', error);
+      logDevWarning('Failed to load category data:', error);
 
       if (typeof window !== 'undefined') {
         const cachedData = localStorage.getItem(localStorageKey);
@@ -376,7 +382,7 @@ const MainHero = () => {
           setCurrentIndex(0);
           return;
         } catch (e) {
-          console.error('Failed to parse cached location:', e);
+          logDevWarning('Failed to parse cached location:', e);
         }
       }
       
@@ -432,12 +438,12 @@ const MainHero = () => {
                 setError(t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.'));
                 return;
               } catch (e) {
-                console.error('Failed to parse cached location:', e);
+                logDevWarning('Failed to parse cached location:', e);
               }
             }
           }
           
-          console.error('Geolocation error:', geolocationError);
+          logDevWarning('Geolocation error:', geolocationError);
           setError(t('restaurantFinder.locationError', 'Unable to get your location. Please enable location services.'));
           setLoading(false);
           // Minimal scroll for error visibility
@@ -599,7 +605,7 @@ const MainHero = () => {
           timestamp: Date.now()
         }));
       } catch (e) {
-        console.error('Failed to cache municipality search:', e);
+        logDevWarning('Failed to cache municipality search:', e);
       }
     }
     
@@ -905,7 +911,7 @@ const MainHero = () => {
         try {
           return JSON.parse(cachedData);
         } catch (e) {
-          console.error('Failed to parse cached municipalities data:', e);
+          logDevWarning('Failed to parse cached municipalities data:', e);
         }
       }
     }
@@ -1951,7 +1957,7 @@ const MainHero = () => {
                           alert('PWA Install Button Test: In production, this would trigger the install prompt. The PWA must be served over HTTPS with a valid manifest for the install prompt to appear.');
                         }
                       } catch (error) {
-                        console.error('Failed to install app:', error);
+                        logDevWarning('Failed to install app:', error);
                       }
                     }}
                     className="relative w-full overflow-hidden bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white border-2 border-emerald-400/40 px-4 py-3 xs:px-5 xs:py-4 sm:px-7 sm:py-5 lg:px-9 lg:py-6 rounded-xl sm:rounded-2xl lg:rounded-3xl font-bold text-sm xs:text-base sm:text-lg lg:text-xl transition-all duration-500 hover:scale-[1.02] active:scale-95 shadow-2xl"
