@@ -19,11 +19,13 @@ const MyTicker = dynamic(() => import('../components/Ticker'), { ssr: false });
 // Helper function to align viewport for all steps before results
 const alignViewport = () => {
   if (typeof window === 'undefined') return;
-  setTimeout(() => {
-    const isMobile = window.innerWidth < 768;
+  window.requestAnimationFrame(() => {
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
     const scrollTarget = isMobile ? 150 : 300;
-    window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
-  }, 100);
+    if (Math.abs(window.scrollY - scrollTarget) > 8) {
+      window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+    }
+  });
 };
 
 interface Restaurant {

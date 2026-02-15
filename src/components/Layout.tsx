@@ -6,7 +6,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
   <>
     {children}
     <About />
-    <PerformanceMonitor />
+    {process.env.NODE_ENV === 'development' && <PerformanceMonitor />}
   </>
 );
 

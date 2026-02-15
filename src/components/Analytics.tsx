@@ -8,7 +8,12 @@ import * as gtag from '../lib/gtag';
 
 const App = () => {
   const router = useRouter();
+
   useEffect(() => {
+    if (!gtag.GA_TRACKING_ID) {
+      return;
+    }
+
     const handleRouteChange = (url: string) => {
       gtag.pageview(url);
     };
@@ -20,6 +25,8 @@ const App = () => {
 
   return (
     <>
+      {gtag.GA_TRACKING_ID && (
+        <>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"
@@ -39,7 +46,9 @@ const App = () => {
           `,
         }}
       />
-      <Script async src={GA_ADS_ID} crossOrigin="anonymous" />
+        </>
+      )}
+      {GA_ADS_ID && <Script async src={GA_ADS_ID} crossOrigin="anonymous" />}
     </>
   );
 };

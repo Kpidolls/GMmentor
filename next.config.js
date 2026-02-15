@@ -29,9 +29,6 @@ const withPWA = require('@ducanh2912/next-pwa').default({
         expiration: {
           maxEntries: 10,
           maxAgeSeconds: 365 * 24 * 60 * 60 // 1 year
-        },
-        cacheKeyWillBeUsed: async ({ request }) => {
-          return `${request.url}?${Date.now()}`;
         }
       }
     },
@@ -195,12 +192,12 @@ const withPWA = require('@ducanh2912/next-pwa').default({
     // Font Assets
     {
       urlPattern: /\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,
-      handler: 'StaleWhileRevalidate',
+      handler: 'CacheFirst',
       options: {
         cacheName: 'static-font-assets',
         expiration: {
           maxEntries: 10,
-          maxAgeSeconds: 7 * 24 * 60 * 60 // 7 days
+          maxAgeSeconds: 365 * 24 * 60 * 60 // 1 year
         }
       }
     },
