@@ -84,12 +84,13 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       {/* Short AI-friendly intro for the homepage */}
       <section className="bg-white py-8">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('home.intro.question', 'Looking for the best places to eat and explore in Athens?')}</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('home.intro.question', 'Looking for the best places to eat and explore in Greece?')}</h2>
           <p className="text-gray-600 leading-relaxed">{t('home.intro.answer', 'These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike.')}</p>
         </div>
       </section>
 
       {/* Tours & Activities Section */}
+      <LazyShow rootMargin="250px">
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
@@ -114,9 +115,10 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
           </div>
         </div>
       </section>
+      </LazyShow>
 
       {/* Islands/Destinations Section */}
-      <LazyShow>
+      <LazyShow deferRender rootMargin="200px">
       <section className="py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
@@ -143,12 +145,12 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       </div>
 
       {/* Reviews Section */}
-      <LazyShow>
+      <LazyShow deferRender rootMargin="200px">
       <Reviews />
       </LazyShow>
 
       {/* Product Showcase Section */}
-      <LazyShow>
+      <LazyShow deferRender rootMargin="200px">
       <section className="py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
@@ -181,7 +183,7 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       </div>
 
       {/* Maps & Lists Section */}
-      <LazyShow>
+      <LazyShow deferRender rootMargin="200px">
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
@@ -208,17 +210,17 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       </div>
 
       {/* About Us Section */}
-      <LazyShow>
+      <LazyShow deferRender rootMargin="200px">
       <AboutUs />
       </LazyShow>
 
       {/* FAQ Section */}
-      <LazyShow>
+      <LazyShow deferRender rootMargin="200px">
       <QASection />
       </LazyShow>
 
       {/* Newsletter Section */}
-      <LazyShow>
+      <LazyShow deferRender rootMargin="200px">
       <section className="py-16 lg:py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">

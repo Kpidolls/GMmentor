@@ -79,19 +79,6 @@ class MyDocument extends Document {
             src="https://www.google.com/recaptcha/api.js?hl=en"
             strategy="lazyOnload"
           />
-          {/* Google Analytics */}
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-7KYV8QK51B"
-            strategy="lazyOnload"
-          />
-          <Script id="google-analytics" strategy="lazyOnload">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-7KYV8QK51B');
-            `}
-          </Script>
         </body>
       </Html>
     );

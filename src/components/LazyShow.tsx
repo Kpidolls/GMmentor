@@ -20,6 +20,11 @@ function useOnScreen(
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
+    if (!('IntersectionObserver' in window)) {
+      setIntersecting(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -57,9 +62,19 @@ const LazyShow = ({ children, deferRender = false, rootMargin = '0px' }: LazySho
   const onScreen = useOnScreen(rootRef, rootMargin);
   const [hasShown, setHasShown] = useState(false);
 
+  const parsedRootMargin = Number.parseInt(rootMargin, 10);
+  const placeholderMinHeight = Number.isNaN(parsedRootMargin)
+    ? 180
+    : Math.max(parsedRootMargin, 180);
+
   useEffect(() => {
     if (onScreen) {
       setHasShown(true);
+    }
+  }, [onScreen]);
+
+  useEffect(() => {
+    if (hasShown) {
       controls.start({
         x: 0,
         opacity: 1,
@@ -69,10 +84,31 @@ const LazyShow = ({ children, deferRender = false, rootMargin = '0px' }: LazySho
         },
       });
     }
-  }, [onScreen, controls]);
+  }, [hasShown, controls]);
+
+  useEffect(() => {
+    if (!deferRender || hasShown) {
+      return;
+    }
+
+    const fallbackTimer = window.setTimeout(() => {
+      setHasShown(true);
+    }, 3000);
+
+    return () => {
+      window.clearTimeout(fallbackTimer);
+    };
+  }, [deferRender, hasShown]);
 
   if (deferRender && !hasShown) {
-    return <div ref={rootRef} className="lazy-div min-h-px" aria-hidden="true" />;
+    return (
+      <div
+        ref={rootRef}
+        className="lazy-div"
+        style={{ minHeight: `${placeholderMinHeight}px` }}
+        aria-hidden="true"
+      />
+    );
   }
 
   return (

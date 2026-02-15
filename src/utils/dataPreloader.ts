@@ -17,19 +17,7 @@ class DataPreloaderService implements DataPreloader {
     '/data/restaurantCategories.json',
     '/data/islands.json',
     '/data/mapOptions.json',
-    '/data/products.json',
-    '/data/dessertsRestaurants.json',
-    '/data/coffeeBrunchRestaurants.json',
-    '/data/italianRestaurants.json',
-    '/data/cheapEatsRestaurants.json',
-    '/data/asianRestaurants.json',
-    '/data/fishTavernasRestaurants.json',
-    '/data/burgersRestaurants.json',
-    '/data/luxuryDiningRestaurants.json',
-    '/data/rooftopLoungesRestaurants.json',
-    '/data/vegetarianRestaurants.json',
-    '/data/gyrosSouvlakiRestaurants.json',
-    '/data/mexicanRestaurants.json'
+    '/data/products.json'
   ];
 
   async preloadCriticalData(): Promise<void> {
@@ -166,29 +154,8 @@ export const dataPreloader = new DataPreloaderService();
 // Utility function to get critical images for preloading
 export const getCriticalImages = (): string[] => [
   '/assets/images/cover.avif',
-  '/assets/images/newlogo1.webp',
-  '/assets/images/aegina.webp',
-  '/assets/images/amorgos.webp',
-  '/assets/images/astypalea.webp',
   '/assets/images/athens.webp',
-  '/assets/images/chios.webp',
-  '/assets/images/corfu.webp',
-  '/assets/images/crete.webp',
-  '/assets/images/mykonos.webp',
-  '/assets/images/naxos.webp',
-  '/assets/images/paros.webp',
-  '/assets/images/santorini.webp',
-  '/assets/images/zakynthos.webp',
-  // Additional existing images
-  '/assets/images/hydra.webp',
-  '/assets/images/kos.webp',
-  '/assets/images/leukada.webp',
-  '/assets/images/rodos.webp', // This is rhodes in Greek
-  '/assets/images/sifnos.webp',
-  '/assets/images/skiathos.webp',
-  '/assets/images/skyros.webp',
-  '/assets/images/syros.webp',
-  '/assets/images/tinos.webp'
+  '/assets/images/newlogo1.webp'
 ];
 
 // Enhanced data fetcher with offline fallback
