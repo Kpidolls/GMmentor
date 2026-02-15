@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
 import dynamic from 'next/dynamic';
@@ -80,7 +80,6 @@ const MainHero = () => {
   const [shareSnackbar, setShareSnackbar] = useState({ open: false, message: '', type: 'info' });
   const { mainHero } = config;
   const { t } = useTranslation();
-  const [scrollY, setScrollY] = useState(0);
   
   // PWA Hook
   const { isOnline, isStandalone, dataPreloadStatus, isInstallable, isInstalled, installApp } = usePWA();
@@ -307,27 +306,6 @@ const MainHero = () => {
   const [maxResults, setMaxResults] = useState(50);
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
   const [initialSearchDone, setInitialSearchDone] = useState(false);
-  const scrollFrameRef = useRef<number | null>(null);
-
-  // Parallax scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      if (scrollFrameRef.current !== null) return;
-      scrollFrameRef.current = window.requestAnimationFrame(() => {
-        setScrollY(window.scrollY);
-        scrollFrameRef.current = null;
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (scrollFrameRef.current !== null) {
-        window.cancelAnimationFrame(scrollFrameRef.current);
-      }
-    };
-  }, []);
-
   // Restaurant finder functions
   const calculateDistance = (lat1: number, lng1: number, lat2: number, lng2: number): number => {
     const R = 6371; // Earth's radius in km
@@ -996,14 +974,13 @@ const MainHero = () => {
       <main className="relative min-h-screen w-full flex items-center justify-center">
         {/* Professional Background with Enhanced Visual Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-          {/* Animated background pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-10 left-10 w-72 h-72 bg-slate-700 rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
-            <div className="absolute top-40 right-10 w-72 h-72 bg-slate-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000" />
-            <div className="absolute bottom-10 left-40 w-72 h-72 bg-slate-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000" />
+          {/* Simplified background pattern for faster first paint */}
+          <div className="absolute inset-0 opacity-15 hidden md:block">
+            <div className="absolute top-20 left-20 w-64 h-64 bg-slate-700 rounded-full blur-2xl" />
           </div>
           
           <picture className="absolute inset-0 block w-full h-full">
+            <source srcSet="/assets/images/cover.avif" type="image/avif" />
             <source srcSet="/assets/images/cover.webp" type="image/webp" />
             <img
               src="/assets/images/cover-fallback.svg"
@@ -1012,7 +989,7 @@ const MainHero = () => {
               loading="eager"
               decoding="async"
               fetchPriority="high"
-              style={{ objectFit: 'cover', objectPosition: 'center', transform: `translateY(${scrollY * 0.2}px)`, opacity: 0.15 }}
+              style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.15 }}
             />
           </picture>
           
@@ -1047,18 +1024,9 @@ const MainHero = () => {
 
         {/* Professional Hero Content */}
         <section role="main" aria-label="Homepage" className="relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center">
-          {/* Background image for a professional feel (uses existing cover image) */}
+          {/* Lightweight content backdrop */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
-            <picture className="absolute inset-0 block w-full h-full">
-              <source srcSet="/assets/images/cover.webp" type="image/webp" />
-              <img
-                src="/assets/images/cover-fallback.svg"
-                alt={t('mainHero.coverAlt', 'Greece travel scene')}
-                className="w-full h-full object-cover brightness-90"
-                style={{ objectFit: 'cover' }}
-              />
-            </picture>
-            <div className="absolute inset-0 bg-gradient-to-b from-[#052A6B]/25 via-[#0B7285]/10 to-[#071438]/35" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-slate-800/20 to-slate-900/40" />
           </div>
           <div className="text-center space-y-6 xs:space-y-8 sm:space-y-10 lg:space-y-12 w-full">
             {/* Enhanced Title with Modern Typography */}

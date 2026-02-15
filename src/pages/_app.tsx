@@ -47,7 +47,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
-
   return (
     <ChakraProvider theme={customTheme}>
       <Head>
@@ -65,3 +64,4 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 };
 
 export default MyApp;
+
