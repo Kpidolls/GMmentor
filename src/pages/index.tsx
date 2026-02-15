@@ -63,7 +63,7 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
         <meta property="og:description" content={t('meta.homeDescriptionShort')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://googlementor.com" />
-        <meta property="og:image" content="https://googlementor.com/assets/images/cover.webp" />
+        <meta property="og:image" content="https://googlementor.com/assets/images/cover.avif" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* FAQPage JSON-LD for common quick questions on the homepage (localized) */}
         <script

@@ -165,7 +165,7 @@ export const dataPreloader = new DataPreloaderService();
 
 // Utility function to get critical images for preloading
 export const getCriticalImages = (): string[] => [
-  '/assets/images/cover.webp',
+  '/assets/images/cover.avif',
   '/assets/images/newlogo1.webp',
   '/assets/images/aegina.webp',
   '/assets/images/amorgos.webp',

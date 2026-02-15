@@ -10,13 +10,6 @@ class MyDocument extends Document {
       <Html lang={AppConfig.locale}>
         <Head>
           <meta charSet="utf-8" />
-          {/* Preload key assets */}
-          <link
-            rel="preload"
-            as="image"
-            href="/assets/images/cover.webp"
-            type="image/webp"
-          />
 
           {/* PWA Meta Tags */}
           <meta name="application-name" content="Googlementor" />
@@ -106,3 +99,4 @@ class MyDocument extends Document {
 }
 
 export default MyDocument;
+
