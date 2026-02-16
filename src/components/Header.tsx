@@ -90,16 +90,35 @@ const Header = () => {
     ...navButtonStyles,
     w: 'full',
     justifyContent: 'flex-start',
-    h: 11,
+    h: 12,
     px: 4,
-    fontSize: 'sm'
+    fontSize: 'sm',
+    fontWeight: 'bold',
+    borderRadius: 'xl',
+    bg: 'white',
+    border: '1px solid',
+    borderColor: 'blue.100',
+    boxShadow: 'sm',
+    _hover: {
+      bg: 'blue.50',
+      borderColor: 'blue.200',
+      transform: 'translateY(-1px)',
+      boxShadow: 'md'
+    },
+    _active: {
+      bg: 'blue.100',
+      transform: 'translateY(0)'
+    },
+    _focusVisible: {
+      boxShadow: '0 0 0 3px rgba(59, 130, 246, 0.25)'
+    }
   };
 
   const renderNavIcon = (name: string) => {
     switch (name) {
       case 'navigation.maps':
         return (
-          <Icon viewBox="0 0 24 24" boxSize={3.5} color="blue.400">
+          <Icon viewBox="0 0 24 24" boxSize={{ base: 4.5, md: 3.5 }} color="blue.500">
             <path
               d="M9 20l-5-2.5V4l5 2.5 6-3 5 2.5V20l-5-2.5-6 3Z"
               fill="none"
@@ -112,7 +131,7 @@ const Header = () => {
         );
       case 'navigation.store':
         return (
-          <Icon viewBox="0 0 24 24" boxSize={3.5} color="blue.400">
+          <Icon viewBox="0 0 24 24" boxSize={{ base: 4.5, md: 3.5 }} color="blue.500">
             <path
               d="M6 9h12l-1 11H7L6 9Zm2-4h8l1 4H7l1-4Zm-3 4h14"
               fill="none"
@@ -125,7 +144,7 @@ const Header = () => {
         );
       case 'navigation.aboutUs':
         return (
-          <Icon viewBox="0 0 24 24" boxSize={3.5} color="blue.400">
+          <Icon viewBox="0 0 24 24" boxSize={{ base: 4.5, md: 3.5 }} color="blue.500">
             <path
               d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-7 8a7 7 0 0 1 14 0"
               fill="none"
@@ -541,14 +560,9 @@ const Header = () => {
                   <Button
                     variant="ghost"
                     onClick={() => handleNavigation(item.href)}
-                    color={textColor}
+                    color="gray.800"
                     leftIcon={renderNavIcon(item.name) || undefined}
                     {...mobileNavButtonStyles}
-                    borderRadius="xl"
-                    bg="white"
-                    border="1px solid"
-                    borderColor="gray.200"
-                    _hover={{ bg: 'gray.50', borderColor: 'gray.300' }}
                   >
                     {t(item.name)}
                   </Button>

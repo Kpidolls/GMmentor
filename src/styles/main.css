@@ -4,18 +4,23 @@
 
 
 :root {
-  --color-primary: #ec4755;
-  --color-secondary: #a12c34;
-  --color-tertiary: #99a0a3;
+  --color-primary: #f8fbff;
+  --color-secondary: #0284c7;
+  --color-tertiary: #dbeafe;
   --color-quaternary: #FFD700;
 }
 
 a { 
-  @apply text-red-700
+  @apply text-blue-700
 }
 
 a:hover {
-  @apply border-b-2 border-red-700;
+  @apply border-b-2 border-blue-700;
+}
+
+.gyg-widget-wrapper a:hover {
+  border-bottom-width: 0;
+  border-color: transparent;
 }
 
 
@@ -147,7 +152,7 @@ a:hover {
 .gyg-widget-container:hover,
 .gyg-widget-container:focus-within {
   box-shadow: 0 12px 48px 0 rgba(44, 62, 80, 0.16), 0 3px 8px 0 rgba(44, 62, 80, 0.08);
-  border-color: var(--color-secondary, #a12c34);
+  border-color: var(--color-secondary, #0284c7);
 }
 
 .blog-content h1 {

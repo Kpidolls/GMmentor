@@ -1,20 +1,19 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
 import dynamic from 'next/dynamic';
 import municipalitiesData from '../data/municipalities.json';
 import categoriesData from '../data/restaurantCategories.json';
 
-// PWA Components
-import InstallBanner from './InstallBanner';
-import OfflineNotice from './OfflineNotice';
 import { usePWA } from '../hooks/usePWA';
 
 // Region matching utilities no longer needed - using coordinate-based distance
 
 const MyTicker = dynamic(() => import('../components/Ticker'), { ssr: false });
+const InstallBanner = dynamic(() => import('./InstallBanner'), { ssr: false });
+const OfflineNotice = dynamic(() => import('./OfflineNotice'), { ssr: false });
 
 // Helper function to align viewport for all steps before results
 const alignViewport = () => {
@@ -251,6 +250,27 @@ const MainHero = () => {
   const [maxResults, setMaxResults] = useState(50);
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
   const [initialSearchDone, setInitialSearchDone] = useState(false);
+  const [showDeferredUi, setShowDeferredUi] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const enableDeferredUi = () => setShowDeferredUi(true);
+    const idleWindow = window as Window & {
+      requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number;
+      cancelIdleCallback?: (id: number) => void;
+    };
+
+    if (idleWindow.requestIdleCallback) {
+      const idleId = idleWindow.requestIdleCallback(enableDeferredUi, { timeout: 1200 });
+      return () => {
+        if (idleWindow.cancelIdleCallback) idleWindow.cancelIdleCallback(idleId);
+      };
+    }
+
+    const timeoutId = window.setTimeout(enableDeferredUi, 600);
+    return () => window.clearTimeout(timeoutId);
+  }, []);
   // Restaurant finder functions
   const calculateDistance = (lat1: number, lng1: number, lat2: number, lng2: number): number => {
     const R = 6371; // Earth's radius in km
@@ -1001,18 +1021,18 @@ const MainHero = () => {
         }
       `}</style>
 
-      {/* PWA Components */}
-      <OfflineNotice position="top" />
-      <InstallBanner position="bottom" showAfterDelay={4000} />
+      {/* Non-critical PWA UI (deferred for faster LCP) */}
+      {showDeferredUi && <OfflineNotice position="top" />}
+      {showDeferredUi && <InstallBanner position="bottom" showAfterDelay={4000} />}
       
 
 
       <main className="relative min-h-screen w-full flex items-center justify-center">
         {/* Professional Background with Enhanced Visual Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-100 via-cyan-50 to-blue-100">
           {/* Simplified background pattern for faster first paint */}
-          <div className="absolute inset-0 opacity-15 hidden md:block">
-            <div className="absolute top-20 left-20 w-64 h-64 bg-slate-700 rounded-full blur-2xl" />
+          <div className="absolute inset-0 opacity-30 hidden md:block">
+            <div className="absolute top-20 left-20 w-64 h-64 bg-sky-300 rounded-full blur-2xl" />
           </div>
           
           <picture className="absolute inset-0 block w-full h-full">
@@ -1023,15 +1043,16 @@ const MainHero = () => {
               alt={t('mainHero.coverAlt', 'Panoramic view of Athens skyline with the Acropolis in the background — travel and dining guide hero image')}
               className="w-full h-full object-cover"
               loading="eager"
-              decoding="async"
-              style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.15 }}
+              fetchPriority="high"
+              decoding="sync"
+              style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.28 }}
             />
           </picture>
           
           {/* Enhanced gradient overlay with better depth (muted so image is visible) */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/45 via-slate-900/25 to-slate-900/15 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/35 via-sky-100/40 to-blue-100/35 pointer-events-none" />
           {/* removed heavy horizontal rail to reveal cover image */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/30 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-cyan-100/25 to-blue-200/25 pointer-events-none" />
         </div>
 
 
@@ -1040,20 +1061,22 @@ const MainHero = () => {
         <div className="absolute top-4 right-4 z-40 xs:top-6 xs:right-6 md:top-6 md:right-8 lg:top-8 lg:right-8">
           <div className="relative group">
             {/* Glow effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-300" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 rounded-full blur opacity-35 group-hover:opacity-60 transition duration-300" />
             
-            <span className="relative inline-flex items-center px-3 py-2 xs:px-4 xs:py-2 bg-white/15 backdrop-blur-md text-white font-semibold rounded-full text-xs xs:text-sm gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 border border-white/30 shadow-lg">
+            <span className="relative inline-flex items-center px-3 py-2 xs:px-4 xs:py-2 bg-white/80 backdrop-blur-md text-slate-800 font-semibold rounded-full text-xs xs:text-sm gap-2 hover:bg-white hover:scale-105 transition-all duration-300 border border-cyan-200/70 shadow-lg">
               <span className="text-sm xs:text-base animate-pulse">🇬🇷</span>
               <span className="hidden xs:inline font-medium tracking-wide">{t('mainHero.athens', 'Athens')}</span>
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
             </span>
           </div>
         </div>
         
         {/* Ticker */}
-        <div className="absolute top-0 left-0 w-full z-30">
-          <MyTicker />
-        </div>
+        {showDeferredUi && (
+          <div className="absolute top-0 left-0 w-full z-30">
+            <MyTicker />
+          </div>
+        )}
 
 
 
@@ -1061,35 +1084,35 @@ const MainHero = () => {
         <section role="main" aria-label="Homepage" className="relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center">
           {/* Lightweight content backdrop */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-slate-800/20 to-slate-900/40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-sky-100/20 to-blue-100/30" />
           </div>
           <div className="text-center space-y-6 xs:space-y-8 sm:space-y-10 lg:space-y-12 w-full">
             {/* Enhanced Title with Modern Typography */}
             <header className="space-y-4 xs:space-y-5 sm:space-y-7 relative">
               {/* Decorative elements */}
-              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent rounded-full opacity-60" />
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-cyan-300 to-transparent rounded-full opacity-70" />
               
               <div 
                 onClick={fullReset}
-                className="font-bold tracking-tight text-white hover:scale-[1.02] transition-all duration-500 cursor-pointer group relative"
+                className="font-bold tracking-tight text-slate-900 hover:scale-[1.02] transition-all duration-500 cursor-pointer group relative"
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') fullReset(); }}
                 title={t('mainHero.clickToReturnToMain', 'Click to return to main page')}
               >
                 {/* Glow effect behind title */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-indigo-500/20 blur-3xl scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/15 via-teal-300/20 to-amber-200/20 blur-3xl scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 <div className="relative">
-                  <span className="block text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl text-blue-300 font-semibold mb-3 xs:mb-4 sm:mb-5 tracking-[0.2em] uppercase group-hover:text-blue-200 transition-all duration-500 relative">
+                  <span className="block text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl text-sky-700 font-semibold mb-3 xs:mb-4 sm:mb-5 tracking-[0.2em] uppercase group-hover:text-cyan-700 transition-all duration-500 relative drop-shadow-sm">
                     <span className="relative z-10">{t('mainHero.subtitle')}</span>
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </span>
                   
-                  <h1 className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight px-1 group-hover:from-blue-100 group-hover:via-white group-hover:to-blue-100 transition-all duration-500 drop-shadow-lg">
+                  <h1 className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-sky-900 via-blue-700 to-cyan-700 bg-clip-text text-transparent leading-tight px-1 group-hover:from-sky-800 group-hover:via-blue-700 group-hover:to-cyan-600 transition-all duration-500 drop-shadow-lg">
                     {t('mainHero.title')}
                   </h1>
-                  <p className="mt-3 text-sm sm:text-base md:text-lg text-blue-100 max-w-2xl mx-auto font-medium">
+                  <p className="mt-3 text-sm sm:text-base md:text-lg text-slate-700 max-w-2xl mx-auto font-medium">
                     {t('mainHero.tagline', 'Curated maps, local guides and vetted lists to help you explore Greece with confidence.')}
                   </p>
                 </div>
@@ -1097,9 +1120,9 @@ const MainHero = () => {
               
               {/* Decorative dots */}
               <div className="flex justify-center space-x-2 mt-6">
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
-                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse animation-delay-300" />
-                <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse animation-delay-600" />
+                <div className="w-2 h-2 bg-sky-300 rounded-full animate-pulse" />
+                <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse animation-delay-300" />
+                <div className="w-2 h-2 bg-emerald-300 rounded-full animate-pulse animation-delay-600" />
               </div>
             </header>
 
@@ -1107,15 +1130,15 @@ const MainHero = () => {
             <div className="max-w-5xl mx-auto px-1 xs:px-2 sm:px-4 w-full">
               {showCategorySelection && !showRestaurantFinder && !showMunicipalityList && (
                 <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-indigo-500/30 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  <div className="relative bg-white/12 backdrop-blur-2xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-4 xs:p-6 sm:p-8 lg:p-12 border border-white/25 shadow-2xl">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 via-teal-400/30 to-emerald-400/30 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="relative bg-white/75 backdrop-blur-2xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-4 xs:p-6 sm:p-8 lg:p-12 border border-white/60 shadow-2xl">
                     <div className="text-center mb-8 xs:mb-10 lg:mb-12 relative">
-                      <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto mb-6 opacity-60" />
-                      <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 xs:mb-5 sm:mb-6 relative">
+                      <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-cyan-300 to-transparent mx-auto mb-6 opacity-70" />
+                      <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-4 xs:mb-5 sm:mb-6 relative">
                         <span className="relative z-10">{t('discovery.chooseCategoryAfterLocation', 'Choose a Category')}</span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 blur-lg scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-emerald-300/20 blur-lg scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </h2>
-                      <p className="text-slate-200 text-sm xs:text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed font-light mb-6">
+                      <p className="text-slate-700 text-sm xs:text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed font-light mb-6">
                         {t('discovery.selectCategoryAfterLocation', 'Select a category to continue with your search.')}
                       </p>
                     </div>
@@ -1127,23 +1150,23 @@ const MainHero = () => {
                           onClick={() => {
                             runSearchWithCategory(category);
                           }}
-                          className={`group relative overflow-hidden bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-7 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl${selectedDisplayCategory?.id === category.id && selectedType === 'category' ? ' border-blue-500 bg-blue-100/10' : ''}`}
+                          className={`group relative overflow-hidden bg-white/70 backdrop-blur-sm hover:bg-white border border-sky-100 rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-7 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl${selectedDisplayCategory?.id === category.id && selectedType === 'category' ? ' border-cyan-400 bg-cyan-50' : ''}`}
                         >
                           <div className="relative text-center space-y-2 xs:space-y-3 sm:space-y-4">
                             <div className="text-3xl xs:text-4xl sm:text-5xl group-hover:scale-110 transition-transform duration-300">
                               {category.icon}
                             </div>
-                            <h4 className="text-white font-bold text-sm sm:text-base lg:text-lg leading-tight">
+                            <h4 className="text-slate-800 font-bold text-sm sm:text-base lg:text-lg leading-tight">
                               {t(`categories.${category.id}`, category.name)}
                             </h4>
-                            <p className="text-slate-300 text-xs sm:text-sm leading-tight">
+                            <p className="text-slate-600 text-xs sm:text-sm leading-tight">
                               {t(`categories.descriptions.${category.id}`, category.description)}
                             </p>
                           </div>
                         </button>
                       ))}
                     </div>
-                    <div className="text-center pt-4 border-t border-white/20">
+                    <div className="text-center pt-4 border-t border-sky-100">
                       <button
                         onClick={() => {
                           setShowCategorySelection(false);
@@ -1154,7 +1177,7 @@ const MainHero = () => {
                           }
                           alignViewport();
                         }}
-                        className="group inline-flex items-center gap-2 text-slate-300 hover:text-white transition-all duration-200 font-semibold text-sm sm:text-base px-4 py-2.5 rounded-xl hover:bg-white/10 hover:scale-105"
+                        className="group inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-all duration-200 font-semibold text-sm sm:text-base px-4 py-2.5 rounded-xl hover:bg-white/70 hover:scale-105"
                       >
                         <svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -1305,18 +1328,18 @@ const MainHero = () => {
               /* Location Options Selection - Enhanced UI */
               <div className="relative">
                 {/* Background Glow Effect */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-teal-500/20 rounded-3xl blur-3xl opacity-50" />
+                <div className="absolute -inset-4 bg-gradient-to-r from-sky-300/30 via-blue-300/25 to-cyan-300/25 rounded-3xl blur-3xl opacity-60" />
                 
-                <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-6 xs:p-8 sm:p-10 lg:p-14 border border-white/25 shadow-2xl">
+                <div className="relative bg-white/75 backdrop-blur-xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-6 xs:p-8 sm:p-10 lg:p-14 border border-white/60 shadow-2xl">
                   {/* Header Section */}
                   <div className="text-center mb-8 xs:mb-10 lg:mb-14 relative">
                     <div className="w-24 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto mb-6 opacity-60 rounded-full" />
-                    <h3 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-4 xs:mb-5 relative">
-                      <span className="relative z-10 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                    <h3 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mb-4 xs:mb-5 relative">
+                      <span className="relative z-10 bg-gradient-to-r from-sky-900 via-blue-700 to-cyan-700 bg-clip-text text-transparent">
                         {t('locationOptions.chooseLocationMethod', 'Choose Location Method')}
                       </span>
                     </h3>
-                    <p className="text-slate-200 text-sm xs:text-base sm:text-lg lg:text-xl max-w-2xl mx-auto px-4 leading-relaxed font-light">
+                    <p className="text-slate-700 text-sm xs:text-base sm:text-lg lg:text-xl max-w-2xl mx-auto px-4 leading-relaxed font-light">
                       {t('locationOptions.selectLocationFirst', 'Start by choosing how to search, then select a category.')}
                     </p>
                   </div>
@@ -1331,8 +1354,8 @@ const MainHero = () => {
                       className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98]"
                     >
                       {/* Animated gradient background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 transition-all duration-500" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-100 transition-all duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-cyan-100 to-blue-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       
                       {/* Shine effect */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -1340,24 +1363,24 @@ const MainHero = () => {
                       </div>
                       
                       {/* Content */}
-                      <div className="relative p-6 xs:p-8 sm:p-10 lg:p-12 text-white">
+                      <div className="relative p-6 xs:p-8 sm:p-10 lg:p-12 text-slate-900">
                         {/* Icon with badge */}
                         <div className="flex justify-center mb-6">
                           <div className="relative">
-                            <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl scale-150 group-hover:scale-[2] transition-transform duration-500" />
-                            <div className="relative bg-white/10 backdrop-blur-sm rounded-full p-4 xs:p-5 sm:p-6 border-2 border-white/30 group-hover:border-white/50 transition-all duration-300 group-hover:rotate-12">
+                            <div className="absolute inset-0 bg-sky-300/35 rounded-full blur-2xl scale-150 group-hover:scale-[2] transition-transform duration-500" />
+                            <div className="relative bg-white/70 backdrop-blur-sm rounded-full p-4 xs:p-5 sm:p-6 border-2 border-white/70 group-hover:border-white transition-all duration-300 group-hover:rotate-12">
                               <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-110 transition-transform duration-300">
                                 📍
                               </div>
                             </div>
                             {/* Pulse effect */}
-                            <div className="absolute inset-0 bg-white/20 rounded-full animate-ping opacity-0 group-hover:opacity-20" />
+                            <div className="absolute inset-0 bg-sky-300/35 rounded-full animate-ping opacity-0 group-hover:opacity-20" />
                           </div>
                         </div>
                         
                         {/* Badge */}
                         <div className="flex justify-center mb-4">
-                          <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider uppercase border border-white/30">
+                          <span className="px-4 py-1.5 bg-white/70 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider uppercase border border-white/80 text-sky-700">
                             {t('mainHero.fastestBadge', 'Quick')}
                           </span>
                         </div>
@@ -1368,7 +1391,7 @@ const MainHero = () => {
                         </h4>
                         
                         {/* Description */}
-                        <p className="text-blue-100 text-sm xs:text-base sm:text-lg font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-slate-700 text-sm xs:text-base sm:text-lg font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                           {t('locationOptions.nearYouDesc', 'Use your current location to find nearby places')}
                         </p>
                         
@@ -1392,8 +1415,8 @@ const MainHero = () => {
                       className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98]"
                     >
                       {/* Animated gradient background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-teal-700 to-cyan-800 transition-all duration-500" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 transition-all duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-100 to-cyan-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       
                       {/* Shine effect */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -1401,24 +1424,24 @@ const MainHero = () => {
                       </div>
                       
                       {/* Content */}
-                      <div className="relative p-6 xs:p-8 sm:p-10 lg:p-12 text-white">
+                      <div className="relative p-6 xs:p-8 sm:p-10 lg:p-12 text-slate-900">
                         {/* Icon with badge */}
                         <div className="flex justify-center mb-6">
                           <div className="relative">
-                            <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl scale-150 group-hover:scale-[2] transition-transform duration-500" />
-                            <div className="relative bg-white/10 backdrop-blur-sm rounded-full p-4 xs:p-5 sm:p-6 border-2 border-white/30 group-hover:border-white/50 transition-all duration-300 group-hover:rotate-12">
+                            <div className="absolute inset-0 bg-emerald-300/35 rounded-full blur-2xl scale-150 group-hover:scale-[2] transition-transform duration-500" />
+                            <div className="relative bg-white/70 backdrop-blur-sm rounded-full p-4 xs:p-5 sm:p-6 border-2 border-white/70 group-hover:border-white transition-all duration-300 group-hover:rotate-12">
                               <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-110 transition-transform duration-300">
                                 🗺️
                               </div>
                             </div>
                             {/* Pulse effect */}
-                            <div className="absolute inset-0 bg-white/20 rounded-full animate-ping opacity-0 group-hover:opacity-20" />
+                            <div className="absolute inset-0 bg-emerald-300/35 rounded-full animate-ping opacity-0 group-hover:opacity-20" />
                           </div>
                         </div>
                         
                         {/* Badge */}
                         <div className="flex justify-center mb-4">
-                          <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold tracking-wider uppercase border border-white/30">
+                          <span className="px-4 py-1.5 bg-white/70 backdrop-blur-sm rounded-full text-xs font-bold tracking-wider uppercase border border-white/80 text-emerald-700">
                             Most Accurate
                           </span>
                         </div>
@@ -1429,7 +1452,7 @@ const MainHero = () => {
                         </h4>
                         
                         {/* Description */}
-                        <p className="text-emerald-100 text-sm xs:text-base sm:text-lg font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-slate-700 text-sm xs:text-base sm:text-lg font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                           {t('locationOptions.byNeighborhoodDesc', 'Choose a specific neighborhood or municipality')}
                         </p>
                         
@@ -1451,10 +1474,10 @@ const MainHero = () => {
             ) : null}
             {showRestaurantFinder && (
               /* Restaurant Finder Results */
-              <div id="results-section" className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/30 shadow-2xl max-w-6xl mx-auto">
+              <div id="results-section" className="bg-white/85 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/60 shadow-2xl max-w-6xl mx-auto">
                 {loading && (
                   <div className="text-center py-4 xs:py-6 sm:py-8">
-                    <div className="inline-block animate-spin rounded-full h-5 w-5 xs:h-6 xs:w-6 sm:h-8 sm:w-8 border-b-2 border-[#0878fe] mb-2 xs:mb-3 sm:mb-4"></div>
+                    <div className="inline-block animate-spin rounded-full h-5 w-5 xs:h-6 xs:w-6 sm:h-8 sm:w-8 border-b-2 border-sky-600 mb-2 xs:mb-3 sm:mb-4"></div>
                     <p className="text-gray-700 text-sm xs:text-base sm:text-lg px-4">
                       {selectedType === 'experience' && selectedExperienceType
                         ? t('restaurantFinder.loadingMessage', 'Discovering {{category}} near you...', {
@@ -1608,12 +1631,12 @@ const MainHero = () => {
                         {t('restaurantFinder.sortedByDistance', 'Results are sorted by distance from location selected')}
                       </p>
                       {searchMode.type === 'municipality' && (
-                        <span className="inline-block mt-2 px-2 sm:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs sm:text-sm font-medium">
+                        <span className="inline-block mt-2 px-2 sm:px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs sm:text-sm font-medium">
                           📍 {searchMode.selectedMunicipality?.name ? t(`municipalities.${searchMode.selectedMunicipality.name}`, searchMode.selectedMunicipality.name) : ''}{searchMode.selectedMunicipality?.region ? `, ${t(`regions.${searchMode.selectedMunicipality.region}`, searchMode.selectedMunicipality.region)}` : ''}
                         </span>
                       )}
                       {searchMode.type === 'category' && searchMode.selectedCategory && (
-                        <span className="inline-block mt-2 px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-gradient-to-r from-white to-gray-50 text-gray-700 border">
+                        <span className="inline-block mt-2 px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-gradient-to-r from-white to-sky-50 text-slate-700 border border-sky-100">
                           {t(`categories.descriptions.${searchMode.selectedCategory.id}`, searchMode.selectedCategory.description)}
                         </span>
                       )}
@@ -1622,7 +1645,7 @@ const MainHero = () => {
                     {/* Selection and Share Controls */}
                     {(nearestRestaurants && nearestRestaurants.length > 0) && (
                       <>
-                        <div className="flex flex-col items-center gap-4 mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+                        <div className="flex flex-col items-center gap-4 mb-6 p-4 bg-gradient-to-r from-sky-50 to-cyan-50 rounded-xl border border-sky-200">
                           {/* Selection Info */}
                           <div className="text-center w-full">
                             <p className="text-sm sm:text-base font-semibold text-gray-700 mb-3">
@@ -1637,7 +1660,7 @@ const MainHero = () => {
                             <button
                               onClick={selectAllVisible}
                               disabled={selectedRestaurants.size >= 10}
-                              className="px-4 py-2 text-sm sm:text-base font-semibold text-blue-600 bg-white hover:bg-blue-50 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed border-2 border-blue-200 hover:border-blue-300 shadow-sm"
+                              className="px-4 py-2 text-sm sm:text-base font-semibold text-sky-700 bg-white hover:bg-sky-50 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed border-2 border-sky-200 hover:border-sky-300 shadow-sm"
                               title={t('restaurantFinder.selectFirst10', 'Select first 10')}
                             >
                               {nearestRestaurants.length >= 10 
@@ -1709,10 +1732,10 @@ const MainHero = () => {
                                       setShareSnackbar((prev) => ({ ...prev, open: false }));
                                     }, 5000);
                                   }}
-                                  className="relative overflow-hidden group inline-flex items-center gap-2 px-6 py-2.5 rounded-lg font-bold text-sm sm:text-base bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-lg border border-blue-400/30 transition-all duration-300 hover:scale-105 active:scale-95"
+                                  className="relative overflow-hidden group inline-flex items-center gap-2 px-6 py-2.5 rounded-lg font-bold text-sm sm:text-base bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white shadow-lg border border-sky-300/40 transition-all duration-300 hover:scale-105 active:scale-95"
                                   title={t('restaurantFinder.shareSelected', 'Share selected locations')}
                                 >
-                                  <span className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                  <span className="absolute inset-0 bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                   <span className="relative flex items-center gap-2">
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -1751,7 +1774,7 @@ const MainHero = () => {
                     )}
                     {/* Vertical Scrollable Restaurant Cards */}
                     <div className="relative max-w-4xl mx-auto">
-                      <div className="rounded-2xl border border-slate-200/70 bg-white/70 backdrop-blur-sm shadow-lg">
+                      <div className="rounded-2xl border border-sky-100/80 bg-white/80 backdrop-blur-sm shadow-lg">
                         <div className="max-h-[240vh] md:max-h-[1200px] overflow-y-auto px-3 sm:px-4 py-3 space-y-3 sm:space-y-4 custom-scrollbar">
                         {nearestRestaurants.map((restaurantData, index) => {
                           const vegetarianData = categoryDataCacheRef.current['vegetarian'] || [];
@@ -1762,13 +1785,13 @@ const MainHero = () => {
                           return (
                             <div
                               key={index}
-                              className={`relative w-full bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-2xl p-4 sm:p-5 border transition-all duration-300 flex flex-col shadow-md hover:shadow-xl ${
+                              className={`relative w-full bg-gradient-to-br from-white via-sky-50/40 to-cyan-50/50 rounded-2xl p-4 sm:p-5 border transition-all duration-300 flex flex-col shadow-md hover:shadow-xl ${
                                 isSelected
                                   ? 'border-emerald-500 ring-2 ring-emerald-200'
-                                  : 'border-slate-200 hover:border-blue-300'
+                                  : 'border-slate-200 hover:border-sky-300'
                               }`}
                             >
-                              <div className="absolute inset-y-3 left-0 w-1.5 rounded-r-full bg-gradient-to-b from-blue-400 via-indigo-500 to-purple-500 opacity-70" />
+                              <div className="absolute inset-y-3 left-0 w-1.5 rounded-r-full bg-gradient-to-b from-sky-400 via-cyan-500 to-teal-500 opacity-70" />
                               <div className="flex items-start gap-4 pl-3">
                                 <div className="flex-1 space-y-3">
                                   <div className="flex items-start gap-2">
@@ -1782,7 +1805,7 @@ const MainHero = () => {
                                     </p>
                                   </div>
                                   <div className="flex flex-wrap items-center gap-2 pt-1">
-                                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap shadow-sm">
+                                    <span className="bg-gradient-to-r from-sky-600 to-cyan-600 text-white px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap shadow-sm">
                                       📏 {formatDistance(restaurantData.distance)}
                                     </span>
                                     {isVegan && (
@@ -1827,42 +1850,42 @@ const MainHero = () => {
                       </div>
                     </div>
 
-                    <div className="text-center pt-6 mt-6 border-t-2 border-gray-200">
+                    <div className="text-center pt-6 mt-6 border-t-2 border-sky-100">
                       <button
                         onClick={backToCategoryStep}
-                        className="inline-flex items-center gap-2 px-6 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200 font-semibold text-base border-2 border-gray-300 hover:border-blue-400 shadow-sm hover:shadow-md"
+                        className="inline-flex items-center gap-2 px-6 py-3 text-slate-700 hover:text-sky-700 hover:bg-sky-50 rounded-xl transition-all duration-200 font-semibold text-base border-2 border-slate-300 hover:border-sky-300 shadow-sm hover:shadow-md"
                       >
                         🔄 {t('restaurantFinder.searchAgain', 'Search Again')}
                       </button>
                     </div>
 
                     {/* Search Settings Panel */}
-                    <div className="mt-6 p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border-2 border-blue-200 shadow-sm max-w-2xl mx-auto">
+                    <div className="mt-6 p-4 bg-gradient-to-br from-sky-50 to-cyan-50 rounded-xl border-2 border-sky-200 shadow-sm max-w-2xl mx-auto">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-2">
                           <span className="text-lg">📏</span>
-                          <h4 className="text-sm font-bold text-gray-800">
+                          <h4 className="text-sm font-bold text-slate-800">
                             {t('restaurantFinder.adjustSearchSettings', 'Adjust Search Settings')}
                           </h4>
                         </div>
                         {nearestRestaurants.length > 0 && (
-                          <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
+                          <span className="text-xs font-medium text-sky-700 bg-sky-100 px-2 py-1 rounded-full">
                             {nearestRestaurants.length} {t('restaurantFinder.found', 'found')}
                           </span>
                         )}
                       </div>
                       
-                      <p className="text-xs text-gray-600 mb-3">
-                        {t('restaurantFinder.currentSearchRadius', `Current search radius`)}: <span className="font-semibold text-blue-600">{searchRadius}km</span>
+                      <p className="text-xs text-slate-600 mb-3">
+                        {t('restaurantFinder.currentSearchRadius', `Current search radius`)}: <span className="font-semibold text-sky-700">{searchRadius}km</span>
                       </p>
 
                       <div className="space-y-3">
                         <div>
                           <div className="flex items-center justify-between mb-2">
-                            <label className="block text-xs font-semibold text-gray-700">
+                            <label className="block text-xs font-semibold text-slate-700">
                               {t('restaurantFinder.searchRadius', 'Search Radius')}
                             </label>
-                            <span className="text-sm font-bold text-blue-600">{searchRadius}km</span>
+                            <span className="text-sm font-bold text-sky-700">{searchRadius}km</span>
                           </div>
                           <input
                             type="range"
@@ -1871,20 +1894,20 @@ const MainHero = () => {
                             step="1"
                             value={searchRadius}
                             onChange={(e) => setSearchRadius(parseInt(e.target.value))}
-                            className="w-full h-2 bg-gradient-to-r from-blue-200 to-blue-400 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                            className="w-full h-2 bg-gradient-to-r from-sky-200 to-cyan-400 rounded-lg appearance-none cursor-pointer accent-sky-600"
                             aria-label={t('restaurantFinder.searchRadius', 'Search Radius')}
                             title={`${t('restaurantFinder.searchRadius', 'Search Radius')}: ${searchRadius}km`}
                           />
                           <div className="flex justify-between text-xs text-gray-500 mt-1">
                             <span>2km</span>
-                            <span className="font-semibold text-blue-600">{searchRadius}km</span>
+                            <span className="font-semibold text-sky-700">{searchRadius}km</span>
                             <span>50km</span>
                           </div>
                         </div>
                         
                         <button
                           onClick={() => searchByMunicipality(searchMode.selectedMunicipality!, searchMode.selectedCategory || selectedDisplayCategory)}
-                          className="w-full px-4 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-[1.02] shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+                          className="w-full px-4 py-2.5 bg-gradient-to-r from-sky-500 to-cyan-600 hover:from-sky-600 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-[1.02] shadow-md hover:shadow-lg flex items-center justify-center gap-2"
                         >
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -1964,19 +1987,19 @@ const MainHero = () => {
             <div className="flex justify-center max-w-md mx-auto mt-10 sm:mt-16 px-4">
               <div className="relative group w-full">
                 {/* Subtle glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-white/20 via-blue-300/20 to-white/20 rounded-2xl sm:rounded-3xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-sky-300/25 via-cyan-300/25 to-blue-300/25 rounded-2xl sm:rounded-3xl blur opacity-30 group-hover:opacity-70 transition duration-500" />
                 
                 <a
                   href={mainHero.secondaryAction.href}
-                  className="relative group overflow-hidden bg-white/12 backdrop-blur-md text-white border-2 border-white/30 px-7 sm:px-9 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg lg:text-xl hover:bg-white/20 hover:border-white/50 transition-all duration-500 hover:scale-[1.02] w-full block text-center shadow-xl"
+                  className="relative group overflow-hidden bg-white/80 backdrop-blur-md text-slate-800 border-2 border-white/70 px-7 sm:px-9 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg lg:text-xl hover:bg-white hover:border-sky-200 transition-all duration-500 hover:scale-[1.02] w-full block text-center shadow-xl"
                 >
                   {/* Animated background overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-blue-100/10 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-sky-100/50 via-cyan-100/50 to-blue-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   {/* Shimmer effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                   
-                  <span className="relative font-black tracking-wide drop-shadow-lg">
+                  <span className="relative font-black tracking-wide text-sky-800">
                     {t('mainHero.secondaryAction.text')}
                   </span>
                 </a>
