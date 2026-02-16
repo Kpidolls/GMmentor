@@ -1,17 +1,4 @@
 import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
-import { motion, MotionProps, useAnimation } from 'framer-motion';
-
-
-const MotionDivBase = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & MotionProps
->(function MotionDivBase(props, ref) {
-  return <div ref={ref} {...props} />;
-});
-MotionDivBase.displayName = 'MotionDivBase';
-
-const MotionDiv = motion(MotionDivBase);
-MotionDiv.displayName = 'MotionDiv';
 
 function useOnScreen(
   ref: MutableRefObject<HTMLDivElement | null>,
@@ -57,7 +44,6 @@ interface LazyShowProps {
 }
 
 const LazyShow = ({ children, deferRender = false, rootMargin = '0px' }: LazyShowProps) => {
-  const controls = useAnimation();
   const rootRef = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(rootRef, rootMargin);
   const [hasShown, setHasShown] = useState(false);
@@ -72,19 +58,6 @@ const LazyShow = ({ children, deferRender = false, rootMargin = '0px' }: LazySho
       setHasShown(true);
     }
   }, [onScreen]);
-
-  useEffect(() => {
-    if (hasShown) {
-      controls.start({
-        x: 0,
-        opacity: 1,
-        transition: {
-          duration: 0.5,
-          ease: 'easeOut',
-        },
-      });
-    }
-  }, [hasShown, controls]);
 
   useEffect(() => {
     if (!deferRender || hasShown) {
@@ -112,14 +85,17 @@ const LazyShow = ({ children, deferRender = false, rootMargin = '0px' }: LazySho
   }
 
   return (
-    <MotionDiv
+    <div
       ref={rootRef}
       className="lazy-div"
-      initial={{ opacity: 0, x: -50 }}
-      animate={controls}
+      style={{
+        opacity: hasShown ? 1 : 0,
+        transform: hasShown ? 'translateX(0) translateZ(0)' : 'translateX(-50px) translateZ(0)',
+        transition: 'opacity 0.5s ease-out, transform 0.5s ease-out',
+      }}
     >
       {children}
-    </MotionDiv>
+    </div>
   );
 };
 

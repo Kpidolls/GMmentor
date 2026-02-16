@@ -73,12 +73,6 @@ class MyDocument extends Document {
               strategy="lazyOnload"
             />
           )}
-          {/* Lazy load reCAPTCHA */}
-          <Script
-            id="recaptcha"
-            src="https://www.google.com/recaptcha/api.js?hl=en"
-            strategy="lazyOnload"
-          />
         </body>
       </Html>
     );

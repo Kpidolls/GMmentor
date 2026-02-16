@@ -1,17 +1,10 @@
 // import Link from 'next/link';
 import React from 'react';
-import AboutUs from '../components/AboutUs';
-import Canvas from '../components/Canvas';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
-import Product from '../components/Product';
-import QASection from '../components/QASection';
-import IslandList from '../components/IslandList';
-import ProductShowcase from '../components/ProductShowcase';
 import '../i18n';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
-import Reviews from '../components/Reviews';
 import { metaDescriptions } from '../config/metaDescriptions';
 import dynamic from 'next/dynamic';
 import { GetStaticProps } from 'next';
@@ -19,6 +12,13 @@ import { Post, getAllPosts } from '../lib/posts';
 import BlogHighlight from '../components/BlogHighlight';
 // FeaturedCarousel removed — using static blog highlight only
 
+const AboutUs = dynamic(() => import('../components/AboutUs'));
+const Canvas = dynamic(() => import('../components/Canvas'));
+const Product = dynamic(() => import('../components/Product'));
+const QASection = dynamic(() => import('../components/QASection'));
+const IslandList = dynamic(() => import('../components/IslandList'));
+const ProductShowcase = dynamic(() => import('../components/ProductShowcase'));
+const Reviews = dynamic(() => import('../components/Reviews'));
 const BrevoForm = dynamic(() => import('../components/BrevoForm'), { ssr: false });
 const GetYourGuideWidget = dynamic(() => import('../components/GetYourGuideWidget'), { ssr: false });
 
@@ -142,9 +142,11 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       </LazyShow>
 
       {/* Canvas Divider */}
-      <div className="relative h-24">
-        <Canvas />
-      </div>
+      <LazyShow deferRender rootMargin="200px">
+        <div className="relative h-24">
+          <Canvas />
+        </div>
+      </LazyShow>
 
       {/* Reviews Section */}
       <LazyShow deferRender rootMargin="200px">
@@ -180,9 +182,11 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       </LazyShow>
 
       {/* Canvas Divider */}
-      <div className="relative h-24">
-        <Canvas />
-      </div>
+      <LazyShow deferRender rootMargin="200px">
+        <div className="relative h-24">
+          <Canvas />
+        </div>
+      </LazyShow>
 
       {/* Maps & Lists Section */}
       <LazyShow deferRender rootMargin="200px">
@@ -207,9 +211,11 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       </LazyShow>
 
       {/* Canvas Divider */}
-      <div className="relative h-24">
-        <Canvas />
-      </div>
+      <LazyShow deferRender rootMargin="200px">
+        <div className="relative h-24">
+          <Canvas />
+        </div>
+      </LazyShow>
 
       {/* About Us Section */}
       <LazyShow deferRender rootMargin="200px">
