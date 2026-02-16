@@ -65,6 +65,8 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
         <meta property="og:url" content="https://googlementor.com" />
         <meta property="og:image" content="https://googlementor.com/assets/images/cover.avif" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="preload" as="image" href="/assets/images/cover.avif" type="image/avif" fetchPriority="high" />
+        <link rel="preload" as="image" href="/assets/images/cover.webp" type="image/webp" fetchPriority="high" />
         {/* FAQPage JSON-LD for common quick questions on the homepage (localized) */}
         <script
           type="application/ld+json"
