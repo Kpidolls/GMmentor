@@ -32,7 +32,6 @@ const Product = () => {
                 style={{ aspectRatio: '1 / 1', maxHeight: '100%' }}
                 loading="lazy"
                 decoding="async"
-                fetchPriority="low"
               />
             </div>
             <div className="p-4 flex flex-col flex-1">

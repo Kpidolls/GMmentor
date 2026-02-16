@@ -1,7 +1,9 @@
 {
   "discovery": {
     "chooseCategory": "Discover Authentic Locations",
-    "selectCategoryFirst": "Choose a category to begin"
+    "selectCategoryFirst": "Choose a category to begin",
+    "chooseCategoryAfterLocation": "Choose a Category",
+    "selectCategoryAfterLocation": "Select a category to continue with your search."
   },
   "header": {
     "promo": "",
@@ -268,10 +270,14 @@
   "locationOptions": {
     "chooseLocationMethod": "Choose Location Method",
     "selectLocationOption": "Select how you would like to search for {{experience}}",
+    "selectLocationFirst": "Start by choosing how to search, then select a category.",
+    "selectNeighborhoodFirst": "Choose your neighborhood first, then pick a category.",
     "nearYou": "Near You",
     "nearYouDesc": "Use your current location to find nearby places",
     "byRegion": "By Region",
-    "byRegionDesc": "Select a specific region or municipality"
+    "byRegionDesc": "Select a specific region or municipality",
+    "byNeighborhood": "By Neighborhood",
+    "byNeighborhoodDesc": "Choose a specific neighborhood or municipality"
   },
   "municipalitySearch": {
     "placeholder": "Search locations...",
@@ -279,6 +285,9 @@
     "resultsCount": "Showing {{count}} of {{total}} locations",
     "noResults": "No locations found matching your search.",
     "clearSearchToSeeAll": "Clear search to see all locations"
+  },
+  "categorySelection": {
+    "backToLocationStep": "Back to Search Method"
   },
   "reviews": {
     "title": "What Our Users Say",

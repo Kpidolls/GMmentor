@@ -1,7 +1,9 @@
 {
   "discovery": {
     "chooseCategory": "Ανακαλύψτε Μοναδικές Τοποθεσίες",
-    "selectCategoryFirst": "Επιλέξτε μια κατηγορία για να ξεκινήσετε."
+    "selectCategoryFirst": "Επιλέξτε μια κατηγορία για να ξεκινήσετε.",
+    "chooseCategoryAfterLocation": "Επιλέξτε Κατηγορία",
+    "selectCategoryAfterLocation": "Επιλέξτε κατηγορία για να συνεχίσετε την αναζήτησή σας."
   },
   "header": {
     "promo": "",
@@ -287,10 +289,14 @@
   "locationOptions": {
     "chooseLocationMethod": "Επιλέξτε περιοχή για αναζήτηση",
     "selectLocationOption": "Επιλέξτε πώς θέλετε να αναζητήσετε {{experience}}",
+    "selectLocationFirst": "Ξεκινήστε επιλέγοντας τρόπο αναζήτησης και μετά κατηγορία.",
+    "selectNeighborhoodFirst": "Επιλέξτε πρώτα γειτονιά και μετά κατηγορία.",
     "nearYou": "Κοντά σας",
     "nearYouDesc": "Χρησιμοποιήστε την τρέχουσα τοποθεσία σας για να βρείτε κοντινά μέρη",
     "byRegion": "Ανά Περιοχή",
-    "byRegionDesc": "Επιλέξτε συγκεκριμένη περιοχή ή δήμο"
+    "byRegionDesc": "Επιλέξτε συγκεκριμένη περιοχή ή δήμο",
+    "byNeighborhood": "Ανά Γειτονιά",
+    "byNeighborhoodDesc": "Επιλέξτε συγκεκριμένη γειτονιά ή δήμο"
   },
   "municipalitySearch": {
     "placeholder": "Αναζήτηση τοποθεσιών...",
@@ -302,7 +308,8 @@
   "categorySelection": {
     "chooseYourCuisine": "Επιλέξτε την Κουζίνα σας",
     "selectFromCurated": "Επιλέξτε από τις επιμελημένες κατηγορίες μας για να βρείτε την τέλεια γευστική εμπειρία",
-    "backToSearchOptions": "Επιστροφή στις Επιλογές Αναζήτησης"
+    "backToSearchOptions": "Επιστροφή στις Επιλογές Αναζήτησης",
+    "backToLocationStep": "Επιστροφή στον τρόπο αναζήτησης"
   },
   "reviews": {
     "title": "Τι λένε οι χρήστες μας",
