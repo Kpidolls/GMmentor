@@ -494,19 +494,47 @@ const Header = () => {
             variant="ghost"
             aria-label={isMenuOpen ? t('aria.closeMenu') : t('aria.openMenu')}
             display={{ base: 'flex', md: 'none' }}
-            _hover={{ bg: hoverBg }}
+            borderRadius="full"
+            border="1px solid"
+            borderColor="gray.200"
+            bg="white"
+            boxShadow="sm"
+            _hover={{ bg: 'gray.50', borderColor: 'gray.300' }}
+            _active={{ bg: 'gray.100' }}
           />
         </Flex>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
           <Box
-            mt={4}
+            mt={3}
             display={{ base: 'block', md: 'none' }}
-            maxH="70vh"
+            maxH="80vh"
             overflowY="auto"
             pr={1}
+            bg="white"
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="2xl"
+            boxShadow="xl"
+            p={3}
+            animation="fadeIn 0.2s ease"
           >
+            <Flex align="center" justify="space-between" px={2} py={1} mb={2}>
+              <Text fontSize="xs" fontWeight="bold" color="gray.500" letterSpacing="0.08em" textTransform="uppercase">
+                {t('navigation.maps', 'Lists')}
+              </Text>
+              <Button
+                size="xs"
+                variant="ghost"
+                onClick={() => setMenuOpen(false)}
+                borderRadius="full"
+                color="gray.600"
+                _hover={{ bg: 'gray.100' }}
+              >
+                {t('aria.closeMenu', 'Close Menu')}
+              </Button>
+            </Flex>
             <VStack spacing={2} align="stretch">
               {navigation.map((item) => (
                 <Box key={item.name}>
@@ -516,11 +544,16 @@ const Header = () => {
                     color={textColor}
                     leftIcon={renderNavIcon(item.name) || undefined}
                     {...mobileNavButtonStyles}
+                    borderRadius="xl"
+                    bg="white"
+                    border="1px solid"
+                    borderColor="gray.200"
+                    _hover={{ bg: 'gray.50', borderColor: 'gray.300' }}
                   >
                     {t(item.name)}
                   </Button>
                   {item.submenu && (
-                    <VStack align="start" pl={4} spacing={1}>
+                    <VStack align="start" pl={3} pr={1} py={2} spacing={1.5} bg="gray.50" borderRadius="lg" mt={1} border="1px solid" borderColor="gray.100">
                       {item.submenu.map((subItem) => (
                         <Button
                           key={subItem.name}
@@ -534,6 +567,7 @@ const Header = () => {
                           color={textColor}
                           borderRadius="lg"
                           px={3}
+                          h={10}
                         >
                           {t(subItem.name)}
                         </Button>
