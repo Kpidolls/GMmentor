@@ -232,63 +232,6 @@ const MainHero = () => {
     return loadRestaurantDataByCategory(undefined);
   };
 
-  // Define experience types for different categories of attractions
-  const experienceTypes: ExperienceType[] = [
-    {
-      id: 'family-friendly',
-      name: t('experiences.family-friendly.name', 'Family Friendly Locations'),
-      description: t('experiences.family-friendly.description', 'Places welcoming families with kids - play areas, family menus, and stroller access'),
-      icon: '👨‍👩‍👧‍👦',
-      color: 'from-emerald-400 to-teal-500',
-      categories: [categoriesData.find((c: RestaurantCategory) => c.id === 'family-friendly') || { id: 'family-friendly', name: 'Family Friendly Locations', description: 'Family-friendly places', icon: '👨‍👩‍👧‍👦', color: 'from-emerald-400 to-teal-500', keywords: ['family', 'kids', 'child-friendly'] }]
-    },
-    {
-      id: 'attractions',
-      name: t('experiences.attractions.name', 'Must-See Attractions'),
-      description: t('experiences.attractions.description', 'Explore iconic landmarks and cultural sites'),
-      icon: '🏛️',
-      color: 'from-blue-500 to-indigo-600',
-      categories: [categoriesData.find((c: RestaurantCategory) => c.id === 'attractions') || { id: 'attractions', name: 'Must-See Attractions', description: 'Explore iconic landmarks and cultural sites', icon: '🏛️', color: 'from-blue-500 to-indigo-600', keywords: [] }]
-    },
-    {
-      id: 'monasteries-churches',
-      name: t('experiences.monasteries-churches.name', 'Monasteries & Spiritual Sites'),
-      description: t('experiences.monasteries-churches.description', 'Visit sacred places and spiritual retreats'),
-      icon: '⛪',
-      color: 'from-emerald-500 to-teal-600',
-      categories: [categoriesData.find((c: RestaurantCategory) => c.id === 'monasteries-churches') || { id: 'monasteries-churches', name: 'Monasteries & Churches', description: 'Sacred and spiritual places', icon: '⛪', color: 'from-emerald-500 to-teal-600', keywords: ['monastery', 'church', 'spiritual'] }]
-    },
-    {
-      id: 'wineries-vineyards',
-      name: t('experiences.wineries-vineyards.name', 'Wineries & Vineyards'),
-      description: t('experiences.wineries-vineyards.description', 'Taste exceptional Greek wines and visit vineyards'),
-      icon: '🍷',
-      color: 'from-purple-500 to-pink-600',
-      categories: [categoriesData.find((c: RestaurantCategory) => c.id === 'wineries-vineyards') || { id: 'wineries-vineyards', name: 'Wineries & Vineyards', description: 'Wine tasting and vineyard tours', icon: '🍷', color: 'from-purple-500 to-pink-600', keywords: ['wine', 'vineyard', 'tasting'] }]
-    }
-  ];
-
-  // Get default category (Greek) - provide fallback (avoid redundant "Restaurants" suffix)
-  const defaultCategory: RestaurantCategory = categoriesData.find(cat => cat.id === 'greek-restaurants') || {
-    id: 'greek-restaurants',
-    // keep the translation key but change the English fallback to a concise label
-    name: t('categories.greekRestaurants', 'Greek'),
-    description: t('categories.greekDescription', 'Authentic traditional Greek cuisine'),
-    icon: '🇬🇷',
-    color: 'from-blue-500 to-indigo-600',
-    keywords: ['greek', 'traditional', 'authentic', 'taverna', 'mediterranean', 'hellenic']
-  };
-
-  // Default experience type (Family Friendly) - with fallback
-  const defaultExperienceType = experienceTypes[0] || {
-    id: 'family-friendly',
-    name: 'Family Friendly Locations',
-    description: 'Places welcoming families with kids - play areas, family menus, and stroller access',
-    icon: '👨‍👩‍👧‍👦',
-    color: 'from-emerald-400 to-teal-500',
-    categories: [{ id: 'family-friendly', name: 'Family Friendly Locations', description: 'Family-friendly places', icon: '👨‍👩‍👧‍👦', color: 'from-emerald-400 to-teal-500', keywords: ['family', 'kids', 'child-friendly'] }]
-  };
-  
   // Updated state management
   const [searchMode, setSearchMode] = useState<SearchMode>({ type: 'location' });
   const [selectedDisplayCategory, setSelectedDisplayCategory] = useState<RestaurantCategory | undefined>(undefined);
@@ -301,8 +244,8 @@ const MainHero = () => {
   const [error, setError] = useState<string | null>(null);
   const [showRestaurantFinder, setShowRestaurantFinder] = useState(false);
   const [showMunicipalityList, setShowMunicipalityList] = useState(false);
-  // Removed unused showCategoryList and showExperienceTypeList
-  const [showLocationOptions, setShowLocationOptions] = useState(false);
+  const [showCategorySelection, setShowCategorySelection] = useState(false);
+  const [showLocationOptions, setShowLocationOptions] = useState(true);
   const [municipalitySearchQuery, setMunicipalitySearchQuery] = useState('');
   const [searchRadius, setSearchRadius] = useState(5);
   const [maxResults, setMaxResults] = useState(50);
@@ -328,8 +271,10 @@ const MainHero = () => {
   };
 
   // Use selectedType to determine which data to use for search
-  const findNearestPlaces = async (userLat: number, userLng: number, count: number = 10) => {
-    const sourceData = await loadCurrentSourceData();
+  const findNearestPlaces = async (userLat: number, userLng: number, count: number = 10, category?: RestaurantCategory) => {
+    const sourceData = category
+      ? await loadRestaurantDataByCategory(category)
+      : await loadCurrentSourceData();
     const placesWithDistance = sourceData.map((place) => ({
       restaurant: place,
       distance: calculateDistance(userLat, userLng, place.lat, place.lng)
@@ -339,12 +284,21 @@ const MainHero = () => {
       .slice(0, count);
   };
 
-  const getUserLocation = () => {
+  const getUserLocation = (category?: RestaurantCategory) => {
+    const effectiveCategory = category || selectedDisplayCategory;
+    if (category) {
+      setSelectedDisplayCategory(category);
+      setSelectedExperienceType(undefined);
+      setSelectedType('category');
+    }
+
     setLoading(true);
     setError(null);
+    setShowCategorySelection(false);
+    setShowMunicipalityList(false);
+    setShowLocationOptions(false);
     setShowRestaurantFinder(true);
-    setSearchMode({ type: 'location' });
-    // Keep the currently selected display category instead of resetting to default
+    setSearchMode({ type: 'location', selectedCategory: effectiveCategory, selectedMunicipality: undefined });
 
     // PWA Enhancement: Check if offline and use cached data if available
     if (!isOnline) {
@@ -353,7 +307,7 @@ const MainHero = () => {
         try {
           const { lat, lng } = JSON.parse(cachedLocation);
           setUserLocation({ lat, lng });
-          findNearestPlaces(lat, lng, 50).then((nearest) => {
+          findNearestPlaces(lat, lng, 50, effectiveCategory).then((nearest) => {
             setNearestRestaurants(nearest);
             setCurrentIndex(0);
             setLoading(false);
@@ -385,7 +339,7 @@ const MainHero = () => {
           setUserLocation({ lat: latitude, lng: longitude });
           
           // Use the currently selected experience type for location search
-          const nearest = await findNearestPlaces(latitude, longitude, 50); // Fetch up to 50 results
+          const nearest = await findNearestPlaces(latitude, longitude, 50, effectiveCategory); // Fetch up to 50 results
           setNearestRestaurants(nearest); // Display all results within 5km
           setCurrentIndex(0);
           setLoading(false);
@@ -411,7 +365,7 @@ const MainHero = () => {
               try {
                 const { lat, lng } = JSON.parse(cachedLocation);
                 setUserLocation({ lat, lng });
-                const nearest = await findNearestPlaces(lat, lng, 50);
+                const nearest = await findNearestPlaces(lat, lng, 50, effectiveCategory);
                 setNearestRestaurants(nearest);
                 setCurrentIndex(0);
                 setLoading(false);
@@ -451,12 +405,20 @@ const MainHero = () => {
     }
   };
 
-  const searchByMunicipality = async (municipality: Municipality) => {
+  const searchByMunicipality = async (municipality: Municipality, category?: RestaurantCategory) => {
+    const effectiveCategory = category || selectedDisplayCategory;
+    if (category) {
+      setSelectedDisplayCategory(category);
+      setSelectedExperienceType(undefined);
+      setSelectedType('category');
+    }
+
     setLoading(true);
     setError(null);
+    setShowCategorySelection(false);
     setShowRestaurantFinder(true);
     setShowMunicipalityList(false);
-    setSearchMode({ type: 'municipality', selectedMunicipality: municipality });
+    setSearchMode({ type: 'municipality', selectedMunicipality: municipality, selectedCategory: effectiveCategory });
 
     // Responsive scroll based on screen size
     setTimeout(() => {
@@ -465,8 +427,10 @@ const MainHero = () => {
       window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
     }, 100);
 
-    // Get all data for current category/experience
-    const sourceData = await loadCurrentSourceData();
+    // Get all data for selected category (use explicit value to avoid state timing issues)
+    const sourceData = effectiveCategory
+      ? await loadRestaurantDataByCategory(effectiveCategory)
+      : await loadCurrentSourceData();
     
     // Validate that we have data
     if (!sourceData || sourceData.length === 0) {
@@ -550,10 +514,13 @@ const MainHero = () => {
       return withinRadius;
     });
 
+    const limitedPlaces = placesWithinRadius.slice(0, maxResults);
+
     console.log(`Found ${placesWithinRadius.length} places within ${initialRadius}km`);
+    console.log(`Displaying ${limitedPlaces.length} places (maxResults: ${maxResults})`);
     
-    // Store and display all results within the search radius
-    setNearestRestaurants(placesWithinRadius);
+    // Store and display limited results within the search radius
+    setNearestRestaurants(limitedPlaces);
     setCurrentIndex(0);
     setLoading(false);
     
@@ -581,7 +548,7 @@ const MainHero = () => {
       try {
         localStorage.setItem('lastMunicipalitySearch', JSON.stringify({
           municipality: municipality.name,
-          results: placesWithinRadius,
+          results: limitedPlaces,
           timestamp: Date.now()
         }));
       } catch (e) {
@@ -609,6 +576,67 @@ const MainHero = () => {
 
   // Removed unused handleLocationOptions
 
+  const selectSearchMode = (type: 'location' | 'municipality') => {
+    setError(null);
+    setNearestRestaurants(null);
+    setCurrentIndex(0);
+    setShowRestaurantFinder(false);
+
+    if (type === 'location') {
+      setSearchMode({ type: 'location', selectedMunicipality: undefined, selectedCategory: undefined });
+      setShowMunicipalityList(false);
+      setShowLocationOptions(false);
+      setShowCategorySelection(true);
+      alignViewport();
+      return;
+    }
+
+    setSearchMode({ type: 'municipality', selectedMunicipality: undefined, selectedCategory: undefined });
+    setShowCategorySelection(false);
+    setShowLocationOptions(false);
+    setShowMunicipalityList(true);
+    alignViewport();
+  };
+
+  const selectMunicipalityForCategory = (municipality: Municipality) => {
+    setError(null);
+    setNearestRestaurants(null);
+    setCurrentIndex(0);
+    setShowRestaurantFinder(false);
+    setSearchMode(prev => ({ ...prev, type: 'municipality', selectedMunicipality: municipality }));
+    setShowMunicipalityList(false);
+    setShowCategorySelection(true);
+    alignViewport();
+  };
+
+  const runSearchWithCategory = async (category: RestaurantCategory) => {
+    setSelectedDisplayCategory(category);
+    setSelectedExperienceType(undefined);
+    setSelectedType('category');
+    setSearchMode(prev => ({ ...prev, selectedCategory: category }));
+
+    if (searchMode.type === 'municipality' && searchMode.selectedMunicipality) {
+      await searchByMunicipality(searchMode.selectedMunicipality, category);
+      return;
+    }
+
+    await getUserLocation(category);
+  };
+
+  const backToCategoryStep = () => {
+    setLoading(false);
+    setError(null);
+    setNearestRestaurants(null);
+    setCurrentIndex(0);
+    setSelectedRestaurants(new Set());
+    setShowRestaurantFinder(false);
+    setShowLocationOptions(true);
+    setShowMunicipalityList(false);
+    setShowCategorySelection(false);
+    setSearchMode({ type: 'location' });
+    alignViewport();
+  };
+
   const resetSearch = () => {
     setUserLocation(null);
     setNearestRestaurants(null);
@@ -616,9 +644,12 @@ const MainHero = () => {
     setError(null);
     setShowRestaurantFinder(false);
     setShowMunicipalityList(false);
-    setShowLocationOptions(false);
+    setShowCategorySelection(false);
+    setShowLocationOptions(true);
     setSearchMode({ type: 'location' });
-    // Keep the currently selected category and experience type instead of resetting to default
+    setSelectedDisplayCategory(undefined);
+    setSelectedExperienceType(undefined);
+    setSelectedType(undefined);
     setMunicipalitySearchQuery(''); // Clear municipality search
     setSelectedRestaurants(new Set()); // Clear selection
     setSearchRadius(2); // Reset to initial 2km
@@ -644,9 +675,12 @@ const MainHero = () => {
     setError(null);
     setShowRestaurantFinder(false);
     setShowMunicipalityList(false);
+    setShowCategorySelection(false);
+    setShowLocationOptions(true);
     setSearchMode({ type: 'location' });
-  setSelectedDisplayCategory(defaultCategory); // Reset to default Greek
-    setSelectedExperienceType(defaultExperienceType); // Reset to default Dining experience
+    setSelectedDisplayCategory(undefined);
+    setSelectedExperienceType(undefined);
+    setSelectedType(undefined);
     setMunicipalitySearchQuery(''); // Clear municipality search
     setSelectedRestaurants(new Set()); // Clear selection
     setSearchRadius(2); // Reset to initial 2km
@@ -990,7 +1024,6 @@ const MainHero = () => {
               className="w-full h-full object-cover"
               loading="eager"
               decoding="async"
-              fetchPriority="high"
               style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.15 }}
             />
           </picture>
@@ -1072,31 +1105,27 @@ const MainHero = () => {
 
             {/* Professional Discovery Interface */}
             <div className="max-w-5xl mx-auto px-1 xs:px-2 sm:px-4 w-full">
-              {!showLocationOptions && !showRestaurantFinder && !showMunicipalityList && (
+              {showCategorySelection && !showRestaurantFinder && !showMunicipalityList && (
                 <div className="relative group">
                   <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-indigo-500/30 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   <div className="relative bg-white/12 backdrop-blur-2xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-4 xs:p-6 sm:p-8 lg:p-12 border border-white/25 shadow-2xl">
                     <div className="text-center mb-8 xs:mb-10 lg:mb-12 relative">
                       <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto mb-6 opacity-60" />
                       <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 xs:mb-5 sm:mb-6 relative">
-                        <span className="relative z-10">{t('discovery.chooseCategory', 'Choose a Category or Experience')}</span>
+                        <span className="relative z-10">{t('discovery.chooseCategoryAfterLocation', 'Choose a Category')}</span>
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 blur-lg scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </h2>
                       <p className="text-slate-200 text-sm xs:text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed font-light mb-6">
-                        {t('discovery.selectCategoryFirst')}
+                        {t('discovery.selectCategoryAfterLocation', 'Select a category to continue with your search.')}
                       </p>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 xs:gap-3 sm:gap-4 mb-4 xs:mb-6 sm:mb-8">
-                      {/* Show all cuisines and activities in a single grid */}
+                      {/* Show all categories in a single grid */}
                       {categoriesData.map((category) => (
                         <button
                           key={'category-' + category.id}
                           onClick={() => {
-                            setSelectedDisplayCategory(category);
-                            setSelectedExperienceType(undefined);
-                            setSelectedType('category');
-                            setShowLocationOptions(true);
-                            alignViewport();
+                            runSearchWithCategory(category);
                           }}
                           className={`group relative overflow-hidden bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-7 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl${selectedDisplayCategory?.id === category.id && selectedType === 'category' ? ' border-blue-500 bg-blue-100/10' : ''}`}
                         >
@@ -1113,33 +1142,25 @@ const MainHero = () => {
                           </div>
                         </button>
                       ))}
-                      {experienceTypes
-                        .filter((et) => !categoriesData.some((c: RestaurantCategory) => c.id === et.id))
-                        .map((experienceType) => (
-                        <button
-                          key={'experience-' + experienceType.id}
-                          onClick={() => {
-                            setSelectedExperienceType(experienceType);
-                            setSelectedDisplayCategory(undefined);
-                            setSelectedType('experience');
+                    </div>
+                    <div className="text-center pt-4 border-t border-white/20">
+                      <button
+                        onClick={() => {
+                          setShowCategorySelection(false);
+                          if (searchMode.type === 'municipality' && searchMode.selectedMunicipality) {
+                            setShowMunicipalityList(true);
+                          } else {
                             setShowLocationOptions(true);
-                            alignViewport();
-                          }}
-                          className={`group relative overflow-hidden bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-7 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl${selectedExperienceType?.id === experienceType.id && selectedType === 'experience' ? ' border-blue-500 bg-blue-100/10' : ''}`}
-                        >
-                          <div className="relative text-center space-y-2 xs:space-y-3 sm:space-y-4">
-                            <div className="text-3xl xs:text-4xl sm:text-5xl group-hover:scale-110 transition-transform duration-300">
-                              {experienceType.icon}
-                            </div>
-                            <h4 className="text-white font-bold text-sm sm:text-base lg:text-lg leading-tight">
-                              {experienceType.name}
-                            </h4>
-                            <p className="text-slate-300 text-xs sm:text-sm leading-tight">
-                              {experienceType.description}
-                            </p>
-                          </div>
-                        </button>
-                      ))}
+                          }
+                          alignViewport();
+                        }}
+                        className="group inline-flex items-center gap-2 text-slate-300 hover:text-white transition-all duration-200 font-semibold text-sm sm:text-base px-4 py-2.5 rounded-xl hover:bg-white/10 hover:scale-105"
+                      >
+                        <svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        {t('categorySelection.backToLocationStep', 'Back to Search Method')}
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1151,12 +1172,10 @@ const MainHero = () => {
                 {/* Compact Header */}
                 <div className="text-center mb-4">
                   <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 flex items-center justify-center gap-2">
-                    📍 Choose Your Area
+                    📍 {t('restaurantFinder.chooseMunicipality', 'Choose Your Municipality')}
                   </h3>
                   <p className="text-gray-600 text-sm px-2">
-                    {selectedDisplayCategory
-                      ? t('mainHero.choosePreferredArea', 'Choose your preferred area to discover amazing {{category}} nearby', { category: t(`categories.${selectedDisplayCategory.id}`, selectedDisplayCategory.name).toLowerCase() })
-                      : t('mainHero.choosePreferredArea', 'Choose your preferred area to discover amazing category nearby', { category: '' })}
+                    {t('locationOptions.selectNeighborhoodFirst', 'Choose your neighborhood first, then pick a category.')}
                   </p>
                 </div>
 
@@ -1247,7 +1266,7 @@ const MainHero = () => {
                               <button
                                 key={municipality.name}
                                 onClick={() => {
-                                  searchByMunicipality(municipality);
+                                  selectMunicipalityForCategory(municipality);
                                   alignViewport();
                                 }}
                                 className="text-left p-3 rounded-lg hover:bg-blue-50 hover:border-blue-200 border border-gray-200 transition-all duration-200 group"
@@ -1298,9 +1317,7 @@ const MainHero = () => {
                       </span>
                     </h3>
                     <p className="text-slate-200 text-sm xs:text-base sm:text-lg lg:text-xl max-w-2xl mx-auto px-4 leading-relaxed font-light">
-                      {selectedExperienceType
-                        ? t('locationOptions.selectLocationOption', 'Select how you would like to search for {{experience}}', { experience: selectedExperienceType.name?.toLowerCase?.() || '' })
-                        : t('locationOptions.selectLocationOption', 'Select how you would like to search for an experience', { experience: '' })}
+                      {t('locationOptions.selectLocationFirst', 'Start by choosing how to search, then select a category.')}
                     </p>
                   </div>
 
@@ -1309,15 +1326,7 @@ const MainHero = () => {
                     {/* Near You Option - Enhanced */}
                     <button
                       onClick={() => {
-                        setShowLocationOptions(false);
-                        setShowRestaurantFinder(true);
-                        setSearchMode({
-                          type: 'location',
-                          selectedCategory: selectedDisplayCategory,
-                          selectedExperienceType: selectedExperienceType
-                        });
-                        getUserLocation();
-                        alignViewport();
+                        selectSearchMode('location');
                       }}
                       className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98]"
                     >
@@ -1378,14 +1387,7 @@ const MainHero = () => {
                     {/* By Region Option - Enhanced */}
                     <button
                       onClick={() => {
-                        setShowLocationOptions(false);
-                        setShowMunicipalityList(true);
-                        setSearchMode({
-                          type: 'municipality',
-                          selectedCategory: selectedDisplayCategory,
-                          selectedExperienceType: selectedExperienceType
-                        });
-                        alignViewport();
+                        selectSearchMode('municipality');
                       }}
                       className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98]"
                     >
@@ -1423,18 +1425,18 @@ const MainHero = () => {
                         
                         {/* Title */}
                         <h4 className="text-xl xs:text-2xl sm:text-3xl font-black mb-4 leading-tight">
-                          {t('locationOptions.byRegion', 'By Region')}
+                          {t('locationOptions.byNeighborhood', 'By Neighborhood')}
                         </h4>
                         
                         {/* Description */}
                         <p className="text-emerald-100 text-sm xs:text-base sm:text-lg font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                          {t('locationOptions.byRegionDesc', 'Choose a specific region or municipality')}
+                          {t('locationOptions.byNeighborhoodDesc', 'Choose a specific neighborhood or municipality')}
                         </p>
                         
                         {/* Arrow indicator */}
                         <div className="flex justify-center">
                           <div className="flex items-center gap-2 text-sm font-bold group-hover:gap-4 transition-all duration-300">
-                            <span>Browse Areas</span>
+                            <span>{t('mainHero.browseAreas', 'Browse areas')}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
@@ -1444,21 +1446,6 @@ const MainHero = () => {
                     </button>
                   </div>
 
-                  {/* Footer */}
-                  <div className="text-center pt-6 border-t border-white/20">
-                    <button
-                      onClick={() => {
-                        resetSearch();
-                        alignViewport();
-                      }}
-                      className="group inline-flex items-center gap-2 text-slate-300 hover:text-white transition-all duration-200 font-semibold text-sm sm:text-base px-4 py-2.5 rounded-xl hover:bg-white/10 hover:scale-105"
-                    >
-                      <svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                      </svg>
-                      {t('mainHero.backToSearchOptions', 'Back to Search Options')}
-                    </button>
-                  </div>
                 </div>
               </div>
             ) : null}
@@ -1549,7 +1536,7 @@ const MainHero = () => {
                           </div>
                           
                           <button
-                            onClick={() => searchByMunicipality(searchMode.selectedMunicipality!)}
+                            onClick={() => searchByMunicipality(searchMode.selectedMunicipality!, searchMode.selectedCategory || selectedDisplayCategory)}
                             className="mt-4 w-full px-5 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-[1.02] shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                           >
                             <span>🔄</span>
@@ -1560,14 +1547,14 @@ const MainHero = () => {
                       
                       <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <button
-                          onClick={resetSearch}
+                          onClick={backToCategoryStep}
                           className="px-5 py-2.5 bg-white border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors duration-200"
                         >
                           {t('restaurantFinder.chooseAnotherArea', 'Choose Another Area')}
                         </button>
                         {searchMode.type !== 'location' && (
                           <button
-                            onClick={getUserLocation}
+                            onClick={() => getUserLocation()}
                             className="px-5 py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-green-700 transition-colors duration-200"
                           >
                             📍 {t('restaurantFinder.useMyLocation', 'Use My Location')}
@@ -1765,7 +1752,7 @@ const MainHero = () => {
                     {/* Vertical Scrollable Restaurant Cards */}
                     <div className="relative max-w-4xl mx-auto">
                       <div className="rounded-2xl border border-slate-200/70 bg-white/70 backdrop-blur-sm shadow-lg">
-                        <div className="max-h-[72vh] overflow-y-auto px-3 sm:px-4 py-4 space-y-4 sm:space-y-5 custom-scrollbar">
+                        <div className="max-h-[240vh] md:max-h-[1200px] overflow-y-auto px-3 sm:px-4 py-3 space-y-3 sm:space-y-4 custom-scrollbar">
                         {nearestRestaurants.map((restaurantData, index) => {
                           const vegetarianData = categoryDataCacheRef.current['vegetarian'] || [];
                           const luxuryDiningData = categoryDataCacheRef.current['luxury-dining'] || [];
@@ -1775,7 +1762,7 @@ const MainHero = () => {
                           return (
                             <div
                               key={index}
-                              className={`relative w-full bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-2xl p-5 sm:p-6 border transition-all duration-300 flex flex-col shadow-md hover:shadow-xl ${
+                              className={`relative w-full bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-2xl p-4 sm:p-5 border transition-all duration-300 flex flex-col shadow-md hover:shadow-xl ${
                                 isSelected
                                   ? 'border-emerald-500 ring-2 ring-emerald-200'
                                   : 'border-slate-200 hover:border-blue-300'
@@ -1842,7 +1829,7 @@ const MainHero = () => {
 
                     <div className="text-center pt-6 mt-6 border-t-2 border-gray-200">
                       <button
-                        onClick={resetSearch}
+                        onClick={backToCategoryStep}
                         className="inline-flex items-center gap-2 px-6 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200 font-semibold text-base border-2 border-gray-300 hover:border-blue-400 shadow-sm hover:shadow-md"
                       >
                         🔄 {t('restaurantFinder.searchAgain', 'Search Again')}
@@ -1896,7 +1883,7 @@ const MainHero = () => {
                         </div>
                         
                         <button
-                          onClick={() => searchByMunicipality(searchMode.selectedMunicipality!)}
+                          onClick={() => searchByMunicipality(searchMode.selectedMunicipality!, searchMode.selectedCategory || selectedDisplayCategory)}
                           className="w-full px-4 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-[1.02] shadow-md hover:shadow-lg flex items-center justify-center gap-2"
                         >
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
