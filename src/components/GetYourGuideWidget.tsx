@@ -37,7 +37,7 @@ const GetYourGuideWidget = () => {
                 sizes="(min-width: 1024px) 320px, 100vw"
                 alt={t('getyourguide.meteoraImageAlt', 'Meteora Monasteries - Ancient rock formations with monasteries')}
                 className="w-full h-full object-cover min-h-80 lg:min-h-full"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
               />
             </div>
