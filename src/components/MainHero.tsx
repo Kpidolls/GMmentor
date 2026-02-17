@@ -1036,15 +1036,20 @@ const MainHero = () => {
           </div>
           
           <picture className="absolute inset-0 block w-full h-full">
-            <source srcSet="/assets/images/cover.avif" type="image/avif" />
-            <source srcSet="/assets/images/cover.webp" type="image/webp" />
+            <source
+              srcSet="/assets/images/cover-480.webp 480w, /assets/images/cover-627.webp 627w"
+              sizes="100vw"
+              type="image/webp"
+            />
             <img
-              src="/assets/images/cover-fallback.svg"
+              src="/assets/images/cover-627.webp"
               alt={t('mainHero.coverAlt', 'Panoramic view of Athens skyline with the Acropolis in the background — travel and dining guide hero image')}
               className="w-full h-full object-cover"
               loading="eager"
               fetchPriority="high"
               decoding="sync"
+              sizes="100vw"
+              srcSet="/assets/images/cover-480.webp 480w, /assets/images/cover-627.webp 627w"
               style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.28 }}
             />
           </picture>

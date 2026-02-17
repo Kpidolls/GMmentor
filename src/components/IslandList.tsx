@@ -33,7 +33,7 @@ const IslandList = () => {
               />
             </div>
             <div className="p-4 flex flex-col flex-1">
-              <h3 className="text-lg sm:text-xl font-semibold font-primary text-gray-800 mb-2 sm:mb-4 leading-tight text-center group-hover:text-[#0878fe] transition-colors duration-300">
+              <h3 className="text-lg sm:text-xl font-semibold font-primary text-gray-800 mb-2 sm:mb-4 leading-tight text-center group-hover:text-blue-700 transition-colors duration-300">
                 {t(island.title)}
               </h3>
               <p className="text-gray-600 text-sm sm:text-base font-secondary mb-6 leading-relaxed min-h-[48px] sm:min-h-[100px] text-center">
@@ -44,7 +44,7 @@ const IslandList = () => {
                   href={island.link}
                   target={island.target}
                   rel={island.rel}
-                  className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-[#0878fe] text-white font-semibold rounded shadow hover:bg-blue-700 transition duration-300 text-center"
+                  className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-blue-700 text-white font-semibold rounded shadow hover:bg-blue-800 transition duration-300 text-center"
                   aria-label="Open map for islands"
                 >
                   {t('islands.exploreButton')}
@@ -62,7 +62,7 @@ const IslandList = () => {
                       alert(t('islands.shareNotSupported'));
                     }
                   }}
-                  className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-green-600 text-white font-semibold rounded shadow hover:bg-green-700 transition duration-300 text-center"
+                  className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-green-700 text-white font-semibold rounded shadow hover:bg-green-800 transition duration-300 text-center"
                   aria-label="Share this island"
                 >
                   {t('islands.shareButton')}

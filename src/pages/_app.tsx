@@ -13,7 +13,7 @@ import Analytics from '../components/Analytics';
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['400', '600', '700'],
-  display: 'swap',
+  display: 'optional',
 });
 
 const customTheme = extendTheme({
