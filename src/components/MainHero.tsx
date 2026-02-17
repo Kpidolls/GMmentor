@@ -1161,9 +1161,9 @@ const MainHero = () => {
                             <div className="text-3xl xs:text-4xl sm:text-5xl group-hover:scale-110 transition-transform duration-300">
                               {category.icon}
                             </div>
-                            <h4 className="text-slate-800 font-bold text-sm sm:text-base lg:text-lg leading-tight">
+                            <h3 className="text-slate-800 font-bold text-sm sm:text-base lg:text-lg leading-tight">
                               {t(`categories.${category.id}`, category.name)}
-                            </h4>
+                            </h3>
                             <p className="text-slate-600 text-xs sm:text-sm leading-tight">
                               {t(`categories.descriptions.${category.id}`, category.description)}
                             </p>
@@ -1339,11 +1339,11 @@ const MainHero = () => {
                   {/* Header Section */}
                   <div className="text-center mb-8 xs:mb-10 lg:mb-14 relative">
                     <div className="w-24 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto mb-6 opacity-60 rounded-full" />
-                    <h3 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mb-4 xs:mb-5 relative">
+                    <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mb-4 xs:mb-5 relative">
                       <span className="relative z-10 bg-gradient-to-r from-sky-900 via-blue-700 to-cyan-700 bg-clip-text text-transparent">
                         {t('locationOptions.chooseLocationMethod', 'Choose Location Method')}
                       </span>
-                    </h3>
+                    </h2>
                     <p className="text-slate-700 text-sm xs:text-base sm:text-lg lg:text-xl max-w-2xl mx-auto px-4 leading-relaxed font-light">
                       {t('locationOptions.selectLocationFirst', 'Start by choosing how to search, then select a category.')}
                     </p>
@@ -1391,9 +1391,9 @@ const MainHero = () => {
                         </div>
                         
                         {/* Title */}
-                        <h4 className="text-xl xs:text-2xl sm:text-3xl font-black mb-4 leading-tight">
+                        <h3 className="text-xl xs:text-2xl sm:text-3xl font-black mb-4 leading-tight">
                           {t('locationOptions.nearYou', 'Near You')}
-                        </h4>
+                        </h3>
                         
                         {/* Description */}
                         <p className="text-slate-700 text-sm xs:text-base sm:text-lg font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
@@ -1452,9 +1452,9 @@ const MainHero = () => {
                         </div>
                         
                         {/* Title */}
-                        <h4 className="text-xl xs:text-2xl sm:text-3xl font-black mb-4 leading-tight">
+                        <h3 className="text-xl xs:text-2xl sm:text-3xl font-black mb-4 leading-tight">
                           {t('locationOptions.byNeighborhood', 'By Neighborhood')}
-                        </h4>
+                        </h3>
                         
                         {/* Description */}
                         <p className="text-slate-700 text-sm xs:text-base sm:text-lg font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
