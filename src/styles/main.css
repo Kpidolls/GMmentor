@@ -241,6 +241,18 @@ a:hover {
   color: #111827 !important;
 }
 
+.cky-consent-bar .cky-notice-des,
+.cky-consent-bar .cky-notice-des p,
+.cky-consent-bar .cky-notice-des span,
+.cky-consent-bar .cky-title {
+  color: #111827 !important;
+}
+
+.cky-consent-bar a {
+  color: #065f46 !important;
+  text-decoration: underline;
+}
+
 .cky-btn.cky-btn-customize,
 .cky-btn.cky-btn-reject {
   color: #065f46 !important;
