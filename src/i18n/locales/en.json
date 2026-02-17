@@ -343,7 +343,7 @@
     "luxury-dining": "Luxury Dining",
     "rooftop-lounges": "Rooftop Lounges",
     "gyros-souvlaki": "Gyros & Souvlaki",
-    "family-friendly": "Family Friendly Locations",
+    "family-friendly": "Kid Friendly Locations",
     "attractions": "Must-See Attractions",
     "monasteries-churches": "Monasteries & Spiritual Sites",
     "wineries-vineyards": "Wineries & Vineyards",
@@ -465,7 +465,7 @@
       "description": "Dive into adventure with top spots for surfing, paddleboarding, and other exhilarating water sports along Greece’s stunning coastlines."
     },
     "family": {
-      "title": "📍 Family Friendly",
+      "title": "📍 Kid Friendly",
       "description": "Find the perfect spots for families, offering activities and environments where kids and adults alike can create lasting memories."
     },
     "bouzoukia": {
@@ -1033,7 +1033,7 @@
       "description": "Explore iconic landmarks and cultural sites"
     },
     "family-friendly": {
-      "name": "Family Friendly Locations",
+      "name": "Kid Friendly Locations",
       "description": "Places welcoming families with kids - play areas, family menus, and stroller access"
     },
     "monasteries-churches": {

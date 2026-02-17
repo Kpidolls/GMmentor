@@ -43,7 +43,7 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
         "name": t('faq.family.question', 'Are there family-friendly spots near the center of Athens?'),
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": t('faq.family.answer', 'Yes — use the Family Friendly category to find stroller-accessible venues, kid menus, and casual family-friendly restaurants.')
+          "text": t('faq.family.answer', 'Yes — use the Kid Friendly category to find stroller-accessible venues, kid menus, and casual family-friendly restaurants.')
         }
       }
     ]
