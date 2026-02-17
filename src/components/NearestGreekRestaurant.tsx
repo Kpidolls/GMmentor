@@ -172,7 +172,7 @@ const NearestGreekRestaurant: React.FC = () => {
                 href={currentRestaurant.restaurant.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-green-600 text-white py-2 px-3 rounded-lg text-sm font-medium hover:bg-green-700 transition duration-200 text-center"
+                className="flex-1 bg-green-700 text-white py-2 px-3 rounded-lg text-sm font-medium hover:bg-green-800 transition duration-200 text-center"
               >
                 {t('nearestGreekRestaurant.viewOnMaps', 'View on Maps')}
               </a>
