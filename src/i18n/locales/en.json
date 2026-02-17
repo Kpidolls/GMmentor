@@ -13,6 +13,9 @@
   },
   "search": {
     "placeholder": "Search...",
+    "inputAria": "Search input for destinations, maps, or travel gear",
+    "executeSearchAria": "Execute search",
+    "resultImageAlt": "Search result image",
     "sectionTitles": {
       "destinations": "Destinations",
       "mapLists": "Map lists",
@@ -131,7 +134,17 @@
   "getyourguide": {
     "widgetTitle": "Top Tours & Activities",
     "widgetDescription": "Discover the best experiences Greece has to offer with our curated selection of tours and activities",
-    "subtitle": "Discover the best experiences Greece has to offer with our curated selection of tours and activities"
+    "subtitle": "Discover the best experiences Greece has to offer with our curated selection of tours and activities",
+    "meteoraImageAlt": "Meteora Monasteries - Ancient rock formations with monasteries",
+    "meteoraTitle": "Meteora Monasteries Day Trip",
+    "meteoraDescription": "Explore the ancient monasteries of Meteora, perched atop towering rock pillars. This full-day tour includes visits to caves, stunning views, and a traditional Greek lunch.",
+    "bookButton": "Book on GetYourGuide",
+    "highlights": {
+      "fullDayFromAthens": "Full-day guided tour from Athens",
+      "monasteriesAndCaves": "Visit ancient monasteries & caves",
+      "lunchIncluded": "Traditional Greek lunch included",
+      "hotelPickup": "Hotel pickup & drop-off available"
+    }
   },
   "home": {
     "intro": {
@@ -187,7 +200,9 @@
     "offlineFeatures": "Maps & restaurants cached",
     "offlineDetails": "You can still browse saved restaurants and view cached maps. New searches will be available when you reconnect.",
     "offlineLocationError": "Location services require an internet connection. Please connect and try again.",
-    "usingCachedLocation": "Using your last known location. Results may not be current."
+    "usingCachedLocation": "Using your last known location. Results may not be current.",
+    "devInstallPromptShort": "PWA Install Button Test: In production, this would trigger the install prompt.",
+    "devInstallPromptLong": "PWA Install Button Test: In production, this would trigger the install prompt. The PWA must be served over HTTPS with a valid manifest for the install prompt to appear."
   },
   "ios": {
     "installInstructions": "To install this app on your iOS device:\n\n1. Tap the Share button (📤) at the bottom of Safari\n2. Scroll down and tap \"Add to Home Screen\"\n3. Tap \"Add\" to confirm\n\nThe app will then appear on your home screen!"
@@ -199,6 +214,7 @@
     "title": "Greece",
     "subtitle": "Places worth visiting",
     "tagline": "Curated maps, local guides and vetted lists to help you explore Greece with confidence.",
+    "scrollHint": "Scroll",
     "coverAlt": "Greece travel scene",
     "viewProduct": "View Product",
     "description": "Google Maps Lists for trip planning.",
@@ -213,6 +229,7 @@
       "text": "Buy Travel Gear"
     },
     "fastestBadge": "Quick",
+    "mostAccurateBadge": "Most Accurate",
     "useMyLocation": "Use my location",
     "browseAreas": "Browse areas"
   },
@@ -261,6 +278,12 @@
     "sharedButNotCopied": "Shared successfully, but could not copy to clipboard.",
     "copiedToClipboard": "Selected locations copied to clipboard!",
     "shareFailed": "Unable to share or copy results. Please try again.",
+    "badges": {
+      "veganTitle": "Vegan Friendly",
+      "veganLabel": "Vegan",
+      "luxuryTitle": "Luxury/Pricey",
+      "luxuryLabel": "Luxury"
+    },
     "features": {
       "locationBased": "Location-based",
       "handpicked": "Handpicked venues",
@@ -282,7 +305,11 @@
   "municipalitySearch": {
     "placeholder": "Search locations...",
     "clearSearch": "Clear search",
+    "typeOrBrowse": "Type to search or browse below • {{count}} Athens areas",
     "resultsCount": "Showing {{count}} of {{total}} locations",
+    "noLocationsFoundTitle": "No locations found",
+    "areaSingular": "area",
+    "areaPlural": "areas",
     "noResults": "No locations found matching your search.",
     "clearSearchToSeeAll": "Clear search to see all locations"
   },
@@ -341,7 +368,14 @@
     }
   },
   "aria": {
-    "exploreCategory": "Explore {{name}} category"
+    "exploreCategory": "Explore {{name}} category",
+    "homepage": "Homepage",
+    "closeNotification": "Close notification",
+    "backToTop": "Back to Top",
+    "navigateTo": "Navigate to {{label}}",
+    "visitTemplateRepository": "Visit the original template repository",
+    "viewProductDetails": "View product details",
+    "close": "Close"
   },
   "product": {
     "title": "Ready-to-Use Google Maps Lists",
@@ -450,6 +484,9 @@
   "islands": {
     "title": "Explore Destinations",
     "subtitle": "Explore the most beautiful islands and destinations across Greece",
+    "openMapAria": "Open map for islands",
+    "shareIslandAria": "Share this island",
+    "viewMoreAria": "View more",
     "athens": {
       "title": "📍 Athens",
       "description": "Athens, the capital of Greece, where ancient history meets vibrant modern life.  Explore ancient ruins, museums and lively neighborhoods."
@@ -866,7 +903,7 @@
     "langSwitchLabel": "{{label}}",
     "giveBestRecommendations": {
       "title": "Share the Best Places and Make Travel Easier",
-      "summary": "test",
+      "summary": "Real recommendations from travelers and locals to help everyone discover better places in Greece.",
       "intro": "At Googlementor, we believe that the most memorable spots are the ones shared by real people, not algorithms. Whether it’s your go-to brunch place in Athens, a family run taverna in the mountains, or a secret beach in Crete, your recommendations help others uncover authentic, unforgettable experiences.",
       "community": "By exploring our curated Google Maps lists, you're not just finding great places — you're joining a growing community of travelers who value local insight and real life discovery.",
       "missing": "And if there’s a spot you love that’s missing from our lists, we’d love to hear about it. Your input helps us grow, and it helps others travel better.",
@@ -1011,5 +1048,213 @@
   "newsletter": {
     "title": "Stay Updated",
     "subtitle": "Get the latest travel tips, new destinations, and exclusive offers delivered to your inbox"
+  },
+  "loginPage": {
+    "title": "Login",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "submit": "Login",
+    "invalidCredentials": "Invalid email or password",
+    "invalidEmail": "Invalid email",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign Up",
+    "returnHome": "Return to Home"
+  },
+  "signupPage": {
+    "title": "Join Our Team",
+    "intro": "We are always looking for passionate individuals to join our team at Googlementor. If you're interested, please reach out to us at:",
+    "outro": "Send us an email with your details, and we'll get back to you as soon as possible!",
+    "returnHome": "Return to Home"
+  },
+  "termsPage": {
+    "title": "Terms and Conditions",
+    "sections": {
+      "access": "1. Access",
+      "ageRequirements": "2. Age requirements",
+      "userAccounts": "3. User Accounts",
+      "userConduct": "4. User Conduct",
+      "contentOwnership": "5. Content Ownership",
+      "paymentTerms": "6. Payment Terms",
+      "termination": "7. Termination",
+      "disclaimer": "8. Disclaimers and Limitation of Liability",
+      "indemnification": "9. Indemnification",
+      "changes": "10. Changes to Terms",
+      "governingLaw": "11. Governing Law",
+      "contactUs": "12. Contact Us",
+      "matcharisma": "Terms for Promoting Matcharisma"
+    },
+    "content": {
+      "access": {
+        "label": "User Consent",
+        "text": "Welcome to Googlementor! These Terms of Use govern your access to and use of Googlementor's mapping services and shopping platform. By using our site, you agree to these terms. If you do not agree, please do not use our services."
+      },
+      "ageRequirements": {
+        "label": "Data Protection Compliance",
+        "text": "By accessing or using Googlementor, you confirm that you are at least 18 years old or have the consent of a parent or guardian. If you are using the services on behalf of an organization, you represent that you have the authority to bind that organization to these Terms."
+      },
+      "platformIntro": "Googlementor offers a platform for users to:",
+      "platformList": {
+        "explore": "Explore mapped locations for fun activities.",
+        "purchase": "Purchase custom maps.",
+        "affiliate": "Access affiliate products related to activities and locations."
+      },
+      "userAccounts": {
+        "registrationLabel": "Registration",
+        "registrationText": "You may need to create an account to access certain features. You agree to provide accurate and complete information during registration.",
+        "securityLabel": "Account Security",
+        "securityText": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account. Notify us immediately if you suspect any unauthorized use of your account."
+      },
+      "userConduct": {
+        "intro": "You agree not to engage in any prohibited activities, including:",
+        "list": {
+          "unlawful": "Using the service for any unlawful purpose or in violation of applicable laws.",
+          "impersonating": "Impersonating any person or entity.",
+          "spam": "Distributing unsolicited promotional material (spam).",
+          "harassing": "Harassing or threatening other users.",
+          "interfering": "Interfering with the security or performance of our services."
+        }
+      },
+      "contentOwnership": {
+        "userLabel": "User Content",
+        "userText": "You retain ownership of any content you submit through Googlementor (e.g., reviews, photos). By submitting content, you grant us a worldwide, non-exclusive license to use, reproduce, and distribute such content in connection with our services.",
+        "platformLabel": "Googlementor Content",
+        "platformText": "All content provided by Googlementor is owned by us or our licensors. You may not use any content without our express written permission."
+      },
+      "paymentTerms": "Certain features may require payment. By providing payment information, you authorize us to charge your payment method for applicable fees. All payments are non-refundable unless otherwise specified.",
+      "termination": "We reserve the right to suspend or terminate your access to Googlementor at our discretion if you violate these Terms or engage in harmful conduct.",
+      "disclaimer": {
+        "disclaimerLabel": "Disclaimer",
+        "disclaimerText": "Our services are provided \"as is\" without warranties of any kind. We do not guarantee uninterrupted or error-free service.",
+        "limitationLabel": "Limitation of Liability",
+        "limitationText": "To the fullest extent permitted by law, Googlementor shall not be liable for any indirect, incidental, special, consequential damages arising from your use of our services."
+      },
+      "indemnification": "You agree to indemnify and hold harmless Googlementor and its affiliates from any claims, losses, liabilities, damages, costs, or expenses arising out of your use of our services or violation of these Terms.",
+      "changes": "We may update these Terms from time to time. We will notify you about significant changes by posting a notice on our site or sending an email. Your continued use of the services after such changes constitutes acceptance of the new Terms.",
+      "governingLaw": "These Terms shall be governed by and construed in accordance with the laws of England and Wales, without regard to its conflict of law principles.",
+      "contactIntro": "If you have any questions about these Terms of Use, please contact us at:",
+      "contactEmail": "Email: mapsmentorinfo@gmail.com",
+      "contactAddress": "Address: Fitzrovia House, 153 – 157 Cleveland Street, London W1T 6QW",
+      "matcharisma": {
+        "intro": "To ensure effective promotion and integration between Googlementor and Matcharisma while adhering to ethical standards:",
+        "transparencyLabel": "Transparency in Promotion",
+        "transparencyText": "All promotional materials must clearly indicate that they are sponsored by or affiliated with the parent company owning both platforms (e.g., \"Promotion brought to you by Parent Company, owner of Matcharisma\").",
+        "userConsentLabel": "User Consent",
+        "userConsentText": "Obtain explicit user consent before collecting any data specifically related to promoting Matcharisma services within Googlementor's ecosystem.",
+        "dataProtectionLabel": "Data Protection Compliance",
+        "dataProtectionText": "Comply fully with relevant privacy regulations such as GDPR and other applicable laws regarding data protection and user privacy."
+      },
+      "conclusion": "By using Googlementor, you acknowledge that you have read these Terms and agree to be bound by them. Thank you for being part of our community!"
+    },
+    "returnHome": "Return to Home"
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "sections": {
+      "informationWeCollect": "Information We Collect",
+      "howWeUse": "How We Use Your Information",
+      "sharing": "Sharing Your Information",
+      "yourRights": "Your Rights",
+      "changes": "Changes to Privacy Policy",
+      "contactUs": "Contact Us"
+    },
+    "content": {
+      "intro": "Googlementor is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mapping services and shop for custom maps. By using Googlementor, you agree to the collection and use of information in accordance with this policy.",
+      "information": {
+        "personalLabel": "Personal Information",
+        "personalText": "When registering for an account or purchasing items, we may ask for personal details such as your name, email address, phone number, and shipping/billing addresses.",
+        "usageLabel": "Usage Data",
+        "usageText": "We collect information about how you use our services, including navigation history, map views, purchase records, and browsing behavior.",
+        "paymentLabel": "Payment Information",
+        "paymentText": "We store payment information securely for transactions made through our platform.",
+        "geoLabel": "Geolocation Data",
+        "geoText": "With your consent, we may access your device's geolocation to provide location-specific suggestions and directions.",
+        "cookiesTrackingLabel": "Cookies and Tracking Technologies",
+        "cookiesLabel": "Cookies",
+        "cookiesText": "Used to personalize your experience and analyze trends.",
+        "pixelsLabel": "Pixels",
+        "pixelsText": "Employed for re-targeting advertisements based on your past visits."
+      },
+      "howWeUse": {
+        "intro": "Googlementor uses the collected data for various purposes:",
+        "list": {
+          "provideServices": "To provide and maintain our mapping services.",
+          "fulfillOrders": "To fulfill orders and ship purchased items.",
+          "communicate": "To communicate with you about order status, promotions, and product releases.",
+          "personalize": "To personalize your shopping experience based on your preferences.",
+          "monitor": "To monitor the effectiveness of our marketing campaigns."
+        }
+      },
+      "sharing": {
+        "intro": "We may share your information in the following situations:",
+        "affiliateLabel": "Affiliate Products",
+        "affiliateText": "When recommending affiliated products or services, we might share basic contact details like email addresses.",
+        "providersLabel": "Service Providers",
+        "providersText": "We employ third-party companies to facilitate our services (\"Service Providers\"), provide payment processing solutions, perform service-related tasks, or assist us in analyzing usage trends."
+      },
+      "rights": {
+        "intro": "Depending on your location, you may have rights regarding personal data:",
+        "accessLabel": "Right to Access",
+        "accessText": "Request copies of your personal data.",
+        "rectificationLabel": "Right to Rectification",
+        "rectificationText": "Correct inaccurate or incomplete information.",
+        "erasureLabel": "Right to Erasure",
+        "erasureText": "Delete your account under certain conditions.",
+        "restrictLabel": "Right to Restrict Processing",
+        "restrictText": "Limit further processing under specified circumstances.",
+        "portabilityLabel": "Right to Data Portability",
+        "portabilityText": "Transfer collected data between organizations or directly back to yourself under applicable laws."
+      },
+      "changesText": "We reserve the right to update this privacy policy periodically. Any changes will be posted here. You agree to review these updates regularly since continued access signifies acceptance of revised policies.",
+      "contactText": "If you have any questions about this Privacy Policy, please contact us via email at mapsmentorinfo@gmail.com."
+    },
+    "returnHome": "Return to Home"
+  },
+  "nearestGreekRestaurant": {
+    "title": "🎯 Find Your Nearest Greek Taverna",
+    "subtitle": "Discover authentic Greek cuisine near your location",
+    "findButton": "Find Nearest Restaurants",
+    "loading": "Getting your location...",
+    "tryAgain": "Try again",
+    "position": "#{{current}} of {{total}}",
+    "viewOnMaps": "View on Maps",
+    "previous": "← Previous",
+    "next": "Next →",
+    "searchAgain": "🔄 Search Again",
+    "goToRestaurant": "Go to restaurant {{index}}",
+    "errors": {
+      "locationUnavailable": "Unable to get your location. Please enable location services.",
+      "geolocationUnsupported": "Geolocation is not supported by this browser."
+    }
+  },
+  "brevoForm": {
+    "loadAria": "Load newsletter signup form",
+    "button": "Newsletter Signup",
+    "title": "Brevo Form",
+    "iframeAria": "Brevo Form"
+  },
+  "performanceMonitor": {
+    "toggleTitle": "Toggle Performance Stats",
+    "title": "PWA Performance",
+    "closeTitle": "Close performance stats",
+    "closeAria": "Close performance stats",
+    "labels": {
+      "status": "Status:",
+      "dataPreload": "Data Preload:",
+      "cacheHitRate": "Cache Hit Rate:",
+      "restaurantData": "Restaurant Data:",
+      "locationData": "Location Data:",
+      "imagesCache": "Images Cache:",
+      "updated": "Updated:"
+    },
+    "values": {
+      "online": "Online",
+      "offline": "Offline",
+      "ready": "Ready",
+      "loading": "Loading...",
+      "pending": "Pending"
+    }
   }
 }

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronUpIcon } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const BackToTop = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -30,7 +32,7 @@ const BackToTop = () => {
         <button
           onClick={scrollToTop}
           className="p-3 bg-primary text-white rounded-full shadow-lg hover:bg-secondary transition duration-300"
-          aria-label="Back to Top"
+          aria-label={t('aria.backToTop', 'Back to Top')}
         >
           <ChevronUpIcon className="h-6 w-6" />
         </button>

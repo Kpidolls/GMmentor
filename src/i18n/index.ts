@@ -5,18 +5,18 @@ import en from './locales/en.json';
 import el from './locales/el.json';
 
 i18n
-.use(LanguageDetector)  
-.use(initReactI18next).init({
+  .use(LanguageDetector)
+  .use(initReactI18next).init({
   resources: {
     en: { translation: en },
     el: { translation: el },
   },
-  lng: 'en', // Default language
+  lng: 'en',
   fallbackLng: 'en',
   detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
-    },
+    order: ['localStorage', 'navigator', 'htmlTag'],
+    caches: ['localStorage'],
+  },
   interpolation: {
     escapeValue: false, // React already escapes values
   },

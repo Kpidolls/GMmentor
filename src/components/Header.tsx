@@ -356,7 +356,7 @@ const Header = () => {
                   } else {
                     const installed = await installApp();
                     if (!installed && process.env.NODE_ENV === 'development') {
-                      alert('PWA Install Button Test: In production, this would trigger the install prompt.');
+                      alert(t('pwa.devInstallPromptShort', 'PWA Install Button Test: In production, this would trigger the install prompt.'));
                     }
                   }
                 } catch (error) {
@@ -404,7 +404,7 @@ const Header = () => {
             </InputLeftElement>
             <Input
               isReadOnly
-              placeholder="Search..."
+              placeholder={t('search.placeholder', 'Search...')}
               pointerEvents="none"
               focusBorderColor="blue.400"
               _placeholder={{ color: 'gray.400' }}
