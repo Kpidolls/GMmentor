@@ -65,37 +65,12 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {/* Load CookieYes after first interaction (production only) */}
+          {/* Load CookieYes in production to collect consent state early */}
           {process.env.NODE_ENV === 'production' && (
             <Script
               id="cookieyes"
               strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  (function () {
-                    var loaded = false;
-                    var events = ['pointerdown', 'keydown', 'touchstart'];
-
-                    function loadCookieYes() {
-                      if (loaded) return;
-                      loaded = true;
-
-                      events.forEach(function (eventName) {
-                        window.removeEventListener(eventName, loadCookieYes, { passive: true });
-                      });
-
-                      var script = document.createElement('script');
-                      script.src = 'https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js';
-                      script.async = true;
-                      document.body.appendChild(script);
-                    }
-
-                    events.forEach(function (eventName) {
-                      window.addEventListener(eventName, loadCookieYes, { passive: true, once: true });
-                    });
-                  })();
-                `,
-              }}
+              src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"
             />
           )}
         </body>
