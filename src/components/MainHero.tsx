@@ -1086,7 +1086,7 @@ const MainHero = () => {
 
 
         {/* Professional Hero Content */}
-        <section role="main" aria-label="Homepage" className="relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center">
+        <section role="main" aria-label={t('aria.homepage', 'Homepage')} className="relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center">
           {/* Lightweight content backdrop */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-sky-100/20 to-blue-100/30" />
@@ -1247,7 +1247,9 @@ const MainHero = () => {
                       </span>
                     ) : (
                       <span className="text-xs text-gray-500">
-                        Type to search or browse below • {getMunicipalitiesData().length} Athens areas
+                        {t('municipalitySearch.typeOrBrowse', 'Type to search or browse below • {{count}} Athens areas', {
+                          count: getMunicipalitiesData().length
+                        })}
                       </span>
                     )}
                   </div>
@@ -1259,7 +1261,7 @@ const MainHero = () => {
                     <div className="text-center py-12">
                       <div className="text-4xl mb-4">🔍</div>
                       <h4 className="text-lg font-semibold text-gray-700 mb-2">
-                        No locations found
+                        {t('municipalitySearch.noLocationsFoundTitle', 'No locations found')}
                       </h4>
                       <p className="text-gray-500 mb-4">
                         {t('municipalitySearch.noResults', 'No locations found matching your search.')}
@@ -1286,7 +1288,10 @@ const MainHero = () => {
                             <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                             {t(`regions.${region}`, region)}
                             <span className="text-xs text-gray-500 font-normal ml-auto">
-                              {municipalities.length} {municipalities.length === 1 ? 'area' : 'areas'}
+                              {municipalities.length}{' '}
+                              {municipalities.length === 1
+                                ? t('municipalitySearch.areaSingular', 'area')
+                                : t('municipalitySearch.areaPlural', 'areas')}
                             </span>
                           </h4>
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -1447,7 +1452,7 @@ const MainHero = () => {
                         {/* Badge */}
                         <div className="flex justify-center mb-4">
                           <span className="px-4 py-1.5 bg-white/70 backdrop-blur-sm rounded-full text-xs font-bold tracking-wider uppercase border border-white/80 text-emerald-700">
-                            Most Accurate
+                            {t('mainHero.mostAccurateBadge', 'Most Accurate')}
                           </span>
                         </div>
                         
@@ -1769,7 +1774,7 @@ const MainHero = () => {
                             <button
                               onClick={() => setShareSnackbar({ ...shareSnackbar, open: false })}
                               className="ml-2 text-white/80 hover:text-white text-lg font-bold focus:outline-none"
-                              aria-label="Close notification"
+                              aria-label={t('aria.closeNotification', 'Close notification')}
                             >
                               ×
                             </button>
@@ -1814,10 +1819,10 @@ const MainHero = () => {
                                       📏 {formatDistance(restaurantData.distance)}
                                     </span>
                                     {isVegan && (
-                                      <span title="Vegan Friendly" className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-semibold border border-emerald-200">🌿 Vegan</span>
+                                      <span title={t('restaurantFinder.badges.veganTitle', 'Vegan Friendly')} className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-semibold border border-emerald-200">🌿 {t('restaurantFinder.badges.veganLabel', 'Vegan')}</span>
                                     )}
                                     {isLuxury && (
-                                      <span title="Luxury/Pricey" className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-xs font-semibold border border-amber-200">✨ Luxury</span>
+                                      <span title={t('restaurantFinder.badges.luxuryTitle', 'Luxury/Pricey')} className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-xs font-semibold border border-amber-200">✨ {t('restaurantFinder.badges.luxuryLabel', 'Luxury')}</span>
                                     )}
                                   </div>
                                 </div>
@@ -1939,7 +1944,7 @@ const MainHero = () => {
                       try {
                         const installed = await installApp();
                         if (!installed && process.env.NODE_ENV === 'development') {
-                          alert('PWA Install Button Test: In production, this would trigger the install prompt. The PWA must be served over HTTPS with a valid manifest for the install prompt to appear.');
+                          alert(t('pwa.devInstallPromptLong', 'PWA Install Button Test: In production, this would trigger the install prompt. The PWA must be served over HTTPS with a valid manifest for the install prompt to appear.'));
                         }
                       } catch (error) {
                         logDevWarning('Failed to install app:', error);
@@ -2017,7 +2022,7 @@ const MainHero = () => {
                 <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
                   <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
                 </div>
-                <span className="text-xs uppercase tracking-wide">Scroll</span>
+                <span className="text-xs uppercase tracking-wide">{t('mainHero.scrollHint', 'Scroll')}</span>
               </div>
             </div> */}
           </div>

@@ -154,7 +154,7 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
         <Input
           ref={searchInputRef}
           placeholder={t('search.placeholder', 'Search...')}
-          aria-label="Search input for destinations, maps, or travel gear"
+          aria-label={t('search.inputAria', 'Search input for destinations, maps, or travel gear')}
           value={searchQuery}
           onChange={(e) => handleSearch(e.target.value)}
           onClick={handleFocus}
@@ -168,7 +168,7 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
         />
         <InputRightElement width="2.5rem">
           <IconButton
-            aria-label="Execute search"
+            aria-label={t('search.executeSearchAria', 'Execute search')}
             icon={<SearchIcon />}
             size="sm"
             variant="ghost"
@@ -209,7 +209,7 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                         <Box p={{ base: 2, sm: 3 }}>
                           <Image
                             src={item.image}
-                            alt={item.title || 'Search result image'}
+                            alt={item.title || t('search.resultImageAlt', 'Search result image')}
                             boxSize={{ base: '60px', sm: '75px', md: '100px' }}
                             objectFit="cover"
                             borderRadius="md"

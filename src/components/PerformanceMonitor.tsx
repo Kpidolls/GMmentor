@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { usePWA } from '../hooks/usePWA';
+import { useTranslation } from 'react-i18next';
 
 interface CacheStats {
   totalRequests: number;
@@ -24,6 +25,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showDebugInfo = false, 
   className = ''
 }) => {
+  const { t } = useTranslation();
   const { isStandalone, isOnline, dataPreloadStatus } = usePWA();
   const [cacheStats, setCacheStats] = useState<CacheStats | null>(null);
   const [showStats, setShowStats] = useState(showDebugInfo);
@@ -137,7 +139,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         <button
           onClick={() => setShowStats(!showStats)}
           className="fixed bottom-4 right-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full shadow-lg transition-colors"
-          title="Toggle Performance Stats"
+          title={t('performanceMonitor.toggleTitle', 'Toggle Performance Stats')}
         >
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 001.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -150,13 +152,13 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         <div className="fixed bottom-16 right-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl p-4 max-w-sm z-40">
           <div className="flex items-center justify-between mb-3">
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-              PWA Performance
+              {t('performanceMonitor.title', 'PWA Performance')}
             </h3>
             <button
               onClick={() => setShowStats(false)}
               className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-              title="Close performance stats"
-              aria-label="Close performance stats"
+              title={t('performanceMonitor.closeTitle', 'Close performance stats')}
+              aria-label={t('performanceMonitor.closeAria', 'Close performance stats')}
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -167,22 +169,22 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           {/* Status indicators */}
           <div className="space-y-2 text-xs">
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Status:</span>
+              <span className="text-gray-600 dark:text-gray-400">{t('performanceMonitor.labels.status', 'Status:')}</span>
               <span className={`font-medium ${!isOnline ? 'text-red-600' : 'text-green-600'}`}>
-                {!isOnline ? 'Offline' : 'Online'}
+                {!isOnline ? t('performanceMonitor.values.offline', 'Offline') : t('performanceMonitor.values.online', 'Online')}
               </span>
             </div>
 
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Data Preload:</span>
+              <span className="text-gray-600 dark:text-gray-400">{t('performanceMonitor.labels.dataPreload', 'Data Preload:')}</span>
               <span className={`font-medium ${getEfficiencyColor(dataPreloadStatus === 'completed' ? 100 : 0)}`}>
-                {dataPreloadStatus === 'completed' ? 'Ready' : 
-                 dataPreloadStatus === 'loading' ? 'Loading...' : 'Pending'}
+                {dataPreloadStatus === 'completed' ? t('performanceMonitor.values.ready', 'Ready') : 
+                 dataPreloadStatus === 'loading' ? t('performanceMonitor.values.loading', 'Loading...') : t('performanceMonitor.values.pending', 'Pending')}
               </span>
             </div>
 
             <div className="flex justify-between">
-              <span className="text-gray-600 dark:text-gray-400">Cache Hit Rate:</span>
+              <span className="text-gray-600 dark:text-gray-400">{t('performanceMonitor.labels.cacheHitRate', 'Cache Hit Rate:')}</span>
               <span className={`font-medium ${getEfficiencyColor(cacheStats.hitRate)}`}>
                 {cacheStats.hitRate.toFixed(1)}%
               </span>
@@ -193,21 +195,21 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             {/* Data usage breakdown */}
             <div className="space-y-1">
               <div className="flex justify-between">
-                <span className="text-gray-600 dark:text-gray-400">Restaurant Data:</span>
+                <span className="text-gray-600 dark:text-gray-400">{t('performanceMonitor.labels.restaurantData', 'Restaurant Data:')}</span>
                 <span className="text-gray-900 dark:text-white font-mono">
                   {formatBytes(cacheStats.dataUsage.restaurant_data)}
                 </span>
               </div>
 
               <div className="flex justify-between">
-                <span className="text-gray-600 dark:text-gray-400">Location Data:</span>
+                <span className="text-gray-600 dark:text-gray-400">{t('performanceMonitor.labels.locationData', 'Location Data:')}</span>
                 <span className="text-gray-900 dark:text-white font-mono">
                   {formatBytes(cacheStats.dataUsage.location_cache)}
                 </span>
               </div>
 
               <div className="flex justify-between">
-                <span className="text-gray-600 dark:text-gray-400">Images Cache:</span>
+                <span className="text-gray-600 dark:text-gray-400">{t('performanceMonitor.labels.imagesCache', 'Images Cache:')}</span>
                 <span className="text-gray-900 dark:text-white font-mono">
                   {formatBytes(cacheStats.dataUsage.preloaded_images)}
                 </span>
@@ -218,7 +220,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
             <div className="flex justify-between text-xs">
               <span className="text-gray-500 dark:text-gray-500">
-                Updated: {cacheStats.lastUpdated.toLocaleTimeString()}
+                {t('performanceMonitor.labels.updated', 'Updated:')} {cacheStats.lastUpdated.toLocaleTimeString()}
               </span>
             </div>
           </div>

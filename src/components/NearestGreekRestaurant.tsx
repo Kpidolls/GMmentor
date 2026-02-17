@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import restaurantsData from '../data/greekRestaurants.json';
 
 interface Restaurant {
@@ -12,6 +13,7 @@ interface Restaurant {
 }
 
 const NearestGreekRestaurant: React.FC = () => {
+  const { t } = useTranslation();
   const [userLocation, setUserLocation] = useState<{lat: number, lng: number} | null>(null);
   const [nearestRestaurants, setNearestRestaurants] = useState<Array<{ restaurant: Restaurant; distance: number }> | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -63,7 +65,7 @@ const NearestGreekRestaurant: React.FC = () => {
           setLoading(false);
         },
         () => {
-          setError('Unable to get your location. Please enable location services.');
+          setError(t('nearestGreekRestaurant.errors.locationUnavailable', 'Unable to get your location. Please enable location services.'));
           setLoading(false);
         },
         {
@@ -73,7 +75,7 @@ const NearestGreekRestaurant: React.FC = () => {
         }
       );
     } else {
-      setError('Geolocation is not supported by this browser.');
+      setError(t('nearestGreekRestaurant.errors.geolocationUnsupported', 'Geolocation is not supported by this browser.'));
       setLoading(false);
     }
   };
@@ -103,10 +105,10 @@ const NearestGreekRestaurant: React.FC = () => {
     <div className="bg-white rounded-xl shadow-lg p-6 max-w-md mx-auto">
       <div className="text-center mb-6">
         <h3 className="text-xl font-bold text-gray-800 mb-2">
-          🎯 Find Your Nearest Greek Taverna
+          {t('nearestGreekRestaurant.title', '🎯 Find Your Nearest Greek Taverna')}
         </h3>
         <p className="text-gray-600 text-sm">
-          Discover authentic Greek cuisine near your location
+          {t('nearestGreekRestaurant.subtitle', 'Discover authentic Greek cuisine near your location')}
         </p>
       </div>
 
@@ -116,14 +118,14 @@ const NearestGreekRestaurant: React.FC = () => {
           className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition duration-200 flex items-center justify-center gap-2"
         >
           <span>📍</span>
-          Find Nearest Restaurants
+          {t('nearestGreekRestaurant.findButton', 'Find Nearest Restaurants')}
         </button>
       )}
 
       {loading && (
         <div className="text-center py-4">
           <div className="inline-block animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
-          <p className="text-gray-600 mt-2">Getting your location...</p>
+          <p className="text-gray-600 mt-2">{t('nearestGreekRestaurant.loading', 'Getting your location...')}</p>
         </div>
       )}
 
@@ -134,7 +136,7 @@ const NearestGreekRestaurant: React.FC = () => {
             onClick={getUserLocation}
             className="mt-2 text-blue-600 text-sm hover:underline"
           >
-            Try again
+            {t('nearestGreekRestaurant.tryAgain', 'Try again')}
           </button>
         </div>
       )}
@@ -155,7 +157,11 @@ const NearestGreekRestaurant: React.FC = () => {
                     📏 {formatDistance(currentRestaurant.distance)}
                   </span>
                   <span className="text-gray-500 text-xs">
-                    #{currentIndex + 1} of {nearestRestaurants?.length}
+                    {t('nearestGreekRestaurant.position', {
+                      current: currentIndex + 1,
+                      total: nearestRestaurants?.length ?? 0,
+                      defaultValue: '#{{current}} of {{total}}'
+                    })}
                   </span>
                 </div>
               </div>
@@ -168,7 +174,7 @@ const NearestGreekRestaurant: React.FC = () => {
                 rel="noopener noreferrer"
                 className="flex-1 bg-green-600 text-white py-2 px-3 rounded-lg text-sm font-medium hover:bg-green-700 transition duration-200 text-center"
               >
-                View on Maps
+                {t('nearestGreekRestaurant.viewOnMaps', 'View on Maps')}
               </a>
             </div>
           </div>
@@ -180,7 +186,7 @@ const NearestGreekRestaurant: React.FC = () => {
                 disabled={currentIndex === 0}
                 className="flex items-center gap-1 px-3 py-2 text-sm text-gray-600 disabled:text-gray-400 hover:text-blue-600 transition duration-200"
               >
-                ← Previous
+                {t('nearestGreekRestaurant.previous', '← Previous')}
               </button>
               
               <div className="flex gap-1">
@@ -191,7 +197,10 @@ const NearestGreekRestaurant: React.FC = () => {
                     className={`w-2 h-2 rounded-full transition duration-200 ${
                       index === currentIndex ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
                     }`}
-                    aria-label={`Go to restaurant ${index + 1}`}
+                    aria-label={t('nearestGreekRestaurant.goToRestaurant', {
+                      index: index + 1,
+                      defaultValue: 'Go to restaurant {{index}}'
+                    })}
                   />
                 ))}
               </div>
@@ -201,7 +210,7 @@ const NearestGreekRestaurant: React.FC = () => {
                 disabled={currentIndex === nearestRestaurants.length - 1}
                 className="flex items-center gap-1 px-3 py-2 text-sm text-gray-600 disabled:text-gray-400 hover:text-blue-600 transition duration-200"
               >
-                Next →
+                {t('nearestGreekRestaurant.next', 'Next →')}
               </button>
             </div>
           )}
@@ -210,7 +219,7 @@ const NearestGreekRestaurant: React.FC = () => {
             onClick={resetSearch}
             className="w-full text-gray-500 text-sm hover:text-gray-700 transition duration-200"
           >
-            🔄 Search Again
+            {t('nearestGreekRestaurant.searchAgain', '🔄 Search Again')}
           </button>
         </div>
       )}

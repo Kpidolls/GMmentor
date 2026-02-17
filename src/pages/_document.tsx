@@ -74,7 +74,7 @@ class MyDocument extends Document {
                 __html: `
                   (function () {
                     var loaded = false;
-                    var events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+                    var events = ['pointerdown', 'keydown', 'touchstart'];
 
                     function loadCookieYes() {
                       if (loaded) return;

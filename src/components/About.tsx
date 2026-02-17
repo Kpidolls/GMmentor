@@ -36,7 +36,7 @@ const About = () => {
                   <Link
                     href={link.href}
                     className="text-gray-200 font-secondary hover:text-white transition duration-300"
-                    aria-label={`Navigate to ${link.label}`}
+                    aria-label={t('aria.navigateTo', { label: link.label, defaultValue: 'Navigate to {{label}}' })}
                   >
                     {link.label}
                   </Link>
@@ -118,7 +118,7 @@ const About = () => {
             <Link
               href="https://github.com/issaafalkattan/react-landing-page-template-2021"
               className="text-gray-300 underline hover:text-white transition duration-300"
-              aria-label="Visit the original template repository"
+              aria-label={t('aria.visitTemplateRepository', 'Visit the original template repository')}
             >
               {' '}
               I. Kattan

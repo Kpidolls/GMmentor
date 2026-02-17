@@ -45,7 +45,7 @@ const IslandList = () => {
                   target={island.target}
                   rel={island.rel}
                   className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-blue-700 text-white font-semibold rounded shadow hover:bg-blue-800 transition duration-300 text-center"
-                  aria-label="Open map for islands"
+                  aria-label={t('islands.openMapAria', 'Open map for islands')}
                 >
                   {t('islands.exploreButton')}
                 </a>
@@ -63,7 +63,7 @@ const IslandList = () => {
                     }
                   }}
                   className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-green-700 text-white font-semibold rounded shadow hover:bg-green-800 transition duration-300 text-center"
-                  aria-label="Share this island"
+                  aria-label={t('islands.shareIslandAria', 'Share this island')}
                 >
                   {t('islands.shareButton')}
                 </button>
@@ -77,7 +77,7 @@ const IslandList = () => {
           <button
             onClick={handleViewMore}
             className="px-6 py-3 bg-blue-600 font-primary text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
-            aria-label="View more"
+            aria-label={t('islands.viewMoreAria', 'View more')}
           >
             {t('islands.viewMoreButton')}
           </button>

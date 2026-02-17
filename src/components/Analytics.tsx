@@ -15,12 +15,8 @@ const App = () => {
     }
 
     const analyticsSrc = `https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`;
-    let fallbackTimeout: number | undefined;
-    let idleCallbackId: number | undefined;
     let hasLoaded = false;
     const idleWindow = window as Window & {
-      requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number;
-      cancelIdleCallback?: (id: number) => void;
       dataLayer?: unknown[][];
     };
 
@@ -55,7 +51,7 @@ const App = () => {
       removeInteractionListeners();
     };
 
-    const interactionEvents: Array<keyof WindowEventMap> = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+    const interactionEvents: Array<keyof WindowEventMap> = ['pointerdown', 'keydown', 'touchstart'];
 
     const addInteractionListeners = () => {
       interactionEvents.forEach((eventName) => {
@@ -71,27 +67,8 @@ const App = () => {
 
     addInteractionListeners();
 
-    if (typeof idleWindow.requestIdleCallback === 'function') {
-      idleCallbackId = idleWindow.requestIdleCallback(
-        () => {
-          triggerLoad();
-        },
-        { timeout: 6000 }
-      );
-    } else {
-      fallbackTimeout = window.setTimeout(() => {
-        triggerLoad();
-      }, 3500);
-    }
-
     return () => {
       removeInteractionListeners();
-      if (typeof idleCallbackId === 'number' && typeof idleWindow.cancelIdleCallback === 'function') {
-        idleWindow.cancelIdleCallback(idleCallbackId);
-      }
-      if (typeof fallbackTimeout === 'number') {
-        window.clearTimeout(fallbackTimeout);
-      }
     };
   }, []);
 

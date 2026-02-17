@@ -171,7 +171,7 @@ const InstallBanner: React.FC<InstallBannerProps> = ({
               flex-shrink-0 text-blue-200 hover:text-white transition-colors
               w-6 h-6 flex items-center justify-center rounded
             "
-            aria-label="Close"
+            aria-label={t('aria.close', 'Close')}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
