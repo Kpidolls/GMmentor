@@ -112,8 +112,11 @@ export const usePWA = (): PWAHook => {
     // Listen for install prompt
     const handleBeforeInstallPrompt = (e: Event) => {
       if (process.env.NODE_ENV === 'development') {
-        console.log('PWA: Install prompt available');
+        setDeferredPrompt(null);
+        setIsInstallable(false);
+        return;
       }
+
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setIsInstallable(true);

@@ -70,7 +70,6 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
           as="image"
           href="/assets/images/cover-627.webp"
           type="image/webp"
-          fetchPriority="high"
           imageSrcSet="/assets/images/cover-480.webp 480w, /assets/images/cover-627.webp 627w"
           imageSizes="100vw"
         />

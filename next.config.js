@@ -240,6 +240,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
+  devIndicators: false,
   productionBrowserSourceMaps: true,
 
   compiler: {
