@@ -117,7 +117,7 @@ const About = () => {
             &copy; {new Date().getFullYear()} {t('about.copyright')}
             <Link
               href="https://github.com/issaafalkattan/react-landing-page-template-2021"
-              className="text-gray-700 underline hover:text-white transition duration-300"
+              className="text-gray-300 underline hover:text-white transition duration-300"
               aria-label="Visit the original template repository"
             >
               {' '}

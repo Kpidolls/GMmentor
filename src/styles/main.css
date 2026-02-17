@@ -230,3 +230,27 @@ a:hover {
   box-shadow: 0 12px 32px rgba(11,37,69,0.08);
 }
 
+.cky-consent-bar {
+  background-color: #ffffff !important;
+  border-color: #d1d5db !important;
+  color: #111827 !important;
+}
+
+.cky-notice-des,
+.cky-title {
+  color: #111827 !important;
+}
+
+.cky-btn.cky-btn-customize,
+.cky-btn.cky-btn-reject {
+  color: #065f46 !important;
+  border-color: #065f46 !important;
+  background-color: #ffffff !important;
+}
+
+.cky-btn.cky-btn-accept {
+  background-color: #065f46 !important;
+  border-color: #065f46 !important;
+  color: #ffffff !important;
+}
+

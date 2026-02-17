@@ -63,10 +63,17 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
         <meta property="og:description" content={t('meta.homeDescriptionShort')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://googlementor.com" />
-        <meta property="og:image" content="https://googlementor.com/assets/images/cover.avif" />
+        <meta property="og:image" content="https://googlementor.com/assets/images/cover-627.webp" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="preload" as="image" href="/assets/images/cover.avif" type="image/avif" fetchPriority="high" />
-        <link rel="preload" as="image" href="/assets/images/cover.webp" type="image/webp" fetchPriority="high" />
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/images/cover-627.webp"
+          type="image/webp"
+          fetchPriority="high"
+          imageSrcSet="/assets/images/cover-480.webp 480w, /assets/images/cover-627.webp 627w"
+          imageSizes="100vw"
+        />
         {/* FAQPage JSON-LD for common quick questions on the homepage (localized) */}
         <script
           type="application/ld+json"

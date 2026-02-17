@@ -32,9 +32,13 @@ const GetYourGuideWidget = () => {
             {/* Image Section */}
             <div className="w-full lg:w-2/5 flex-shrink-0">
               <img
-                src="/assets/images/meteora1.webp"
+                src="/assets/images/meteora1-560.webp"
+                srcSet="/assets/images/meteora1-560.webp 560w, /assets/images/meteora1-840.webp 840w"
+                sizes="(min-width: 1024px) 320px, 100vw"
                 alt="Meteora Monasteries - Ancient rock formations with monasteries"
                 className="w-full h-full object-cover min-h-80 lg:min-h-full"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             
