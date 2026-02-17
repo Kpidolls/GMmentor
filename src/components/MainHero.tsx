@@ -1457,7 +1457,7 @@ const MainHero = () => {
                         
                         {/* Title */}
                         <h3 className="text-xl xs:text-2xl sm:text-3xl font-black mb-4 leading-tight">
-                          {t('locationOptions.byNeighborhood', 'By Neighborhood')}
+                          {t('locationOptions.byNeighborhood', 'Neighborhood')}
                         </h3>
                         
                         {/* Description */}
