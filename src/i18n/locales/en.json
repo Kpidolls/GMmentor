@@ -299,7 +299,7 @@
     "nearYouDesc": "Use your current location to find nearby places",
     "byRegion": "By Region",
     "byRegionDesc": "Select a specific region or municipality",
-    "byNeighborhood": "By Neighborhood",
+    "byNeighborhood": "Neighborhood",
     "byNeighborhoodDesc": "Choose a specific neighborhood or municipality"
   },
   "municipalitySearch": {
