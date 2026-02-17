@@ -15,60 +15,108 @@ const App = () => {
     }
 
     const analyticsSrc = `https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`;
-    let hasLoaded = false;
-    const idleWindow = window as Window & {
+    const analyticsWindow = window as Window & {
       dataLayer?: unknown[][];
     };
 
-    const initializeGtag = () => {
-      idleWindow.dataLayer = idleWindow.dataLayer || [];
-      function gtagInit(...args: unknown[]) {
-        idleWindow.dataLayer?.push(args);
-      }
-      window.gtag = gtagInit as typeof window.gtag;
-      window.gtag('js', new Date());
-      window.gtag('config', gtag.GA_TRACKING_ID, {
-        page_path: window.location.pathname,
-      });
+    const getCookieValue = (cookieName: string) => {
+      const encodedName = encodeURIComponent(cookieName);
+      const match = document.cookie.match(new RegExp(`(?:^|; )${encodedName}=([^;]*)`));
+      const cookieValue = match?.[1];
+      return cookieValue ? decodeURIComponent(cookieValue) : '';
     };
 
-    const loadAnalytics = () => {
-      if (hasLoaded || document.querySelector(`script[src="${analyticsSrc}"]`)) {
-        hasLoaded = true;
-        return;
+    const getAnalyticsConsentFromCookieYes = (): 'granted' | 'denied' | null => {
+      const consentCookie = getCookieValue('cookieyes-consent') || getCookieValue('cky-consent');
+      if (!consentCookie) {
+        return null;
       }
 
-      hasLoaded = true;
+      const grantedPattern = /analytics\s*[:=]\s*(yes|true|1|allow|allowed|accept|accepted|granted)/i;
+      const deniedPattern = /analytics\s*[:=]\s*(no|false|0|deny|denied|reject|rejected)/i;
+
+      if (grantedPattern.test(consentCookie)) {
+        return 'granted';
+      }
+
+      if (deniedPattern.test(consentCookie)) {
+        return 'denied';
+      }
+
+      return null;
+    };
+
+    const initializeGtag = () => {
+      analyticsWindow.dataLayer = analyticsWindow.dataLayer || [];
+
+      function gtagInit(...args: unknown[]) {
+        analyticsWindow.dataLayer?.push(args);
+      }
+
+      window.gtag = gtagInit as typeof window.gtag;
+
+      window.gtag?.('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500,
+      });
+
+      window.gtag?.('js', new Date());
+      window.gtag?.('config', gtag.GA_TRACKING_ID, {
+        send_page_view: false,
+      });
+
+      const consentState = getAnalyticsConsentFromCookieYes();
+      if (consentState) {
+        gtag.updateConsent(consentState);
+      }
+
+      gtag.pageview(`${window.location.pathname}${window.location.search}`);
+    };
+
+    const existingScript = document.querySelector(`script[src="${analyticsSrc}"]`) as HTMLScriptElement | null;
+
+    if (!existingScript) {
       const script = document.createElement('script');
       script.src = analyticsSrc;
       script.async = true;
       script.onload = initializeGtag;
       document.head.appendChild(script);
+    } else if (typeof window.gtag !== 'function') {
+      existingScript.addEventListener('load', initializeGtag, { once: true });
+    }
+
+    const syncConsent = () => {
+      const consentState = getAnalyticsConsentFromCookieYes();
+      if (!consentState) {
+        return;
+      }
+
+      gtag.updateConsent(consentState);
     };
 
-    const triggerLoad = () => {
-      loadAnalytics();
-      removeInteractionListeners();
-    };
+    const consentEvents = [
+      'cookieyes_consent_update',
+      'cookieyes_consent_accept',
+      'cookieyes_consent_reject',
+      'cookieyes_banner_close',
+    ];
 
-    const interactionEvents: Array<keyof WindowEventMap> = ['pointerdown', 'keydown', 'touchstart'];
+    consentEvents.forEach((eventName) => {
+      window.addEventListener(eventName, syncConsent as EventListener);
+    });
 
-    const addInteractionListeners = () => {
-      interactionEvents.forEach((eventName) => {
-        window.addEventListener(eventName, triggerLoad, { passive: true, once: true });
-      });
-    };
-
-    const removeInteractionListeners = () => {
-      interactionEvents.forEach((eventName) => {
-        window.removeEventListener(eventName, triggerLoad);
-      });
-    };
-
-    addInteractionListeners();
+    const consentPolling = window.setInterval(syncConsent, 2000);
+    const stopPollingTimer = window.setTimeout(() => window.clearInterval(consentPolling), 30000);
 
     return () => {
-      removeInteractionListeners();
+      consentEvents.forEach((eventName) => {
+        window.removeEventListener(eventName, syncConsent as EventListener);
+      });
+      window.clearInterval(consentPolling);
+      window.clearTimeout(stopPollingTimer);
     };
   }, []);
 
