@@ -132,17 +132,24 @@ const App = () => {
       gtag.pageview(`${window.location.pathname}${window.location.search}`);
     };
 
-    const existingScript = document.querySelector(`script[src="${analyticsSrc}"]`) as HTMLScriptElement | null;
+    const loadAnalytics = () => {
+      const existingScript = document.querySelector(`script[src="${analyticsSrc}"]`) as HTMLScriptElement | null;
 
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.src = analyticsSrc;
-      script.async = true;
-      script.onload = initializeGtag;
-      document.head.appendChild(script);
-    } else if (typeof window.gtag !== 'function') {
-      existingScript.addEventListener('load', initializeGtag, { once: true });
-    }
+      if (!existingScript) {
+        const script = document.createElement('script');
+        script.src = analyticsSrc;
+        script.async = true;
+        script.onload = initializeGtag;
+        document.head.appendChild(script);
+        return;
+      }
+
+      if (typeof window.gtag !== 'function') {
+        existingScript.addEventListener('load', initializeGtag, { once: true });
+      }
+    };
+
+    const analyticsBootDelay = window.setTimeout(loadAnalytics, 1200);
 
     const syncConsent = () => {
       const consentState = getAnalyticsConsentFromCookieYes();
@@ -163,16 +170,14 @@ const App = () => {
     consentEvents.forEach((eventName) => {
       window.addEventListener(eventName, syncConsent as EventListener);
     });
-
-    const consentPolling = window.setInterval(syncConsent, 2000);
-    const stopPollingTimer = window.setTimeout(() => window.clearInterval(consentPolling), 30000);
+    const delayedConsentSync = window.setTimeout(syncConsent, 4000);
 
     return () => {
       consentEvents.forEach((eventName) => {
         window.removeEventListener(eventName, syncConsent as EventListener);
       });
-      window.clearInterval(consentPolling);
-      window.clearTimeout(stopPollingTimer);
+      window.clearTimeout(analyticsBootDelay);
+      window.clearTimeout(delayedConsentSync);
     };
   }, []);
 

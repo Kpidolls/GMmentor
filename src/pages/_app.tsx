@@ -4,12 +4,14 @@ import Head from 'next/head';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '../styles/main.css';
 import { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import usePersistedLanguage from '../hooks/usePersistedLanguage';
 import Layout from '../components/Layout';
 import { Roboto } from 'next/font/google';
-import BackToTop from '../components/BackToTop'
 import Header from '../components/Header';
-import Analytics from '../components/Analytics';
+
+const BackToTop = dynamic(() => import('../components/BackToTop'), { ssr: false });
+const Analytics = dynamic(() => import('../components/Analytics'), { ssr: false });
 
 const roboto = Roboto({
   subsets: ['latin'],

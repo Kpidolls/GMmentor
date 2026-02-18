@@ -173,7 +173,7 @@ const withPWA = require('@ducanh2912/next-pwa').default({
         cacheName: 'next-static-js-v2',
         expiration: {
           maxEntries: 64,
-          maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
+          maxAgeSeconds: 365 * 24 * 60 * 60 // 1 year (hashed immutable assets)
         }
       }
     },
@@ -186,7 +186,7 @@ const withPWA = require('@ducanh2912/next-pwa').default({
         cacheName: 'next-static-css',
         expiration: {
           maxEntries: 32,
-          maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
+          maxAgeSeconds: 365 * 24 * 60 * 60 // 1 year (hashed immutable assets)
         }
       }
     },
