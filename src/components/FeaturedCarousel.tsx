@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
+import { formatPostDate } from '../utils/dateUtils'
 
 type MinimalPost = {
   slug: string
@@ -68,7 +69,7 @@ export default function FeaturedCarousel() {
           <a className="block w-full text-left" role="link" aria-label={p.title} tabIndex={0}>
             <h4 className="text-lg sm:text-xl font-bold text-white hover:underline">{p.title}</h4>
             {p.summary && <p className="text-sm text-slate-200 mt-2 line-clamp-2">{p.summary}</p>}
-            <div className="mt-3 text-xs text-slate-300">{new Date(p.date).toLocaleDateString(p.language === 'el' ? 'el-GR' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</div>
+            <div className="mt-3 text-xs text-slate-300">{formatPostDate(p.date, p.language, { year: 'numeric', month: 'short', day: 'numeric' })}</div>
           </a>
         </Link>
         <div className="mt-3 flex items-center justify-center gap-2">

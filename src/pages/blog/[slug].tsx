@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import NextLink from 'next/link'
 import { generateBlogMetaDescription } from '../../config/metaDescriptions'
+import { formatPostDate } from '../../utils/dateUtils'
 
 const MarkdownComponents = {
   h1: (props: ComponentProps<'h1'>) => <Heading as="h2" size="lg" mt={6} mb={3} {...props} />,
@@ -187,10 +188,7 @@ export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostPro
       
       <Heading as="h1" size="xl" mb={4}>{post.title}</Heading>
       <Text fontSize="sm" color="gray.500" mb={2}>
-        {new Date(post.date).toLocaleDateString(
-          post.language === 'el' ? 'el-GR' : 'en-US', 
-          { year: 'numeric', month: 'long', day: 'numeric' }
-        )}
+        {formatPostDate(post.date, post.language, { year: 'numeric', month: 'long', day: 'numeric' })}
       </Text>
       <Text fontSize="md" color="gray.700" mb={4}>{post.summary}</Text>
       <Box className="blog-content">

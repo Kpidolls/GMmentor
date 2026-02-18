@@ -16,6 +16,21 @@ const withPWA = require('@ducanh2912/next-pwa').default({
     /_buildManifest\.js$/,
     /_ssgManifest\.js$/
   ],
+  workboxOptions: {
+    manifestTransforms: [
+      async (entries) => {
+        const manifest = entries.filter((entry) => {
+          const url = entry.url || '';
+          return !(
+            /\/(_next\/)?dynamic-css-manifest\.json(\?.*)?$/i.test(url) ||
+            /\/(_next\/)?_?buildManifest\.js(\?.*)?$/i.test(url) ||
+            /\/(_next\/)?_?ssgManifest\.js(\?.*)?$/i.test(url)
+          );
+        });
+        return { manifest, warnings: [] };
+      },
+    ],
+  },
   fallbacks: {
     document: '/offline.html',
   },
