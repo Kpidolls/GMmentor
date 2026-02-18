@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '../styles/main.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import usePersistedLanguage from '../hooks/usePersistedLanguage';
 import Layout from '../components/Layout';
@@ -33,6 +33,35 @@ const customTheme = extendTheme({
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   usePersistedLanguage();
+  const [showAnalytics, setShowAnalytics] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const w = window as Window & {
+      requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
+    };
+
+    if (typeof w.requestIdleCallback === 'function') {
+      const idleId = w.requestIdleCallback(() => {
+        setShowAnalytics(true);
+      }, { timeout: 2500 });
+
+      return () => {
+        window.cancelIdleCallback?.(idleId);
+      };
+    }
+
+    const timerId = window.setTimeout(() => {
+      setShowAnalytics(true);
+    }, 1500);
+
+    return () => {
+      window.clearTimeout(timerId);
+    };
+  }, []);
 
   useEffect(() => {
     if (process.env.NODE_ENV !== 'development') return;
@@ -69,7 +98,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Analytics />
+      {showAnalytics && <Analytics />}
       <Header />
       <main className={roboto.className}>
         <Layout>
