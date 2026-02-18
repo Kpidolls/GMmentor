@@ -256,7 +256,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
   trailingSlash: false,
   reactStrictMode: true,
   devIndicators: false,
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false,
 
   compiler: {
     styledComponents: true,
