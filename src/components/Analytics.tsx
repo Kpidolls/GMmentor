@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { useRouter } from 'next/router';
 import Script from 'next/script';
@@ -8,9 +8,16 @@ import * as gtag from '../lib/gtag';
 
 const App = () => {
   const router = useRouter();
+  const analyticsInitializedRef = useRef(false);
+  const initialPageviewSentRef = useRef(false);
 
   useEffect(() => {
     if (!gtag.GA_TRACKING_ID || typeof window === 'undefined') {
+      if (process.env.NODE_ENV === 'development' && !gtag.GA_TRACKING_ID) {
+        console.warn(
+          '[Analytics] Missing GA measurement ID. Set NEXT_PUBLIC_GOOGLE_ANALYTICS (or NEXT_PUBLIC_GA_ID / NEXT_PUBLIC_GA_TRACKING_ID).'
+        );
+      }
       return;
     }
 
@@ -102,7 +109,21 @@ const App = () => {
       return null;
     };
 
+    const sendInitialPageview = () => {
+      if (initialPageviewSentRef.current) {
+        return;
+      }
+
+      initialPageviewSentRef.current = true;
+      gtag.pageview(`${window.location.pathname}${window.location.search}`);
+    };
+
     const initializeGtag = () => {
+      if (analyticsInitializedRef.current) {
+        return;
+      }
+
+      analyticsInitializedRef.current = true;
       analyticsWindow.dataLayer = analyticsWindow.dataLayer || [];
 
       function gtagInit(...args: unknown[]) {
@@ -127,9 +148,10 @@ const App = () => {
       const consentState = getAnalyticsConsentFromCookieYes();
       if (consentState) {
         gtag.updateConsent(consentState);
+        if (consentState === 'granted') {
+          sendInitialPageview();
+        }
       }
-
-      gtag.pageview(`${window.location.pathname}${window.location.search}`);
     };
 
     const loadAnalytics = () => {
@@ -143,6 +165,8 @@ const App = () => {
         document.head.appendChild(script);
         return;
       }
+
+      initializeGtag();
 
       if (typeof window.gtag !== 'function') {
         existingScript.addEventListener('load', initializeGtag, { once: true });
@@ -158,6 +182,10 @@ const App = () => {
       }
 
       gtag.updateConsent(consentState);
+
+      if (consentState === 'granted' && typeof window.gtag === 'function') {
+        sendInitialPageview();
+      }
     };
 
     const consentEvents = [
