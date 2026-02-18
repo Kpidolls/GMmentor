@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
+import { formatPostDate } from '../utils/dateUtils'
 
 type MinimalPost = {
   slug: string
@@ -15,7 +16,7 @@ type Props = { allPosts: MinimalPost[] }
 
 export default function BlogHighlight({ allPosts }: Props) {
   const { t, i18n } = useTranslation()
-  const resolvedLanguage = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0]
+  const resolvedLanguage = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0] || 'en'
 
   // Deduplicate by originalSlug, preferring current language then English
   const deduped = Object.values(
@@ -79,10 +80,7 @@ export default function BlogHighlight({ allPosts }: Props) {
                   </div>
                   <div className="mt-4 flex items-center justify-between">
                     <time dateTime={post.date} className="text-xs text-gray-500">
-                      {new Date(post.date).toLocaleDateString(
-                        resolvedLanguage === 'el' ? 'el-GR' : 'en-US',
-                        { year: 'numeric', month: 'short', day: 'numeric' }
-                      )}
+                      {formatPostDate(post.date, resolvedLanguage, { year: 'numeric', month: 'short', day: 'numeric' })}
                     </time>
                     <span className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 group-hover:text-blue-800 transition-colors duration-200">
                       {t('blog.readMore', 'Read more')}

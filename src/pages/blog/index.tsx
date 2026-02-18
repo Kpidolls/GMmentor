@@ -6,6 +6,7 @@ import { Box, Heading, Text, Container, HStack, Button, Grid, GridItem, Image, B
 import { useTranslation } from 'react-i18next'
 import { useMemo } from 'react'
 import { metaDescriptions } from '../../config/metaDescriptions'
+import { formatPostDate } from '../../utils/dateUtils'
 
 type BlogListPost = Omit<Post, 'content'> & {
   image: string
@@ -227,10 +228,10 @@ export default function Blog({ allPosts }: BlogProps) {
                         <Box p={6} flex="1" display="flex" flexDirection="column">
                           {/* Date */}
                           <Text fontSize="sm" color="gray.500" mb={2} pointerEvents="none">
-                            📅 {new Date(post.date).toLocaleDateString(i18n.language === 'el' ? 'el-GR' : 'en-US', { 
-                              year: 'numeric', 
-                              month: 'long', 
-                              day: 'numeric' 
+                            📅 {formatPostDate(post.date, i18n.language, {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric'
                             })}
                           </Text>
 
