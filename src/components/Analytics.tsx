@@ -26,6 +26,35 @@ const App = () => {
       return cookieValue ? decodeURIComponent(cookieValue) : '';
     };
 
+    const normalizeConsentValue = (value: unknown): 'granted' | 'denied' | null => {
+      if (typeof value === 'boolean') {
+        return value ? 'granted' : 'denied';
+      }
+
+      if (typeof value === 'number') {
+        if (value === 1) {
+          return 'granted';
+        }
+        if (value === 0) {
+          return 'denied';
+        }
+        return null;
+      }
+
+      if (typeof value === 'string') {
+        const normalizedValue = value.trim().toLowerCase();
+        if (['yes', 'true', '1', 'allow', 'allowed', 'accept', 'accepted', 'granted'].includes(normalizedValue)) {
+          return 'granted';
+        }
+
+        if (['no', 'false', '0', 'deny', 'denied', 'reject', 'rejected'].includes(normalizedValue)) {
+          return 'denied';
+        }
+      }
+
+      return null;
+    };
+
     const getAnalyticsConsentFromCookieYes = (): 'granted' | 'denied' | null => {
       const consentCookie = getCookieValue('cookieyes-consent') || getCookieValue('cky-consent');
       if (!consentCookie) {
@@ -41,6 +70,33 @@ const App = () => {
 
       if (deniedPattern.test(consentCookie)) {
         return 'denied';
+      }
+
+      try {
+        const parsedConsent = JSON.parse(consentCookie) as Record<string, unknown>;
+        const directValue = normalizeConsentValue(parsedConsent.analytics);
+        if (directValue) {
+          return directValue;
+        }
+
+        const consentGroup = parsedConsent.consent as Record<string, unknown> | undefined;
+        const categoryGroup = parsedConsent.categories as Record<string, unknown> | undefined;
+
+        const consentValue = normalizeConsentValue(consentGroup?.analytics);
+        if (consentValue) {
+          return consentValue;
+        }
+
+        const categoryValue = normalizeConsentValue(categoryGroup?.analytics);
+        if (categoryValue) {
+          return categoryValue;
+        }
+      } catch {
+      }
+
+      const quotedMatch = consentCookie.match(/"analytics"\s*:\s*("?)(true|false|yes|no|1|0)\1/i);
+      if (quotedMatch?.[2]) {
+        return normalizeConsentValue(quotedMatch[2]);
       }
 
       return null;
@@ -139,7 +195,14 @@ const App = () => {
 
   return (
     <>
-      {GA_ADS_ID && <Script strategy="lazyOnload" async src={GA_ADS_ID} crossOrigin="anonymous" />}
+      {GA_ADS_ID && (
+        <Script
+          strategy="lazyOnload"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ADS_ID}`}
+          crossOrigin="anonymous"
+        />
+      )}
     </>
   );
 };
