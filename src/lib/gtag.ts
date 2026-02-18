@@ -1,8 +1,10 @@
+const DEFAULT_GA_TRACKING_ID = 'G-7KYV8QK51B';
+
 const rawTrackingId =
   process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ||
   process.env.NEXT_PUBLIC_GA_ID ||
   process.env.NEXT_PUBLIC_GA_TRACKING_ID ||
-  '';
+  DEFAULT_GA_TRACKING_ID;
 
 export const GA_TRACKING_ID = rawTrackingId.trim();
 
