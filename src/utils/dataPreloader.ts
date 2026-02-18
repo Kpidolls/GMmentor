@@ -155,7 +155,7 @@ export const dataPreloader = new DataPreloaderService();
 export const getCriticalImages = (): string[] => [
   '/assets/images/cover-627.webp',
   '/assets/images/athens.webp',
-  '/assets/images/newlogo1.webp'
+  '/assets/images/newlogo1-80.webp'
 ];
 
 // Enhanced data fetcher with offline fallback
