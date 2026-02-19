@@ -173,7 +173,7 @@ const App = () => {
       }
     };
 
-    const analyticsBootDelay = window.setTimeout(loadAnalytics, 1200);
+    loadAnalytics();
 
     const syncConsent = () => {
       const consentState = getAnalyticsConsentFromCookieYes();
@@ -198,13 +198,12 @@ const App = () => {
     consentEvents.forEach((eventName) => {
       window.addEventListener(eventName, syncConsent as EventListener);
     });
-    const delayedConsentSync = window.setTimeout(syncConsent, 4000);
+    const delayedConsentSync = window.setTimeout(syncConsent, 1500);
 
     return () => {
       consentEvents.forEach((eventName) => {
         window.removeEventListener(eventName, syncConsent as EventListener);
       });
-      window.clearTimeout(analyticsBootDelay);
       window.clearTimeout(delayedConsentSync);
     };
   }, []);
