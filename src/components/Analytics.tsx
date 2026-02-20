@@ -12,6 +12,12 @@ const App = () => {
   const initialPageviewSentRef = useRef(false);
 
   useEffect(() => {
+    if (process.env.NODE_ENV === 'production' && gtag.USING_GA_FALLBACK) {
+      console.warn(
+        '[Analytics] Using fallback GA measurement ID. Set NEXT_PUBLIC_GOOGLE_ANALYTICS in the deployment build environment.'
+      );
+    }
+
     if (!gtag.GA_TRACKING_ID || typeof window === 'undefined') {
       if (process.env.NODE_ENV === 'development' && !gtag.GA_TRACKING_ID) {
         console.warn(
