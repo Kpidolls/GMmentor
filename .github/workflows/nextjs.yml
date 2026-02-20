@@ -18,6 +18,8 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_GOOGLE_ANALYTICS: G-7KYV8QK51B
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
