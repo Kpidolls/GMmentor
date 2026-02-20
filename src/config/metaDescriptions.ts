@@ -75,7 +75,21 @@ export const metaDescriptions = {
   blogBakeriesBrunchEn: "Greek bakeries, brunch & coffee culture guide: Discover tiropita, bougatsa, loukoumades, freddo espresso. Find the best neighborhood bakeries and brunch spots across Greece.",
   
   blogBakeriesBrunchEl: "Ελληνικές αρτοποιίες, brunch & κουλτούρα καφέ: Ανακαλύψτε τυρόπιτα, μπουγάτσα, λουκουμάδες, freddo espresso. Βρείτε τις καλύτερες αρτοποιίες γειτονιάς σε Αθήνα, Θεσσαλονίκη, Κρήτη.",
+
+  blogGreekMusicAthensEn: "Live Greek music in Athens guide: trusted bouzoukia and tavernas, real costs, flower traditions, and practical tips for a great night out.",
+
+  blogGreekMusicAthensEl: "Οδηγός ζωντανής ελληνικής μουσικής στην Αθήνα: αξιόπιστα μπουζούκια και ταβέρνες, πραγματικό κόστος, λουλούδια και πρακτικές συμβουλές για τη βραδιά σας.",
 };
+
+const blogMetaDescriptionBySlug: Record<string, keyof typeof metaDescriptions> = {
+  'athens-live-greek-music-guide': 'blogGreekMusicAthensEn',
+  'athens-live-greek-music-guide-el': 'blogGreekMusicAthensEl',
+}
+
+export function getBlogMetaDescriptionBySlug(slug: string): string | undefined {
+  const key = blogMetaDescriptionBySlug[slug]
+  return key ? metaDescriptions[key] : undefined
+}
 
 /**
  * Generate a unique meta description for blog posts

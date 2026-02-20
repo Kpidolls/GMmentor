@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import NextLink from 'next/link'
-import { generateBlogMetaDescription } from '../../config/metaDescriptions'
+import { generateBlogMetaDescription, getBlogMetaDescriptionBySlug } from '../../config/metaDescriptions'
 import { formatPostDate } from '../../utils/dateUtils'
 
 const MarkdownComponents = {
@@ -92,7 +92,7 @@ export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostPro
   }, [i18n.language, post.language, alternatePost, router])
 
   // Build an SEO-friendly meta description using the helper function
-  const metaDescription = generateBlogMetaDescription(
+  const metaDescription = getBlogMetaDescriptionBySlug(post.slug) || generateBlogMetaDescription(
     post.title,
     post.summary,
     post.content
