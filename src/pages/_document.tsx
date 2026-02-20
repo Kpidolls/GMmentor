@@ -3,6 +3,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { AppConfig } from '../utils/AppConfig';
 import Script from 'next/script';
+import { contentSecurityPolicy } from '../utils/csp';
 
 class MyDocument extends Document {
   render() {
@@ -10,6 +11,7 @@ class MyDocument extends Document {
       <Html lang={AppConfig.locale}>
         <Head>
           <meta charSet="utf-8" />
+          <meta httpEquiv="Content-Security-Policy" content={contentSecurityPolicy} />
 
           {/* PWA Meta Tags */}
           <meta name="application-name" content="Googlementor" />
