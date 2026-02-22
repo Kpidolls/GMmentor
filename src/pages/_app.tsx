@@ -31,6 +31,9 @@ const customTheme = extendTheme({
   },
 });
 
+const shouldEnableAnalytics =
+  process.env.NODE_ENV === 'production' || process.env.NEXT_PUBLIC_ANALYTICS_DEBUG === 'true';
+
 const MyApp = ({ Component, pageProps }: AppProps) => {
   usePersistedLanguage();
 
@@ -69,7 +72,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      {process.env.NODE_ENV === 'production' && <Analytics />}
+      {shouldEnableAnalytics && <Analytics />}
       <Header />
       <main className={roboto.className}>
         <Layout>
