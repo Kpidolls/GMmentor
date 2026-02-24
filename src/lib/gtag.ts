@@ -1,20 +1,30 @@
-const DEFAULT_GA_TRACKING_ID = 'G-7KYV8QK51B';
+const REQUIRED_GA_TRACKING_ID = 'G-7KYV8QK51B';
 
-const hasConfiguredTrackingId =
-  !!process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ||
-  !!process.env.NEXT_PUBLIC_GA_ID ||
-  !!process.env.NEXT_PUBLIC_GA_TRACKING_ID ||
-  !!process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const ENV_TRACKING_ID_CANDIDATES = [
+  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
+  process.env.NEXT_PUBLIC_GA_ID,
+  process.env.NEXT_PUBLIC_GA_TRACKING_ID,
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
+].filter(Boolean) as string[];
 
-const rawTrackingId =
-  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ||
-  process.env.NEXT_PUBLIC_GA_ID ||
-  process.env.NEXT_PUBLIC_GA_TRACKING_ID ||
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ||
-  DEFAULT_GA_TRACKING_ID;
+const configuredTrackingId = ENV_TRACKING_ID_CANDIDATES[0]?.trim().toUpperCase();
+const gaIdPattern = /^G-[A-Z0-9]+$/;
 
-export const GA_TRACKING_ID = rawTrackingId.trim();
-export const USING_GA_FALLBACK = !hasConfiguredTrackingId;
+if (
+  process.env.NODE_ENV === 'production' &&
+  configuredTrackingId &&
+  configuredTrackingId !== REQUIRED_GA_TRACKING_ID
+) {
+  console.warn(
+    `[Analytics] Ignoring mismatched GA ID "${configuredTrackingId}". Using required property ID "${REQUIRED_GA_TRACKING_ID}".`
+  );
+}
+
+export const GA_TRACKING_ID =
+  configuredTrackingId && gaIdPattern.test(configuredTrackingId) && configuredTrackingId === REQUIRED_GA_TRACKING_ID
+    ? configuredTrackingId
+    : REQUIRED_GA_TRACKING_ID;
+export const USING_GA_FALLBACK = !configuredTrackingId;
 
 declare global {
   interface Window {
