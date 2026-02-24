@@ -136,7 +136,9 @@ const App = () => {
         analyticsWindow.dataLayer?.push(args);
       }
 
-      window.gtag = gtagInit as typeof window.gtag;
+      if (typeof window.gtag !== 'function') {
+        window.gtag = gtagInit;
+      }
 
       window.gtag?.('consent', 'default', {
         analytics_storage: 'denied',
@@ -161,21 +163,16 @@ const App = () => {
     };
 
     const loadAnalytics = () => {
+      initializeGtag();
+
       const existingScript = document.querySelector(`script[src="${analyticsSrc}"]`) as HTMLScriptElement | null;
 
       if (!existingScript) {
         const script = document.createElement('script');
         script.src = analyticsSrc;
         script.async = true;
-        script.onload = initializeGtag;
         document.head.appendChild(script);
         return;
-      }
-
-      initializeGtag();
-
-      if (typeof window.gtag !== 'function') {
-        existingScript.addEventListener('load', initializeGtag, { once: true });
       }
     };
 
