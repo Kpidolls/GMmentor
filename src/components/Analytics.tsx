@@ -184,6 +184,9 @@ const App = () => {
     const syncConsent = () => {
       const consentState = getAnalyticsConsentFromCookieYes();
       if (!consentState) {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('[Analytics] No CookieYes analytics consent found yet; GA remains denied.');
+        }
         return;
       }
 
@@ -204,13 +207,16 @@ const App = () => {
     consentEvents.forEach((eventName) => {
       window.addEventListener(eventName, syncConsent as EventListener);
     });
-    const delayedConsentSync = window.setTimeout(syncConsent, 1500);
+    syncConsent();
+    const delayedConsentSyncOne = window.setTimeout(syncConsent, 1500);
+    const delayedConsentSyncTwo = window.setTimeout(syncConsent, 4000);
 
     return () => {
       consentEvents.forEach((eventName) => {
         window.removeEventListener(eventName, syncConsent as EventListener);
       });
-      window.clearTimeout(delayedConsentSync);
+      window.clearTimeout(delayedConsentSyncOne);
+      window.clearTimeout(delayedConsentSyncTwo);
     };
   }, []);
 
