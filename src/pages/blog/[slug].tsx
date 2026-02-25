@@ -19,9 +19,29 @@ const MarkdownComponents = {
   h3: (props: ComponentProps<'h3'>) => <Heading as="h4" size="sm" mt={4} mb={2} {...props} />,
   p: (props: ComponentProps<'p'>) => <Text mb={4} lineHeight="1.8" {...props} />,
   a: (props: ComponentProps<'a'>) => <Link color="teal.500" isExternal {...props} />,
+  figure: (props: ComponentProps<'figure'>) => <Box as="figure" my={7} mx="auto" maxW="760px" {...props} />,
+  figcaption: (props: ComponentProps<'figcaption'>) => (
+    <Text as="figcaption" mt={2} fontSize="sm" color="gray.600" textAlign="center" lineHeight="1.6" {...props} />
+  ),
   img: (props: ComponentProps<'img'>) =>
     typeof props?.src === 'string'
-      ? <Image src={props.src} alt={props.alt ?? ''} borderRadius="lg" my={4} />
+      ? (
+        <Image
+          src={props.src}
+          alt={props.alt ?? ''}
+          borderRadius="xl"
+          my={5}
+          w="100%"
+          maxW="760px"
+          mx="auto"
+          maxH="460px"
+          objectFit="cover"
+          border="1px solid"
+          borderColor="gray.200"
+          boxShadow="md"
+          loading="lazy"
+        />
+      )
       : null,
   code: (props: ComponentProps<'code'>) => <Code colorScheme="yellow" px={2} py={1} borderRadius="md" {...props} />,
   ul: (props: ComponentProps<'ul'>) => <Box as="ul" pl={5} mb={4} style={{ listStyleType: 'disc' }} {...props} />,

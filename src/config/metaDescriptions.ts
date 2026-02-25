@@ -78,12 +78,18 @@ export const metaDescriptions = {
 
   blogGreekMusicAthensEn: "Live Greek music in Athens guide: trusted bouzoukia and tavernas, real costs, flower traditions, and practical tips for a great night out.",
 
+  blogSouvenirsAthensEn: "Best Greek souvenirs in Athens: authentic spices, coffee, honey, leather sandals, designer brands, and where to buy trusted local products.",
+
   blogGreekMusicAthensEl: "Οδηγός ζωντανής ελληνικής μουσικής στην Αθήνα: αξιόπιστα μπουζούκια και ταβέρνες, πραγματικό κόστος, λουλούδια και πρακτικές συμβουλές για τη βραδιά σας.",
+
+  blogSouvenirsAthensEl: "Τα καλύτερα ελληνικά σουβενίρ στην Αθήνα: αυθεντικά μπαχαρικά, καφές, μέλι, δερμάτινα σανδάλια, ελληνικές μάρκες και σημεία για ποιοτικές αγορές.",
 };
 
 const blogMetaDescriptionBySlug: Record<string, keyof typeof metaDescriptions> = {
   'athens-live-greek-music-guide': 'blogGreekMusicAthensEn',
   'athens-live-greek-music-guide-el': 'blogGreekMusicAthensEl',
+  'best-greek-souvenirs-athens': 'blogSouvenirsAthensEn',
+  'best-greek-souvenirs-athens-el': 'blogSouvenirsAthensEl',
 }
 
 export function getBlogMetaDescriptionBySlug(slug: string): string | undefined {
