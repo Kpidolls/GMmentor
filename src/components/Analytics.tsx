@@ -10,6 +10,7 @@ const App = () => {
   const router = useRouter();
   const analyticsInitializedRef = useRef(false);
   const initialPageviewSentRef = useRef(false);
+  const analyticsConsentGrantedRef = useRef(false);
 
   useEffect(() => {
     if (process.env.NODE_ENV === 'production' && gtag.USING_GA_FALLBACK) {
@@ -156,6 +157,7 @@ const App = () => {
       const consentState = getAnalyticsConsentFromCookieYes();
       if (consentState) {
         gtag.updateConsent(consentState);
+        analyticsConsentGrantedRef.current = consentState === 'granted';
         if (consentState === 'granted') {
           sendInitialPageview();
         }
@@ -188,6 +190,7 @@ const App = () => {
       }
 
       gtag.updateConsent(consentState);
+      analyticsConsentGrantedRef.current = consentState === 'granted';
 
       if (consentState === 'granted' && typeof window.gtag === 'function') {
         sendInitialPageview();
@@ -223,7 +226,7 @@ const App = () => {
     }
 
     const handleRouteChange = (url: string) => {
-      if (typeof window.gtag !== 'function') {
+      if (typeof window.gtag !== 'function' || !analyticsConsentGrantedRef.current) {
         return;
       }
       gtag.pageview(url);
