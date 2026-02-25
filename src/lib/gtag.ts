@@ -10,21 +10,15 @@ const ENV_TRACKING_ID_CANDIDATES = [
 const configuredTrackingId = ENV_TRACKING_ID_CANDIDATES[0]?.trim().toUpperCase();
 const gaIdPattern = /^G-[A-Z0-9]+$/;
 
-if (
-  process.env.NODE_ENV === 'production' &&
-  configuredTrackingId &&
-  configuredTrackingId !== REQUIRED_GA_TRACKING_ID
-) {
+if (process.env.NODE_ENV === 'production' && configuredTrackingId && !gaIdPattern.test(configuredTrackingId)) {
   console.warn(
-    `[Analytics] Ignoring mismatched GA ID "${configuredTrackingId}". Using required property ID "${REQUIRED_GA_TRACKING_ID}".`
+    `[Analytics] Invalid GA ID "${configuredTrackingId}". Falling back to "${REQUIRED_GA_TRACKING_ID}".`
   );
 }
 
 export const GA_TRACKING_ID =
-  configuredTrackingId && gaIdPattern.test(configuredTrackingId) && configuredTrackingId === REQUIRED_GA_TRACKING_ID
-    ? configuredTrackingId
-    : REQUIRED_GA_TRACKING_ID;
-export const USING_GA_FALLBACK = !configuredTrackingId;
+  configuredTrackingId && gaIdPattern.test(configuredTrackingId) ? configuredTrackingId : REQUIRED_GA_TRACKING_ID;
+export const USING_GA_FALLBACK = !(configuredTrackingId && gaIdPattern.test(configuredTrackingId));
 
 declare global {
   interface Window {
@@ -57,7 +51,13 @@ export const pageview = (url: string) => {
     return;
   }
 
-  window.gtag?.('config', GA_TRACKING_ID, {
+  const normalizedLocation = url.startsWith('http')
+    ? url
+    : `${window.location.origin}${url.startsWith('/') ? url : `/${url}`}`;
+
+  window.gtag?.('event', 'page_view', {
+    page_title: document.title,
+    page_location: normalizedLocation,
     page_path: url,
   });
 };
