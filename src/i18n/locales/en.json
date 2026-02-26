@@ -901,6 +901,72 @@
     "noEnglishVersion": "This article is not available in English.",
     "noGreekVersion": "This article is not available in Greek.",
     "langSwitchLabel": "{{label}}",
+    "share": {
+      "title": "Share this guide",
+      "subtitle": "Know someone who would find this useful? Send it with one click.",
+      "relevantFor": "Relevant for",
+      "shareOn": "Share on",
+      "copy": "Copy link",
+      "copied": "Copied",
+      "native": "Share",
+      "messageDefault": "Useful Greece travel guide from Googlementor.",
+      "social": {
+        "x": "X",
+        "facebook": "Facebook",
+        "whatsapp": "WhatsApp",
+        "linkedin": "LinkedIn"
+      },
+      "audience": {
+        "default": "travelers planning a trip to Greece",
+        "foodies": "food lovers and brunch explorers",
+        "families": "families planning stress-free outings",
+        "adventurers": "adventure seekers and island explorers",
+        "culture": "culture-focused travelers and first-time visitors",
+        "budget": "budget-conscious travelers"
+      },
+      "context": {
+        "default": {
+          "title": "Share this guide",
+          "subtitle": "Know someone who would find this useful? Send it with one click.",
+          "audience": "travelers planning a trip to Greece"
+        },
+        "food": {
+          "title": "Share this food guide",
+          "subtitle": "Perfect for someone choosing where to eat in Greece.",
+          "audience": "food lovers and local-flavor seekers"
+        },
+        "culture": {
+          "title": "Share this culture guide",
+          "subtitle": "Great for visitors who want history and landmarks with context.",
+          "audience": "culture-focused travelers and first-time visitors"
+        },
+        "transport": {
+          "title": "Share this transport guide",
+          "subtitle": "Useful for anyone planning airport, ferry, or city transfers.",
+          "audience": "travelers who want smooth arrivals and connections"
+        },
+        "itinerary": {
+          "title": "Share this trip-planning guide",
+          "subtitle": "Useful for friends building their Greece itinerary.",
+          "audience": "travelers planning day-by-day routes in Greece"
+        },
+        "nightlife": {
+          "title": "Share this nightlife guide",
+          "subtitle": "Send this to someone planning evenings out in Greece.",
+          "audience": "nightlife fans and music lovers"
+        },
+        "islands": {
+          "title": "Share this islands guide",
+          "subtitle": "Helpful for anyone choosing the right Greek islands.",
+          "audience": "island hoppers and summer travelers"
+        },
+        "budget": {
+          "title": "Share this budget-friendly guide",
+          "subtitle": "A practical pick for travelers who want high value.",
+          "audience": "budget-conscious travelers"
+        }
+      }
+    },
     "giveBestRecommendations": {
       "title": "Share the Best Places and Make Travel Easier",
       "summary": "Real recommendations from travelers and locals to help everyone discover better places in Greece.",
