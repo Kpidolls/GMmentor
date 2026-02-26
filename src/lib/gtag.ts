@@ -9,6 +9,8 @@ const ENV_TRACKING_ID_CANDIDATES = [
 
 const configuredTrackingId = ENV_TRACKING_ID_CANDIDATES[0]?.trim().toUpperCase();
 const gaIdPattern = /^G-[A-Z0-9]+$/;
+const hasValidConfiguredTrackingId = !!configuredTrackingId && gaIdPattern.test(configuredTrackingId);
+const configuredTrackingIdMatchesRequired = hasValidConfiguredTrackingId && configuredTrackingId === REQUIRED_GA_TRACKING_ID;
 
 if (process.env.NODE_ENV === 'production' && configuredTrackingId && !gaIdPattern.test(configuredTrackingId)) {
   console.warn(
@@ -16,9 +18,18 @@ if (process.env.NODE_ENV === 'production' && configuredTrackingId && !gaIdPatter
   );
 }
 
-export const GA_TRACKING_ID =
-  configuredTrackingId && gaIdPattern.test(configuredTrackingId) ? configuredTrackingId : REQUIRED_GA_TRACKING_ID;
-export const USING_GA_FALLBACK = !(configuredTrackingId && gaIdPattern.test(configuredTrackingId));
+if (
+  process.env.NODE_ENV === 'production' &&
+  hasValidConfiguredTrackingId &&
+  !configuredTrackingIdMatchesRequired
+) {
+  console.warn(
+    `[Analytics] Ignoring env GA ID "${configuredTrackingId}" to keep production tracking on "${REQUIRED_GA_TRACKING_ID}".`
+  );
+}
+
+export const GA_TRACKING_ID = REQUIRED_GA_TRACKING_ID;
+export const USING_GA_FALLBACK = !configuredTrackingIdMatchesRequired;
 
 declare global {
   interface Window {
