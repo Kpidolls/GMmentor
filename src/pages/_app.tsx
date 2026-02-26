@@ -9,9 +9,9 @@ import usePersistedLanguage from '../hooks/usePersistedLanguage';
 import Layout from '../components/Layout';
 import { Roboto } from 'next/font/google';
 import Header from '../components/Header';
+import Analytics from '../components/Analytics';
 
 const BackToTop = dynamic(() => import('../components/BackToTop'), { ssr: false });
-const Analytics = dynamic(() => import('../components/Analytics'), { ssr: false });
 
 const roboto = Roboto({
   subsets: ['latin'],

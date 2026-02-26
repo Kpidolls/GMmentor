@@ -221,7 +221,7 @@ const App = () => {
     syncConsent();
     const delayedConsentSyncOne = window.setTimeout(syncConsent, 1500);
     const delayedConsentSyncTwo = window.setTimeout(syncConsent, 4000);
-    const consentFallbackTimeout = window.setTimeout(enableAnalyticsFallbackIfUnresolved, 6000);
+    const consentFallbackTimeout = window.setTimeout(enableAnalyticsFallbackIfUnresolved, 2500);
 
     return () => {
       consentEvents.forEach((eventName) => {
