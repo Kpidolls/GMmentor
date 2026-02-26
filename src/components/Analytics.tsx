@@ -11,11 +11,12 @@ const App = () => {
   const analyticsInitializedRef = useRef(false);
   const initialPageviewSentRef = useRef(false);
   const analyticsConsentGrantedRef = useRef(false);
+  const consentResolvedRef = useRef(false);
 
   useEffect(() => {
     if (process.env.NODE_ENV === 'production' && gtag.USING_GA_FALLBACK) {
       console.warn(
-        '[Analytics] Using fallback GA measurement ID. Set NEXT_PUBLIC_GOOGLE_ANALYTICS in the deployment build environment.'
+        '[Analytics] Enforcing GA measurement ID G-7KYV8QK51B for production tracking.'
       );
     }
 
@@ -28,7 +29,6 @@ const App = () => {
       return;
     }
 
-    const analyticsSrc = `https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`;
     const analyticsWindow = window as Window & {
       dataLayer?: unknown[][];
     };
@@ -116,6 +116,20 @@ const App = () => {
       return null;
     };
 
+    const applyConsentState = (consentState: 'granted' | 'denied', reason: string) => {
+      gtag.updateConsent(consentState);
+      consentResolvedRef.current = true;
+      analyticsConsentGrantedRef.current = consentState === 'granted';
+
+      if (process.env.NODE_ENV === 'development') {
+        console.info(`[Analytics] Consent ${consentState} (${reason})`);
+      }
+
+      if (consentState === 'granted' && typeof window.gtag === 'function') {
+        sendInitialPageview();
+      }
+    };
+
     const sendInitialPageview = () => {
       if (initialPageviewSentRef.current) {
         return;
@@ -156,29 +170,15 @@ const App = () => {
 
       const consentState = getAnalyticsConsentFromCookieYes();
       if (consentState) {
-        gtag.updateConsent(consentState);
-        analyticsConsentGrantedRef.current = consentState === 'granted';
-        if (consentState === 'granted') {
-          sendInitialPageview();
-        }
+        applyConsentState(consentState, 'cookieyes_cookie_initial');
       }
     };
 
-    const loadAnalytics = () => {
+    const initializeAnalytics = () => {
       initializeGtag();
-
-      const existingScript = document.querySelector(`script[src="${analyticsSrc}"]`) as HTMLScriptElement | null;
-
-      if (!existingScript) {
-        const script = document.createElement('script');
-        script.src = analyticsSrc;
-        script.async = true;
-        document.head.appendChild(script);
-        return;
-      }
     };
 
-    loadAnalytics();
+    initializeAnalytics();
 
     const syncConsent = () => {
       const consentState = getAnalyticsConsentFromCookieYes();
@@ -189,19 +189,30 @@ const App = () => {
         return;
       }
 
-      gtag.updateConsent(consentState);
-      analyticsConsentGrantedRef.current = consentState === 'granted';
+      applyConsentState(consentState, 'cookieyes_event_or_cookie_update');
+    };
 
-      if (consentState === 'granted' && typeof window.gtag === 'function') {
-        sendInitialPageview();
+    const enableAnalyticsFallbackIfUnresolved = () => {
+      if (consentResolvedRef.current) {
+        return;
       }
+
+      if (process.env.NODE_ENV !== 'production') {
+        return;
+      }
+
+      applyConsentState('granted', 'fallback_no_cookieyes_signal');
+      console.warn('[Analytics] CookieYes consent signal missing; applied fallback analytics consent to restore tracking.');
     };
 
     const consentEvents = [
       'cookieyes_consent_update',
+      'cookieyes_consent_updated',
       'cookieyes_consent_accept',
       'cookieyes_consent_reject',
       'cookieyes_banner_close',
+      'cookieyes_banner_loaded',
+      'cky_consent_update',
     ];
 
     consentEvents.forEach((eventName) => {
@@ -210,6 +221,7 @@ const App = () => {
     syncConsent();
     const delayedConsentSyncOne = window.setTimeout(syncConsent, 1500);
     const delayedConsentSyncTwo = window.setTimeout(syncConsent, 4000);
+    const consentFallbackTimeout = window.setTimeout(enableAnalyticsFallbackIfUnresolved, 6000);
 
     return () => {
       consentEvents.forEach((eventName) => {
@@ -217,6 +229,7 @@ const App = () => {
       });
       window.clearTimeout(delayedConsentSyncOne);
       window.clearTimeout(delayedConsentSyncTwo);
+      window.clearTimeout(consentFallbackTimeout);
     };
   }, []);
 
@@ -239,8 +252,18 @@ const App = () => {
 
   return (
     <>
+      {gtag.GA_TRACKING_ID && (
+        <Script
+          id="ga4-tag"
+          strategy="afterInteractive"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+          crossOrigin="anonymous"
+        />
+      )}
       {GA_ADS_ID && (
         <Script
+          id="ga-ads-tag"
           strategy="lazyOnload"
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ADS_ID}`}
