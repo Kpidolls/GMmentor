@@ -164,9 +164,8 @@ export default function Blog({ allPosts }: BlogProps) {
               {posts.map((post) => (
                 <GridItem key={post.slug}>
                   {/* Wrap entire card in Link for consistent clickability */}
-                  <Link href={`/blog/${post.slug}`} passHref legacyBehavior>
+                  <Link href={`/blog/${post.slug}`}>
                     <Box
-                      as="a"
                       className="group"
                       bg="white"
                       borderRadius="2xl"
