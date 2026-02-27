@@ -6,6 +6,9 @@ import Script from 'next/script';
 import { GA_ADS_ID } from '../lib/googleAds';
 import * as gtag from '../lib/gtag';
 
+type ConsentState = 'granted' | 'denied';
+const LOCAL_CONSENT_KEY = 'googlementor_analytics_consent';
+
 const App = () => {
   const router = useRouter();
   const analyticsInitializedRef = useRef(false);
@@ -31,6 +34,12 @@ const App = () => {
 
     const analyticsWindow = window as Window & {
       dataLayer?: unknown[][];
+      CookieYes?: {
+        consent?: Record<string, unknown>;
+      };
+      ckyConsent?: {
+        categories?: Record<string, unknown>;
+      };
     };
 
     const getCookieValue = (cookieName: string) => {
@@ -40,7 +49,7 @@ const App = () => {
       return cookieValue ? decodeURIComponent(cookieValue) : '';
     };
 
-    const normalizeConsentValue = (value: unknown): 'granted' | 'denied' | null => {
+    const normalizeConsentValue = (value: unknown): ConsentState | null => {
       if (typeof value === 'boolean') {
         return value ? 'granted' : 'denied';
       }
@@ -69,7 +78,35 @@ const App = () => {
       return null;
     };
 
-    const getAnalyticsConsentFromCookieYes = (): 'granted' | 'denied' | null => {
+    const extractConsentFromCategoryList = (value: unknown): ConsentState | null => {
+      if (!Array.isArray(value)) {
+        return null;
+      }
+
+      const normalizedEntries = value
+        .map((entry) => (typeof entry === 'string' ? entry.trim().toLowerCase() : ''))
+        .filter(Boolean);
+
+      if (normalizedEntries.includes('analytics')) {
+        return 'granted';
+      }
+
+      return null;
+    };
+
+    const getAnalyticsConsentFromCookieYes = (): ConsentState | null => {
+      const cookieYesConsent = analyticsWindow.CookieYes?.consent as Record<string, unknown> | undefined;
+      const cookieYesApiValue = normalizeConsentValue(cookieYesConsent?.analytics);
+      if (cookieYesApiValue) {
+        return cookieYesApiValue;
+      }
+
+      const ckyConsentCategories = analyticsWindow.ckyConsent?.categories as Record<string, unknown> | undefined;
+      const ckyApiValue = normalizeConsentValue(ckyConsentCategories?.analytics);
+      if (ckyApiValue) {
+        return ckyApiValue;
+      }
+
       const consentCookie = getCookieValue('cookieyes-consent') || getCookieValue('cky-consent');
       if (!consentCookie) {
         return null;
@@ -116,10 +153,98 @@ const App = () => {
       return null;
     };
 
-    const applyConsentState = (consentState: 'granted' | 'denied', reason: string) => {
+    const getAnalyticsConsentFromEvent = (event?: Event): ConsentState | null => {
+      if (!event) {
+        return null;
+      }
+
+      const detail = (event as CustomEvent<unknown>).detail;
+      if (!detail || typeof detail !== 'object') {
+        return null;
+      }
+
+      const detailRecord = detail as Record<string, unknown>;
+
+      const directCandidates = [
+        detailRecord.analytics,
+        detailRecord.analytics_storage,
+        detailRecord.value,
+        detailRecord.status,
+      ];
+
+      for (const candidate of directCandidates) {
+        const normalizedCandidate = normalizeConsentValue(candidate);
+        if (normalizedCandidate) {
+          return normalizedCandidate;
+        }
+      }
+
+      const acceptedCategories =
+        extractConsentFromCategoryList(detailRecord.accepted) ||
+        extractConsentFromCategoryList(detailRecord.acceptedCategories) ||
+        extractConsentFromCategoryList(detailRecord.categoriesAllowed);
+
+      if (acceptedCategories) {
+        return acceptedCategories;
+      }
+
+      const rejectedCandidates = [detailRecord.rejected, detailRecord.rejectedCategories, detailRecord.categoriesDisallowed];
+      for (const candidate of rejectedCandidates) {
+        if (Array.isArray(candidate)) {
+          const normalizedEntries = candidate
+            .map((entry) => (typeof entry === 'string' ? entry.trim().toLowerCase() : ''))
+            .filter(Boolean);
+
+          if (normalizedEntries.includes('analytics')) {
+            return 'denied';
+          }
+        }
+      }
+
+      const categoriesValue = detailRecord.categories as Record<string, unknown> | undefined;
+      const categoryConsent = normalizeConsentValue(categoriesValue?.analytics);
+      if (categoryConsent) {
+        return categoryConsent;
+      }
+
+      const consentValue = detailRecord.consent as Record<string, unknown> | undefined;
+      const consentAnalytics = normalizeConsentValue(consentValue?.analytics);
+      if (consentAnalytics) {
+        return consentAnalytics;
+      }
+
+      return null;
+    };
+
+    const readPersistedConsentState = (): ConsentState | null => {
+      if (typeof window === 'undefined') {
+        return null;
+      }
+
+      try {
+        const storedValue = window.localStorage.getItem(LOCAL_CONSENT_KEY);
+        return normalizeConsentValue(storedValue);
+      } catch {
+        return null;
+      }
+    };
+
+    const persistConsentState = (consentState: ConsentState) => {
+      if (typeof window === 'undefined') {
+        return;
+      }
+
+      try {
+        window.localStorage.setItem(LOCAL_CONSENT_KEY, consentState);
+      } catch {
+      }
+    };
+
+    const applyConsentState = (consentState: ConsentState, reason: string) => {
       gtag.updateConsent(consentState);
       consentResolvedRef.current = true;
       analyticsConsentGrantedRef.current = consentState === 'granted';
+      persistConsentState(consentState);
 
       if (process.env.NODE_ENV === 'development') {
         console.info(`[Analytics] Consent ${consentState} (${reason})`);
@@ -180,8 +305,8 @@ const App = () => {
 
     initializeAnalytics();
 
-    const syncConsent = () => {
-      const consentState = getAnalyticsConsentFromCookieYes();
+    const syncConsent = (event?: Event) => {
+      const consentState = getAnalyticsConsentFromEvent(event) || getAnalyticsConsentFromCookieYes();
       if (!consentState) {
         if (process.env.NODE_ENV === 'development') {
           console.warn('[Analytics] No CookieYes analytics consent found yet; GA remains denied.');
@@ -192,17 +317,21 @@ const App = () => {
       applyConsentState(consentState, 'cookieyes_event_or_cookie_update');
     };
 
-    const enableAnalyticsFallbackIfUnresolved = () => {
-      if (consentResolvedRef.current) {
+    const applyPersistedFallbackConsent = () => {
+      if (consentResolvedRef.current || process.env.NODE_ENV !== 'production') {
         return;
       }
 
-      if (process.env.NODE_ENV !== 'production') {
+      const persistedConsent = readPersistedConsentState();
+      if (!persistedConsent) {
         return;
       }
 
-      applyConsentState('granted', 'fallback_no_cookieyes_signal');
-      console.warn('[Analytics] CookieYes consent signal missing; applied fallback analytics consent to restore tracking.');
+      applyConsentState(persistedConsent, 'persisted_consent_fallback');
+
+      if (process.env.NODE_ENV === 'production') {
+        console.warn('[Analytics] CookieYes signal missing; restored previously saved analytics consent.');
+      }
     };
 
     const consentEvents = [
@@ -221,7 +350,7 @@ const App = () => {
     syncConsent();
     const delayedConsentSyncOne = window.setTimeout(syncConsent, 1500);
     const delayedConsentSyncTwo = window.setTimeout(syncConsent, 4000);
-    const consentFallbackTimeout = window.setTimeout(enableAnalyticsFallbackIfUnresolved, 2500);
+    const consentFallbackTimeout = window.setTimeout(applyPersistedFallbackConsent, 5000);
 
     return () => {
       consentEvents.forEach((eventName) => {
