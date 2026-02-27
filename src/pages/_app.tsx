@@ -5,6 +5,7 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '../styles/main.css';
 import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 import usePersistedLanguage from '../hooks/usePersistedLanguage';
 import Layout from '../components/Layout';
 import { Roboto } from 'next/font/google';
@@ -36,6 +37,7 @@ const shouldEnableAnalytics =
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   usePersistedLanguage();
+  const router = useRouter();
 
   useEffect(() => {
     if (process.env.NODE_ENV !== 'development') return;
@@ -66,6 +68,23 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
     cleanupDevServiceWorkers();
   }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const { pathname, search, hash } = window.location;
+
+    if (pathname.length <= 1 || !pathname.endsWith('/')) {
+      return;
+    }
+
+    const canonicalPath = pathname.replace(/\/+$/, '');
+    const canonicalUrl = `${canonicalPath}${search}${hash}`;
+
+    router.replace(canonicalUrl, undefined, { shallow: true });
+  }, [router]);
 
   return (
     <ChakraProvider theme={customTheme}>

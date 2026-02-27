@@ -29,7 +29,6 @@ const Store: React.FC = () => {
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/store" />
-        <link rel="canonical" href="https://googlementor.com/store" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
