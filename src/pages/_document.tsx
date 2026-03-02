@@ -2,7 +2,6 @@
 /* eslint-disable @next/next/no-head-element */
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { AppConfig } from '../utils/AppConfig';
-import Script from 'next/script';
 import { contentSecurityPolicy } from '../utils/csp';
 
 class MyDocument extends Document {
@@ -67,14 +66,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {/* Load CookieYes in production to collect consent state early */}
-          {process.env.NODE_ENV === 'production' && (
-            <Script
-              id="cookieyes"
-              strategy="afterInteractive"
-              src="https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js"
-            />
-          )}
         </body>
       </Html>
     );
