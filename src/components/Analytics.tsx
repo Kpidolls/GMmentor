@@ -13,7 +13,6 @@ const App = () => {
   const router = useRouter();
   const analyticsInitializedRef = useRef(false);
   const initialPageviewSentRef = useRef(false);
-  const analyticsConsentGrantedRef = useRef(false);
   const consentResolvedRef = useRef(false);
 
   useEffect(() => {
@@ -243,14 +242,13 @@ const App = () => {
     const applyConsentState = (consentState: ConsentState, reason: string) => {
       gtag.updateConsent(consentState);
       consentResolvedRef.current = true;
-      analyticsConsentGrantedRef.current = consentState === 'granted';
       persistConsentState(consentState);
 
       if (process.env.NODE_ENV === 'development') {
         console.info(`[Analytics] Consent ${consentState} (${reason})`);
       }
 
-      if (consentState === 'granted' && typeof window.gtag === 'function') {
+      if (typeof window.gtag === 'function') {
         sendInitialPageview();
       }
     };
@@ -304,6 +302,7 @@ const App = () => {
     };
 
     initializeAnalytics();
+    sendInitialPageview();
 
     const syncConsent = (event?: Event) => {
       const consentState = getAnalyticsConsentFromEvent(event) || getAnalyticsConsentFromCookieYes();
@@ -368,7 +367,7 @@ const App = () => {
     }
 
     const handleRouteChange = (url: string) => {
-      if (typeof window.gtag !== 'function' || !analyticsConsentGrantedRef.current) {
+      if (typeof window.gtag !== 'function') {
         return;
       }
       gtag.pageview(url);
