@@ -47,33 +47,6 @@ declare global {
 
 type ConsentState = 'granted' | 'denied';
 
-const normalizePagePath = (rawUrl: string) => {
-  const sanitizedRawUrl = typeof rawUrl === 'string' ? rawUrl : '/';
-  const [urlWithoutHash = '/'] = sanitizedRawUrl.split('#');
-  const [pathname = '/', search = ''] = urlWithoutHash.split('?');
-
-  let normalizedPathname: string = pathname;
-
-  if (normalizedPathname.startsWith('http://') || normalizedPathname.startsWith('https://')) {
-    try {
-      const parsedUrl = new URL(normalizedPathname);
-      normalizedPathname = parsedUrl.pathname;
-    } catch {
-      normalizedPathname = '/';
-    }
-  }
-
-  if (!normalizedPathname.startsWith('/')) {
-    normalizedPathname = `/${normalizedPathname}`;
-  }
-
-  if (normalizedPathname.length > 1 && normalizedPathname.endsWith('/')) {
-    normalizedPathname = normalizedPathname.replace(/\/+$/, '');
-  }
-
-  return search ? `${normalizedPathname}?${search}` : normalizedPathname;
-};
-
 const canUseGtag = () => {
   return typeof window !== 'undefined' && typeof window.gtag === 'function' && !!GA_TRACKING_ID;
 };
@@ -97,20 +70,8 @@ export const pageview = (url: string) => {
     return;
   }
 
-  const normalizedPath = normalizePagePath(url);
-
-  const normalizedLocation = `${window.location.origin}${normalizedPath}`;
-
-  window.gtag?.('config', GA_TRACKING_ID, {
-    page_path: normalizedPath,
-    debug_mode: isGaDebugModeEnabled(),
-  });
-
   window.gtag?.('event', 'page_view', {
-    page_title: document.title,
-    page_location: normalizedLocation,
-    page_path: normalizedPath,
-    debug_mode: isGaDebugModeEnabled(),
+    page_path: url,
   });
 };
 
