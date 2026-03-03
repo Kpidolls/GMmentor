@@ -22,6 +22,23 @@ export const GA_TRACKING_ID = hasValidConfiguredTrackingId
   : REQUIRED_GA_TRACKING_ID;
 export const USING_GA_FALLBACK = !hasValidConfiguredTrackingId;
 
+const hasGaDebugQueryFlag = () => {
+  if (typeof window === 'undefined') {
+    return false;
+  }
+
+  const searchParams = new URLSearchParams(window.location.search);
+  return searchParams.get('ga_debug') === '1';
+};
+
+export const isGaDebugModeEnabled = () => {
+  return (
+    process.env.NODE_ENV !== 'production' ||
+    process.env.NEXT_PUBLIC_ANALYTICS_DEBUG === 'true' ||
+    hasGaDebugQueryFlag()
+  );
+};
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -86,12 +103,14 @@ export const pageview = (url: string) => {
 
   window.gtag?.('config', GA_TRACKING_ID, {
     page_path: normalizedPath,
+    debug_mode: isGaDebugModeEnabled(),
   });
 
   window.gtag?.('event', 'page_view', {
     page_title: document.title,
     page_location: normalizedLocation,
     page_path: normalizedPath,
+    debug_mode: isGaDebugModeEnabled(),
   });
 };
 

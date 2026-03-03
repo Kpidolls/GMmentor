@@ -13,7 +13,17 @@ const App = () => {
   const router = useRouter();
   const analyticsInitializedRef = useRef(false);
   const initialPageviewSentRef = useRef(false);
+  const scriptLoadPageviewSentRef = useRef(false);
   const consentResolvedRef = useRef(false);
+
+  const sendScriptLoadPageview = () => {
+    if (scriptLoadPageviewSentRef.current || typeof window === 'undefined') {
+      return;
+    }
+
+    scriptLoadPageviewSentRef.current = true;
+    gtag.pageview(`${window.location.pathname}${window.location.search}`);
+  };
 
   useEffect(() => {
     if (process.env.NODE_ENV === 'production' && gtag.USING_GA_FALLBACK) {
@@ -289,6 +299,7 @@ const App = () => {
       window.gtag?.('js', new Date());
       window.gtag?.('config', gtag.GA_TRACKING_ID, {
         send_page_view: false,
+        debug_mode: gtag.isGaDebugModeEnabled(),
       });
 
       const consentState = getAnalyticsConsentFromCookieYes();
@@ -387,6 +398,7 @@ const App = () => {
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
           crossOrigin="anonymous"
+          onLoad={sendScriptLoadPageview}
         />
       )}
       {GA_ADS_ID && (
