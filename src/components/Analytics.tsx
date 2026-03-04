@@ -34,6 +34,8 @@ const App = () => {
     });
 
     const handleConsent = () => {
+      console.log('All cookies:', document.cookie);
+
       const cookie = document.cookie
         .split('; ')
         .find((row) => row.startsWith('cookieyes-consent='));
