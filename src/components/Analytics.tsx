@@ -34,30 +34,31 @@ const App = () => {
     });
 
     const handleConsent = () => {
-      console.log('All cookies:', document.cookie);
-
       const cookie = document.cookie
         .split('; ')
         .find((row) => row.startsWith('cookieyes-consent='));
 
       if (!cookie) return;
 
-      try {
-        const value = decodeURIComponent(cookie.split('=')[1] ?? '');
-        const parsed = JSON.parse(value);
+      const value = decodeURIComponent(cookie.split('=')[1] ?? '');
 
-        if (parsed.analytics === 'yes' || parsed.analytics === true) {
-          window.gtag?.('consent', 'update', {
-            analytics_storage: 'granted',
-          });
+      const analyticsMatch = value.match(/analytics:([^,]*)/);
+      const analyticsValue = analyticsMatch?.[1]?.trim();
 
-          if (!pageviewSent.current) {
-            gtag.pageview(window.location.pathname + window.location.search);
-            pageviewSent.current = true;
-          }
+      const isGranted =
+        analyticsValue === 'yes' ||
+        analyticsValue === 'true' ||
+        analyticsValue === '1';
+
+      if (isGranted) {
+        window.gtag?.('consent', 'update', {
+          analytics_storage: 'granted',
+        });
+
+        if (!pageviewSent.current) {
+          gtag.pageview(window.location.pathname + window.location.search);
+          pageviewSent.current = true;
         }
-      } catch {
-        // ignore parse errors
       }
     };
 
