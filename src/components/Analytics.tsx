@@ -33,6 +33,12 @@ const App = () => {
       send_page_view: false,
     });
 
+    window.gtag('consent', 'update', {
+      analytics_storage: 'granted',
+    });
+
+    gtag.pageview(window.location.pathname + window.location.search);
+
     const handleConsent = () => {
       const cookie = document.cookie
         .split('; ')
