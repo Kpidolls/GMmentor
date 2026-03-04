@@ -12,6 +12,8 @@ const App = () => {
   useEffect(() => {
     if (!gtag.GA_TRACKING_ID || typeof window === 'undefined') return;
 
+    console.log('GA ID:', gtag.GA_TRACKING_ID);
+
     const analyticsWindow = window as Window & {
       dataLayer?: unknown[][];
     };
