@@ -3442,5 +3442,103 @@
     "address": "Aristidou 3, Athina 105 59",
     "lat": "37.97978388430184",
     "lng": "23.72982150044081"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VgzGwQBJonZ2HWs87?g_st=ic",
+    "name": "Blends Mix & Match",
+    "address": "Pl. Nimfon, Glifada 166 74",
+    "lat": "37.86035282429643",
+    "lng": "23.756257632105665"
+  },
+  {
+    "url": "https://maps.app.goo.gl/hxd33pfTMwrTNJ6K6?g_st=ic",
+    "name": "Byrek",
+    "address": "Petrou Sindika 46, Thessaloniki 542 48",
+    "lat": "40.604437611308434",
+    "lng": "22.958000236614392"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wDYFkKSw6y1KG4Ye8?g_st=ic",
+    "name": "Louiza Athens",
+    "address": "Sfiggos 13, Athina 117 45",
+    "lat": "37.95836602961577",
+    "lng": "23.722700242324212"
+  },
+  {
+    "url": "https://maps.app.goo.gl/a8MxDmC9cjFhDaGA8?g_st=ic",
+    "name": "10AM apotheke",
+    "address": "Konstantinoupoleos Ave. 82, Athina 104 35",
+    "lat": "37.98117919525422",
+    "lng": "23.71209439007436"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fCZvCfcqYbM4mrRz8?g_st=ic",
+    "name": "Plakaki Cafe",
+    "address": "Pl. Filomousou Eterias 2, Athina 105 58",
+    "lat": "37.97168034602651",
+    "lng": "23.731177071228885"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XTb8dAWevvMWgsTW9?g_st=ic",
+    "name": "Chez Michel",
+    "address": "Irodotou 15, Athina 106 74",
+    "lat": "37.976675534882084",
+    "lng": "23.742456621704683"
+  },
+  {
+    "url": "https://maps.app.goo.gl/fE5D7HkmY8kdkhM6A?g_st=ic",
+    "name": "Melina Mercouri Café",
+    "address": "Lisiou 22, Athina 105 56",
+    "lat": "37.973329408985265",
+    "lng": "23.72859454809977"
+  },
+  {
+    "url": "https://maps.app.goo.gl/9BhYBbp4S79LCn6k9?g_st=ic",
+    "name": "Petrino Anthousa",
+    "address": "Edipsou 2-6, Anthousa 153 49",
+    "lat": "38.02672241020409",
+    "lng": "23.873783158410454"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jWyFQMPwKd4tru356?g_st=ic",
+    "name": "Batard",
+    "address": "Pirronos 23, Athina 116 36",
+    "lat": "37.963759332679615",
+    "lng": "23.742734753718384"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Dgayt5WtWZw7apFh8?g_st=ic",
+    "name": "To Peinirli tis Neas Ionias",
+    "address": "Ramnountos 76, Nea Ionia 142 34",
+    "lat": "38.039553570278855",
+    "lng": "23.75782693390007"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aQCR8vB88aVXiVXh6?g_st=ic",
+    "name": "Paul",
+    "address": "Andrea Papandreou 13, Chalandri 152 34",
+    "lat": "38.02202464306638",
+    "lng": "23.799672884172303"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RLKeacGYRRwh2No58?g_st=ic",
+    "name": "Philia Thessaloniki",
+    "address": "Pl. Navarinou 5, Thessaloniki 546 22",
+    "lat": "40.63033915762918",
+    "lng": "22.94834718792844"
+  },
+  {
+    "url": "https://maps.app.goo.gl/s3ATMeRgiCtC4BjXA?g_st=ic",
+    "name": "To Davelaki",
+    "address": "Unnamed Road, Mikonos 846 00",
+    "lat": "37.43471134705592",
+    "lng": "25.340570140407053"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mA58YYFj25woNwrd6?g_st=ic",
+    "name": "Zappa Athens at Aigli",
+    "address": "Zappeion Garden, Athina 105 57",
+    "lat": "37.97088612834781",
+    "lng": "23.737468844228125"
   }
 ]

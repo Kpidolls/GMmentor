@@ -2553,5 +2553,103 @@
     "address": "Miaouli 19, Athina 105 54",
     "lat": "37.97794945664196",
     "lng": "23.72507127899626"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Pj3P4kdv7qvwkpQG6?g_st=ic",
+    "name": "ΝΑΝΑ ΓΙΩΤΗ - ΓΛΥΚΑ ΑΠΟ ΣΠΙΤΙ",
+    "address": "Papanikoli 46, Chalandri 152 32",
+    "lat": "38.01918939040668",
+    "lng": "23.794563800847534"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AeWy5Es4sYdLyFSs7?g_st=ic",
+    "name": "Nana Gioti",
+    "address": "Leof. Pentelis 24, Vrilissia 152 35",
+    "lat": "38.03608519844928",
+    "lng": "23.825679872970344"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8B5hS4CF5VjiJNweA?g_st=ic",
+    "name": "Apalou bistro",
+    "address": "EO Neochoriou Tsagkaradas 26, Tsagkarada 370 12",
+    "lat": "39.38733910168991",
+    "lng": "23.17288978772186"
+  },
+  {
+    "url": "https://maps.app.goo.gl/pFdSDfbmt9PYS4wT9?g_st=ic",
+    "name": "Άννα να ένα μήλο",
+    "address": "Epar.Od. Agrias-Mileon 107, Milies 370 10",
+    "lat": "39.32818241324449",
+    "lng": "23.15069435375763"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sczkmU1Np3dY6Tu68?g_st=ic",
+    "name": "Nagomi Jpn",
+    "address": "Al. Svolou 41, Thessaloniki 546 22",
+    "lat": "40.630610942633574",
+    "lng": "22.951225832735567"
+  },
+  {
+    "url": "https://maps.app.goo.gl/AnM61t5BuRJETGV27?g_st=ic",
+    "name": "Artos Venetis",
+    "address": "Sarri 13, Athina 105 54",
+    "lat": "37.97931037334658",
+    "lng": "23.723187642950915"
+  },
+  {
+    "url": "https://maps.app.goo.gl/iys8A2TDdunHPN1i8?g_st=ic",
+    "name": "Cinnabon River West",
+    "address": "Par. Leoforou Kifisou 96-98, Egaleo 122 41",
+    "lat": "37.98076958767386",
+    "lng": "23.67777033031343"
+  },
+  {
+    "url": "https://maps.app.goo.gl/vrmA8yCaVwtzavyo7?g_st=ic",
+    "name": "PROFICHÉRIE",
+    "address": "El. Venizelou 28, Thessaloniki 546 24",
+    "lat": "40.635435050961",
+    "lng": "22.940491002950786"
+  },
+  {
+    "url": "https://maps.app.goo.gl/b6SrDJp3RTtqrXM58?g_st=ic",
+    "name": "Sol Bake and Coffee Project - Athens",
+    "address": "Πραξιτέλους 11, Chavriou 9, Athina 105 62",
+    "lat": "37.978160024245575",
+    "lng": "23.730562902712155"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wypmiNMsE5au37Mr7?g_st=ic",
+    "name": "Softie",
+    "address": "Proxenou Koromila 5, Thessaloniki 546 23",
+    "lat": "40.63175293928538",
+    "lng": "22.94216885639287"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GBYXZRmRKUPq81F8A?g_st=ic",
+    "name": "Eva",
+    "address": "Karaiskaki 16, Galatsi 111 46",
+    "lat": "38.015131929032286",
+    "lng": "23.750456340002337"
+  },
+  {
+    "url": "https://maps.app.goo.gl/6wWh68bY9rCwbUsj8?g_st=ic",
+    "name": "Queen Boutique Desserts",
+    "address": "Ag. Titou, Iraklio 712 02",
+    "lat": "35.34028577182634",
+    "lng": "25.13554567801893"
+  },
+  {
+    "url": "https://maps.app.goo.gl/M7U7vTzULNaTuLAg7?g_st=ic",
+    "name": "Sokolata Agapitos Patisserie 1944",
+    "address": "Tsimiski 10, Thessaloniki 546 24",
+    "lat": "40.63465415609907",
+    "lng": "22.93927735818438"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dBRJbrtLhCesFwGn6?g_st=ic",
+    "name": "Kyklamino Patisserie",
+    "address": "Mykonos 846 00",
+    "lat": "37.44220457179905",
+    "lng": "25.335568445326103"
   }
 ]
