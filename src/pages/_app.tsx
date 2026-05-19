@@ -1,7 +1,6 @@
 import '../i18n';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import Script from 'next/script';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '../styles/main.css';
 import { useEffect } from 'react';
@@ -35,9 +34,6 @@ const customTheme = extendTheme({
 
 const shouldEnableAnalytics =
   process.env.NODE_ENV === 'production' || process.env.NEXT_PUBLIC_ANALYTICS_DEBUG === 'true';
-
-const COOKIEYES_SCRIPT_SRC =
-  'https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   usePersistedLanguage();
@@ -95,9 +91,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      {process.env.NODE_ENV === 'production' && (
-        <Script id="cookieyes" strategy="beforeInteractive" src={COOKIEYES_SCRIPT_SRC} />
-      )}
       {shouldEnableAnalytics && <Analytics />}
       <Header />
       <main className={roboto.className}>

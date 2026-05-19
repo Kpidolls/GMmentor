@@ -4,6 +4,9 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { AppConfig } from '../utils/AppConfig';
 import { contentSecurityPolicy } from '../utils/csp';
 
+const COOKIEYES_SCRIPT_SRC =
+  'https://cdn-cookieyes.com/client_data/ee33fb975210e925edf22c27/script.js';
+
 class MyDocument extends Document {
   render() {
     return (
@@ -60,6 +63,10 @@ class MyDocument extends Document {
           <meta name="twitter:title" content="Googlementor - Travel better" />
           <meta name="twitter:description" content="Travel lists for trip planning" />
           <meta name="twitter:image" content="/assets/images/newlogo1.webp" />
+
+          {process.env.NODE_ENV === 'production' && (
+            <script id="cookieyes" src={COOKIEYES_SCRIPT_SRC} defer></script>
+          )}
 
 
         </Head>

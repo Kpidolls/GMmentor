@@ -691,5 +691,26 @@
     "address": "Komninon 3, Thessaloniki 546 24",
     "lat": "40.63309136297845",
     "lng": "22.939152229553493"
+  },
+  {
+    "url": "https://maps.app.goo.gl/8UyTpuy2ncGK15GJ6?g_st=ic",
+    "name": "Nagomi Jpn",
+    "address": "Al. Svolou 41, Thessaloniki 546 22",
+    "lat": "40.63061239454344",
+    "lng": "22.951225233616498"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RDSLJTa1W2roeGbr9?g_st=ic",
+    "name": "Noodle Bar",
+    "address": "Leof. Pentelis 1, Chalandri 152 34",
+    "lat": "38.022609797953606",
+    "lng": "23.8008077638359"
+  },
+  {
+    "url": "https://maps.app.goo.gl/mwPcNGYBVTJSy6C59?g_st=ic",
+    "name": "Kuchisabishii Sakaba",
+    "address": "Falirou 36, Athina 117 42",
+    "lat": "37.965507796335324",
+    "lng": "23.72667501899547"
   }
 ]

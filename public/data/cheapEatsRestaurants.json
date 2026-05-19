@@ -3022,5 +3022,40 @@
     "address": "Evripidou 15, Athina 105 60",
     "lat": "37.97957426393904",
     "lng": "23.728377000107947"
+  },
+  {
+    "url": "https://maps.app.goo.gl/w5kby75ZDPeF56mp7?g_st=ic",
+    "name": "Gouda luck",
+    "address": "Egnatia 144, Thessaloniki 546 22",
+    "lat": "40.632030062154726",
+    "lng": "22.9512395674924"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4aXg5d6SUN73hXDt8?g_st=ic",
+    "name": "La Jacka",
+    "address": "Καραΐσκου 117, Pireas 185 32",
+    "lat": "37.9421277470468",
+    "lng": "23.647527719022438"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ZgMdxKzTjuAureyV8?g_st=ic",
+    "name": "Grill 105 Street",
+    "address": "Kassandrou 105, Thessaloniki 546 33",
+    "lat": "40.63849961526695",
+    "lng": "22.950253004997894"
+  },
+  {
+    "url": "https://maps.app.goo.gl/VSmxeGeUsq75QADx9?g_st=ic",
+    "name": "ΓΙΑΝΝΙΩΤΙΚΟ ΣΟΥΒΛΑΚΙ",
+    "address": "Agias Paraskevis 95, Chalandri 152 34",
+    "lat": "38.018885728218706",
+    "lng": "23.80780825876153"
+  },
+  {
+    "url": "https://maps.app.goo.gl/bx6SursnbZv26g7m7?g_st=ic",
+    "name": "The Handmade souvlaki Ascension",
+    "address": "Eth. Antistaseos 26, Vrilissia 152 35",
+    "lat": "38.035547141118364",
+    "lng": "23.82691676685056"
   }
 ]
