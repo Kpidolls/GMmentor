@@ -23,7 +23,8 @@
       "sightseeing",
       "historical sites",
       "cultural sites"
-    ]
+    ],
+    "slug": "product-mustsee-title-985d"
   },
   {
     "id": "hiking",
@@ -43,7 +44,8 @@
       "mountains",
       "landscapes",
       "exploration"
-    ]
+    ],
+    "slug": "product-hiking-title-afdc"
   },
   {
     "id": "churches",
@@ -63,7 +65,8 @@
       "ekklisia",
       "agios",
       "agias"
-    ]
+    ],
+    "slug": "product-churches-title-9d80"
   },
   {
     "id": "wineries",
@@ -85,7 +88,8 @@
       "krasi",
       "wine tasting",
       "wine tours"
-    ]
+    ],
+    "slug": "product-wineries-title-6a7a"
   },
   {
     "id": "bars",
@@ -103,7 +107,8 @@
       "cocktails",
       "pubs",
       "mpar"
-    ]
+    ],
+    "slug": "product-bars-title-794c"
   },
   {
     "id": "bougatsa",
@@ -122,7 +127,8 @@
       "snacks",
       "mpougatsa",
       "gluko"
-    ]
+    ],
+    "slug": "product-bougatsa-title-a5fe"
   },
   {
     "id": "surf",
@@ -141,7 +147,8 @@
       "adventure",
       "serf",
       "thalassa"
-    ]
+    ],
+    "slug": "product-surf-title-69b7"
   },
   {
     "id": "bouzoukia",
@@ -163,6 +170,7 @@
       "greek music",
       "traditional music",
       "mpouzoukia"
-    ]
+    ],
+    "slug": "product-bouzoukia-title-f57d"
   }
 ]

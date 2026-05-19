@@ -6,7 +6,14 @@
     "description": "store.products.mobileDataEsimCard.description",
     "image": "/assets/images/airalo.webp",
     "link": "https://www.airalo.com/",
-    "keywords": ["mobile", "data", "esim", "card", "international"]
+    "keywords": [
+      "mobile",
+      "data",
+      "esim",
+      "card",
+      "international"
+    ],
+    "slug": "store-products-mobiledataesimcard-name-b7ad"
   },
   {
     "id": "temu-adapter",
@@ -24,7 +31,8 @@
       "c",
       "usb",
       "travel"
-    ]
+    ],
+    "slug": "store-products-temuadapter-name-458e"
   },
   {
     "id": "insurance",
@@ -41,7 +49,8 @@
       "medical",
       "asfaleia",
       "safety"
-    ]
+    ],
+    "slug": "store-products-insurance-name-6548"
   },
   {
     "id": "universal-travel-adapter",
@@ -50,7 +59,14 @@
     "description": "store.products.universalTravelAdapter.description",
     "image": "/assets/images/universaladapter.webp",
     "link": "https://www.amazon.com/World-International-Travel-Adapter-Ceptics/dp/B08112XB28?crid=2M0NM41J0GVEB&dib=eyJ2IjoiMSJ9.KXt6du9Xdd11JddrRQC0J36U0dZIbgPCvn26L1XUxw-C0HE0LwpEb9XOOEUjI4SsfsWuF2mxK_ROWfd0jtQcrlwroSXrYsf1caYTmmlmw4FMiIRjPfoO_7-mRwnwtu0mL8i05v218YMkA1fLcWX25AXjm1noeuGOOgsqbvu3ojIJeAleUgw2FJv4ytCVZkcr-4OWh8WGXvDUX23ROkf6jNc_QsWU6PY4yHJIw1u32Rw.bQxyz3lU0hZt3FaGFEWIk7z3GVt8FmZRjj04bDQ2l4E&dib_tag=se&keywords=Universal%2BTravel%2BAdapter&qid=1749100600&sprefix=universal%2Btravel%2Badapter%2Caps%2C694&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=3922ee30afdcf89697c3c1e0e5680606&language=en_US&ref_=as_li_ss_tl",
-    "keywords": ["adapter", "universal", "travel", "charging", "international"]
+    "keywords": [
+      "adapter",
+      "universal",
+      "travel",
+      "charging",
+      "international"
+    ],
+    "slug": "store-products-universaltraveladapter-name-3426"
   },
   {
     "id": "pillow-mask",
@@ -59,7 +75,13 @@
     "description": "store.products.pillowMask.description",
     "image": "/assets/images/pillow.webp",
     "link": "https://www.amazon.com/SARISUN-Airplanes-Sleeping-Headrest-Eligible/dp/B0CL6CXMGZ?crid=1XOTYYXQ7J8S8&dib=eyJ2IjoiMSJ9.DyT2qP-xZMOu-DEanapYVB_zQbxYLigcZeeHLK6NuIBr3R83NYGO31bTUfTWblVIhsEc-ozpY9JE5JpYi2vd7UegxZrqtCtm3-W52ZaFWSM7EhzteyGWKaJZ4SG4bgwyXagt2ufXcOMbDeXJ5rZsdEFEqJ6lqKfeJFIfp_aBB-fxHEjzXfkij_kMRn_-GSHqgFhBmZ91SgaiiIGaIlBAqRVjl6h7hBTqrsx7l9uDDddk_62NXVPT7S2emk1waxk_tbKHagXArlBs6lrQHFcVFYzgLQNdJTBx3FgnHuCWIyE.Uw6YzlSws72o1UJHLP2dCvlBxZEtPqGBuMhPhYu36sc&dib_tag=se&keywords=pillow%2Btravel%2Band%2Bmask&qid=1744964506&sprefix=pillow%2Btravel%2Band%2Bmask%2Caps%2C231&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=googlementor-20&linkId=1e7392ea42e93d97ceb967d7e460881a&language=en_US&ref_=as_li_ss_tl",
-    "keywords": ["pillow", "mask", "travel", "sleeping"]
+    "keywords": [
+      "pillow",
+      "mask",
+      "travel",
+      "sleeping"
+    ],
+    "slug": "store-products-pillowmask-name-eb10"
   },
   {
     "id": "neck-pillow",
@@ -68,7 +90,15 @@
     "description": "store.products.neckPillow.description",
     "image": "/assets/images/neck-pillow.webp",
     "link": "https://temu.to/k/eagpe63gbpl",
-    "keywords": ["pillow", "mask", "travel", "sleeping", "neck", "support"]
+    "keywords": [
+      "pillow",
+      "mask",
+      "travel",
+      "sleeping",
+      "neck",
+      "support"
+    ],
+    "slug": "store-products-neckpillow-name-2c37"
   },
   {
     "id": "temu-mask",
@@ -77,7 +107,15 @@
     "description": "store.products.temuMask.description",
     "image": "/assets/images/temu-mask.webp",
     "link": "https://temu.to/k/ed8yr88qoy1",
-    "keywords": ["travel", "luggage", "mask", "sun", "airplane", "sleep"]
+    "keywords": [
+      "travel",
+      "luggage",
+      "mask",
+      "sun",
+      "airplane",
+      "sleep"
+    ],
+    "slug": "store-products-temumask-name-fec6"
   },
   {
     "id": "travel-luggage-lock",
@@ -86,7 +124,14 @@
     "description": "store.products.travelLuggageLock.description",
     "image": "/assets/images/lock.webp",
     "link": "https://www.amazon.com/Compatible-Travel-Luggage-Inspection-Indicator/dp/B073NYB7R2?crid=193YCY2P4WJR4&dib=eyJ2IjoiMSJ9.gk-FsnfAsrB47YFDiXxMZr4w4lgP23Tqz7Vz1m0VIcIxhhB-qf4rTBPMshxuzn7eDjVo_EIy3oMMztzefkXVcD3pVcQ0OaDKEfgkMV2Y2VGhefOSPIAbVkKbfWsME9aeoEyyy75OIfkRM9eLL0ZWDX91_Hh9w1JThAmanWbAm--GLXHNedqncyDGtAWuxKVtiThk8abcr0ug6lAaRvS6izTTVGJ9i_OmPDPrrQqpWrJl5nyx_nchT9ee-T7oQ6Gydgt1tRQbNPk-GG5GV4Dve8AFucT9FM1Y861m9O5bwiY.HT4ld4jRTAzqdjzrYDoHvJYfvcaDV3k41C2nKKJRe38&dib_tag=se&keywords=luggage%2Block&qid=1744297813&sprefix=luggage%2Block%2Caps%2C266&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=f60ff431657ac0a3dc911b8b1c082318&language=en_US&ref_=as_li_ss_tl",
-    "keywords": ["travel", "luggage", "lock", "safety", "security"]
+    "keywords": [
+      "travel",
+      "luggage",
+      "lock",
+      "safety",
+      "security"
+    ],
+    "slug": "store-products-travelluggagelock-name-09c2"
   },
   {
     "id": "lock-temu",
@@ -105,7 +150,8 @@
       "klidaria",
       "asfaleia",
       "kleida"
-    ]
+    ],
+    "slug": "store-products-locktemu-name-56d2"
   },
   {
     "id": "dry-bag-waterproof",
@@ -114,7 +160,12 @@
     "description": "store.products.dryBagWaterproof.description",
     "image": "/assets/images/waterbag.webp",
     "link": "https://www.amazon.com/HEETA-Waterproof-Lightweight-Backpack-Transparent/dp/B07PLZP5LN?crid=2S45C5LWP7B8C&dib=eyJ2IjoiMSJ9.04dV5-nTjb_XJlbT6NyZUC1h2Y_hDzZ4TBvQ94SqYoyL9VQq6uvOv7aI3Cv_Is5nIYXzmexSi81ePUFvNJVLle-9SBw7eUuwB1AwFLAPsJpFvmMvnFp7lK0D_vKXGnbcreI2HtG24XF6uiPk8RMF19oEO4tg6sp1IdVwz9OnLEbqpeknRxSRoTeYryP3_KCOY3mtDI_57KTwH-aG-cQQxuc0uJtPph2PnZn88Mv_BX8geryUVVvuuTngrxZa3_HsNljlHeanHyv7ewlC2meSHD7hSi9izeXdgo6JwQeKMQQ.s5-nBJejLDvzZsHHOKyTbXF5NCMwpWSzUDZddxyVn-8&dib_tag=se&keywords=dry%2Bbag%2Bwaterproof&qid=1744282796&sprefix=dry%2Bbag%2B%2Caps%2C264&sr=8-2&th=1&linkCode=ll1&tag=googlementor-20&linkId=53007ac01d6feb4e5350f5827f915ec2&language=en_US&ref_=as_li_ss_tl",
-    "keywords": ["dry", "bag", "waterproof"]
+    "keywords": [
+      "dry",
+      "bag",
+      "waterproof"
+    ],
+    "slug": "store-products-drybagwaterproof-name-51bc"
   },
   {
     "id": "dry-bag-temu",
@@ -123,7 +174,15 @@
     "description": "store.products.dryBagTemu.description",
     "image": "/assets/images/dry-bag-temu.webp",
     "link": "https://temu.to/k/ejj8f3eyyxy",
-    "keywords": ["waterproof", "water", "bag", "luggage", "beach", "dry"]
+    "keywords": [
+      "waterproof",
+      "water",
+      "bag",
+      "luggage",
+      "beach",
+      "dry"
+    ],
+    "slug": "store-products-drybagtemu-name-1bcb"
   },
   {
     "id": "portable-charger-20000mah",
@@ -141,7 +200,8 @@
       "bank",
       "travel",
       "kinito"
-    ]
+    ],
+    "slug": "store-products-portablecharger-name-7edd"
   },
   {
     "id": "portable-charger-temu",
@@ -159,7 +219,8 @@
       "bank",
       "travel",
       "kinito"
-    ]
+    ],
+    "slug": "store-products-portablechargertemu-name-a10a"
   },
   {
     "id": "car-charger",
@@ -175,7 +236,8 @@
       "kinito",
       "fortistis",
       "autokinito"
-    ]
+    ],
+    "slug": "store-products-carcharger-name-f1e0"
   },
   {
     "id": "car-charger-temu",
@@ -191,7 +253,8 @@
       "kinito",
       "fortistis",
       "autokinito"
-    ]
+    ],
+    "slug": "store-products-carchargertemu-name-5412"
   },
   {
     "id": "sun-protection-shirt",
@@ -209,7 +272,8 @@
       "ilios",
       "antiliako",
       "prostasia"
-    ]
+    ],
+    "slug": "store-products-sunprotectionshirt-name-03c2"
   },
   {
     "id": "sun-protection-hoodie",
@@ -227,7 +291,8 @@
       "ilios",
       "antiliako",
       "prostasia"
-    ]
+    ],
+    "slug": "store-products-sunprotectionshirttemu-name-49e9"
   },
   {
     "id": "water-shoes",
@@ -248,7 +313,8 @@
       "papoutsia thalasas",
       "nisia",
       "island"
-    ]
+    ],
+    "slug": "store-products-watershoes-name-846c"
   },
   {
     "id": "water-shoes-temu",
@@ -269,7 +335,8 @@
       "papoutsia thalasas",
       "nisia",
       "island"
-    ]
+    ],
+    "slug": "store-products-watershoestemu-name-58aa"
   },
   {
     "id": "waterproof-phone-case",
@@ -286,7 +353,8 @@
       "telefono",
       "tilefono",
       "prostasia"
-    ]
+    ],
+    "slug": "store-products-waterproofphonecase-name-2ba8"
   },
   {
     "id": "waterproof-phone-case-temu",
@@ -303,7 +371,8 @@
       "telefono",
       "tilefono",
       "prostasia"
-    ]
+    ],
+    "slug": "store-products-waterproofphonecasetemu-name-adf4"
   },
   {
     "id": "mini-bluetooth-speaker",
@@ -312,7 +381,13 @@
     "description": "store.products.miniBluetoothSpeaker.description",
     "image": "/assets/images/jbl.webp",
     "link": "https://www.amazon.com/JBL-Bluetooth-Built-Waterproof-Dustproof/dp/B08KW1KR5H",
-    "keywords": ["mini", "bluetooth", "speaker", "music"]
+    "keywords": [
+      "mini",
+      "bluetooth",
+      "speaker",
+      "music"
+    ],
+    "slug": "store-products-minibluetoothspeaker-name-4b08"
   },
   {
     "id": "phone-holder-mount",
@@ -331,7 +406,8 @@
       "telefono",
       "tilefono",
       "carphone"
-    ]
+    ],
+    "slug": "store-products-phoneholdermount-name-4930"
   },
   {
     "id": "phone-holder-mount",
@@ -350,9 +426,9 @@
       "telefono",
       "tilefono",
       "carphone"
-    ]
+    ],
+    "slug": "store-products-carphoneholder-name-5fb1"
   },
-
   {
     "id": "airplane-phone-holder",
     "translationKey": "airplanePhoneHolder",
@@ -370,7 +446,8 @@
       "telefono",
       "tilefono",
       "kinito"
-    ]
+    ],
+    "slug": "store-products-airplanephoneholder-name-5212"
   },
   {
     "id": "airplane-phone-holder-temu",
@@ -389,7 +466,8 @@
       "telefono",
       "tilefono",
       "kinito"
-    ]
+    ],
+    "slug": "store-products-airplanephoneholdertemu-name-f794"
   },
   {
     "id": "sony-wireless-headphones",
@@ -398,7 +476,13 @@
     "description": "store.products.sonyWirelessHeadphones.description",
     "image": "/assets/images/headphones.webp",
     "link": "https://www.amazon.com/Sony-WH-1000XM5-Canceling-Headphones-Hands-Free/dp/B09XS7JWHH",
-    "keywords": ["sony", "wireless", "headphones", "music"]
+    "keywords": [
+      "sony",
+      "wireless",
+      "headphones",
+      "music"
+    ],
+    "slug": "store-products-sonywirelessheadphones-name-c9c1"
   },
   {
     "id": "nordic-walking-poles",
@@ -416,7 +500,8 @@
       "pezoporia",
       "treximo",
       "olympos"
-    ]
+    ],
+    "slug": "store-products-nordicwalkingpoles-name-d629"
   },
   {
     "id": "telescopic-hiking-tick",
@@ -434,7 +519,8 @@
       "pezoporia",
       "treximo",
       "olympos"
-    ]
+    ],
+    "slug": "store-products-telescopichikingticks-name-0d41"
   },
   {
     "id": "anker-multi-usb-port",
@@ -451,7 +537,8 @@
       "charging",
       "laptop",
       "travel"
-    ]
+    ],
+    "slug": "store-products-ankermultiusbport-name-5fa0"
   },
   {
     "id": "european-travel-plug",
@@ -460,7 +547,14 @@
     "description": "store.products.europeanTravelPlug.description",
     "image": "/assets/images/multiusb.webp",
     "link": "https://www.amazon.com/USINFLY-European-Adapter-Charging-International/dp/B0CRYN8FGP",
-    "keywords": ["european", "travel", "plug", "charging", "international"]
+    "keywords": [
+      "european",
+      "travel",
+      "plug",
+      "charging",
+      "international"
+    ],
+    "slug": "store-products-europeantravelplug-name-7192"
   },
   {
     "id": "apple-airtag",
@@ -469,7 +563,14 @@
     "description": "store.products.appleAirtag.description",
     "image": "/assets/images/airtag.webp",
     "link": "https://www.amazon.com/Apple-MX532LL-A-AirTag/dp/B0CWXNS552",
-    "keywords": ["apple", "airtag", "tracking", "safety", "travel"]
+    "keywords": [
+      "apple",
+      "airtag",
+      "tracking",
+      "safety",
+      "travel"
+    ],
+    "slug": "store-products-appleairtag-name-7f07"
   },
   {
     "id": "mini-power-bank",
@@ -487,7 +588,8 @@
       "phone",
       "fortistis",
       "kinito"
-    ]
+    ],
+    "slug": "store-products-minipowerbank-name-3aba"
   },
   {
     "id": "mini-power-bank",
@@ -505,7 +607,8 @@
       "phone",
       "fortistis",
       "kinito"
-    ]
+    ],
+    "slug": "store-products-minipowerbanktemu-name-3eb7"
   },
   {
     "id": "sun-hat",
@@ -514,7 +617,13 @@
     "description": "store.products.sunHat.description",
     "image": "/assets/images/hat.webp",
     "link": "https://www.amazon.com/Summer-Panama-Straw-Fedora-Beach/dp/B07BNNNSX5",
-    "keywords": ["sun", "hat", "beach", "travel"]
+    "keywords": [
+      "sun",
+      "hat",
+      "beach",
+      "travel"
+    ],
+    "slug": "store-products-sunhat-name-ea49"
   },
   {
     "id": "tile-gps-tracker",
@@ -523,7 +632,14 @@
     "description": "store.products.tileGpsTracker.description",
     "image": "/assets/images/tile.webp",
     "link": "https://www.amazon.com/Tile-Life360-Bluetooth-Tracker-Compatible/dp/B0D63657GY",
-    "keywords": ["tile", "gps", "tracker", "safety", "travel"]
+    "keywords": [
+      "tile",
+      "gps",
+      "tracker",
+      "safety",
+      "travel"
+    ],
+    "slug": "store-products-tilegpstracker-name-356d"
   },
   {
     "id": "water-bottle",
@@ -532,7 +648,14 @@
     "description": "store.products.waterBottle.description",
     "image": "/assets/images/water.webp",
     "link": "https://www.amazon.com/Simple-Modern-Tumbler-Handle-Insulated/dp/B0BHBP1X1B",
-    "keywords": ["water", "bottle", "travel", "insulated", "hydration"]
+    "keywords": [
+      "water",
+      "bottle",
+      "travel",
+      "insulated",
+      "hydration"
+    ],
+    "slug": "store-products-waterbottle-name-6c00"
   },
   {
     "id": "herschel-backpack",
@@ -541,7 +664,15 @@
     "description": "store.products.herschelBackpack.description",
     "image": "/assets/images/backpack.webp",
     "link": "https://www.amazon.com/Herschel-Supply-Co-Classic-Backpack/dp/B0C3B2B5QC",
-    "keywords": ["herschel", "backpack", "travel", "luggage", "beach", "bag"]
+    "keywords": [
+      "herschel",
+      "backpack",
+      "travel",
+      "luggage",
+      "beach",
+      "bag"
+    ],
+    "slug": "store-products-herschelbackpack-name-225d"
   },
   {
     "id": "face-sunscreen",
@@ -550,7 +681,13 @@
     "description": "store.products.faceSunscreen.description",
     "image": "/assets/images/sunscreen.webp",
     "link": "https://www.amazon.com/EltaMD-Acne-Prone-Mineral-Based-Dermatologist-Recommended/dp/B002MSN3QQ",
-    "keywords": ["face", "sunscreen", "spf", "travel"]
+    "keywords": [
+      "face",
+      "sunscreen",
+      "spf",
+      "travel"
+    ],
+    "slug": "store-products-facesunscreen-name-5d06"
   },
   {
     "id": "travel-first-aid-kit",
@@ -559,7 +696,15 @@
     "description": "store.products.travelFirstAidKit.description",
     "image": "/assets/images/firstaid.webp",
     "link": "https://www.amazon.com/Mini-First-Aid-Pieces-Small/dp/B0747N5KDM",
-    "keywords": ["travel", "first", "aid", "kit", "accident", "safety"]
+    "keywords": [
+      "travel",
+      "first",
+      "aid",
+      "kit",
+      "accident",
+      "safety"
+    ],
+    "slug": "store-products-travelfirstaidkit-name-d52f"
   },
   {
     "id": "beach-blanket",
@@ -568,7 +713,13 @@
     "description": "store.products.beachBlanket.description",
     "image": "/assets/images/blanket.webp",
     "link": "https://www.amazon.com/Wekapo-Blanket-Compact-Lightweight-Durable/dp/B08X6VQBGJ",
-    "keywords": ["beach", "blanket", "travel", "picnic"]
+    "keywords": [
+      "beach",
+      "blanket",
+      "travel",
+      "picnic"
+    ],
+    "slug": "store-products-beachblanket-name-9d1a"
   },
   {
     "id": "snorkel-mask",
@@ -587,7 +738,8 @@
       "sea",
       "ocean",
       "kid"
-    ]
+    ],
+    "slug": "store-products-snorkel-name-111b"
   },
   {
     "id": "packing-cubes",
@@ -596,7 +748,14 @@
     "description": "store.products.packingCubes.description",
     "image": "/assets/images/packingCubes.webp",
     "link": "https://temu.to/k/eacfcv9uzwy",
-    "keywords": ["packing", "cubes", "travel", "luggage", "organization"]
+    "keywords": [
+      "packing",
+      "cubes",
+      "travel",
+      "luggage",
+      "organization"
+    ],
+    "slug": "store-products-packingcubes-name-89b5"
   },
   {
     "id": "travel-size-toiletries",
@@ -612,7 +771,8 @@
       "shampoo",
       "conditioner",
       "soap"
-    ]
+    ],
+    "slug": "store-products-travelsizetoiletries-name-615b"
   },
   {
     "id": " travel-goggles",
@@ -621,7 +781,14 @@
     "description": "store.products.goggles.description",
     "image": "/assets/images/goggles.webp",
     "link": "https://temu.to/k/el99mdx9xws",
-    "keywords": ["goggles", "swimming", "travel", "beach", "water"]
+    "keywords": [
+      "goggles",
+      "swimming",
+      "travel",
+      "beach",
+      "water"
+    ],
+    "slug": "store-products-goggles-name-dcdc"
   },
   {
     "id": "travel-flippers",
@@ -630,7 +797,14 @@
     "description": "store.products.flippers.description",
     "image": "/assets/images/flippers.webp",
     "link": "https://temu.to/k/etxtia7082w",
-    "keywords": ["flippers", "swimming", "travel", "beach", "water"]
+    "keywords": [
+      "flippers",
+      "swimming",
+      "travel",
+      "beach",
+      "water"
+    ],
+    "slug": "store-products-flippers-name-7ea8"
   },
   {
     "id": "beachTowel",
@@ -648,7 +822,8 @@
       "sea",
       "ocean",
       "sun"
-    ]
+    ],
+    "slug": "store-products-beachtowel-name-e5f8"
   },
   {
     "id": "shoulder-bag ",
@@ -657,7 +832,14 @@
     "description": "store.products.shoulderBag.description",
     "image": "/assets/images/shoulderBag.webp",
     "link": "https://temu.to/k/extk8aayb1w",
-    "keywords": ["shoulder", "bag", "travel", "luggage", "beach"]
+    "keywords": [
+      "shoulder",
+      "bag",
+      "travel",
+      "luggage",
+      "beach"
+    ],
+    "slug": "store-products-shoulderbag-name-6844"
   },
   {
     "id": "waterproof-bag",
@@ -666,7 +848,13 @@
     "description": "store.products.waterproofBag.description",
     "image": "/assets/images/waterproofBag.webp",
     "link": "https://temu.to/k/epvx9k50ogb",
-    "keywords": ["waterproof", "bag", "travel", "beach"]
+    "keywords": [
+      "waterproof",
+      "bag",
+      "travel",
+      "beach"
+    ],
+    "slug": "store-products-waterproofbag-name-6c8c"
   },
   {
     "id": "portableFan",
@@ -687,7 +875,8 @@
       "anemisti",
       "air",
       "zesti"
-    ]
+    ],
+    "slug": "store-products-portablefan-name-6573"
   },
   {
     "id": "beachTent",
@@ -696,7 +885,14 @@
     "description": "store.products.tent.description",
     "image": "/assets/images/tent.webp",
     "link": "https://temu.to/k/eh357z6wrda",
-    "keywords": ["beach", "tent", "travel", "camping", "outdoor"]
+    "keywords": [
+      "beach",
+      "tent",
+      "travel",
+      "camping",
+      "outdoor"
+    ],
+    "slug": "store-products-tent-name-ad91"
   },
   {
     "id": "phoneStraps",
@@ -713,7 +909,8 @@
       "accessories",
       "mobile",
       "phone"
-    ]
+    ],
+    "slug": "store-products-phonestraps-name-af60"
   },
   {
     "id": "beachToys",
@@ -722,7 +919,15 @@
     "description": "store.products.beachToys.description",
     "image": "/assets/images/beachToys.webp",
     "link": "https://temu.to/k/eghvjgcahml",
-    "keywords": ["beach", "toys", "travel", "kids", "children", "fun"]
+    "keywords": [
+      "beach",
+      "toys",
+      "travel",
+      "kids",
+      "children",
+      "fun"
+    ],
+    "slug": "store-products-beachtoys-name-da45"
   },
   {
     "id": "beachChair",
@@ -731,7 +936,14 @@
     "description": "store.products.beachChair.description",
     "image": "/assets/images/beachChair.webp",
     "link": "https://temu.to/k/eo8o7eyopus",
-    "keywords": ["beach", "chair", "travel", "luggage", "outdoor"]
+    "keywords": [
+      "beach",
+      "chair",
+      "travel",
+      "luggage",
+      "outdoor"
+    ],
+    "slug": "store-products-beachchair-name-6a0e"
   },
   {
     "id": "picnicBlanket",
@@ -740,7 +952,14 @@
     "description": "store.products.picnicBlanket.description",
     "image": "/assets/images/picnicBlanket.webp",
     "link": "https://temu.to/k/elfycqbol2q",
-    "keywords": ["picnic", "blanket", "travel", "outdoor", "beach"]
+    "keywords": [
+      "picnic",
+      "blanket",
+      "travel",
+      "outdoor",
+      "beach"
+    ],
+    "slug": "store-products-picnicblanket-name-fbec"
   },
   {
     "id": "umbrellaAnchor",
@@ -759,7 +978,8 @@
       "obrela",
       "anemos",
       "paralia"
-    ]
+    ],
+    "slug": "store-products-umbrellaanchor-name-c744"
   },
   {
     "id": "chairUmbrella",
@@ -768,7 +988,14 @@
     "description": "store.products.chairUmbrella.description",
     "image": "/assets/images/chairUmbrella.webp",
     "link": "https://temu.to/k/eem5gmav1g8",
-    "keywords": ["chair", "umbrella", "travel", "beach", "sun"]
+    "keywords": [
+      "chair",
+      "umbrella",
+      "travel",
+      "beach",
+      "sun"
+    ],
+    "slug": "store-products-chairumbrella-name-e872"
   },
   {
     "id": "travelUmbrella",
@@ -777,7 +1004,14 @@
     "description": "store.products.travelUmbrella.description",
     "image": "/assets/images/travelUmbrella.webp",
     "link": "https://temu.to/k/e41g5dt6lxj",
-    "keywords": ["travel", "umbrella", "beach", "sun", "rain"]
+    "keywords": [
+      "travel",
+      "umbrella",
+      "beach",
+      "sun",
+      "rain"
+    ],
+    "slug": "store-products-travelumbrella-name-0b7e"
   },
   {
     "id": "fridgeBackpack",
@@ -786,7 +1020,14 @@
     "description": "store.products.fridgeBackpack.description",
     "image": "/assets/images/fridgeBackpack.webp",
     "link": "https://temu.to/k/ehr7mln8r3f",
-    "keywords": ["fridge", "backpack", "travel", "beach", "cooling"]
+    "keywords": [
+      "fridge",
+      "backpack",
+      "travel",
+      "beach",
+      "cooling"
+    ],
+    "slug": "store-products-fridgebackpack-name-94f7"
   },
   {
     "id": "coffeeMug",
@@ -795,7 +1036,14 @@
     "description": "store.products.coffeeMug.description",
     "image": "/assets/images/coffeeMug.webp",
     "link": "https://temu.to/k/eve2fg4i102",
-    "keywords": ["coffee", "mug", "travel", "beach", "hot"]
+    "keywords": [
+      "coffee",
+      "mug",
+      "travel",
+      "beach",
+      "hot"
+    ],
+    "slug": "store-products-coffeemug-name-5b8a"
   },
   {
     "id": "portableJar",
@@ -804,7 +1052,14 @@
     "description": "store.products.portableJar.description",
     "image": "/assets/images/portableJar.webp",
     "link": "https://temu.to/k/e7qtz76r8o4",
-    "keywords": ["portable", "jar", "travel", "beach", "food"]
+    "keywords": [
+      "portable",
+      "jar",
+      "travel",
+      "beach",
+      "food"
+    ],
+    "slug": "store-products-portablejar-name-5b7b"
   },
   {
     "id": "cordlessPump",
@@ -813,7 +1068,14 @@
     "description": "store.products.cordlessPump.description",
     "image": "/assets/images/pump.webp",
     "link": "https://temu.to/k/eb9eyz6ja6p",
-    "keywords": ["cordless", "pump", "travel", "beach", "inflatable"]
+    "keywords": [
+      "cordless",
+      "pump",
+      "travel",
+      "beach",
+      "inflatable"
+    ],
+    "slug": "store-products-cordlesspump-name-2694"
   },
   {
     "id": "coolingFan",
@@ -831,7 +1093,8 @@
       "summer",
       "wind",
       "jamaica"
-    ]
+    ],
+    "slug": "store-products-coolingfan-name-666c"
   },
   {
     "id": "lipProtection",
@@ -840,7 +1103,15 @@
     "description": "store.products.lipProtection.description",
     "image": "/assets/images/lipProtection.webp",
     "link": "https://www.amazon.com/Blistex-Five-Star-Protection-Ounce/dp/B003AXUQOO?crid=23IYY6RAY633M&dib=eyJ2IjoiMSJ9.GJBquHqv4CJxD2IOYVRRqsD7eRo9tCH-ytH5ylsalrjtRMxOOxvwRO5cwo89eC_k8rC4xFDECL0NY4nT_tfmwGc_72WZ9Xblz_xeTxFmOfR7zsj6wvWXIJIGvZ4Es8SFxeXB2aiN9NH0S5zugphs4RjdJ_GEzKPgZFFD-JT2hX7z6BgbLBBvUw8Tt0YxAARgMUlPxZhhEd7AiwXA2pN27zBU1bDb6Y1wrffX2Aop5guc8CQbqs5BxxSxwetnpm_NEvNhU3pT7t_atkWzOTRaJJAaDwqo9qOqPw3UTpNUCFE.g9I9gHvzyJPfeFWlnA-j2XAMkyFZrszO2rdq1dsPyUA&dib_tag=se&keywords=wind%2Bprotection&qid=1746795563&sprefix=wind%2Bprotection%2Caps%2C252&sr=8-3&th=1&linkCode=ll1&tag=googlementor-20&linkId=c6309205d6a80a8856c274e683ad3873&language=en_US&ref_=as_li_ss_tl",
-    "keywords": ["lip", "protection", "travel", "beach", "sun", "hydration"]
+    "keywords": [
+      "lip",
+      "protection",
+      "travel",
+      "beach",
+      "sun",
+      "hydration"
+    ],
+    "slug": "store-products-lipprotection-name-1222"
   },
   {
     "id": "travel-journal",
@@ -849,6 +1120,12 @@
     "description": "store.products.travelJournal.description",
     "image": "/assets/images/travelJournal.webp",
     "link": "https://temu.to/k/e4vq4yef233",
-    "keywords": ["travel", "journal", "diary", "writing"]
+    "keywords": [
+      "travel",
+      "journal",
+      "diary",
+      "writing"
+    ],
+    "slug": "store-products-traveljournal-name-1b78"
   }
 ]

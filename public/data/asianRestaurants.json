@@ -4,713 +4,917 @@
     "name": "Wasabe Asian Fusion",
     "address": "Λεωφ. Μεσογείων 401, Αγ. Παρασκευή 153 43",
     "lat": "38.01234432312043",
-    "lng": "23.815000066422606"
+    "lng": "23.815000066422606",
+    "id": "asianRestaurants_4641bf909241",
+    "slug": "wasabe-asian-fusion-4641"
   },
   {
     "url": "https://maps.app.goo.gl/EPmJ2jqs6hWddn566?g_st=ipc",
     "name": "Shisan Sushi Bar",
     "address": "Μεσογείων 204, Χολαργός 155 61",
     "lat": "38.001841672610425",
-    "lng": "23.790637059082073"
+    "lng": "23.790637059082073",
+    "id": "asianRestaurants_0a06ecfadcd2",
+    "slug": "shisan-sushi-bar-0a06"
   },
   {
     "url": "https://maps.app.goo.gl/62Tadxw4r6L1Cia48?g_st=ipc",
     "name": "Salamat | Asian Food Store",
     "address": "Δουκίσσης Πλακεντίας 68, Χαλάνδρι 152 34",
     "lat": "38.02126807453902",
-    "lng": "23.819767317882288"
+    "lng": "23.819767317882288",
+    "id": "asianRestaurants_a4e89dbc83d0",
+    "slug": "salamat-asian-food-store-a4e8"
   },
   {
     "url": "https://maps.app.goo.gl/nbuLEwHeZBiLrKZS8?g_st=ipc",
     "name": "Saipan Κινέζικο Εστιατόριο",
     "address": "Κώστα Βάρναλη 9, Χαλάνδρι 152 33",
     "lat": "38.02355205934916",
-    "lng": "23.800206153183655"
+    "lng": "23.800206153183655",
+    "id": "asianRestaurants_879da0a96347",
+    "slug": "saipan-kineziko-estiatorio-879d"
   },
   {
     "url": "https://maps.app.goo.gl/NXeqhq8bkraS8SxK8?g_st=ipc",
     "name": "OISHI SUSHI BAR",
     "address": "Ζαλοκώστα 3, Χαλάνδρι 152 33",
     "lat": "38.02268166865243",
-    "lng": "23.7974397280377"
+    "lng": "23.7974397280377",
+    "id": "asianRestaurants_509760bf71d6",
+    "slug": "oishi-sushi-bar-5097"
   },
   {
     "url": "https://maps.app.goo.gl/yx3uezXR3ayTjVvq7?g_st=ipc",
     "name": "GAKU Sushi Izakaya @ Chalandri",
     "address": "Likourgou 4, Chalandri 152 31",
     "lat": "38.01448829662791",
-    "lng": "23.785099711916384"
+    "lng": "23.785099711916384",
+    "id": "asianRestaurants_03f354f3f469",
+    "slug": "gaku-sushi-izakaya-chalandri-03f3"
   },
   {
     "url": "https://maps.app.goo.gl/kRDH6Sdii2eyeoRw9?g_st=ipc",
     "name": "Sister",
     "address": "Περικλέους 11, Νέο Ψυχικό 154 51",
     "lat": "38.003216085112086",
-    "lng": "23.7757633660399"
+    "lng": "23.7757633660399",
+    "id": "asianRestaurants_7aa0cb0c0f53",
+    "slug": "sister-7aa0"
   },
   {
     "url": "https://maps.app.goo.gl/A7uShDTP3yFcChSd7?g_st=ipc",
     "name": "Wagamama Golden Hall",
     "address": "Λεωφ. Κηφισίας, Μαρούσι 151 23",
     "lat": "38.03406369279884",
-    "lng": "23.792244943430262"
+    "lng": "23.792244943430262",
+    "id": "asianRestaurants_302bc43e3be3",
+    "slug": "wagamama-golden-hall-302b"
   },
   {
     "url": "https://maps.app.goo.gl/xgYqVodevf1ae8hY7?g_st=ipc",
     "name": "Street Wok",
     "address": "Ampelokipi Menemeni, Πανόρμου 115Ζ, Αθήνα 115 24",
     "lat": "37.99333429542986",
-    "lng": "23.76565696133404"
+    "lng": "23.76565696133404",
+    "id": "asianRestaurants_4bddf7fbcbe7",
+    "slug": "street-wok-4bdd"
   },
   {
     "url": "https://maps.app.goo.gl/7Qc86HdEYaZECDNi6?g_st=ipc",
     "name": "Shisan Sushi Bar",
     "address": "Αγίου Κωνσταντίνου 48, Μαρούσι 151 24",
     "lat": "38.04672189810274",
-    "lng": "23.805795459456142"
+    "lng": "23.805795459456142",
+    "id": "asianRestaurants_a10e769c77cd",
+    "slug": "shisan-sushi-bar-a10e"
   },
   {
     "url": "https://maps.app.goo.gl/ryow8NsFhZuQLDhK7?g_st=ipc",
     "name": "Zuzuto Ramen",
     "address": "Χαλκηδόνος 66, Αθήνα 115 27",
     "lat": "37.98563972505005",
-    "lng": "23.764296512977037"
+    "lng": "23.764296512977037",
+    "id": "asianRestaurants_5a81fb6b9192",
+    "slug": "zuzuto-ramen-5a81"
   },
   {
     "url": "https://maps.app.goo.gl/V19mHCb8LHh8jNgz6?g_st=ipc",
     "name": "Siam Thai Food",
     "address": "Βατοπεδίου 6, Αθήνα 115 23",
     "lat": "37.98765776292927",
-    "lng": "23.75850606152562"
+    "lng": "23.75850606152562",
+    "id": "asianRestaurants_01d2fd8409bc",
+    "slug": "siam-thai-food-01d2"
   },
   {
     "url": "https://maps.app.goo.gl/3ZyGn2FKaLUXuMuJ9?g_st=ipc",
     "name": "Shisan Sushi Bar",
     "address": "Λεωφ. Βεΐκου 7, Γαλάτσι 111 46",
     "lat": "38.01364374248811",
-    "lng": "23.753228892987114"
+    "lng": "23.753228892987114",
+    "id": "asianRestaurants_f4e606aad25d",
+    "slug": "shisan-sushi-bar-f4e6"
   },
   {
     "url": "https://maps.app.goo.gl/XM8Buphrtabi3YYC9?g_st=ipc",
     "name": "Bulacan Halo-Halo",
     "address": "Μιχαλακοπούλου 105, Αθήνα 115 27",
     "lat": "37.98164028909841",
-    "lng": "23.759642721567413"
+    "lng": "23.759642721567413",
+    "id": "asianRestaurants_11e9b056b89d",
+    "slug": "bulacan-halo-halo-11e9"
   },
   {
     "url": "https://maps.app.goo.gl/UXfhhMjtr2rYJfNW7?g_st=ipc",
     "name": "New Great Wall Marousi",
     "address": "Βασ. Αμαλίας 1, Μαρούσι 151 22",
     "lat": "38.05713122309269",
-    "lng": "23.805863056780513"
+    "lng": "23.805863056780513",
+    "id": "asianRestaurants_02d0f232a272",
+    "slug": "new-great-wall-marousi-02d0"
   },
   {
     "url": "https://maps.app.goo.gl/xTbQEiSszAswqYqi8?g_st=ipc",
     "name": "Shisan Sushi Bar",
     "address": "Αλ. Ζαΐμη 1, Μελίσσια 151 27",
     "lat": "38.053962138366174",
-    "lng": "23.841922115859383"
+    "lng": "23.841922115859383",
+    "id": "asianRestaurants_b06ea4e8fead",
+    "slug": "shisan-sushi-bar-b06e"
   },
   {
     "url": "https://maps.app.goo.gl/EKBgxEmreeAUsw7BA?g_st=ipc",
     "name": "Ταϊλάνδη",
     "address": "Σωκράτους 7, Μελίσσια 151 27",
     "lat": "38.05465471580679",
-    "lng": "23.844081463874097"
+    "lng": "23.844081463874097",
+    "id": "asianRestaurants_0fceaf69bfec",
+    "slug": "tailandi-0fce"
   },
   {
     "url": "https://maps.app.goo.gl/5moDtNiYaQjm8UsX9?g_st=ipc",
     "name": "SUSHI J",
     "address": "Υμηττού 101, Αθήνα 116 33",
     "lat": "37.967626679750225",
-    "lng": "23.75054798444388"
+    "lng": "23.75054798444388",
+    "id": "asianRestaurants_de634fe107b8",
+    "slug": "sushi-j-de63"
   },
   {
     "url": "https://maps.app.goo.gl/KAcLL73vy6J6TTKv5?g_st=ipc",
     "name": "Microulee",
     "address": "Στουρνάρη 14, Αθήνα 106 83",
     "lat": "37.98699838431432",
-    "lng": "23.73426742337473"
+    "lng": "23.73426742337473",
+    "id": "asianRestaurants_4360c7ba70e3",
+    "slug": "microulee-4360"
   },
   {
     "url": "https://maps.app.goo.gl/uHeeoqNeizUhJTXy6?g_st=ipc",
     "name": "Nakama Sushi Bar",
     "address": "Μασσαλίας 5, Αθήνα 106 80",
     "lat": "37.98166443323037",
-    "lng": "23.7366555719328"
+    "lng": "23.7366555719328",
+    "id": "asianRestaurants_ec91ac928fa7",
+    "slug": "nakama-sushi-bar-ec91"
   },
   {
     "url": "https://maps.app.goo.gl/jArTQMm2HTtNhyqu6?g_st=ipc",
     "name": "Koi Sushi Bar | Pangrati",
     "address": "Ευτυχίδου 10, Αθήνα 116 35",
     "lat": "37.96792632318897",
-    "lng": "23.745129343308996"
+    "lng": "23.745129343308996",
+    "id": "asianRestaurants_29ff4585bb4b",
+    "slug": "koi-sushi-bar-pangrati-29ff"
   },
   {
     "url": "https://maps.app.goo.gl/Tg5ncVYwYwG98YZBA?g_st=ipc",
     "name": "NYX Japanese Rooftop Gastrobar",
     "address": "Ομήρου 19, Αθήνα 106 19",
     "lat": "37.979692107976724",
-    "lng": "23.736124325689694"
+    "lng": "23.736124325689694",
+    "id": "asianRestaurants_e45a00190680",
+    "slug": "nyx-japanese-rooftop-gastrobar-e45a"
   },
   {
     "url": "https://maps.app.goo.gl/pE1beFfDZ9181rp76?g_st=ipc",
     "name": "KoYaSan in Philadelphia",
     "address": "Λεωφ. Δεκελείας 122, Νέα Φιλαδέλφεια Αττικής 143 41",
     "lat": "38.03582601502679",
-    "lng": "23.738913649887014"
+    "lng": "23.738913649887014",
+    "id": "asianRestaurants_a37aef170d67",
+    "slug": "koyasan-in-philadelphia-a37a"
   },
   {
     "url": "https://maps.app.goo.gl/Cza8DpNsdEHX73EB8?g_st=ipc",
     "name": "Street wok",
     "address": "Βρυούλων 4, Νέα Φιλαδέλφεια Αττικής 143 41",
     "lat": "38.03415849667832",
-    "lng": "23.737420165783373"
+    "lng": "23.737420165783373",
+    "id": "asianRestaurants_b60f010973e9",
+    "slug": "street-wok-b60f"
   },
   {
     "url": "https://maps.app.goo.gl/y6KSXjJTao7NPHZG8?g_st=ipc",
     "name": "Akira Sushi Bar | Athens Japanese Restaurant",
     "address": "Σταδίου 30 &, Κοραή 4, Αθήνα 105 64",
     "lat": "37.979592346362566",
-    "lng": "23.73239256912945"
+    "lng": "23.73239256912945",
+    "id": "asianRestaurants_145a81e4039e",
+    "slug": "akira-sushi-bar-athens-japanese-restaurant-145a"
   },
   {
     "url": "https://maps.app.goo.gl/ukrWwWHZBibG1ZuR9?g_st=ipc",
     "name": "wagamama kifisia",
     "address": "Κασσαβέτη 3, Αθήνα 145 62",
     "lat": "38.072331147675214",
-    "lng": "23.812549926712027"
+    "lng": "23.812549926712027",
+    "id": "asianRestaurants_313cbf5dd5ee",
+    "slug": "wagamama-kifisia-313c"
   },
   {
     "url": "https://maps.app.goo.gl/rG3Ram1UiVYEUuFt9?g_st=ipc",
     "name": "IKURA Sushi - Korean food",
     "address": "Φιλελλήνων 7, Αθήνα 105 57",
     "lat": "37.97430159758245",
-    "lng": "23.73415791767136"
+    "lng": "23.73415791767136",
+    "id": "asianRestaurants_50c893ba0bac",
+    "slug": "ikura-sushi-korean-food-50c8"
   },
   {
     "url": "https://maps.app.goo.gl/cap6URyugQKPXeA47?g_st=ipc",
     "name": "Koi Sushi Bar",
     "address": "Νίκης 15, Αθήνα 105 57",
     "lat": "37.9746059285853",
-    "lng": "23.73317074110448"
+    "lng": "23.73317074110448",
+    "id": "asianRestaurants_8d5a854c9f57",
+    "slug": "koi-sushi-bar-8d5a"
   },
   {
     "url": "https://maps.app.goo.gl/WStEy7p33ZAzDLCY7?g_st=ipc",
     "name": "Shiraki Athens",
     "address": "Νίκης 17, Αθήνα 105 57",
     "lat": "37.97450335727445",
-    "lng": "23.733167658895514"
+    "lng": "23.733167658895514",
+    "id": "asianRestaurants_43504a2d050f",
+    "slug": "shiraki-athens-4350"
   },
   {
     "url": "https://maps.app.goo.gl/X4tWaVESeHdhnYpi6?g_st=ipc",
     "name": "East Pearl Chinese restaurant",
     "address": "Απόλλωνος 2, Αθήνα 105 57",
     "lat": "37.97475497132636",
-    "lng": "23.732999717791024"
+    "lng": "23.732999717791024",
+    "id": "asianRestaurants_d1a59d966352",
+    "slug": "east-pearl-chinese-restaurant-d1a5"
   },
   {
     "url": "https://maps.app.goo.gl/d2jzonLKf2Au2UP28?g_st=ipc",
     "name": "GAKU",
     "address": "Απόλλωνος 2, Αθήνα 105 57",
     "lat": "37.974764541523264",
-    "lng": "23.73278280614978"
+    "lng": "23.73278280614978",
+    "id": "asianRestaurants_47edca6d922f",
+    "slug": "gaku-47ed"
   },
   {
     "url": "https://maps.app.goo.gl/PwDtN3ePd5r7qvjc7?g_st=ipc",
     "name": "Dosirak",
     "address": "Βουλής 33, Αθήνα 105 57",
     "lat": "37.97494107666411",
-    "lng": "23.732376863056064"
+    "lng": "23.732376863056064",
+    "id": "asianRestaurants_42df17dcd2e4",
+    "slug": "dosirak-42df"
   },
   {
     "url": "https://maps.app.goo.gl/H2M3yGFhApNA288V8?g_st=ipc",
     "name": "Tanpopo",
     "address": "Αριστείδου 1, Ευριπίδου 2, Αθήνα 105 59",
     "lat": "37.9795596589589",
-    "lng": "23.72974278108181"
+    "lng": "23.72974278108181",
+    "id": "asianRestaurants_464e7e4c810b",
+    "slug": "tanpopo-464e"
   },
   {
     "url": "https://maps.app.goo.gl/fYsHDCdPt7Ag7nwx7?g_st=ipc",
     "name": "Pink Flamingo Dim Sum",
     "address": "Σκούφου 2-4, Αθήνα 105 57",
     "lat": "37.97460809363569",
-    "lng": "23.732494338257986"
+    "lng": "23.732494338257986",
+    "id": "asianRestaurants_7b8b9814562d",
+    "slug": "pink-flamingo-dim-sum-7b8b"
   },
   {
     "url": "https://maps.app.goo.gl/X3KiMCEXwDEoAj3N6?g_st=ipc",
     "name": "Nolan",
     "address": "Βουλής 31 - 33, Αθήνα 105 57",
     "lat": "37.97479795746223",
-    "lng": "23.732371775380916"
+    "lng": "23.732371775380916",
+    "id": "asianRestaurants_e28b11d8898b",
+    "slug": "nolan-e28b"
   },
   {
     "url": "https://maps.app.goo.gl/1y3Cs2ks6GF4C85F6?g_st=ipc",
     "name": "Sushimou",
     "address": "Σκούφου 6, Αθήνα 105 57",
     "lat": "37.97442757213257",
-    "lng": "23.73246192997683"
+    "lng": "23.73246192997683",
+    "id": "asianRestaurants_0d95e4345c8a",
+    "slug": "sushimou-0d95"
   },
   {
     "url": "https://maps.app.goo.gl/qkTpkDkptgwCVeF68?g_st=ipc",
     "name": "Ikigai Japanese Market",
     "address": "Σκούφου 15, Αθήνα 105 57",
     "lat": "37.9738141066951",
-    "lng": "23.732787828654633"
+    "lng": "23.732787828654633",
+    "id": "asianRestaurants_d2dfba8aa86e",
+    "slug": "ikigai-japanese-market-d2df"
   },
   {
     "url": "https://maps.app.goo.gl/WvsC9Ebt7yScnxNH8?g_st=ipc",
     "name": "HANOI ATHENS - AUTHENTIC VIETNAMESE FOOD",
     "address": "Πετράκη 12, Αθήνα 105 63",
     "lat": "37.97561643327209",
-    "lng": "23.73154671347612"
+    "lng": "23.73154671347612",
+    "id": "asianRestaurants_c5be8384da5c",
+    "slug": "hanoi-athens-authentic-vietnamese-food-c5be"
   },
   {
     "url": "https://maps.app.goo.gl/phQR869HE6dZNJGS9?g_st=ipc",
     "name": "EKIBEN KITCHEN",
     "address": "Σκούφου 15, Αθήνα 105 57",
     "lat": "37.97373780649657",
-    "lng": "23.73268249015655"
+    "lng": "23.73268249015655",
+    "id": "asianRestaurants_ddcb57380116",
+    "slug": "ekiben-kitchen-ddcb"
   },
   {
     "url": "https://maps.app.goo.gl/2JAZWHPydSGiN1Vz5?g_st=ipc",
     "name": "Noodle Bar",
     "address": "Απόλλωνος 11, Αθήνα 105 57",
     "lat": "37.97469670323124",
-    "lng": "23.731836375056524"
+    "lng": "23.731836375056524",
+    "id": "asianRestaurants_c79d456ae7d7",
+    "slug": "noodle-bar-c79d"
   },
   {
     "url": "https://maps.app.goo.gl/nPpYrXs7ZyBAs7gx9?g_st=ipc",
     "name": "Shisan Sushi Bar",
     "address": "Ρόμβης 24Α, Αθήνα 105 62",
     "lat": "37.977337086650145",
-    "lng": "23.730266018891072"
+    "lng": "23.730266018891072",
+    "id": "asianRestaurants_427d94265987",
+    "slug": "shisan-sushi-bar-427d"
   },
   {
     "url": "https://maps.app.goo.gl/EXv9MbMpLAGJ5z8p9?g_st=ipc",
     "name": "Shisan Sushi Bar",
     "address": "Καλαμιώτου 25, Αθήνα 106 81",
     "lat": "37.97750088660989",
-    "lng": "23.729162812696888"
+    "lng": "23.729162812696888",
+    "id": "asianRestaurants_54f96c10eabf",
+    "slug": "shisan-sushi-bar-54f9"
   },
   {
     "url": "https://maps.app.goo.gl/qhpXyetVXaLisBEWA?g_st=ipc",
     "name": "StreetWok",
     "address": "Αιόλου 21, Αθήνα 105 63",
     "lat": "37.97689230907057",
-    "lng": "23.727592595188877"
+    "lng": "23.727592595188877",
+    "id": "asianRestaurants_3e39975f70d5",
+    "slug": "streetwok-3e39"
   },
   {
     "url": "https://maps.app.goo.gl/haanYsUxepJjZsmTA?g_st=ipc",
     "name": "One Piece Sushi & NoodleBar",
     "address": "Ilia Iliou 6, Μενεκράτους 39, Αθήνα 116 36",
     "lat": "37.95987156768248",
-    "lng": "23.736223837796196"
+    "lng": "23.736223837796196",
+    "id": "asianRestaurants_245947f00892",
+    "slug": "one-piece-sushi-noodlebar-2459"
   },
   {
     "url": "https://maps.app.goo.gl/BQFSgk7VHKmzvjWN9?g_st=ipc",
     "name": "AXI - 阿锡早点",
     "address": "Athens, Greece, Akadimou, 104 36",
     "lat": "37.98134764148285",
-    "lng": "23.721168322095103"
+    "lng": "23.721168322095103",
+    "id": "asianRestaurants_11df834afa0a",
+    "slug": "axi-11df"
   },
   {
     "url": "https://maps.app.goo.gl/Za9q8z3zwF4WhUQs8?g_st=ipc",
     "name": "Noodle Shop - 相遇面馆",
     "address": "Ακαδήμου 4, Αθήνα 104 36",
     "lat": "37.98145210842213",
-    "lng": "23.721054788106656"
+    "lng": "23.721054788106656",
+    "id": "asianRestaurants_d23972f8388f",
+    "slug": "noodle-shop-d239"
   },
   {
     "url": "https://maps.app.goo.gl/kfZE6p7Ddwomz7Zd9?g_st=ipc",
     "name": "168 Bar",
     "address": "Διπύλου 6, Αθήνα 105 53",
     "lat": "37.97952828529781",
-    "lng": "23.72107861467235"
+    "lng": "23.72107861467235",
+    "id": "asianRestaurants_f31c7fe7455a",
+    "slug": "168-bar-f31c"
   },
   {
     "url": "https://maps.app.goo.gl/dLSj52rnQDPAbaGg8?g_st=ipc",
     "name": "TUK TUK THAI STREET FOOD",
     "address": "Βεΐκου 40, Αθήνα 117 42",
     "lat": "37.96606521122011",
-    "lng": "23.725716482971748"
+    "lng": "23.725716482971748",
+    "id": "asianRestaurants_83a81f921b31",
+    "slug": "tuk-tuk-thai-street-food-83a8"
   },
   {
     "url": "https://maps.app.goo.gl/sQ4YgJ2S6xgEEqCf7?g_st=ipc",
     "name": "Oma Sushi Bar",
     "address": "Ανδρέα Παπανδρέου 22, Ηλιούπολη 163 45",
     "lat": "37.94009382367438",
-    "lng": "23.754689791765557"
+    "lng": "23.754689791765557",
+    "id": "asianRestaurants_36f4a8956e8a",
+    "slug": "oma-sushi-bar-36f4"
   },
   {
     "url": "https://maps.app.goo.gl/4sTjgzzfABYKexbx6?g_st=ipc",
     "name": "Koyasan in koukaki",
     "address": "17 & Ο, Ζαν Μωρεάς, Γεωρ. Ανδρούτσου, Αθήνα 117 41",
     "lat": "37.96291366771106",
-    "lng": "23.723242897494586"
+    "lng": "23.723242897494586",
+    "id": "asianRestaurants_a89412856273",
+    "slug": "koyasan-in-koukaki-a894"
   },
   {
     "url": "https://maps.app.goo.gl/JyaNzBjgKky4afGL8?g_st=ipc",
     "name": "Zafran Indian Kitchen",
     "address": "Περσεφόνης 25, Αθήνα 118 54",
     "lat": "37.977657888236905",
-    "lng": "23.712403701256626"
+    "lng": "23.712403701256626",
+    "id": "asianRestaurants_f1cd493b50d2",
+    "slug": "zafran-indian-kitchen-f1cd"
   },
   {
     "url": "https://maps.app.goo.gl/3GSewqndnBiBnEL89?g_st=ipc",
     "name": "Streetwok",
     "address": "Χαρ. Τρικούπη 144, Νέα Ερυθραία 146 71",
     "lat": "38.08826144126291",
-    "lng": "23.817027905393033"
+    "lng": "23.817027905393033",
+    "id": "asianRestaurants_594b8ad5ccca",
+    "slug": "streetwok-594b"
   },
   {
     "url": "https://maps.app.goo.gl/oEMoWWtVbmE4QW2W7?g_st=ipc",
     "name": "Kaii sushi bar",
     "address": "Βρισηίδος 47, Δαναών 44, Ίλιον 131 22",
     "lat": "38.029067505855075",
-    "lng": "23.706941325356716"
+    "lng": "23.706941325356716",
+    "id": "asianRestaurants_d86051389e82",
+    "slug": "kaii-sushi-bar-d860"
   },
   {
     "url": "https://maps.app.goo.gl/qSsZbhQeQPjLVDck8?g_st=ipc",
     "name": "Ceci Hong Kong Hot Pot Restaurant",
     "address": "Λεωφ. Ελ. Βενιζέλου 14, Αθήνα 176 76",
     "lat": "37.96299269251651",
-    "lng": "23.714788342397448"
+    "lng": "23.714788342397448",
+    "id": "asianRestaurants_674b8df64d5a",
+    "slug": "ceci-hong-kong-hot-pot-restaurant-674b"
   },
   {
     "url": "https://maps.app.goo.gl/W1ubxVBTLcx41Yqd8?g_st=ipc",
     "name": "Shisan Sushi Bar",
     "address": "Αιμιλίου Βεάκη 36, Περιστέρι 121 34",
     "lat": "38.01157900293343",
-    "lng": "23.695417186581494"
+    "lng": "23.695417186581494",
+    "id": "asianRestaurants_0fe2688bf847",
+    "slug": "shisan-sushi-bar-0fe2"
   },
   {
     "url": "https://maps.app.goo.gl/XHTSnCRdEDq5dRxc7?g_st=ipc",
     "name": "Kenko Japanese Restaurant",
     "address": "Λεωφ. Ελ. Βενιζέλου 22, Νέα Σμύρνη 171 21",
     "lat": "37.94729381865282",
-    "lng": "23.715042181127906"
+    "lng": "23.715042181127906",
+    "id": "asianRestaurants_6ef4181fa78e",
+    "slug": "kenko-japanese-restaurant-6ef4"
   },
   {
     "url": "https://maps.app.goo.gl/Wb2pGeyp5yUdVqfd9?g_st=ipc",
     "name": "StreetWok",
     "address": "Λεωφ. Ελ. Βενιζέλου 37, Νέα Σμύρνη 171 23",
     "lat": "37.94661589274436",
-    "lng": "23.715316438751927"
+    "lng": "23.715316438751927",
+    "id": "asianRestaurants_ea18f7423739",
+    "slug": "streetwok-ea18"
   },
   {
     "url": "https://maps.app.goo.gl/88pCTr6wSS31ANgE6?g_st=ipc",
     "name": "Koi Sushi Bar | Peristeri",
     "address": "Πελασγίας 6, Περιστέρι 121 36",
     "lat": "38.01186121788653",
-    "lng": "23.689184297983758"
+    "lng": "23.689184297983758",
+    "id": "asianRestaurants_530d2b0642c6",
+    "slug": "koi-sushi-bar-peristeri-530d"
   },
   {
     "url": "https://maps.app.goo.gl/ALPiHRy5LRfWNWfU7?g_st=ipc",
     "name": "Black Lotus Vietnamese Restaurant",
     "address": "Ικονίου 11, Νέα Σμύρνη 171 23",
     "lat": "37.945120193663136",
-    "lng": "23.715750543219272"
+    "lng": "23.715750543219272",
+    "id": "asianRestaurants_8c0b6c732554",
+    "slug": "black-lotus-vietnamese-restaurant-8c0b"
   },
   {
     "url": "https://maps.app.goo.gl/ibEXR2ZExidRVduY6?g_st=ipc",
     "name": "Seoul House Restaurant",
     "address": "Ζησιμοπούλου 40, Παλαιό Φάληρο 175 64",
     "lat": "37.93747372174057",
-    "lng": "23.69891697936759"
+    "lng": "23.69891697936759",
+    "id": "asianRestaurants_6469a1c3e3f9",
+    "slug": "seoul-house-restaurant-6469"
   },
   {
     "url": "https://maps.app.goo.gl/uWRDz7jVt5VDWMv8A?g_st=ipc",
     "name": "Cho Cho San Drosiá",
     "address": "Πεύκων 17, Δροσιά 145 72",
     "lat": "38.12004731625109",
-    "lng": "23.859184242640065"
+    "lng": "23.859184242640065",
+    "id": "asianRestaurants_d8c154eb91c4",
+    "slug": "cho-cho-san-drosia-d8c1"
   },
   {
     "url": "https://maps.app.goo.gl/kbxKKh8YDA8LNgPa6?g_st=ipc",
     "name": "Kikko Sushi & Fish",
     "address": "Αμφιτρίτης 8, Παλαιό Φάληρο 175 61",
     "lat": "37.92527823438876",
-    "lng": "23.692729848366973"
+    "lng": "23.692729848366973",
+    "id": "asianRestaurants_df4a095e5eb1",
+    "slug": "kikko-sushi-fish-df4a"
   },
   {
     "url": "https://maps.app.goo.gl/76f6tSxZ2NXCApc48?g_st=ipc",
     "name": "Shisan Sushi Bar",
     "address": "Πλ. Παγκόσμιας Ειρήνης 4, Κορυδαλλός 181 20",
     "lat": "37.975094554437",
-    "lng": "23.656036676629217"
+    "lng": "23.656036676629217",
+    "id": "asianRestaurants_50f99f81698e",
+    "slug": "shisan-sushi-bar-50f9"
   },
   {
     "url": "https://maps.app.goo.gl/U33KjMR5URvuLe1m6?g_st=ipc",
     "name": "Toukta Thai food",
     "address": "Ιωνίας 3, Νίκαια 184 50",
     "lat": "37.96875566688742",
-    "lng": "23.650805513802922"
+    "lng": "23.650805513802922",
+    "id": "asianRestaurants_cb2b61b87e3c",
+    "slug": "toukta-thai-food-cb2b"
   },
   {
     "url": "https://maps.app.goo.gl/XC6EcCoyBojTFzQp9?g_st=ipc",
     "name": "Ryōtei 118",
     "address": "Δημ. Γούναρη 118, Γλυφάδα 166 74",
     "lat": "37.879367097165485",
-    "lng": "23.763308738653866"
+    "lng": "23.763308738653866",
+    "id": "asianRestaurants_84fbfd57e68e",
+    "slug": "ryotei-118-84fb"
   },
   {
     "url": "https://maps.app.goo.gl/bPMm8AQFpLTWbzzb7?g_st=ipc",
     "name": "Noodle Bar Πειραιάς",
     "address": "Ακτή Κουμουνδούρου 60, Πειραιάς 185 34",
     "lat": "37.937017849380595",
-    "lng": "23.658515861113596"
+    "lng": "23.658515861113596",
+    "id": "asianRestaurants_ac2889417da3",
+    "slug": "noodle-bar-peiraias-ac28"
   },
   {
     "url": "https://maps.app.goo.gl/GoKuSs69HC1RbxyBA?g_st=ipc",
     "name": "NOODLE BAR ΓΛΥΦΑΔΑ",
     "address": "Ξενοφώντος 20, Γλυφάδα 166 75",
     "lat": "37.872037331445135",
-    "lng": "23.752155686687118"
+    "lng": "23.752155686687118",
+    "id": "asianRestaurants_f6ce39f326eb",
+    "slug": "noodle-bar-glyfada-f6ce"
   },
   {
     "url": "https://maps.app.goo.gl/updMqDsRmH6egHAL7?g_st=ipc",
     "name": "Ten Modern Asian",
     "address": "Μαρίνα Ζέας, Πειραιάς 185 36",
     "lat": "37.93291413644206",
-    "lng": "23.647263058130683"
+    "lng": "23.647263058130683",
+    "id": "asianRestaurants_7724da0cbe7e",
+    "slug": "ten-modern-asian-7724"
   },
   {
     "url": "https://maps.app.goo.gl/s9uo8VDSoDevpowm6?g_st=ipc",
     "name": "Rouan Thai",
     "address": "Νοταρά 131, Πειραιάς 185 36",
     "lat": "37.939187297472465",
-    "lng": "23.64209685014842"
+    "lng": "23.64209685014842",
+    "id": "asianRestaurants_4f2a760fc2e5",
+    "slug": "rouan-thai-4f2a"
   },
   {
     "url": "https://maps.app.goo.gl/1zPoyQ3qoTUyktA49?g_st=ipc",
     "name": "Kitschen",
     "address": "Κανάρη 5, Πειραιάς 185 37",
     "lat": "37.936566769814284",
-    "lng": "23.63928965922229"
+    "lng": "23.63928965922229",
+    "id": "asianRestaurants_48bbff4f4936",
+    "slug": "kitschen-48bb"
   },
   {
     "url": "https://maps.app.goo.gl/hRUmgmxtpReyJ54h7?g_st=ipc",
     "name": "KoYaSan In Voula",
     "address": "KoYaSan In Voula",
     "lat": "37.84038966721299",
-    "lng": "23.76668605741755"
+    "lng": "23.76668605741755",
+    "id": "asianRestaurants_5169dc5ccfbd",
+    "slug": "koyasan-in-voula-5169"
   },
   {
     "url": "https://maps.app.goo.gl/nhnQHRdFpemqgYAX8?g_st=ipc",
     "name": "Zuma Mykonos",
     "address": "Mykonos 846 00",
     "lat": "37.45854067158448",
-    "lng": "25.32953811092672"
+    "lng": "25.32953811092672",
+    "id": "asianRestaurants_022225397aac",
+    "slug": "zuma-mykonos-0222"
   },
   {
     "url": "https://maps.app.goo.gl/5qdrvDCYUmZRn2Jf6?g_st=ipc",
     "name": "Bambao Mykonos",
     "address": "Fabrika, Mikonos 846 00",
     "lat": "37.44323173271624",
-    "lng": "25.328446119011353"
+    "lng": "25.328446119011353",
+    "id": "asianRestaurants_db50748440dc",
+    "slug": "bambao-mykonos-db50"
   },
   {
     "url": "https://maps.app.goo.gl/SbcxFuCJ6NAhCk248?g_st=ipc",
     "name": "Tokyo Joe Mykonos",
     "address": "Ano Vrisi, My Mall, Mikonos 846 00",
     "lat": "37.43430209897853",
-    "lng": "25.33164889840815"
+    "lng": "25.33164889840815",
+    "id": "asianRestaurants_5d69fac12c7f",
+    "slug": "tokyo-joe-mykonos-5d69"
   },
   {
     "url": "https://maps.app.goo.gl/o98h6Mb7JAp58wHN7?g_st=ipc",
     "name": "Bebop",
     "address": "Paros 844 00",
     "lat": "37.08435266337157",
-    "lng": "25.146838121018355"
+    "lng": "25.146838121018355",
+    "id": "asianRestaurants_c5266398dba0",
+    "slug": "bebop-c526"
   },
   {
     "url": "https://maps.app.goo.gl/QAY53CMCsWPZJ1nX7?g_st=ipc",
     "name": "Tao's Asian Restaurant",
     "address": "Ambelas 844 01",
     "lat": "37.1152419319295",
-    "lng": "25.264893830214174"
+    "lng": "25.264893830214174",
+    "id": "asianRestaurants_77a64bfea5a1",
+    "slug": "tao-s-asian-restaurant-77a6"
   },
   {
     "url": "https://maps.app.goo.gl/hpPuEp42bUMb6wxz5?g_st=ipc",
     "name": "Asian House",
     "address": "Vasilikis Tavaki 27, Thermi 570 01",
     "lat": "40.54562547325916",
-    "lng": "23.019251018244844"
+    "lng": "23.019251018244844",
+    "id": "asianRestaurants_7dd246309f18",
+    "slug": "asian-house-7dd2"
   },
   {
     "url": "https://maps.app.goo.gl/cFAfVvor8tZQsjbz6?g_st=ipc",
     "name": "Asian House",
     "address": "Koromila 3, Thessaloniki 546 45",
     "lat": "40.6013142217221",
-    "lng": "22.95026357792361"
+    "lng": "22.95026357792361",
+    "id": "asianRestaurants_0af7fecfc049",
+    "slug": "asian-house-0af7"
   },
   {
     "url": "https://maps.app.goo.gl/RZUt6eATfNjJBVMW9?g_st=ipc",
     "name": "Asian House",
     "address": "Kleanthous 49, Thessaloniki 544 53",
     "lat": "40.61406863205144",
-    "lng": "22.96925982276085"
+    "lng": "22.96925982276085",
+    "id": "asianRestaurants_fa15bba13e7a",
+    "slug": "asian-house-fa15"
   },
   {
     "url": "https://maps.app.goo.gl/GNVEYmU2FT2611vx5?g_st=ipc",
     "name": "Huang",
     "address": "Geor. Theotoka 1, Thessaloniki 546 21",
     "lat": "40.62746881479162",
-    "lng": "22.95210600219236"
+    "lng": "22.95210600219236",
+    "id": "asianRestaurants_4ecd6c075c4e",
+    "slug": "huang-4ecd"
   },
   {
     "url": "https://maps.app.goo.gl/6cq2gTB2UTEdBKux5?g_st=ipc",
     "name": "Wen Zhou Specialties",
     "address": "Grigoriou Palama 16, Thessaloniki 546 22",
     "lat": "40.63090950249029",
-    "lng": "22.94800772208168"
+    "lng": "22.94800772208168",
+    "id": "asianRestaurants_41c1b197a672",
+    "slug": "wen-zhou-specialties-41c1"
   },
   {
     "url": "https://maps.app.goo.gl/3FZQEKYHJjXKCNKcA?g_st=ipc",
     "name": "Ramen Tales",
     "address": "Al. Svolou 16, Thessaloniki 546 22",
     "lat": "40.63194421660545",
-    "lng": "22.948458874656616"
+    "lng": "22.948458874656616",
+    "id": "asianRestaurants_5ace71fa56ea",
+    "slug": "ramen-tales-5ace"
   },
   {
     "url": "https://maps.app.goo.gl/QoHkvVMWp7YGca2T8?g_st=ipc",
     "name": "Hanaya Sushi",
     "address": "Rogkoti 4, Thessaloniki 546 24 (Bourla-Levi Building)",
     "lat": "40.6345384090758",
-    "lng": "22.93892478438703"
+    "lng": "22.93892478438703",
+    "id": "asianRestaurants_7b20ac80bba4",
+    "slug": "hanaya-sushi-7b20"
   },
   {
     "url": "https://maps.app.goo.gl/xtgjstGFH9sAG6Ya7?g_st=ipc",
     "name": "Εmpire Sushi Bar",
     "address": "Oplopiou 3, Thessaloniki 546 25",
     "lat": "40.63454338249302",
-    "lng": "22.937599876944155"
+    "lng": "22.937599876944155",
+    "id": "asianRestaurants_50e903fa0513",
+    "slug": "empire-sushi-bar-50e9"
   },
   {
     "url": "https://maps.app.goo.gl/uTVSPYHZ31yXdaY57?g_st=ipc",
     "name": "Asian House",
     "address": "Καποδιστρίου 7 &, Paikou, Thessaloniki 546 25",
     "lat": "40.63703399499959",
-    "lng": "22.939883592923085"
+    "lng": "22.939883592923085",
+    "id": "asianRestaurants_694015c62c4a",
+    "slug": "asian-house-6940"
   },
   {
     "url": "https://maps.app.goo.gl/zEYfCsMm5fXf8Dd78?g_st=ipc",
     "name": "Ikigai - The Dumpling Experience",
     "address": "Veroias 5, Thessaloniki 546 25",
     "lat": "40.637093410026516",
-    "lng": "22.93763984161015"
+    "lng": "22.93763984161015",
+    "id": "asianRestaurants_8419e93bcb2d",
+    "slug": "ikigai-the-dumpling-experience-8419"
   },
   {
     "url": "https://maps.app.goo.gl/zRs2QPwRWoXnA8cn9",
     "name": "Hachikō Sushi Tales & Cocktails Psychiko",
     "address": "Olimpionikon 280, Neo Psichiko 154 51",
     "lat": "38.0061489322681",
-    "lng": "23.777100959451648"
+    "lng": "23.777100959451648",
+    "id": "asianRestaurants_01f6cf956e90",
+    "slug": "hachiko-sushi-tales-cocktails-psychiko-01f6"
   },
   {
     "url": "https://maps.app.goo.gl/US8MP4C24AbbzMtL9",
     "name": "The Sushi Bar",
     "address": "Geor. Vlachou 38, Athina 115 25",
     "lat": "37.99837454773829",
-    "lng": "23.77552075939677"
+    "lng": "23.77552075939677",
+    "id": "asianRestaurants_49017a334068",
+    "slug": "the-sushi-bar-4901"
   },
   {
     "url": "https://maps.app.goo.gl/qjninjaDQmMf2fNU7",
     "name": "Sakura Sushi and Steak House",
     "address": "Doukissis Plakentias 73, Athina 115 23",
     "lat": "37.992808848594535",
-    "lng": "23.76520165923385"
+    "lng": "23.76520165923385",
+    "id": "asianRestaurants_315dc41692bd",
+    "slug": "sakura-sushi-and-steak-house-315d"
   },
   {
     "url": "https://maps.app.goo.gl/mX2bUrDUmSpXcEdF7",
     "name": "Noodle Bar Zografou",
     "address": "Geor. Papandreou 31, Zografou 157 73",
     "lat": "37.98033900085368",
-    "lng": "23.7645797480279"
+    "lng": "23.7645797480279",
+    "id": "asianRestaurants_473a72132f5a",
+    "slug": "noodle-bar-zografou-473a"
   },
   {
     "url": "https://maps.app.goo.gl/MU1e8JQujzPUM5ZN6",
     "name": "Garum Athens",
     "address": "Kelsou 10, Athina 116 36",
     "lat": "37.96322815000365",
-    "lng": "23.734456659008355"
+    "lng": "23.734456659008355",
+    "id": "asianRestaurants_38b8b7a5de82",
+    "slug": "garum-athens-38b8"
   },
   {
     "url": "https://maps.app.goo.gl/u5z1UYphrgpUNHe16",
     "name": "Mayman",
     "address": "Dodekanisou 1, Peristeri 121 36",
     "lat": "38.01237886315462",
-    "lng": "23.686035629770352"
+    "lng": "23.686035629770352",
+    "id": "asianRestaurants_fd79716bd06b",
+    "slug": "mayman-fd79"
   },
   {
     "url": "https://maps.app.goo.gl/j57HrF6nf6youYLV8",
     "name": "RawBata",
     "address": "Lakonias 33, Athina 115 23",
     "lat": "37.991621984562435",
-    "lng": "23.76287776299424"
+    "lng": "23.76287776299424",
+    "id": "asianRestaurants_6980a2c0f36c",
+    "slug": "rawbata-6980"
   },
   {
     "url": "https://maps.app.goo.gl/zBAUew3tfQKdJ3yX9",
     "name": "Sushi City",
     "address": "Kalapothaki 7, Thessaloniki 546 45",
     "lat": "40.633479553417104",
-    "lng": "22.939350429758118"
+    "lng": "22.939350429758118",
+    "id": "asianRestaurants_169207d89dbd",
+    "slug": "sushi-city-1692"
   },
   {
     "url": "https://maps.app.goo.gl/sb6JL78bVoxjZHir9",
     "name": "Mongo Asian Food",
     "address": "John Kouskoura 6, Thessaloniki 546 22",
     "lat": "40.63082745054034",
-    "lng": "22.945340872957278"
+    "lng": "22.945340872957278",
+    "id": "asianRestaurants_829415263030",
+    "slug": "mongo-asian-food-8294"
   },
   {
     "url": "https://maps.app.goo.gl/bR7jaQSkxn33eLgq7",
     "name": "Ekiben Kitchen Glyfada",
     "address": "Laodikis 41, Glifada 166 74",
     "lat": "37.861176848381916",
-    "lng": "23.75639518380584"
+    "lng": "23.75639518380584",
+    "id": "asianRestaurants_6985f147fd97",
+    "slug": "ekiben-kitchen-glyfada-6985"
   },
   {
     "url": "https://maps.app.goo.gl/5vFVT9HMbgmQ6Erc6",
     "name": "Sushaki | Greek Sushi Experience",
     "address": "Eptapirgiou 75, Sikies 566 26",
     "lat": "40.650072445284856",
-    "lng": "22.958835229549017"
+    "lng": "22.958835229549017",
+    "id": "asianRestaurants_4caa87d6e139",
+    "slug": "sushaki-greek-sushi-experience-4caa"
   },
   {
     "url": "https://maps.app.goo.gl/Tfd55EpuS182EpUw7",
     "name": "Sushaki | Greek Sushi Experience",
     "address": "Petrou Sindika 11, Thessaloniki 546 43",
     "lat": "40.60428165420744",
-    "lng": "22.954061100104322"
+    "lng": "22.954061100104322",
+    "id": "asianRestaurants_e9c045aff53d",
+    "slug": "sushaki-greek-sushi-experience-e9c0"
   },
   {
     "url": "https://maps.app.goo.gl/ggCr6zagpbao1wwt9",
     "name": "Sushaki | Greek Sushi Experience",
     "address": "Komninon 3, Thessaloniki 546 24",
     "lat": "40.63309136297845",
-    "lng": "22.939152229553493"
+    "lng": "22.939152229553493",
+    "id": "asianRestaurants_788113ad98ac",
+    "slug": "sushaki-greek-sushi-experience-7881"
   },
   {
     "url": "https://maps.app.goo.gl/8UyTpuy2ncGK15GJ6?g_st=ic",
     "name": "Nagomi Jpn",
     "address": "Al. Svolou 41, Thessaloniki 546 22",
     "lat": "40.63061239454344",
-    "lng": "22.951225233616498"
+    "lng": "22.951225233616498",
+    "id": "asianRestaurants_aa56878cf133",
+    "slug": "nagomi-jpn-aa56"
   },
   {
     "url": "https://maps.app.goo.gl/RDSLJTa1W2roeGbr9?g_st=ic",
     "name": "Noodle Bar",
     "address": "Leof. Pentelis 1, Chalandri 152 34",
     "lat": "38.022609797953606",
-    "lng": "23.8008077638359"
+    "lng": "23.8008077638359",
+    "id": "asianRestaurants_2fedddceed72",
+    "slug": "noodle-bar-2fed"
   },
   {
     "url": "https://maps.app.goo.gl/mwPcNGYBVTJSy6C59?g_st=ic",
     "name": "Kuchisabishii Sakaba",
     "address": "Falirou 36, Athina 117 42",
     "lat": "37.965507796335324",
-    "lng": "23.72667501899547"
+    "lng": "23.72667501899547",
+    "id": "asianRestaurants_be2d9e8cfa29",
+    "slug": "kuchisabishii-sakaba-be2d"
   }
 ]

@@ -4,909 +4,1169 @@
     "name": "Ολυμπιακό Στάδιο Αθηνών",
     "address": "Λεωφ. Ολυμπιονίκου Σπύρου Λούη 1, Μαρούσι 151 23",
     "lat": "38.035910568153284",
-    "lng": "23.786973025948996"
+    "lng": "23.786973025948996",
+    "id": "mustSeeAttractions_54efa8dcf204",
+    "slug": "olympiako-stadio-athinon-54ef"
   },
   {
     "url": "https://maps.app.goo.gl/fcKT8gTb8XfWLvDa7?g_st=ipc",
     "name": "Μέγαρο Μουσικής Αθηνών",
     "address": "Βασιλίσσης Σοφίας, Πέτρου Κόκκαλη &, Αθήνα",
     "lat": "37.98113320826234",
-    "lng": "23.754226747419665"
+    "lng": "23.754226747419665",
+    "id": "mustSeeAttractions_48ddcd3e9742",
+    "slug": "megaro-moysikis-athinon-48dd"
   },
   {
     "url": "https://maps.app.goo.gl/muvvb7CTCn3yFhWj6?g_st=ipc",
     "name": "Λυκαβηττός",
     "address": "Σαρανταπήχου, Μονοπατι Λυκαβηττου &, Αθήνα 114 71",
     "lat": "37.98323503241099",
-    "lng": "23.746500382209337"
+    "lng": "23.746500382209337",
+    "id": "mustSeeAttractions_0e9341b94f04",
+    "slug": "lykavittos-0e93"
   },
   {
     "url": "https://maps.app.goo.gl/BnpGTjqhDuV8Nenn9?g_st=ipc",
     "name": "Ιερός Ναός Αγίων Ισιδώρων Λυκαβηττού",
     "address": "Μονοπατι Λυκαβηττου, Αθήνα 114 71",
     "lat": "37.982294745131696",
-    "lng": "23.74279440377978"
+    "lng": "23.74279440377978",
+    "id": "mustSeeAttractions_361f9ea0fa7a",
+    "slug": "ieros-naos-agion-isidoron-lykavittoy-361f"
   },
   {
     "url": "https://maps.app.goo.gl/jffFuAXc3Vq1DSsD8?g_st=ipc",
     "name": "Βυζαντινό και Χριστιανικό Μουσείο",
     "address": "Λεωφ. Βασιλίσσης Σοφίας 22, Αθήνα 106 75",
     "lat": "37.9753760157153",
-    "lng": "23.744611863575788"
+    "lng": "23.744611863575788",
+    "id": "mustSeeAttractions_4e1c093b1a30",
+    "slug": "vyzantino-kai-christianiko-moyseio-4e1c"
   },
   {
     "url": "https://maps.app.goo.gl/tPkYqHsHmRpbKSaX9?g_st=ipc",
     "name": "Μουσείο Μπενάκη Ελληνικού Πολιτισμού | Benaki Museum of Greek Culture",
     "address": "Koumpari 1, Athina 106 74",
     "lat": "37.97595332142378",
-    "lng": "23.740446335275582"
+    "lng": "23.740446335275582",
+    "id": "mustSeeAttractions_4a961e3001a5",
+    "slug": "moyseio-mpenaki-ellinikoy-politismoy-benaki-museum-of-greek-culture-4a96"
   },
   {
     "url": "https://maps.app.goo.gl/yMXMdhRrheqLTtjc9?g_st=ipc",
     "name": "Εθνικό Αρχαιολογικό Μουσείο",
     "address": "28ης Οκτωβρίου 44, Αθήνα 106 82",
     "lat": "37.989024298697544",
-    "lng": "23.73276057362421"
+    "lng": "23.73276057362421",
+    "id": "mustSeeAttractions_5d23953463e8",
+    "slug": "ethniko-archaiologiko-moyseio-5d23"
   },
   {
     "url": "https://maps.app.goo.gl/jXVzy7hmkNKGbif26?g_st=ipc",
     "name": "Βοτανικό Μουσείο Εθνικού Κήπου",
     "address": "Λεωφ. Βασιλίσσης Σοφίας, Αθήνα 105 57",
     "lat": "37.97408914636613",
-    "lng": "23.7389299048779"
+    "lng": "23.7389299048779",
+    "id": "mustSeeAttractions_67d5b49dcf96",
+    "slug": "votaniko-moyseio-ethnikoy-kipoy-67d5"
   },
   {
     "url": "https://maps.app.goo.gl/unRrdoEdMtGJhBhX8?g_st=ipc",
     "name": "Βουλή των Ελλήνων",
     "address": "Μέγαρο, Βουλής, Αθήνα 100 21",
     "lat": "37.97534017568183",
-    "lng": "23.73691601580171"
+    "lng": "23.73691601580171",
+    "id": "mustSeeAttractions_7e14ccbc774d",
+    "slug": "voyli-ton-ellinon-7e14"
   },
   {
     "url": "https://maps.app.goo.gl/EoVCRRTzjoVCkEm18?g_st=ipc",
     "name": "Παναθηναϊκό Στάδιο",
     "address": "Λεωφ. Βασιλέως Κωνσταντίνου, Αθήνα 116 35",
     "lat": "37.96833218533537",
-    "lng": "23.741113035876687"
+    "lng": "23.741113035876687",
+    "id": "mustSeeAttractions_3fcc6eb77276",
+    "slug": "panathinaiko-stadio-3fcc"
   },
   {
     "url": "https://maps.app.goo.gl/EPdJbYsoM1wXLMLy5?g_st=ipc",
     "name": "Εθνικός Κήπος",
     "address": "Αθήνα 105 57",
     "lat": "37.97258755244098",
-    "lng": "23.73743274111468"
+    "lng": "23.73743274111468",
+    "id": "mustSeeAttractions_9c8cd2ae989a",
+    "slug": "ethnikos-kipos-9c8c"
   },
   {
     "url": "https://maps.app.goo.gl/Hb78YQFedU1ZBjDY7?g_st=ipc",
     "name": "Ζάππειο Μέγαρο",
     "address": "Λεωφ. Βασιλίσσης Όλγας, Αθήνα 105 57",
     "lat": "37.971521700592604",
-    "lng": "23.73672254708253"
+    "lng": "23.73672254708253",
+    "id": "mustSeeAttractions_a63ab05582ba",
+    "slug": "zappeio-megaro-a63a"
   },
   {
     "url": "https://maps.app.goo.gl/5RjMWARRwZPM2Kdw6?g_st=ipc",
     "name": "Κήποι Ζαππείου",
     "address": "Λεωφ. Βασιλίσσης Όλγας 1, Αθήνα 105 57",
     "lat": "37.97023042997274",
-    "lng": "23.73586719386634"
+    "lng": "23.73586719386634",
+    "id": "mustSeeAttractions_ad424ca48b94",
+    "slug": "kipoi-zappeioy-ad42"
   },
   {
     "url": "https://maps.app.goo.gl/umvyXLD9iKw3FVBTA?g_st=ipc",
     "name": "Ρωμαϊκά Λουτρά Ζαππείου",
     "address": "Λεωφ. Βασιλίσσης Αμαλίας 405, Αθήνα 105 57",
     "lat": "37.97157046328902",
-    "lng": "23.73377918203135"
+    "lng": "23.73377918203135",
+    "id": "mustSeeAttractions_7df9738c0c83",
+    "slug": "romaika-loytra-zappeioy-7df9"
   },
   {
     "url": "https://maps.app.goo.gl/MRiS2rx9HUUxeppD6?g_st=ipc",
     "name": "Ναός του Ολυμπίου Διός",
     "address": "Αθήνα 105 57",
     "lat": "37.96929966455042",
-    "lng": "23.733099967898216"
+    "lng": "23.733099967898216",
+    "id": "mustSeeAttractions_a7a2908a9221",
+    "slug": "naos-toy-olympioy-dios-a7a2"
   },
   {
     "url": "https://maps.app.goo.gl/FgkJ1umuygHQYmoC8?g_st=ipc",
     "name": "Ολυμπίου Διός",
     "address": "Αθήνα 105 58",
     "lat": "37.97177631416209",
-    "lng": "23.731310537974434"
+    "lng": "23.731310537974434",
+    "id": "mustSeeAttractions_513259a6b06d",
+    "slug": "olympioy-dios-5132"
   },
   {
     "url": "https://maps.app.goo.gl/BWatUxUvLvu5LHMP9?g_st=ipc",
     "name": "Πλατεία Μοναστηρακίου",
     "address": "Απόλλωνος 21, Αθήνα 105 57",
     "lat": "37.97640816584317",
-    "lng": "23.725886410870196"
+    "lng": "23.725886410870196",
+    "id": "mustSeeAttractions_241beda98c80",
+    "slug": "plateia-monastirakioy-241b"
   },
   {
     "url": "https://maps.app.goo.gl/tWCR6cy3umt66P4p6?g_st=ipc",
     "name": "Αναφιώτικα",
     "address": "Αθήνα 105 58",
     "lat": "37.97237012452399",
-    "lng": "23.728116657972198"
+    "lng": "23.728116657972198",
+    "id": "mustSeeAttractions_f9286196691d",
+    "slug": "anafiotika-f928"
   },
   {
     "url": "https://maps.app.goo.gl/Mr5MTi9dXGy4Y8Gt5?g_st=ipc",
     "name": "Βιβλιοθήκη του Αδριανού",
     "address": "Κ, Άρεως 3, Τ, Αθήνα 105 55",
     "lat": "37.975502314737916",
-    "lng": "23.726030220996723"
+    "lng": "23.726030220996723",
+    "id": "mustSeeAttractions_4878dd7452cc",
+    "slug": "vivliothiki-toy-adrianoy-4878"
   },
   {
     "url": "https://maps.app.goo.gl/JcpJbaRT1V7eBHEa9?g_st=ipc",
     "name": "Ψυρρή",
     "address": "Αθήνα 105 54",
     "lat": "37.9780643555903",
-    "lng": "23.723930742700833"
+    "lng": "23.723930742700833",
+    "id": "mustSeeAttractions_1d05d319a6bb",
+    "slug": "psyrri-1d05"
   },
   {
     "url": "https://maps.app.goo.gl/ix2gNhhwsMZiBHES8?g_st=ipc",
     "name": "Ρωμαϊκή Αγορά Αθηνών",
     "address": "Πολυγνώτου 3, Αθήνα 105 55",
     "lat": "37.974304073145795",
-    "lng": "23.72610046442621"
+    "lng": "23.72610046442621",
+    "id": "mustSeeAttractions_c2101de8cfd4",
+    "slug": "romaiki-agora-athinon-c210"
   },
   {
     "url": "https://maps.app.goo.gl/5RAt8qpszUA945pG8?g_st=ipc",
     "name": "Νότια Κλιτύς Ακρόπολης Αθηνών",
     "address": "Διονυσίου Αρεοπαγίτου, Αθήνα 105 58",
     "lat": "37.96962866994438",
-    "lng": "23.729046031418846"
+    "lng": "23.729046031418846",
+    "id": "mustSeeAttractions_397dfba9f16b",
+    "slug": "notia-klitys-akropolis-athinon-397d"
   },
   {
     "url": "https://maps.app.goo.gl/ztHmcesfndwzvFuRA?g_st=ipc",
     "name": "Παρθενώνας",
     "address": "Αθήνα 105 58",
     "lat": "37.97152775110389",
-    "lng": "23.726714874737574"
+    "lng": "23.726714874737574",
+    "id": "mustSeeAttractions_186b78600e45",
+    "slug": "parthenonas-186b"
   },
   {
     "url": "https://maps.app.goo.gl/ij6x92mGVau3FvST9?g_st=ipc",
     "name": "Roman Basilica",
     "address": "Αδριανού 27, Αθήνα 105 55",
     "lat": "37.97583750461877",
-    "lng": "23.723867490000497"
+    "lng": "23.723867490000497",
+    "id": "mustSeeAttractions_b999049b5fec",
+    "slug": "roman-basilica-b999"
   },
   {
     "url": "https://maps.app.goo.gl/ZqiBPBtN3PxoeXmY8?g_st=ipc",
     "name": "Μουσείο Ακρόπολης",
     "address": "Διονυσίου Αρεοπαγίτου 15, Αθήνα 117 42",
     "lat": "37.96845037815513",
-    "lng": "23.728523216398074"
+    "lng": "23.728523216398074",
+    "id": "mustSeeAttractions_8c69e6a7063e",
+    "slug": "moyseio-akropolis-8c69"
   },
   {
     "url": "https://maps.app.goo.gl/p7J1mcB5DGfqSALg6?g_st=ipc",
     "name": "Ακρόπολη Αθηνών",
     "address": "Αθήνα 105 58",
     "lat": "37.97153381829169",
-    "lng": "23.7257493192379"
+    "lng": "23.7257493192379",
+    "id": "mustSeeAttractions_9bfc186193fa",
+    "slug": "akropoli-athinon-9bfc"
   },
   {
     "url": "https://maps.app.goo.gl/rjXRZrpDRp5VnNP2A?g_st=ipc",
     "name": "Ωδείο Ηρώδου του Αττικού",
     "address": "Διονυσίου Αρεοπαγίτου, Αθήνα 105 55",
     "lat": "37.97079439393834",
-    "lng": "23.724582622108812"
+    "lng": "23.724582622108812",
+    "id": "mustSeeAttractions_e73ed47cb5a3",
+    "slug": "odeio-irodoy-toy-attikoy-e73e"
   },
   {
     "url": "https://maps.app.goo.gl/ofAbPpuVbSmGyHGy7?g_st=ipc",
     "name": "Αρχαία Αγορά Αθηνών",
     "address": "Αθήνα 105 55",
     "lat": "37.97489898202124",
-    "lng": "23.722093444133804"
+    "lng": "23.722093444133804",
+    "id": "mustSeeAttractions_fa2e6a808026",
+    "slug": "archaia-agora-athinon-fa2e"
   },
   {
     "url": "https://maps.app.goo.gl/auHh3GwXgN8RTikx6?g_st=ipc",
     "name": "Ναός του Ηφαίστου",
     "address": "Αθήνα 105 55",
     "lat": "37.9755941105574",
-    "lng": "23.721451459878914"
+    "lng": "23.721451459878914",
+    "id": "mustSeeAttractions_f836a18a6282",
+    "slug": "naos-toy-ifaistoy-f836"
   },
   {
     "url": "https://maps.app.goo.gl/i7GUzZ6ceEZCukDC6?g_st=ipc",
     "name": "Θησείο",
     "address": "Αθήνα 118 51",
     "lat": "37.97501242037082",
-    "lng": "23.717080869886306"
+    "lng": "23.717080869886306",
+    "id": "mustSeeAttractions_6f694258a5ea",
+    "slug": "thiseio-6f69"
   },
   {
     "url": "https://maps.app.goo.gl/oZosE6Kbfk2BP5e67?g_st=ipc",
     "name": "Λόφος Φιλοπάππου",
     "address": "Φυλής 215, Αθήνα 117 41",
     "lat": "37.96711952882775",
-    "lng": "23.721574966297474"
+    "lng": "23.721574966297474",
+    "id": "mustSeeAttractions_3df9a416cf1a",
+    "slug": "lofos-filopappoy-3df9"
   },
   {
     "url": "https://maps.app.goo.gl/6gQt8KFRg9ZbnwLVA?g_st=ipc",
     "name": "Εθνικό Αστεροσκοπείο Αθηνών - Κέντρο Επισκεπτών Θησείου",
     "address": "Λόφος Νυμφών Θησείο, ΤΘ 20048, Αθήνα 118 10",
     "lat": "37.972744612814594",
-    "lng": "23.717947819468222"
+    "lng": "23.717947819468222",
+    "id": "mustSeeAttractions_26d34993a0ba",
+    "slug": "ethniko-asteroskopeio-athinon-kentro-episkepton-thiseioy-26d3"
   },
   {
     "url": "https://maps.app.goo.gl/yJCvqZ3YjAxVjgmU6?g_st=ipc",
     "name": "Πνύκα",
     "address": "Αθήνα 117 41",
     "lat": "37.96737351880718",
-    "lng": "23.721158867490345"
+    "lng": "23.721158867490345",
+    "id": "mustSeeAttractions_aeebd3346525",
+    "slug": "pnyka-aeeb"
   },
   {
     "url": "https://maps.app.goo.gl/pQWTjEcbS98njE48A?g_st=ipc",
     "name": "Κέντρο Πολιτισμού Ίδρυμα Σταύρος Νιάρχος",
     "address": "Λεωφ. Ανδρέα Συγγρού 364, Καλλιθέα 176 74",
     "lat": "37.939856198299935",
-    "lng": "23.69211972785974"
+    "lng": "23.69211972785974",
+    "id": "mustSeeAttractions_dc5030eb7fbd",
+    "slug": "kentro-politismoy-idryma-stayros-niarchos-dc50"
   },
   {
     "url": "https://maps.app.goo.gl/vxdQs7SscGUC98hY9?g_st=ipc",
     "name": "Μαρίνα Φλοίσβου",
     "address": "Flisvos Marina, Αθήνα 175 61",
     "lat": "37.9311951612676",
-    "lng": "23.68504538337465"
+    "lng": "23.68504538337465",
+    "id": "mustSeeAttractions_7720a421889c",
+    "slug": "marina-floisvoy-7720"
   },
   {
     "url": "https://maps.app.goo.gl/wutdpyatwyXBUYRR6?g_st=ipc",
     "name": "Ιερά Μονή Δαφνίου",
     "address": "Ιερά Οδός, Χαϊδάρι 124 61",
     "lat": "38.012987406661985",
-    "lng": "23.63601735879107"
+    "lng": "23.63601735879107",
+    "id": "mustSeeAttractions_211504525918",
+    "slug": "iera-moni-dafnioy-2115"
   },
   {
     "url": "https://maps.app.goo.gl/T618Z3KqK9zezNFE9?g_st=ipc",
     "name": "Το Ρολόι του Πειραιά",
     "address": "Ακτή Μουτσοπούλου 6, Πειραιάς 185 35",
     "lat": "37.93913367533199",
-    "lng": "23.648716548781902"
+    "lng": "23.648716548781902",
+    "id": "mustSeeAttractions_1f6f7342d4cd",
+    "slug": "to-roloi-toy-peiraia-1f6f"
   },
   {
     "url": "https://maps.app.goo.gl/GHxTmYXX8KQuXnnF8?g_st=ipc",
     "name": "Ναός Βραυρωνίας Αρτέμιδος",
     "address": "Βραυρώνα 190 03",
     "lat": "37.925951413998256",
-    "lng": "23.993485515950447"
+    "lng": "23.993485515950447",
+    "id": "mustSeeAttractions_28785f0c1603",
+    "slug": "naos-vrayronias-artemidos-2878"
   },
   {
     "url": "https://maps.app.goo.gl/HJESfC3rnS8i8UYa9?g_st=ipc",
     "name": "Λίμνη Βουλιαγμένης",
     "address": "Βουλιαγμένη 166 71",
     "lat": "37.80708594211009",
-    "lng": "23.78595413697381"
+    "lng": "23.78595413697381",
+    "id": "mustSeeAttractions_96c6dc77490d",
+    "slug": "limni-voyliagmenis-96c6"
   },
   {
     "url": "https://maps.app.goo.gl/CQEgQ38KdmafS3mN7?g_st=ipc",
     "name": "Αρχαιολογικός Χώρος Ελευσίνας",
     "address": "Σωτηρίου Γκιόκα 1, Ελευσίνα 192 00",
     "lat": "38.04235410298215",
-    "lng": "23.539415339881792"
+    "lng": "23.539415339881792",
+    "id": "mustSeeAttractions_9b8993cb09f3",
+    "slug": "archaiologikos-choros-eleysinas-9b89"
   },
   {
     "url": "https://maps.app.goo.gl/TEdzv6vPybFxQzP18?g_st=ipc",
     "name": "Ναός της Αφαίας",
     "address": "Αίγινα 180 10",
     "lat": "37.75437516471331",
-    "lng": "23.533121298393443"
+    "lng": "23.533121298393443",
+    "id": "mustSeeAttractions_dff5abd15b84",
+    "slug": "naos-tis-afaias-dff5"
   },
   {
     "url": "https://maps.app.goo.gl/YdUw2GvNU3PMRgCM6?g_st=ipc",
     "name": "Railbiking in Greece",
     "address": "28ης Οκτωβρίου 197, Μέγαρα 191 00",
     "lat": "37.98899577004485",
-    "lng": "23.337743851168998"
+    "lng": "23.337743851168998",
+    "id": "mustSeeAttractions_73a680ef4731",
+    "slug": "railbiking-in-greece-73a6"
   },
   {
     "url": "https://maps.app.goo.gl/TiGdJ3goZZvH3vQTA?g_st=ipc",
     "name": "Ναός Ποσειδώνα",
     "address": "Σούνιο 195 00",
     "lat": "37.65020662017392",
-    "lng": "24.024585105239044"
+    "lng": "24.024585105239044",
+    "id": "mustSeeAttractions_4af28e33d14a",
+    "slug": "naos-poseidona-4af2"
   },
   {
     "url": "https://maps.app.goo.gl/H1hDYWZinAPpvjKR9?g_st=ipc",
     "name": "Αρχαιολογικός Χώρος Σουνίου",
     "address": "Λαυρεωτική 195 00",
     "lat": "37.65015898457581",
-    "lng": "24.02460331248824"
+    "lng": "24.02460331248824",
+    "id": "mustSeeAttractions_d2b428b50440",
+    "slug": "archaiologikos-choros-soynioy-d2b4"
   },
   {
     "url": "https://maps.app.goo.gl/4DoJ6SnBtgDpmScf7?g_st=ipc",
     "name": "Αρχαία Επίδαυρος,  Βυθισμένη πολιτεία sunken city",
     "address": "Παραλία Γκλιατη 1, Αρχαία Επίδαυρος 210 59",
     "lat": "37.62558699316192",
-    "lng": "23.15824375963821"
+    "lng": "23.15824375963821",
+    "id": "mustSeeAttractions_81109b384881",
+    "slug": "archaia-epidayros-vythismeni-politeia-sunken-city-8110"
   },
   {
     "url": "https://maps.app.goo.gl/cmoYHbzQvg5Nv9KN7?g_st=ipc",
     "name": "Διώρυγα της Κορίνθου",
     "address": "Λουτράκι 203 00",
     "lat": "37.934260646159885",
-    "lng": "22.98428860726812"
+    "lng": "22.98428860726812",
+    "id": "mustSeeAttractions_548e87d4f0b8",
+    "slug": "dioryga-tis-korinthoy-548e"
   },
   {
     "url": "https://maps.app.goo.gl/uSXp93uUxm32U2Ms6?g_st=ipc",
     "name": "Skydive Athens",
     "address": "Kopaida Airfield, Kastro Viotias 323 00",
     "lat": "38.45479327540192",
-    "lng": "23.137313881202427"
+    "lng": "23.137313881202427",
+    "id": "mustSeeAttractions_e5512cd254da",
+    "slug": "skydive-athens-e551"
   },
   {
     "url": "https://maps.app.goo.gl/4dZguixUu49kmP199?g_st=ipc",
     "name": "Αρχαίο Θέατρο Ασκληπιείου Επιδαύρου",
     "address": "Επίδαυρος 210 52",
     "lat": "37.59612250456949",
-    "lng": "23.079285116251615"
+    "lng": "23.079285116251615",
+    "id": "mustSeeAttractions_1762cb7f3f45",
+    "slug": "archaio-theatro-asklipieioy-epidayroy-1762"
   },
   {
     "url": "https://maps.app.goo.gl/b4Z6adjUcQFQhcNL7?g_st=ipc",
     "name": "Αρχαιολογικός Χώρος Ασκληπιείου Επιδαύρου",
     "address": "Επίδαυρος 210 52",
     "lat": "37.596069935653894",
-    "lng": "23.077204053695286"
+    "lng": "23.077204053695286",
+    "id": "mustSeeAttractions_def8cbb6aa41",
+    "slug": "archaiologikos-choros-asklipieioy-epidayroy-def8"
   },
   {
     "url": "https://maps.app.goo.gl/Wa4GWgjzXVLMVAyZ7?g_st=ipc",
     "name": "Αρχαία Κόρινθος",
     "address": "Αρχαία Κόρινθος 200 07",
     "lat": "37.90716292407013",
-    "lng": "22.881429703730713"
+    "lng": "22.881429703730713",
+    "id": "mustSeeAttractions_10ed76689ca7",
+    "slug": "archaia-korinthos-10ed"
   },
   {
     "url": "https://maps.app.goo.gl/8vWipRURHj9oGwSj8?g_st=ipc",
     "name": "Ναός του Απόλλωνα",
     "address": "Άργους 105, Αρχαία Κόρινθος 200 07",
     "lat": "37.905934819191934",
-    "lng": "22.879090197503242"
+    "lng": "22.879090197503242",
+    "id": "mustSeeAttractions_6f7525d9828a",
+    "slug": "naos-toy-apollona-6f75"
   },
   {
     "url": "https://maps.app.goo.gl/ihjdRvavpYz6Jjd5A?g_st=ipc",
     "name": "Σπήλαιο Καταφύκι",
     "address": "Δρυοπίδα 840 06",
     "lat": "37.381809266398925",
-    "lng": "24.430137129464182"
+    "lng": "24.430137129464182",
+    "id": "mustSeeAttractions_e7d3f595ce74",
+    "slug": "spilaio-katafyki-e7d3"
   },
   {
     "url": "https://maps.app.goo.gl/BqhWK8uyZVNjhnRG8?g_st=ipc",
     "name": "Αρχαιολογικού Χώρου Μυκηνών",
     "address": "Μυκήνες 212 00",
     "lat": "37.73086788150969",
-    "lng": "22.75613319936325"
+    "lng": "22.75613319936325",
+    "id": "mustSeeAttractions_fdd5af362f6e",
+    "slug": "archaiologikoy-choroy-mykinon-fdd5"
   },
   {
     "url": "https://maps.app.goo.gl/wvmKvmFpppdNJFd78?g_st=ipc",
     "name": "Μυκήνες",
     "address": "Μυκήνες 212 00",
     "lat": "37.719549554552074",
-    "lng": "22.745771038100788"
+    "lng": "22.745771038100788",
+    "id": "mustSeeAttractions_6da28e1f03a6",
+    "slug": "mykines-6da2"
   },
   {
     "url": "https://maps.app.goo.gl/PrH4BXCt62jqPBys9?g_st=ipc",
     "name": "Αρχαιολογικός Χώρος Νεμέας",
     "address": "Koutsomidi, Nemea 205 00",
     "lat": "37.808169165276894",
-    "lng": "22.71117627010056"
+    "lng": "22.71117627010056",
+    "id": "mustSeeAttractions_bf66b7fd059d",
+    "slug": "archaiologikos-choros-nemeas-bf66"
   },
   {
     "url": "https://maps.app.goo.gl/qq546eKqcWFHVGyWA?g_st=ipc",
     "name": "Τίρυνθα",
     "address": "Tirintha 211 00",
     "lat": "37.596581091934894",
-    "lng": "22.800009234306064"
+    "lng": "22.800009234306064",
+    "id": "mustSeeAttractions_280c2fbdfcc2",
+    "slug": "tiryntha-280c"
   },
   {
     "url": "https://maps.app.goo.gl/JVvCKFqv1vyzhKAP7?g_st=ipc",
     "name": "Φρούριο Παλαμηδίου",
     "address": "Παλαμηδίου, Ναύπλιο 211 00",
     "lat": "37.562018953170636",
-    "lng": "22.803816386211206"
+    "lng": "22.803816386211206",
+    "id": "mustSeeAttractions_17b8ded02742",
+    "slug": "froyrio-palamidioy-17b8"
   },
   {
     "url": "https://maps.app.goo.gl/DkbZi8R48n8E7Qu76?g_st=ipc",
     "name": "Κάστρο Ακροναυπλίας",
     "address": "Άγγελου Τερζάκη 25, Ναύπλιο 211 00",
     "lat": "37.56407670573787",
-    "lng": "22.793195253729316"
+    "lng": "22.793195253729316",
+    "id": "mustSeeAttractions_c7dd65dae274",
+    "slug": "kastro-akronayplias-c7dd"
   },
   {
     "url": "https://maps.app.goo.gl/sWU36E9QQXcW8jCP7?g_st=ipc",
     "name": "Θόλος της Αθηνάς Προναίας",
     "address": "Δελφοί 330 54",
     "lat": "38.480181188125016",
-    "lng": "22.507891151559672"
+    "lng": "22.507891151559672",
+    "id": "mustSeeAttractions_b6d15c09de42",
+    "slug": "tholos-tis-athinas-pronaias-b6d1"
   },
   {
     "url": "https://maps.app.goo.gl/ZFhK1WzED1X3rqNX7?g_st=ipc",
     "name": "Αρχαιολογικός Χώρος Δελφών",
     "address": "Δελφοί 330 54",
     "lat": "38.48256715110526",
-    "lng": "22.501447020510593"
+    "lng": "22.501447020510593",
+    "id": "mustSeeAttractions_52aa3e292f9c",
+    "slug": "archaiologikos-choros-delfon-52aa"
   },
   {
     "url": "https://maps.app.goo.gl/vhNTNbS2nJx1YD8n8?g_st=ipc",
     "name": "Εθνικός Δρυμός Πάρνηθας",
     "address": "Πάρνηθα 136 72",
     "lat": "38.15998271976968",
-    "lng": "23.71947970128565"
+    "lng": "23.71947970128565",
+    "id": "mustSeeAttractions_f8a8945256eb",
+    "slug": "ethnikos-drymos-parnithas-f8a8"
   },
   {
     "url": "https://maps.app.goo.gl/djGFTxoDCCB83eyN6?g_st=ipc",
     "name": "Αέρηδες",
     "address": "Αθήνα 105 55",
     "lat": "37.97449623338425",
-    "lng": "23.727043202053398"
+    "lng": "23.727043202053398",
+    "id": "mustSeeAttractions_2a618ba12cb4",
+    "slug": "aerides-2a61"
   },
   {
     "url": "https://maps.app.goo.gl/AA1yv1yq8fC6CPEt8?g_st=ipc",
     "name": "Temple of Apollo",
     "address": "Delphi 330 54",
     "lat": "38.48229738005722",
-    "lng": "22.501176584203076"
+    "lng": "22.501176584203076",
+    "id": "mustSeeAttractions_e4dddc25789f",
+    "slug": "temple-of-apollo-e4dd"
   },
   {
     "url": "https://maps.app.goo.gl/gV2Li4kSvE78UFFC9?g_st=ipc",
     "name": "Ancient Stadium of Delphi",
     "address": "Delphi 330 54",
     "lat": "38.48261130916093",
-    "lng": "22.497897087851854"
+    "lng": "22.497897087851854",
+    "id": "mustSeeAttractions_ff9d3d24c86f",
+    "slug": "ancient-stadium-of-delphi-ff9d"
   },
   {
     "url": "https://maps.app.goo.gl/8aSHhZk2bT9dK56z5?g_st=ipc",
     "name": "Delos",
     "address": "Delos 846 00",
     "lat": "37.39618494324863",
-    "lng": "25.268932318593706"
+    "lng": "25.268932318593706",
+    "id": "mustSeeAttractions_fd0e893870f5",
+    "slug": "delos-fd0e"
   },
   {
     "url": "https://maps.app.goo.gl/a1RARGnxhykKakN29?g_st=ipc",
     "name": "Καστροπολιτεία Μονεμβασιάς",
     "address": "Monemvasia 230 70",
     "lat": "36.687484458767585",
-    "lng": "23.0558013260312"
+    "lng": "23.0558013260312",
+    "id": "mustSeeAttractions_00d499d24fcf",
+    "slug": "kastropoliteia-monemvasias-00d4"
   },
   {
     "url": "https://maps.app.goo.gl/Ad6oLYv7MUahs6GT6?g_st=ipc",
     "name": "Mystras",
     "address": "Mistras 231 00",
     "lat": "37.06880575051119",
-    "lng": "22.375815197260966"
+    "lng": "22.375815197260966",
+    "id": "mustSeeAttractions_10eb6a61dc7d",
+    "slug": "mystras-10eb"
   },
   {
     "url": "https://maps.app.goo.gl/hRfeUmzdQ9kFWn689?g_st=ipc",
     "name": "Archaeological Site of Mystras",
     "address": "Lower Town 231 00",
     "lat": "37.0741056706056",
-    "lng": "22.3669181951106"
+    "lng": "22.3669181951106",
+    "id": "mustSeeAttractions_007b974cc264",
+    "slug": "archaeological-site-of-mystras-007b"
   },
   {
     "url": "https://maps.app.goo.gl/baiRLz2tmYaTbVkt8?g_st=ipc",
     "name": "Temple of Apollo (Portara)",
     "address": "Naxos 843 00",
     "lat": "37.110129464281634",
-    "lng": "25.372467767266336"
+    "lng": "25.372467767266336",
+    "id": "mustSeeAttractions_a300a861d115",
+    "slug": "temple-of-apollo-portara-a300"
   },
   {
     "url": "https://maps.app.goo.gl/PVQYbF6evZv9zjAc9?g_st=ipc",
     "name": "Temple of Apollo Epicurius at Bassae of Phigaleia",
     "address": "Figaleia 270 61",
     "lat": "37.42992485152253",
-    "lng": "21.900009196247805"
+    "lng": "21.900009196247805",
+    "id": "mustSeeAttractions_6898f516936d",
+    "slug": "temple-of-apollo-epicurius-at-bassae-of-phigaleia-6898"
   },
   {
     "url": "https://maps.app.goo.gl/9vhQhAziWNVFNwudA?g_st=ipc",
     "name": "Messene",
     "address": "Unnamed Road, Messene 240 02",
     "lat": "37.17493508533683",
-    "lng": "21.920008046316784"
+    "lng": "21.920008046316784",
+    "id": "mustSeeAttractions_5294b68117cd",
+    "slug": "messene-5294"
   },
   {
     "url": "https://maps.app.goo.gl/XwgzhKtMosL3r1vr5?g_st=ipc",
     "name": "Archaeological Site of Olympia",
     "address": "Archaia Olympia 270 65",
     "lat": "37.638459018633775",
-    "lng": "21.62988056909868"
+    "lng": "21.62988056909868",
+    "id": "mustSeeAttractions_9807d4208c78",
+    "slug": "archaeological-site-of-olympia-9807"
   },
   {
     "url": "https://maps.app.goo.gl/Quro2ZP1jQNXZ1M5A?g_st=ipc",
     "name": "Caves of Diros",
     "address": "Pyrgos Dirou 230 63",
     "lat": "36.63819892596898",
-    "lng": "22.38069545600633"
+    "lng": "22.38069545600633",
+    "id": "mustSeeAttractions_a11f312d6e9f",
+    "slug": "caves-of-diros-a11f"
   },
   {
     "url": "https://maps.app.goo.gl/qXxKEnky6NL6j8mX7?g_st=ipc",
     "name": "Cape Tainaron Lighthouse",
     "address": "Ανατολική Μάνη Ακρωτήριο Ταιναρο Anatoliki Mani, 230 71",
     "lat": "36.38632728796919",
-    "lng": "22.482904269212387"
+    "lng": "22.482904269212387",
+    "id": "mustSeeAttractions_b10cf3afde5d",
+    "slug": "cape-tainaron-lighthouse-b10c"
   },
   {
     "url": "https://maps.app.goo.gl/GBbQr73zwDAagVaz9?g_st=ipc",
     "name": "Voidokilia Beach",
     "address": "Pilos Nestor 240 01",
     "lat": "36.9635737316201",
-    "lng": "21.662769806906574"
+    "lng": "21.662769806906574",
+    "id": "mustSeeAttractions_addade9a67cb",
+    "slug": "voidokilia-beach-adda"
   },
   {
     "url": "https://maps.app.goo.gl/v6AEM7JEAUPMzrvP7?g_st=ipc",
     "name": "Holy Monastery of the Virgin Mary Chozoviotissa",
     "address": "Amorgos 840 08",
     "lat": "36.834565267585596",
-    "lng": "25.909512235575725"
+    "lng": "25.909512235575725",
+    "id": "mustSeeAttractions_3720c0633a0c",
+    "slug": "holy-monastery-of-the-virgin-mary-chozoviotissa-3720"
   },
   {
     "url": "https://maps.app.goo.gl/k9fRFDUZV5HCUUQ88?g_st=ipc",
     "name": "Methoni Castle",
     "address": "Unnamed Rd, Methoni 240 06",
     "lat": "36.81667229767631",
-    "lng": "21.705266643313138"
+    "lng": "21.705266643313138",
+    "id": "mustSeeAttractions_a60d85bb9886",
+    "slug": "methoni-castle-a60d"
   },
   {
     "url": "https://maps.app.goo.gl/wBKcGui1HWeMLpjPA?g_st=ipc",
     "name": "Akrotiri",
     "address": "Fira 847 00",
     "lat": "36.351796236748676",
-    "lng": "25.403447201033227"
+    "lng": "25.403447201033227",
+    "id": "mustSeeAttractions_fcaf48a77b52",
+    "slug": "akrotiri-fcaf"
   },
   {
     "url": "https://maps.app.goo.gl/WRBFuHyUphGycx6B6?g_st=ipc",
     "name": "Holy Cave of the Apocalypse",
     "address": "Patmos Municipality 855 00",
     "lat": "37.3145181446206",
-    "lng": "26.544738455388703"
+    "lng": "26.544738455388703",
+    "id": "mustSeeAttractions_5cb6c86470e2",
+    "slug": "holy-cave-of-the-apocalypse-5cb6"
   },
   {
     "url": "https://maps.app.goo.gl/KRvkAKujnAt5Cebt6?g_st=ipc",
     "name": "Holy Monastery of Saint John the Theologian",
     "address": "Patmos 855 00",
     "lat": "37.30929209644781",
-    "lng": "26.547790252510435"
+    "lng": "26.547790252510435",
+    "id": "mustSeeAttractions_dd3b16c50b83",
+    "slug": "holy-monastery-of-saint-john-the-theologian-dd3b"
   },
   {
     "url": "https://maps.app.goo.gl/wXzMsUCGyGcDfoW59?g_st=ipc",
     "name": "Agio Oros",
     "address": "Ouranoupoli 630 75",
     "lat": "40.32543105494457",
-    "lng": "23.97840678393634"
+    "lng": "23.97840678393634",
+    "id": "mustSeeAttractions_7469acb1186c",
+    "slug": "agio-oros-7469"
   },
   {
     "url": "https://maps.app.goo.gl/cEWrQYsLFdjV6Q239?g_st=ipc",
     "name": "Dion",
     "address": "Epar.Od. Katerinis - Limena Litochoriou 910, Dion 601 00",
     "lat": "40.17394047089396",
-    "lng": "22.491437674242245"
+    "lng": "22.491437674242245",
+    "id": "mustSeeAttractions_3ca5dbf40892",
+    "slug": "dion-3ca5"
   },
   {
     "url": "https://maps.app.goo.gl/zpazCjEdJ5HpowTp6?g_st=ipc",
     "name": "Kalabaka",
     "address": "Kalabaka 422 00",
     "lat": "39.70661305298489",
-    "lng": "21.628881662192715"
+    "lng": "21.628881662192715",
+    "id": "mustSeeAttractions_974fae2e3103",
+    "slug": "kalabaka-974f"
   },
   {
     "url": "https://maps.app.goo.gl/onMRfAUqEwFjaiVWA?g_st=ipc",
     "name": "Meteora",
     "address": "Kalabaka 422 00",
     "lat": "39.72170879350903",
-    "lng": "21.63058881507582"
+    "lng": "21.63058881507582",
+    "id": "mustSeeAttractions_cfae99e77bd9",
+    "slug": "meteora-cfae"
   },
   {
     "url": "https://maps.app.goo.gl/f8pqZqUtkRrXFShb8?g_st=ipc",
     "name": "Balos Beach",
     "address": "Kissamos 734 00",
     "lat": "35.57925124423901",
-    "lng": "23.588718436351613"
+    "lng": "23.588718436351613",
+    "id": "mustSeeAttractions_87fa659eb90c",
+    "slug": "balos-beach-87fa"
   },
   {
     "url": "https://maps.app.goo.gl/aFhekQczUnCUCkXt7?g_st=ipc",
     "name": "Blue Caves Zakynthos",
     "address": "Porthmos Zakinthou",
     "lat": "37.93034342843555",
-    "lng": "20.705251154680667"
+    "lng": "20.705251154680667",
+    "id": "mustSeeAttractions_20af350a9d06",
+    "slug": "blue-caves-zakynthos-20af"
   },
   {
     "url": "https://maps.app.goo.gl/aSS6QjyqGgHanzsj8?g_st=ipc",
     "name": "Archaeological Site of Heraion of Samos",
     "address": "Pythagoreio 831 03",
     "lat": "37.67350522925315",
-    "lng": "26.88799727034567"
+    "lng": "26.88799727034567",
+    "id": "mustSeeAttractions_54fb3772eb37",
+    "slug": "archaeological-site-of-heraion-of-samos-54fb"
   },
   {
     "url": "https://maps.app.goo.gl/9QY7VwS3H1acWG6g8?g_st=ipc",
     "name": "Pythagoras Statue",
     "address": "Samos 831 03",
     "lat": "37.689752282548156",
-    "lng": "26.94490447179151"
+    "lng": "26.94490447179151",
+    "id": "mustSeeAttractions_0e0154b8338b",
+    "slug": "pythagoras-statue-0e01"
   },
   {
     "url": "https://maps.app.goo.gl/7zGrDtLoU6SSdcuS9?g_st=ipc",
     "name": "Navagio",
     "address": "Elatia 290 91",
     "lat": "37.85945060305929",
-    "lng": "20.624902110473712"
+    "lng": "20.624902110473712",
+    "id": "mustSeeAttractions_08514e911c7d",
+    "slug": "navagio-0851"
   },
   {
     "url": "https://maps.app.goo.gl/DamgwWTndmBhKj5W9?g_st=ipc",
     "name": "Melissani Cave",
     "address": "Σάμη 280 80",
     "lat": "38.25698727901152",
-    "lng": "20.6235483284677"
+    "lng": "20.6235483284677",
+    "id": "mustSeeAttractions_5b0540533ca6",
+    "slug": "melissani-cave-5b05"
   },
   {
     "url": "https://maps.app.goo.gl/VMrzqGqwGc2EoieJ7?g_st=ipc",
     "name": "Byzantine Walls of Nikopolis",
     "address": "Unnamed Road, 481 00",
     "lat": "39.0118446526379",
-    "lng": "20.732022944510806"
+    "lng": "20.732022944510806",
+    "id": "mustSeeAttractions_cf30313c597a",
+    "slug": "byzantine-walls-of-nikopolis-cf30"
   },
   {
     "url": "https://maps.app.goo.gl/satDDwkecYRf2TSBA?g_st=ipc",
     "name": "Nicopolis",
     "address": "Nicopolis 481 00",
     "lat": "39.02636525396993",
-    "lng": "20.733626410935955"
+    "lng": "20.733626410935955",
+    "id": "mustSeeAttractions_6493befc2e7b",
+    "slug": "nicopolis-6493"
   },
   {
     "url": "https://maps.app.goo.gl/vwCXBmq1Cpbwnz9c6?g_st=ipc",
     "name": "Porto Katsiki",
     "address": "JH32+48, Apollonioi 310 82",
     "lat": "38.601119061578444",
-    "lng": "20.550313570650722"
+    "lng": "20.550313570650722",
+    "id": "mustSeeAttractions_616648db6ed1",
+    "slug": "porto-katsiki-6166"
   },
   {
     "url": "https://maps.app.goo.gl/MFq7CxhtGP7Gi8k59?g_st=ipc",
     "name": "Archaeological Museum of Thessaloniki",
     "address": "Manoli Andronikou 6, Thessaloniki 546 21",
     "lat": "40.625561586478966",
-    "lng": "22.953718318827413"
+    "lng": "22.953718318827413",
+    "id": "mustSeeAttractions_10253cdb4884",
+    "slug": "archaeological-museum-of-thessaloniki-1025"
   },
   {
     "url": "https://maps.app.goo.gl/Rpx9LHfqRzCfvkCh8?g_st=ipc",
     "name": "White Tower of Thessaloniki",
     "address": "Thessaloniki 546 21",
     "lat": "40.62644387532891",
-    "lng": "22.948379384273697"
+    "lng": "22.948379384273697",
+    "id": "mustSeeAttractions_43897b8cc3d5",
+    "slug": "white-tower-of-thessaloniki-4389"
   },
   {
     "url": "https://maps.app.goo.gl/VHhyUKPZMLXo4AeBA?g_st=ipc",
     "name": "Arch of Galerius",
     "address": "Egnatia 144, Thessaloniki 546 22",
     "lat": "40.6322250425038",
-    "lng": "22.95175086035539"
+    "lng": "22.95175086035539",
+    "id": "mustSeeAttractions_6c182d5c56d9",
+    "slug": "arch-of-galerius-6c18"
   },
   {
     "url": "https://maps.app.goo.gl/RFapK1M21jxWogbVA?g_st=ipc",
     "name": "Ataturk Museum of Thessaloniki",
     "address": "Apostolou Pavlou 17, Thessaloniki 546 34",
     "lat": "40.63574901751839",
-    "lng": "22.954355092076376"
+    "lng": "22.954355092076376",
+    "id": "mustSeeAttractions_aab957c1e5d6",
+    "slug": "ataturk-museum-of-thessaloniki-aab9"
   },
   {
     "url": "https://maps.app.goo.gl/C3krXMYjPGracAP87?g_st=ipc",
     "name": "Museum of Illusions Thessaloniki",
     "address": "Doxis 5, Thessaloniki 546 25",
     "lat": "40.635429116411395",
-    "lng": "22.93597563245193"
+    "lng": "22.93597563245193",
+    "id": "mustSeeAttractions_7ae286bbaeee",
+    "slug": "museum-of-illusions-thessaloniki-7ae2"
   },
   {
     "url": "https://maps.app.goo.gl/YxX1f2JEnRyib5KP8?g_st=ipc",
     "name": "Roman Forum of Thessaloniki",
     "address": "Olympou 75, Thessaloniki 546 31",
     "lat": "40.637858913960656",
-    "lng": "22.945675325840927"
+    "lng": "22.945675325840927",
+    "id": "mustSeeAttractions_c746cf030037",
+    "slug": "roman-forum-of-thessaloniki-c746"
   },
   {
     "url": "https://maps.app.goo.gl/f1z5P772ZL438rrB9?g_st=ipc",
     "name": "Holy Church of Saint Demetrius",
     "address": "Ag. Dimitriou 81-83, Thessaloniki 546 33",
     "lat": "40.638898161361496",
-    "lng": "22.947614216085658"
+    "lng": "22.947614216085658",
+    "id": "mustSeeAttractions_7edc1e3f8f0e",
+    "slug": "holy-church-of-saint-demetrius-7edc"
   },
   {
     "url": "https://maps.app.goo.gl/Pj3FuXA7LeypGUARA?g_st=ipc",
     "name": "Thessaloniki Acropolis",
     "address": "Eptapirgiou 130, Thessaloniki 546 34",
     "lat": "40.644004048967396",
-    "lng": "22.961770870557544"
+    "lng": "22.961770870557544",
+    "id": "mustSeeAttractions_72fd08699c11",
+    "slug": "thessaloniki-acropolis-72fd"
   },
   {
     "url": "https://maps.app.goo.gl/1s8aj4cc3MbpvaGq9?g_st=ipc",
     "name": "Heptapyrgion of Thessaloniki",
     "address": "Επταπύργιο, Eptapirgiou 40, Thessaloniki 546 34",
     "lat": "40.64405781477335",
-    "lng": "22.96178016442897"
+    "lng": "22.96178016442897",
+    "id": "mustSeeAttractions_d05b087a8840",
+    "slug": "heptapyrgion-of-thessaloniki-d05b"
   },
   {
     "url": "https://maps.app.goo.gl/jFwKES4CcpviH3818?g_st=ipc",
     "name": "Palace of Aigai (Aegae)",
     "address": "Vergina 590 31",
     "lat": "40.47783656530058",
-    "lng": "22.32233617700311"
+    "lng": "22.32233617700311",
+    "id": "mustSeeAttractions_2ba6bcb8ac97",
+    "slug": "palace-of-aigai-aegae-2ba6"
   },
   {
     "url": "https://maps.app.goo.gl/sig6rYbJ8UK4ZqaX7?g_st=ipc",
     "name": "Arkadi Monastery",
     "address": "Arkadi 741 50",
     "lat": "35.30989822185389",
-    "lng": "24.629043901550116"
+    "lng": "24.629043901550116",
+    "id": "mustSeeAttractions_da0706993263",
+    "slug": "arkadi-monastery-da07"
   },
   {
     "url": "https://maps.app.goo.gl/5eDCvX8HkvWgXBL19?g_st=ipc",
     "name": "Archaeological Site of Dodoni",
     "address": "Dodoni 455 00",
     "lat": "39.54577918295188",
-    "lng": "20.784950664414183"
+    "lng": "20.784950664414183",
+    "id": "mustSeeAttractions_49ba95768f7d",
+    "slug": "archaeological-site-of-dodoni-49ba"
   },
   {
     "url": "https://maps.app.goo.gl/tihw1UrAiri8GoD29?g_st=ipc",
     "name": "Perama Cave",
     "address": "19, Spilaiou, Σπηλαίου 19, Πέραμα, Perama 455 00",
     "lat": "39.694982816550095",
-    "lng": "20.846498129141942"
+    "lng": "20.846498129141942",
+    "id": "mustSeeAttractions_55879b7962ff",
+    "slug": "perama-cave-5587"
   },
   {
     "url": "https://maps.app.goo.gl/rAusZkVNEW96qAfY9?g_st=ipc",
     "name": "Knossos Palace",
     "address": "Knossos 714 09",
     "lat": "35.29796093261648",
-    "lng": "25.162788626146504"
+    "lng": "25.162788626146504",
+    "id": "mustSeeAttractions_32e162886e33",
+    "slug": "knossos-palace-32e1"
   },
   {
     "url": "https://maps.app.goo.gl/MwFRaHm4xMSpQ3w87?g_st=ipc",
     "name": "Pindos National Park",
     "address": "WXR2+G8 Tymphaea",
     "lat": "39.94128033875326",
-    "lng": "20.950852335589502"
+    "lng": "20.950852335589502",
+    "id": "mustSeeAttractions_c9dd48bbc2ef",
+    "slug": "pindos-national-park-c9dd"
   },
   {
     "url": "https://maps.app.goo.gl/KY1PY5mwkiEPn6JS6?g_st=ipc",
     "name": "Asclepieion at Kos",
     "address": "Kos 853 00",
     "lat": "36.87634063821304",
-    "lng": "27.25929156442587"
+    "lng": "27.25929156442587",
+    "id": "mustSeeAttractions_ef451c3fb153",
+    "slug": "asclepieion-at-kos-ef45"
   },
   {
     "url": "https://maps.app.goo.gl/rVafr1wHovCRyoj77?g_st=ipc",
     "name": "Zagori",
     "address": "Papingo 440 04",
     "lat": "39.96846543207807",
-    "lng": "20.729047055658157"
+    "lng": "20.729047055658157",
+    "id": "mustSeeAttractions_8df91757921b",
+    "slug": "zagori-8df9"
   },
   {
     "url": "https://maps.app.goo.gl/zBjCseaorqmLUWjo6?g_st=ipc",
     "name": "Paralia Voutoumi",
     "address": "490 82",
     "lat": "39.15774095957267",
-    "lng": "20.227494022688056"
+    "lng": "20.227494022688056",
+    "id": "mustSeeAttractions_ed63de4c6ad6",
+    "slug": "paralia-voutoumi-ed63"
   },
   {
     "url": "https://maps.app.goo.gl/1Uc3YFqdrM7dERMj7?g_st=ipc",
     "name": "Archaeological Site of Philippi",
     "address": "EO Dramas Kavalas, Filippi 640 03",
     "lat": "41.012686338997746",
-    "lng": "24.287678993251607"
+    "lng": "24.287678993251607",
+    "id": "mustSeeAttractions_e57cfb521268",
+    "slug": "archaeological-site-of-philippi-e57c"
   },
   {
     "url": "https://maps.app.goo.gl/qCcEvj915iPr2zD37?g_st=ipc",
     "name": "Minoan Palace of Phaistos",
     "address": "Άγιος Ιωάννης, Kamilari 702 00",
     "lat": "35.05129549151393",
-    "lng": "24.81458473558241"
+    "lng": "24.81458473558241",
+    "id": "mustSeeAttractions_f427acd3fd5b",
+    "slug": "minoan-palace-of-phaistos-f427"
   },
   {
     "url": "https://maps.app.goo.gl/qtxP37nP5GgrXXV27?g_st=ipc",
     "name": "Aggitis River cave",
     "address": "Πηγές, Aggitis 662 00",
     "lat": "41.21974670515024",
-    "lng": "23.89452873558432"
+    "lng": "23.89452873558432",
+    "id": "mustSeeAttractions_d9c422353054",
+    "slug": "aggitis-river-cave-d9c4"
   },
   {
     "url": "https://maps.app.goo.gl/QX4xRZw5TEGCF4oj7?g_st=ipc",
     "name": "Kerkini Lake National Park",
     "address": "Κερκίνη, 620 55",
     "lat": "41.25929416088564",
-    "lng": "23.140424657676153"
+    "lng": "23.140424657676153",
+    "id": "mustSeeAttractions_65d915b7d5f2",
+    "slug": "kerkini-lake-national-park-65d9"
   },
   {
     "url": "https://maps.app.goo.gl/iFY1Kcc4UwLiyRGc7?g_st=ipc",
     "name": "Old Town of Corfu",
     "address": "Corfu 491 00",
     "lat": "39.62343987783881",
-    "lng": "19.92891594231962"
+    "lng": "19.92891594231962",
+    "id": "mustSeeAttractions_95bea16be675",
+    "slug": "old-town-of-corfu-95be"
   },
   {
     "url": "https://maps.app.goo.gl/CBJzDDUuaoXFiWW6A?g_st=ipc",
     "name": "Holy Monastery of the Taxiarch Michael Panormitis",
     "address": "Panormitis 856 00",
     "lat": "36.548390185765086",
-    "lng": "27.846271064424094"
+    "lng": "27.846271064424094",
+    "id": "mustSeeAttractions_f86e07718582",
+    "slug": "holy-monastery-of-the-taxiarch-michael-panormitis-f86e"
   },
   {
     "url": "https://maps.app.goo.gl/R9sce6Eydu3PYta2A?g_st=ipc",
     "name": "Palace of the Grand Master of the Knights of Rhodes",
     "address": "Ippoton, Rodos 851 00",
     "lat": "36.44545330682862",
-    "lng": "28.224197135579786"
+    "lng": "28.224197135579786",
+    "id": "mustSeeAttractions_d121969affdc",
+    "slug": "palace-of-the-grand-master-of-the-knights-of-rhodes-d121"
   },
   {
     "url": "https://maps.app.goo.gl/11HZKgu3Z71ViGrP9?g_st=ipc",
     "name": "Colossus of Rhodes",
     "address": "Pl. Neoriou, Rodos 851 00",
     "lat": "36.451202414947005",
-    "lng": "28.227839764419826"
+    "lng": "28.227839764419826",
+    "id": "mustSeeAttractions_9e44fa658aa5",
+    "slug": "colossus-of-rhodes-9e44"
   },
   {
     "url": "https://maps.app.goo.gl/ni4J6nqoFxCxVhof9?g_st=ipc",
     "name": "Medieval City of Rhodes",
     "address": "Pl. Mouson 6, Rodos 851 00",
     "lat": "36.44472167652259",
-    "lng": "28.227519564434186"
+    "lng": "28.227519564434186",
+    "id": "mustSeeAttractions_934f36a67efa",
+    "slug": "medieval-city-of-rhodes-934f"
   },
   {
     "url": "https://maps.app.goo.gl/W5joNY37bu7NJ8Hz8?g_st=ipc",
     "name": "Syntagma Square",
     "address": "Pl. Sintagmatos, Athina 105 63",
     "lat": "37.97554970639471",
-    "lng": "23.734713366778323"
+    "lng": "23.734713366778323",
+    "id": "mustSeeAttractions_5ecb5990c6e7",
+    "slug": "syntagma-square-5ecb"
   },
   {
     "url": "https://maps.app.goo.gl/RRXmkZ72CeNufyB66?g_st=ipc",
     "name": "Monument to the Unknown Soldier",
     "address": "Leof. Vasilisis Amalias 133, Athina 105 57",
     "lat": "37.97535428174513",
-    "lng": "23.736259428820603"
+    "lng": "23.736259428820603",
+    "id": "mustSeeAttractions_40f48472fa4a",
+    "slug": "monument-to-the-unknown-soldier-40f4"
   },
   {
     "url": "https://maps.app.goo.gl/4mH8BGK5UQuAHaXf6?g_st=ipc",
     "name": "Philopappos Monument",
     "address": "Athens 117 41",
     "lat": "37.96735214641467",
-    "lng": "23.72141968401236"
+    "lng": "23.72141968401236",
+    "id": "mustSeeAttractions_11b87cb6f066",
+    "slug": "philopappos-monument-11b8"
   },
   {
     "url": "https://maps.app.goo.gl/XDM6bEzic8EMa3FX7?g_st=ipc",
     "name": "Arch of Hadrian",
     "address": "Leof. Vasilisis Amalias 50, Athina 105 58",
     "lat": "37.970210610652515",
-    "lng": "23.73198089152641"
+    "lng": "23.73198089152641",
+    "id": "mustSeeAttractions_a3aa8075d8fc",
+    "slug": "arch-of-hadrian-a3aa"
   },
   {
     "url": "https://maps.app.goo.gl/DQtGJPqpneygKtHk7?g_st=ipc",
     "name": "Gate of Athena Archegetis",
     "address": "Διοσκούρων, Epaminonda &, Athina 105 55",
     "lat": "37.974568649716346",
-    "lng": "23.725518029561396"
+    "lng": "23.725518029561396",
+    "id": "mustSeeAttractions_4e551e61d3d7",
+    "slug": "gate-of-athena-archegetis-4e55"
   },
   {
     "url": "https://maps.app.goo.gl/431NuRe11zxrUqR89?g_st=ipc",
     "name": "Prison of Socrates",
     "address": "43, Rovertou Galli 39, Athina 117 41",
     "lat": "37.96945283540711",
-    "lng": "23.72099752982901"
+    "lng": "23.72099752982901",
+    "id": "mustSeeAttractions_bf865dc1bff4",
+    "slug": "prison-of-socrates-bf86"
   },
   {
     "url": "https://maps.app.goo.gl/7Xgk65sqPNFM93Sy9?g_st=ipc",
     "name": "Choragic Monument of Lysicrates",
     "address": "Epimenidou 3, Athina 105 58",
     "lat": "37.97108971386169",
-    "lng": "23.72994596958006"
+    "lng": "23.72994596958006",
+    "id": "mustSeeAttractions_8085cf28024a",
+    "slug": "choragic-monument-of-lysicrates-8085"
   },
   {
     "url": "https://maps.app.goo.gl/21oaLw9mApwFReVy7?g_st=ipc",
     "name": "Kerameikos Archaeological Site",
     "address": "Ermou 148, Athina 105 53",
     "lat": "37.97803082106626",
-    "lng": "23.717271800112048"
+    "lng": "23.717271800112048",
+    "id": "mustSeeAttractions_31e331c60661",
+    "slug": "kerameikos-archaeological-site-31e3"
   },
   {
     "url": "https://maps.app.goo.gl/Tia41NbJ94S1YJYNA?g_st=ipc",
     "name": "Bibliothēkē",
     "address": "Athens 106 79",
     "lat": "37.98086714889517",
-    "lng": "23.732640659233777"
+    "lng": "23.732640659233777",
+    "id": "mustSeeAttractions_9d5443f043f5",
+    "slug": "bibliotheke-9d54"
   },
   {
     "url": "https://maps.app.goo.gl/ggPZ2e3QeajFYXJX8?g_st=ipc",
     "name": "Academy of Athens",
     "address": "Panepistimiou 28, Athina 106 79",
     "lat": "37.980052000475574",
-    "lng": "23.73401307902472"
+    "lng": "23.73401307902472",
+    "id": "mustSeeAttractions_4c1bed18d9f3",
+    "slug": "academy-of-athens-4c1b"
   }
 ]

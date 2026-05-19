@@ -4,531 +4,683 @@
     "name": "Sensimilia Cafe Bar",
     "address": "Δουκίσσης Πλακεντίας 129, Αθήνα 115 23",
     "lat": "37.993035889378",
-    "lng": "23.76531520450526"
+    "lng": "23.76531520450526",
+    "id": "rooftopLoungesRestaurants_f9c73dde5ada",
+    "slug": "sensimilia-cafe-bar-f9c7"
   },
   {
     "url": "https://maps.app.goo.gl/XiQsBWs7XeVDvyW1A?g_st=ipc",
     "name": "Deos",
     "address": "Λουίζης Ριανκούρ 64, Αθήνα 115 23",
     "lat": "37.99283916898427",
-    "lng": "23.76419184118261"
+    "lng": "23.76419184118261",
+    "id": "rooftopLoungesRestaurants_f7a32b8c6926",
+    "slug": "deos-f7a3"
   },
   {
     "url": "https://maps.app.goo.gl/kSyacHZLkt7m28Ay9?g_st=ipc",
     "name": "Hytra Restaurant & Bar",
     "address": "1, Πέτρου Κόκκαλη STR, Αθήνα 115 21",
     "lat": "37.981676643088775",
-    "lng": "23.752727386838163"
+    "lng": "23.752727386838163",
+    "id": "rooftopLoungesRestaurants_8f5c828bae94",
+    "slug": "hytra-restaurant-bar-8f5c"
   },
   {
     "url": "https://maps.app.goo.gl/AnZze357jk6bNwtn9?g_st=ipc",
     "name": "Orizontes Lycabettus",
     "address": "Αριστίππου 1, Αθήνα 106 76",
     "lat": "37.981808231992176",
-    "lng": "23.74354492669247"
+    "lng": "23.74354492669247",
+    "id": "rooftopLoungesRestaurants_88400a681851",
+    "slug": "orizontes-lycabettus-8840"
   },
   {
     "url": "https://maps.app.goo.gl/C2dzGLRSQSsDvbFF8?g_st=ipc",
     "name": "Πράσινη Τέντα, Λυκαβηττός",
     "address": "Μονοπάτι Λυκαβηττού, Αθήνα 114 71",
     "lat": "37.9808487584985",
-    "lng": "23.743118035028875"
+    "lng": "23.743118035028875",
+    "id": "rooftopLoungesRestaurants_3190136be5f2",
+    "slug": "prasini-tenta-lykavittos-3190"
   },
   {
     "url": "https://maps.app.goo.gl/Es9VywoRiqnCUCTM9?g_st=ipc",
     "name": "Rooftop Terrace on top of St. George Hotel",
     "address": "Αθήνα 106 75",
     "lat": "37.97925398876864",
-    "lng": "23.742145217920367"
+    "lng": "23.742145217920367",
+    "id": "rooftopLoungesRestaurants_971677828a79",
+    "slug": "rooftop-terrace-on-top-of-st-george-hotel-9716"
   },
   {
     "url": "https://maps.app.goo.gl/KtiRSvuVXyUpBSTu8?g_st=ipc",
     "name": "NYX Japanese Rooftop Gastrobar",
     "address": "Ομήρου 19, Αθήνα 106 19",
     "lat": "37.979694011195086",
-    "lng": "23.736122213234587"
+    "lng": "23.736122213234587",
+    "id": "rooftopLoungesRestaurants_f14ebba0617a",
+    "slug": "nyx-japanese-rooftop-gastrobar-f14e"
   },
   {
     "url": "https://maps.app.goo.gl/kv9XJjTv2Ssa7DxA6?g_st=ipc",
     "name": "MAPPEMONDE RESTAURANT BAR-LOUNGE",
     "address": "4 Eleftheriou Venizelou Avenue and, Κριεζώτου 2, Αθήνα 106 71",
     "lat": "37.9769632268169",
-    "lng": "23.736169719080895"
+    "lng": "23.736169719080895",
+    "id": "rooftopLoungesRestaurants_a1dcf63cc152",
+    "slug": "mappemonde-restaurant-bar-lounge-a1dc"
   },
   {
     "url": "https://maps.app.goo.gl/dd7gZSbVftPp5h3y8?g_st=ipc",
     "name": "GB Roof Garden Restaurant & Bar",
     "address": "GB Roof Garden Restaurant & Bar",
     "lat": "37.97622491152129",
-    "lng": "23.73551130501855"
+    "lng": "23.73551130501855",
+    "id": "rooftopLoungesRestaurants_c34049f74a4c",
+    "slug": "gb-roof-garden-restaurant-bar-c340"
   },
   {
     "url": "https://maps.app.goo.gl/m71roWoTizDjiDpo9?g_st=ipc",
     "name": "Tudor Hall",
     "address": "Γεωρ. Α' 3, Αθήνα 105 64",
     "lat": "37.976268352095765",
-    "lng": "23.7349212835823"
+    "lng": "23.7349212835823",
+    "id": "rooftopLoungesRestaurants_611d43a0bb40",
+    "slug": "tudor-hall-611d"
   },
   {
     "url": "https://maps.app.goo.gl/onyhWrgj9TNpbXLX8?g_st=ipc",
     "name": "Galaxy Bar",
     "address": "Σταδίου 10, Αθήνα 105 62",
     "lat": "37.97799760915879",
-    "lng": "23.73380131955468"
+    "lng": "23.73380131955468",
+    "id": "rooftopLoungesRestaurants_a85e8793b95e",
+    "slug": "galaxy-bar-a85e"
   },
   {
     "url": "https://maps.app.goo.gl/xqLuVZ72UNxG6j6w5?g_st=ipc",
     "name": "Titania Hotel Athens",
     "address": "Πανεπιστημίου 52, Αθήνα 106 78",
     "lat": "37.98298183652686",
-    "lng": "23.731011710839574"
+    "lng": "23.731011710839574",
+    "id": "rooftopLoungesRestaurants_bda24dde9bba",
+    "slug": "titania-hotel-athens-bda2"
   },
   {
     "url": "https://maps.app.goo.gl/29x8TUkS1Zi5ckeK6?g_st=ipc",
     "name": "Ermou 18 Beyond the Horizon",
     "address": "Ermou 18 Beyond the Horizon",
     "lat": "37.97612467035227",
-    "lng": "23.731892472806617"
+    "lng": "23.731892472806617",
+    "id": "rooftopLoungesRestaurants_986af6d41f8f",
+    "slug": "ermou-18-beyond-the-horizon-986a"
   },
   {
     "url": "https://maps.app.goo.gl/CrXGtb53B5ftpJTg6?g_st=ipc",
     "name": "Art Lounge Rooftop",
     "address": "Ναυάρχου Νικοδήμου 1, Αθήνα 105 57",
     "lat": "37.97343228721452",
-    "lng": "23.733497513314063"
+    "lng": "23.733497513314063",
+    "id": "rooftopLoungesRestaurants_f22b7c0a1efd",
+    "slug": "art-lounge-rooftop-f22b"
   },
   {
     "url": "https://maps.app.goo.gl/XadarqG8B9MPBT9e7?g_st=ipc",
     "name": "Elysium Athens Rooftop | Dining & Cocktails",
     "address": "15-17, Ερμού 105 63, Αθήνα",
     "lat": "37.97568079594514",
-    "lng": "23.731930908514958"
+    "lng": "23.731930908514958",
+    "id": "rooftopLoungesRestaurants_fb4de5c9639b",
+    "slug": "elysium-athens-rooftop-dining-cocktails-fb4d"
   },
   {
     "url": "https://maps.app.goo.gl/AzbgD3qbjVmSu6L77?g_st=ipc",
     "name": "Metropolis Roof Garden",
     "address": "Μητροπόλεως 15, Αθήνα 105 57",
     "lat": "37.97522089278689",
-    "lng": "23.732019228567697"
+    "lng": "23.732019228567697",
+    "id": "rooftopLoungesRestaurants_f3d7923bdece",
+    "slug": "metropolis-roof-garden-f3d7"
   },
   {
     "url": "https://maps.app.goo.gl/z4BDM28nzQm5DRAz5?g_st=ipc",
     "name": "Horostasio",
     "address": "Σκουλενίου 2B, Αθήνα 105 61",
     "lat": "37.979148709346994",
-    "lng": "23.729708422545425"
+    "lng": "23.729708422545425",
+    "id": "rooftopLoungesRestaurants_e13e9020f860",
+    "slug": "horostasio-e13e"
   },
   {
     "url": "https://maps.app.goo.gl/B5dVNDQK9SeSRhFZ9?g_st=ipc",
     "name": "ERGON House Athens",
     "address": "23, Μητροπόλεως Street, Αθήνα 105 57",
     "lat": "37.975246808550054",
-    "lng": "23.73151614516128"
+    "lng": "23.73151614516128",
+    "id": "rooftopLoungesRestaurants_a01decd3b001",
+    "slug": "ergon-house-athens-a01d"
   },
   {
     "url": "https://maps.app.goo.gl/KVbnoHN86FaFe6Ch8?g_st=ipc",
     "name": "Thea Terrace Bar",
     "address": "Απόλλωνος 21, Αθήνα 105 57",
     "lat": "37.97456272302777",
-    "lng": "23.731138501787182"
+    "lng": "23.731138501787182",
+    "id": "rooftopLoungesRestaurants_ffccd88e3b0f",
+    "slug": "thea-terrace-bar-ffcc"
   },
   {
     "url": "https://maps.app.goo.gl/ieHySBRUu73ccrv99?g_st=ipc",
     "name": "Electra Roof Garden",
     "address": "Ναυάρχου Νικοδήμου 18-20, Αθήνα 105 57",
     "lat": "37.973799293487446",
-    "lng": "23.731619153637734"
+    "lng": "23.731619153637734",
+    "id": "rooftopLoungesRestaurants_e53024397065",
+    "slug": "electra-roof-garden-e530"
   },
   {
     "url": "https://maps.app.goo.gl/5zX4VEAQCzogaiPF9?g_st=ipc",
     "name": "Theathine",
     "address": "Ερμού 46, Αθήνα 105 63",
     "lat": "37.976366087632414",
-    "lng": "23.72946341912717"
+    "lng": "23.72946341912717",
+    "id": "rooftopLoungesRestaurants_62315092aa2e",
+    "slug": "theathine-6231"
   },
   {
     "url": "https://maps.app.goo.gl/GanjxfuK53HVBugq8?g_st=ipc",
     "name": "Olympias Athinas",
     "address": "Αθηνάς 57, Αθήνα 105 51",
     "lat": "37.98091887904227",
-    "lng": "23.72707749971783"
+    "lng": "23.72707749971783",
+    "id": "rooftopLoungesRestaurants_f8aeb4ce5c33",
+    "slug": "olympias-athinas-f8ae"
   },
   {
     "url": "https://maps.app.goo.gl/ewydNFU5RP3inTPF7?g_st=ipc",
     "name": "The Zillers Rooftop Gastronomy",
     "address": "Μητροπόλεως 54, Αθήνα 105 63",
     "lat": "37.975610918169195",
-    "lng": "23.729618662596703"
+    "lng": "23.729618662596703",
+    "id": "rooftopLoungesRestaurants_deda42ca6a1c",
+    "slug": "the-zillers-rooftop-gastronomy-deda"
   },
   {
     "url": "https://maps.app.goo.gl/jwnF2SS5G6PYqRPf9?g_st=ipc",
     "name": "Taratsa Athens",
     "address": "Μητροπόλεως 60, Αθήνα 105 63",
     "lat": "37.97577225088555",
-    "lng": "23.729185158634564"
+    "lng": "23.729185158634564",
+    "id": "rooftopLoungesRestaurants_dccec8a54ab2",
+    "slug": "taratsa-athens-dcce"
   },
   {
     "url": "https://maps.app.goo.gl/zGocv2wEa4M7oU8NA?g_st=ipc",
     "name": "DOLLI•S",
     "address": "Μητροπόλεως 49, Αθήνα 105 56",
     "lat": "37.975812516804545",
-    "lng": "23.72812700621026"
+    "lng": "23.72812700621026",
+    "id": "rooftopLoungesRestaurants_6749bcabe1a1",
+    "slug": "dolli-s-6749"
   },
   {
     "url": "https://maps.app.goo.gl/zzGZ1B4cTEW9zwY37?g_st=ipc",
     "name": "Great bear rooftop",
     "address": "Πλ. Θεάτρου 18, Αθήνα 105 52",
     "lat": "37.98095279009833",
-    "lng": "23.72523132911118"
+    "lng": "23.72523132911118",
+    "id": "rooftopLoungesRestaurants_98e5b8f356b1",
+    "slug": "great-bear-rooftop-98e5"
   },
   {
     "url": "https://maps.app.goo.gl/jqRmCH3g4tS3Er5o8?g_st=ipc",
     "name": "City ZEN All Day Bar Restaurant",
     "address": "Αιόλου 11, Αθήνα 105 55",
     "lat": "37.97627508580123",
-    "lng": "23.72741558524515"
+    "lng": "23.72741558524515",
+    "id": "rooftopLoungesRestaurants_f5cf87cae9d4",
+    "slug": "city-zen-all-day-bar-restaurant-f5cf"
   },
   {
     "url": "https://maps.app.goo.gl/ZPqVVmebDU5mua9w9?g_st=ipc",
     "name": "Okra",
     "address": "Μητροπόλεως 82, Αθήνα 105 55",
     "lat": "37.97626609583597",
-    "lng": "23.72702294452752"
+    "lng": "23.72702294452752",
+    "id": "rooftopLoungesRestaurants_912cd994ade6",
+    "slug": "okra-912c"
   },
   {
     "url": "https://maps.app.goo.gl/fGYKpxkmiHEMsHYe9?g_st=ipc",
     "name": "Hyper Astro Bar",
     "address": "Ερμού 78, & Αθηνάς 2, Αθήνα 105 51",
     "lat": "37.97675012881044",
-    "lng": "23.726361870755426"
+    "lng": "23.726361870755426",
+    "id": "rooftopLoungesRestaurants_304d8926bc1b",
+    "slug": "hyper-astro-bar-304d"
   },
   {
     "url": "https://maps.app.goo.gl/oqEScqUBomYigxGZ7?g_st=ipc",
     "name": "SENSE Modern Greek Cuisine",
     "address": "Διονυσίου Αρεοπαγίτου 5, Αθήνα 117 42",
     "lat": "37.969502770972106",
-    "lng": "23.73085864462358"
+    "lng": "23.73085864462358",
+    "id": "rooftopLoungesRestaurants_ffb0768cb43f",
+    "slug": "sense-modern-greek-cuisine-ffb0"
   },
   {
     "url": "https://maps.app.goo.gl/3tBECibCkAn27cvf9?g_st=ipc",
     "name": "Anglais Athens",
     "address": "Κηρυκείου 6, Αθήνα 105 55",
     "lat": "37.97603265069114",
-    "lng": "23.726612987310695"
+    "lng": "23.726612987310695",
+    "id": "rooftopLoungesRestaurants_fd3b2b6edd97",
+    "slug": "anglais-athens-fd3b"
   },
   {
     "url": "https://maps.app.goo.gl/QFStwG4KRSZkG2Em7?g_st=ipc",
     "name": "Οδος Λυσιου",
     "address": "Mnisikleous 22 and, Lisiou corner, Athina 105 56",
     "lat": "37.97368556896764",
-    "lng": "23.727989877138466"
+    "lng": "23.727989877138466",
+    "id": "rooftopLoungesRestaurants_6bc9125d2c6e",
+    "slug": "odos-lysioy-6bc9"
   },
   {
     "url": "https://maps.app.goo.gl/bs3sf3hsdSxC6Beo9?g_st=ipc",
     "name": "MS",
     "address": "Athinas 1 &, Ερμού, Αθήνα 105 54",
     "lat": "37.97691417323162",
-    "lng": "23.726058429208038"
+    "lng": "23.726058429208038",
+    "id": "rooftopLoungesRestaurants_24e545264e5c",
+    "slug": "ms-24e5"
   },
   {
     "url": "https://maps.app.goo.gl/cvCxoTrVfjboNT7X7?g_st=ipc",
     "name": "Ανεφάνη",
     "address": "Μνησικλέους 24, Αθήνα 105 56",
     "lat": "37.97353358251965",
-    "lng": "23.727822920102838"
+    "lng": "23.727822920102838",
+    "id": "rooftopLoungesRestaurants_d90628c167d7",
+    "slug": "anefani-d906"
   },
   {
     "url": "https://maps.app.goo.gl/Vq5qVpsf9STrBATY9?g_st=ipc",
     "name": "A for Athens",
     "address": "Μιαούλη 2-4, Αθήνα 105 54",
     "lat": "37.97687634031922",
-    "lng": "23.725767271545557"
+    "lng": "23.725767271545557",
+    "id": "rooftopLoungesRestaurants_18ce337fd426",
+    "slug": "a-for-athens-18ce"
   },
   {
     "url": "https://maps.app.goo.gl/QSZ7GB5QdH583XqD6?g_st=ipc",
     "name": "Attic Urban Rooftop",
     "address": "Ερμού 86, Αθήνα 105 54",
     "lat": "37.97687080438377",
-    "lng": "23.725410532690592"
+    "lng": "23.725410532690592",
+    "id": "rooftopLoungesRestaurants_7332acc097be",
+    "slug": "attic-urban-rooftop-7332"
   },
   {
     "url": "https://maps.app.goo.gl/MDc3Ag3ciiiASdRN8?g_st=ipc",
     "name": "360 Cocktail Bar",
     "address": "Ηφαίστου 2, Αθήνα 105 55",
     "lat": "37.97638780084513",
-    "lng": "23.72554423506802"
+    "lng": "23.72554423506802",
+    "id": "rooftopLoungesRestaurants_9481fd0f2935",
+    "slug": "360-cocktail-bar-9481"
   },
   {
     "url": "https://maps.app.goo.gl/sokqQJABVgjaTNcT9?g_st=ipc",
     "name": "MoMix Bar Athens",
     "address": "Αγ. Αναργύρων 21, Αθήνα 105 54",
     "lat": "37.97873103162127",
-    "lng": "23.723898549953017"
+    "lng": "23.723898549953017",
+    "id": "rooftopLoungesRestaurants_618102314dfe",
+    "slug": "momix-bar-athens-6181"
   },
   {
     "url": "https://maps.app.goo.gl/VJigoWChXTdvaWWm8?g_st=ipc",
     "name": "LIYSTOR",
     "address": "Ερμού 92-94, Αθήνα 105 54",
     "lat": "37.97699862058507",
-    "lng": "23.724754043275098"
+    "lng": "23.724754043275098",
+    "id": "rooftopLoungesRestaurants_484f7844d0e6",
+    "slug": "liystor-484f"
   },
   {
     "url": "https://maps.app.goo.gl/wef8tXnuzgY2o9iBA?g_st=ipc",
     "name": "LUV N ROLL HOUSE Tattoo & Piercing Studio | Athens",
     "address": "Καραϊσκάκη 14, Αθήνα 105 54",
     "lat": "37.977424235887426",
-    "lng": "23.72409772692034"
+    "lng": "23.72409772692034",
+    "id": "rooftopLoungesRestaurants_d2b2d3a1881c",
+    "slug": "luv-n-roll-house-tattoo-piercing-studio-athens-d2b2"
   },
   {
     "url": "https://maps.app.goo.gl/xcPngBCfpyfPpqpi9?g_st=ipc",
     "name": "Couleur Locale",
     "address": "Νορμανού 3, Αθήνα 105 55",
     "lat": "37.97665657873508",
-    "lng": "23.724495249053955"
+    "lng": "23.724495249053955",
+    "id": "rooftopLoungesRestaurants_fd2aeb4fbf06",
+    "slug": "couleur-locale-fd2a"
   },
   {
     "url": "https://maps.app.goo.gl/AF5AEBzt63j5tves7?g_st=ipc",
     "name": "stork rooftop bar restaurant",
     "address": "Λεωφόρος Συγγρού 21, Βούρβαχη 2, Αθήνα 117 43",
     "lat": "37.967099364958976",
-    "lng": "23.7303307646006"
+    "lng": "23.7303307646006",
+    "id": "rooftopLoungesRestaurants_208f904925e8",
+    "slug": "stork-rooftop-bar-restaurant-208f"
   },
   {
     "url": "https://maps.app.goo.gl/XrFr3v9aufbhaUdc7?g_st=ipc",
     "name": "Cafe Avissinia",
     "address": "Κυνέτου 7, Αθήνα 105 55",
     "lat": "37.976617858661804",
-    "lng": "23.723660269964185"
+    "lng": "23.723660269964185",
+    "id": "rooftopLoungesRestaurants_a6f3f7763fdc",
+    "slug": "cafe-avissinia-a6f3"
   },
   {
     "url": "https://maps.app.goo.gl/DYB3podcUfK36W3e8?g_st=ipc",
     "name": "BG's Roof Garden Terrace",
     "address": "Menaimahou 1 & Theofilopoulou, Καλλιρρόης Avenue, 18, 117 43",
     "lat": "37.96555476887021",
-    "lng": "23.73099014305094"
+    "lng": "23.73099014305094",
+    "id": "rooftopLoungesRestaurants_7028a5f2c855",
+    "slug": "bg-s-roof-garden-terrace-7028"
   },
   {
     "url": "https://maps.app.goo.gl/q9TPDZzxPX6Gn6hv8?g_st=ipc",
     "name": "Buena Vista Social Bar",
     "address": "Αγίου Φιλίππου 7, Αθήνα 105 55",
     "lat": "37.97675314568566",
-    "lng": "23.72345728050679"
+    "lng": "23.72345728050679",
+    "id": "rooftopLoungesRestaurants_8a3b6090d0ba",
+    "slug": "buena-vista-social-bar-8a3b"
   },
   {
     "url": "https://maps.app.goo.gl/ChnF9FM8eC4nBqLQ6?g_st=ipc",
     "name": "BOO! Athens",
     "address": "BOO! Athens",
     "lat": "37.978424318586704",
-    "lng": "23.72253528291444"
+    "lng": "23.72253528291444",
+    "id": "rooftopLoungesRestaurants_ce098f537717",
+    "slug": "boo-athens-ce09"
   },
   {
     "url": "https://maps.app.goo.gl/yeJpvac8bRksiNEV9?g_st=ipc",
     "name": "Mira Me Athens",
     "address": "Ερμού 118, Αθήνα 105 54",
     "lat": "37.977359535612116",
-    "lng": "23.72186806927444"
+    "lng": "23.72186806927444",
+    "id": "rooftopLoungesRestaurants_a05f7e0fe4fe",
+    "slug": "mira-me-athens-a05f"
   },
   {
     "url": "https://maps.app.goo.gl/v7R1uCgcNgpHdRQC9?g_st=ipc",
     "name": "POINT A (Acropolis Point)",
     "address": "Ροβέρτου Γκάλι 4a, Αθήνα 117 42",
     "lat": "37.96841369245368",
-    "lng": "23.72706589017976"
+    "lng": "23.72706589017976",
+    "id": "rooftopLoungesRestaurants_fcea5b936f33",
+    "slug": "point-a-acropolis-point-fcea"
   },
   {
     "url": "https://maps.app.goo.gl/B2UsgvhxQkuJx2dU7?g_st=ipc",
     "name": "180º West Rooftop Lounge Restaurant",
     "address": "Φαλήρου 37-39, Αθήνα 117 42",
     "lat": "37.965774750504295",
-    "lng": "23.727676619784248"
+    "lng": "23.727676619784248",
+    "id": "rooftopLoungesRestaurants_0166d74152d9",
+    "slug": "180-west-rooftop-lounge-restaurant-0166"
   },
   {
     "url": "https://maps.app.goo.gl/3QDHt2qN9bAbpZCo6?g_st=ipc",
     "name": "Hill Athens Rooftop Restaurant",
     "address": "Αποστόλου Παύλου 27, Αθήνα 118 51",
     "lat": "37.97419365813568",
-    "lng": "23.719905442723636"
+    "lng": "23.719905442723636",
+    "id": "rooftopLoungesRestaurants_f6776fb8dcd6",
+    "slug": "hill-athens-rooftop-restaurant-f677"
   },
   {
     "url": "https://maps.app.goo.gl/fQ8YQr8FRL5GzrPm7?g_st=ipc",
     "name": "THISSIO VIEW - Rooftop Εστιατόριο & Μπάρ",
     "address": "Αποστόλου Παύλου 25, Αθήνα 118 51",
     "lat": "37.974080279276336",
-    "lng": "23.719915035860108"
+    "lng": "23.719915035860108",
+    "id": "rooftopLoungesRestaurants_f3813d39259f",
+    "slug": "thissio-view-rooftop-estiatorio-mpar-f381"
   },
   {
     "url": "https://maps.app.goo.gl/GwTqDERwqhw3c72o8?g_st=ipc",
     "name": "Neoma",
     "address": "Μουσών 13, Αθήνα 117 41",
     "lat": "37.96667210546055",
-    "lng": "23.72293271432969"
+    "lng": "23.72293271432969",
+    "id": "rooftopLoungesRestaurants_9f3b51889721",
+    "slug": "neoma-9f3b"
   },
   {
     "url": "https://maps.app.goo.gl/xdoJybpRxJKYAgbKA?g_st=ipc",
     "name": "Premiere Restaurant",
     "address": "Λεωφ. Ανδρέα Συγγρού 89-93, Αθήνα 117 45",
     "lat": "37.95933669311001",
-    "lng": "23.721893436588108"
+    "lng": "23.721893436588108",
+    "id": "rooftopLoungesRestaurants_eff063b05a76",
+    "slug": "premiere-restaurant-eff0"
   },
   {
     "url": "https://maps.app.goo.gl/kiF8TojxnBhKbgaz5?g_st=ipc",
     "name": "Telescope Cafe Bar Restaurant",
     "address": "Φιλικής Εταιρείας, Χαϊδάρι 124 61",
     "lat": "38.00691762131001",
-    "lng": "23.65623811246107"
+    "lng": "23.65623811246107",
+    "id": "rooftopLoungesRestaurants_0981ecde8885",
+    "slug": "telescope-cafe-bar-restaurant-0981"
   },
   {
     "url": "https://maps.app.goo.gl/TMX4yShbMaVX6rTHA?g_st=ipc",
     "name": "Sky Bar 360",
     "address": "Λεωφ. Ποσειδώνος 72, Παλαιό Φάληρο 175 62",
     "lat": "37.91880690173223",
-    "lng": "23.70114636675223"
+    "lng": "23.70114636675223",
+    "id": "rooftopLoungesRestaurants_8bd69f8e140f",
+    "slug": "sky-bar-360-8bd6"
   },
   {
     "url": "https://maps.app.goo.gl/ihEdPbBRkh4gUgkN8?g_st=ipc",
     "name": "ΝΕΣΤ Rooftop - Monte Kastella",
     "address": "Λεωφ. Αλ. Παπαναστασίου 109, Πειραιάς 185 33",
     "lat": "37.93966270446982",
-    "lng": "23.66158469266589"
+    "lng": "23.66158469266589",
+    "id": "rooftopLoungesRestaurants_d731d137095c",
+    "slug": "nest-rooftop-monte-kastella-d731"
   },
   {
     "url": "https://maps.app.goo.gl/viDajdxAvyspFBBt6?g_st=ipc",
     "name": "Horizon Rooftop Of Senses",
     "address": "Ακτή Κουμουνδούρου 24, Πειραιάς 185 33",
     "lat": "37.93866165468551",
-    "lng": "23.659642211558037"
+    "lng": "23.659642211558037",
+    "id": "rooftopLoungesRestaurants_70a332fffcc8",
+    "slug": "horizon-rooftop-of-senses-70a3"
   },
   {
     "url": "https://maps.app.goo.gl/yT2duNTycA4x2XMj8?g_st=ipc",
     "name": "Asteria Rooftop",
     "address": "Αστέρας, Λεωφ. Ποσειδώνος 110, Γλυφάδα 166 75",
     "lat": "37.85949154574065",
-    "lng": "23.750248190887866"
+    "lng": "23.750248190887866",
+    "id": "rooftopLoungesRestaurants_3fcd2594d1cf",
+    "slug": "asteria-rooftop-3fcd"
   },
   {
     "url": "https://maps.app.goo.gl/uPm46zTckTNqv3Qu9?g_st=ipc",
     "name": "La Luna See The View",
     "address": "Παύλου, Κουντουριώτου 73, Δραπετσώνα 186 48",
     "lat": "37.94499432681891",
-    "lng": "23.62996124370496"
+    "lng": "23.62996124370496",
+    "id": "rooftopLoungesRestaurants_43009144e178",
+    "slug": "la-luna-see-the-view-4300"
   },
   {
     "url": "https://maps.app.goo.gl/jsTmkoKprsWbmQrL7?g_st=ipc",
     "name": "Oceanis Rooftop Garden Cocktails",
     "address": "Πόρος 180 20",
     "lat": "37.501996070488",
-    "lng": "23.45562913585347"
+    "lng": "23.45562913585347",
+    "id": "rooftopLoungesRestaurants_b9086fd9d613",
+    "slug": "oceanis-rooftop-garden-cocktails-b908"
   },
   {
     "url": "https://maps.app.goo.gl/rQCJ25nGMgqPtznc9?g_st=ipc",
     "name": "Liberty View Of Nafplio",
     "address": "Σιδηράς Μεραρχίας 39, Ναύπλιο 211 00",
     "lat": "37.56620313105519",
-    "lng": "22.806200235013893"
+    "lng": "22.806200235013893",
+    "id": "rooftopLoungesRestaurants_3af9241259c9",
+    "slug": "liberty-view-of-nafplio-3af9"
   },
   {
     "url": "https://maps.app.goo.gl/w6QH5tCXxfavUiaSA?g_st=ipc",
     "name": "Mosaic Milos",
     "address": "Plaka 848 00",
     "lat": "36.744311630154215",
-    "lng": "24.421917685649166"
+    "lng": "24.421917685649166",
+    "id": "rooftopLoungesRestaurants_55f4048d25e6",
+    "slug": "mosaic-milos-55f4"
   },
   {
     "url": "https://maps.app.goo.gl/afKAwGAeEkWcEeYE9?g_st=ipc",
     "name": "Bebop",
     "address": "Paros 844 00",
     "lat": "37.08434926553262",
-    "lng": "25.146838769043043"
+    "lng": "25.146838769043043",
+    "id": "rooftopLoungesRestaurants_24466fdc7cae",
+    "slug": "bebop-2446"
   },
   {
     "url": "https://maps.app.goo.gl/xGrZAJx1PKMWWCnU7?g_st=ipc",
     "name": "Musique Cafe - Restaurant",
     "address": "Ariadnis, Naxos 843 00",
     "lat": "37.10327388720912",
-    "lng": "25.374720099192075"
+    "lng": "25.374720099192075",
+    "id": "rooftopLoungesRestaurants_f44c78191d73",
+    "slug": "musique-cafe-restaurant-f44c"
   },
   {
     "url": "https://maps.app.goo.gl/wrFubAW9MXvR6z5Y6?g_st=ipc",
     "name": "Swing Cocktail Bar Naxos",
     "address": "Protopapadaki, Naxos 843 00",
     "lat": "37.10397730324002",
-    "lng": "25.375517434266428"
+    "lng": "25.375517434266428",
+    "id": "rooftopLoungesRestaurants_b11d5369fcab",
+    "slug": "swing-cocktail-bar-naxos-b11d"
   },
   {
     "url": "https://maps.app.goo.gl/T7jbKyc9RSyKYmeG8?g_st=ipc",
     "name": "AVATON 1739 - Coffee & Wine Roof",
     "address": "Kastro, Naxos 843 00",
     "lat": "37.10529463592704",
-    "lng": "25.37737954083749"
+    "lng": "25.37737954083749",
+    "id": "rooftopLoungesRestaurants_741da60ba975",
+    "slug": "avaton-1739-coffee-wine-roof-741d"
   },
   {
     "url": "https://maps.app.goo.gl/gucKqbib1YPXfXRd8?g_st=ipc",
     "name": "Taratsa Open",
     "address": "EO Amfilochias Lefkadas, Lefkada 311 00",
     "lat": "38.83493516503128",
-    "lng": "20.711610210825643"
+    "lng": "20.711610210825643",
+    "id": "rooftopLoungesRestaurants_fbedc289379a",
+    "slug": "taratsa-open-fbed"
   },
   {
     "url": "https://maps.app.goo.gl/JPyojcjpAj6bXV746?g_st=ipc",
     "name": "Allegro",
     "address": "25 Martiou & Coastal Road, Thessaloniki 546 46",
     "lat": "40.597207319655574",
-    "lng": "22.9475710644147"
+    "lng": "22.9475710644147",
+    "id": "rooftopLoungesRestaurants_1533c10141a1",
+    "slug": "allegro-1533"
   },
   {
     "url": "https://maps.app.goo.gl/U2kiDC3n5qDpiFoG6?g_st=ipc",
     "name": "Morrison • The Premium Rooftop",
     "address": "17is Noemvriou 87, Pilea 555 35",
     "lat": "40.60821653387287",
-    "lng": "22.99874350808088"
+    "lng": "22.99874350808088",
+    "id": "rooftopLoungesRestaurants_2f03a1dd9309",
+    "slug": "morrison-the-premium-rooftop-2f03"
   },
   {
     "url": "https://maps.app.goo.gl/k4RMBTJaYnWPwHrU7?g_st=ipc",
     "name": "Orizontes Roof Garden",
     "address": "Aristotelous Sq 9, Thessaloniki 546 24",
     "lat": "40.63324843271599",
-    "lng": "22.94121400261453"
+    "lng": "22.94121400261453",
+    "id": "rooftopLoungesRestaurants_c00e2007b8c8",
+    "slug": "orizontes-roof-garden-c00e"
   },
   {
     "url": "https://maps.app.goo.gl/BC4vj2HMkPaRWUJY6?g_st=ipc",
     "name": "Ennea Rooftop Bar",
     "address": "MonAsty Thessaloniki Autograph Collection, Vasileos Irakleiou 45, Thessaloniki 546 23",
     "lat": "40.63386856558694",
-    "lng": "22.943170697637683"
+    "lng": "22.943170697637683",
+    "id": "rooftopLoungesRestaurants_37ff1d604564",
+    "slug": "ennea-rooftop-bar-37ff"
   },
   {
     "url": "https://maps.app.goo.gl/962RzcGYY41GffHm7?g_st=ipc",
     "name": "Bey Hamam",
     "address": "Εγνατία, Mitropolitou Gennadiou 34, Thessaloniki 546 25",
     "lat": "40.635414762374545",
-    "lng": "22.945319011313067"
+    "lng": "22.945319011313067",
+    "id": "rooftopLoungesRestaurants_28b6f524a86b",
+    "slug": "bey-hamam-28b6"
   },
   {
     "url": "https://maps.app.goo.gl/WnmhcnyR1pUzpjBc9?g_st=ipc",
     "name": "Margarita At the Top of Sense",
     "address": "Pl. Morichovou 11, Thessaloniki 546 25",
     "lat": "40.63545426028475",
-    "lng": "22.93700542047033"
+    "lng": "22.93700542047033",
+    "id": "rooftopLoungesRestaurants_7e076fa27638",
+    "slug": "margarita-at-the-top-of-sense-7e07"
   },
   {
     "url": "https://maps.app.goo.gl/Rej46ZikGi16jCPa6?g_st=ipc",
     "name": "Avocado Cocktail Bar",
     "address": "23ης Φεβρουαρίου, Parga 480 60",
     "lat": "39.28423915622935",
-    "lng": "20.39914061806164"
+    "lng": "20.39914061806164",
+    "id": "rooftopLoungesRestaurants_022b40d3c73a",
+    "slug": "avocado-cocktail-bar-022b"
   },
   {
     "url": "https://maps.app.goo.gl/u2rtEnenzWiQA1C79?g_st=ipc",
     "name": "Swell Roof Garden",
     "address": "El. Venizelou 17, Kavala 653 02",
     "lat": "40.93644468023091",
-    "lng": "24.41131352952831"
+    "lng": "24.41131352952831",
+    "id": "rooftopLoungesRestaurants_bb49421d891b",
+    "slug": "swell-roof-garden-bb49"
   },
   {
     "url": "https://maps.app.goo.gl/q9X7pZzbyKPo8wEb6?g_st=ipc",
     "name": "Athens Gate Rooftop Bar & Restaurant",
     "address": "Leof. Andrea Siggrou 10, Athina 117 41",
     "lat": "37.968775997362016",
-    "lng": "23.73145032913701"
+    "lng": "23.73145032913701",
+    "id": "rooftopLoungesRestaurants_f8cacb8baac7",
+    "slug": "athens-gate-rooftop-bar-restaurant-f8ca"
   }
 ]

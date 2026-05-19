@@ -4,363 +4,467 @@
     "name": "Juan's Cantina",
     "address": "Ευεργέτου Γιαβάση 13Α, Αγ. Παρασκευή 153 42",
     "lat": "38.01206107178295",
-    "lng": "23.81957316690922"
+    "lng": "23.81957316690922",
+    "id": "mexicanRestaurants_8063d3de98b0",
+    "slug": "juan-s-cantina-8063"
   },
   {
     "url": "https://maps.app.goo.gl/fUBeVjsmrzYg9wt59?g_st=ipc",
     "name": "Chilangos",
     "address": "Λεωφ. Μεσογείων 258, Χολαργός 155 61",
     "lat": "38.00604580624182",
-    "lng": "23.797688301604907"
+    "lng": "23.797688301604907",
+    "id": "mexicanRestaurants_5d84c532c46f",
+    "slug": "chilangos-5d84"
   },
   {
     "url": "https://maps.app.goo.gl/nxvZPKw9Xm14kD6q7?g_st=ipc",
     "name": "El Taco Bueno",
     "address": "Αγίας Παρασκευής 110, Χαλάνδρι 152 32",
     "lat": "38.01767477225013",
-    "lng": "23.8094742149459"
+    "lng": "23.8094742149459",
+    "id": "mexicanRestaurants_2fa8f90ada8c",
+    "slug": "el-taco-bueno-2fa8"
   },
   {
     "url": "https://maps.app.goo.gl/J7mbR7We3G9gTLqS6?g_st=ipc",
     "name": "Picasso Athens",
     "address": "Καραολη Δημήτριου 22, Χαλάνδρι 152 32",
     "lat": "38.019815508215686",
-    "lng": "23.798687453855152"
+    "lng": "23.798687453855152",
+    "id": "mexicanRestaurants_6c5519ffe304",
+    "slug": "picasso-athens-6c55"
   },
   {
     "url": "https://maps.app.goo.gl/i66HHdFDVxfAoN1y7?g_st=ipc",
     "name": "Ancho Mexican Grill",
     "address": "Κολοκοτρώνη και, Γρ. Γυφτοπούλου 9, Χαλάνδρι 152 33",
     "lat": "38.02258118157313",
-    "lng": "23.79793213578262"
+    "lng": "23.79793213578262",
+    "id": "mexicanRestaurants_d9caea076ae0",
+    "slug": "ancho-mexican-grill-d9ca"
   },
   {
     "url": "https://maps.app.goo.gl/kDVM5wdPB9hfwk4G6?g_st=ipc",
     "name": "Sanchez Athens",
     "address": "Ολυμπιονικών 310, Νέο Ψυχικό 154 51",
     "lat": "38.007276659968724",
-    "lng": "23.777915941580243"
+    "lng": "23.777915941580243",
+    "id": "mexicanRestaurants_9da2b83be820",
+    "slug": "sanchez-athens-9da2"
   },
   {
     "url": "https://maps.app.goo.gl/hZssyRcz7Rfft2mi6?g_st=ipc",
     "name": "Casa Mexicana",
     "address": "Δημ. Βασιλείου 16, Νέο Ψυχικό 154 51",
     "lat": "38.00238200041886",
-    "lng": "23.77636430613833"
+    "lng": "23.77636430613833",
+    "id": "mexicanRestaurants_2a24bc59bf5a",
+    "slug": "casa-mexicana-2a24"
   },
   {
     "url": "https://maps.app.goo.gl/bgqno3epSEAwFEp1A?g_st=ipc",
     "name": "Ο Μεξικανός",
     "address": "157 73, Γεωρ. Παπανδρέου 47, Ζωγράφου 157 73",
     "lat": "37.98186119461787",
-    "lng": "23.768203133980027"
+    "lng": "23.768203133980027",
+    "id": "mexicanRestaurants_7f0e3c29626a",
+    "slug": "o-mexikanos-7f0e"
   },
   {
     "url": "https://maps.app.goo.gl/VDFRPLTGKi6Cxw6b9?g_st=ipc",
     "name": "Ancho Mexican Grill",
     "address": "Ανδρέα Παπανδρέου 35, Μαρούσι 151 22",
     "lat": "38.04461245221765",
-    "lng": "23.790240662976885"
+    "lng": "23.790240662976885",
+    "id": "mexicanRestaurants_e68c0563bcc0",
+    "slug": "ancho-mexican-grill-e68c"
   },
   {
     "url": "https://maps.app.goo.gl/6ANASWUmUfUoDhQ17?g_st=ipc",
     "name": "Juan's Cantina (Βριλήσσια)",
     "address": "Αναπαύσεως 40, Βριλήσσια 152 38",
     "lat": "38.04160062532965",
-    "lng": "23.847620862228275"
+    "lng": "23.847620862228275",
+    "id": "mexicanRestaurants_3cb054fab422",
+    "slug": "juan-s-cantina-vrilissia-3cb0"
   },
   {
     "url": "https://maps.app.goo.gl/dNnjqQMeoX6QVGm38?g_st=ipc",
     "name": "Καίσαρας Μπαρ - Kaisaras Bar",
     "address": "Πλατεία Παναγιώτη Μακρή 7-9, Καισαριανή 161 21",
     "lat": "37.96879437306453",
-    "lng": "23.758782238098565"
+    "lng": "23.758782238098565",
+    "id": "mexicanRestaurants_246d0cbd5711",
+    "slug": "kaisaras-mpar-kaisaras-bar-246d"
   },
   {
     "url": "https://maps.app.goo.gl/1nUje6biZMsuVgA88?g_st=ipc",
     "name": "Chilangos Μελίσσια",
     "address": "Π. Τσαλδάρη 31, Μελίσσια 151 27",
     "lat": "38.054355571864015",
-    "lng": "23.84267375327988"
+    "lng": "23.84267375327988",
+    "id": "mexicanRestaurants_a122440089bb",
+    "slug": "chilangos-melissia-a122"
   },
   {
     "url": "https://maps.app.goo.gl/UDV48UEWHbvnBPVPA?g_st=ipc",
     "name": "Poncho TACOS",
     "address": "Θεμιστοκλέους 63, Αθήνα 106 83",
     "lat": "37.986865601219684",
-    "lng": "23.73564152842256"
+    "lng": "23.73564152842256",
+    "id": "mexicanRestaurants_5d5b665dab34",
+    "slug": "poncho-tacos-5d5b"
   },
   {
     "url": "https://maps.app.goo.gl/YNaKL4jWfw735LRo9?g_st=ipc",
     "name": "Agavita Cantina Mexicana",
     "address": "Λεωφ. Δεκελείας 86, Νέα Φιλαδέλφεια Αττικής 143 41",
     "lat": "38.03199225780443",
-    "lng": "23.737193509502852"
+    "lng": "23.737193509502852",
+    "id": "mexicanRestaurants_c5563429e3b3",
+    "slug": "agavita-cantina-mexicana-c556"
   },
   {
     "url": "https://maps.app.goo.gl/4EBL1F4dh9gaVYdh7?g_st=ipc",
     "name": "Dos Hermanos",
     "address": "Κυριαζή 24, Κηφισιά 145 62",
     "lat": "38.070224929633255",
-    "lng": "23.812971812919443"
+    "lng": "23.812971812919443",
+    "id": "mexicanRestaurants_a0149c25ef48",
+    "slug": "dos-hermanos-a014"
   },
   {
     "url": "https://maps.app.goo.gl/9YG5PfTVGoHqdG8N9?g_st=ipc",
     "name": "Ancho Mexican Grill",
     "address": "Κασσαβέτη 9, Κηφισιά 145 62",
     "lat": "38.072302577774266",
-    "lng": "23.812957916990147"
+    "lng": "23.812957916990147",
+    "id": "mexicanRestaurants_9321a8ed4f82",
+    "slug": "ancho-mexican-grill-9321"
   },
   {
     "url": "https://maps.app.goo.gl/CAhgNENSirDV1fWq7?g_st=ipc",
     "name": "Tekila",
     "address": "Κολοκοτρώνη 3, Αθήνα 105 62",
     "lat": "37.97697304778162",
-    "lng": "23.733460625726625"
+    "lng": "23.733460625726625",
+    "id": "mexicanRestaurants_855638776a76",
+    "slug": "tekila-8556"
   },
   {
     "url": "https://maps.app.goo.gl/6pEPXa7waRhazPjR9?g_st=ipc",
     "name": "Taco Loco Athens",
     "address": "Κολοκοτρώνη 39, Αθήνα 105 62",
     "lat": "37.9776204281013",
-    "lng": "23.730210870551065"
+    "lng": "23.730210870551065",
+    "id": "mexicanRestaurants_d1ef1807c1f0",
+    "slug": "taco-loco-athens-d1ef"
   },
   {
     "url": "https://maps.app.goo.gl/KcBA2GUcjk1cY9FJ8?g_st=ipc",
     "name": "Mamacita - Taquería y Coctelería",
     "address": "Απόλλωνος 9Β, Αθήνα 105 57",
     "lat": "37.97469687554734",
-    "lng": "23.731910676858394"
+    "lng": "23.731910676858394",
+    "id": "mexicanRestaurants_33052426e7a2",
+    "slug": "mamacita-taqueria-y-cocteleria-3305"
   },
   {
     "url": "https://maps.app.goo.gl/gFj6AV1Bf67kw6hdA?g_st=ipc",
     "name": "Pueblo Chido Κηφισιά",
     "address": "Κολοκοτρώνη 37, Κηφισιά 145 62",
     "lat": "38.07488654501822",
-    "lng": "23.81927628386729"
+    "lng": "23.81927628386729",
+    "id": "mexicanRestaurants_1c335621a1fd",
+    "slug": "pueblo-chido-kifisia-1c33"
   },
   {
     "url": "https://maps.app.goo.gl/iYXrRpCvSYJUhEHx8?g_st=ipc",
     "name": "Ancho Mexican Grill",
     "address": "Αιόλου 25, Αθήνα 105 51",
     "lat": "37.97715705569823",
-    "lng": "23.72766354204186"
+    "lng": "23.72766354204186",
+    "id": "mexicanRestaurants_12ba982b5dec",
+    "slug": "ancho-mexican-grill-12ba"
   },
   {
     "url": "https://maps.app.goo.gl/HF699YbZfp4NJUYi7?g_st=ipc",
     "name": "Morenita All Day Bar Restaurant",
     "address": "Τάκη 13, Αθήνα 105 54",
     "lat": "37.978327591113846",
-    "lng": "23.724081018892964"
+    "lng": "23.724081018892964",
+    "id": "mexicanRestaurants_68ac307861c4",
+    "slug": "morenita-all-day-bar-restaurant-68ac"
   },
   {
     "url": "https://maps.app.goo.gl/Gi4zf9TfzCfLeQPL6?g_st=ipc",
     "name": "Dos Gardenias",
     "address": "Ήβης 21 &, Ναυάρχου Αποστόλη 17, Αθήνα 105 54",
     "lat": "37.977603557604816",
-    "lng": "23.722737599299293"
+    "lng": "23.722737599299293",
+    "id": "mexicanRestaurants_78038d8f26a9",
+    "slug": "dos-gardenias-7803"
   },
   {
     "url": "https://maps.app.goo.gl/1xXknD2jtrEpodcR7?g_st=ipc",
     "name": "Mentirosa - Tacos & Cocktails",
     "address": "Θερμοπυλών 41, Αθήνα 104 35",
     "lat": "37.982550988441936",
-    "lng": "23.717503924756294"
+    "lng": "23.717503924756294",
+    "id": "mexicanRestaurants_624c5c1ab8d8",
+    "slug": "mentirosa-tacos-cocktails-624c"
   },
   {
     "url": "https://maps.app.goo.gl/ubhB9thYzcYwcr5P6?g_st=ipc",
     "name": "Señor Picante",
     "address": "Φαλήρου 40, Αθήνα 117 42",
     "lat": "37.965314110245735",
-    "lng": "23.72647699463702"
+    "lng": "23.72647699463702",
+    "id": "mexicanRestaurants_fbd3ffd2a2f7",
+    "slug": "senor-picante-fbd3"
   },
   {
     "url": "https://maps.app.goo.gl/5kJKHTBcWjkVftX99?g_st=ipc",
     "name": "El burro tacos y tequila",
     "address": "Δημητρακοπούλου 102, Αθήνα 117 41",
     "lat": "37.962922862445566",
-    "lng": "23.7215865155236"
+    "lng": "23.7215865155236",
+    "id": "mexicanRestaurants_b734434ef46c",
+    "slug": "el-burro-tacos-y-tequila-b734"
   },
   {
     "url": "https://maps.app.goo.gl/3hQ5hMSwfLYpvisu6?g_st=ipc",
     "name": "MVP RESTAURANT",
     "address": "Χαρ. Τρικούπη 127, Νέα Ερυθραία 146 71",
     "lat": "38.08824038111985",
-    "lng": "23.816227594005245"
+    "lng": "23.816227594005245",
+    "id": "mexicanRestaurants_4dab442d4d6c",
+    "slug": "mvp-restaurant-4dab"
   },
   {
     "url": "https://maps.app.goo.gl/z2SGuye5ZYrGd3Ft7?g_st=ipc",
     "name": "Balero",
     "address": "Χαρ. Τρικούπη 162, Νέα Ερυθραία 145 62",
     "lat": "38.08846033344393",
-    "lng": "23.813655936317737"
+    "lng": "23.813655936317737",
+    "id": "mexicanRestaurants_fa8ffda60946",
+    "slug": "balero-fa8f"
   },
   {
     "url": "https://maps.app.goo.gl/cr3WMKBAZV8ioDio8?g_st=ipc",
     "name": "Cocorico",
     "address": "Ιφιγένειας 31, Ίλιον 131 22",
     "lat": "38.03523336222832",
-    "lng": "23.705870421998508"
+    "lng": "23.705870421998508",
+    "id": "mexicanRestaurants_35c4494094cc",
+    "slug": "cocorico-35c4"
   },
   {
     "url": "https://maps.app.goo.gl/A9S8uhRtFHyQhuDh6?g_st=ipc",
     "name": "Dos Banditos",
     "address": "Δημοσθένους 31, Καλλιθέα 176 71",
     "lat": "37.957023186399105",
-    "lng": "23.71172894880883"
+    "lng": "23.71172894880883",
+    "id": "mexicanRestaurants_ec31cb806a86",
+    "slug": "dos-banditos-ec31"
   },
   {
     "url": "https://maps.app.goo.gl/MWC6uaDUm2HJ8Ved9?g_st=ipc",
     "name": "Pueblo Chido, Nea Smyrni",
     "address": "Pueblo Chido, Nea Smyrni",
     "lat": "37.94714091435742",
-    "lng": "23.714986542388107"
+    "lng": "23.714986542388107",
+    "id": "mexicanRestaurants_e73bac78f16d",
+    "slug": "pueblo-chido-nea-smyrni-e73b"
   },
   {
     "url": "https://maps.app.goo.gl/w4rjy3ViFe7tB9vZ8?g_st=ipc",
     "name": "𝖫𝖠 𝖢𝖠𝖲𝖠 𝖠𝖹𝖴𝖫",
     "address": "Θηβών 143, Περιστέρι 121 34",
     "lat": "38.01238167042839",
-    "lng": "23.68855888974166"
+    "lng": "23.68855888974166",
+    "id": "mexicanRestaurants_249dc358fb68",
+    "slug": "item-249d"
   },
   {
     "url": "https://maps.app.goo.gl/BHdiVv9h7dD8bkiu6?g_st=ipc",
     "name": "Amigos",
     "address": "Μεγ. Αλεξάνδρου 70, Νέα Σμύρνη 171 22",
     "lat": "37.94499454255761",
-    "lng": "23.71221746209658"
+    "lng": "23.71221746209658",
+    "id": "mexicanRestaurants_e022afb77fe2",
+    "slug": "amigos-e022"
   },
   {
     "url": "https://maps.app.goo.gl/aK9BaFV3WgpvSdWJ7?g_st=ipc",
     "name": "ABRAZO",
     "address": "Μαρίνου Γερουλάνου 55, Αργυρούπολη 164 52",
     "lat": "37.90764040669511",
-    "lng": "23.748959602183852"
+    "lng": "23.748959602183852",
+    "id": "mexicanRestaurants_0c73152ab27f",
+    "slug": "abrazo-0c73"
   },
   {
     "url": "https://maps.app.goo.gl/opTPE24vtAteYNRS9?g_st=ipc",
     "name": "MEJICO RESTAURANT BAR",
     "address": "Θράκης 10 Και 28ης Οκτωβρίου 36, Αργυρούπολη 164 52",
     "lat": "37.90692111551084",
-    "lng": "23.74832700746784"
+    "lng": "23.74832700746784",
+    "id": "mexicanRestaurants_0b6a5cff52ce",
+    "slug": "mejico-restaurant-bar-0b6a"
   },
   {
     "url": "https://maps.app.goo.gl/EqAGEAoJuRooejLJA?g_st=ipc",
     "name": "Chicos Tequileria Mexicana",
     "address": "Στρ. Καραϊσκάκη 49, Χαϊδάρι 124 61",
     "lat": "38.00505726765837",
-    "lng": "23.664098826548518"
+    "lng": "23.664098826548518",
+    "id": "mexicanRestaurants_4fd2b517e59f",
+    "slug": "chicos-tequileria-mexicana-4fd2"
   },
   {
     "url": "https://maps.app.goo.gl/opzLk9C1z99QsEwW7?g_st=ipc",
     "name": "Foinikas Cocina Y Cocteleria Mexicana",
     "address": "Ηρ. Πολυτεχνείου 76, Χαϊδάρι 124 62",
     "lat": "38.015441217507856",
-    "lng": "23.650413232343997"
+    "lng": "23.650413232343997",
+    "id": "mexicanRestaurants_67556fc4ed45",
+    "slug": "foinikas-cocina-y-cocteleria-mexicana-6755"
   },
   {
     "url": "https://maps.app.goo.gl/TyUmY21xfn9LHmce7?g_st=ipc",
     "name": "CHE Cocina y Barra Sudamericana",
     "address": "Καραΐσκου 151, Πειραιάς 185 35",
     "lat": "37.94032437815617",
-    "lng": "23.645996360812326"
+    "lng": "23.645996360812326",
+    "id": "mexicanRestaurants_a97d037088f2",
+    "slug": "che-cocina-y-barra-sudamericana-a97d"
   },
   {
     "url": "https://maps.app.goo.gl/LepDURte7YPh6NZL8?g_st=ipc",
     "name": "Ancho Mexican Grill",
     "address": "Γιαννιτσοπούλου 3, Γλυφάδα 166 74",
     "lat": "37.862745862193556",
-    "lng": "23.754877099753806"
+    "lng": "23.754877099753806",
+    "id": "mexicanRestaurants_4df313ff7b2b",
+    "slug": "ancho-mexican-grill-4df3"
   },
   {
     "url": "https://maps.app.goo.gl/tAYLNiXMfX7MbEnT9?g_st=ipc",
     "name": "El Catrin",
     "address": "Φοίβης 15, Γλυφάδα 166 74",
     "lat": "37.85991051831941",
-    "lng": "23.75494123731321"
+    "lng": "23.75494123731321",
+    "id": "mexicanRestaurants_41b2ba4d071f",
+    "slug": "el-catrin-41b2"
   },
   {
     "url": "https://maps.app.goo.gl/CeHzLQv4LTsb7j5RA?g_st=ipc",
     "name": "Amigos",
     "address": "Κύπρου 65, Γλυφάδα 166 74",
     "lat": "37.85929715781572",
-    "lng": "23.756229404432254"
+    "lng": "23.756229404432254",
+    "id": "mexicanRestaurants_bc074466ce69",
+    "slug": "amigos-bc07"
   },
   {
     "url": "https://maps.app.goo.gl/PtCSKGqYbgCdSXyz5?g_st=ipc",
     "name": "Azul Condesa Mykonos",
     "address": "Πετειναρος, Μύκονος 846 00",
     "lat": "37.445318743092045",
-    "lng": "25.33424731325651"
+    "lng": "25.33424731325651",
+    "id": "mexicanRestaurants_c15838bdee62",
+    "slug": "azul-condesa-mykonos-c158"
   },
   {
     "url": "https://maps.app.goo.gl/Z4qdJprni1KMQm3YA?g_st=ipc",
     "name": "El Dorado",
     "address": "Epar.Od. Mikonou, Mikonos 846 00",
     "lat": "37.4384356377363",
-    "lng": "25.332482232008008"
+    "lng": "25.332482232008008",
+    "id": "mexicanRestaurants_9cdc9098224f",
+    "slug": "el-dorado-9cdc"
   },
   {
     "url": "https://maps.app.goo.gl/x9fF3ksZjKbckcRR9?g_st=ipc",
     "name": "Appaloosa Bar Restaurant",
     "address": "Άνω Μερά 846 00",
     "lat": "37.45234589794245",
-    "lng": "25.38409135881813"
+    "lng": "25.38409135881813",
+    "id": "mexicanRestaurants_ef3256c8f86b",
+    "slug": "appaloosa-bar-restaurant-ef32"
   },
   {
     "url": "https://maps.app.goo.gl/dyPRjYQnHRARiSJ79?g_st=ipc",
     "name": "Picasso on the beach - Naxos",
     "address": "Beach, Plaka, Ag. Anna 843 00",
     "lat": "37.05943119973437",
-    "lng": "25.358989286042366"
+    "lng": "25.358989286042366",
+    "id": "mexicanRestaurants_983dcb8a2e0a",
+    "slug": "picasso-on-the-beach-naxos-983d"
   },
   {
     "url": "https://maps.app.goo.gl/vzHGYj8eJe66F2838?g_st=ipc",
     "name": "El Burrito \"Ο μικρός γάιδαρος\"",
     "address": "Chrisostomou Smirnis 5, Thessaloniki 546 22",
     "lat": "40.62900649727638",
-    "lng": "22.94570753133818"
+    "lng": "22.94570753133818",
+    "id": "mexicanRestaurants_b72fb964f683",
+    "slug": "el-burrito-o-mikros-gaidaros-b72f"
   },
   {
     "url": "https://maps.app.goo.gl/CR5HGqHbohFG88847?g_st=ipc",
     "name": "Taco Mazama (Californian Style Mexican Street Food)",
     "address": "Paleon Patron Germanou 28, Thessaloniki 546 22",
     "lat": "40.6314937411916",
-    "lng": "22.94839696039383"
+    "lng": "22.94839696039383",
+    "id": "mexicanRestaurants_77e656338dcd",
+    "slug": "taco-mazama-californian-style-mexican-street-food-77e6"
   },
   {
     "url": "https://maps.app.goo.gl/pYid3ZEGTyzFePMP6?g_st=ipc",
     "name": "Crats Mexican",
     "address": "Giannitson 61, Thessaloniki 546 27",
     "lat": "40.64644154324893",
-    "lng": "22.920914799027102"
+    "lng": "22.920914799027102",
+    "id": "mexicanRestaurants_d628d8ccc639",
+    "slug": "crats-mexican-d628"
   },
   {
     "url": "https://maps.app.goo.gl/gry6ZeCUAGqm9E3X7?g_st=ipc",
     "name": "Picante Mexican - Cocktail Bar",
     "address": "Benitses 490 84",
     "lat": "39.54688963792196",
-    "lng": "19.912527827268715"
+    "lng": "19.912527827268715",
+    "id": "mexicanRestaurants_09c0e00bc62f",
+    "slug": "picante-mexican-cocktail-bar-09c0"
   },
   {
     "url": "https://maps.app.goo.gl/HmeGfenDmu6xhBo27",
     "name": "La Casa Azul",
     "address": "Thivon 143, Peristeri 121 34",
     "lat": "38.01237602759444",
-    "lng": "23.68855969778912"
+    "lng": "23.68855969778912",
+    "id": "mexicanRestaurants_cccdda88c52d",
+    "slug": "la-casa-azul-cccd"
   },
   {
     "url": "https://maps.app.goo.gl/vZsWgNz2ht7aShcY9",
     "name": "Ancho",
     "address": "Attiki Odos, Spata Artemida 190 04",
     "lat": "37.93619879432701",
-    "lng": "23.947326529806652"
+    "lng": "23.947326529806652",
+    "id": "mexicanRestaurants_3d3eda2795fe",
+    "slug": "ancho-3d3e"
   },
   {
     "url": "https://maps.app.goo.gl/vjssVZ1V39bo4zex6",
     "name": "La Sirena",
     "address": "Fasianou 1, Thessaloniki 546 25",
     "lat": "40.63444270479013",
-    "lng": "22.93646283547866"
+    "lng": "22.93646283547866",
+    "id": "mexicanRestaurants_d80043a5b99e",
+    "slug": "la-sirena-d800"
   }
 ]

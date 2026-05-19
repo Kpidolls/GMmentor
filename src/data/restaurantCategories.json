@@ -12,7 +12,8 @@
       "history",
       "must-see",
       "museums"
-    ]
+    ],
+    "slug": "must-see-attractions-551a"
   },
   {
     "id": "greek-restaurants",
@@ -27,7 +28,8 @@
       "taverna",
       "mediterranean",
       "hellenic"
-    ]
+    ],
+    "slug": "greek-restaurants-83dc"
   },
   {
     "id": "desserts",
@@ -35,7 +37,15 @@
     "description": "Sweet treats and traditional Greek desserts",
     "icon": "🍰",
     "color": "from-pink-500 to-rose-600",
-    "keywords": ["dessert", "sweet", "bakery", "pastry", "ice cream", "gelato"]
+    "keywords": [
+      "dessert",
+      "sweet",
+      "bakery",
+      "pastry",
+      "ice cream",
+      "gelato"
+    ],
+    "slug": "dessert-shops-4cb7"
   },
   {
     "id": "family-friendly",
@@ -58,7 +68,8 @@
       "kid-friendly",
       "children",
       "casual"
-    ]
+    ],
+    "slug": "kid-friendly-locations-05af"
   },
   {
     "id": "coffee-brunch",
@@ -66,7 +77,14 @@
     "description": "Specialty coffee and all-day brunch spots",
     "icon": "☕",
     "color": "from-amber-500 to-orange-600",
-    "keywords": ["coffee", "brunch", "breakfast", "cafe", "espresso"]
+    "keywords": [
+      "coffee",
+      "brunch",
+      "breakfast",
+      "cafe",
+      "espresso"
+    ],
+    "slug": "coffee-brunch-spots-eb8a"
   },
   {
     "id": "fish-tavernas",
@@ -74,7 +92,14 @@
     "description": "Fresh seafood and traditional tavernas",
     "icon": "🐟",
     "color": "from-blue-600 to-indigo-700",
-    "keywords": ["fish", "seafood", "taverna", "fresh", "mediterranean"]
+    "keywords": [
+      "fish",
+      "seafood",
+      "taverna",
+      "fresh",
+      "mediterranean"
+    ],
+    "slug": "fish-tavernas-2dbf"
   },
   {
     "id": "monasteries-churches",
@@ -82,7 +107,14 @@
     "description": "Visit sacred places and spiritual retreats",
     "icon": "⛪",
     "color": "from-emerald-500 to-teal-600",
-    "keywords": ["monastery", "church", "spiritual", "retreat", "sacred"]
+    "keywords": [
+      "monastery",
+      "church",
+      "spiritual",
+      "retreat",
+      "sacred"
+    ],
+    "slug": "monasteries-spiritual-sites-02c7"
   },
   {
     "id": "italian",
@@ -90,7 +122,14 @@
     "description": "Authentic Italian flavors and pasta",
     "icon": "🍝",
     "color": "from-green-500 to-emerald-600",
-    "keywords": ["italian", "pasta", "pizza", "risotto", "trattoria"]
+    "keywords": [
+      "italian",
+      "pasta",
+      "pizza",
+      "risotto",
+      "trattoria"
+    ],
+    "slug": "italian-restaurants-22a4"
   },
   {
     "id": "cheap-eats",
@@ -98,7 +137,14 @@
     "description": "Budget-friendly delicious meals",
     "icon": "💰",
     "color": "from-blue-500 to-cyan-600",
-    "keywords": ["cheap", "budget", "affordable", "value", "economical"]
+    "keywords": [
+      "cheap",
+      "budget",
+      "affordable",
+      "value",
+      "economical"
+    ],
+    "slug": "gyros-cheap-eats-8dad"
   },
   {
     "id": "asian",
@@ -106,7 +152,15 @@
     "description": "Diverse Asian flavors and dishes",
     "icon": "🥢",
     "color": "from-red-500 to-pink-600",
-    "keywords": ["asian", "chinese", "japanese", "thai", "sushi", "ramen"]
+    "keywords": [
+      "asian",
+      "chinese",
+      "japanese",
+      "thai",
+      "sushi",
+      "ramen"
+    ],
+    "slug": "asian-restaurants-04d1"
   },
   {
     "id": "burgers",
@@ -114,7 +168,14 @@
     "description": "Gourmet burgers and casual dining",
     "icon": "🍔",
     "color": "from-yellow-500 to-orange-600",
-    "keywords": ["burger", "grill", "casual", "american", "fries"]
+    "keywords": [
+      "burger",
+      "grill",
+      "casual",
+      "american",
+      "fries"
+    ],
+    "slug": "burger-spots-1aa6"
   },
   {
     "id": "vegetarian",
@@ -122,7 +183,14 @@
     "description": "Plant-based and vegetarian options",
     "icon": "🌱",
     "color": "from-green-400 to-emerald-500",
-    "keywords": ["vegetarian", "vegan", "healthy", "organic", "plant-based"]
+    "keywords": [
+      "vegetarian",
+      "vegan",
+      "healthy",
+      "organic",
+      "plant-based"
+    ],
+    "slug": "vegetarian-friendly-restaurants-8e2f"
   },
   {
     "id": "mexican",
@@ -130,7 +198,14 @@
     "description": "Authentic Mexican flavors and spices",
     "icon": "🌮",
     "color": "from-lime-500 to-green-600",
-    "keywords": ["mexican", "tacos", "burrito", "spicy", "authentic"]
+    "keywords": [
+      "mexican",
+      "tacos",
+      "burrito",
+      "spicy",
+      "authentic"
+    ],
+    "slug": "mexican-restaurants-fda3"
   },
   {
     "id": "luxury-dining",
@@ -138,7 +213,14 @@
     "description": "Fine dining and upscale experiences",
     "icon": "🥂",
     "color": "from-purple-600 to-indigo-700",
-    "keywords": ["luxury", "fine dining", "upscale", "gourmet", "michelin"]
+    "keywords": [
+      "luxury",
+      "fine dining",
+      "upscale",
+      "gourmet",
+      "michelin"
+    ],
+    "slug": "luxury-dining-1bbe"
   },
   {
     "id": "rooftop-lounges",
@@ -146,7 +228,14 @@
     "description": "Sky-high dining with stunning views",
     "icon": "🌆",
     "color": "from-indigo-500 to-purple-600",
-    "keywords": ["rooftop", "lounge", "view", "skybar", "terrace"]
+    "keywords": [
+      "rooftop",
+      "lounge",
+      "view",
+      "skybar",
+      "terrace"
+    ],
+    "slug": "rooftop-lounges-73c3"
   },
   {
     "id": "wineries-vineyards",
@@ -154,6 +243,13 @@
     "description": "Taste exceptional Greek wines and visit vineyards",
     "icon": "🍷",
     "color": "from-purple-500 to-pink-600",
-    "keywords": ["wine", "vineyard", "tasting", "greek wine", "winery"]
+    "keywords": [
+      "wine",
+      "vineyard",
+      "tasting",
+      "greek wine",
+      "winery"
+    ],
+    "slug": "wineries-vineyards-9cfd"
   }
 ]

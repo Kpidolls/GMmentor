@@ -4,3058 +4,3932 @@
     "name": "Ο ΦΩΤΗΣ",
     "address": "17ης Νοεμβρίου 122, Χολαργός 155 62",
     "lat": "37.997971184116544",
-    "lng": "23.807075270455382"
+    "lng": "23.807075270455382",
+    "id": "cheapEatsRestaurants_4972a0c1f005",
+    "slug": "o-fotis-4972"
   },
   {
     "url": "https://maps.app.goo.gl/ixb3zjYZ1Wg65gYq8?g_st=ipc",
     "name": "Jackaroo",
     "address": "Ηρ. Πολυτεχνείου 8, Αγ. Παρασκευή 153 43",
     "lat": "38.012488048135104",
-    "lng": "23.81953806352836"
+    "lng": "23.81953806352836",
+    "id": "cheapEatsRestaurants_ba28713d01c5",
+    "slug": "jackaroo-ba28"
   },
   {
     "url": "https://maps.app.goo.gl/dizAr5MBZxwBUbmGA?g_st=ipc",
     "name": "Πίτα Παν",
     "address": "Ευεργέτου Γιαβάση 1, Αγ. Παρασκευή 153 42",
     "lat": "38.012724500083856",
-    "lng": "23.82116799472927"
+    "lng": "23.82116799472927",
+    "id": "cheapEatsRestaurants_2194bc1389f8",
+    "slug": "pita-pan-2194"
   },
   {
     "url": "https://maps.app.goo.gl/KtAC7AzUgjd3Jmuk8?g_st=ipc",
     "name": "Σπιτική Κουζίνα - Χολαργός",
     "address": "Λεωφ. Περικλέους 50, Χολαργός 155 61",
     "lat": "37.99895841021995",
-    "lng": "23.798536677313294"
+    "lng": "23.798536677313294",
+    "id": "cheapEatsRestaurants_9a8ccf003ba5",
+    "slug": "spitiki-koyzina-cholargos-9a8c"
   },
   {
     "url": "https://maps.app.goo.gl/uKWqbt6RdiChRPZi8?g_st=ipc",
     "name": "Cocofino Η Νέα Γεύση Στο Κοτόπουλο",
     "address": "Φανερωμένης 1α, Χολαργός 155 61",
     "lat": "38.005115910403084",
-    "lng": "23.79578002602544"
+    "lng": "23.79578002602544",
+    "id": "cheapEatsRestaurants_27cac1fed09e",
+    "slug": "cocofino-i-nea-geysi-sto-kotopoylo-27ca"
   },
   {
     "url": "https://maps.app.goo.gl/LQP8izqcwdktGcwX6?g_st=ipc",
     "name": "Dix Sept",
     "address": "25ης Μαρτίου 17, Χολαργός 155 61",
     "lat": "37.99369686292994",
-    "lng": "23.79952330912713"
+    "lng": "23.79952330912713",
+    "id": "cheapEatsRestaurants_33f4e7b2d02a",
+    "slug": "dix-sept-33f4"
   },
   {
     "url": "https://maps.app.goo.gl/NVZiDeS8yd6auwo78?g_st=ipc",
     "name": "Γευσηδρόμιο",
     "address": "Ασπασίας 63, Χολαργός 155 61",
     "lat": "38.00041852140095",
-    "lng": "23.792910266059533"
+    "lng": "23.792910266059533",
+    "id": "cheapEatsRestaurants_03694aa725a0",
+    "slug": "geysidromio-0369"
   },
   {
     "url": "https://maps.app.goo.gl/mqGbLZnM6T5sQ3YF9?g_st=ipc",
     "name": "Πλάτανος Κεμπάπ-Σουβλάκι",
     "address": "Βουτσινά 66, Χολαργός 155 61",
     "lat": "38.00070110906074",
-    "lng": "23.792623402226006"
+    "lng": "23.792623402226006",
+    "id": "cheapEatsRestaurants_4884ead367e7",
+    "slug": "platanos-kempap-soyvlaki-4884"
   },
   {
     "url": "https://maps.app.goo.gl/3g2yxFrBJ6V2KPZm7?g_st=ipc",
     "name": "Ο ΕΛΛΗΝΑΡΑΣ",
     "address": "Παλαιολόγου 63, Χαλάνδρι 152 32",
     "lat": "38.017568546798636",
-    "lng": "23.799181700850475"
+    "lng": "23.799181700850475",
+    "id": "cheapEatsRestaurants_ec9b2c37ec79",
+    "slug": "o-ellinaras-ec9b"
   },
   {
     "url": "https://maps.app.goo.gl/7eU14tbuLV6n9imX7?g_st=ipc",
     "name": "Πάπιγκο",
     "address": "25ης Μαρτίου 9, Χολαργός 155 61",
     "lat": "37.9930301423727",
-    "lng": "23.798961270934143"
+    "lng": "23.798961270934143",
+    "id": "cheapEatsRestaurants_69bbfb44507d",
+    "slug": "papigko-69bb"
   },
   {
     "url": "https://maps.app.goo.gl/njaacvURe6u87qaX6?g_st=ipc",
     "name": "Αβραάμ Χολαργός",
     "address": "Αναστάσεως 111, Χολαργός 155 61",
     "lat": "37.99365661341766",
-    "lng": "23.796975079778093"
+    "lng": "23.796975079778093",
+    "id": "cheapEatsRestaurants_b8837f726b0e",
+    "slug": "avraam-cholargos-b883"
   },
   {
     "url": "https://maps.app.goo.gl/Qngg6pY64nb2i3sX9?g_st=ipc",
     "name": "Σουβλακοχωριό",
     "address": "25ης Μαρτίου 33, Χαλάνδρι 152 32",
     "lat": "38.019021009797974",
-    "lng": "23.79620669265203"
+    "lng": "23.79620669265203",
+    "id": "cheapEatsRestaurants_19bf55f57647",
+    "slug": "soyvlakochorio-19bf"
   },
   {
     "url": "https://maps.app.goo.gl/dD7x8SrXxBd8mmDX7?g_st=ipc",
     "name": "Holy Pasta Chalandri",
     "address": "Ηρακλείου 3, Χαλάνδρι 152 32",
     "lat": "38.02090646389776",
-    "lng": "23.799055964157045"
+    "lng": "23.799055964157045",
+    "id": "cheapEatsRestaurants_70af29f6373f",
+    "slug": "holy-pasta-chalandri-70af"
   },
   {
     "url": "https://maps.app.goo.gl/jvDmvkwHFZFAd18e6?g_st=ipc",
     "name": "Το Σουβλάκι του Χαλανδρίου «Express»",
     "address": "Κολοκοτρώνη 26, Χαλάνδρι 152 33",
     "lat": "38.02210047029897",
-    "lng": "23.79733270387276"
+    "lng": "23.79733270387276",
+    "id": "cheapEatsRestaurants_4176abbd859b",
+    "slug": "to-soyvlaki-toy-chalandrioy-express-4176"
   },
   {
     "url": "https://maps.app.goo.gl/z58YmxhSwvtKJai57?g_st=ipc",
     "name": "Curry Express & Indian Chef",
     "address": "Γρ. Γυφτοπούλου 7, Χαλάνδρι 152 33",
     "lat": "38.02245552538877",
-    "lng": "23.798012966612305"
+    "lng": "23.798012966612305",
+    "id": "cheapEatsRestaurants_6071194d9f9f",
+    "slug": "curry-express-indian-chef-6071"
   },
   {
     "url": "https://maps.app.goo.gl/f47SevFfDgNbNtWk7?g_st=ipc",
     "name": "Taco Bell",
     "address": "Κολοκοτρώνη 13, Χαλάνδρι 152 33",
     "lat": "38.0228052820458",
-    "lng": "23.79853818143159"
+    "lng": "23.79853818143159",
+    "id": "cheapEatsRestaurants_8385a72feb82",
+    "slug": "taco-bell-8385"
   },
   {
     "url": "https://maps.app.goo.gl/47M2HP8TwbyX2Zp37?g_st=ipc",
     "name": "Τα Σουβλάκια της Λίλας",
     "address": "25ης Μαρτίου 41, Νέο Ψυχικό 154 51",
     "lat": "38.005272385766645",
-    "lng": "23.785280918308118"
+    "lng": "23.785280918308118",
+    "id": "cheapEatsRestaurants_6fffd649c703",
+    "slug": "ta-soyvlakia-tis-lilas-6fff"
   },
   {
     "url": "https://maps.app.goo.gl/LeEZCDs2GRC6YKuT7?g_st=ipc",
     "name": "Μπαρμπαλιάς",
     "address": "Λεωφ. Βασιλέως Γεωργίου B 6, Χαλάνδρι 152 33",
     "lat": "38.022224299572",
-    "lng": "23.79656538042495"
+    "lng": "23.79656538042495",
+    "id": "cheapEatsRestaurants_d9e484914294",
+    "slug": "mparmpalias-d9e4"
   },
   {
     "url": "https://maps.app.goo.gl/9r8QWiSRkMH7dPqZA?g_st=ipc",
     "name": "Καντίνα - Billy",
     "address": "Λεωφ. Πεντέλης 68, Χαλάνδρι 152 34",
     "lat": "38.02609394796825",
-    "lng": "23.81064307512727"
+    "lng": "23.81064307512727",
+    "id": "cheapEatsRestaurants_4ec639153a0b",
+    "slug": "kantina-billy-4ec6"
   },
   {
     "url": "https://maps.app.goo.gl/pxJjypQCU2pCdj2c9?g_st=ipc",
     "name": "Καυτερός",
     "address": "Αγρινίου 5, Χαλάνδρι 152 32",
     "lat": "38.01875295817606",
-    "lng": "23.790041802148505"
+    "lng": "23.790041802148505",
+    "id": "cheapEatsRestaurants_778124c76b47",
+    "slug": "kayteros-7781"
   },
   {
     "url": "https://maps.app.goo.gl/ZXh8jCZFq67QiKQq7?g_st=ipc",
     "name": "Πίτα Παν Ψυχικό",
     "address": "Αγγέλου Σικελιανού 28, Νέο Ψυχικό 154 51",
     "lat": "38.000864793942334",
-    "lng": "23.776520342405362"
+    "lng": "23.776520342405362",
+    "id": "cheapEatsRestaurants_1dedf7a650a7",
+    "slug": "pita-pan-psychiko-1ded"
   },
   {
     "url": "https://maps.app.goo.gl/f1Pk44iqYYgPwZeK9?g_st=ipc",
     "name": "umami",
     "address": "Λεωφ. Πεντέλης 7A, Βριλήσσια 152 35",
     "lat": "38.03544459297975",
-    "lng": "23.82429599041442"
+    "lng": "23.82429599041442",
+    "id": "cheapEatsRestaurants_8375fe8079e7",
+    "slug": "umami-8375"
   },
   {
     "url": "https://maps.app.goo.gl/CSqgCp2SZrPwcWdC6?g_st=ipc",
     "name": "ΚΡΕΠΗΛΑΤΕΙΟΝ",
     "address": "Λεωφ. Κηφισίας 59, Μαρούσι 151 25",
     "lat": "38.037837677741585",
-    "lng": "23.799467140725334"
+    "lng": "23.799467140725334",
+    "id": "cheapEatsRestaurants_28c94df5ce5f",
+    "slug": "krepilateion-28c9"
   },
   {
     "url": "https://maps.app.goo.gl/Krey285b8JEL9p1P8?g_st=ipc",
     "name": "Street Wok",
     "address": "Ampelokipi Menemeni, Πανόρμου 115Ζ, Αθήνα 115 24",
     "lat": "37.993336241687885",
-    "lng": "23.765654609990445"
+    "lng": "23.765654609990445",
+    "id": "cheapEatsRestaurants_3ae9e374071b",
+    "slug": "street-wok-3ae9"
   },
   {
     "url": "https://maps.app.goo.gl/K9azEutYtVeRFeTB9?g_st=ipc",
     "name": "Τα σουβλάκια της γιαγιάς",
     "address": "Κυπρίων Αγωνιστών 50, Μαρούσι 151 26",
     "lat": "38.04199101993577",
-    "lng": "23.824597588199378"
+    "lng": "23.824597588199378",
+    "id": "cheapEatsRestaurants_5a1b3de4b0cd",
+    "slug": "ta-soyvlakia-tis-giagias-5a1b"
   },
   {
     "url": "https://maps.app.goo.gl/VnT5HzaYL2NjnGd27?g_st=ipc",
     "name": "Jackaroo",
     "address": "Πανόρμου 109, Αθήνα 115 24",
     "lat": "37.99342271258061",
-    "lng": "23.764131211857187"
+    "lng": "23.764131211857187",
+    "id": "cheapEatsRestaurants_0e996f9a4065",
+    "slug": "jackaroo-0e99"
   },
   {
     "url": "https://maps.app.goo.gl/xGhyT1vrgFSKodic9?g_st=ipc",
     "name": "ΚΟΥΤΡΟΥΛΗΣ",
     "address": "Βαρνακιώτη 4, Αθήνα 115 24",
     "lat": "37.99585400563359",
-    "lng": "23.762177083127305"
+    "lng": "23.762177083127305",
+    "id": "cheapEatsRestaurants_0022a0eff11e",
+    "slug": "koytroylis-0022"
   },
   {
     "url": "https://maps.app.goo.gl/99Gr2Rnp3uGrkmWWA?g_st=ipc",
     "name": "Πιάτσα Τυλιχτό",
     "address": "Λαρίσης 33, Αθήνα 115 23",
     "lat": "37.992812158549924",
-    "lng": "23.762955305614238"
+    "lng": "23.762955305614238",
+    "id": "cheapEatsRestaurants_000769981d10",
+    "slug": "piatsa-tylichto-0007"
   },
   {
     "url": "https://maps.app.goo.gl/TvHy3uq6zYjv7y1f9?g_st=ipc",
     "name": "Prunas",
     "address": "Δημ. Γουλιάμου 58, Αθήνα 115 27",
     "lat": "37.98295319401702",
-    "lng": "23.765808326891843"
+    "lng": "23.765808326891843",
+    "id": "cheapEatsRestaurants_d31bf93dd3fb",
+    "slug": "prunas-d31b"
   },
   {
     "url": "https://maps.app.goo.gl/cG4RSw44nHayWytd9?g_st=ipc",
     "name": "Χρύσανθος",
     "address": "Γεωρ. Παπανδρέου 50, Ζωγράφου 157 73",
     "lat": "37.980767151919686",
-    "lng": "23.76756797039495"
+    "lng": "23.76756797039495",
+    "id": "cheapEatsRestaurants_51e57b41d79c",
+    "slug": "chrysanthos-51e5"
   },
   {
     "url": "https://maps.app.goo.gl/RXpLLpBphHc6FhZD9?g_st=ipc",
     "name": "Κλασσικόν",
     "address": "Μητροπέτροβα 32, Αθήνα 114 76",
     "lat": "37.99808496466343",
-    "lng": "23.757900577588526"
+    "lng": "23.757900577588526",
+    "id": "cheapEatsRestaurants_6a4147d64308",
+    "slug": "klassikon-6a41"
   },
   {
     "url": "https://maps.app.goo.gl/1JBJ1wwqkW21Ww447?g_st=ipc",
     "name": "Delicious Pitta Queen",
     "address": "Πανόρμου 36, Αθήνα 115 23",
     "lat": "37.99092416121966",
-    "lng": "23.759496408597567"
+    "lng": "23.759496408597567",
+    "id": "cheapEatsRestaurants_4873355e0fc6",
+    "slug": "delicious-pitta-queen-4873"
   },
   {
     "url": "https://maps.app.goo.gl/SXittnYdkLPeQRb17?g_st=ipc",
     "name": "Πεϊνιρλί Ιωνίας",
     "address": "Πανόρμου 3, Αθήνα 115 22",
     "lat": "37.98758471065417",
-    "lng": "23.75770179070527"
+    "lng": "23.75770179070527",
+    "id": "cheapEatsRestaurants_f3cf5026ad57",
+    "slug": "peinirli-ionias-f3cf"
   },
   {
     "url": "https://maps.app.goo.gl/PPUd3JeoTmqcayFz5?g_st=ipc",
     "name": "Κεμπάπ Παραδοσιακό",
     "address": "Αμμοχώστου 4, Ζωγράφου 157 71",
     "lat": "37.97476714198204",
-    "lng": "23.766791010773026"
+    "lng": "23.766791010773026",
+    "id": "cheapEatsRestaurants_d88ce6fa51b6",
+    "slug": "kempap-paradosiako-d88c"
   },
   {
     "url": "https://maps.app.goo.gl/4oCtgVQEesHACQsu8?g_st=ipc",
     "name": "Καντίνα \"ο Αλεκος\"",
     "address": "Μαρίνου Αντύπα 47, Ηράκλειο 141 21",
     "lat": "38.04208740467577",
-    "lng": "23.77486464859004"
+    "lng": "23.77486464859004",
+    "id": "cheapEatsRestaurants_f3077615404b",
+    "slug": "kantina-o-alekos-f307"
   },
   {
     "url": "https://maps.app.goo.gl/CVaNeQjy77ZiLrEv9?g_st=ipc",
     "name": "Ήπειρος",
     "address": "Μπαταριά 23, Αθήνα 114 76",
     "lat": "37.99468309231883",
-    "lng": "23.753514780729763"
+    "lng": "23.753514780729763",
+    "id": "cheapEatsRestaurants_1230f3d55b53",
+    "slug": "ipeiros-1230"
   },
   {
     "url": "https://maps.app.goo.gl/Kxmp13A9x2etHv317?g_st=ipc",
     "name": "Τα ψητά της παρέας",
     "address": "Ούλωφ Πάλμε 25, Ζωγράφου 157 71",
     "lat": "37.97804935076976",
-    "lng": "23.76224805570561"
+    "lng": "23.76224805570561",
+    "id": "cheapEatsRestaurants_acd6f4163dcb",
+    "slug": "ta-psita-tis-pareas-acd6"
   },
   {
     "url": "https://maps.app.goo.gl/LCrvDRPpRco2nVuF9?g_st=ipc",
     "name": "ΥΠΟΥΡΓΕΙΟ ΓΕΥΣΕΩΝ-Σουβλάκι,Ψητά",
     "address": "Φιλοθέης 67, Ηράκλειο 141 21",
     "lat": "38.04303394507047",
-    "lng": "23.771779772357615"
+    "lng": "23.771779772357615",
+    "id": "cheapEatsRestaurants_5f9d5dd343a6",
+    "slug": "ypoyrgeio-geyseon-soyvlaki-psita-5f9d"
   },
   {
     "url": "https://maps.app.goo.gl/tXjW7wXH83v15nHX8?g_st=ipc",
     "name": "Καντίνα Μαβίλη",
     "address": "Δημ. Σούτσου 3, Αθήνα 115 21",
     "lat": "37.98253879036559",
-    "lng": "23.7560791108495"
+    "lng": "23.7560791108495",
+    "id": "cheapEatsRestaurants_2d35d62e4881",
+    "slug": "kantina-mavili-2d35"
   },
   {
     "url": "https://maps.app.goo.gl/cmE54PPQGsdzvzgz5?g_st=ipc",
     "name": "Νίκος ο Καλαβρυτινός",
     "address": "Εκάβης 63, Γαλάτσι 111 46",
     "lat": "38.024001161887576",
-    "lng": "23.75301292455858"
+    "lng": "23.75301292455858",
+    "id": "cheapEatsRestaurants_7b6d49968714",
+    "slug": "nikos-o-kalavrytinos-7b6d"
   },
   {
     "url": "https://maps.app.goo.gl/Q2YtxKh8LosNGyHJ6?g_st=ipc",
     "name": "SOUZI TROS street food",
     "address": "Σπύρου Λέκκα 9, Μαρούσι 151 24",
     "lat": "38.0550996125921",
-    "lng": "23.804743752516742"
+    "lng": "23.804743752516742",
+    "id": "cheapEatsRestaurants_484ec346fe11",
+    "slug": "souzi-tros-street-food-484e"
   },
   {
     "url": "https://maps.app.goo.gl/uXenfuTid9hYf6He9?g_st=ipc",
     "name": "Πλάτανος Κεμπάπ-Σουβλάκι",
     "address": "Leof. Dimokratias 69, Melissia 151 27",
     "lat": "38.05130210276415",
-    "lng": "23.835854870928635"
+    "lng": "23.835854870928635",
+    "id": "cheapEatsRestaurants_666f9d7675e5",
+    "slug": "platanos-kempap-soyvlaki-666f"
   },
   {
     "url": "https://maps.app.goo.gl/GjgUbFCMPcughxPW6?g_st=ipc",
     "name": "Το Ελληνικό Σουβλάκι",
     "address": "Διονύσου 19, Μαρούσι 151 24",
     "lat": "38.055611201936195",
-    "lng": "23.805858315965597"
+    "lng": "23.805858315965597",
+    "id": "cheapEatsRestaurants_8e2845b1b79c",
+    "slug": "to-elliniko-soyvlaki-8e28"
   },
   {
     "url": "https://maps.app.goo.gl/DZ65AFNyxzrNRbqm9?g_st=ipc",
     "name": "Godgilla umami street food",
     "address": "Γεωρ. Κοτζιά 2, Μαρούσι 151 26",
     "lat": "38.05657303145754",
-    "lng": "23.81400951461543"
+    "lng": "23.81400951461543",
+    "id": "cheapEatsRestaurants_784daab038a5",
+    "slug": "godgilla-umami-street-food-784d"
   },
   {
     "url": "https://maps.app.goo.gl/wXj4gGBY4uF6K2yW8?g_st=ipc",
     "name": "ΠΕΙΡΑΣΜΟΣ",
     "address": "Βελβενδού 20, Αθήνα 113 63",
     "lat": "38.00274661999109",
-    "lng": "23.744683791776005"
+    "lng": "23.744683791776005",
+    "id": "cheapEatsRestaurants_4b2392e8f1da",
+    "slug": "peirasmos-4b23"
   },
   {
     "url": "https://maps.app.goo.gl/M5T9Z6KajRqpaNBA7?g_st=ipc",
     "name": "Λαμπρινάκι",
     "address": "Τράλλεων 67, Αθήνα 111 42",
     "lat": "38.0224148920344",
-    "lng": "23.747555518536878"
+    "lng": "23.747555518536878",
+    "id": "cheapEatsRestaurants_cbf0a0d9c1b3",
+    "slug": "lamprinaki-cbf0"
   },
   {
     "url": "https://maps.app.goo.gl/uhi56PKbCSVGMvqf8?g_st=ipc",
     "name": "Δραμινός",
     "address": "Σινώπης 62, Νέα Ιωνία 142 33",
     "lat": "38.03491475648599",
-    "lng": "23.754928540856955"
+    "lng": "23.754928540856955",
+    "id": "cheapEatsRestaurants_58791178b56b",
+    "slug": "draminos-5879"
   },
   {
     "url": "https://maps.app.goo.gl/FjiCt1o7yoa331UN8?g_st=ipc",
     "name": "ΤΡΙΓΩΝΟ ΜΕΛΙΣΣΙΩΝ",
     "address": "Π. Τσαλδάρη 21, Μελίσσια 151 27",
     "lat": "38.05317998498453",
-    "lng": "23.84087862675326"
+    "lng": "23.84087862675326",
+    "id": "cheapEatsRestaurants_b596150cf3db",
+    "slug": "trigono-melission-b596"
   },
   {
     "url": "https://maps.app.goo.gl/TceiwQJnedx4muqW7?g_st=ipc",
     "name": "I Love Souvlaki",
     "address": "Λεωφ. Μαραθώνος 72, Παλλήνη 153 51",
     "lat": "38.00365767820438",
-    "lng": "23.880036032400344"
+    "lng": "23.880036032400344",
+    "id": "cheapEatsRestaurants_e8be7933bd6e",
+    "slug": "i-love-souvlaki-e8be"
   },
   {
     "url": "https://maps.app.goo.gl/KtBirzLenbmGoPCW9?g_st=ipc",
     "name": "Cook And Grill Παλλήνης",
     "address": "Λεωφ. Μαραθώνος 76, Παλλήνη 153 51",
     "lat": "38.00364715720239",
-    "lng": "23.880433616458955"
+    "lng": "23.880433616458955",
+    "id": "cheapEatsRestaurants_6aba6b4d71c3",
+    "slug": "cook-and-grill-pallinis-6aba"
   },
   {
     "url": "https://maps.app.goo.gl/Jtpipww8tzt83Z1fA?g_st=ipc",
     "name": "5Φ",
     "address": "Diocharous 31 &, Κλεισούρας, Αθήνα 161 21",
     "lat": "37.97277642269308",
-    "lng": "23.753966804299914"
+    "lng": "23.753966804299914",
+    "id": "cheapEatsRestaurants_c3e978d4eac2",
+    "slug": "5f-c3e9"
   },
   {
     "url": "https://maps.app.goo.gl/5zkEPJhoVXLaVYeF7?g_st=ipc",
     "name": "Η Βασιλική - Ψητοπωλείο Σουβλακοπωλείο",
     "address": "Μαρκορά 25, Αθήνα 111 41",
     "lat": "38.01712717421362",
-    "lng": "23.740908436131292"
+    "lng": "23.740908436131292",
+    "id": "cheapEatsRestaurants_a39f2b17c80c",
+    "slug": "i-vasiliki-psitopoleio-soyvlakopoleio-a39f"
   },
   {
     "url": "https://maps.app.goo.gl/WYXA6LyZWmcPcu219?g_st=ipc",
     "name": "Πίτα Παν",
     "address": "Ιοφώντος 33, Αθήνα 116 34",
     "lat": "37.973982654052946",
-    "lng": "23.750253307976614"
+    "lng": "23.750253307976614",
+    "id": "cheapEatsRestaurants_ba468327c890",
+    "slug": "pita-pan-ba46"
   },
   {
     "url": "https://maps.app.goo.gl/oqmBo1caT2qX5wtB9?g_st=ipc",
     "name": "Ταβέρνα - Ψησταριά Μανδράκης",
     "address": "Λεωφ. Εθ. Αντιστάσεως 11, Καισαριανή 161 21",
     "lat": "37.96926409248282",
-    "lng": "23.754508850206804"
+    "lng": "23.754508850206804",
+    "id": "cheapEatsRestaurants_bf6249591df7",
+    "slug": "taverna-psistaria-mandrakis-bf62"
   },
   {
     "url": "https://maps.app.goo.gl/zmZ9p1KuXBfmeQTP9?g_st=ipc",
     "name": "Κάπρους",
     "address": "Σπετσών 49, Αθήνα 113 62",
     "lat": "37.997892215729216",
-    "lng": "23.738708713405035"
+    "lng": "23.738708713405035",
+    "id": "cheapEatsRestaurants_b098fa4e8c79",
+    "slug": "kaproys-b098"
   },
   {
     "url": "https://maps.app.goo.gl/cQBiuhmvhu6SiSrp9?g_st=ipc",
     "name": "Οι Μερακλήδες",
     "address": "Αγίας Ζώνης 60, Αθήνα 112 56",
     "lat": "38.005421507151304",
-    "lng": "23.738069532004765"
+    "lng": "23.738069532004765",
+    "id": "cheapEatsRestaurants_3855239555fb",
+    "slug": "oi-meraklides-3855"
   },
   {
     "url": "https://maps.app.goo.gl/sC6f9QqoMvhYZn9L6?g_st=ipc",
     "name": "Cantina Alexandras",
     "address": "Λεωφ. Αλεξάνδρας 31, Αθήνα 114 73",
     "lat": "37.990601219280784",
-    "lng": "23.740100216268857"
+    "lng": "23.740100216268857",
+    "id": "cheapEatsRestaurants_9b9687edb09a",
+    "slug": "cantina-alexandras-9b96"
   },
   {
     "url": "https://maps.app.goo.gl/YHJtEHPvQRVXwD3F7?g_st=ipc",
     "name": "Hobos Street Grill",
     "address": "Λεωφ. Ηρακλείου 254, Νέα Ιωνία 142 31",
     "lat": "38.04249747641086",
-    "lng": "23.753515339761147"
+    "lng": "23.753515339761147",
+    "id": "cheapEatsRestaurants_59fb21ba5f98",
+    "slug": "hobos-street-grill-59fb"
   },
   {
     "url": "https://maps.app.goo.gl/P6rYV5DBevfNLik18?g_st=ipc",
     "name": "Η Θράκα",
     "address": "Υμηττού 58, Αθήνα 116 34",
     "lat": "37.96908730439045",
-    "lng": "23.752466160817594"
+    "lng": "23.752466160817594",
+    "id": "cheapEatsRestaurants_f4243fccdc09",
+    "slug": "i-thraka-f424"
   },
   {
     "url": "https://maps.app.goo.gl/bKD82egRLvDN81sG9?g_st=ipc",
     "name": "Jackaroo",
     "address": "Φωκίωνος Νέγρη 18, Αθήνα 112 57",
     "lat": "38.00066185886443",
-    "lng": "23.735523749834027"
+    "lng": "23.735523749834027",
+    "id": "cheapEatsRestaurants_fcf206bb8bf8",
+    "slug": "jackaroo-fcf2"
   },
   {
     "url": "https://maps.app.goo.gl/fCW1TYPSHgUdCft78?g_st=ipc",
     "name": "Σουβλακοπωλείον Ρίγανη",
     "address": "Φωκίωνος Νέγρη 15, Αθήνα 112 57",
     "lat": "38.00099448703569",
-    "lng": "23.73511231778499"
+    "lng": "23.73511231778499",
+    "id": "cheapEatsRestaurants_51111124208f",
+    "slug": "soyvlakopoleion-rigani-5111"
   },
   {
     "url": "https://maps.app.goo.gl/Q3YXwLTyLfeVdVYX6?g_st=ipc",
     "name": "Το Τέλειον",
     "address": "Λεωφ. Πλαπούτα 20, Ηράκλειο 141 22",
     "lat": "38.05891347949006",
-    "lng": "23.77665689156842"
+    "lng": "23.77665689156842",
+    "id": "cheapEatsRestaurants_a0695ebe74bb",
+    "slug": "to-teleion-a069"
   },
   {
     "url": "https://maps.app.goo.gl/mqY78SsShBqeen4Q9?g_st=ipc",
     "name": "Hayat",
     "address": "Ιπποκράτους 78, Αθήνα 106 80",
     "lat": "37.98451943968109",
-    "lng": "23.73920441819002"
+    "lng": "23.73920441819002",
+    "id": "cheapEatsRestaurants_c56025371d6e",
+    "slug": "hayat-c560"
   },
   {
     "url": "https://maps.app.goo.gl/f7GyH9GtFQKGQmmS9?g_st=ipc",
     "name": "Διόνυσος",
     "address": "Ιθάκης 12 12, Αθήνα 112 57",
     "lat": "37.99776607364749",
-    "lng": "23.735031186199688"
+    "lng": "23.735031186199688",
+    "id": "cheapEatsRestaurants_ec6036039639",
+    "slug": "dionysos-ec60"
   },
   {
     "url": "https://maps.app.goo.gl/4yeaKT2EdHHJPxdj7?g_st=ipc",
     "name": "Taliban Street Food",
     "address": "Λεωφ. Αμαρουσίου 29, Λυκόβρυση 141 23",
     "lat": "38.06195061055415",
-    "lng": "23.783033784917546"
+    "lng": "23.783033784917546",
+    "id": "cheapEatsRestaurants_dac5582833c7",
+    "slug": "taliban-street-food-dac5"
   },
   {
     "url": "https://maps.app.goo.gl/kBQE51oPhVR5sCDu5?g_st=ipc",
     "name": "Αλεξανδρινό Κεμπάπ - Παγκράτι",
     "address": "Υμηττού 90 &, Ιφικράτους, Αθήνα 116 34",
     "lat": "37.9678577883098",
-    "lng": "23.74996983153058"
+    "lng": "23.74996983153058",
+    "id": "cheapEatsRestaurants_72bd27acb0a5",
+    "slug": "alexandrino-kempap-pagkrati-72bd"
   },
   {
     "url": "https://maps.app.goo.gl/GvWt9fy2W45TxTRs8?g_st=ipc",
     "name": "Ψητοπωλείο ο Θανάσης",
     "address": "Αγ. Τριάδος 42, Παιανία 190 02",
     "lat": "37.95535052108935",
-    "lng": "23.854531337453796"
+    "lng": "23.854531337453796",
+    "id": "cheapEatsRestaurants_f656711be260",
+    "slug": "psitopoleio-o-thanasis-f656"
   },
   {
     "url": "https://maps.app.goo.gl/cPZpCzgEKX45Ej6G8?g_st=ipc",
     "name": "Piggy - Πόπουλο",
     "address": "Αρχελάου 16, Αθήνα 116 35",
     "lat": "37.97132961125026",
-    "lng": "23.74642727932896"
+    "lng": "23.74642727932896",
+    "id": "cheapEatsRestaurants_78307b191873",
+    "slug": "piggy-popoylo-7830"
   },
   {
     "url": "https://maps.app.goo.gl/4TKpFuTdcwscVBCg8?g_st=ipc",
     "name": "Mikra Asia kebap Pagrati",
     "address": "Πλ. Μεσολογγίου 2-4, Αθήνα 116 34",
     "lat": "37.96824148094212",
-    "lng": "23.7487971975962"
+    "lng": "23.7487971975962",
+    "id": "cheapEatsRestaurants_f61ee90e96c0",
+    "slug": "mikra-asia-kebap-pagrati-f61e"
   },
   {
     "url": "https://maps.app.goo.gl/Nd77xxazm6AtfQmU8?g_st=ipc",
     "name": "Chicken Queen",
     "address": "Ευτυχίδου 47, Αθήνα 116 34",
     "lat": "37.967645038147204",
-    "lng": "23.749273032780096"
+    "lng": "23.749273032780096",
+    "id": "cheapEatsRestaurants_b3b7afefba63",
+    "slug": "chicken-queen-b3b7"
   },
   {
     "url": "https://maps.app.goo.gl/TRT4ewxJ6pQL8ffBA?g_st=ipc",
     "name": "ΤΟ ΑΡΙΣΤΟΝ",
     "address": "Πατησίων 349, Αθήνα 111 44",
     "lat": "38.022955608499146",
-    "lng": "23.735820169983455"
+    "lng": "23.735820169983455",
+    "id": "cheapEatsRestaurants_204d68c7c535",
+    "slug": "to-ariston-204d"
   },
   {
     "url": "https://maps.app.goo.gl/s2djMEVxUXSybams9?g_st=ipc",
     "name": "Το Πικάντικο",
     "address": "Ευτυχίδου 23, Αθήνα 116 34",
     "lat": "37.967862602711925",
-    "lng": "23.74738582728181"
+    "lng": "23.74738582728181",
+    "id": "cheapEatsRestaurants_eaa51e908f69",
+    "slug": "to-pikantiko-eaa5"
   },
   {
     "url": "https://maps.app.goo.gl/nBaQ33jw6JEZQp7X9?g_st=ipc",
     "name": "Λόρδα",
     "address": "Σπύρου Τρικούπη 3, Αθήνα 106 83",
     "lat": "37.986574816164286",
-    "lng": "23.734456878858524"
+    "lng": "23.734456878858524",
+    "id": "cheapEatsRestaurants_cda079c65f38",
+    "slug": "lorda-cda0"
   },
   {
     "url": "https://maps.app.goo.gl/TiMP26dpbHXJx6pS9?g_st=ipc",
     "name": "Καλοψημένο",
     "address": "Ιπποκράτους 37, Αθήνα 106 80",
     "lat": "37.98304777386895",
-    "lng": "23.735997970914198"
+    "lng": "23.735997970914198",
+    "id": "cheapEatsRestaurants_318abcd239ee",
+    "slug": "kalopsimeno-318a"
   },
   {
     "url": "https://maps.app.goo.gl/fZ3o2N67Ya2WA1aQA?g_st=ipc",
     "name": "Mangal",
     "address": "Σολωμού 12, Αθήνα 106 83",
     "lat": "37.98648075392058",
-    "lng": "23.733903117356245"
+    "lng": "23.733903117356245",
+    "id": "cheapEatsRestaurants_724c8ca91031",
+    "slug": "mangal-724c"
   },
   {
     "url": "https://maps.app.goo.gl/in5jozRVDDW97jJc8?g_st=ipc",
     "name": "Lacantina streetfood",
     "address": "Ζωοδόχου Πηγής 24, Αθήνα 106 81",
     "lat": "37.98418112510836",
-    "lng": "23.734735469259256"
+    "lng": "23.734735469259256",
+    "id": "cheapEatsRestaurants_6b9bfc66a8e4",
+    "slug": "lacantina-streetfood-6b9b"
   },
   {
     "url": "https://maps.app.goo.gl/v9CtcwcCChGuLbxQ7?g_st=ipc",
     "name": "Πρiγκιπας",
     "address": "Χαρ. Τρικούπη 23, Αθήνα 106 81",
     "lat": "37.98367685276512",
-    "lng": "23.73451397788728"
+    "lng": "23.73451397788728",
+    "id": "cheapEatsRestaurants_f678b7a854d0",
+    "slug": "prigkipas-f678"
   },
   {
     "url": "https://maps.app.goo.gl/oALQiKiSKqqQt7VE8?g_st=ipc",
     "name": "Ευριπίδης 1955",
     "address": "Λεωφ. Δεκελείας 83, Νέα Φιλαδέλφεια Αττικής 143 41",
     "lat": "38.03354736852586",
-    "lng": "23.737489018536408"
+    "lng": "23.737489018536408",
+    "id": "cheapEatsRestaurants_708ba2b3a806",
+    "slug": "eyripidis-1955-708b"
   },
   {
     "url": "https://maps.app.goo.gl/jYKrRJuSFDD632N47?g_st=ipc",
     "name": "Ψητοπωλείον Γιώργος - Μάνος",
     "address": "Θεμιστοκλέους 39, Αθήνα 106 77",
     "lat": "37.9855993281782",
-    "lng": "23.733208439532696"
+    "lng": "23.733208439532696",
+    "id": "cheapEatsRestaurants_cab7e72e3b11",
+    "slug": "psitopoleion-giorgos-manos-cab7"
   },
   {
     "url": "https://maps.app.goo.gl/AdKg349ahnUtzxXt9?g_st=ipc",
     "name": "Το Πέτρινο Του Σταμάτη (Καπράλος Σταμάτιος Θ.)",
     "address": "Βασ. Γεωργίου Β 10, Πεντέλη 152 36",
     "lat": "38.049806163763144",
-    "lng": "23.869838485555228"
+    "lng": "23.869838485555228",
+    "id": "cheapEatsRestaurants_b230f7d2edc5",
+    "slug": "to-petrino-toy-stamati-kapralos-stamatios-th-b230"
   },
   {
     "url": "https://maps.app.goo.gl/2Mpgb24E2Bp7GYMDA?g_st=ipc",
     "name": "Street wok",
     "address": "Βρυούλων 4, Νέα Φιλαδέλφεια Αττικής 143 41",
     "lat": "38.03415581458627",
-    "lng": "23.737421868861436"
+    "lng": "23.737421868861436",
+    "id": "cheapEatsRestaurants_ae066a0c8be0",
+    "slug": "street-wok-ae06"
   },
   {
     "url": "https://maps.app.goo.gl/SfprcJNzr7drSK6A6?g_st=ipc",
     "name": "Koutsi Katsika Street Food Νέα Φιλαδέλφεια",
     "address": "Λεωφ. Δεκελείας 109, Νέα Φιλαδέλφεια Αττικής 143 41",
     "lat": "38.036295969328165",
-    "lng": "23.73867352816236"
+    "lng": "23.73867352816236",
+    "id": "cheapEatsRestaurants_25538f73c661",
+    "slug": "koutsi-katsika-street-food-nea-filadelfeia-2553"
   },
   {
     "url": "https://maps.app.goo.gl/eKw6YctPXBvBSifU7?g_st=ipc",
     "name": "Γύρος σουβλάκι Βικτώρια ΤΥΛΙΞΕ ΤΟ",
     "address": "Πλ. Βικτώριας 6, Αθήνα 104 34",
     "lat": "37.99350120718295",
-    "lng": "23.729835255916253"
+    "lng": "23.729835255916253",
+    "id": "cheapEatsRestaurants_b1a42490e7cb",
+    "slug": "gyros-soyvlaki-viktoria-tylixe-to-b1a4"
   },
   {
     "url": "https://maps.app.goo.gl/umPfqHULRVG9njbt5?g_st=ipc",
     "name": "Ελβις Σουβλακια",
     "address": "Αρχιμήδους 1-5, Αθήνα 116 35",
     "lat": "37.96785045064934",
-    "lng": "23.7436306831368"
+    "lng": "23.7436306831368",
+    "id": "cheapEatsRestaurants_56207a3913eb",
+    "slug": "elvis-soyvlakia-5620"
   },
   {
     "url": "https://maps.app.goo.gl/K2QVLnm9vHS1E3cF9?g_st=ipc",
     "name": "Guerilla Chef Burgers",
     "address": "37.98671993993366, 23.731787435580728",
     "lat": "37.98671993993366",
-    "lng": "23.731787435580728"
+    "lng": "23.731787435580728",
+    "id": "cheapEatsRestaurants_0f0ae09c0d4e",
+    "slug": "guerilla-chef-burgers-0f0a"
   },
   {
     "url": "https://maps.app.goo.gl/Q23dgN65gryr9fpi7?g_st=ipc",
     "name": "Η Βρωμιάρα - The Gourmet Street Food - Νεα Φιλαδέλφεια",
     "address": "Βρυούλων 5, Νέα Φιλαδέλφεια Αττικής 143 41",
     "lat": "38.03438911435279",
-    "lng": "23.73692338806855"
+    "lng": "23.73692338806855",
+    "id": "cheapEatsRestaurants_93852e0ca98a",
+    "slug": "i-vromiara-the-gourmet-street-food-nea-filadelfeia-9385"
   },
   {
     "url": "https://maps.app.goo.gl/1eSEWa3g6EhnDAvb6?g_st=ipc",
     "name": "Μπάρμπα Μήτσος Βύρωνας",
     "address": "Επταλόφου 88, Βύρωνας 162 33",
     "lat": "37.95390974598432",
-    "lng": "23.759679171308928"
+    "lng": "23.759679171308928",
+    "id": "cheapEatsRestaurants_08d52517e6fc",
+    "slug": "mparmpa-mitsos-vyronas-08d5"
   },
   {
     "url": "https://maps.app.goo.gl/GBuJz25j2wAhPUrr6?g_st=ipc",
     "name": "Meat n Roses Kolonaki",
     "address": "Αμερικής 7, Αθήνα 106 72",
     "lat": "37.978279031472866",
-    "lng": "23.735087026551565"
+    "lng": "23.735087026551565",
+    "id": "cheapEatsRestaurants_9219e90cddb7",
+    "slug": "meat-n-roses-kolonaki-9219"
   },
   {
     "url": "https://maps.app.goo.gl/m2fyvmtGXXiGevuC6?g_st=ipc",
     "name": "Slum it",
     "address": "Βρυούλων 15, Νέα Φιλαδέλφεια Αττικής 143 41",
     "lat": "38.034971479219536",
-    "lng": "23.73628101866516"
+    "lng": "23.73628101866516",
+    "id": "cheapEatsRestaurants_8e920e95e567",
+    "slug": "slum-it-8e92"
   },
   {
     "url": "https://maps.app.goo.gl/sz7bawT1imNu9L696?g_st=ipc",
     "name": "Cocoretsi",
     "address": "Ακαδημίας 95, Αθήνα 106 77",
     "lat": "37.984933091622935",
-    "lng": "23.73142125517845"
+    "lng": "23.73142125517845",
+    "id": "cheapEatsRestaurants_5338053c1323",
+    "slug": "cocoretsi-5338"
   },
   {
     "url": "https://maps.app.goo.gl/DMoZEUMYCkZLa2k59?g_st=ipc",
     "name": "Σουβλάκι Η Λειβαδιά",
     "address": "Κάνιγγος 2-4, Αθήνα 106 77",
     "lat": "37.984552486382015",
-    "lng": "23.7305119942548"
+    "lng": "23.7305119942548",
+    "id": "cheapEatsRestaurants_7a147c673f5b",
+    "slug": "soyvlaki-i-leivadia-7a14"
   },
   {
     "url": "https://maps.app.goo.gl/EeFjaZknqeTjfN8V6?g_st=ipc",
     "name": "Η καντίνα της Καραγιώργη Σερβίας (Ο Κρητικός)",
     "address": "Καραγιώργη Σερβίας 2, Αθήνα 105 62",
     "lat": "37.97642356412653",
-    "lng": "23.734100321342698"
+    "lng": "23.734100321342698",
+    "id": "cheapEatsRestaurants_fa954f16db19",
+    "slug": "i-kantina-tis-karagiorgi-servias-o-kritikos-fa95"
   },
   {
     "url": "https://maps.app.goo.gl/sAGKAGj6UyDLWwiq7?g_st=ipc",
     "name": "Η ΠΙΤΑ ΤΟΥ ΚΑΡΑΦΛΑ",
     "address": "Φιλολάου 142, Αθήνα 116 32",
     "lat": "37.96232693388551",
-    "lng": "23.744677303486494"
+    "lng": "23.744677303486494",
+    "id": "cheapEatsRestaurants_a825d27fc97c",
+    "slug": "i-pita-toy-karafla-a825"
   },
   {
     "url": "https://maps.app.goo.gl/73hetj8YZUmHBV4M7?g_st=ipc",
     "name": "Ο Χρηστάρας",
     "address": "κ, Δεξαμενής, Θεοτοκοπούλου και, Μεταμόρφωση 144 52",
     "lat": "38.06513658858884",
-    "lng": "23.770452923606605"
+    "lng": "23.770452923606605",
+    "id": "cheapEatsRestaurants_f41f24c34bd1",
+    "slug": "o-christaras-f41f"
   },
   {
     "url": "https://maps.app.goo.gl/sNkqRi8WyMgYec9D6?g_st=ipc",
     "name": "\"Ο Θωμάς\"",
     "address": "Αχαρνών 33, Αθήνα 104 39",
     "lat": "37.990509282943826",
-    "lng": "23.72671200338313"
+    "lng": "23.72671200338313",
+    "id": "cheapEatsRestaurants_d1e6c2dac993",
+    "slug": "o-thomas-d1e6"
   },
   {
     "url": "https://maps.app.goo.gl/FGrKA3NWxxuCNCKSA?g_st=ipc",
     "name": "Σουβλάκι Ο Κώστας 1950 συνταγμα",
     "address": "Φιλελλήνων 7, Αθήνα 105 57",
     "lat": "37.97431166724141",
-    "lng": "23.734074792444165"
+    "lng": "23.734074792444165",
+    "id": "cheapEatsRestaurants_a8812958586b",
+    "slug": "soyvlaki-o-kostas-1950-syntagma-a881"
   },
   {
     "url": "https://maps.app.goo.gl/jiHHELBpUtGUfeV87?g_st=ipc",
     "name": "Ψητοπωλείο ο Σπύρος Σουβλάκια",
     "address": "Βικέλα 33, Αθήνα 111 45",
     "lat": "38.01699116177091",
-    "lng": "23.725453216560837"
+    "lng": "23.725453216560837",
+    "id": "cheapEatsRestaurants_d184e5cf8bc9",
+    "slug": "psitopoleio-o-spyros-soyvlakia-d184"
   },
   {
     "url": "https://maps.app.goo.gl/4ThbHca8EWSeyv4f9?g_st=ipc",
     "name": "Harry's Kitchen",
     "address": "Αθανασίου Αξαρλιάν 2, Αθήνα 105 63",
     "lat": "37.97623023407263",
-    "lng": "23.732424722550896"
+    "lng": "23.732424722550896",
+    "id": "cheapEatsRestaurants_1bc4d9fd56dd",
+    "slug": "harry-s-kitchen-1bc4"
   },
   {
     "url": "https://maps.app.goo.gl/vVmR4bTFHYKewmjK9?g_st=ipc",
     "name": "FUDDY DUDDY",
     "address": "Λέκκα 32, Αθήνα 105 62",
     "lat": "37.97744212384706",
-    "lng": "23.73144118284602"
+    "lng": "23.73144118284602",
+    "id": "cheapEatsRestaurants_7f568e47c0a8",
+    "slug": "fuddy-duddy-7f56"
   },
   {
     "url": "https://maps.app.goo.gl/ChqL23bz9HeKVK9L8?g_st=ipc",
     "name": "Λευτέρης ο Πολίτης (Απ'το 1951)",
     "address": "Σατωβριάνδου 20, Αθήνα 104 32",
     "lat": "37.98519549438972",
-    "lng": "23.72733221380902"
+    "lng": "23.72733221380902",
+    "id": "cheapEatsRestaurants_bbf053953e0b",
+    "slug": "leyteris-o-politis-ap-to-1951-bbf0"
   },
   {
     "url": "https://maps.app.goo.gl/tAkTZ6x1vZQez7uq5?g_st=ipc",
     "name": "Green Kebab",
     "address": "Ιουλιανού 81, Αθήνα 104 39",
     "lat": "37.99197488379709",
-    "lng": "23.725139444636163"
+    "lng": "23.725139444636163",
+    "id": "cheapEatsRestaurants_a3dfa66f0ec8",
+    "slug": "green-kebab-a3df"
   },
   {
     "url": "https://maps.app.goo.gl/cJGp1CcZqq5tUPco9?g_st=ipc",
     "name": "Photis Deli Sandwiches",
     "address": "Πραξιτέλους 20, Αθήνα 105 61",
     "lat": "37.97857197779405",
-    "lng": "23.73022657557408"
+    "lng": "23.73022657557408",
+    "id": "cheapEatsRestaurants_1135b4cf022d",
+    "slug": "photis-deli-sandwiches-1135"
   },
   {
     "url": "https://maps.app.goo.gl/2RdBMYynhYxYXVUJ7?g_st=ipc",
     "name": "Falafel Al Sharq",
     "address": "Λιοσίων 1, Αθήνα 104 38",
     "lat": "37.98752255014304",
-    "lng": "23.726184432262915"
+    "lng": "23.726184432262915",
+    "id": "cheapEatsRestaurants_63f6617fb3ad",
+    "slug": "falafel-al-sharq-63f6"
   },
   {
     "url": "https://maps.app.goo.gl/GnCnbQadKKWk2pSs5?g_st=ipc",
     "name": "Κάψα",
     "address": "Σκουλενίου 4, Αθήνα 105 61",
     "lat": "37.9791128198558",
-    "lng": "23.729644254058044"
+    "lng": "23.729644254058044",
+    "id": "cheapEatsRestaurants_c89c11621856",
+    "slug": "kapsa-c89c"
   },
   {
     "url": "https://maps.app.goo.gl/zskFwnAEHYv2rZ486?g_st=ipc",
     "name": "ILIADA",
     "address": "Κυδαθηναίων 1 - 3, Αθήνα 105 57",
     "lat": "37.97276950938018",
-    "lng": "23.73338516103142"
+    "lng": "23.73338516103142",
+    "id": "cheapEatsRestaurants_62f01dc2ec9e",
+    "slug": "iliada-62f0"
   },
   {
     "url": "https://maps.app.goo.gl/o9F3U32hpw226uAK9?g_st=ipc",
     "name": "Street Souvlaki",
     "address": "Κολοκοτρώνη 30, Αθήνα 105 62",
     "lat": "37.97767884115099",
-    "lng": "23.73029552357521"
+    "lng": "23.73029552357521",
+    "id": "cheapEatsRestaurants_ab5cb5a64cdf",
+    "slug": "street-souvlaki-ab5c"
   },
   {
     "url": "https://maps.app.goo.gl/J66TMj5XKXHHYhD97?g_st=ipc",
     "name": "Curry Express Indian Food",
     "address": "Κολοκοτρώνη 37, Αθήνα 105 62",
     "lat": "37.9776157519804",
-    "lng": "23.73032710822111"
+    "lng": "23.73032710822111",
+    "id": "cheapEatsRestaurants_05c7dd51e3bb",
+    "slug": "curry-express-indian-food-05c7"
   },
   {
     "url": "https://maps.app.goo.gl/ULZUzVZRtCP5wbNN7?g_st=ipc",
     "name": "Delicious Souvlaki",
     "address": "Π. Τσαλδάρη 4, Αθήνα 104 31",
     "lat": "37.98375720535008",
-    "lng": "23.72706851408364"
+    "lng": "23.72706851408364",
+    "id": "cheapEatsRestaurants_d410e8bfc12e",
+    "slug": "delicious-souvlaki-d410"
   },
   {
     "url": "https://maps.app.goo.gl/4GCcGcuQpLTaTXZf8?g_st=ipc",
     "name": "Meat the Greek",
     "address": "Φωκίωνος 2-4, Αθήνα 105 63",
     "lat": "37.97583452449836",
-    "lng": "23.730527268129777"
+    "lng": "23.730527268129777",
+    "id": "cheapEatsRestaurants_fb9d26e8cad9",
+    "slug": "meat-the-greek-fb9d"
   },
   {
     "url": "https://maps.app.goo.gl/1Z8wuAKBZ1px7oFG6?g_st=ipc",
     "name": "Focacceria Napul’e",
     "address": "Πετράκη 30, Αθήνα 105 63",
     "lat": "37.97562561163699",
-    "lng": "23.730612422068372"
+    "lng": "23.730612422068372",
+    "id": "cheapEatsRestaurants_3392ef0104b3",
+    "slug": "focacceria-napul-e-3392"
   },
   {
     "url": "https://maps.app.goo.gl/x2HbvpDyfiYLua7z6?g_st=ipc",
     "name": "Η Βόλβη",
     "address": "Ευριπίδου 24-26, Αθήνα 105 51",
     "lat": "37.97981742118138",
-    "lng": "23.72787228689906"
+    "lng": "23.72787228689906",
+    "id": "cheapEatsRestaurants_72f8dec93abe",
+    "slug": "i-volvi-72f8"
   },
   {
     "url": "https://maps.app.goo.gl/tiAdgVLPy9vMcbLd6?g_st=ipc",
     "name": "Food Str",
     "address": "Καλαμιώτου 14, Αθήνα 105 60",
     "lat": "37.977285336004456",
-    "lng": "23.72911901973204"
+    "lng": "23.72911901973204",
+    "id": "cheapEatsRestaurants_5f988e7e01fc",
+    "slug": "food-str-5f98"
   },
   {
     "url": "https://maps.app.goo.gl/bFq352ScX4ijnYoH8?g_st=ipc",
     "name": "Groovy Ham",
     "address": "Μιλτιάδου 22, Αθήνα 105 60",
     "lat": "37.978434992498535",
-    "lng": "23.728303604469694"
+    "lng": "23.728303604469694",
+    "id": "cheapEatsRestaurants_73b2f6130df6",
+    "slug": "groovy-ham-73b2"
   },
   {
     "url": "https://maps.app.goo.gl/K4gKpgJyy7hobcQQ6?g_st=ipc",
     "name": "La Pizzetta",
     "address": "Αιόλου 56, Αθήνα 105 60",
     "lat": "37.97847520528142",
-    "lng": "23.728112025622647"
+    "lng": "23.728112025622647",
+    "id": "cheapEatsRestaurants_753d5449336c",
+    "slug": "la-pizzetta-753d"
   },
   {
     "url": "https://maps.app.goo.gl/eUePB41Ppi2PT7NL7?g_st=ipc",
     "name": "Bouloukos Kebab",
     "address": "Αθηνάς 53, Αθήνα 105 52",
     "lat": "37.980172161906935",
-    "lng": "23.72690266572384"
+    "lng": "23.72690266572384",
+    "id": "cheapEatsRestaurants_eaf8d8c0d190",
+    "slug": "bouloukos-kebab-eaf8"
   },
   {
     "url": "https://maps.app.goo.gl/vF2fcE6pnayp7atp8?g_st=ipc",
     "name": "Feyrouz_Athens",
     "address": "Καρόρη 23 και, Αγάθωνος 1, Αθήνα 105 51",
     "lat": "37.97815189918129",
-    "lng": "23.727647148068286"
+    "lng": "23.727647148068286",
+    "id": "cheapEatsRestaurants_0155944d18e6",
+    "slug": "feyrouz-athens-0155"
   },
   {
     "url": "https://maps.app.goo.gl/Hxj6uVgcEgiQuTDv8?g_st=ipc",
     "name": "Kosta Souvlaki",
     "address": "Πλ. Αγίας Ειρήνης 2, Αθήνα 105 60",
     "lat": "37.97741645492704",
-    "lng": "23.72799295408667"
+    "lng": "23.72799295408667",
+    "id": "cheapEatsRestaurants_86cc4f5a9e30",
+    "slug": "kosta-souvlaki-86cc"
   },
   {
     "url": "https://maps.app.goo.gl/gP2JFL8Nk8hDVyEZ6?g_st=ipc",
     "name": "Hoocut",
     "address": "Πλ. Αγίας Ειρήνης 9, Αθήνα 105 63",
     "lat": "37.976849062316084",
-    "lng": "23.72809711402173"
+    "lng": "23.72809711402173",
+    "id": "cheapEatsRestaurants_8b657b1197a5",
+    "slug": "hoocut-8b65"
   },
   {
     "url": "https://maps.app.goo.gl/szXw2A8e1LoKnCFc6?g_st=ipc",
     "name": "Ψητοπωλείο Ο Μερακλής",
     "address": "Αγ. Μελετίου 183, Αθήνα 104 43",
     "lat": "38.00168245244077",
-    "lng": "23.720330195200393"
+    "lng": "23.720330195200393",
+    "id": "cheapEatsRestaurants_dcf501d079db",
+    "slug": "psitopoleio-o-meraklis-dcf5"
   },
   {
     "url": "https://maps.app.goo.gl/ttsNgvAmT6HK6Umz7?g_st=ipc",
     "name": "StreetWok",
     "address": "Αιόλου 21, Αθήνα 105 63",
     "lat": "37.976894650216366",
-    "lng": "23.727593295730628"
+    "lng": "23.727593295730628",
+    "id": "cheapEatsRestaurants_723925883510",
+    "slug": "streetwok-7239"
   },
   {
     "url": "https://maps.app.goo.gl/s8G17xLU1a1prvZq8?g_st=ipc",
     "name": "TYLIXTO MONASTIRAKI",
     "address": "Aiolou 19 TYLIXTO, Αιόλου 19, Αθήνα 105 51",
     "lat": "37.976859135543",
-    "lng": "23.727597993730694"
+    "lng": "23.727597993730694",
+    "id": "cheapEatsRestaurants_f2848f6727ab",
+    "slug": "tylixto-monastiraki-f284"
   },
   {
     "url": "https://maps.app.goo.gl/DxnAjbtDdfK3oFbr9?g_st=ipc",
     "name": "TsiknaBoom",
     "address": "Παλλάδος 2-4, Αθήνα 105 54",
     "lat": "37.97906604032225",
-    "lng": "23.726418827071747"
+    "lng": "23.726418827071747",
+    "id": "cheapEatsRestaurants_0371c77b2517",
+    "slug": "tsiknaboom-0371"
   },
   {
     "url": "https://maps.app.goo.gl/hyeDVXAzDsSq1RQz5?g_st=ipc",
     "name": "Just Pita",
     "address": "Αθηνάς 18, Αθήνα 105 51",
     "lat": "37.97840949020096",
-    "lng": "23.726739666799467"
+    "lng": "23.726739666799467",
+    "id": "cheapEatsRestaurants_16ba629709d2",
+    "slug": "just-pita-16ba"
   },
   {
     "url": "https://maps.app.goo.gl/1dqXX7TB1pvVovcv8?g_st=ipc",
     "name": "Ο Θανάσης κεμπάπ Μοναστηράκι",
     "address": "Μητροπόλεως 69, Αθήνα 105 55",
     "lat": "37.976291478347854",
-    "lng": "23.726486093222853"
+    "lng": "23.726486093222853",
+    "id": "cheapEatsRestaurants_3d671140dfef",
+    "slug": "o-thanasis-kempap-monastiraki-3d67"
   },
   {
     "url": "https://maps.app.goo.gl/EvDBZN3YG2DfzNcdA?g_st=ipc",
     "name": "RINGO Kalamaki Pub",
     "address": "Πρωτογένους 8, Αθήνα 105 54",
     "lat": "37.978249435688795",
-    "lng": "23.72590325237898"
+    "lng": "23.72590325237898",
+    "id": "cheapEatsRestaurants_24f0cfa0516a",
+    "slug": "ringo-kalamaki-pub-24f0"
   },
   {
     "url": "https://maps.app.goo.gl/viHqpygtkwkePK7KA?g_st=ipc",
     "name": "Καντίνα Χρήστος",
     "address": "Θεοδ. Δηλιγιάννη, Αθήνα 104 39",
     "lat": "37.99124414586088",
-    "lng": "23.720512677134217"
+    "lng": "23.720512677134217",
+    "id": "cheapEatsRestaurants_3735299a67ee",
+    "slug": "kantina-christos-3735"
   },
   {
     "url": "https://maps.app.goo.gl/U7fwr2D5HgEHTzhH6?g_st=ipc",
     "name": "The Doc's Burger Bar",
     "address": "Ανδρέα Μιαούλη 10, Αθήνα 105 54",
     "lat": "37.97742334199844",
-    "lng": "23.725636669246807"
+    "lng": "23.725636669246807",
+    "id": "cheapEatsRestaurants_0f0b8dd68736",
+    "slug": "the-doc-s-burger-bar-0f0b"
   },
   {
     "url": "https://maps.app.goo.gl/QK18bYTh1b11fJt97?g_st=ipc",
     "name": "ΤΣΙΚΕΝ The Van",
     "address": "Μιαούλη 19, Αθήνα 105 54",
     "lat": "37.97797456722786",
-    "lng": "23.725133314287408"
+    "lng": "23.725133314287408",
+    "id": "cheapEatsRestaurants_97e6c85445da",
+    "slug": "tsiken-the-van-97e6"
   },
   {
     "url": "https://maps.app.goo.gl/bMFjRtNN6Ztw4H43A?g_st=ipc",
     "name": "ο γύρος που γυρεύεις",
     "address": "Αθανασίου Διάκου 1 Ακρόπολη, Αθήνα 117 42",
     "lat": "37.968706021561665",
-    "lng": "23.729791439377735"
+    "lng": "23.729791439377735",
+    "id": "cheapEatsRestaurants_7d6699a91456",
+    "slug": "o-gyros-poy-gyreyeis-7d66"
   },
   {
     "url": "https://maps.app.goo.gl/FPtnwFuAA6xGZThWA?g_st=ipc",
     "name": "Μπάμπης (Σουβλατζίδικο)",
     "address": "Γεωρ. Λύρα 5, Κηφισιά 145 64",
     "lat": "38.07798891290964",
-    "lng": "23.794191207475013"
+    "lng": "23.794191207475013",
+    "id": "cheapEatsRestaurants_f527d097e08b",
+    "slug": "mpampis-soyvlatzidiko-f527"
   },
   {
     "url": "https://maps.app.goo.gl/7oETcHQJwsjd3Q6S9?g_st=ipc",
     "name": "Potato King",
     "address": "Αγίου Φιλίππου 7, Αθήνα 105 55",
     "lat": "37.97675298586362",
-    "lng": "23.723457601026865"
+    "lng": "23.723457601026865",
+    "id": "cheapEatsRestaurants_087b1f7ae690",
+    "slug": "potato-king-087b"
   },
   {
     "url": "https://maps.app.goo.gl/QAxCvjDtdvgbPe3b7?g_st=ipc",
     "name": "AXI - 阿锡早点",
     "address": "Athens, Greece, Akadimou, 104 36",
     "lat": "37.98134764148285",
-    "lng": "23.721168322095103"
+    "lng": "23.721168322095103",
+    "id": "cheapEatsRestaurants_8113009fd5ab",
+    "slug": "axi-8113"
   },
   {
     "url": "https://maps.app.goo.gl/4dueoYmWEmQ4i8jF8?g_st=ipc",
     "name": "το σουβλάκι της σαρρή",
     "address": "Σαρρή 36, Αθήνα 105 53",
     "lat": "37.978860476586924",
-    "lng": "23.722082836375154"
+    "lng": "23.722082836375154",
+    "id": "cheapEatsRestaurants_6df03a7d154b",
+    "slug": "to-soyvlaki-tis-sarri-6df0"
   },
   {
     "url": "https://maps.app.goo.gl/FJ47hNfgCop393VD9?g_st=ipc",
     "name": "Έλβις Καλαμάκια",
     "address": "Ερμού 112, Αθήνα 105 63",
     "lat": "37.977219822169786",
-    "lng": "23.722815670884195"
+    "lng": "23.722815670884195",
+    "id": "cheapEatsRestaurants_0c227902a32d",
+    "slug": "elvis-kalamakia-0c22"
   },
   {
     "url": "https://maps.app.goo.gl/sFPUNxMQJRmui3Sh7?g_st=ipc",
     "name": "Αρμένικο Κεμπάπ Το Ρόδι - The pomegranate Armenian kebab",
     "address": "Κρέοντος 163, Αθήνα 104 43",
     "lat": "38.00448088015914",
-    "lng": "23.715736478884928"
+    "lng": "23.715736478884928",
+    "id": "cheapEatsRestaurants_e43c2854d472",
+    "slug": "armeniko-kempap-to-rodi-the-pomegranate-armenian-kebab-e43c"
   },
   {
     "url": "https://maps.app.goo.gl/WkvoPR33PQyg4HdDA?g_st=ipc",
     "name": "Γαλιάντρα",
     "address": "Γιατράκου 4, Αθήνα 104 36",
     "lat": "37.982766279881204",
-    "lng": "23.72018754800204"
+    "lng": "23.72018754800204",
+    "id": "cheapEatsRestaurants_ee7a3b30b5dc",
+    "slug": "galiantra-ee7a"
   },
   {
     "url": "https://maps.app.goo.gl/LaZcss8aznDJpxm89?g_st=ipc",
     "name": "Dirty Manh",
     "address": "Νικ. Δημητρακοπούλου 5, Αθήνα 117 42",
     "lat": "37.96689597541608",
-    "lng": "23.728371721835774"
+    "lng": "23.728371721835774",
+    "id": "cheapEatsRestaurants_7c127d112eef",
+    "slug": "dirty-manh-7c12"
   },
   {
     "url": "https://maps.app.goo.gl/Uog41UVXEyuZaDfdA?g_st=ipc",
     "name": "Ο ΣΤΕΦΑΝΟΣ ΣΟΥΒΛΑΚΙΑ",
     "address": "Δεληγιάννη 71, Άγιοι Ανάργυροι 135 62",
     "lat": "38.045163297484955",
-    "lng": "23.729228755056532"
+    "lng": "23.729228755056532",
+    "id": "cheapEatsRestaurants_84f34ec821dd",
+    "slug": "o-stefanos-soyvlakia-84f3"
   },
   {
     "url": "https://maps.app.goo.gl/JSTFEbHbfetiYWWd6?g_st=ipc",
     "name": "No mama's boy",
     "address": "Λεωφ. Δημοκρατίας 60, Άγιοι Ανάργυροι 135 61",
     "lat": "38.02704131964815",
-    "lng": "23.71833984165418"
+    "lng": "23.71833984165418",
+    "id": "cheapEatsRestaurants_58cd33367600",
+    "slug": "no-mama-s-boy-58cd"
   },
   {
     "url": "https://maps.app.goo.gl/rUqbZBRjNZ4twFu59?g_st=ipc",
     "name": "Γυριστρούλα",
     "address": "Square (across from \"Thissio\" ISAP station, Αγίων Ασωμάτων 9, Αθήνα 105 54",
     "lat": "37.97711548768267",
-    "lng": "23.72128560665997"
+    "lng": "23.72128560665997",
+    "id": "cheapEatsRestaurants_9ef22bd13da7",
+    "slug": "gyristroyla-9ef2"
   },
   {
     "url": "https://maps.app.goo.gl/wJbToSNnsHXBEELJ7?g_st=ipc",
     "name": "Τα ΣΟΥΒΛΑΚΙΑ της Πετμεζά souvlakia petmeza",
     "address": "Πετμεζά 2, Αθήνα 117 42",
     "lat": "37.96653318144558",
-    "lng": "23.72792783847805"
+    "lng": "23.72792783847805",
+    "id": "cheapEatsRestaurants_ea477a96a248",
+    "slug": "ta-soyvlakia-tis-petmeza-souvlakia-petmeza-ea47"
   },
   {
     "url": "https://maps.app.goo.gl/SrhYjUikLgP2R2HT7?g_st=ipc",
     "name": "Ο Αχιλλέας (χειροποίητος γύρος)",
     "address": "Σπινθάρου 18, Αθήνα 117 43",
     "lat": "37.95973976836696",
-    "lng": "23.733064950731986"
+    "lng": "23.733064950731986",
+    "id": "cheapEatsRestaurants_cf76698c40fb",
+    "slug": "o-achilleas-cheiropoiitos-gyros-cf76"
   },
   {
     "url": "https://maps.app.goo.gl/8n9ne3gHR6APgQwh6?g_st=ipc",
     "name": "Ψητοπωλείο Ο Κώστας",
     "address": "Ηλιουπόλεως 157, Υμηττός 172 36",
     "lat": "37.94774148940973",
-    "lng": "23.74608370924349"
+    "lng": "23.74608370924349",
+    "id": "cheapEatsRestaurants_a6f267f71448",
+    "slug": "psitopoleio-o-kostas-a6f2"
   },
   {
     "url": "https://maps.app.goo.gl/kpwhPwcxrACr1psm9?g_st=ipc",
     "name": "Ψητοπωλείο Το Έμπειρο",
     "address": "Ηρακλέους 28, Αθήνα 117 43",
     "lat": "37.96275771902048",
-    "lng": "23.72923609945131"
+    "lng": "23.72923609945131",
+    "id": "cheapEatsRestaurants_258b939a478f",
+    "slug": "psitopoleio-to-empeiro-258b"
   },
   {
     "url": "https://maps.app.goo.gl/4RTN9WGd3FCHQamG6?g_st=ipc",
     "name": "Robin Belgian streetfood",
     "address": "Θεοδώρητου Βρεσθένης 31, Αθήνα 117 43",
     "lat": "37.96249493210435",
-    "lng": "23.729203293671816"
+    "lng": "23.729203293671816",
+    "id": "cheapEatsRestaurants_15b8f9de5a02",
+    "slug": "robin-belgian-streetfood-15b8"
   },
   {
     "url": "https://maps.app.goo.gl/4FqJYg2raYZvXHja7?g_st=ipc",
     "name": "falafel bar ΤΟ ΡΕΒΙΘΙ",
     "address": "Παρθενώνος 1, Αθήνα 117 42",
     "lat": "37.96631483519238",
-    "lng": "23.7261110398094"
+    "lng": "23.7261110398094",
+    "id": "cheapEatsRestaurants_ccda7a47a1b9",
+    "slug": "falafel-bar-to-revithi-ccda"
   },
   {
     "url": "https://maps.app.goo.gl/k43yGuJ8dK72yJAh8?g_st=ipc",
     "name": "Guarantee",
     "address": "Βεΐκου 41, Αθήνα 117 42",
     "lat": "37.96613348579953",
-    "lng": "23.726193428667294"
+    "lng": "23.726193428667294",
+    "id": "cheapEatsRestaurants_abe36348d52a",
+    "slug": "guarantee-abe3"
   },
   {
     "url": "https://maps.app.goo.gl/bZNApSKDTgmvuiXB7?g_st=ipc",
     "name": "Señor Picante",
     "address": "Φαλήρου 40, Αθήνα 117 42",
     "lat": "37.965308606012925",
-    "lng": "23.726477821309263"
+    "lng": "23.726477821309263",
+    "id": "cheapEatsRestaurants_d094097525b6",
+    "slug": "senor-picante-d094"
   },
   {
     "url": "https://maps.app.goo.gl/X5ofrEqzBi24eigT6?g_st=ipc",
     "name": "Armando Pizzeria Cafeteria",
     "address": "Σαλαμίνος 43, Αθήνα 104 35",
     "lat": "37.98213236236815",
-    "lng": "23.71647213293712"
+    "lng": "23.71647213293712",
+    "id": "cheapEatsRestaurants_f6e9355765da",
+    "slug": "armando-pizzeria-cafeteria-f6e9"
   },
   {
     "url": "https://maps.app.goo.gl/vMhM3YojNKaURqwX8?g_st=ipc",
     "name": "Kalamaki Bar",
     "address": "Δημητρακοπούλου και, Δράκου 15, Αθήνα 117 42",
     "lat": "37.9654765831714",
-    "lng": "23.725752010856876"
+    "lng": "23.725752010856876",
+    "id": "cheapEatsRestaurants_5e8824ccc538",
+    "slug": "kalamaki-bar-5e88"
   },
   {
     "url": "https://maps.app.goo.gl/SzCvMEeUoY15EeqY8?g_st=ipc",
     "name": "«Ο Μερακλής» Χειροποίητος Γύρος",
     "address": "Πλάτωνος 50-52, Αθήνα 104 41",
     "lat": "37.987612206644826",
-    "lng": "23.712852337967995"
+    "lng": "23.712852337967995",
+    "id": "cheapEatsRestaurants_8f156c4c3126",
+    "slug": "o-meraklis-cheiropoiitos-gyros-8f15"
   },
   {
     "url": "https://maps.app.goo.gl/mBFJVYTZsF1kBbtk7?g_st=ipc",
     "name": "ΖΑΜΠΕΛΗΣ Σουβλάκι",
     "address": "Λεωφ. Μαρίνου Αντύπα 42, Ηλιούπολη 163 46",
     "lat": "37.942278449963005",
-    "lng": "23.7489165228981"
+    "lng": "23.7489165228981",
+    "id": "cheapEatsRestaurants_53eb96e06f78",
+    "slug": "zampelis-soyvlaki-53eb"
   },
   {
     "url": "https://maps.app.goo.gl/Rbxz8a7b6mXRVXtX9?g_st=ipc",
     "name": "Ο Γιατρός της Πείνας",
     "address": "Ηλία Ηλιού 59, Αθήνα 117 44",
     "lat": "37.9576250215062",
-    "lng": "23.729472460111847"
+    "lng": "23.729472460111847",
+    "id": "cheapEatsRestaurants_17e24777d3f9",
+    "slug": "o-giatros-tis-peinas-17e2"
   },
   {
     "url": "https://maps.app.goo.gl/obvLVFRy5Vbt8DPS6?g_st=ipc",
     "name": "Jackaroo",
     "address": "Καλλιρρόης 73, Αθήνα 117 45",
     "lat": "37.96222285381352",
-    "lng": "23.7252636942005"
+    "lng": "23.7252636942005",
+    "id": "cheapEatsRestaurants_104db32dd905",
+    "slug": "jackaroo-104d"
   },
   {
     "url": "https://maps.app.goo.gl/jevMqjqUqMVWPizM7?g_st=ipc",
     "name": "ΨΗΤΟΠΩΛΕΙΟ Ο ΥΜΗΤΤΟΣ",
     "address": "Λεωφ. Ειρήνης 12, Ηλιούπολη 163 45",
     "lat": "37.9376577150226",
-    "lng": "23.756325000053742"
+    "lng": "23.756325000053742",
+    "id": "cheapEatsRestaurants_e141c683e929",
+    "slug": "psitopoleio-o-ymittos-e141"
   },
   {
     "url": "https://maps.app.goo.gl/gtmBLN9nUzctuFYM8?g_st=ipc",
     "name": "Το Στέκι του Κώστα",
     "address": "Αγίας Βαρβάρας 59, Δάφνη Αττικής 172 35",
     "lat": "37.95121107984788",
-    "lng": "23.735124045238276"
+    "lng": "23.735124045238276",
+    "id": "cheapEatsRestaurants_59f1048e980a",
+    "slug": "to-steki-toy-kosta-59f1"
   },
   {
     "url": "https://maps.app.goo.gl/6gyRh1g3eUYCXoVV9?g_st=ipc",
     "name": "Ο ΠΕΙΝΑΛΕΟΣ -O Peinaleos",
     "address": "Προφήτου Δανιήλ 35, Αθήνα 104 47",
     "lat": "37.984683017890625",
-    "lng": "23.71166951732043"
+    "lng": "23.71166951732043",
+    "id": "cheapEatsRestaurants_26cfead773fa",
+    "slug": "o-peinaleos-o-peinaleos-26cf"
   },
   {
     "url": "https://maps.app.goo.gl/WroCvakHc4brPbjt7?g_st=ipc",
     "name": "Wolfie’s Iera Odos",
     "address": "Ιερά Οδός 37, Αθήνα 118 54",
     "lat": "37.98005072086818",
-    "lng": "23.713098576163578"
+    "lng": "23.713098576163578",
+    "id": "cheapEatsRestaurants_a74d191853cb",
+    "slug": "wolfie-s-iera-odos-a74d"
   },
   {
     "url": "https://maps.app.goo.gl/crPg8bmbS6pB7CL9A?g_st=ipc",
     "name": "Ψυχιατρείο",
     "address": "Αγίου Κωνσταντίνου 16, Ηλιούπολη 163 46",
     "lat": "37.941456168126024",
-    "lng": "23.74643601644418"
+    "lng": "23.74643601644418",
+    "id": "cheapEatsRestaurants_6c0cf407b78a",
+    "slug": "psychiatreio-6c0c"
   },
   {
     "url": "https://maps.app.goo.gl/tfkKpGgKP9PAqPWX9?g_st=ipc",
     "name": "Καλύβας οικογενειακό ψητοπωλείο",
     "address": "Dimitrakopoulou 91-93, G Olymbiou 10, Athina 117 41",
     "lat": "37.962881286635515",
-    "lng": "23.721970322127277"
+    "lng": "23.721970322127277",
+    "id": "cheapEatsRestaurants_f167ae0efa67",
+    "slug": "kalyvas-oikogeneiako-psitopoleio-f167"
   },
   {
     "url": "https://maps.app.goo.gl/Z2KVCzShcPWHHgiq5?g_st=ipc",
     "name": "Τρύφωνας Κεμπαπτζίδικoν - Hamburgerie",
     "address": "Παρασκευοπούλου 51, Περιστέρι 121 34",
     "lat": "38.01255321629899",
-    "lng": "23.70608688945728"
+    "lng": "23.70608688945728",
+    "id": "cheapEatsRestaurants_390d6f81b689",
+    "slug": "tryfonas-kempaptzidikon-hamburgerie-390d"
   },
   {
     "url": "https://maps.app.goo.gl/ZqCBHjCxGwZEYy9u8?g_st=ipc",
     "name": "Streetwok",
     "address": "Χαρ. Τρικούπη 144, Νέα Ερυθραία 146 71",
     "lat": "38.088268046558134",
-    "lng": "23.817029295891828"
+    "lng": "23.817029295891828",
+    "id": "cheapEatsRestaurants_1a58d7cde2d2",
+    "slug": "streetwok-1a58"
   },
   {
     "url": "https://maps.app.goo.gl/B8R43v1kbWhoCBdJ9?g_st=ipc",
     "name": "ΤΟΜΑΣ ΜΑΡΙΟΣ ΟΒΕΛΙΣΤΗΡΙΟ",
     "address": "Μήτρου Σαρκουδίνου 49, Αθήνα 117 44",
     "lat": "37.95740701533671",
-    "lng": "23.72476747255489"
+    "lng": "23.72476747255489",
+    "id": "cheapEatsRestaurants_d758a1864776",
+    "slug": "tomas-marios-ovelistirio-d758"
   },
   {
     "url": "https://maps.app.goo.gl/ZVfeByxQrS6SFYyH6?g_st=ipc",
     "name": "Jackaroo",
     "address": "Παρασκευοπούλου 45, Περιστέρι 121 35",
     "lat": "38.0124039916799",
-    "lng": "23.705649430022987"
+    "lng": "23.705649430022987",
+    "id": "cheapEatsRestaurants_27095ef62808",
+    "slug": "jackaroo-2709"
   },
   {
     "url": "https://maps.app.goo.gl/rT5pzNjpc9bM7HzT9?g_st=ipc",
     "name": "mirlo kebabs",
     "address": "Ελασιδών 5A, Αθήνα 118 54",
     "lat": "37.976362795934286",
-    "lng": "23.71060804281136"
+    "lng": "23.71060804281136",
+    "id": "cheapEatsRestaurants_ed7bd1fc7e39",
+    "slug": "mirlo-kebabs-ed7b"
   },
   {
     "url": "https://maps.app.goo.gl/Up1hU92hpZRnvgdJ8?g_st=ipc",
     "name": "Ρίγανη θυμάρι",
     "address": "Αγίας Άννης 37, Αχαρνές 136 75",
     "lat": "38.06157357464134",
-    "lng": "23.72960229805207"
+    "lng": "23.72960229805207",
+    "id": "cheapEatsRestaurants_372f0ee727b9",
+    "slug": "rigani-thymari-372f"
   },
   {
     "url": "https://maps.app.goo.gl/kQSFCYCMduFPwVhw9?g_st=ipc",
     "name": "Billy's sandwich Peristeri (Billy’s Kantina)",
     "address": "Π. Μελά 11, Περιστέρι 121 31",
     "lat": "38.00300791270127",
-    "lng": "23.702770148654015"
+    "lng": "23.702770148654015",
+    "id": "cheapEatsRestaurants_aa9fa501d8da",
+    "slug": "billy-s-sandwich-peristeri-billy-s-kantina-aa9f"
   },
   {
     "url": "https://maps.app.goo.gl/E91HSqNkPsC6UtWw7?g_st=ipc",
     "name": "Πανερυθραικος",
     "address": "Αναξαγόρα 11, Νέα Ερυθραία 146 71",
     "lat": "38.09029256559895",
-    "lng": "23.818809766039287"
+    "lng": "23.818809766039287",
+    "id": "cheapEatsRestaurants_ec13b3ed8963",
+    "slug": "panerythraikos-ec13"
   },
   {
     "url": "https://maps.app.goo.gl/ZHk6UviE5DhKfmAcA?g_st=ipc",
     "name": "Ο Γιώργος (Ηλιούπολη)",
     "address": "Πλ. Εθ. Αντιστάσεως 8, Ηλιούπολη 163 42",
     "lat": "37.93157343086467",
-    "lng": "23.756713794378285"
+    "lng": "23.756713794378285",
+    "id": "cheapEatsRestaurants_53e2baa7ddae",
+    "slug": "o-giorgos-ilioypoli-53e2"
   },
   {
     "url": "https://maps.app.goo.gl/WUCUWAGV3GyPBumi7?g_st=ipc",
     "name": "Johnie Hot Dog Συγγρού",
     "address": "Λεωφ. Ανδρέα Συγγρού 136, Καλλιθέα 176 71",
     "lat": "37.959239923680194",
-    "lng": "23.71954717101243"
+    "lng": "23.71954717101243",
+    "id": "cheapEatsRestaurants_4de598be41da",
+    "slug": "johnie-hot-dog-syggroy-4de5"
   },
   {
     "url": "https://maps.app.goo.gl/pgrPE8JqcHDwR95q6?g_st=ipc",
     "name": "Δεκαπενταλεπτο",
     "address": "Πάριδος 90, Ίλιον 131 22",
     "lat": "38.0332432504206",
-    "lng": "23.708153853689517"
+    "lng": "23.708153853689517",
+    "id": "cheapEatsRestaurants_9bf1f7743a87",
+    "slug": "dekapentalepto-9bf1"
   },
   {
     "url": "https://maps.app.goo.gl/uCpkqt4dsAjh6LfU7?g_st=ipc",
     "name": "Ο ΝΤΕΛΛΟΣ",
     "address": "Ελ. Βενιζέλου 139, Νέα Ερυθραία 146 71",
     "lat": "38.09071592781455",
-    "lng": "23.82013374189109"
+    "lng": "23.82013374189109",
+    "id": "cheapEatsRestaurants_296b6ad90f0e",
+    "slug": "o-ntellos-296b"
   },
   {
     "url": "https://maps.app.goo.gl/QzPB3fhcnsDGCLfk8?g_st=ipc",
     "name": "Pita Status",
     "address": "Καλλισθένους 82, Αθήνα 118 52",
     "lat": "37.96762299813557",
-    "lng": "23.71283351407897"
+    "lng": "23.71283351407897",
+    "id": "cheapEatsRestaurants_1f6ebf17e5fc",
+    "slug": "pita-status-1f6e"
   },
   {
     "url": "https://maps.app.goo.gl/ub6T2bWkrrx9QZt69?g_st=ipc",
     "name": "Pita Pan",
     "address": "Παρ. Λεωφ. Βουλιαγμένης 276, Αγ. Δημήτριος Αττικής 173 43",
     "lat": "37.93966105014638",
-    "lng": "23.74003701406881"
+    "lng": "23.74003701406881",
+    "id": "cheapEatsRestaurants_11e58e7bd1c7",
+    "slug": "pita-pan-11e5"
   },
   {
     "url": "https://maps.app.goo.gl/Us2VxvnWiFa4zh7E6?g_st=ipc",
     "name": "Κρέπες Gorillas",
     "address": "Παρασκευοπούλου 14, Περιστέρι 121 32",
     "lat": "38.011039639297316",
-    "lng": "23.701212318200714"
+    "lng": "23.701212318200714",
+    "id": "cheapEatsRestaurants_093f463c1994",
+    "slug": "krepes-gorillas-093f"
   },
   {
     "url": "https://maps.app.goo.gl/4u4xPrqXGjRF9V9cA?g_st=ipc",
     "name": "Cocorico",
     "address": "Ιφιγένειας 31, Ίλιον 131 22",
     "lat": "38.03523380190847",
-    "lng": "23.705868008544936"
+    "lng": "23.705868008544936",
+    "id": "cheapEatsRestaurants_158ee5dd1d4f",
+    "slug": "cocorico-158e"
   },
   {
     "url": "https://maps.app.goo.gl/kLQRksA1KxobJdFA6?g_st=ipc",
     "name": "Μαυροπίπερο",
     "address": "Στρατάρχου Αλεξάνδρου Παπάγου 41, Αγ. Δημήτριος Αττικής 173 43",
     "lat": "37.939871957691295",
-    "lng": "23.73599315534295"
+    "lng": "23.73599315534295",
+    "id": "cheapEatsRestaurants_b9d0dc3d0a7f",
+    "slug": "mayropipero-b9d0"
   },
   {
     "url": "https://maps.app.goo.gl/cMeAjTZUY1MyiZmPA?g_st=ipc",
     "name": "Σουβλάκια Γκούμας",
     "address": "Μαυρομιχάλη 3, Ίλιον 131 21",
     "lat": "38.023248902145305",
-    "lng": "23.69985643748309"
+    "lng": "23.69985643748309",
+    "id": "cheapEatsRestaurants_89bd0bf927d5",
+    "slug": "soyvlakia-gkoymas-89bd"
   },
   {
     "url": "https://maps.app.goo.gl/rw8Py2VR6j9NeDLn6?g_st=ipc",
     "name": "Ο Μπάρμπας Χωριάτικη Καντίνα",
     "address": "Αγίου Νικολάου 2, Ίλιον 131 23",
     "lat": "38.03834405515059",
-    "lng": "23.705313931462435"
+    "lng": "23.705313931462435",
+    "id": "cheapEatsRestaurants_23208072a530",
+    "slug": "o-mparmpas-choriatiki-kantina-2320"
   },
   {
     "url": "https://maps.app.goo.gl/zuoR5Z99oiyHXZs26?g_st=ipc",
     "name": "Η Βρωμιάρα - The Gourmet Street Food Περιστέρι",
     "address": "Λεωφ. Παναγή Τσαλδάρη 16, Περιστέρι 121 34",
     "lat": "38.0121286185235",
-    "lng": "23.696851045660715"
+    "lng": "23.696851045660715",
+    "id": "cheapEatsRestaurants_e8ef6d026703",
+    "slug": "i-vromiara-the-gourmet-street-food-peristeri-e8ef"
   },
   {
     "url": "https://maps.app.goo.gl/DzK7LaFGANeLebDQ7?g_st=ipc",
     "name": "Καράφλας",
     "address": "Φιλαδέλφειας 56-58, Αχαρνές 136 71",
     "lat": "38.07655628972639",
-    "lng": "23.739456286868005"
+    "lng": "23.739456286868005",
+    "id": "cheapEatsRestaurants_7db196676e19",
+    "slug": "karaflas-7db1"
   },
   {
     "url": "https://maps.app.goo.gl/otFTTi2nsTTPYaYKA?g_st=ipc",
     "name": "DONER.TZORTZ",
     "address": "Βιζυηνού 2, Νέα Σμύρνη 171 21",
     "lat": "37.95300238294556",
-    "lng": "23.716665931248773"
+    "lng": "23.716665931248773",
+    "id": "cheapEatsRestaurants_7f509ca8a241",
+    "slug": "doner-tzortz-7f50"
   },
   {
     "url": "https://maps.app.goo.gl/kwZdwHs4BAKbQ5T69?g_st=ipc",
     "name": "Best Taste",
     "address": "Αθηνοδώρου 23, Αθήνα 118 53",
     "lat": "37.96738306337228",
-    "lng": "23.70591216193093"
+    "lng": "23.70591216193093",
+    "id": "cheapEatsRestaurants_69740415da3d",
+    "slug": "best-taste-6974"
   },
   {
     "url": "https://maps.app.goo.gl/FvTc2tgDrzPX1PFX7?g_st=ipc",
     "name": "Ο Σάλτσας",
     "address": "Σοφοκλή Βενιζέλου 50, Περιστέρι 121 34",
     "lat": "38.00504433316188",
-    "lng": "23.6944140076251"
+    "lng": "23.6944140076251",
+    "id": "cheapEatsRestaurants_0640e4f8d480",
+    "slug": "o-saltsas-0640"
   },
   {
     "url": "https://maps.app.goo.gl/Rh99dawd3iLza1Vz7?g_st=ipc",
     "name": "Το Σουβλάκι Της Χαροκόπου",
     "address": "Χαροκόπου 46, Καλλιθέα 176 71",
     "lat": "37.95770921844376",
-    "lng": "23.710571236714188"
+    "lng": "23.710571236714188",
+    "id": "cheapEatsRestaurants_94dff4f67b62",
+    "slug": "to-soyvlaki-tis-charokopoy-94df"
   },
   {
     "url": "https://maps.app.goo.gl/WBopamZ7xeysedvt5?g_st=ipc",
     "name": "Μαύρο Αλάτι",
     "address": "Αιμιλίου Βεάκη 44, Περιστέρι 121 34",
     "lat": "38.011756038342455",
-    "lng": "23.693312637532987"
+    "lng": "23.693312637532987",
+    "id": "cheapEatsRestaurants_64ecfbc2f3f4",
+    "slug": "mayro-alati-64ec"
   },
   {
     "url": "https://maps.app.goo.gl/wSd2i93DKt8GM9aEA?g_st=ipc",
     "name": "Σουβλακια καλαμάκια πανοστιμο",
     "address": "Δοϊράνης 35, Καλλιθέα 176 72",
     "lat": "37.95437724216138",
-    "lng": "23.71201791711626"
+    "lng": "23.71201791711626",
+    "id": "cheapEatsRestaurants_4c857b269660",
+    "slug": "soyvlakia-kalamakia-panostimo-4c85"
   },
   {
     "url": "https://maps.app.goo.gl/8q5LESzz3ctiGx4S6?g_st=ipc",
     "name": "Βάγγελης Το Γνήσιο 1965",
     "address": "Λεωφ. Αγίου Δημητρίου 163, Αγ. Δημήτριος Αττικής 173 43",
     "lat": "37.93578922990488",
-    "lng": "23.72968201403695"
+    "lng": "23.72968201403695",
+    "id": "cheapEatsRestaurants_79cf2e094e26",
+    "slug": "vaggelis-to-gnisio-1965-79cf"
   },
   {
     "url": "https://maps.app.goo.gl/AdbA3EtRXtuwNQxM9?g_st=ipc",
     "name": "StreetWok",
     "address": "Λεωφ. Ελ. Βενιζέλου 37, Νέα Σμύρνη 171 23",
     "lat": "37.946624662039575",
-    "lng": "23.715316548626998"
+    "lng": "23.715316548626998",
+    "id": "cheapEatsRestaurants_7394b13b3b55",
+    "slug": "streetwok-7394"
   },
   {
     "url": "https://maps.app.goo.gl/CHy9bu3k15qybj71A?g_st=ipc",
     "name": "Καντίνα Μπίλης",
     "address": "Πελασγίας 7, Περιστέρι 121 31",
     "lat": "38.01164780075542",
-    "lng": "23.6884871707283"
+    "lng": "23.6884871707283",
+    "id": "cheapEatsRestaurants_f4852478be70",
+    "slug": "kantina-mpilis-f485"
   },
   {
     "url": "https://maps.app.goo.gl/FkX4m8b5w9RxDkZP6?g_st=ipc",
     "name": "Ψητοπωλείο Ο Κώστας",
     "address": "Αχαΐας 8, Περιστέρι 121 35",
     "lat": "38.022231500145956",
-    "lng": "23.689859003426026"
+    "lng": "23.689859003426026",
+    "id": "cheapEatsRestaurants_5aa0772c387e",
+    "slug": "psitopoleio-o-kostas-5aa0"
   },
   {
     "url": "https://maps.app.goo.gl/MTNygxiVF9e3viYE9?g_st=ipc",
     "name": "Ο ΩΡΑΙΟΣ ΤΗΣ ΓΕΙΤΟΝΙΑΣ ΟΒΕΛΙΣΤΗΡΙΟ",
     "address": "Θηβών 119, Περιστέρι 121 36",
     "lat": "38.01006375373495",
-    "lng": "23.6881134895059"
+    "lng": "23.6881134895059",
+    "id": "cheapEatsRestaurants_e447034a05ff",
+    "slug": "o-oraios-tis-geitonias-ovelistirio-e447"
   },
   {
     "url": "https://maps.app.goo.gl/kKDBtgyh24ez28CR7?g_st=ipc",
     "name": "ΑΙΓΥΠΤΙΟΣ",
     "address": "Θράκης 58, Ηλιούπολη 163 41",
     "lat": "37.919220373285064",
-    "lng": "23.75457772556386"
+    "lng": "23.75457772556386",
+    "id": "cheapEatsRestaurants_55ef34aff14a",
+    "slug": "aigyptios-55ef"
   },
   {
     "url": "https://maps.app.goo.gl/MTQDk9is4pkL1vPt9?g_st=ipc",
     "name": "Σουβλάκια ο Λευτέρης",
     "address": "Ειρήνης 2, Νέα Σμύρνη 171 21",
     "lat": "37.947152588163014",
-    "lng": "23.712051232496496"
+    "lng": "23.712051232496496",
+    "id": "cheapEatsRestaurants_fb98feb8ab24",
+    "slug": "soyvlakia-o-leyteris-fb98"
   },
   {
     "url": "https://maps.app.goo.gl/FLdq6c6WUqhHtMqK9?g_st=ipc",
     "name": "Ανδρέας",
     "address": "Χρυσοστόμου Σμύρνης 52, Ταύρος Αττικής 177 78",
     "lat": "37.96513210122869",
-    "lng": "23.697946357808643"
+    "lng": "23.697946357808643",
+    "id": "cheapEatsRestaurants_2631e9cf6c33",
+    "slug": "andreas-2631"
   },
   {
     "url": "https://maps.app.goo.gl/cpKq1vTipGxLPNCu7?g_st=ipc",
     "name": "Το Μαγκάλι (Περιστέρι)",
     "address": "Δωδεκανήσου 24, Πελοπίδα 48, Περιστέρι 121 34",
     "lat": "38.01338073065152",
-    "lng": "23.686862336191798"
+    "lng": "23.686862336191798",
+    "id": "cheapEatsRestaurants_9b3a59c497dd",
+    "slug": "to-magkali-peristeri-9b3a"
   },
   {
     "url": "https://maps.app.goo.gl/TuyE1q1NNNhTr3Vo6?g_st=ipc",
     "name": "ΨΗΤΟΠΩΛΕΙΟ ΠΕΛΟΠΟΝΝΗΣΟΣ (ΨΗΤΑ ΣΟΥΒΛΑΣ ΘΗΒΩΝ)",
     "address": "Θηβών 531, Αιγάλεω 122 43",
     "lat": "38.00117940953343",
-    "lng": "23.684942285189337"
+    "lng": "23.684942285189337",
+    "id": "cheapEatsRestaurants_78dd0823b695",
+    "slug": "psitopoleio-peloponnisos-psita-soyvlas-thivon-78dd"
   },
   {
     "url": "https://maps.app.goo.gl/Ebo7K4NsszKopesC7?g_st=ipc",
     "name": "Οι ρωσίδες Σουβλάκι-Πιροσκί",
     "address": "Αναγνωσταρά 16, Καλλιθέα 176 73",
     "lat": "37.95374548604023",
-    "lng": "23.701395628014694"
+    "lng": "23.701395628014694",
+    "id": "cheapEatsRestaurants_a367fef323c7",
+    "slug": "oi-rosides-soyvlaki-piroski-a367"
   },
   {
     "url": "https://maps.app.goo.gl/9DM3hLLcVtKfPYJg8?g_st=ipc",
     "name": "corner grill",
     "address": "Λεωφ. Ιωνίας 47, Άλιμος 174 56",
     "lat": "37.92177506928485",
-    "lng": "23.73847692927626"
+    "lng": "23.73847692927626",
+    "id": "cheapEatsRestaurants_99a7957def3b",
+    "slug": "corner-grill-99a7"
   },
   {
     "url": "https://maps.app.goo.gl/bLUgt75SSMUYsoXCA?g_st=ipc",
     "name": "Crepa Holic Kallithea",
     "address": "Λεωφ. Ελ. Βενιζέλου 185, Καλλιθέα 176 73",
     "lat": "37.95367992559356",
-    "lng": "23.699030666898533"
+    "lng": "23.699030666898533",
+    "id": "cheapEatsRestaurants_d3888472f0b3",
+    "slug": "crepa-holic-kallithea-d388"
   },
   {
     "url": "https://maps.app.goo.gl/uDT8aKPKixRUsUYz7?g_st=ipc",
     "name": "ΤΑ ΑΔΕΛΦΙΑ",
     "address": "Ολυμπίας 52, Αργυρούπολη 164 51",
     "lat": "37.91448793009678",
-    "lng": "23.75034852466272"
+    "lng": "23.75034852466272",
+    "id": "cheapEatsRestaurants_e2c4bf1641e7",
+    "slug": "ta-adelfia-e2c4"
   },
   {
     "url": "https://maps.app.goo.gl/M4mxfLaTjiY1TWnn6?g_st=ipc",
     "name": "NeSta",
     "address": "Αγίου Ιεροθέου 97, Περιστέρι 121 35",
     "lat": "38.025350500036026",
-    "lng": "23.68251901127124"
+    "lng": "23.68251901127124",
+    "id": "cheapEatsRestaurants_94d8d8e87224",
+    "slug": "nesta-94d8"
   },
   {
     "url": "https://maps.app.goo.gl/Wayix2624vmNqYTT7?g_st=ipc",
     "name": "Ρώσικο παντοπωλείο «Αστάνα»",
     "address": "Δημοσθένους 207, Καλλιθέα 176 73",
     "lat": "37.94852960059528",
-    "lng": "23.699447152301282"
+    "lng": "23.699447152301282",
+    "id": "cheapEatsRestaurants_59ab2f655733",
+    "slug": "rosiko-pantopoleio-astana-59ab"
   },
   {
     "url": "https://maps.app.goo.gl/qwnqmZVR9fGMGk1GA?g_st=ipc",
     "name": "Story Streat",
     "address": "Θηβών 395, Αιγάλεω 122 42",
     "lat": "37.99310908999883",
-    "lng": "23.678421408504626"
+    "lng": "23.678421408504626",
+    "id": "cheapEatsRestaurants_11ca527f21ff",
+    "slug": "story-streat-11ca"
   },
   {
     "url": "https://maps.app.goo.gl/YPqbR69SY4YBXH98A?g_st=ipc",
     "name": "KUKE feel conocido",
     "address": "Μαρκ. Μπότσαρη 12, Αιγάλεω 122 41",
     "lat": "37.991254650701244",
-    "lng": "23.678569756355024"
+    "lng": "23.678569756355024",
+    "id": "cheapEatsRestaurants_507a873fe8bb",
+    "slug": "kuke-feel-conocido-507a"
   },
   {
     "url": "https://maps.app.goo.gl/b9xJL1JcpT29iJ776?g_st=ipc",
     "name": "Κεμπαπτζίδικον ο Μπότσαρης Κρεατοφαγείον",
     "address": "25ης Μαρτίου 75, Πετρούπολη 132 31",
     "lat": "38.04278396237398",
-    "lng": "23.683368051113483"
+    "lng": "23.683368051113483",
+    "id": "cheapEatsRestaurants_1eb67b7cda57",
+    "slug": "kempaptzidikon-o-mpotsaris-kreatofageion-1eb6"
   },
   {
     "url": "https://maps.app.goo.gl/4wk6CtNQgSCn9j33A?g_st=ipc",
     "name": "Ψητοπωλείο «ο Βαγγέλης το χειροποίητο»",
     "address": "Χαλκίδος 26, Αγ. Δημήτριος Αττικής 173 41",
     "lat": "37.928620979940305",
-    "lng": "23.71576237841132"
+    "lng": "23.71576237841132",
+    "id": "cheapEatsRestaurants_42b8119d471a",
+    "slug": "psitopoleio-o-vaggelis-to-cheiropoiito-42b8"
   },
   {
     "url": "https://maps.app.goo.gl/52UR7h68kqnaDZDr7?g_st=ipc",
     "name": "Φ.Γ.Κ. Φαγητό Για Κολλημένους",
     "address": "25ης Μαρτίου 66, Πετρούπολη 132 31",
     "lat": "38.042711505406885",
-    "lng": "23.682873455447876"
+    "lng": "23.682873455447876",
+    "id": "cheapEatsRestaurants_c98ce12d9800",
+    "slug": "f-g-k-fagito-gia-kollimenoys-c98c"
   },
   {
     "url": "https://maps.app.goo.gl/ufBXQHiqa3CEJ7PJ7?g_st=ipc",
     "name": "Ψητοπωλείο \"ο Λάμπρος\"",
     "address": "Νέστορος 21, Παλαιό Φάληρο 175 61",
     "lat": "37.93861571899796",
-    "lng": "23.703296381437085"
+    "lng": "23.703296381437085",
+    "id": "cheapEatsRestaurants_ae7b67ea9782",
+    "slug": "psitopoleio-o-lampros-ae7b"
   },
   {
     "url": "https://maps.app.goo.gl/81gG3aHCeD1heo749?g_st=ipc",
     "name": "Το μπιφτέκι της Σοφίας",
     "address": "Μαρίνου Γερουλάνου 42, Αργυρούπολη 164 52",
     "lat": "37.90862324079437",
-    "lng": "23.747616716476674"
+    "lng": "23.747616716476674",
+    "id": "cheapEatsRestaurants_1229f76d436a",
+    "slug": "to-mpifteki-tis-sofias-1229"
   },
   {
     "url": "https://maps.app.goo.gl/kKDkkSTXoQK8Uh328?g_st=ipc",
     "name": "ZAHOULIS ARGYROUPOLI Σουβλάκι",
     "address": "Μαρίνου Γερουλάνου 54, Αργυρούπολη 164 52",
     "lat": "37.90791549793596",
-    "lng": "23.748232505140976"
+    "lng": "23.748232505140976",
+    "id": "cheapEatsRestaurants_1d0eb7258382",
+    "slug": "zahoulis-argyroupoli-soyvlaki-1d0e"
   },
   {
     "url": "https://maps.app.goo.gl/hUJucEmJmMyQKCdo7?g_st=ipc",
     "name": "Ψησταριά ΜΠΑΡΜΠΑ-Q",
     "address": "Ηρακλείτου 68, Αιγάλεω 122 43",
     "lat": "38.00370912884522",
-    "lng": "23.671659527057734"
+    "lng": "23.671659527057734",
+    "id": "cheapEatsRestaurants_85d33bf344bd",
+    "slug": "psistaria-mparmpa-q-85d3"
   },
   {
     "url": "https://maps.app.goo.gl/aSgB8uZ7Vn2JHks67?g_st=ipc",
     "name": "Κεμπατζίδικο ο Νίκος",
     "address": "Πλ. Δαβάκη 2, Αιγάλεω 122 44",
     "lat": "37.99463818746986",
-    "lng": "23.672052339400672"
+    "lng": "23.672052339400672",
+    "id": "cheapEatsRestaurants_e88cecd313d4",
+    "slug": "kempatzidiko-o-nikos-e88c"
   },
   {
     "url": "https://maps.app.goo.gl/5VP4Qk8ng1M1pARWA?g_st=ipc",
     "name": "Montagu",
     "address": "Παρ. Λεωφ. Βουλιαγμένης 66, Αργυρούπολη 164 52",
     "lat": "37.90768059040179",
-    "lng": "23.745954563287732"
+    "lng": "23.745954563287732",
+    "id": "cheapEatsRestaurants_c226e99422f7",
+    "slug": "montagu-c226"
   },
   {
     "url": "https://maps.app.goo.gl/LT4SpnfnfY3JNg1K7?g_st=ipc",
     "name": "Οι Πίτες του Ντένη",
     "address": "Μαρίνου Γερουλάνου 81, Αργυρούπολη 164 52",
     "lat": "37.90525389875436",
-    "lng": "23.75051113822582"
+    "lng": "23.75051113822582",
+    "id": "cheapEatsRestaurants_38d81d943048",
+    "slug": "oi-pites-toy-nteni-38d8"
   },
   {
     "url": "https://maps.app.goo.gl/ZYkxvzMHun71tMk86?g_st=ipc",
     "name": "Σουβλάκια Ο Λευτέρης",
     "address": "Ξενοφώντος 146, Καλλιθέα 176 74",
     "lat": "37.9462875556964",
-    "lng": "23.690611255358668"
+    "lng": "23.690611255358668",
+    "id": "cheapEatsRestaurants_5a582036089f",
+    "slug": "soyvlakia-o-leyteris-5a58"
   },
   {
     "url": "https://maps.app.goo.gl/xe2rY6uCMrsoqN6Z6?g_st=ipc",
     "name": "Καντίνα Μπούλης",
     "address": "Δελφών 1, Αιγάλεω 122 43",
     "lat": "37.99687794724643",
-    "lng": "23.669076776828845"
+    "lng": "23.669076776828845",
+    "id": "cheapEatsRestaurants_ff6ed582468d",
+    "slug": "kantina-mpoylis-ff6e"
   },
   {
     "url": "https://maps.app.goo.gl/qgszesYeGs45UoHG6?g_st=ipc",
     "name": "Το Καλαμάκι του Αγγέλου",
     "address": "Πόντου 16, Αργυρούπολη 164 52",
     "lat": "37.90324456071206",
-    "lng": "23.748792260475668"
+    "lng": "23.748792260475668",
+    "id": "cheapEatsRestaurants_04e6a1e9ffd2",
+    "slug": "to-kalamaki-toy-aggeloy-04e6"
   },
   {
     "url": "https://maps.app.goo.gl/dWSfhPqcebsnfQNf9?g_st=ipc",
     "name": "Νοστιμιές",
     "address": "Γεωργίου Καραϊσκάκη 73 & Σάμου, Χαϊδάρι 124 61",
     "lat": "38.006695342963845",
-    "lng": "23.664393083804136"
+    "lng": "23.664393083804136",
+    "id": "cheapEatsRestaurants_eb9e5b7b1e69",
+    "slug": "nostimies-eb9e"
   },
   {
     "url": "https://maps.app.goo.gl/7nLwDeMLLVCCJGGAA?g_st=ipc",
     "name": "Virtuoso_enjoyment",
     "address": "Μαρίνου Γερουλάνου 126, Αργυρούπολη 164 52",
     "lat": "37.90017783194547",
-    "lng": "23.749997183633212"
+    "lng": "23.749997183633212",
+    "id": "cheapEatsRestaurants_833c862346f4",
+    "slug": "virtuoso-enjoyment-833c"
   },
   {
     "url": "https://maps.app.goo.gl/2gazVN316J2yH7Wu7?g_st=ipc",
     "name": "ΑΜΑΜ - ΕΣΤΙΑΤΟΡΙΟ - ΓΛΥΦΑΔΑ",
     "address": "Γεωρ. Γεννηματά 11, Γλυφάδα 165 62",
     "lat": "37.89588121968674",
-    "lng": "23.761096554642833"
+    "lng": "23.761096554642833",
+    "id": "cheapEatsRestaurants_af98640fcbbd",
+    "slug": "amam-estiatorio-glyfada-af98"
   },
   {
     "url": "https://maps.app.goo.gl/jm56NTQ4kCuysLqy9?g_st=ipc",
     "name": "K Grill",
     "address": "Λεωφ. Ελ. Βενιζέλου 330, Καλλιθέα 176 75",
     "lat": "37.94385577895444",
-    "lng": "23.685146441261658"
+    "lng": "23.685146441261658",
+    "id": "cheapEatsRestaurants_a8d42456619d",
+    "slug": "k-grill-a8d4"
   },
   {
     "url": "https://maps.app.goo.gl/dt9dXWs5vWdhfFah6?g_st=ipc",
     "name": "Ο Μήτσος",
     "address": "Στρ. Μακρυγιάννη 92, Μοσχάτο 183 45",
     "lat": "37.951501915719206",
-    "lng": "23.678968163051703"
+    "lng": "23.678968163051703",
+    "id": "cheapEatsRestaurants_06d5422f5e7f",
+    "slug": "o-mitsos-06d5"
   },
   {
     "url": "https://maps.app.goo.gl/qc79j4xVCW7hJv396?g_st=ipc",
     "name": "Hashtag#Burger",
     "address": "Γεωρ. Γεννηματά 26, Γλυφάδα 165 62",
     "lat": "37.89370791965242",
-    "lng": "23.763218653107806"
+    "lng": "23.763218653107806",
+    "id": "cheapEatsRestaurants_30dc64b199b4",
+    "slug": "hashtag-burger-30dc"
   },
   {
     "url": "https://maps.app.goo.gl/3hxTvGyB8jtFJcXXA?g_st=ipc",
     "name": "Ο Σοφράς Της Σμύρνης",
     "address": "Αγίου Αλεξάνδρου 60, Παλαιό Φάληρο 175 61",
     "lat": "37.93008545622269",
-    "lng": "23.69511056440978"
+    "lng": "23.69511056440978",
+    "id": "cheapEatsRestaurants_270552aa07e7",
+    "slug": "o-sofras-tis-smyrnis-2705"
   },
   {
     "url": "https://maps.app.goo.gl/29w8wVCTHrf1eEoi7?g_st=ipc",
     "name": "Αλεξανδρινό",
     "address": "143, Λεωφ. Μεγ. Αλεξάνδρου 141, Αγ. Βαρβάρα 123 51",
     "lat": "37.988352964195414",
-    "lng": "23.66083903239818"
+    "lng": "23.66083903239818",
+    "id": "cheapEatsRestaurants_50faa8efdb7a",
+    "slug": "alexandrino-50fa"
   },
   {
     "url": "https://maps.app.goo.gl/nwzgkAPXAUQ2k7tQ7?g_st=ipc",
     "name": "ο Πρόεδρος (Άλιμος)",
     "address": "Άλιμος, Λεωφ. Καλαμακίου 26, Αθήνα 174 55",
     "lat": "37.912881112573395",
-    "lng": "23.714106306735346"
+    "lng": "23.714106306735346",
+    "id": "cheapEatsRestaurants_9e38740e23c2",
+    "slug": "o-proedros-alimos-9e38"
   },
   {
     "url": "https://maps.app.goo.gl/GywP2se78BN7JkRc8?g_st=ipc",
     "name": "ΣΟΥΒΛΑΤΖΙΔΙΚΟ ΜΑΚΕΔΟΝΑΣ",
     "address": "Γ. Γεννηματα 52, Αγ. Βαρβάρα 123 51",
     "lat": "37.98418614658137",
-    "lng": "23.66055565137486"
+    "lng": "23.66055565137486",
+    "id": "cheapEatsRestaurants_5adc759d28ee",
+    "slug": "soyvlatzidiko-makedonas-5adc"
   },
   {
     "url": "https://maps.app.goo.gl/B9kA2bDqRddMECB19?g_st=ipc",
     "name": "Ο ΠΑΡΗΣ",
     "address": "Θουκυδίδου 38, Άλιμος 174 55",
     "lat": "37.91316923922901",
-    "lng": "23.71168356971965"
+    "lng": "23.71168356971965",
+    "id": "cheapEatsRestaurants_915a9e4540d2",
+    "slug": "o-paris-915a"
   },
   {
     "url": "https://maps.app.goo.gl/vR5rdW1p8psGAbRc7?g_st=ipc",
     "name": "Αριστοφάνης Γεύσεις | Εστιατόρια | Ψητοπωλεία Άνω Γλυφάδα",
     "address": "Δημ. Γούναρη 46, Ελληνικό 167 77",
     "lat": "37.890796486374335",
-    "lng": "23.76076987782631"
+    "lng": "23.76076987782631",
+    "id": "cheapEatsRestaurants_14277405021c",
+    "slug": "aristofanis-geyseis-estiatoria-psitopoleia-ano-glyfada-1427"
   },
   {
     "url": "https://maps.app.goo.gl/17t7fwK6X8WCDXvC6?g_st=ipc",
     "name": "PIRI PIRI",
     "address": "Π. Τσαλδάρη 13, Άλιμος 174 55",
     "lat": "37.912346556684334",
-    "lng": "23.711975122237995"
+    "lng": "23.711975122237995",
+    "id": "cheapEatsRestaurants_63d0e3b20b8c",
+    "slug": "piri-piri-63d0"
   },
   {
     "url": "https://maps.app.goo.gl/5G7Zm7z9NT4rMbC6A?g_st=ipc",
     "name": "Μητσος",
     "address": "Λεωφ. Δροσιάς Σταματάς 4, Δροσιά 145 75",
     "lat": "38.120677354658696",
-    "lng": "23.859244908556484"
+    "lng": "23.859244908556484",
+    "id": "cheapEatsRestaurants_0da1d84ce28f",
+    "slug": "mitsos-0da1"
   },
   {
     "url": "https://maps.app.goo.gl/UpknKH1CFKmC87ij6?g_st=ipc",
     "name": "Ο ΑΡΗΣ",
     "address": "Π. Μελά 14, Αγ. Ιωάννης Ρέντης 182 33",
     "lat": "37.95672934899719",
-    "lng": "23.669396304305284"
+    "lng": "23.669396304305284",
+    "id": "cheapEatsRestaurants_d6753e770498",
+    "slug": "o-aris-d675"
   },
   {
     "url": "https://maps.app.goo.gl/RAbojGiNVh4trirv7?g_st=ipc",
     "name": "Ελληνικό Σουβλάκι (απ'το1990)",
     "address": "Λεωφ. Ιασωνίδου 40, Ελληνικό 167 77",
     "lat": "37.892191582868755",
-    "lng": "23.75361437896675"
+    "lng": "23.75361437896675",
+    "id": "cheapEatsRestaurants_25ffd4c0ef7f",
+    "slug": "elliniko-soyvlaki-ap-to1990-25ff"
   },
   {
     "url": "https://maps.app.goo.gl/cGoUBmVXHRpFeeeR6?g_st=ipc",
     "name": "ΠΑΝΑΓΙΩΤΗΣ από το 1970",
     "address": "Γρ. Λαμπράκη 104, Κορυδαλλός 181 21",
     "lat": "37.979572870802095",
-    "lng": "23.658766060140504"
+    "lng": "23.658766060140504",
+    "id": "cheapEatsRestaurants_0e387e0faffb",
+    "slug": "panagiotis-apo-to-1970-0e38"
   },
   {
     "url": "https://maps.app.goo.gl/NoNkrUm2DjN83eAw7?g_st=ipc",
     "name": "Του... Σαββίδη",
     "address": "Λεωφ. Ελ. Βενιζέλου 158, Αγ. Βαρβάρα 123 51",
     "lat": "37.98532436234628",
-    "lng": "23.65728485284073"
+    "lng": "23.65728485284073",
+    "id": "cheapEatsRestaurants_194354552c25",
+    "slug": "toy-savvidi-1943"
   },
   {
     "url": "https://maps.app.goo.gl/eNiYkaAyndviywoc9?g_st=ipc",
     "name": "Αγανάκτηση",
     "address": "Σερρών 44 &, Ταξιαρχών, Κορυδαλλός 181 20",
     "lat": "37.978045238767244",
-    "lng": "23.651711441065746"
+    "lng": "23.651711441065746",
+    "id": "cheapEatsRestaurants_91979e529e27",
+    "slug": "aganaktisi-9197"
   },
   {
     "url": "https://maps.app.goo.gl/dW3a2SovSeGnxXCRA?g_st=ipc",
     "name": "ΤΟ ΚΟΧΥΛΙ (Αφοί Ρέκκα)",
     "address": "Κορυδαλλός 181 20",
     "lat": "37.97958803504725",
-    "lng": "23.650262049500654"
+    "lng": "23.650262049500654",
+    "id": "cheapEatsRestaurants_e6d18e573896",
+    "slug": "to-kochyli-afoi-rekka-e6d1"
   },
   {
     "url": "https://maps.app.goo.gl/g55ZF34fH7dzCpi29?g_st=ipc",
     "name": "Σουβλάκια ο Σέρκος",
     "address": "Ίωνος Δραγούμη 39-41, Πειραιάς 185 42",
     "lat": "37.96321249323642",
-    "lng": "23.6546161405587"
+    "lng": "23.6546161405587",
+    "id": "cheapEatsRestaurants_2f84b1901b79",
+    "slug": "soyvlakia-o-serkos-2f84"
   },
   {
     "url": "https://maps.app.goo.gl/6hPX1uNfh9QEYJND7?g_st=ipc",
     "name": "Dealers Real Street Food",
     "address": "Ταξιαρχών 18, Κορυδαλλός 181 20",
     "lat": "37.97630275309409",
-    "lng": "23.649623466165345"
+    "lng": "23.649623466165345",
+    "id": "cheapEatsRestaurants_1416b33a5bdb",
+    "slug": "dealers-real-street-food-1416"
   },
   {
     "url": "https://maps.app.goo.gl/4zqMC4Phrwrov3rL6?g_st=ipc",
     "name": "Το Άριστον",
     "address": "Σοφίας Βέμπο 22, Γλυφάδα 166 75",
     "lat": "37.88039754118748",
-    "lng": "23.75713413104173"
+    "lng": "23.75713413104173",
+    "id": "cheapEatsRestaurants_685be47e5df7",
+    "slug": "to-ariston-685b"
   },
   {
     "url": "https://maps.app.goo.gl/TJbtwJ75EUsRPcRt8?g_st=ipc",
     "name": "ΕΝΤΥ",
     "address": "Δημ. Καρακουλουξή 4, Νίκαια 184 54",
     "lat": "37.96700050503918",
-    "lng": "23.65031239624474"
+    "lng": "23.65031239624474",
+    "id": "cheapEatsRestaurants_9166d63b45f7",
+    "slug": "enty-9166"
   },
   {
     "url": "https://maps.app.goo.gl/BFkQxfbJJTqb7Qp87?g_st=ipc",
     "name": "Η Λειβαδιά",
     "address": "Ανδρέα Παπανδρέου 126, Γλυφάδα 165 61",
     "lat": "37.87979270265205",
-    "lng": "23.758582732685436"
+    "lng": "23.758582732685436",
+    "id": "cheapEatsRestaurants_f4150c2850c0",
+    "slug": "i-leivadia-f415"
   },
   {
     "url": "https://maps.app.goo.gl/1jU1MDHhWUfkjuNTA?g_st=ipc",
     "name": "KEBAB HUB",
     "address": "Εφέσου 49, Νίκαια 184 50",
     "lat": "37.96544893408382",
-    "lng": "23.64762675898248"
+    "lng": "23.64762675898248",
+    "id": "cheapEatsRestaurants_e1efa6cc4eb9",
+    "slug": "kebab-hub-e1ef"
   },
   {
     "url": "https://maps.app.goo.gl/pWZio4wYos7hfNkq6?g_st=ipc",
     "name": "Σουβλάκια \"ο ΜΠΙΛΗΣ\"",
     "address": "Προύσης 22, Νίκαια 184 53",
     "lat": "37.97112327966262",
-    "lng": "23.64443348855245"
+    "lng": "23.64443348855245",
+    "id": "cheapEatsRestaurants_93e5a087f2a2",
+    "slug": "soyvlakia-o-mpilis-93e5"
   },
   {
     "url": "https://maps.app.goo.gl/qS5CXA1L9CMHWtaN7?g_st=ipc",
     "name": "Ψητοπωλείο «Το Πυρνάρι»",
     "address": "Ανθέων 33, Γλυφάδα 166 74",
     "lat": "37.874394232840224",
-    "lng": "23.766043784078654"
+    "lng": "23.766043784078654",
+    "id": "cheapEatsRestaurants_fda4a4f93016",
+    "slug": "psitopoleio-to-pyrnari-fda4"
   },
   {
     "url": "https://maps.app.goo.gl/43quDvAwPQhkbk6t5?g_st=ipc",
     "name": "\"Μάκης\" Ψητοπωλείο-Σουβλατζίδικο",
     "address": "Π. Τσαλδάρη 262, Νίκαια 184 53",
     "lat": "37.97402598918491",
-    "lng": "23.643093504500488"
+    "lng": "23.643093504500488",
+    "id": "cheapEatsRestaurants_3d78bb5a465c",
+    "slug": "makis-psitopoleio-soyvlatzidiko-3d78"
   },
   {
     "url": "https://maps.app.goo.gl/DkaV9CriKcsiVg296?g_st=ipc",
     "name": "Συστηματικό Σουβλατζίδικο Ο Καράμπελας",
     "address": "Πύλης 53, Πειραιάς 185 34",
     "lat": "37.94518871094833",
-    "lng": "23.654274337068934"
+    "lng": "23.654274337068934",
+    "id": "cheapEatsRestaurants_b825154bd7ab",
+    "slug": "systimatiko-soyvlatzidiko-o-karampelas-b825"
   },
   {
     "url": "https://maps.app.goo.gl/v85fF9CDnUXK4e4e6?g_st=ipc",
     "name": "Κεμπαπτζίδικον Αϊβαλί Νίκαια",
     "address": "Ελλησπόντου 43, Νίκαια 184 51",
     "lat": "37.97771284812105",
-    "lng": "23.63690051700111"
+    "lng": "23.63690051700111",
+    "id": "cheapEatsRestaurants_a7b0441198ed",
+    "slug": "kempaptzidikon-aivali-nikaia-a7b0"
   },
   {
     "url": "https://maps.app.goo.gl/9bVUq8xDuxLwaLim9?g_st=ipc",
     "name": "Η Βρωμιαρα - The Gourmet Street Food Piraeus",
     "address": "Σωτήρος Διός 47, Πειραιάς 185 34",
     "lat": "37.94005665661438",
-    "lng": "23.649946814929663"
+    "lng": "23.649946814929663",
+    "id": "cheapEatsRestaurants_976f1c06c63f",
+    "slug": "i-vromiara-the-gourmet-street-food-piraeus-976f"
   },
   {
     "url": "https://maps.app.goo.gl/7CALFJPovo6YskzUA?g_st=ipc",
     "name": "JACKAROO",
     "address": "Σωτήρος Διός 45, Πειραιάς 185 34",
     "lat": "37.94026416396424",
-    "lng": "23.649684152709604"
+    "lng": "23.649684152709604",
+    "id": "cheapEatsRestaurants_cd23ca747a49",
+    "slug": "jackaroo-cd23"
   },
   {
     "url": "https://maps.app.goo.gl/41PfRyTP8uJ6c3uy9?g_st=ipc",
     "name": "Ο Γιώργος",
     "address": "Γούναρη 18 και, Νικήτα, Πειραιάς 185 31",
     "lat": "37.94626514113319",
-    "lng": "23.644321784628165"
+    "lng": "23.644321784628165",
+    "id": "cheapEatsRestaurants_44069571c770",
+    "slug": "o-giorgos-4406"
   },
   {
     "url": "https://maps.app.goo.gl/5Uc5sfiitWqftH1u6?g_st=ipc",
     "name": "Καλή Πίτα",
     "address": "Ακτή Μουτσοπούλου 10, Πειραιάς 185 35",
     "lat": "37.93904235716474",
-    "lng": "23.647494180172405"
+    "lng": "23.647494180172405",
+    "id": "cheapEatsRestaurants_8cc8f7ce2a5d",
+    "slug": "kali-pita-8cc8"
   },
   {
     "url": "https://maps.app.goo.gl/QjFk2WWeE9jasgmR8?g_st=ipc",
     "name": "Jackaroo",
     "address": "Κολοκοτρώνη 126, Πειραιάς 185 35",
     "lat": "37.940156634414215",
-    "lng": "23.643183475106575"
+    "lng": "23.643183475106575",
+    "id": "cheapEatsRestaurants_338abca2bc3e",
+    "slug": "jackaroo-338a"
   },
   {
     "url": "https://maps.app.goo.gl/hykabQee4Gtqnvuk9?g_st=ipc",
     "name": "ο Πολύβιος",
     "address": "Αγίου Δημητρίου 28, Πειραιάς 185 45",
     "lat": "37.94989609662676",
-    "lng": "23.635292950073545"
+    "lng": "23.635292950073545",
+    "id": "cheapEatsRestaurants_06c18b2e0a28",
+    "slug": "o-polyvios-06c1"
   },
   {
     "url": "https://maps.app.goo.gl/mDh3F8ASwiDrm4yK9?g_st=ipc",
     "name": "ZAHOULIS GLYFADA",
     "address": "Γεωρ. Κονδύλη 7, Γλυφάδα 166 75",
     "lat": "37.86453214322605",
-    "lng": "23.747876477019613"
+    "lng": "23.747876477019613",
+    "id": "cheapEatsRestaurants_4792fbe09c71",
+    "slug": "zahoulis-glyfada-4792"
   },
   {
     "url": "https://maps.app.goo.gl/EXsQn9E1PkJeJjZU9?g_st=ipc",
     "name": "Story Streat",
     "address": "301 Ακτή Μιαούλη, Enanti Agiou Nikolaou, Πειραιάς 185 35",
     "lat": "37.93927555121359",
-    "lng": "23.639905760009334"
+    "lng": "23.639905760009334",
+    "id": "cheapEatsRestaurants_ff4578059709",
+    "slug": "story-streat-ff45"
   },
   {
     "url": "https://maps.app.goo.gl/Ajs6FhmvDN7iM7dV7?g_st=ipc",
     "name": "Μπαρ Μπεε Κιου - Φρεαττύδα",
     "address": "Λεωφ. Φρεάττυδος 13, Πειραιάς 185 37",
     "lat": "37.93450545499558",
-    "lng": "23.64268595079312"
+    "lng": "23.64268595079312",
+    "id": "cheapEatsRestaurants_b7111ba66cb7",
+    "slug": "mpar-mpee-kioy-freattyda-b711"
   },
   {
     "url": "https://maps.app.goo.gl/8bfdGPL68FsznR1SA?g_st=ipc",
     "name": "Street Food Park",
     "address": "Παρ. Λεωφ. Βουλιαγμένης 153, Γλυφάδα 166 74",
     "lat": "37.85905594962557",
-    "lng": "23.764660793565383"
+    "lng": "23.764660793565383",
+    "id": "cheapEatsRestaurants_9085d6dbdfe8",
+    "slug": "street-food-park-9085"
   },
   {
     "url": "https://maps.app.goo.gl/C4Pcs9AmY91g2TWr8?g_st=ipc",
     "name": "Bella Vista",
     "address": "Κωνσταντινουπόλεως 65, Κερατσίνι 187 56",
     "lat": "37.96390003095981",
-    "lng": "23.626189441266973"
+    "lng": "23.626189441266973",
+    "id": "cheapEatsRestaurants_45ca9e952a78",
+    "slug": "bella-vista-45ca"
   },
   {
     "url": "https://maps.app.goo.gl/HayshPj5xRxQu9pK7?g_st=ipc",
     "name": "GODGILLA ΚΕΡΑΤΣΙΝΙ",
     "address": "Θεόφραστου 54, Κερατσίνι 187 56",
     "lat": "37.958965369510814",
-    "lng": "23.62512410531841"
+    "lng": "23.62512410531841",
+    "id": "cheapEatsRestaurants_e67b21453fa9",
+    "slug": "godgilla-keratsini-e67b"
   },
   {
     "url": "https://maps.app.goo.gl/U5qLZ6nCR7tW5r3u7?g_st=ipc",
     "name": "Εστιατόριο Ψησταριά Σωτήρης",
     "address": "Μυριννουντος 10, Μαρκόπουλο Μεσογαίας 190 03",
     "lat": "37.87939587296456",
-    "lng": "23.933984566615596"
+    "lng": "23.933984566615596",
+    "id": "cheapEatsRestaurants_34ddf07c2336",
+    "slug": "estiatorio-psistaria-sotiris-34dd"
   },
   {
     "url": "https://maps.app.goo.gl/xQ5Aqm4jpK3KEQLx8?g_st=ipc",
     "name": "ΠΙΤΤΑ FAN grill",
     "address": "Λεωφ. Ευελπίδων 364, Κίτσι 194 00",
     "lat": "37.84574550115403",
-    "lng": "23.82243212849934"
+    "lng": "23.82243212849934",
+    "id": "cheapEatsRestaurants_0c78537a51b9",
+    "slug": "pitta-fan-grill-0c78"
   },
   {
     "url": "https://maps.app.goo.gl/vsiCvaNeFCuC7Dfv8?g_st=ipc",
     "name": "ILIADIS COFFEE AND FOOD",
     "address": "Λεωφ. Δημοκρατίας 67, Ασπρόπυργος 193 00",
     "lat": "38.04539961819888",
-    "lng": "23.58539496057634"
+    "lng": "23.58539496057634",
+    "id": "cheapEatsRestaurants_ff5878e53264",
+    "slug": "iliadis-coffee-and-food-ff58"
   },
   {
     "url": "https://maps.app.goo.gl/jR5vQVFM7HLTQP8n9?g_st=ipc",
     "name": "ΣΟΥΒΛΑΚΙΑ \"Ο ΠΙΝΗΣ\"",
     "address": "Σαλαμίνος 39, Ασπρόπυργος 193 00",
     "lat": "38.059665035702054",
-    "lng": "23.588228176039767"
+    "lng": "23.588228176039767",
+    "id": "cheapEatsRestaurants_d7c29e2a0475",
+    "slug": "soyvlakia-o-pinis-d7c2"
   },
   {
     "url": "https://maps.app.goo.gl/DsP5tZnJxShfNf3H9?g_st=ipc",
     "name": "Ζάχος",
     "address": "Βασ. Κωνσταντίνου 94, Βάρη 166 72",
     "lat": "37.821251970598816",
-    "lng": "23.80344271241433"
+    "lng": "23.80344271241433",
+    "id": "cheapEatsRestaurants_b59c9010c8a4",
+    "slug": "zachos-b59c"
   },
   {
     "url": "https://maps.app.goo.gl/t3CWta3mHexys9Gs7?g_st=ipc",
     "name": "Το Στέκι του Μανώλη",
     "address": "Λεωφ. Ειρήνης 179, Πέραμα 188 63",
     "lat": "37.963705294377505",
-    "lng": "23.57363615954898"
+    "lng": "23.57363615954898",
+    "id": "cheapEatsRestaurants_5e71f8045feb",
+    "slug": "to-steki-toy-manoli-5e71"
   },
   {
     "url": "https://maps.app.goo.gl/6kV5zXHh5EwZ8Cy57?g_st=ipc",
     "name": "Σωτήρης",
     "address": "ΑΘ.ΔΙΑΚΟΥ &, Σολωμού 6, Πέραμα 188 63",
     "lat": "37.96420811591891",
-    "lng": "23.572955787134685"
+    "lng": "23.572955787134685",
+    "id": "cheapEatsRestaurants_10569f764062",
+    "slug": "sotiris-1056"
   },
   {
     "url": "https://maps.app.goo.gl/bEtWEwaW2PfwcEhW9?g_st=ipc",
     "name": "Ζάχος Γκριλ",
     "address": "Ερμού 1, Βουλιαγμένη 166 71",
     "lat": "37.81320496162539",
-    "lng": "23.782770964184124"
+    "lng": "23.782770964184124",
+    "id": "cheapEatsRestaurants_cf5c14c0c783",
+    "slug": "zachos-gkril-cf5c"
   },
   {
     "url": "https://maps.app.goo.gl/gnVwTeJ7a9GqoCGQ9?g_st=ipc",
     "name": "Πίτα Λαγονήσι",
     "address": "Λεωφ. Καλυβίων 4, Σαρωνικός 190 10",
     "lat": "37.787769077925994",
-    "lng": "23.886240321695578"
+    "lng": "23.886240321695578",
+    "id": "cheapEatsRestaurants_2fe91c5ec4e8",
+    "slug": "pita-lagonisi-2fe9"
   },
   {
     "url": "https://maps.app.goo.gl/aT8YqVdyM8ijeioo7?g_st=ipc",
     "name": "Ο Γύρος Της Πόλης",
     "address": "Τέρμα Αφών, Afon Kipreou, Ελευσίνα 190 18",
     "lat": "38.066483272222705",
-    "lng": "23.529477178860592"
+    "lng": "23.529477178860592",
+    "id": "cheapEatsRestaurants_8c8fe904de1f",
+    "slug": "o-gyros-tis-polis-8c8f"
   },
   {
     "url": "https://maps.app.goo.gl/cDRv243YonNg2qnB6?g_st=ipc",
     "name": "Άρωμα Ελλάδας",
     "address": "Ευεργέτη Κωνσταντίνου Πρίφτη 57, Κερατέα 190 01",
     "lat": "37.80578649121729",
-    "lng": "23.9833913286695"
+    "lng": "23.9833913286695",
+    "id": "cheapEatsRestaurants_d994fad95b5a",
+    "slug": "aroma-elladas-d994"
   },
   {
     "url": "https://maps.app.goo.gl/YMXgj9Wj4KVHBdms9?g_st=ipc",
     "name": "Pita Tom",
     "address": "Αγ. Μαρίνα 180 10",
     "lat": "37.74366491916778",
-    "lng": "23.535568140347873"
+    "lng": "23.535568140347873",
+    "id": "cheapEatsRestaurants_8ba4f0065f8a",
+    "slug": "pita-tom-8ba4"
   },
   {
     "url": "https://maps.app.goo.gl/Kg9SVim1DWH8Lytb6?g_st=ipc",
     "name": "Γυραδικο \"Ο Χρήστος\"",
     "address": "Λεωφ. Σουνίου 6, Λαύριο 195 00",
     "lat": "37.7173396733135",
-    "lng": "24.054314949086613"
+    "lng": "24.054314949086613",
+    "id": "cheapEatsRestaurants_598437c8481b",
+    "slug": "gyradiko-o-christos-5984"
   },
   {
     "url": "https://maps.app.goo.gl/xrxu9zu1wwgoXRKH8?g_st=ipc",
     "name": "Ο Γύρος της Αίγινας",
     "address": "Π. Αιγινήτου 31, Αίγινα 180 10",
     "lat": "37.74389384596183",
-    "lng": "23.430224050202156"
+    "lng": "23.430224050202156",
+    "id": "cheapEatsRestaurants_5b9438409713",
+    "slug": "o-gyros-tis-aiginas-5b94"
   },
   {
     "url": "https://maps.app.goo.gl/xoTkQyq8YGQpxjaU8?g_st=ipc",
     "name": "Φυταμπανης Γ. Ψητοπωλειο - Σουβλατζιδικο",
     "address": "ΕΟ Ισθμού Αρχαίας Επιδαύρου 21, Ίσθμια 200 10",
     "lat": "37.92024228635265",
-    "lng": "22.99364053559187"
+    "lng": "22.99364053559187",
+    "id": "cheapEatsRestaurants_0b1305dba65e",
+    "slug": "fytampanis-g-psitopoleio-soyvlatzidiko-0b13"
   },
   {
     "url": "https://maps.app.goo.gl/9EusCQot9r26ZXTs5?g_st=ipc",
     "name": "Trendy Grill Λιμάνι Ναυπλίου",
     "address": "Μπουμπουλίνας 41, Ναύπλιο 211 00",
     "lat": "37.56727361524451",
-    "lng": "22.801083825814366"
+    "lng": "22.801083825814366",
+    "id": "cheapEatsRestaurants_af2ed2b481d6",
+    "slug": "trendy-grill-limani-nayplioy-af2e"
   },
   {
     "url": "https://maps.app.goo.gl/iaJ7WLVkfAWX8uMY7?g_st=ipc",
     "name": "Stavropoulos Meat & Grill Nafplio",
     "address": "Μπουμπουλίνας 43, Ναύπλιο 211 00",
     "lat": "37.56729472413989",
-    "lng": "22.801012947686594"
+    "lng": "22.801012947686594",
+    "id": "cheapEatsRestaurants_2ea89cfd165d",
+    "slug": "stavropoulos-meat-grill-nafplio-2ea8"
   },
   {
     "url": "https://maps.app.goo.gl/5vu438KzmoWTk1dRA?g_st=ipc",
     "name": "Souvlakia KARGAS",
     "address": "Naousa 844 01",
     "lat": "37.124561868830334",
-    "lng": "25.238091044543676"
+    "lng": "25.238091044543676",
+    "id": "cheapEatsRestaurants_666655654a40",
+    "slug": "souvlakia-kargas-6666"
   },
   {
     "url": "https://maps.app.goo.gl/5xzuz9k7GPVzTJnDA?g_st=ipc",
     "name": "Shoreditch Burgers & Sandwiches",
     "address": "Dimitriados 186, Volos 382 21",
     "lat": "39.358292162660355",
-    "lng": "22.950837613452617"
+    "lng": "22.950837613452617",
+    "id": "cheapEatsRestaurants_9135e360a957",
+    "slug": "shoreditch-burgers-sandwiches-9135"
   },
   {
     "url": "https://maps.app.goo.gl/c4a3sw59T33zdhDU8?g_st=ipc",
     "name": "R The Original fast food",
     "address": "Iasonos 118, Volos 382 21",
     "lat": "39.35863953139754",
-    "lng": "22.949097785508563"
+    "lng": "22.949097785508563",
+    "id": "cheapEatsRestaurants_6c680d57fcca",
+    "slug": "r-the-original-fast-food-6c68"
   },
   {
     "url": "https://maps.app.goo.gl/RfPoKrLrjoUUEA32A?g_st=ipc",
     "name": "Rainbow",
     "address": "Iasonos 135, Volos 382 21",
     "lat": "39.358716294857",
-    "lng": "22.949235444566693"
+    "lng": "22.949235444566693",
+    "id": "cheapEatsRestaurants_4de5fd1f21ea",
+    "slug": "rainbow-4de5"
   },
   {
     "url": "https://maps.app.goo.gl/Dd1J2caUfwteeWVJA?g_st=ipc",
     "name": "Makis",
     "address": "Dimitriados 126, Volos 382 21",
     "lat": "39.35994931747672",
-    "lng": "22.947511340680645"
+    "lng": "22.947511340680645",
+    "id": "cheapEatsRestaurants_14fc216d1bd2",
+    "slug": "makis-14fc"
   },
   {
     "url": "https://maps.app.goo.gl/i3EkwXq8bXbY5rfm8?g_st=ipc",
     "name": "To souvlaki tis Alexandras",
     "address": "El. Venizelou 3, Volos 383 33",
     "lat": "39.360700263391244",
-    "lng": "22.945330534308695"
+    "lng": "22.945330534308695",
+    "id": "cheapEatsRestaurants_6442c1dc3a96",
+    "slug": "to-souvlaki-tis-alexandras-6442"
   },
   {
     "url": "https://maps.app.goo.gl/B6fuRTJ3jQNZCZMJ8?g_st=ipc",
     "name": "Yasouvlaki!",
     "address": "Naxos 843 00",
     "lat": "37.104045402591176",
-    "lng": "25.37553445494035"
+    "lng": "25.37553445494035",
+    "id": "cheapEatsRestaurants_4dbaa21f0de9",
+    "slug": "yasouvlaki-4dba"
   },
   {
     "url": "https://maps.app.goo.gl/poWZpbGwDcXD9udJ6?g_st=ipc",
     "name": "Sweet and Salty",
     "address": "Καναβού και Κλεονίκου, Nafpaktos 303 00",
     "lat": "38.3929233936639",
-    "lng": "21.828605110521075"
+    "lng": "21.828605110521075",
+    "id": "cheapEatsRestaurants_1fcaa4d5db8a",
+    "slug": "sweet-and-salty-1fca"
   },
   {
     "url": "https://maps.app.goo.gl/tVknNoCtf1VeNxVy7?g_st=ipc",
     "name": "FBI Food Truck",
     "address": "X9JQ+3J, Naxos 843 02",
     "lat": "36.98018032275085",
-    "lng": "25.38911877245444"
+    "lng": "25.38911877245444",
+    "id": "cheapEatsRestaurants_492ec545e3cb",
+    "slug": "fbi-food-truck-492e"
   },
   {
     "url": "https://maps.app.goo.gl/p9VptZqYVY3ELr9j8?g_st=ipc",
     "name": "Rigas",
     "address": "Αγίου Ανδρέου κ, Zaimi, Patra 262 23",
     "lat": "38.250839822865835",
-    "lng": "21.737567051131727"
+    "lng": "21.737567051131727",
+    "id": "cheapEatsRestaurants_fab534827f1a",
+    "slug": "rigas-fab5"
   },
   {
     "url": "https://maps.app.goo.gl/kQo4C3a3QHbyJMpq6?g_st=ipc",
     "name": "Χοιροποίητο Σουβλακοποιείο",
     "address": "Riga Fereou 139, Patra 262 21",
     "lat": "38.2456567707955",
-    "lng": "21.73248119818369"
+    "lng": "21.73248119818369",
+    "id": "cheapEatsRestaurants_1354d27873fc",
+    "slug": "choiropoiito-soyvlakopoieio-1354"
   },
   {
     "url": "https://maps.app.goo.gl/VEjvVPTR3XkkoZxW8?g_st=ipc",
     "name": "Souvlakia o Tzimis",
     "address": "Mpenaki 1, Kalamata 241 00",
     "lat": "37.04342911583992",
-    "lng": "22.113254908943482"
+    "lng": "22.113254908943482",
+    "id": "cheapEatsRestaurants_4a509c86a037",
+    "slug": "souvlakia-o-tzimis-4a50"
   },
   {
     "url": "https://maps.app.goo.gl/r2Vfu2hZFXLEjrmk8?g_st=ipc",
     "name": "Kalotaritissa Beach canteen",
     "address": "Καλοταρίτισσα 840 08",
     "lat": "36.79366881646542",
-    "lng": "25.743376582113193"
+    "lng": "25.743376582113193",
+    "id": "cheapEatsRestaurants_13f771b69476",
+    "slug": "kalotaritissa-beach-canteen-13f7"
   },
   {
     "url": "https://maps.app.goo.gl/Xyq1DhyUhw2mJaPq9?g_st=ipc",
     "name": "Pitogyros Traditional Grill House - Gyros, souvlaki, kebab.",
     "address": "Oia 847 02",
     "lat": "36.462570266691884",
-    "lng": "25.37797515114607"
+    "lng": "25.37797515114607",
+    "id": "cheapEatsRestaurants_de78a5847b53",
+    "slug": "pitogyros-traditional-grill-house-gyros-souvlaki-kebab-de78"
   },
   {
     "url": "https://maps.app.goo.gl/AswmP29i78TmQa9F9?g_st=ipc",
     "name": "Garry's",
     "address": "plateia, Chaniotis 630 85",
     "lat": "40.000628811076744",
-    "lng": "23.573772244228277"
+    "lng": "23.573772244228277",
+    "id": "cheapEatsRestaurants_e78668bce22c",
+    "slug": "garry-s-e786"
   },
   {
     "url": "https://maps.app.goo.gl/JYSXRpKjkMx7aNHS7?g_st=ipc",
     "name": "Bloom Brothers canteen",
     "address": "Λιμάνι, Lagada 840 08",
     "lat": "36.90173482477818",
-    "lng": "25.977068594760553"
+    "lng": "25.977068594760553",
+    "id": "cheapEatsRestaurants_45215b23c30d",
+    "slug": "bloom-brothers-canteen-4521"
   },
   {
     "url": "https://maps.app.goo.gl/L8R286xrXF2isCzv6?g_st=ipc",
     "name": "Andoni's Gyros Feed",
     "address": "Καλλιθέα 630 77",
     "lat": "40.07464288630586",
-    "lng": "23.448992983256165"
+    "lng": "23.448992983256165",
+    "id": "cheapEatsRestaurants_c1994e1056ff",
+    "slug": "andoni-s-gyros-feed-c199"
   },
   {
     "url": "https://maps.app.goo.gl/tK8o5vXTSUBvD7U3A?g_st=ipc",
     "name": "Ο Γύρος της Νικήτης",
     "address": "Egialou, Nikiti 630 88",
     "lat": "40.21635208465205",
-    "lng": "23.666421853120887"
+    "lng": "23.666421853120887",
+    "id": "cheapEatsRestaurants_777a89009202",
+    "slug": "o-gyros-tis-nikitis-777a"
   },
   {
     "url": "https://maps.app.goo.gl/UfCwCDqjCiAuobpi9?g_st=ipc",
     "name": "Delish Food Streat Story",
     "address": "Tsouderon 69, Chania 731 32",
     "lat": "35.515029891736845",
-    "lng": "24.02042482402925"
+    "lng": "24.02042482402925",
+    "id": "cheapEatsRestaurants_57bd67d6d5e4",
+    "slug": "delish-food-streat-story-57bd"
   },
   {
     "url": "https://maps.app.goo.gl/cmq1VkqB1tUYSWUX9?g_st=ipc",
     "name": "Oasis",
     "address": "Voloudaki 4, Chania 731 34",
     "lat": "35.51332964693983",
-    "lng": "24.021015604554556"
+    "lng": "24.021015604554556",
+    "id": "cheapEatsRestaurants_620134dd9978",
+    "slug": "oasis-6201"
   },
   {
     "url": "https://maps.app.goo.gl/BCA2nTq76iJ2grhB7?g_st=ipc",
     "name": "Chicktok",
     "address": "Papanastasiou 2, Chania 731 34",
     "lat": "35.509944678509925",
-    "lng": "24.031396796267106"
+    "lng": "24.031396796267106",
+    "id": "cheapEatsRestaurants_e3e8b9399916",
+    "slug": "chicktok-e3e8"
   },
   {
     "url": "https://maps.app.goo.gl/tcGBs6FexGiv7Ju47?g_st=ipc",
     "name": "GYROVOLIES",
     "address": "Eleytherias 1, Perea 570 19",
     "lat": "40.50927064423355",
-    "lng": "22.925792825198258"
+    "lng": "22.925792825198258",
+    "id": "cheapEatsRestaurants_ce1b9aa17757",
+    "slug": "gyrovolies-ce1b"
   },
   {
     "url": "https://maps.app.goo.gl/BCe5MC2HVtopgoEH7?g_st=ipc",
     "name": "Maestro Cantina",
     "address": "EO Thessalonikis Poligirou 32, Thermi 570 01",
     "lat": "40.539866600210786",
-    "lng": "23.020757982919235"
+    "lng": "23.020757982919235",
+    "id": "cheapEatsRestaurants_5ff919c79857",
+    "slug": "maestro-cantina-5ff9"
   },
   {
     "url": "https://maps.app.goo.gl/3FBZX7roU6fjgkTS6?g_st=ipc",
     "name": "Lordon",
     "address": "Πλατεία Παραμάνα 18, Thermi 570 01",
     "lat": "40.546997157219394",
-    "lng": "23.020384247436283"
+    "lng": "23.020384247436283",
+    "id": "cheapEatsRestaurants_530bf90a8d2b",
+    "slug": "lordon-530b"
   },
   {
     "url": "https://maps.app.goo.gl/uCq2bBxGLbG7MnvB6?g_st=ipc",
     "name": "ΓΡΝ Θέρμη",
     "address": "Agiou Nikolaou 30, Thermi 570 01",
     "lat": "40.54741782851475",
-    "lng": "23.01948092443365"
+    "lng": "23.01948092443365",
+    "id": "cheapEatsRestaurants_0353751e2b08",
+    "slug": "grn-thermi-0353"
   },
   {
     "url": "https://maps.app.goo.gl/KSYp7smPeLPMNF7y6?g_st=ipc",
     "name": "Οψάριον fish bar",
     "address": "Drakopoulou 2, Argostoli 281 00",
     "lat": "38.17459374377572",
-    "lng": "20.491243945671638"
+    "lng": "20.491243945671638",
+    "id": "cheapEatsRestaurants_2a50f6b61745",
+    "slug": "opsarion-fish-bar-2a50"
   },
   {
     "url": "https://maps.app.goo.gl/ZucBkKNWduhhUbyv9?g_st=ipc",
     "name": "Hot Pot Pasteria",
     "address": "Mediterranean Cosmos, Thessaloniki",
     "lat": "40.555245602641975",
-    "lng": "22.992913714606928"
+    "lng": "22.992913714606928",
+    "id": "cheapEatsRestaurants_5fc75ada9dd1",
+    "slug": "hot-pot-pasteria-5fc7"
   },
   {
     "url": "https://maps.app.goo.gl/ivkmYsPpBSwDCJHG7?g_st=ipc",
     "name": "Theologos Fast Food",
     "address": "18, Aidiniou 14, Kalamaria 551 32",
     "lat": "40.56936513403147",
-    "lng": "22.960477178944696"
+    "lng": "22.960477178944696",
+    "id": "cheapEatsRestaurants_62516fc5ff91",
+    "slug": "theologos-fast-food-6251"
   },
   {
     "url": "https://maps.app.goo.gl/cae1kAh8s933Ed8E6?g_st=ipc",
     "name": "Sinners Smash Burgers",
     "address": "Στέλιου Καζαντζίδη 31, Pilea 555 35",
     "lat": "40.576087681457956",
-    "lng": "22.989359058851456"
+    "lng": "22.989359058851456",
+    "id": "cheapEatsRestaurants_e79fa54e3576",
+    "slug": "sinners-smash-burgers-e79f"
   },
   {
     "url": "https://maps.app.goo.gl/HnPEQCvY87w7EXK28?g_st=ipc",
     "name": "MAVERICK Handmade Street Food",
     "address": "Eth. Antistaseos 179, Kalamaria 551 34",
     "lat": "40.57336217336095",
-    "lng": "22.971758064415795"
+    "lng": "22.971758064415795",
+    "id": "cheapEatsRestaurants_77c25b5f5623",
+    "slug": "maverick-handmade-street-food-77c2"
   },
   {
     "url": "https://maps.app.goo.gl/UxFcV7SWYu9feyef9?g_st=ipc",
     "name": "Thess...Gyro",
     "address": "Smirnis 14, Kalamaria 551 32",
     "lat": "40.57305742887387",
-    "lng": "22.955729191150056"
+    "lng": "22.955729191150056",
+    "id": "cheapEatsRestaurants_3a3bde48c733",
+    "slug": "thess-gyro-3a3b"
   },
   {
     "url": "https://maps.app.goo.gl/feYupefB1V32NxiX7?g_st=ipc",
     "name": "Jacaranda",
     "address": "Στέλιου Καζαντζίδη 24, Pilea 555 35",
     "lat": "40.583004580048126",
-    "lng": "22.98255759646119"
+    "lng": "22.98255759646119",
+    "id": "cheapEatsRestaurants_05faf629d467",
+    "slug": "jacaranda-05fa"
   },
   {
     "url": "https://maps.app.goo.gl/zwY1QQTAGPf4oH7s8?g_st=ipc",
     "name": "Food Plaza",
     "address": "Skra 16, Kalamaria 551 32",
     "lat": "40.57666918251193",
-    "lng": "22.94927301198073"
+    "lng": "22.94927301198073",
+    "id": "cheapEatsRestaurants_d02e33f8bb10",
+    "slug": "food-plaza-d02e"
   },
   {
     "url": "https://maps.app.goo.gl/eUYE4q3etTD9FkZs6?g_st=ipc",
     "name": "Fina Kota kai Souvlaki",
     "address": "Al. Papanastasiou 164, Thessaloniki 542 49",
     "lat": "40.59910110403599",
-    "lng": "22.970582136003614"
+    "lng": "22.970582136003614",
+    "id": "cheapEatsRestaurants_11495dfdb881",
+    "slug": "fina-kota-kai-souvlaki-1149"
   },
   {
     "url": "https://maps.app.goo.gl/dfbEJidizuzLLALq8?g_st=ipc",
     "name": "O Giros Tis Ellados",
     "address": "Leof. Vasilissis Olgas 176, Thessaloniki 546 46",
     "lat": "40.59770145420411",
-    "lng": "22.9555911779157"
+    "lng": "22.9555911779157",
+    "id": "cheapEatsRestaurants_7caa0b61c60c",
+    "slug": "o-giros-tis-ellados-7caa"
   },
   {
     "url": "https://maps.app.goo.gl/AezkPnQB7kKjE1Cr5?g_st=ipc",
     "name": "Paul’s Burger",
     "address": "Geor. Papandreou 38, Thessaloniki 546 46",
     "lat": "40.59788238085435",
-    "lng": "22.952162245113325"
+    "lng": "22.952162245113325",
+    "id": "cheapEatsRestaurants_a56a10299d2d",
+    "slug": "paul-s-burger-a56a"
   },
   {
     "url": "https://maps.app.goo.gl/LhdTXdShbHy87PAv9?g_st=ipc",
     "name": "Devido",
     "address": "Nik. Plastira 2, Thessaloniki 542 50",
     "lat": "40.6015548155933",
-    "lng": "22.97004729221759"
+    "lng": "22.97004729221759",
+    "id": "cheapEatsRestaurants_9ba4d2c7ce05",
+    "slug": "devido-9ba4"
   },
   {
     "url": "https://maps.app.goo.gl/hJJxUbRut66xbMFs5?g_st=ipc",
     "name": "subito",
     "address": "Delfon 145, Thessaloniki 542 48",
     "lat": "40.6000123876882",
-    "lng": "22.959807900547272"
+    "lng": "22.959807900547272",
+    "id": "cheapEatsRestaurants_7eb356f33485",
+    "slug": "subito-7eb3"
   },
   {
     "url": "https://maps.app.goo.gl/2EFX2fMBPiwhmmAv5?g_st=ipc",
     "name": "Devido",
     "address": "25is Martiou 17, Thessaloniki 546 45",
     "lat": "40.599230791467505",
-    "lng": "22.95314409507896"
+    "lng": "22.95314409507896",
+    "id": "cheapEatsRestaurants_811c63bc08c5",
+    "slug": "devido-811c"
   },
   {
     "url": "https://maps.app.goo.gl/osKm1rqFwwfzqdrLA?g_st=ipc",
     "name": "Thanasis & Sons",
     "address": "Al. Papanastasiou 133, Thessaloniki 542 50",
     "lat": "40.60379888554604",
-    "lng": "22.969062086462387"
+    "lng": "22.969062086462387",
+    "id": "cheapEatsRestaurants_1eaaf4657a81",
+    "slug": "thanasis-sons-1eaa"
   },
   {
     "url": "https://maps.app.goo.gl/vkLu33M5Ct15FeXa6?g_st=ipc",
     "name": "Steakhouse Costas",
     "address": "Emmanouil Fili 15, Pilea 555 34",
     "lat": "40.607757700164754",
-    "lng": "22.984167654560377"
+    "lng": "22.984167654560377",
+    "id": "cheapEatsRestaurants_8ba579af851d",
+    "slug": "steakhouse-costas-8ba5"
   },
   {
     "url": "https://maps.app.goo.gl/hfoXLoQmnjaHwpUB7?g_st=ipc",
     "name": "Food Truck Park SKG",
     "address": "Kapetan Ntogra 31, Pilea 555 35",
     "lat": "40.609281906480575",
-    "lng": "22.989500884434833"
+    "lng": "22.989500884434833",
+    "id": "cheapEatsRestaurants_0c3a0f831178",
+    "slug": "food-truck-park-skg-0c3a"
   },
   {
     "url": "https://maps.app.goo.gl/xNHbtpHz8gpf4vYR6?g_st=ipc",
     "name": "ΓΡΝ Τούμπα",
     "address": "Michail Chourmouzi 41, Thessaloniki 544 53",
     "lat": "40.606092536657584",
-    "lng": "22.971298180015925"
+    "lng": "22.971298180015925",
+    "id": "cheapEatsRestaurants_d5f34328ce60",
+    "slug": "grn-toympa-d5f3"
   },
   {
     "url": "https://maps.app.goo.gl/8hPpQdZA8iNRAksd7?g_st=ipc",
     "name": "Souvlaki Street",
     "address": "Geor. Drosini 14, Thessaloniki 546 44",
     "lat": "40.60499215993171",
-    "lng": "22.95914208357667"
+    "lng": "22.95914208357667",
+    "id": "cheapEatsRestaurants_35033892194c",
+    "slug": "souvlaki-street-3503"
   },
   {
     "url": "https://maps.app.goo.gl/bUnuC1Vh9ysa2VhL6?g_st=ipc",
     "name": "Kostas",
     "address": "Mark. Mpotsari 120, Thessaloniki 546 43",
     "lat": "40.608571752720515",
-    "lng": "22.967969048628863"
+    "lng": "22.967969048628863",
+    "id": "cheapEatsRestaurants_f51539f3f3fe",
+    "slug": "kostas-f515"
   },
   {
     "url": "https://maps.app.goo.gl/EWmSLiCCxYM2N33x6?g_st=ipc",
     "name": "Giotis",
     "address": "Mark. Mpotsari 150, Thessaloniki 544 53",
     "lat": "40.60922266804071",
-    "lng": "22.97064673048183"
+    "lng": "22.97064673048183",
+    "id": "cheapEatsRestaurants_3c28289caa25",
+    "slug": "giotis-3c28"
   },
   {
     "url": "https://maps.app.goo.gl/cajfpJVBkeREe7FNA?g_st=ipc",
     "name": "Prassas",
     "address": "Mark. Mpotsari 89, Thessaloniki 546 44",
     "lat": "40.60822104515919",
-    "lng": "22.96538292733955"
+    "lng": "22.96538292733955",
+    "id": "cheapEatsRestaurants_9e983ad5e812",
+    "slug": "prassas-9e98"
   },
   {
     "url": "https://maps.app.goo.gl/qmEdiZfcHrQAp8pU7?g_st=ipc",
     "name": "Petridis And Sons - Grill House",
     "address": "Grigoriou Lampraki 206, Thessaloniki 555 34",
     "lat": "40.61189681851916",
-    "lng": "22.984212166296615"
+    "lng": "22.984212166296615",
+    "id": "cheapEatsRestaurants_2468c5a59712",
+    "slug": "petridis-and-sons-grill-house-2468"
   },
   {
     "url": "https://maps.app.goo.gl/KNA3DuGAxNV9SYMs8?g_st=ipc",
     "name": "ΤΟ ΚΟΚΟΡΑΚΙ",
     "address": "Mark. Mpotsari 105, Thessaloniki 544 53",
     "lat": "40.6088349903696",
-    "lng": "22.967918512345722"
+    "lng": "22.967918512345722",
+    "id": "cheapEatsRestaurants_c619a7c97409",
+    "slug": "to-kokoraki-c619"
   },
   {
     "url": "https://maps.app.goo.gl/6Bmdb1UVvVyTyyNdA?g_st=ipc",
     "name": "Gyradiko",
     "address": "Grigoriou Lampraki 125, Thessaloniki 543 51",
     "lat": "40.615031188130764",
-    "lng": "22.97695657295727"
+    "lng": "22.97695657295727",
+    "id": "cheapEatsRestaurants_bf1d972f9838",
+    "slug": "gyradiko-bf1d"
   },
   {
     "url": "https://maps.app.goo.gl/9AT6QmGaM1pLwsRb9?g_st=ipc",
     "name": "Tost Spesial",
     "address": "Paraskevopoulou 12, Thessaloniki 546 40",
     "lat": "40.616314670176166",
-    "lng": "22.955059124656405"
+    "lng": "22.955059124656405",
+    "id": "cheapEatsRestaurants_c679cc68cdf8",
+    "slug": "tost-spesial-c679"
   },
   {
     "url": "https://maps.app.goo.gl/u5NXam3TJPXTBEGQ6?g_st=ipc",
     "name": "Το Μυρμήγκι - HOT-DOG - Βραστά Λουκάνικα",
     "address": "Konstantinoupoleos 8, Thessaloniki 546 40",
     "lat": "40.61789526919397",
-    "lng": "22.95852389027651"
+    "lng": "22.95852389027651",
+    "id": "cheapEatsRestaurants_fccedeec0967",
+    "slug": "to-myrmigki-hot-dog-vrasta-loykanika-fcce"
   },
   {
     "url": "https://maps.app.goo.gl/taG7ENcMfbyzazQX7?g_st=ipc",
     "name": "Pizza Sakis",
     "address": "Leof. Stratou 26, Thessaloniki 546 40",
     "lat": "40.6189040866906",
-    "lng": "22.958041870578818"
+    "lng": "22.958041870578818",
+    "id": "cheapEatsRestaurants_26918358a6af",
+    "slug": "pizza-sakis-2691"
   },
   {
     "url": "https://maps.app.goo.gl/82yxHEuuzhZ7bD1T9?g_st=ipc",
     "name": "Το Έτση",
     "address": "Nikiforou Foka 2, Thessaloniki 546 21",
     "lat": "40.627697688934035",
-    "lng": "22.94868143840882"
+    "lng": "22.94868143840882",
+    "id": "cheapEatsRestaurants_4326011ed54c",
+    "slug": "to-etsi-4326"
   },
   {
     "url": "https://maps.app.goo.gl/pedu5yTx6WHSFd5MA?g_st=ipc",
     "name": "Feyrouz SKG",
     "address": "Mitropoleos 125, Nikiforou Foka 8, Thessaloniki 546 21",
     "lat": "40.62813032194449",
-    "lng": "22.94911089919006"
+    "lng": "22.94911089919006",
+    "id": "cheapEatsRestaurants_f03e4dc68c8d",
+    "slug": "feyrouz-skg-f03e"
   },
   {
     "url": "https://maps.app.goo.gl/1CjK5eGEVn2bdjxz8?g_st=ipc",
     "name": "Giok Balik",
     "address": "Eth. Aminis 34, Thessaloniki 546 21",
     "lat": "40.62972191102995",
-    "lng": "22.952456612586893"
+    "lng": "22.952456612586893",
+    "id": "cheapEatsRestaurants_76d0caaa7f9f",
+    "slug": "giok-balik-76d0"
   },
   {
     "url": "https://maps.app.goo.gl/ZU1we2eajmmkHarSA?g_st=ipc",
     "name": "SUN DO EACH",
     "address": "Pl. Ippodromiou 12, Thessaloniki 546 21",
     "lat": "40.629855288469905",
-    "lng": "22.95097907140209"
+    "lng": "22.95097907140209",
+    "id": "cheapEatsRestaurants_1133d517c2b8",
+    "slug": "sun-do-each-1133"
   },
   {
     "url": "https://maps.app.goo.gl/F867e4fDb8YFQcHN9?g_st=ipc",
     "name": "Because Bagel",
     "address": "Al. Svolou 41, Thessaloniki 546 21",
     "lat": "40.63057520882739",
-    "lng": "22.951254328665513"
+    "lng": "22.951254328665513",
+    "id": "cheapEatsRestaurants_14153fc76d40",
+    "slug": "because-bagel-1415"
   },
   {
     "url": "https://maps.app.goo.gl/NQPjMfCoN4AKJD3m8?g_st=ipc",
     "name": "Christos",
     "address": "Egnatia 150, Thessaloniki 546 21",
     "lat": "40.63147006963023",
-    "lng": "22.952399705195514"
+    "lng": "22.952399705195514",
+    "id": "cheapEatsRestaurants_360554fc9fc3",
+    "slug": "christos-3605"
   },
   {
     "url": "https://maps.app.goo.gl/hi9XxDarzuTKvZmD8?g_st=ipc",
     "name": "Argophageío",
     "address": "Apellou 6, Thessaloniki 546 22",
     "lat": "40.631121382402085",
-    "lng": "22.94963262184118"
+    "lng": "22.94963262184118",
+    "id": "cheapEatsRestaurants_3bf8a692d929",
+    "slug": "argophageio-3bf8"
   },
   {
     "url": "https://maps.app.goo.gl/VGaiUJdvDDnid5Kk9?g_st=ipc",
     "name": "Hot Pot Pasteria City Center",
     "address": "Paleon Patron Germanou 12, Thessaloniki 546 22",
     "lat": "40.63116120039778",
-    "lng": "22.946781922089382"
+    "lng": "22.946781922089382",
+    "id": "cheapEatsRestaurants_6c50423bab44",
+    "slug": "hot-pot-pasteria-city-center-6c50"
   },
   {
     "url": "https://maps.app.goo.gl/zE2aLejbpEyQpDvq8?g_st=ipc",
     "name": "Taco Mazama (Californian Style Mexican Street Food)",
     "address": "Paleon Patron Germanou 28, Thessaloniki 546 22",
     "lat": "40.63149354851285",
-    "lng": "22.94839774432504"
+    "lng": "22.94839774432504",
+    "id": "cheapEatsRestaurants_abf9ebdbbc06",
+    "slug": "taco-mazama-californian-style-mexican-street-food-abf9"
   },
   {
     "url": "https://maps.app.goo.gl/nooaQmgbY9VX2WGv7?g_st=ipc",
     "name": "Derlicatesen all Souvlaki",
     "address": "John Kouskoura 3, Thessaloniki 546 22",
     "lat": "40.630948535574674",
-    "lng": "22.944881639476645"
+    "lng": "22.944881639476645",
+    "id": "cheapEatsRestaurants_12c533aae8f8",
+    "slug": "derlicatesen-all-souvlaki-12c5"
   },
   {
     "url": "https://maps.app.goo.gl/oFPYJzUU4rgqitwB7?g_st=ipc",
     "name": "Balboa Thessaloniki",
     "address": "P. Mela 42, Thessaloniki 546 22",
     "lat": "40.631903473697065",
-    "lng": "22.947513989325277"
+    "lng": "22.947513989325277",
+    "id": "cheapEatsRestaurants_bd4c36f00e26",
+    "slug": "balboa-thessaloniki-bd4c"
   },
   {
     "url": "https://maps.app.goo.gl/cRpaEqK3F7inKXVy5?g_st=ipc",
     "name": "Jackaroo",
     "address": "Mitropoleos 67, Thessaloniki 546 22",
     "lat": "40.631343527256554",
-    "lng": "22.944174715835555"
+    "lng": "22.944174715835555",
+    "id": "cheapEatsRestaurants_3e2ba0cbb305",
+    "slug": "jackaroo-3e2b"
   },
   {
     "url": "https://maps.app.goo.gl/rccueDiq6UHSWjB86?g_st=ipc",
     "name": "Dakee spot",
     "address": "P. Mela 48, Thessaloniki 546 22",
     "lat": "40.6322179094533",
-    "lng": "22.947351485022043"
+    "lng": "22.947351485022043",
+    "id": "cheapEatsRestaurants_89af7e3d3903",
+    "slug": "dakee-spot-89af"
   },
   {
     "url": "https://maps.app.goo.gl/fczSwQFG8SAVzjsu7?g_st=ipc",
     "name": "Life And Chicken",
     "address": "Κέντρο, Θεσσαλονίκη, Patriarchou Ioakim 26, Thessaloniki 546 35",
     "lat": "40.63311964993022",
-    "lng": "22.951739765062324"
+    "lng": "22.951739765062324",
+    "id": "cheapEatsRestaurants_3f9006febdb5",
+    "slug": "life-and-chicken-3f90"
   },
   {
     "url": "https://maps.app.goo.gl/gyhw2UWMtxWKgMui6?g_st=ipc",
     "name": "Cong | Vietasian Street Food",
     "address": "Proxenou Koromila 9, Thessaloniki 546 23",
     "lat": "40.63147206727124",
-    "lng": "22.942501320363125"
+    "lng": "22.942501320363125",
+    "id": "cheapEatsRestaurants_c606c6424912",
+    "slug": "cong-vietasian-street-food-c606"
   },
   {
     "url": "https://maps.app.goo.gl/iyZQfPWo4E2pskqX8?g_st=ipc",
     "name": "The Last Slice",
     "address": "Proxenou Koromila 1, Thessaloniki 546 23",
     "lat": "40.63188753569458",
-    "lng": "22.94190837965703"
+    "lng": "22.94190837965703",
+    "id": "cheapEatsRestaurants_284a6ef1dfeb",
+    "slug": "the-last-slice-284a"
   },
   {
     "url": "https://maps.app.goo.gl/dAaaqBN4npr7HBBU7?g_st=ipc",
     "name": "22 Σουβλάκια",
     "address": "Aristotelous Sq 8, Thessaloniki 546 23",
     "lat": "40.632325575157445",
-    "lng": "22.941533229878075"
+    "lng": "22.941533229878075",
+    "id": "cheapEatsRestaurants_d0809c48801b",
+    "slug": "22-soyvlakia-d080"
   },
   {
     "url": "https://maps.app.goo.gl/KNAkyJUgnkqkuPQs9?g_st=ipc",
     "name": "Liga ke kala",
     "address": "Kassandrou 132, Thessaloniki 546 34",
     "lat": "40.63627784998205",
-    "lng": "22.954179728027064"
+    "lng": "22.954179728027064",
+    "id": "cheapEatsRestaurants_aa2a8e3577a2",
+    "slug": "liga-ke-kala-aa2a"
   },
   {
     "url": "https://maps.app.goo.gl/eQJvB2FMkUEghr9y7?g_st=ipc",
     "name": "Thess Bao",
     "address": "Kalapothaki 3, Thessaloniki 546 45",
     "lat": "40.633724315611715",
-    "lng": "22.93899137586201"
+    "lng": "22.93899137586201",
+    "id": "cheapEatsRestaurants_d643220ae6b0",
+    "slug": "thess-bao-d643"
   },
   {
     "url": "https://maps.app.goo.gl/a5enHSGzpNb2rYAJ7?g_st=ipc",
     "name": "Bombídia - Bombs",
     "address": "Vasileos Irakleiou 35, 37, Thessaloniki 546 24",
     "lat": "40.63441434318281",
-    "lng": "22.94206825187552"
+    "lng": "22.94206825187552",
+    "id": "cheapEatsRestaurants_e9c2d48343e0",
+    "slug": "bombidia-bombs-e9c2"
   },
   {
     "url": "https://maps.app.goo.gl/SWEWMLbzJrveMUjT7?g_st=ipc",
     "name": "Ohmami - Street Food / Thessaloniki",
     "address": "Patriarchoi Dionisii E 1, Thessaloniki 546 31",
     "lat": "40.63556315760708",
-    "lng": "22.947563243318125"
+    "lng": "22.947563243318125",
+    "id": "cheapEatsRestaurants_b6d7f55c61d9",
+    "slug": "ohmami-street-food-thessaloniki-b6d7"
   },
   {
     "url": "https://maps.app.goo.gl/dBrKhYFMn7bdAAyAA?g_st=ipc",
     "name": "Κύριος Μπαμπάτσικος",
     "address": "Vasileos Irakleiou 33, Thessaloniki 546 24",
     "lat": "40.63461122232153",
-    "lng": "22.941727966275263"
+    "lng": "22.941727966275263",
+    "id": "cheapEatsRestaurants_5ddb8d5c463a",
+    "slug": "kyrios-mpampatsikos-5ddb"
   },
   {
     "url": "https://maps.app.goo.gl/j8pVp1d58tFR3FKR6?g_st=ipc",
     "name": "Ο Γύρος της Αριστοτέλους",
     "address": "Aristotélous 24, Thessaloniki 546 23",
     "lat": "40.63507047582695",
-    "lng": "22.94368729541851"
+    "lng": "22.94368729541851",
+    "id": "cheapEatsRestaurants_0768eebe37ba",
+    "slug": "o-gyros-tis-aristoteloys-0768"
   },
   {
     "url": "https://maps.app.goo.gl/B68oxS5kPucvmKVy7?g_st=ipc",
     "name": "Ochsenkopf German Delicatessen",
     "address": "Αγορά Μοδιανο, Thessaloniki 546 24",
     "lat": "40.634945471087235",
-    "lng": "22.941783687986916"
+    "lng": "22.941783687986916",
+    "id": "cheapEatsRestaurants_3ea6371d1865",
+    "slug": "ochsenkopf-german-delicatessen-3ea6"
   },
   {
     "url": "https://maps.app.goo.gl/831RBk3hM78pZN1a8?g_st=ipc",
     "name": "SESOULA Street Food",
     "address": "Mitropoleos 6, Thessaloniki 546 25",
     "lat": "40.63477422793839",
-    "lng": "22.937577409662797"
+    "lng": "22.937577409662797",
+    "id": "cheapEatsRestaurants_7d5766fbf936",
+    "slug": "sesoula-street-food-7d57"
   },
   {
     "url": "https://maps.app.goo.gl/jXzXhjGZbZTLHvnd9?g_st=ipc",
     "name": "Laikon",
     "address": "Politechniou 24, Thessaloniki 546 25",
     "lat": "40.63567516803373",
-    "lng": "22.93753817677912"
+    "lng": "22.93753817677912",
+    "id": "cheapEatsRestaurants_309d89ee38a5",
+    "slug": "laikon-309d"
   },
   {
     "url": "https://maps.app.goo.gl/gUdJfgvKc5M5F6TR7?g_st=ipc",
     "name": "Raw Street Burger - Thessaloniki",
     "address": "Politechniou 53, Thessaloniki 546 25",
     "lat": "40.63602099868007",
-    "lng": "22.937352405537926"
+    "lng": "22.937352405537926",
+    "id": "cheapEatsRestaurants_a3eaaa94c58d",
+    "slug": "raw-street-burger-thessaloniki-a3ea"
   },
   {
     "url": "https://maps.app.goo.gl/D5vAgy9G1TNsAAyJ9?g_st=ipc",
     "name": "Cantina Manara",
     "address": "Στοά, Ermou 1, Thessaloniki 546 25",
     "lat": "40.637111408911565",
-    "lng": "22.9392252159668"
+    "lng": "22.9392252159668",
+    "id": "cheapEatsRestaurants_3308da140a86",
+    "slug": "cantina-manara-3308"
   },
   {
     "url": "https://maps.app.goo.gl/Z7BYjUBJYcnFTaEm9?g_st=ipc",
     "name": "Η Βρωμιάρα - The Gourmet Street Food | Θεσσαλονικη",
     "address": "Siggrou 7, Thessaloniki 546 25",
     "lat": "40.63730784042486",
-    "lng": "22.939114096509012"
+    "lng": "22.939114096509012",
+    "id": "cheapEatsRestaurants_a9f190908032",
+    "slug": "i-vromiara-the-gourmet-street-food-thessaloniki-a9f1"
   },
   {
     "url": "https://maps.app.goo.gl/msSh5RZw3k81mKHWA?g_st=ipc",
     "name": "Pízza Poselli",
     "address": "Vilara 2, Thessaloniki 546 25",
     "lat": "40.63738632422352",
-    "lng": "22.938994583377827"
+    "lng": "22.938994583377827",
+    "id": "cheapEatsRestaurants_763f0b4ef33d",
+    "slug": "pizza-poselli-763f"
   },
   {
     "url": "https://maps.app.goo.gl/Pr2NGoHPa59C1JPVA?g_st=ipc",
     "name": "FAVELA Bit Bazar",
     "address": "Olympou 72, Thessaloniki 546 31",
     "lat": "40.63897345242983",
-    "lng": "22.94448760793796"
+    "lng": "22.94448760793796",
+    "id": "cheapEatsRestaurants_5cdb8c7a5460",
+    "slug": "favela-bit-bazar-5cdb"
   },
   {
     "url": "https://maps.app.goo.gl/HfoTaA81WJgTcqWp6?g_st=ipc",
     "name": "Plateia Bit pazar",
     "address": "Προσφυγική Αγορά 16 Β, Thessaloniki 546 31",
     "lat": "40.63891956491642",
-    "lng": "22.94393646377273"
+    "lng": "22.94393646377273",
+    "id": "cheapEatsRestaurants_9e348b58c806",
+    "slug": "plateia-bit-pazar-9e34"
   },
   {
     "url": "https://maps.app.goo.gl/6mWAWHUbEwXuAb589?g_st=ipc",
     "name": "Salento Wood Fired Street Food",
     "address": "El. Venizelou 76, Thessaloniki 546 31",
     "lat": "40.639269734572295",
-    "lng": "22.943990430297482"
+    "lng": "22.943990430297482",
+    "id": "cheapEatsRestaurants_e80e8a708de9",
+    "slug": "salento-wood-fired-street-food-e80e"
   },
   {
     "url": "https://maps.app.goo.gl/ck9L5Pz4C9MGKVbV7?g_st=ipc",
     "name": "Crats Fried Chicken Egnatia",
     "address": "Egnatia 27, Thessaloniki 546 30",
     "lat": "40.63898844732417",
-    "lng": "22.938638631354078"
+    "lng": "22.938638631354078",
+    "id": "cheapEatsRestaurants_41498834b457",
+    "slug": "crats-fried-chicken-egnatia-4149"
   },
   {
     "url": "https://maps.app.goo.gl/GvH8vhGT4BrR9x9WA?g_st=ipc",
     "name": "PORKITTO - ΓΥΡΑΔΙΚΟ - ΣΟΥΒΛΑΚΙ - ΣΤΕΦΑΝΟΥ ΠΑΡΘΕΝΑ - ΘΕΣΣΑΛΟΝΙΚΗ",
     "address": "Καραολή και Δημητρίου 52, Thessaloniki 546 30",
     "lat": "40.64044750261407",
-    "lng": "22.942776573082938"
+    "lng": "22.942776573082938",
+    "id": "cheapEatsRestaurants_6807fa813ea0",
+    "slug": "porkitto-gyradiko-soyvlaki-stefanoy-parthena-thessaloniki-6807"
   },
   {
     "url": "https://maps.app.goo.gl/p1mkurFCqsY7XC3w5?g_st=ipc",
     "name": "Το Πρυτανείο",
     "address": "Alexandras Papadopoulou 72, Thessaloniki 546 33",
     "lat": "40.64303995879506",
-    "lng": "22.947630622213342"
+    "lng": "22.947630622213342",
+    "id": "cheapEatsRestaurants_59e2b6d2677d",
+    "slug": "to-prytaneio-59e2"
   },
   {
     "url": "https://maps.app.goo.gl/huQUwoVx5eZ9dY357?g_st=ipc",
     "name": "Μαμά Τερέζα",
     "address": "26is Oktovriou 15, Thessaloniki 546 27",
     "lat": "40.64077907495011",
-    "lng": "22.91819947384191"
+    "lng": "22.91819947384191",
+    "id": "cheapEatsRestaurants_65901adf52a7",
+    "slug": "mama-tereza-6590"
   },
   {
     "url": "https://maps.app.goo.gl/nAwyYBALch1ybbQSA?g_st=ipc",
     "name": "Michelangelo.skg",
     "address": "Riga Feraiou 162, Sikies 566 26",
     "lat": "40.65053808833563",
-    "lng": "22.95671243903333"
+    "lng": "22.95671243903333",
+    "id": "cheapEatsRestaurants_d40ad575edd7",
+    "slug": "michelangelo-skg-d40a"
   },
   {
     "url": "https://maps.app.goo.gl/gB9jG1sW8aaCssEs7?g_st=ipc",
     "name": "Ta Babatsika Giro",
     "address": "Αγίων Πάντων 28, Thessaloniki 561 23",
     "lat": "40.647745410832044",
-    "lng": "22.928067747195957"
+    "lng": "22.928067747195957",
+    "id": "cheapEatsRestaurants_6688c0081a92",
+    "slug": "ta-babatsika-giro-6688"
   },
   {
     "url": "https://maps.app.goo.gl/L84rScHZkgehJUri7?g_st=ipc",
     "name": "Crats Mexican",
     "address": "Giannitson 61, Thessaloniki 546 27",
     "lat": "40.646440943227944",
-    "lng": "22.920915607467233"
+    "lng": "22.920915607467233",
+    "id": "cheapEatsRestaurants_4ad6c8183391",
+    "slug": "crats-mexican-4ad6"
   },
   {
     "url": "https://maps.app.goo.gl/HehrRz31yKnDYNa49?g_st=ipc",
     "name": "Karbouniáriko",
     "address": "Nik. Plastira 11, Ampelokipi 561 23",
     "lat": "40.65687885553669",
-    "lng": "22.9247874320993"
+    "lng": "22.9247874320993",
+    "id": "cheapEatsRestaurants_2966a9f7f7df",
+    "slug": "karbouniariko-2966"
   },
   {
     "url": "https://maps.app.goo.gl/zrQxzEjiyGHcJGXt5?g_st=ipc",
     "name": "Κοτόπουλα Δέρας",
     "address": "Karaoli ke Dimitriou 154, Evosmos 562 24",
     "lat": "40.6664983188531",
-    "lng": "22.919495227155743"
+    "lng": "22.919495227155743",
+    "id": "cheapEatsRestaurants_12d4af48cdfc",
+    "slug": "kotopoyla-deras-12d4"
   },
   {
     "url": "https://maps.app.goo.gl/BYpMVurWN1yMNmFh8?g_st=ipc",
     "name": "Crats Fried Chicken Ευόσμου",
     "address": "Aristotélous 67, Evosmos 562 24",
     "lat": "40.66578126903803",
-    "lng": "22.911725635585793"
+    "lng": "22.911725635585793",
+    "id": "cheapEatsRestaurants_547f03a545e5",
+    "slug": "crats-fried-chicken-eyosmoy-547f"
   },
   {
     "url": "https://maps.app.goo.gl/ghxqsvRTJj4mWN988?g_st=ipc",
     "name": "Devido",
     "address": "Karaoli ke Dimitriou 89, Evosmos 562 24",
     "lat": "40.66696798830783",
-    "lng": "22.91206522121093"
+    "lng": "22.91206522121093",
+    "id": "cheapEatsRestaurants_da038af38ca1",
+    "slug": "devido-da03"
   },
   {
     "url": "https://maps.app.goo.gl/Keom9mTvrZ5H3Nat7?g_st=ipc",
     "name": "ΨΗΤΟΠΩΛΕΙΑ ΕΥΟΣΜΟΣ- ΑΝΩ ΚΑΤΩ",
     "address": "Tzavella 2, Evosmos 562 24",
     "lat": "40.66706897454817",
-    "lng": "22.912010033587894"
+    "lng": "22.912010033587894",
+    "id": "cheapEatsRestaurants_9aa1dc025a0d",
+    "slug": "psitopoleia-eyosmos-ano-kato-9aa1"
   },
   {
     "url": "https://maps.app.goo.gl/h5xQF5VfomnJ621E6?g_st=ipc",
     "name": "Rookie.skg",
     "address": "P. Mela 28, Evosmos 562 24",
     "lat": "40.66725409679953",
-    "lng": "22.911543036523838"
+    "lng": "22.911543036523838",
+    "id": "cheapEatsRestaurants_91f775fd05bb",
+    "slug": "rookie-skg-91f7"
   },
   {
     "url": "https://maps.app.goo.gl/aaKTJZJokUXTmmru9?g_st=ipc",
     "name": "STIVOS BURGER & STEAK",
     "address": "Ευαγγελισμού της Θεοτόκου 43, Evosmos 562 24",
     "lat": "40.66959322745075",
-    "lng": "22.911385519403897"
+    "lng": "22.911385519403897",
+    "id": "cheapEatsRestaurants_c8843856c63b",
+    "slug": "stivos-burger-steak-c884"
   },
   {
     "url": "https://maps.app.goo.gl/qCiHQcXfuVPpbvs5A?g_st=ipc",
     "name": "Η Βρωμιάρα - The Gourmet Street Food",
     "address": "Averof 60, Ioannina 452 21",
     "lat": "39.6691471152778",
-    "lng": "20.85696993484649"
+    "lng": "20.85696993484649",
+    "id": "cheapEatsRestaurants_ff94ef2f8897",
+    "slug": "i-vromiara-the-gourmet-street-food-ff94"
   },
   {
     "url": "https://maps.app.goo.gl/p8LFpYc2vTdDWnYp6?g_st=ipc",
     "name": "Filia Giannari",
     "address": "kavpevtan Mavnoli Mpantouva 65, Iraklio 713 07",
     "lat": "35.33111188005716",
-    "lng": "25.144727327039348"
+    "lng": "25.144727327039348",
+    "id": "cheapEatsRestaurants_d0529bd9203e",
+    "slug": "filia-giannari-d052"
   },
   {
     "url": "https://maps.app.goo.gl/3RSn2LjzUnKrQc289?g_st=ipc",
     "name": "Holy Smoke BBQ Streetfood",
     "address": "Eth. Antistaseos 136, Alexandroupoli 681 00",
     "lat": "40.846113407445806",
-    "lng": "25.871107111584706"
+    "lng": "25.871107111584706",
+    "id": "cheapEatsRestaurants_b9105f39221f",
+    "slug": "holy-smoke-bbq-streetfood-b910"
   },
   {
     "url": "https://maps.app.goo.gl/YaQiwsqM5G144MKZ8?g_st=ipc",
     "name": "King Food",
     "address": "Kilkis 12-14, Komotini 691 00",
     "lat": "41.119343380363595",
-    "lng": "25.40306406826728"
+    "lng": "25.40306406826728",
+    "id": "cheapEatsRestaurants_4b8e8b2c6c54",
+    "slug": "king-food-4b8e"
   },
   {
     "url": "https://maps.app.goo.gl/bBz55JsBTZudAbHR9?g_st=ipc",
     "name": "Di Santo Premium Sandwiches",
     "address": "Evgeniou Voulgareos 3, Kerkira 491 00",
     "lat": "39.6237687550092",
-    "lng": "19.923112693259046"
+    "lng": "19.923112693259046",
+    "id": "cheapEatsRestaurants_22e46faae4a1",
+    "slug": "di-santo-premium-sandwiches-22e4"
   },
   {
     "url": "https://maps.app.goo.gl/3x2uABEYb4yf4U9ZA?g_st=ipc",
     "name": "Pitta pappou",
     "address": "ΑΓΙΩΝ ΠΑΝΤΩΝ 12, agion panton 12, Kerkira 491 00",
     "lat": "39.62391916981706",
-    "lng": "19.9227027256586"
+    "lng": "19.9227027256586",
+    "id": "cheapEatsRestaurants_bc792aeec77f",
+    "slug": "pitta-pappou-bc79"
   },
   {
     "url": "https://maps.app.goo.gl/Zz9LDsNcF9KHLgfX6?g_st=ipc",
     "name": "Vlassis",
     "address": "Vasileos Georgiou, Soufli 684 00",
     "lat": "41.1944139413849",
-    "lng": "26.305196580284058"
+    "lng": "26.305196580284058",
+    "id": "cheapEatsRestaurants_0aa863b3251a",
+    "slug": "vlassis-0aa8"
   },
   {
     "url": "https://maps.app.goo.gl/HQkLX39r1Ru88dxq8?g_st=ipc",
     "name": "Mr.G's - Ψητοπωλείο - Greek Street Food",
     "address": "Geor. Papanikolaou 8, Rodos 851 00",
     "lat": "36.45328895287043",
-    "lng": "28.221248936648102"
+    "lng": "28.221248936648102",
+    "id": "cheapEatsRestaurants_a7d0ccb07796",
+    "slug": "mr-g-s-psitopoleio-greek-street-food-a7d0"
   },
   {
     "url": "https://maps.app.goo.gl/ABkEH8DF9EdZoXkb6?g_st=ipc",
     "name": "Argophageío",
     "address": "Apellou 6, Thessaloniki 546 22",
     "lat": "40.63112076930673",
-    "lng": "22.949631886815304"
+    "lng": "22.949631886815304",
+    "id": "cheapEatsRestaurants_1c3c3b1c5dd1",
+    "slug": "argophageio-1c3c"
   },
   {
     "url": "https://maps.app.goo.gl/LdnLWyeBqVd2Tcme7?g_st=ipc",
     "name": "Wolfie’s West Side",
     "address": "Kosta Varnali 6, Peristeri 121 32",
     "lat": "38.01077144638466",
-    "lng": "23.697740028763043"
+    "lng": "23.697740028763043",
+    "id": "cheapEatsRestaurants_bcddf7ad717f",
+    "slug": "wolfie-s-west-side-bcdd"
   },
   {
     "url": "https://maps.app.goo.gl/MuZFA3dXT4LnZFtL7?g_st=ipc",
     "name": "Piccola",
     "address": "Keramikou 111, Athina 104 35",
     "lat": "37.980127892484575",
-    "lng": "23.715865229557284"
+    "lng": "23.715865229557284",
+    "id": "cheapEatsRestaurants_9273dc402e3b",
+    "slug": "piccola-9273"
   },
   {
     "url": "https://maps.app.goo.gl/QMAXfCna6DxXHDpcA?g_st=ipc",
     "name": "Mozzart Pizza Center",
     "address": "Chrisospiliotissis 1, Athina 105 60",
     "lat": "37.97910186394194",
-    "lng": "23.729304129555086"
+    "lng": "23.729304129555086",
+    "id": "cheapEatsRestaurants_b7a4db625995",
+    "slug": "mozzart-pizza-center-b7a4"
   },
   {
     "url": "https://maps.app.goo.gl/NkyDdLxK9uDyWwpD7?g_st=ipc",
     "name": "Life And Chicken",
     "address": "Κέντρο, Θεσσαλονίκη, Patriarchou Ioakim 26, Thessaloniki 546 35",
     "lat": "40.633119640565006",
-    "lng": "22.95173924738418"
+    "lng": "22.95173924738418",
+    "id": "cheapEatsRestaurants_7865a8488572",
+    "slug": "life-and-chicken-7865"
   },
   {
     "url": "https://maps.app.goo.gl/fxfKxZEHaxRaJ2HfA?g_st=ipc",
     "name": "STIVOS BURGER & STEAK",
     "address": "Ευαγγελισμού της Θεοτόκου 43, Evosmos 562 24",
     "lat": "40.66959404535745",
-    "lng": "22.911384200102038"
+    "lng": "22.911384200102038",
+    "id": "cheapEatsRestaurants_b4bd6b227c80",
+    "slug": "stivos-burger-steak-b4bd"
   },
   {
     "url": "https://maps.app.goo.gl/nrXvTuy8yr3sWi7k8?g_st=ipc",
     "name": "Smasheat'o",
     "address": "Meg. Alexandrou 2, Athina 172 35",
     "lat": "37.95001486404743",
-    "lng": "23.73773292955517"
+    "lng": "23.73773292955517",
+    "id": "cheapEatsRestaurants_1640e0da72d1",
+    "slug": "smasheat-o-1640"
   },
   {
     "url": "https://maps.app.goo.gl/haKrAci9tVQtSodQ6?g_st=ipc",
     "name": "SESOULA Street Food",
     "address": "Mitropoleos 6, Thessaloniki 546 25",
     "lat": "40.63477525409266",
-    "lng": "22.93757742955132"
+    "lng": "22.93757742955132",
+    "id": "cheapEatsRestaurants_e169e8264e7b",
+    "slug": "sesoula-street-food-e169"
   },
   {
     "url": "https://maps.app.goo.gl/Yc8gq3PhahDVKDreA?g_st=ipc",
     "name": "Thanasis & Sons",
     "address": "Al. Papanastasiou 133, Thessaloniki 542 50",
     "lat": "40.60379849059069",
-    "lng": "22.96906169951488"
+    "lng": "22.96906169951488",
+    "id": "cheapEatsRestaurants_cbbee327a904",
+    "slug": "thanasis-sons-cbbe"
   },
   {
     "url": "https://maps.app.goo.gl/DHgsKVMBHknJk7xq9?g_st=ipc",
     "name": "Jacaranda",
     "address": "Στέλιου Καζαντζίδη 24, Pilea 555 35",
     "lat": "40.58300466355052",
-    "lng": "22.982557429553488"
+    "lng": "22.982557429553488",
+    "id": "cheapEatsRestaurants_0cc92ae6cc0a",
+    "slug": "jacaranda-0cc9"
   },
   {
     "url": "https://maps.app.goo.gl/PmAaFLYLL5VBMRSWA?g_st=ipc",
     "name": "Souvlaki Street",
     "address": "Geor. Drosini 14, Thessaloniki 546 44",
     "lat": "40.604992472392965",
-    "lng": "22.959141629555784"
+    "lng": "22.959141629555784",
+    "id": "cheapEatsRestaurants_db8e30aa6453",
+    "slug": "souvlaki-street-db8e"
   },
   {
     "url": "https://maps.app.goo.gl/GHNR3JPnavP3hDJJ8?g_st=ipc",
     "name": "Pízza Poselli",
     "address": "Vilara 2, Thessaloniki 546 25",
     "lat": "40.63738614523292",
-    "lng": "22.938994770654872"
+    "lng": "22.938994770654872",
+    "id": "cheapEatsRestaurants_2a2e59392a41",
+    "slug": "pizza-poselli-2a2e"
   },
   {
     "url": "https://maps.app.goo.gl/GFvVfqZw2Pr8rjDM9?g_st=ipc",
     "name": "Chicktok",
     "address": "Papanastasiou 2, Chania 731 34",
     "lat": "35.50994487194263",
-    "lng": "24.03139722977992"
+    "lng": "24.03139722977992",
+    "id": "cheapEatsRestaurants_f847faf9509f",
+    "slug": "chicktok-f847"
   },
   {
     "url": "https://maps.app.goo.gl/rMq3J3GrNZNoRMpZ9?g_st=ipc",
     "name": "Pizza Chris",
     "address": "Armenopoulou 17, Thessaloniki 546 35",
     "lat": "40.634238789767664",
-    "lng": "22.952894059300746"
+    "lng": "22.952894059300746",
+    "id": "cheapEatsRestaurants_3a84f1e5b6b2",
+    "slug": "pizza-chris-3a84"
   },
   {
     "url": "https://maps.app.goo.gl/BFLYuybZSdJEwfK87?g_st=ipc",
     "name": "Kyr Giorgis",
     "address": "Βενιζέλου 54, Thessaloniki 546 31",
     "lat": "40.63768120747627",
-    "lng": "22.942676100417227"
+    "lng": "22.942676100417227",
+    "id": "cheapEatsRestaurants_e0434e3ff629",
+    "slug": "kyr-giorgis-e043"
   },
   {
     "url": "https://maps.app.goo.gl/m8WS13tHpdvSyxE99?g_st=ipc",
     "name": "Mimis",
     "address": "Ag. Dimitriou 126, Thessaloniki 546 35",
     "lat": "40.63706330748784",
-    "lng": "22.950306559309492"
+    "lng": "22.950306559309492",
+    "id": "cheapEatsRestaurants_963344db5c1c",
+    "slug": "mimis-9633"
   },
   {
     "url": "https://maps.app.goo.gl/Ce9N11e1dVKsZ2t17?g_st=ipc",
     "name": "Δια Χειρός Αρέτου",
     "address": "Kon/nou Karamanli 37, Eleftherio Kordelio 563 34",
     "lat": "40.66705307967295",
-    "lng": "22.898083719400002"
+    "lng": "22.898083719400002",
+    "id": "cheapEatsRestaurants_260862299166",
+    "slug": "dia-cheiros-aretoy-2608"
   },
   {
     "url": "https://maps.app.goo.gl/4YvZLZyRTdLs8Tpz7?g_st=ipc",
     "name": "Dia Xoiros Polixni",
     "address": "Agnostou Stratiotou 13, Polichni 565 33",
     "lat": "40.658685525095265",
-    "lng": "22.942609620515523"
+    "lng": "22.942609620515523",
+    "id": "cheapEatsRestaurants_07b527cd1a8e",
+    "slug": "dia-xoiros-polixni-07b5"
   },
   {
     "url": "https://maps.app.goo.gl/dKu85q9fYtc6krXf7?g_st=ipc",
     "name": "Souvlatzidiko",
     "address": "Διαγορα, με Λαμπρακη, Thessaloniki 543 51",
     "lat": "40.615140054166176",
-    "lng": "22.976602700104493"
+    "lng": "22.976602700104493",
+    "id": "cheapEatsRestaurants_543fb752ef8d",
+    "slug": "souvlatzidiko-543f"
   },
   {
     "url": "https://maps.app.goo.gl/9ryfqmhFoEZjSBu89?g_st=ipc",
     "name": "Steakhouse \"Stelios\"",
     "address": "Agnostou Stratiotou 40, Polichni 565 33",
     "lat": "40.65823566269056",
-    "lng": "22.942075529553357"
+    "lng": "22.942075529553357",
+    "id": "cheapEatsRestaurants_30688d61885b",
+    "slug": "steakhouse-stelios-3068"
   },
   {
     "url": "https://maps.app.goo.gl/jsFLzjxU7rbpCatGA?g_st=ipc",
     "name": "Pizza Romea",
     "address": "Ag. Dimitriou 135, Thessaloniki 546 35",
     "lat": "40.636170436374",
-    "lng": "22.952743400099628"
+    "lng": "22.952743400099628",
+    "id": "cheapEatsRestaurants_c01da58dabd8",
+    "slug": "pizza-romea-c01d"
   },
   {
     "url": "https://maps.app.goo.gl/LWSzARXmcX6GhcQdA?g_st=ipc",
     "name": "\"AIGLI\" 24h CREPE-toast-coffee-BOUGATSA",
     "address": "Ag. Dimitriou 89, Thessaloniki 546 33",
     "lat": "40.638115571761915",
-    "lng": "22.948717629555613"
+    "lng": "22.948717629555613",
+    "id": "cheapEatsRestaurants_6f8bdca7e315",
+    "slug": "aigli-24h-crepe-toast-coffee-bougatsa-6f8b"
   },
   {
     "url": "https://maps.app.goo.gl/QeUW3QZjeTvschnB8?g_st=ipc",
     "name": "ΓΡΝ",
     "address": "Ermou 24, Thessaloniki 546 24",
     "lat": "40.634922554090494",
-    "lng": "22.9424405001041"
+    "lng": "22.9424405001041",
+    "id": "cheapEatsRestaurants_2a4da9b1c110",
+    "slug": "grn-2a4d"
   },
   {
     "url": "https://maps.app.goo.gl/Jp9h1Xe2kPqJT7td9?g_st=ipc",
     "name": "Ωμέγα Grill",
     "address": "Αμφιπόλεως 34, Thessaloniki 544 54",
     "lat": "40.6085969632586",
-    "lng": "22.97871142955339"
+    "lng": "22.97871142955339",
+    "id": "cheapEatsRestaurants_1de3117b26db",
+    "slug": "omega-grill-1de3"
   },
   {
     "url": "https://maps.app.goo.gl/qLtPEtu7Ux91nEnP8?g_st=ipc",
     "name": "LAST BITE",
     "address": "Kiriakou Manolaki 1, Thessaloniki 546 35",
     "lat": "40.63432876296427",
-    "lng": "22.95290522955353"
+    "lng": "22.95290522955353",
+    "id": "cheapEatsRestaurants_7ae963e72327",
+    "slug": "last-bite-7ae9"
   },
   {
     "url": "https://maps.app.goo.gl/wecLJ1nJGGgQYeLg9?g_st=ipc",
     "name": "Mouza grill house",
     "address": "Chora Skyrou, Skiros 340 07",
     "lat": "38.90439949082661",
-    "lng": "24.564789359234034"
+    "lng": "24.564789359234034",
+    "id": "cheapEatsRestaurants_54502c287d87",
+    "slug": "mouza-grill-house-5450"
   },
   {
     "url": "https://maps.app.goo.gl/QNUEoQzqLuXtrpVc7?g_st=ipc",
     "name": "Funky's Thessaloniki",
     "address": "Grigoriou Lampraki 110, Thessaloniki 543 51",
     "lat": "40.615543107651526",
-    "lng": "22.974915159309568"
+    "lng": "22.974915159309568",
+    "id": "cheapEatsRestaurants_8f3b208739c0",
+    "slug": "funky-s-thessaloniki-8f3b"
   },
   {
     "url": "https://maps.app.goo.gl/AqaCxycK19KfYLPcA?g_st=ipc",
     "name": "Terpsilarýngio",
     "address": "Mark. Mpotsari 14, Thessaloniki 546 43",
     "lat": "40.60676570771858",
-    "lng": "22.953926859309924"
+    "lng": "22.953926859309924",
+    "id": "cheapEatsRestaurants_f00923c77588",
+    "slug": "terpsilaryngio-f009"
   },
   {
     "url": "https://maps.app.goo.gl/N2y5cFSV48wgtN7g7?g_st=ipc",
     "name": "Καλοφαγάς Ψητοπωλείο",
     "address": "Politechniou 24, Thessaloniki 546 25",
     "lat": "40.635544989771915",
-    "lng": "22.937363400408646"
+    "lng": "22.937363400408646",
+    "id": "cheapEatsRestaurants_12570c882da7",
+    "slug": "kalofagas-psitopoleio-1257"
   },
   {
     "url": "https://maps.app.goo.gl/Y7VQCwH5JjChrXDb9?g_st=ipc",
     "name": "HOT DOG Land",
     "address": "Ag. Dimitriou 100, Thessaloniki 546 31",
     "lat": "40.63820917018459",
-    "lng": "22.947895316027907"
+    "lng": "22.947895316027907",
+    "id": "cheapEatsRestaurants_f0f66d3f1d3f",
+    "slug": "hot-dog-land-f0f6"
   },
   {
     "url": "https://maps.app.goo.gl/M1gK3j7aiDegVjjs6?g_st=ipc",
     "name": "Serafino",
     "address": "Metamorfoseos 11, Kalamaria 551 32",
     "lat": "40.58386899036688",
-    "lng": "22.951506267568906"
+    "lng": "22.951506267568906",
+    "id": "cheapEatsRestaurants_70bee89e8126",
+    "slug": "serafino-70be"
   },
   {
     "url": "https://maps.app.goo.gl/ATqXPJfCjdXR8wes9?g_st=ipc",
     "name": "Steakhouse MAKIS",
     "address": "Aristotélous 35, Evosmos 562 24",
     "lat": "40.663898455247235",
-    "lng": "22.911569590344406"
+    "lng": "22.911569590344406",
+    "id": "cheapEatsRestaurants_78b831279473",
+    "slug": "steakhouse-makis-78b8"
   },
   {
     "url": "https://maps.app.goo.gl/LAQoYu8du3ZFbwSR7?g_st=ipc",
     "name": "Ψητοπωλείο \"ΝΙΚΟΣ\"",
     "address": "Meg. Alexandrou 56, Evosmos 562 24",
     "lat": "40.66963563529277",
-    "lng": "22.908013940571315"
+    "lng": "22.908013940571315",
+    "id": "cheapEatsRestaurants_f921d077e63d",
+    "slug": "psitopoleio-nikos-f921"
   },
   {
     "url": "https://maps.app.goo.gl/okGWtgt8ngD1WL4a9?g_st=ipc",
     "name": "Peter Steakhouse",
     "address": "Protomagias 21, Evosmos 562 24",
     "lat": "40.67380649867122",
-    "lng": "22.919338610112415"
+    "lng": "22.919338610112415",
+    "id": "cheapEatsRestaurants_a08661b07d70",
+    "slug": "peter-steakhouse-a086"
   },
   {
     "url": "https://maps.app.goo.gl/KmNipqE8jJT8qrZ17?g_st=ipc",
     "name": "Grill Junior",
     "address": "Thermopilon 31, Thessaloniki 542 48",
     "lat": "40.60286928963285",
-    "lng": "22.956953349868357"
+    "lng": "22.956953349868357",
+    "id": "cheapEatsRestaurants_0368efbccc32",
+    "slug": "grill-junior-0368"
   },
   {
     "url": "https://maps.app.goo.gl/fo4Tf9Q9F4pnn1rn9?g_st=ipc",
     "name": "ΜΑΝΤΡΙ ΑΕ",
     "address": "Eth. Aminis 18, Thessaloniki 546 21",
     "lat": "40.62840905411716",
-    "lng": "22.95104812955137"
+    "lng": "22.95104812955137",
+    "id": "cheapEatsRestaurants_88cea0f97a36",
+    "slug": "mantri-ae-88ce"
   },
   {
     "url": "https://maps.app.goo.gl/8t8Wb8QaYGPzQ1F76?g_st=ipc",
     "name": "Yum Tree",
     "address": "Dim. Gounari 5, Thessaloniki 546 22",
     "lat": "40.62786595411914",
-    "lng": "22.947554429551257"
+    "lng": "22.947554429551257",
+    "id": "cheapEatsRestaurants_09ba201c7611",
+    "slug": "yum-tree-09ba"
   },
   {
     "url": "https://maps.app.goo.gl/sNmZpvpUx9Yt5Avj6?g_st=ipc",
     "name": "Ο Γύρος του Μιχάλη",
     "address": "Makedonias 105, Thessaloniki 542 48",
     "lat": "40.60335488153119",
-    "lng": "22.961687059004745"
+    "lng": "22.961687059004745",
+    "id": "cheapEatsRestaurants_6567e814aa5e",
+    "slug": "o-gyros-toy-michali-6567"
   },
   {
     "url": "https://maps.app.goo.gl/EppjR6X5bpodm5MR7?g_st=ipc",
     "name": "PAPERBAG || street food",
     "address": "Achiropiitou 2, Thessaloniki 546 35",
     "lat": "40.634629758562504",
-    "lng": "22.948314502108076"
+    "lng": "22.948314502108076",
+    "id": "cheapEatsRestaurants_8af2c5ab8db1",
+    "slug": "paperbag-street-food-8af2"
   },
   {
     "url": "https://maps.app.goo.gl/Mew4X3m69PgK4Y2TA?g_st=ipc",
     "name": "Salu Deli Bar",
     "address": "Manousagiannaki 20, Thessaloniki 546 21",
     "lat": "40.62815289802217",
-    "lng": "22.952006929781376"
+    "lng": "22.952006929781376",
+    "id": "cheapEatsRestaurants_360afa6ead29",
+    "slug": "salu-deli-bar-360a"
   },
   {
     "url": "https://maps.app.goo.gl/j2KRM4BYgZPKkWer5?g_st=ipc",
     "name": "Beeftekopolis",
     "address": "Marasli 23, Athina 106 76",
     "lat": "37.97774283666473",
-    "lng": "23.746360813383102"
+    "lng": "23.746360813383102",
+    "id": "cheapEatsRestaurants_61f60bc4ea81",
+    "slug": "beeftekopolis-61f6"
   },
   {
     "url": "https://maps.app.goo.gl/K3sutrhR1ozDJoT67?g_st=ipc",
     "name": "PRATINA Burger Project",
     "address": "Veroias 5, Thessaloniki 546 25",
     "lat": "40.63713687744245",
-    "lng": "22.93759768195784"
+    "lng": "22.93759768195784",
+    "id": "cheapEatsRestaurants_47ac0ee57ead",
+    "slug": "pratina-burger-project-47ac"
   },
   {
     "url": "https://maps.app.goo.gl/ytds7DdcMdh2G5oA8?g_st=ipc",
     "name": "ΕΥΛΟΓΗΣΟΝ-ΨΗΤΟΠΩΛΕΙΑ ΙΛΙΟΝ",
     "address": "Thivon 481, Ilion 131 21",
     "lat": "38.029256363760155",
-    "lng": "23.699607500108378"
+    "lng": "23.699607500108378",
+    "id": "cheapEatsRestaurants_1be49628e345",
+    "slug": "eylogison-psitopoleia-ilion-1be4"
   },
   {
     "url": "https://maps.app.goo.gl/swPLtX8A41RYYYN68?g_st=ipc",
     "name": "MANGIA MI",
     "address": "El. Venizelou 60, Thessaloniki 546 31",
     "lat": "40.63806065407829",
-    "lng": "22.943092100104018"
+    "lng": "22.943092100104018",
+    "id": "cheapEatsRestaurants_97b044a97fc0",
+    "slug": "mangia-mi-97b0"
   },
   {
     "url": "https://maps.app.goo.gl/PgrDAEWAFbwF6go48?g_st=ipc",
     "name": "Jackaroo",
     "address": "Leof. Kifisias 70, Marousi 151 25",
     "lat": "38.04618103563096",
-    "lng": "23.807668129553196"
+    "lng": "23.807668129553196",
+    "id": "cheapEatsRestaurants_843263490ea4",
+    "slug": "jackaroo-8432"
   },
   {
     "url": "https://maps.app.goo.gl/R1wrCFqhDWYwJViQ7?g_st=ipc",
     "name": "Krispy by Jackaroo",
     "address": "Evripidou 15, Athina 105 60",
     "lat": "37.97957426393904",
-    "lng": "23.728377000107947"
+    "lng": "23.728377000107947",
+    "id": "cheapEatsRestaurants_e6b3f1094174",
+    "slug": "krispy-by-jackaroo-e6b3"
   },
   {
     "url": "https://maps.app.goo.gl/w5kby75ZDPeF56mp7?g_st=ic",
     "name": "Gouda luck",
     "address": "Egnatia 144, Thessaloniki 546 22",
     "lat": "40.632030062154726",
-    "lng": "22.9512395674924"
+    "lng": "22.9512395674924",
+    "id": "cheapEatsRestaurants_59b46ad1098f",
+    "slug": "gouda-luck-59b4"
   },
   {
     "url": "https://maps.app.goo.gl/4aXg5d6SUN73hXDt8?g_st=ic",
     "name": "La Jacka",
     "address": "Καραΐσκου 117, Pireas 185 32",
     "lat": "37.9421277470468",
-    "lng": "23.647527719022438"
+    "lng": "23.647527719022438",
+    "id": "cheapEatsRestaurants_5cd53c0e6d00",
+    "slug": "la-jacka-5cd5"
   },
   {
     "url": "https://maps.app.goo.gl/ZgMdxKzTjuAureyV8?g_st=ic",
     "name": "Grill 105 Street",
     "address": "Kassandrou 105, Thessaloniki 546 33",
     "lat": "40.63849961526695",
-    "lng": "22.950253004997894"
+    "lng": "22.950253004997894",
+    "id": "cheapEatsRestaurants_949277637a55",
+    "slug": "grill-105-street-9492"
   },
   {
     "url": "https://maps.app.goo.gl/VSmxeGeUsq75QADx9?g_st=ic",
     "name": "ΓΙΑΝΝΙΩΤΙΚΟ ΣΟΥΒΛΑΚΙ",
     "address": "Agias Paraskevis 95, Chalandri 152 34",
     "lat": "38.018885728218706",
-    "lng": "23.80780825876153"
+    "lng": "23.80780825876153",
+    "id": "cheapEatsRestaurants_3872707b22c4",
+    "slug": "gianniotiko-soyvlaki-3872"
   },
   {
     "url": "https://maps.app.goo.gl/bx6SursnbZv26g7m7?g_st=ic",
     "name": "The Handmade souvlaki Ascension",
     "address": "Eth. Antistaseos 26, Vrilissia 152 35",
     "lat": "38.035547141118364",
-    "lng": "23.82691676685056"
+    "lng": "23.82691676685056",
+    "id": "cheapEatsRestaurants_26f9a7f050c1",
+    "slug": "the-handmade-souvlaki-ascension-26f9"
   }
 ]

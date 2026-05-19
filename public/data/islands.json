@@ -18,7 +18,8 @@
       "greece",
       "ellada",
       "greece"
-    ]
+    ],
+    "slug": "islands-athens-title-cab4"
   },
   {
     "id": "island-crete",
@@ -40,7 +41,8 @@
       "rethymno",
       "rethimno",
       "agios nikolaos"
-    ]
+    ],
+    "slug": "islands-crete-title-436b"
   },
   {
     "id": "thessaloniki",
@@ -59,7 +61,8 @@
       "skg",
       "ellada",
       "greece"
-    ]
+    ],
+    "slug": "islands-thessaloniki-title-1711"
   },
   {
     "id": "island-mykonos",
@@ -80,7 +83,8 @@
       "kyklades",
       "party",
       "mukonos"
-    ]
+    ],
+    "slug": "islands-mykonos-title-2211"
   },
   {
     "id": "island-santorini",
@@ -99,7 +103,8 @@
       "oia",
       "oia town",
       "kyklades"
-    ]
+    ],
+    "slug": "islands-santorini-title-ab12"
   },
   {
     "id": "island-rhodes",
@@ -109,7 +114,14 @@
     "link": "https://maps.app.goo.gl/tLQZpTA6oyRoNg1w9",
     "target": "_blank",
     "rel": "noopener noreferrer",
-    "keywords": ["island", "greece", "rhodes", "rodos", "dodecanese"]
+    "keywords": [
+      "island",
+      "greece",
+      "rhodes",
+      "rodos",
+      "dodecanese"
+    ],
+    "slug": "islands-rhodes-title-c282"
   },
   {
     "id": "island-aegina",
@@ -128,7 +140,8 @@
       "saronic",
       "argosaronic",
       "near athens"
-    ]
+    ],
+    "slug": "islands-aegina-title-236d"
   },
   {
     "id": "island-corfu",
@@ -146,7 +159,8 @@
       "kerkira",
       "ionio",
       "ionian"
-    ]
+    ],
+    "slug": "islands-corfu-title-063c"
   },
   {
     "id": "island-paros",
@@ -169,7 +183,8 @@
       "kyklades",
       "kuklades",
       "party"
-    ]
+    ],
+    "slug": "islands-paros-title-f417"
   },
   {
     "id": " island-zakynthos",
@@ -187,7 +202,8 @@
       "kefalonia",
       "kefalonia island",
       "ionio"
-    ]
+    ],
+    "slug": "islands-zakynthos-title-83c5"
   },
   {
     "id": "island-leukada",
@@ -211,7 +227,8 @@
       "ionio",
       "ionian",
       "egremni"
-    ]
+    ],
+    "slug": "islands-leukada-title-851c"
   },
   {
     "id": "island-skiathos",
@@ -228,7 +245,8 @@
       "skiathos island",
       "skiathos town",
       "sporades"
-    ]
+    ],
+    "slug": "islands-skiathos-title-05c5"
   },
   {
     "id": "island-naxos",
@@ -246,7 +264,8 @@
       "naxos town",
       "kyklades",
       "kuklades"
-    ]
+    ],
+    "slug": "islands-naxos-title-6ec5"
   },
   {
     "id": "island-karpathos",
@@ -264,7 +283,8 @@
       "karpathos town",
       "dodecanese",
       "dodekanisa"
-    ]
+    ],
+    "slug": "islands-karpathos-title-5dcb"
   },
   {
     "id": "island-syros",
@@ -283,7 +303,8 @@
       "ermoupoli",
       "ermoupoli town",
       "kyklades"
-    ]
+    ],
+    "slug": "islands-syros-title-cb94"
   },
   {
     "id": "island-kos",
@@ -301,7 +322,8 @@
       "kos town",
       "dodecanese",
       "dodekanisa"
-    ]
+    ],
+    "slug": "islands-kos-title-008b"
   },
   {
     "id": "island-kefalonia",
@@ -318,7 +340,8 @@
       "kefalonia island",
       "kefalonia town",
       "ionio"
-    ]
+    ],
+    "slug": "islands-kefalonia-title-1d8c"
   },
   {
     "id": "island-kythnos",
@@ -336,7 +359,8 @@
       "kythnos town",
       "kuklades",
       "kyklades"
-    ]
+    ],
+    "slug": "islands-kythnos-title-2da7"
   },
   {
     "id": "island-skyros",
@@ -353,7 +377,8 @@
       "skyros island",
       "skyros town",
       "sporades"
-    ]
+    ],
+    "slug": "islands-skyros-title-0372"
   },
   {
     "id": "island-lemnos",
@@ -371,7 +396,8 @@
       "lemnos town",
       "aigaio",
       "aegean"
-    ]
+    ],
+    "slug": "islands-lemnos-title-fe37"
   },
   {
     "id": "island-sifnos",
@@ -389,7 +415,8 @@
       "sifnos town",
       "kyklades",
       "kuklades"
-    ]
+    ],
+    "slug": "islands-sifnos-title-9234"
   },
   {
     "id": "halkidiki",
@@ -439,7 +466,8 @@
       "fourka",
       "kallithea",
       "diaporos"
-    ]
+    ],
+    "slug": "islands-halkidiki-title-b021"
   },
   {
     "id": "island-evia",
@@ -465,7 +493,8 @@
       "edipsos",
       "karystos",
       "styra"
-    ]
+    ],
+    "slug": "islands-evia-title-afcf"
   },
   {
     "id": "island-chios",
@@ -484,7 +513,8 @@
       "hyos",
       "aegean",
       "egian"
-    ]
+    ],
+    "slug": "islands-chios-title-37ee"
   },
   {
     "id": "island-tinos",
@@ -504,7 +534,8 @@
       "panagia evangelistria",
       "evagelistria",
       "myk"
-    ]
+    ],
+    "slug": "islands-tinos-title-6acb"
   },
   {
     "id": "nafplio",
@@ -523,7 +554,8 @@
       "nafplio town",
       "peloponnese",
       "peloponnesos"
-    ]
+    ],
+    "slug": "islands-nafplio-title-8ae6"
   },
   {
     "id": "island-astypalea",
@@ -542,7 +574,8 @@
       "astypalea beaches",
       "aegean",
       "aigaio"
-    ]
+    ],
+    "slug": "islands-astypalea-title-e319"
   },
   {
     "id": "island-hydra",
@@ -562,7 +595,8 @@
       "argosaronic",
       "idra",
       "ydra"
-    ]
+    ],
+    "slug": "islands-hydra-title-895c"
   },
   {
     "id": "island-amorgos",
@@ -580,7 +614,8 @@
       "amorgos town",
       "kyklades",
       "kuklades"
-    ]
+    ],
+    "slug": "islands-amorgos-title-7e79"
   },
   {
     "id": "pelion",
@@ -609,6 +644,7 @@
       "agios ioannis",
       "xorychti",
       "mouresi"
-    ]
+    ],
+    "slug": "islands-pelion-title-b1bf"
   }
 ]
