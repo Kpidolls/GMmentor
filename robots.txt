@@ -4,6 +4,7 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /pwa-test
+Disallow: /pwa-test/
 
 # Host
 Host: https://googlementor.com

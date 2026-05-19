@@ -1,58 +1,86 @@
 [
   {
     "question": "qa.whatIsGooglementor",
-    "answer": "qa.whatIsGooglementorAnswer"
+    "answer": "qa.whatIsGooglementorAnswer",
+    "id": "questionsAndAnswers_2c3e71428ff9",
+    "slug": "qa-whatisgooglementor-2c3e"
   },
   {
     "question": "qa.whatAreLists",
-    "answer": "qa.whatAreListsAnswer"
+    "answer": "qa.whatAreListsAnswer",
+    "id": "questionsAndAnswers_94ee633f5de8",
+    "slug": "qa-whatarelists-94ee"
   },
   {
     "question": "qa.howToUseList",
-    "answer": "qa.howToUseListAnswer"
+    "answer": "qa.howToUseListAnswer",
+    "id": "questionsAndAnswers_8fe24a0fd615",
+    "slug": "qa-howtouselist-8fe2"
   },
   {
     "question": "qa.areListsFree",
-    "answer": "qa.areListsFreeAnswer"
+    "answer": "qa.areListsFreeAnswer",
+    "id": "questionsAndAnswers_82fbeeae794b",
+    "slug": "qa-arelistsfree-82fb"
   },
   {
     "question": "qa.howToHideList",
-    "answer": "qa.howToHideListAnswer"
+    "answer": "qa.howToHideListAnswer",
+    "id": "questionsAndAnswers_a5050470a3c3",
+    "slug": "qa-howtohidelist-a505"
   },
   {
     "question": "qa.howToShowList",
-    "answer": "qa.howToShowListAnswer"
+    "answer": "qa.howToShowListAnswer",
+    "id": "questionsAndAnswers_4271ea7ed4ce",
+    "slug": "qa-howtoshowlist-4271"
   },
   {
     "question": "qa.howOftenUpdated",
-    "answer": "qa.howOftenUpdatedAnswer"
+    "answer": "qa.howOftenUpdatedAnswer",
+    "id": "questionsAndAnswers_65d95299f62e",
+    "slug": "qa-howoftenupdated-65d9"
   },
   {
     "question": "qa.whyTravelInsurance",
-    "answer": "qa.whyTravelInsuranceAnswer"
+    "answer": "qa.whyTravelInsuranceAnswer",
+    "id": "questionsAndAnswers_e2d807cd2dc7",
+    "slug": "qa-whytravelinsurance-e2d8"
   },
   {
     "question": "qa.whoCanBenefit",
-    "answer": "qa.whoCanBenefitAnswer"
+    "answer": "qa.whoCanBenefitAnswer",
+    "id": "questionsAndAnswers_2322b628394b",
+    "slug": "qa-whocanbenefit-2322"
   },
   {
     "question": "qa.whyBuyEsim",
-    "answer": "qa.whyBuyEsimAnswer"
+    "answer": "qa.whyBuyEsimAnswer",
+    "id": "questionsAndAnswers_0beb33897e06",
+    "slug": "qa-whybuyesim-0beb"
   },
   {
     "question": "qa.whyAiraloEsim",
-    "answer": "qa.whyAiraloEsimAnswer"
+    "answer": "qa.whyAiraloEsimAnswer",
+    "id": "questionsAndAnswers_16f48351543b",
+    "slug": "qa-whyairaloesim-16f4"
   },
   {
     "question": "qa.howToContact",
-    "answer": "qa.howToContactAnswer"
+    "answer": "qa.howToContactAnswer",
+    "id": "questionsAndAnswers_969752b36987",
+    "slug": "qa-howtocontact-9697"
   },
   {
     "question": "qa.areListsSecure",
-    "answer": "qa.areListsSecureAnswer"
+    "answer": "qa.areListsSecureAnswer",
+    "id": "questionsAndAnswers_a3d53d0ea130",
+    "slug": "qa-arelistssecure-a3d5"
   },
   {
     "question": "qa.canDeleteList",
-    "answer": "qa.canDeleteListAnswer"
+    "answer": "qa.canDeleteListAnswer",
+    "id": "questionsAndAnswers_1d2f9b9992ba",
+    "slug": "qa-candeletelist-1d2f"
   }
 ]

@@ -4,20 +4,26 @@
     "url": "https://maps.app.goo.gl/sample28",
     "address": "Adrianou 116, Athina 105 58",
     "lat": 37.972,
-    "lng": 23.726
+    "lng": 23.726,
+    "id": "gyrosSouvlakiRestaurants_22073f048cbc",
+    "slug": "o-kostas-2207"
   },
   {
     "name": "Souvlaki Monastiraki",
     "url": "https://maps.app.goo.gl/sample29",
     "address": "Mitropoleos 2, Athina 105 63",
     "lat": 37.975,
-    "lng": 23.729
+    "lng": 23.729,
+    "id": "gyrosSouvlakiRestaurants_514910b62a38",
+    "slug": "souvlaki-monastiraki-5149"
   },
   {
     "name": "Gyros Psyrri",
     "url": "https://maps.app.goo.gl/sample30",
     "address": "Agiou Filippou 19, Athina 105 55",
     "lat": 37.974,
-    "lng": 23.727
+    "lng": 23.727,
+    "id": "gyrosSouvlakiRestaurants_ddb106f4030b",
+    "slug": "gyros-psyrri-ddb1"
   }
 ]

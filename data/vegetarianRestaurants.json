@@ -4,804 +4,1034 @@
     "name": "Το Βαζάκι Juice Bar",
     "address": "Αριστοτέλους 33, Χαλάνδρι 152 34",
     "lat": "38.020998153795155",
-    "lng": "23.802723695299136"
+    "lng": "23.802723695299136",
+    "id": "vegetarianRestaurants_fee39d51fd47",
+    "slug": "to-vazaki-juice-bar-fee3"
   },
   {
     "url": "https://maps.app.goo.gl/MQUsgqyS7DsLPK3b8?g_st=ipc",
     "name": "JERRY’S",
     "address": "Εθ. Αμύνης 27, Παπάγου 156 69",
     "lat": "37.99081509066345",
-    "lng": "23.798627193176273"
+    "lng": "23.798627193176273",
+    "id": "vegetarianRestaurants_401008e1cc63",
+    "slug": "jerry-s-4010"
   },
   {
     "url": "https://maps.app.goo.gl/645ivXdiBXiq5evG9?g_st=ipc",
     "name": "Ευριπίδης",
     "address": "Λεωφ. Καποδιστρίου 78, Φιλοθέη 142 35",
     "lat": "38.0306192216948",
-    "lng": "23.77843102660416"
+    "lng": "23.77843102660416",
+    "id": "vegetarianRestaurants_d059c20a8f7f",
+    "slug": "eyripidis-d059"
   },
   {
     "url": "https://maps.app.goo.gl/17ei25wSbsQBZTsP6?g_st=ipc",
     "name": "VEGAN CAROUSEL",
     "address": "Σοφίας Σλήμαν 6, Αθήνα 115 26",
     "lat": "37.99118694073678",
-    "lng": "23.766617711776497"
+    "lng": "23.766617711776497",
+    "id": "vegetarianRestaurants_d960699f9346",
+    "slug": "vegan-carousel-d960"
   },
   {
     "url": "https://maps.app.goo.gl/FunBo9MHcx5NDxcQ7?g_st=ipc",
     "name": "NaanStop Indian Cuisine",
     "address": "Λεωφ. Αλεξάνδρας 223, Αθήνα 115 23",
     "lat": "37.98689020299092",
-    "lng": "23.76047169895521"
+    "lng": "23.76047169895521",
+    "id": "vegetarianRestaurants_8d2c7b9eb78e",
+    "slug": "naanstop-indian-cuisine-8d2c"
   },
   {
     "url": "https://maps.app.goo.gl/iJpPrYiwEWZ6Zhk59?g_st=ipc",
     "name": "Mimi's Cafe Vegan",
     "address": "Πλ. Αργεντινής Δημοκρατίας 4, Αθήνα 114 72",
     "lat": "37.98928428831877",
-    "lng": "23.74327396218684"
+    "lng": "23.74327396218684",
+    "id": "vegetarianRestaurants_3ea2a766339f",
+    "slug": "mimi-s-cafe-vegan-3ea2"
   },
   {
     "url": "https://maps.app.goo.gl/c3DSV5tXT2pKELDL8?g_st=ipc",
     "name": "λέικ καφέ",
     "address": "Αιγίνης 1, Αθήνα 113 62",
     "lat": "37.99570532128052",
-    "lng": "23.737094528681606"
+    "lng": "23.737094528681606",
+    "id": "vegetarianRestaurants_35af3a72d872",
+    "slug": "leik-kafe-35af"
   },
   {
     "url": "https://maps.app.goo.gl/s2jj4xW4U6Pk7W3N9?g_st=ipc",
     "name": "Groceristas",
     "address": "Σπύρου Μερκούρη 50, Αθήνα 116 34",
     "lat": "37.97253235052261",
-    "lng": "23.747890805995713"
+    "lng": "23.747890805995713",
+    "id": "vegetarianRestaurants_273e01494cb2",
+    "slug": "groceristas-273e"
   },
   {
     "url": "https://maps.app.goo.gl/CBgjw3FjXKsmZLqP9?g_st=ipc",
     "name": "Γεύσεις της Δαμασκού",
     "address": "Φωκίωνος Νέγρη 19, Αθήνα 112 57",
     "lat": "38.00104187111536",
-    "lng": "23.735527497819955"
+    "lng": "23.735527497819955",
+    "id": "vegetarianRestaurants_ac24d91fc2b5",
+    "slug": "geyseis-tis-damaskoy-ac24"
   },
   {
     "url": "https://maps.app.goo.gl/9hv6BgvR3DARK8469?g_st=ipc",
     "name": "ΓΚΝΟΥ",
     "address": "Επτανήσου 13, Αθήνα 112 57",
     "lat": "37.99747301743944",
-    "lng": "23.73513103670901"
+    "lng": "23.73513103670901",
+    "id": "vegetarianRestaurants_83307181ea44",
+    "slug": "gknoy-8330"
   },
   {
     "url": "https://maps.app.goo.gl/TSDU2Hb2gcym4bqZ7?g_st=ipc",
     "name": "Ohh Boy",
     "address": "Αρχελάου 32, Αθήνα 116 35",
     "lat": "37.97241557090826",
-    "lng": "23.745567116885503"
+    "lng": "23.745567116885503",
+    "id": "vegetarianRestaurants_1239f5eca160",
+    "slug": "ohh-boy-1239"
   },
   {
     "url": "https://maps.app.goo.gl/i8rVwiqPkua751nQ7?g_st=ipc",
     "name": "The Vegan Vandal",
     "address": "Αμύντα 15, Αθήνα 116 35",
     "lat": "37.971917764819835",
-    "lng": "23.745569639926703"
+    "lng": "23.745569639926703",
+    "id": "vegetarianRestaurants_2f95eefcadc8",
+    "slug": "the-vegan-vandal-2f95"
   },
   {
     "url": "https://maps.app.goo.gl/M6kixY8DuERoUL8U8?g_st=ipc",
     "name": "Fresh Patisserie",
     "address": "Ευτυχίδου 48, Αθήνα 116 34",
     "lat": "37.96747222997714",
-    "lng": "23.749300179574934"
+    "lng": "23.749300179574934",
+    "id": "vegetarianRestaurants_26aa685f16e1",
+    "slug": "fresh-patisserie-26aa"
   },
   {
     "url": "https://maps.app.goo.gl/GQheLZNx169PbGDK9?g_st=ipc",
     "name": "Vicky’s saj",
     "address": "Αραχώβης 29, Αθήνα 106 80",
     "lat": "37.984555575680844",
-    "lng": "23.737197350556286"
+    "lng": "23.737197350556286",
+    "id": "vegetarianRestaurants_20df7d290d02",
+    "slug": "vicky-s-saj-20df"
   },
   {
     "url": "https://maps.app.goo.gl/5WJ6mEF77rV1Cpfv8?g_st=ipc",
     "name": "nice n easy",
     "address": "Ομήρου 60, Αθήνα 106 72",
     "lat": "37.98055624645478",
-    "lng": "23.738055581611157"
+    "lng": "23.738055581611157",
+    "id": "vegetarianRestaurants_1d02bb631594",
+    "slug": "nice-n-easy-1d02"
   },
   {
     "url": "https://maps.app.goo.gl/BtDhoy7Tfhqa4zzX7?g_st=ipc",
     "name": "Bamboo Vegan",
     "address": "Ζωοδόχου Πηγής 36, Αθήνα 106 81",
     "lat": "37.984730799052805",
-    "lng": "23.735878610157684"
+    "lng": "23.735878610157684",
+    "id": "vegetarianRestaurants_cf7f490bbd2d",
+    "slug": "bamboo-vegan-cf7f"
   },
   {
     "url": "https://maps.app.goo.gl/5fer5pjj8yDkf3VZ7?g_st=ipc",
     "name": "PURE Juice Bar | Kolonaki",
     "address": "Σίνα 21, Αθήνα 106 80",
     "lat": "37.981469364192144",
-    "lng": "23.7374505875668"
+    "lng": "23.7374505875668",
+    "id": "vegetarianRestaurants_4aaf4cac48a9",
+    "slug": "pure-juice-bar-kolonaki-4aaf"
   },
   {
     "url": "https://maps.app.goo.gl/UngDLMKcNPzNvksZ6?g_st=ipc",
     "name": "Ροζαλία",
     "address": "Βαλτετσίου 59, Αθήνα 106 81",
     "lat": "37.98607917346581",
-    "lng": "23.735180101843408"
+    "lng": "23.735180101843408",
+    "id": "vegetarianRestaurants_7f7c33a1a56c",
+    "slug": "rozalia-7f7c"
   },
   {
     "url": "https://maps.app.goo.gl/JYkwhsRENEnEtjgHA?g_st=ipc",
     "name": "Filomila Vegeterian Food",
     "address": "Ανδρέα Μεταξά 13, Αθήνα 106 81",
     "lat": "37.9853717765479",
-    "lng": "23.73508897094766"
+    "lng": "23.73508897094766",
+    "id": "vegetarianRestaurants_4f70d2b2123b",
+    "slug": "filomila-vegeterian-food-4f70"
   },
   {
     "url": "https://maps.app.goo.gl/yfFq85F1S3YdjCgY6?g_st=ipc",
     "name": "To Tsai",
     "address": "Αλ. Σούτσου 19, Αθήνα 106 71",
     "lat": "37.978965545600815",
-    "lng": "23.737124173171257"
+    "lng": "23.737124173171257",
+    "id": "vegetarianRestaurants_23ba7517246a",
+    "slug": "to-tsai-23ba"
   },
   {
     "url": "https://maps.app.goo.gl/ZQqCgQBx8g5Gjgrh7?g_st=ipc",
     "name": "Magic Kitchen Χορτοφαγία Θεμιστοκλέους Κέντρο",
     "address": "Θεμιστοκλέους 45, Αθήνα 106 82",
     "lat": "37.98582880467768",
-    "lng": "23.733583710090212"
+    "lng": "23.733583710090212",
+    "id": "vegetarianRestaurants_77e942c763e9",
+    "slug": "magic-kitchen-chortofagia-themistokleoys-kentro-77e9"
   },
   {
     "url": "https://maps.app.goo.gl/QbLppt3u9uZg36Xi6?g_st=ipc",
     "name": "Cookoomela Grill Vegan",
     "address": "Θεμιστοκλέους 43, Αθήνα 106 83",
     "lat": "37.985828644021424",
-    "lng": "23.73352687550602"
+    "lng": "23.73352687550602",
+    "id": "vegetarianRestaurants_ad1aabfd0107",
+    "slug": "cookoomela-grill-vegan-ad1a"
   },
   {
     "url": "https://maps.app.goo.gl/R4ear5h1EDzpwe8Y8?g_st=ipc",
     "name": "Falafelo Street Food",
     "address": "Σουλτάνη 2-4, Αθήνα 106 83",
     "lat": "37.98589482225123",
-    "lng": "23.733448804787468"
+    "lng": "23.733448804787468",
+    "id": "vegetarianRestaurants_49bc3b76300b",
+    "slug": "falafelo-street-food-49bc"
   },
   {
     "url": "https://maps.app.goo.gl/BjUbMf9auTnRzi956?g_st=ipc",
     "name": "Enjoy Just Falafel",
     "address": "Greece, Αριστοτέλους 98, Αθήνα 104 34",
     "lat": "37.99432372166888",
-    "lng": "23.729461045155038"
+    "lng": "23.729461045155038",
+    "id": "vegetarianRestaurants_6e333d15393d",
+    "slug": "enjoy-just-falafel-6e33"
   },
   {
     "url": "https://maps.app.goo.gl/U9MBHieD9Hpy6HXt7?g_st=ipc",
     "name": "Cosa Nostra Fresca Pasta Pagrati",
     "address": "Αρχιμήδους 8, Αθήνα 116 35",
     "lat": "37.96784065910682",
-    "lng": "23.74333205841994"
+    "lng": "23.74333205841994",
+    "id": "vegetarianRestaurants_5ddd5cabc084",
+    "slug": "cosa-nostra-fresca-pasta-pagrati-5ddd"
   },
   {
     "url": "https://maps.app.goo.gl/WwKS8hQTt3PyFTcN9?g_st=ipc",
     "name": "Handwich Athens",
     "address": "Τζώρτζ 3, Αθήνα 106 82",
     "lat": "37.98638339493441",
-    "lng": "23.731698144915832"
+    "lng": "23.731698144915832",
+    "id": "vegetarianRestaurants_ea997a3c2b69",
+    "slug": "handwich-athens-ea99"
   },
   {
     "url": "https://maps.app.goo.gl/GaPAS9YHhNwunuDSA?g_st=ipc",
     "name": "UP - Κυτταρική Θρέψη",
     "address": "Ακαδημίας 91 &, Themistokleous, Athina 106 77",
     "lat": "37.984784636631375",
-    "lng": "23.731547822244607"
+    "lng": "23.731547822244607",
+    "id": "vegetarianRestaurants_90f93033da7a",
+    "slug": "up-kyttariki-threpsi-90f9"
   },
   {
     "url": "https://maps.app.goo.gl/gBkB6qncPWJhE1pC8?g_st=ipc",
     "name": "Association of Greeks from Egypt",
     "address": "3ης Σεπτεμβρίου 56, Αθήνα 104 33",
     "lat": "37.98962955327748",
-    "lng": "23.72952334118187"
+    "lng": "23.72952334118187",
+    "id": "vegetarianRestaurants_f70f4a4d0192",
+    "slug": "association-of-greeks-from-egypt-f70f"
   },
   {
     "url": "https://maps.app.goo.gl/TVzEkkpCr1SQ2ZUEA?g_st=ipc",
     "name": "Baba Ghanoush",
     "address": "Εμπεδοκλέους 25 - 27, Αθήνα 116 35",
     "lat": "37.96544673051708",
-    "lng": "23.74367426912522"
+    "lng": "23.74367426912522",
+    "id": "vegetarianRestaurants_2e588abb0db5",
+    "slug": "baba-ghanoush-2e58"
   },
   {
     "url": "https://maps.app.goo.gl/huQdY2MTzopiE8uQ8?g_st=ipc",
     "name": "ΑΡΙΣΤΟΝ ΛΟΜΠΟΤΕΣΗΣ",
     "address": "Βουλής 10, Αθήνα 105 62",
     "lat": "37.976694641795845",
-    "lng": "23.73264366188707"
+    "lng": "23.73264366188707",
+    "id": "vegetarianRestaurants_daefe155ad5d",
+    "slug": "ariston-lompotesis-daef"
   },
   {
     "url": "https://maps.app.goo.gl/qZXBVvFNkiYBgdiVA?g_st=ipc",
     "name": "Early bites",
     "address": "Γεωρ. Σταύρου 6, Αθήνα 105 59",
     "lat": "37.98184714479862",
-    "lng": "23.729463542688077"
+    "lng": "23.729463542688077",
+    "id": "vegetarianRestaurants_20a67f5f31e5",
+    "slug": "early-bites-20a6"
   },
   {
     "url": "https://maps.app.goo.gl/YFcMYw6afMUaqBMC9?g_st=ipc",
     "name": "Holy Llama",
     "address": "Nikis, Syntagma 23, Αθήνα 105 57",
     "lat": "37.97396404211014",
-    "lng": "23.73311973333826"
+    "lng": "23.73311973333826",
+    "id": "vegetarianRestaurants_4c1ab480871b",
+    "slug": "holy-llama-4c1a"
   },
   {
     "url": "https://maps.app.goo.gl/DFHjTpp5KFC8PQMg6?g_st=ipc",
     "name": "Winners Vegan",
     "address": "Νίκης 27, Αθήνα 105 57",
     "lat": "37.97376452131408",
-    "lng": "23.73300918304916"
+    "lng": "23.73300918304916",
+    "id": "vegetarianRestaurants_43a8a2b5eb46",
+    "slug": "winners-vegan-43a8"
   },
   {
     "url": "https://maps.app.goo.gl/VntknhKAe4PaVfpM6?g_st=ipc",
     "name": "4 Seasons Bio - Organic Food Market",
     "address": "Νίκης 30, Αθήνα 105 57",
     "lat": "37.97393047054411",
-    "lng": "23.732888082947863"
+    "lng": "23.732888082947863",
+    "id": "vegetarianRestaurants_8f0cf3873ae8",
+    "slug": "4-seasons-bio-organic-food-market-8f0c"
   },
   {
     "url": "https://maps.app.goo.gl/MrghLEMjktpmCFH58?g_st=ipc",
     "name": "Avocado",
     "address": "Νίκης 30, Αθήνα 105 57",
     "lat": "37.97391324129181",
-    "lng": "23.73289192634984"
+    "lng": "23.73289192634984",
+    "id": "vegetarianRestaurants_8d8ca2489312",
+    "slug": "avocado-8d8c"
   },
   {
     "url": "https://maps.app.goo.gl/9fSGdfeYAovT2Zsi9?g_st=ipc",
     "name": "Falafel Al Sharq",
     "address": "Λιοσίων 1, Αθήνα 104 38",
     "lat": "37.987531098291974",
-    "lng": "23.72618033004029"
+    "lng": "23.72618033004029",
+    "id": "vegetarianRestaurants_46b7504ac039",
+    "slug": "falafel-al-sharq-46b7"
   },
   {
     "url": "https://maps.app.goo.gl/zv5KFNF6qGqi2KRn7?g_st=ipc",
     "name": "HANOI ATHENS - AUTHENTIC VIETNAMESE FOOD",
     "address": "Πετράκη 12, Αθήνα 105 63",
     "lat": "37.97561477697918",
-    "lng": "23.73154522490793"
+    "lng": "23.73154522490793",
+    "id": "vegetarianRestaurants_1e566f65ffd6",
+    "slug": "hanoi-athens-authentic-vietnamese-food-1e56"
   },
   {
     "url": "https://maps.app.goo.gl/stBGTxofrCxpCP4q7?g_st=ipc",
     "name": "THE ROOM METS",
     "address": "Μαρκ. Μουσούρου 22, Αθήνα 116 36",
     "lat": "37.96677955241959",
-    "lng": "23.737885963446566"
+    "lng": "23.737885963446566",
+    "id": "vegetarianRestaurants_6bddca4a5310",
+    "slug": "the-room-mets-6bdd"
   },
   {
     "url": "https://maps.app.goo.gl/ynTY6phLf8WCv9oj7?g_st=ipc",
     "name": "Wild Souls Athens Voulis",
     "address": "Βουλής 36, Αθήνα 105 57",
     "lat": "37.97449199299614",
-    "lng": "23.73213651821812"
+    "lng": "23.73213651821812",
+    "id": "vegetarianRestaurants_b15388cdd5d4",
+    "slug": "wild-souls-athens-voulis-b153"
   },
   {
     "url": "https://maps.app.goo.gl/cDLfqH5tSTmhvzCn8?g_st=ipc",
     "name": "Anana Coffee|Food",
     "address": "Πραξιτέλους 33, Αθήνα 105 60",
     "lat": "37.979074429744934",
-    "lng": "23.72938956678435"
+    "lng": "23.72938956678435",
+    "id": "vegetarianRestaurants_aa8084f25928",
+    "slug": "anana-coffee-food-aa80"
   },
   {
     "url": "https://maps.app.goo.gl/GuskwaqjTh2E9fc66?g_st=ipc",
     "name": "InLoveAgain. Specialty coffee",
     "address": "Κλειτίου 3, Αθήνα 105 60",
     "lat": "37.97733209854113",
-    "lng": "23.72987682666704"
+    "lng": "23.72987682666704",
+    "id": "vegetarianRestaurants_66f29ff77bdf",
+    "slug": "inloveagain-specialty-coffee-66f2"
   },
   {
     "url": "https://maps.app.goo.gl/rugWqM8JRvoZaHPm9?g_st=ipc",
     "name": "Not Just Falafel | Vegeterian food Athens | Vegan Friendly",
     "address": "Ρόμβης 16, Αθήνα 105 62",
     "lat": "37.97672606756175",
-    "lng": "23.730150682547393"
+    "lng": "23.730150682547393",
+    "id": "vegetarianRestaurants_dd280fa872e6",
+    "slug": "not-just-falafel-vegeterian-food-athens-vegan-friendly-dd28"
   },
   {
     "url": "https://maps.app.goo.gl/326sYhMHWCiSjUJW9?g_st=ipc",
     "name": "Sugar Killer",
     "address": "Περικλέους 33, Αθήνα 105 63",
     "lat": "37.976654957150416",
-    "lng": "23.730157941231223"
+    "lng": "23.730157941231223",
+    "id": "vegetarianRestaurants_7a48cadc1cba",
+    "slug": "sugar-killer-7a48"
   },
   {
     "url": "https://maps.app.goo.gl/WYdqmMy3mDqLNW7e8?g_st=ipc",
     "name": "VIETNAM STREET FOOD",
     "address": "Περικλέους 56, Αθήνα 105 60",
     "lat": "37.97675287050778",
-    "lng": "23.729819366572254"
+    "lng": "23.729819366572254",
+    "id": "vegetarianRestaurants_1564131c7925",
+    "slug": "vietnam-street-food-1564"
   },
   {
     "url": "https://maps.app.goo.gl/2r2EDKFSvkng4GkF9?g_st=ipc",
     "name": "Vegan Beat Athens",
     "address": "Περικλέους 56, Αθήνα 105 60",
     "lat": "37.976741727063335",
-    "lng": "23.729824452963804"
+    "lng": "23.729824452963804",
+    "id": "vegetarianRestaurants_b74f212f3c6f",
+    "slug": "vegan-beat-athens-b74f"
   },
   {
     "url": "https://maps.app.goo.gl/9Dfe1mtSN788EyGb7?g_st=ipc",
     "name": "Shedia Home - Cafe, Restaurant & Giftshop",
     "address": "Κολοκοτρώνη 56, Αθήνα 105 60",
     "lat": "37.977833037817305",
-    "lng": "23.72875153673485"
+    "lng": "23.72875153673485",
+    "id": "vegetarianRestaurants_c42b13d2db7e",
+    "slug": "shedia-home-cafe-restaurant-giftshop-c42b"
   },
   {
     "url": "https://maps.app.goo.gl/Kt7esiHQgo5rmoWc7?g_st=ipc",
     "name": "AV IT",
     "address": "Καλαμιώτου 8, Αθήνα 105 60",
     "lat": "37.976939825548584",
-    "lng": "23.728942581826033"
+    "lng": "23.728942581826033",
+    "id": "vegetarianRestaurants_5b207cd61024",
+    "slug": "av-it-5b20"
   },
   {
     "url": "https://maps.app.goo.gl/cceYxANJTPRNHFuB6?g_st=ipc",
     "name": "Feyrouz_Athens",
     "address": "Καρόρη 23 και, Αγάθωνος 1, Αθήνα 105 51",
     "lat": "37.97815368375059",
-    "lng": "23.72764654408699"
+    "lng": "23.72764654408699",
+    "id": "vegetarianRestaurants_e4171a750969",
+    "slug": "feyrouz-athens-e417"
   },
   {
     "url": "https://maps.app.goo.gl/tYKvBnpT4mY8nvB58?g_st=ipc",
     "name": "DOSA HOUSE",
     "address": "Θεάτρου 3, Αθήνα 105 52",
     "lat": "37.98064310554285",
-    "lng": "23.725600541419325"
+    "lng": "23.725600541419325",
+    "id": "vegetarianRestaurants_d9013916b890",
+    "slug": "dosa-house-d901"
   },
   {
     "url": "https://maps.app.goo.gl/JxJnko7CUq3jAGPe9?g_st=ipc",
     "name": "Joshua Tree Cafe",
     "address": "Αναπαύσεως 13, Αθήνα 116 36",
     "lat": "37.966187300517184",
-    "lng": "23.734752239359075"
+    "lng": "23.734752239359075",
+    "id": "vegetarianRestaurants_e75cd551c6e1",
+    "slug": "joshua-tree-cafe-e75c"
   },
   {
     "url": "https://maps.app.goo.gl/AuBtWGWtH3xRZBEV8?g_st=ipc",
     "name": "Fontana",
     "address": "Αιόλου 17, Αθήνα 105 51",
     "lat": "37.976643434278735",
-    "lng": "23.727544640785275"
+    "lng": "23.727544640785275",
+    "id": "vegetarianRestaurants_7e314f6791f9",
+    "slug": "fontana-7e31"
   },
   {
     "url": "https://maps.app.goo.gl/PaZHwjdG5hcj4fEe9?g_st=ipc",
     "name": "Royal Curry House",
     "address": "Βούλγαρη 7, Αθήνα 104 37",
     "lat": "37.983044455575836",
-    "lng": "23.724361585760793"
+    "lng": "23.724361585760793",
+    "id": "vegetarianRestaurants_a3ef401ec9a4",
+    "slug": "royal-curry-house-a3ef"
   },
   {
     "url": "https://maps.app.goo.gl/t4BDCPnwuYDPfBZS9?g_st=ipc",
     "name": "Veganaki",
     "address": "Αθανασίου Διάκου 38 (38, Αθήνα 117 43",
     "lat": "37.96756765452738",
-    "lng": "23.732928786701812"
+    "lng": "23.732928786701812",
+    "id": "vegetarianRestaurants_0ae45380f9c5",
+    "slug": "veganaki-0ae4"
   },
   {
     "url": "https://maps.app.goo.gl/2tEYTJw1y4aL2Rgo7?g_st=ipc",
     "name": "Indian Haveli",
     "address": "Λεωφ. Ανδρέα Συγγρού 12, Αθήνα 117 42",
     "lat": "37.96857000104929",
-    "lng": "23.731444541000045"
+    "lng": "23.731444541000045",
+    "id": "vegetarianRestaurants_981aa1875a12",
+    "slug": "indian-haveli-981a"
   },
   {
     "url": "https://maps.app.goo.gl/tKAx8hEqAm45KgqJ7?g_st=ipc",
     "name": "The Doc's Burger Bar",
     "address": "Ανδρέα Μιαούλη 10, Αθήνα 105 54",
     "lat": "37.977440412426056",
-    "lng": "23.725635777283433"
+    "lng": "23.725635777283433",
+    "id": "vegetarianRestaurants_089d08918f7a",
+    "slug": "the-doc-s-burger-bar-089d"
   },
   {
     "url": "https://maps.app.goo.gl/HNSYbNbjWA38vytK7?g_st=ipc",
     "name": "Vegan tour Athens",
     "address": "Πλ. Μοναστηρακίου, Αθήνα 105 55",
     "lat": "37.97635862482565",
-    "lng": "23.725860112285382"
+    "lng": "23.725860112285382",
+    "id": "vegetarianRestaurants_6103b84128cb",
+    "slug": "vegan-tour-athens-6103"
   },
   {
     "url": "https://maps.app.goo.gl/9hUg9Uc89kW2GUqL6?g_st=ipc",
     "name": "Plan(e)t Ice Cream",
     "address": "Ερμού 86, Αθήνα 105 54",
     "lat": "37.976877362334406",
-    "lng": "23.72538097636171"
+    "lng": "23.72538097636171",
+    "id": "vegetarianRestaurants_bddb739d813a",
+    "slug": "plan-e-t-ice-cream-bddb"
   },
   {
     "url": "https://maps.app.goo.gl/3bSGpHkX69LYwsFY7?g_st=ipc",
     "name": "The Brunchers",
     "address": "Αγ. Θέκλας 5, Αθήνα 105 54",
     "lat": "37.977231132541924",
-    "lng": "23.724930584606714"
+    "lng": "23.724930584606714",
+    "id": "vegetarianRestaurants_21104db9215f",
+    "slug": "the-brunchers-2110"
   },
   {
     "url": "https://maps.app.goo.gl/jmPCpHeGd8TDVHaq5?g_st=ipc",
     "name": "Ice Queen Gelato",
     "address": "Μακρυγιάννη 9, Αθήνα 117 42",
     "lat": "37.968753421978654",
-    "lng": "23.729718347993035"
+    "lng": "23.729718347993035",
+    "id": "vegetarianRestaurants_e6883030e4ea",
+    "slug": "ice-queen-gelato-e688"
   },
   {
     "url": "https://maps.app.goo.gl/3M9tmest5ooaQwtE8?g_st=ipc",
     "name": "Mama Tierra Acropolis - Vegan street food",
     "address": "Χατζηχρήστου 29, Αθήνα 117 42",
     "lat": "37.967546083723775",
-    "lng": "23.729864462543613"
+    "lng": "23.729864462543613",
+    "id": "vegetarianRestaurants_aff422e1c3ba",
+    "slug": "mama-tierra-acropolis-vegan-street-food-aff4"
   },
   {
     "url": "https://maps.app.goo.gl/MyM1aFjtySe38NKA9?g_st=ipc",
     "name": "Ντάο Βιετναμέζικη Κουζίνα",
     "address": "Λεπενιώτου 14, Αθήνα 105 54",
     "lat": "37.97853266592714",
-    "lng": "23.722814547226115"
+    "lng": "23.722814547226115",
+    "id": "vegetarianRestaurants_6e1c781427b5",
+    "slug": "ntao-vietnameziki-koyzina-6e1c"
   },
   {
     "url": "https://maps.app.goo.gl/CNcvWTpCEhrBWFrb6?g_st=ipc",
     "name": "HAPPY BLENDER",
     "address": "Ηφαίστου 39, Αθήνα 105 55",
     "lat": "37.97632639671211",
-    "lng": "23.72337814744719"
+    "lng": "23.72337814744719",
+    "id": "vegetarianRestaurants_f6b4938b2d93",
+    "slug": "happy-blender-f6b4"
   },
   {
     "url": "https://maps.app.goo.gl/3kEuq9FgPSZDgC3t8?g_st=ipc",
     "name": "Big Nick",
     "address": "Λεωφόρος Βουλιαγμένης 145, Αθήνα 116 31",
     "lat": "37.95644842524022",
-    "lng": "23.735670588284904"
+    "lng": "23.735670588284904",
+    "id": "vegetarianRestaurants_ce0918ac5e44",
+    "slug": "big-nick-ce09"
   },
   {
     "url": "https://maps.app.goo.gl/MEpoJDcSSJVJXukd8?g_st=ipc",
     "name": "This is Loco",
     "address": "Φαλήρου 47, Αθήνα 117 42",
     "lat": "37.96543262432146",
-    "lng": "23.72690669294173"
+    "lng": "23.72690669294173",
+    "id": "vegetarianRestaurants_0b779d858e7d",
+    "slug": "this-is-loco-0b77"
   },
   {
     "url": "https://maps.app.goo.gl/NHi65wsjDNQkMwXH6?g_st=ipc",
     "name": "falafel bar ΤΟ ΡΕΒΙΘΙ",
     "address": "Παρθενώνος 1, Αθήνα 117 42",
     "lat": "37.966315717999265",
-    "lng": "23.72611010025494"
+    "lng": "23.72611010025494",
+    "id": "vegetarianRestaurants_dec02adf0761",
+    "slug": "falafel-bar-to-revithi-dec0"
   },
   {
     "url": "https://maps.app.goo.gl/8AeCWeh7LczgaD87A?g_st=ipc",
     "name": "Peas Vegan",
     "address": "Φαλήρου 40, Αθήνα 117 42",
     "lat": "37.965309081383936",
-    "lng": "23.72648212033699"
+    "lng": "23.72648212033699",
+    "id": "vegetarianRestaurants_4db58e18de0e",
+    "slug": "peas-vegan-4db5"
   },
   {
     "url": "https://maps.app.goo.gl/ZWkqdkixRwwqeKq8A?g_st=ipc",
     "name": "Los V - Vegan & Vegetarian Restaurant",
     "address": "Πλαταιών 37, Αθήνα 104 35",
     "lat": "37.98154957793841",
-    "lng": "23.71604712211994"
+    "lng": "23.71604712211994",
+    "id": "vegetarianRestaurants_5038de25697a",
+    "slug": "los-v-vegan-vegetarian-restaurant-5038"
   },
   {
     "url": "https://maps.app.goo.gl/hviT1v1LXcBDpknS6?g_st=ipc",
     "name": "Veganistan",
     "address": "Κεραμεικού 101, Αθήνα 104 35",
     "lat": "37.980551028763045",
-    "lng": "23.716428370276027"
+    "lng": "23.716428370276027",
+    "id": "vegetarianRestaurants_92b90dbde5a4",
+    "slug": "veganistan-92b9"
   },
   {
     "url": "https://maps.app.goo.gl/2BHN8JbCEv2oz4LT8?g_st=ipc",
     "name": "Noa Poke Koukaki",
     "address": "Φαλήρου 84, Αθήνα 117 41",
     "lat": "37.962721066064105",
-    "lng": "23.72328239582356"
+    "lng": "23.72328239582356",
+    "id": "vegetarianRestaurants_663d79e21a0f",
+    "slug": "noa-poke-koukaki-663d"
   },
   {
     "url": "https://maps.app.goo.gl/kkxVViHsfrAhDtz38?g_st=ipc",
     "name": "Dinette Dafni",
     "address": "Μιχαήλ Καραολή 1-3, Αθήνα 172 35",
     "lat": "37.949260684351316",
-    "lng": "23.73612865746863"
+    "lng": "23.73612865746863",
+    "id": "vegetarianRestaurants_74f8ca9bcb55",
+    "slug": "dinette-dafni-74f8"
   },
   {
     "url": "https://maps.app.goo.gl/aPvyrqA5tYdbUuhP8?g_st=ipc",
     "name": "CALIBRA - Votanikos",
     "address": "CALIBRA - Votanikos",
     "lat": "37.98303566126477",
-    "lng": "23.711367796488275"
+    "lng": "23.711367796488275",
+    "id": "vegetarianRestaurants_c67e718a73e4",
+    "slug": "calibra-votanikos-c67e"
   },
   {
     "url": "https://maps.app.goo.gl/mQDAFeMFgwXwRVKg6?g_st=ipc",
     "name": "The Place Secret Yard",
     "address": "Τριπτολέμου 26, Αθήνα 118 54",
     "lat": "37.97930916539027",
-    "lng": "23.711898779002322"
+    "lng": "23.711898779002322",
+    "id": "vegetarianRestaurants_0734096aad5b",
+    "slug": "the-place-secret-yard-0734"
   },
   {
     "url": "https://maps.app.goo.gl/RDq6Zcbr1mNrdbLN6?g_st=ipc",
     "name": "KARMINIO - All Day Eatery",
     "address": "Βεΐκου 86, Αθήνα 117 41",
     "lat": "37.96336476791024",
-    "lng": "23.721067012407463"
+    "lng": "23.721067012407463",
+    "id": "vegetarianRestaurants_44c1f82d91b6",
+    "slug": "karminio-all-day-eatery-44c1"
   },
   {
     "url": "https://maps.app.goo.gl/TZgz9fcY4M4aZZQD6?g_st=ipc",
     "name": "Mother Vegan Bistro",
     "address": "Δημητρακοπούλου, Αγίου Νικολάου 95, Αθήνα 117 41",
     "lat": "37.962693218314804",
-    "lng": "23.721538252984118"
+    "lng": "23.721538252984118",
+    "id": "vegetarianRestaurants_06ce84bd30cd",
+    "slug": "mother-vegan-bistro-06ce"
   },
   {
     "url": "https://maps.app.goo.gl/Py2rEQ8tcKsxB97Y9?g_st=ipc",
     "name": "The Vegan Fairies",
     "address": "Νικ. Πλαστήρα 29, Νέα Ερυθραία 146 71",
     "lat": "38.09075591737279",
-    "lng": "23.81765935301376"
+    "lng": "23.81765935301376",
+    "id": "vegetarianRestaurants_ce13a880a3a7",
+    "slug": "the-vegan-fairies-ce13"
   },
   {
     "url": "https://maps.app.goo.gl/Qh5Yd5AbSn3b3GSX9?g_st=ipc",
     "name": "Mind The Cup",
     "address": "Αιμιλίου Βεάκη 29, Περιστέρι 121 34",
     "lat": "38.011576434122055",
-    "lng": "23.69327033132574"
+    "lng": "23.69327033132574",
+    "id": "vegetarianRestaurants_016755eabd8e",
+    "slug": "mind-the-cup-0167"
   },
   {
     "url": "https://maps.app.goo.gl/WmqorR4WUEup986y6?g_st=ipc",
     "name": "Amigos",
     "address": "Μεγ. Αλεξάνδρου 70, Νέα Σμύρνη 171 22",
     "lat": "37.944997225203664",
-    "lng": "23.712218480792846"
+    "lng": "23.712218480792846",
+    "id": "vegetarianRestaurants_83a2e8e8f0cf",
+    "slug": "amigos-83a2"
   },
   {
     "url": "https://maps.app.goo.gl/r5AXr2ToKxBqZpAv9?g_st=ipc",
     "name": "Φakafel",
     "address": "Φakafel",
     "lat": "37.945977379116876",
-    "lng": "23.71063148252821"
+    "lng": "23.71063148252821",
+    "id": "vegetarianRestaurants_de7324c496a6",
+    "slug": "fakafel-de73"
   },
   {
     "url": "https://maps.app.goo.gl/yu97jv8qaY2BF8AQ8?g_st=ipc",
     "name": "City Bliss",
     "address": "Κύπρου 14, Ταύρος Αττικής 177 78",
     "lat": "37.962615845106846",
-    "lng": "23.696852638288863"
+    "lng": "23.696852638288863",
+    "id": "vegetarianRestaurants_617b8834cbfd",
+    "slug": "city-bliss-617b"
   },
   {
     "url": "https://maps.app.goo.gl/JNBSLzAJfWz7F5zV6?g_st=ipc",
     "name": "Little Bear Piraeus - Vegan Patisserie & Bistro",
     "address": "Little Bear Piraeus - Vegan Patisserie & Bistro",
     "lat": "37.94629157937497",
-    "lng": "23.647726020498503"
+    "lng": "23.647726020498503",
+    "id": "vegetarianRestaurants_8b929e1b12ca",
+    "slug": "little-bear-piraeus-vegan-patisserie-bistro-8b92"
   },
   {
     "url": "https://maps.app.goo.gl/J8MbyuN6xbnsUxi89?g_st=ipc",
     "name": "Γη",
     "address": "Γρ. Λαμπράκη 69, Γλυφάδα 166 75",
     "lat": "37.867754101352695",
-    "lng": "23.757082449020576"
+    "lng": "23.757082449020576",
+    "id": "vegetarianRestaurants_4651fd50cc98",
+    "slug": "gi-4651"
   },
   {
     "url": "https://maps.app.goo.gl/C155rgfingteegQn8?g_st=ipc",
     "name": "COCONUTS Nuts & Specialties",
     "address": "Λεωφ. Βασιλέως Παύλου 67, Βούλα 166 73",
     "lat": "37.83974545115199",
-    "lng": "23.767343337140883"
+    "lng": "23.767343337140883",
+    "id": "vegetarianRestaurants_5e82930d8565",
+    "slug": "coconuts-nuts-specialties-5e82"
   },
   {
     "url": "https://maps.app.goo.gl/67qtbde9XNL2VBgVA?g_st=ipc",
     "name": "SEMINARIO",
     "address": "Kiparissou 7, Ermoupoli 841 00",
     "lat": "37.4442691864213",
-    "lng": "24.94407924993465"
+    "lng": "24.94407924993465",
+    "id": "vegetarianRestaurants_01ab7c5f61ba",
+    "slug": "seminario-01ab"
   },
   {
     "url": "https://maps.app.goo.gl/ds7UYPCteddf9Z6T7?g_st=ipc",
     "name": "Basilikos",
     "address": "5F7Q+65W, Skiathos 370 02",
     "lat": "39.16312454298035",
-    "lng": "23.487902942019232"
+    "lng": "23.487902942019232",
+    "id": "vegetarianRestaurants_4b016e396a37",
+    "slug": "basilikos-4b01"
   },
   {
     "url": "https://maps.app.goo.gl/6yHAVjve3kJGvFFa9?g_st=ipc",
     "name": "Rubik's",
     "address": "Patreos 92, Patra 262 25",
     "lat": "38.24434291588552",
-    "lng": "21.735549427551657"
+    "lng": "21.735549427551657",
+    "id": "vegetarianRestaurants_291831247589",
+    "slug": "rubik-s-2918"
   },
   {
     "url": "https://maps.app.goo.gl/diHJtayCn8kgFPxW7?g_st=ipc",
     "name": "Melitini",
     "address": "Oia 847 02",
     "lat": "36.46251191786666",
-    "lng": "25.380930558895514"
+    "lng": "25.380930558895514",
+    "id": "vegetarianRestaurants_e61f564cf6f0",
+    "slug": "melitini-e61f"
   },
   {
     "url": "https://maps.app.goo.gl/LLqFWY5v6jQQxyzV9?g_st=ipc",
     "name": "Amorgos Organic",
     "address": "Epar.Od. Katapolon-Mavris Mitis, Rachidi 840 08",
     "lat": "36.82494496537346",
-    "lng": "25.86937679325385"
+    "lng": "25.86937679325385",
+    "id": "vegetarianRestaurants_b8ffd99027d0",
+    "slug": "amorgos-organic-b8ff"
   },
   {
     "url": "https://maps.app.goo.gl/aKeeZyXVaADfNUQU9?g_st=ipc",
     "name": "Falafel",
     "address": "Ormos Egialis 840 08",
     "lat": "36.90090309185306",
-    "lng": "25.976584244849658"
+    "lng": "25.976584244849658",
+    "id": "vegetarianRestaurants_fcbe4baf2c7e",
+    "slug": "falafel-fcbe"
   },
   {
     "url": "https://maps.app.goo.gl/N2k56TsPjEKAnPtL9?g_st=ipc",
     "name": "Pernera Vegan Restaurant & Fairtrade Coffee Shop & Market",
     "address": "Σκάλα 855 00",
     "lat": "37.32400648961271",
-    "lng": "26.54252733878879"
+    "lng": "26.54252733878879",
+    "id": "vegetarianRestaurants_325f7a0c0fd0",
+    "slug": "pernera-vegan-restaurant-fairtrade-coffee-shop-market-325f"
   },
   {
     "url": "https://maps.app.goo.gl/5vCV3e8KbGqG5dav5?g_st=ipc",
     "name": "V For Vita",
     "address": "Eligmon 3, Nea Moudania 632 00",
     "lat": "40.240211315315356",
-    "lng": "23.28368813091845"
+    "lng": "23.28368813091845",
+    "id": "vegetarianRestaurants_9509b84d5e8c",
+    "slug": "v-for-vita-9509"
   },
   {
     "url": "https://maps.app.goo.gl/WHH71Tq64um8wrhG6?g_st=ipc",
     "name": "JOIN juice bars",
     "address": "11ο χλμ εθνικής οδού, A/D Thessalonikis Neon Moudanion, Thessaloniki 570 01",
     "lat": "40.55503362763898",
-    "lng": "22.99252543932156"
+    "lng": "22.99252543932156",
+    "id": "vegetarianRestaurants_7a1d3cdc2f0d",
+    "slug": "join-juice-bars-7a1d"
   },
   {
     "url": "https://maps.app.goo.gl/snuFukejKVaEqQ597?g_st=ipc",
     "name": "Falafeleria",
     "address": "25is Martiou 14, Thessaloniki 546 46",
     "lat": "40.5988199696969",
-    "lng": "22.95250846403434"
+    "lng": "22.95250846403434",
+    "id": "vegetarianRestaurants_02c8bc386448",
+    "slug": "falafeleria-02c8"
   },
   {
     "url": "https://maps.app.goo.gl/ZhpdC4uUpyfMLEVM6?g_st=ipc",
     "name": "JOIN juice bars",
     "address": "Marias Kallas 1, Thessaloniki 546 45",
     "lat": "40.60107621263692",
-    "lng": "22.9498057867803"
+    "lng": "22.9498057867803",
+    "id": "vegetarianRestaurants_124c931734e1",
+    "slug": "join-juice-bars-124c"
   },
   {
     "url": "https://maps.app.goo.gl/GhD8UrgWEeP9DmB59?g_st=ipc",
     "name": "Falaifel",
     "address": "Geor. Drosini 12, Thessaloniki 546 44",
     "lat": "40.605220221287475",
-    "lng": "22.958853196988702"
+    "lng": "22.958853196988702",
+    "id": "vegetarianRestaurants_afbddf6d4612",
+    "slug": "falaifel-afbd"
   },
   {
     "url": "https://maps.app.goo.gl/GzsQL6NzLmnniqyE6?g_st=ipc",
     "name": "Butterflies And Hurricanes",
     "address": "Pindarou 1, Thessaloniki 546 39",
     "lat": "40.61464637786299",
-    "lng": "22.960841806951244"
+    "lng": "22.960841806951244",
+    "id": "vegetarianRestaurants_37b68f83011f",
+    "slug": "butterflies-and-hurricanes-37b6"
   },
   {
     "url": "https://maps.app.goo.gl/bHy6BTfdp9RBhdBt6?g_st=ipc",
     "name": "Falafel Taste Middle East",
     "address": "Mitropoleos 106 &, Romanou, Thessaloniki 546 21",
     "lat": "40.62785484140031",
-    "lng": "22.949330420414434"
+    "lng": "22.949330420414434",
+    "id": "vegetarianRestaurants_40634af2ec79",
+    "slug": "falafel-taste-middle-east-4063"
   },
   {
     "url": "https://maps.app.goo.gl/nimzQmKjxrKbiFuKA?g_st=ipc",
     "name": "JOIN juice bars",
     "address": "Leof. Nikis 73, Thessaloniki 546 22",
     "lat": "40.62769116289148",
-    "lng": "22.94711801674614"
+    "lng": "22.94711801674614",
+    "id": "vegetarianRestaurants_c6f3e8f66558",
+    "slug": "join-juice-bars-c6f3"
   },
   {
     "url": "https://maps.app.goo.gl/9NhW77pMY2C6xJxq8?g_st=ipc",
     "name": "Merry Berry Health Bar",
     "address": "Dim. Gounari 5, Thessaloniki 546 22",
     "lat": "40.62787788837935",
-    "lng": "22.947534537868144"
+    "lng": "22.947534537868144",
+    "id": "vegetarianRestaurants_b82222e81ca2",
+    "slug": "merry-berry-health-bar-b822"
   },
   {
     "url": "https://maps.app.goo.gl/6ZPuKUN8mPNN6b4C9?g_st=ipc",
     "name": "The Heavy Melon - To vari peponi",
     "address": "Apellou 4, Thessaloniki 546 22",
     "lat": "40.6309548038653",
-    "lng": "22.94951618640559"
+    "lng": "22.94951618640559",
+    "id": "vegetarianRestaurants_06643fab1947",
+    "slug": "the-heavy-melon-to-vari-peponi-0664"
   },
   {
     "url": "https://maps.app.goo.gl/b6twRtPbJbTuXUe26?g_st=ipc",
     "name": "OMG in SKG",
     "address": "Episkopou Kitrous Nikolaou 1, Thessaloniki 546 35",
     "lat": "40.63186182844344",
-    "lng": "22.953097770969947"
+    "lng": "22.953097770969947",
+    "id": "vegetarianRestaurants_43af59721fc8",
+    "slug": "omg-in-skg-43af"
   },
   {
     "url": "https://maps.app.goo.gl/UVLvkFVnZ6xST6Mh7?g_st=ipc",
     "name": "JOIN Juice bars",
     "address": "Paleon Patron Germanou 10, Thessaloniki 546 22",
     "lat": "40.631118918304644",
-    "lng": "22.946639928874713"
+    "lng": "22.946639928874713",
+    "id": "vegetarianRestaurants_6deacfd2e12e",
+    "slug": "join-juice-bars-6dea"
   },
   {
     "url": "https://maps.app.goo.gl/F7WJFJ3rEhib4fX86?g_st=ipc",
     "name": "mushroom skg",
     "address": "Zefxidos 10, Thessaloniki 546 22",
     "lat": "40.63168703304935",
-    "lng": "22.946978697189547"
+    "lng": "22.946978697189547",
+    "id": "vegetarianRestaurants_ae93f5705c93",
+    "slug": "mushroom-skg-ae93"
   },
   {
     "url": "https://maps.app.goo.gl/5FEXt9rVscqgVtM8A?g_st=ipc",
     "name": "Exereton",
     "address": "Mitropoleos 69, Thessaloniki 546 23",
     "lat": "40.63128653966046",
-    "lng": "22.94431457365469"
+    "lng": "22.94431457365469",
+    "id": "vegetarianRestaurants_e657a11ff030",
+    "slug": "exereton-e657"
   },
   {
     "url": "https://maps.app.goo.gl/JccdCGeGNfXKNSwQ7?g_st=ipc",
     "name": "HANDWICH",
     "address": "Egnatia 112, Thessaloniki 546 22",
     "lat": "40.63375897578191",
-    "lng": "22.947935333630785"
+    "lng": "22.947935333630785",
+    "id": "vegetarianRestaurants_1e9851e5feae",
+    "slug": "handwich-1e98"
   },
   {
     "url": "https://maps.app.goo.gl/8ipQFrqJVpwS17GS7?g_st=ipc",
     "name": "Tarantoúla",
     "address": "Olympou 127, Thessaloniki 546 35",
     "lat": "40.635244984518486",
-    "lng": "22.952246319112277"
+    "lng": "22.952246319112277",
+    "id": "vegetarianRestaurants_8b165a3d11ad",
+    "slug": "tarantoula-8b16"
   },
   {
     "url": "https://maps.app.goo.gl/rcikrHzBuB8MLxMXA?g_st=ipc",
     "name": "rOOTS",
     "address": "Mpalanou 4, Thessaloniki 546 23",
     "lat": "40.63467670599439",
-    "lng": "22.944084463130924"
+    "lng": "22.944084463130924",
+    "id": "vegetarianRestaurants_2475d58129d5",
+    "slug": "roots-2475"
   },
   {
     "url": "https://maps.app.goo.gl/WjaRXr3X47WgLXLC6?g_st=ipc",
     "name": "Falafel Taste Middle East",
     "address": "Agora Modiano, Vasileos Irakleiou 33, Thessaloniki 546 24",
     "lat": "40.63474906740278",
-    "lng": "22.94144363936892"
+    "lng": "22.94144363936892",
+    "id": "vegetarianRestaurants_32a8aea960ab",
+    "slug": "falafel-taste-middle-east-32a8"
   },
   {
     "url": "https://maps.app.goo.gl/sS3YEfQ9u5LtTpL57?g_st=ipc",
     "name": "JOIN juice bars",
     "address": "Giannitson 61, Thessaloniki 546 27",
     "lat": "40.646575800803696",
-    "lng": "22.9214129245501"
+    "lng": "22.9214129245501",
+    "id": "vegetarianRestaurants_3c92bd342c75",
+    "slug": "join-juice-bars-3c92"
   },
   {
     "url": "https://maps.app.goo.gl/3unNAK47vshJHbgj7?g_st=ipc",
     "name": "ThirdEye",
     "address": "Griechenland, Epar.Od. Strovlon-Paleochoras 28, Paleochora 730 01",
     "lat": "35.23035637395369",
-    "lng": "23.680431168077206"
+    "lng": "23.680431168077206",
+    "id": "vegetarianRestaurants_17922606ce48",
+    "slug": "thirdeye-1792"
   },
   {
     "url": "https://maps.app.goo.gl/Zb8o7YTUmMMx7EVx8?g_st=ipc",
     "name": "Τhe Sweet Lab",
     "address": "Λεωφ. Δημοκρατίας 81, Kapodistriou 1, Athina 154 51",
     "lat": "38.002062661373884",
-    "lng": "23.785233324910163"
+    "lng": "23.785233324910163",
+    "id": "vegetarianRestaurants_1656162d68e6",
+    "slug": "the-sweet-lab-1656"
   },
   {
     "url": "https://maps.app.goo.gl/jiBKwgUUBwo3VEnp7?g_st=ipc",
     "name": "Nudie Foodie Psiri only gluten free",
     "address": "Eschilou 42, Athina 105 54",
     "lat": "37.97969129802119",
-    "lng": "23.72517165012706"
+    "lng": "23.72517165012706",
+    "id": "vegetarianRestaurants_de96d9cdb0ed",
+    "slug": "nudie-foodie-psiri-only-gluten-free-de96"
   },
   {
     "url": "https://maps.app.goo.gl/JXiyguWxrWe1Wgrf9?g_st=ipc",
     "name": "Fairytale Athens Café & Suites",
     "address": "Leokoriou 16, Athina 105 54",
     "lat": "37.97804693538564",
-    "lng": "23.721754929553363"
+    "lng": "23.721754929553363",
+    "id": "vegetarianRestaurants_e12f835ae279",
+    "slug": "fairytale-athens-cafe-suites-e12f"
   },
   {
     "url": "https://maps.app.goo.gl/Wa7FtgvMdTD2Q6oT7?g_st=ipc",
     "name": "Naya Lebanese Kitchen",
     "address": "Kolokotroni 10, Chalandri 152 33",
     "lat": "38.02310312613848",
-    "lng": "23.798978117354526"
+    "lng": "23.798978117354526",
+    "id": "vegetarianRestaurants_146693dade4c",
+    "slug": "naya-lebanese-kitchen-1466"
   },
   {
     "url": "https://maps.app.goo.gl/JBEM9qi3Gh27zDWa9?g_st=ipc",
     "name": "Pink Elephant",
     "address": "Sokratous 4Α, Chalandri 152 32",
     "lat": "38.02048886312005",
-    "lng": "23.79851470032454"
+    "lng": "23.79851470032454",
+    "id": "vegetarianRestaurants_a667646c43d0",
+    "slug": "pink-elephant-a667"
   },
   {
     "url": "https://maps.app.goo.gl/aNRwgGJgRT99wmHt5?g_st=ipc",
     "name": "Jaipur Palace Plaka",
     "address": "Mnisikleous 7B, Athina 105 56",
     "lat": "37.9746957700778",
-    "lng": "23.728563859316758"
+    "lng": "23.728563859316758",
+    "id": "vegetarianRestaurants_e1e5ea98ec84",
+    "slug": "jaipur-palace-plaka-e1e5"
   }
 ]
