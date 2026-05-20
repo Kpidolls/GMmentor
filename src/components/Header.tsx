@@ -18,9 +18,6 @@ import {
   ModalHeader,
   ModalBody,
   ModalCloseButton,
-  Input,
-  InputGroup,
-  InputLeftElement,
   useDisclosure,
   Text,
   Icon,
@@ -60,30 +57,41 @@ const Header = () => {
 
   const bg = 'white'; // Default background color
   const textColor = 'gray.800'; // Default text color
-  const hoverBg = 'gray.100'; // Default hover background color
   const navButtonStyles = {
-    bg: 'white',
+    bg: 'linear-gradient(180deg, #ffffff 0%, #f8fbff 100%)',
     border: '1px solid',
-    borderColor: 'gray.200',
+    borderColor: 'blue.100',
     borderRadius: 'full',
     fontWeight: 'semibold',
     letterSpacing: '0.02em',
-    px: 4,
+    fontSize: 'sm',
+    px: 5,
     h: 10,
-    boxShadow: 'sm',
-    transition: 'all 0.2s',
+    boxShadow: '0 2px 10px rgba(15, 23, 42, 0.06)',
+    transition: 'all 0.22s ease',
     _hover: {
-      bg: 'gray.50',
-      borderColor: 'gray.300',
+      bg: 'linear-gradient(180deg, #f9fcff 0%, #eef6ff 100%)',
+      borderColor: 'blue.300',
+      color: 'blue.700',
       transform: 'translateY(-1px)',
-      boxShadow: 'md'
+      boxShadow: '0 10px 22px rgba(59, 130, 246, 0.16)'
     },
     _active: {
-      bg: 'gray.100',
+      bg: 'blue.50',
       transform: 'translateY(0)'
     },
     _focusVisible: {
       boxShadow: '0 0 0 3px rgba(66, 153, 225, 0.3)'
+    }
+  };
+  const dropdownNavButtonStyles = {
+    ...navButtonStyles,
+    _expanded: {
+      bg: 'blue.600',
+      color: 'white',
+      borderColor: 'blue.600',
+      boxShadow: '0 12px 24px rgba(37, 99, 235, 0.28)',
+      transform: 'translateY(-1px)'
     }
   };
   const mobileNavButtonStyles = {
@@ -292,10 +300,10 @@ const Header = () => {
     }
   };
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'el' : 'en';
-    i18n.changeLanguage(newLang);
-    localStorage.setItem('language', newLang); // ✅ persist language
+  const setLanguage = (lang: 'en' | 'el') => {
+    if (i18n.language === lang) return;
+    i18n.changeLanguage(lang);
+    localStorage.setItem('language', lang);
   };
 
   const handleNavigation = (href?: string) => {
@@ -321,19 +329,61 @@ const Header = () => {
         minH="44px"
       >
         <HStack spacing={{ base: 1, md: 3 }} flex="1" minW="0">
-          <Button
-            size={{ base: "xs", md: "sm" }}
-            variant="ghost"
-            onClick={toggleLanguage}
-            color="whiteAlpha.800"
-            _hover={{ bg: hoverBg, color: 'gray.400' }}
-            fontSize={{ base: "xs", md: "sm" }}
-            px={{ base: 2, md: 4 }}
-            minW="0"
+          <HStack
+            spacing={0.5}
+            bg="white"
+            border="1px solid"
+            borderColor="whiteAlpha.500"
+            borderRadius="full"
+            p={0.5}
+            boxShadow="sm"
+            minH={{ base: '28px', md: '34px' }}
             flexShrink={0}
           >
-            {i18n.language === 'en' ? 'ΕΛ' : 'EN'}
-          </Button>
+            <Text
+              display={{ base: 'none', md: 'inline' }}
+              color="gray.700"
+              fontSize="xs"
+              px={2}
+              fontWeight="semibold"
+            >
+              {t('language.label', 'Language')}
+            </Text>
+            <Button
+              size="xs"
+              onClick={() => setLanguage('en')}
+              bg={i18n.language === 'en' ? 'blue.600' : 'transparent'}
+              color={i18n.language === 'en' ? 'white' : 'gray.700'}
+              borderRadius="full"
+              fontWeight="bold"
+              fontSize={{ base: '10px', md: 'xs' }}
+              px={{ base: 2, md: 3 }}
+              h={{ base: '24px', md: '28px' }}
+              minW={{ base: '36px', md: '40px' }}
+              _hover={{ bg: i18n.language === 'en' ? 'blue.500' : 'gray.100' }}
+              _active={{ bg: i18n.language === 'en' ? 'blue.500' : 'gray.200' }}
+              aria-label={t('language.english', 'English')}
+            >
+              EN
+            </Button>
+            <Button
+              size="xs"
+              onClick={() => setLanguage('el')}
+              bg={i18n.language === 'el' ? 'blue.600' : 'transparent'}
+              color={i18n.language === 'el' ? 'white' : 'gray.700'}
+              borderRadius="full"
+              fontWeight="bold"
+              fontSize={{ base: '10px', md: 'xs' }}
+              px={{ base: 2, md: 3 }}
+              h={{ base: '24px', md: '28px' }}
+              minW={{ base: '36px', md: '40px' }}
+              _hover={{ bg: i18n.language === 'el' ? 'blue.500' : 'gray.100' }}
+              _active={{ bg: i18n.language === 'el' ? 'blue.500' : 'gray.200' }}
+              aria-label={t('language.greek', 'Greek')}
+            >
+              ΕΛ
+            </Button>
+          </HStack>
           
           {/* PWA Install Button */}
           {((isInstallable && !isInstalled && !isStandalone) || 
@@ -397,25 +447,43 @@ const Header = () => {
           {t('header.promo')}
         </Text>
 
-        <Box onClick={onOpen} cursor="pointer" flex="1" maxW={{ base: "100px", sm: "140px", md: "250px" }} minW="0">
-          <InputGroup size={{ base: "xs", md: "sm" }} w="full">
-            <InputLeftElement pointerEvents="none" h={{ base: "20px", md: "32px" }} w={{ base: "20px", md: "32px" }}>
-              <SearchIcon color="gray.400" boxSize={{ base: "10px", md: "16px" }} />
-            </InputLeftElement>
-            <Input
-              isReadOnly
-              placeholder={t('search.placeholder', 'Search...')}
-              pointerEvents="none"
-              focusBorderColor="blue.400"
-              _placeholder={{ color: 'gray.400' }}
-              id="header-search"
-              fontSize={{ base: "10px", md: "sm" }}
-              h={{ base: "20px", md: "32px" }}
-              pl={{ base: "20px", md: "32px" }}
-              borderRadius={{ base: "sm", md: "md" }}
-            />
-          </InputGroup>
-        </Box>
+        <Button
+          onClick={onOpen}
+          variant="unstyled"
+          flex="1"
+          maxW={{ base: '132px', sm: '190px', md: '300px' }}
+          minW="0"
+          h={{ base: '28px', md: '34px' }}
+          bg="whiteAlpha.200"
+          border="1px solid"
+          borderColor="whiteAlpha.300"
+          color="whiteAlpha.900"
+          borderRadius="full"
+          px={{ base: 2.5, md: 3.5 }}
+          display="flex"
+          alignItems="center"
+          gap={{ base: 1.5, md: 2.5 }}
+          textAlign="left"
+          boxShadow="inset 0 1px 0 rgba(255,255,255,0.12)"
+          _hover={{ bg: 'whiteAlpha.300', borderColor: 'whiteAlpha.500' }}
+          _active={{ bg: 'whiteAlpha.400' }}
+          _focusVisible={{ boxShadow: '0 0 0 3px rgba(147, 197, 253, 0.45)' }}
+          aria-label={t('search.openSearch', 'Open search')}
+          id="header-search"
+        >
+          <SearchIcon color="whiteAlpha.700" boxSize={{ base: '11px', md: '14px' }} flexShrink={0} />
+          <Text
+            fontSize={{ base: '11px', md: 'sm' }}
+            lineHeight="1"
+            whiteSpace="nowrap"
+            overflow="hidden"
+            textOverflow="ellipsis"
+            color="whiteAlpha.900"
+            fontWeight="medium"
+          >
+            {t('header.searchHint', 'Search maps, food, and travel gear')}
+          </Text>
+        </Button>
       </Flex>
 
       {/* Main Header */}
@@ -464,31 +532,42 @@ const Header = () => {
                     variant="ghost"
                     rightIcon={<ChevronDownIcon />}
                     leftIcon={renderNavIcon(item.name) || undefined}
-                    {...navButtonStyles}
+                    {...dropdownNavButtonStyles}
                     color={textColor}
+                    sx={{
+                      '.chakra-button__icon:last-of-type': {
+                        transition: 'transform 0.2s ease'
+                      },
+                      '&[aria-expanded=true] .chakra-button__icon:last-of-type': {
+                        transform: 'rotate(180deg)'
+                      }
+                    }}
                   >
                     {t(item.name)}
                   </MenuButton>
                   <MenuList
                     bg="white"
-                    borderColor="gray.200"
+                    border="1px solid"
+                    borderColor="blue.100"
                     shadow="2xl"
-                    py={2}
+                    py={2.5}
                     px={2}
-                    borderRadius="xl"
-                    minW="220px"
+                    borderRadius="2xl"
+                    minW="240px"
+                    mt={2}
                   >
                     {item.submenu.map((subItem) => (
                       <MenuItem
                         key={subItem.name}
                         onClick={() => handleNavigation(subItem.href)}
-                        _hover={{ bg: 'blue.50', color: 'blue.700' }}
+                        _hover={{ bg: 'blue.50', color: 'blue.700', transform: 'translateX(2px)' }}
                         _focus={{ bg: 'blue.50', color: 'blue.700' }}
                         fontSize="sm"
                         fontWeight="semibold"
-                        px={3}
+                        px={3.5}
                         py={2.5}
-                        borderRadius="md"
+                        borderRadius="lg"
+                        transition="all 0.18s ease"
                       >
                         {renderSubNavIcon(subItem.name) ? (
                           <HStack spacing={2}>
@@ -599,7 +678,7 @@ const Header = () => {
       <Modal isOpen={isOpen} onClose={onClose} size="xl" motionPreset="slideInBottom">
         <ModalOverlay />
         <ModalContent maxW="95vw">
-          <ModalHeader>{t('header.search')}</ModalHeader>
+          <ModalHeader>{t('header.searchTitle', 'Search')}</ModalHeader>
           <ModalCloseButton />
           <ModalBody p={0}>
             <Box maxH="75vh" overflowY="auto" p={4}>

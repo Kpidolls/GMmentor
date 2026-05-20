@@ -9,7 +9,14 @@
     "promo": "",
     "login": "Login",
     "register": "Register",
-    "search": "Find: Destinations, Dining, Activities & Travel Gear"
+    "search": "Find: Destinations, Dining, Activities & Travel Gear",
+    "searchTitle": "Search",
+    "searchHint": "Search maps, food, and travel gear"
+  },
+  "language": {
+    "label": "Language",
+    "english": "English",
+    "greek": "Greek"
   },
   "search": {
     "placeholder": "Search...",
