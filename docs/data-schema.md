@@ -139,6 +139,33 @@ Practical guidance:
 
 ## Enrichment Infrastructure Guidance
 
+## Canonical Type Layer
+
+Phase one introduces a shared TypeScript contract for location-like records:
+
+- `src/types/location.ts`
+
+Purpose:
+
+- centralize the platform's location shapes in one place
+- give UI, scripts, and future validators one common contract
+- keep enrichment joins anchored on stable `id`
+
+Current exported contracts:
+
+- `LocationBase`
+- `RestaurantLocation`
+- `MunicipalityLocation`
+- `AttractionLocation`
+- `DiscoverableLocation`
+- `LocationEnrichment`
+
+Pragmatic migration rule:
+
+- existing raw JSON can be adapted into these types at the loading boundary
+- do not spread one-off local interfaces across components for the same location concept
+- future runtime validation should mirror these contracts instead of redefining them
+
 For AI enrichment fields (summaries, tags, synonyms, embeddings, relations):
 
 - Keep base fields backward-compatible.

@@ -3,19 +3,13 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import restaurantsData from '../data/greekRestaurants.json';
-
-interface Restaurant {
-  name: string;
-  url: string;
-  address: string;
-  lat: number;
-  lng: number;
-}
+import type { RestaurantLocation } from '../types/location';
+import { toRestaurantList } from '../utils/mappers';
 
 const NearestGreekRestaurant: React.FC = () => {
   const { t } = useTranslation();
-  const [userLocation, setUserLocation] = useState<{lat: number, lng: number} | null>(null);
-  const [nearestRestaurants, setNearestRestaurants] = useState<Array<{ restaurant: Restaurant; distance: number }> | null>(null);
+  const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
+  const [nearestRestaurants, setNearestRestaurants] = useState<Array<{ restaurant: RestaurantLocation; distance: number }> | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -39,10 +33,11 @@ const NearestGreekRestaurant: React.FC = () => {
   };
 
   const findNearestRestaurants = (userLat: number, userLng: number, count: number = 10) => {
-    const restaurantsWithDistance = restaurantsData.map((restaurant) => ({
-      restaurant: restaurant as Restaurant,
-      distance: calculateDistance(userLat, userLng, parseFloat(restaurant.lat.toString()), parseFloat(restaurant.lng.toString()))
-    }));
+    const restaurantsWithDistance = toRestaurantList(restaurantsData as unknown[])
+      .map((restaurant) => ({
+        restaurant,
+        distance: calculateDistance(userLat, userLng, restaurant.lat, restaurant.lng)
+      }));
 
     return restaurantsWithDistance
       .sort((a, b) => a.distance - b.distance)

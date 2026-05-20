@@ -1,17 +1,9 @@
 // Location and distance utilities for restaurant finder
 
-export interface Position {
-  lat: number;
-  lng: number;
-}
+import type { Coordinates, RestaurantLocation } from '../types/location';
 
-export interface Restaurant {
-  name: string;
-  url: string;
-  address: string;
-  lat: number;
-  lng: number;
-}
+export type Position = Coordinates;
+export type Restaurant = RestaurantLocation;
 
 /**
  * Calculate distance between two points using Haversine formula

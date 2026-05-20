@@ -6,6 +6,8 @@ import config from '../config/index.json';
 import dynamic from 'next/dynamic';
 import municipalitiesData from '../data/municipalities.json';
 import categoriesData from '../data/restaurantCategories.json';
+import type { MunicipalityLocation, RestaurantLocation } from '../types/location';
+import { toRestaurantList, toMunicipalityList } from '../utils/mappers';
 
 import { usePWA } from '../hooks/usePWA';
 
@@ -27,23 +29,8 @@ const alignViewport = () => {
   });
 };
 
-interface Restaurant {
-  name: string;
-  url: string;
-  address: string;
-  lat: number;
-  lng: number;
-}
-
-interface Municipality {
-  name: string;
-  name_en?: string;
-  lat: number;
-  lng: number;
-  region: string;
-  region_en?: string;
-  aliases?: string[];
-}
+type Restaurant = RestaurantLocation;
+type Municipality = MunicipalityLocation;
 
 interface RestaurantCategory {
   id: string;
@@ -106,43 +93,6 @@ const MainHero = () => {
     'monasteries-churches': '/data/monasteriesChurches.json'
   };
   
-  // Helper function to normalize restaurant data and ensure lat/lng are numbers
-  const normalizeRestaurantData = (data: any[]): Restaurant[] => {
-    if (!data || !Array.isArray(data)) {
-      logDevWarning('Invalid data provided to normalizeRestaurantData');
-      return [];
-    }
-
-    return data
-      .filter(item => {
-        if (!item || typeof item !== 'object') return false;
-        if (!item.name) return false;
-        
-        const lat = typeof item.lat === 'string' ? parseFloat(item.lat) : item.lat;
-        const lng = typeof item.lng === 'string' ? parseFloat(item.lng) : item.lng;
-        
-        if (isNaN(lat) || isNaN(lng)) {
-          console.warn(`Skipping ${item.name}: invalid coordinates`, { lat: item.lat, lng: item.lng });
-          return false;
-        }
-        
-        // Validate Greece coordinate ranges (34°N to 42°N, 19°E to 30°E)
-        if (lat < 34 || lat > 42 || lng < 19 || lng > 30) {
-          console.warn(`Skipping ${item.name}: coordinates outside Greece`, { lat, lng });
-          return false;
-        }
-        
-        return true;
-      })
-      .map(item => ({
-        name: item.name || 'Unknown',
-        url: item.url || '',
-        address: item.address || '',
-        lat: typeof item.lat === 'string' ? parseFloat(item.lat) : item.lat,
-        lng: typeof item.lng === 'string' ? parseFloat(item.lng) : item.lng
-      }));
-  };
-
   const loadRestaurantDataByCategory = async (category?: RestaurantCategory): Promise<Restaurant[]> => {
     const categoryId = category?.id || 'greek-restaurants';
     const cached = categoryDataCacheRef.current[categoryId];
@@ -154,7 +104,7 @@ const MainHero = () => {
       const cachedData = localStorage.getItem(localStorageKey);
       if (cachedData) {
         try {
-          const parsed = normalizeRestaurantData(JSON.parse(cachedData));
+          const parsed = toRestaurantList(JSON.parse(cachedData) as unknown[]);
           categoryDataCacheRef.current[categoryId] = parsed;
           return parsed;
         } catch (e) {
@@ -172,7 +122,7 @@ const MainHero = () => {
       }
 
       const data = await response.json();
-      const normalized = normalizeRestaurantData(data);
+      const normalized = toRestaurantList(data as unknown[]);
       categoryDataCacheRef.current[categoryId] = normalized;
 
       if (isStandalone && typeof window !== 'undefined') {
@@ -187,7 +137,7 @@ const MainHero = () => {
         const cachedData = localStorage.getItem(localStorageKey);
         if (cachedData) {
           try {
-            const parsed = normalizeRestaurantData(JSON.parse(cachedData));
+            const parsed = toRestaurantList(JSON.parse(cachedData) as unknown[]);
             categoryDataCacheRef.current[categoryId] = parsed;
             return parsed;
           } catch {
@@ -943,13 +893,13 @@ const MainHero = () => {
       const cachedData = localStorage.getItem('municipalities_data');
       if (cachedData) {
         try {
-          return JSON.parse(cachedData);
+          return toMunicipalityList(JSON.parse(cachedData) as unknown[]);
         } catch (e) {
           logDevWarning('Failed to parse cached municipalities data:', e);
         }
       }
     }
-    return municipalitiesData;
+    return toMunicipalityList(municipalitiesData as unknown[]);
   };
 
   // Filter municipalities based on enhanced search query
