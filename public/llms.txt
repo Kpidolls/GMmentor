@@ -1,0 +1,7 @@
+version: 1
+canonical_site: https://googlementor.com/
+canonical_llms: https://googlementor.com/llms.txt
+llms_full: https://googlementor.com/llms-full.txt
+entities_index: https://googlementor.com/data/entities.json
+schema_version: 1
+language_coverage: el,en

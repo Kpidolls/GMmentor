@@ -1,0 +1,13 @@
+title: GoogleMapsMentor Entity Discovery
+version: 1
+schema_version: 1
+canonical_site: https://googlementor.com/
+canonical_llms: https://googlementor.com/llms.txt
+canonical_entities_index: https://googlementor.com/data/entities.json
+language_coverage: el,en
+
+notes:
+- This file is implementation-light and pointer-based.
+- Use the canonical entities index URL for machine ingestion.
+- Canonical URL guarantee: all URLs in this file are canonical absolute HTTPS URLs on googlementor.com.
+- Entities index metadata includes schema_version, canonical_url, and language_coverage.

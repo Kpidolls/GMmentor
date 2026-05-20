@@ -31,6 +31,9 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
+
+              - name: Prepare data (validate + generate entities)
+                run: npm run data:prepare
         run: npm ci --legacy-peer-deps
 
       - name: Build and Export Next.js

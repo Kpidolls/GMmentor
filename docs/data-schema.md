@@ -177,8 +177,132 @@ Suggested pattern:
 - Base JSON remains in src/data.
 - Enrichment files include record_id equal to base id.
 - Slug can be used for readable URL paths, but id is the canonical join key.
+## Canonical Entity Index
+
+Phase two introduces a build-time generated entity index:
+
+- `public/data/entities.json`
+
+Purpose:
+
+- Single machine-readable source of truth for all discoverable locations
+- AI-friendly artifact for external systems to reference
+- Foundation for semantic search, embeddings, and enrichment
+- Deterministic, cacheable output (sorted by id)
+
+What it contains:
+
+- All 4,100+ normalized locations (restaurants, municipalities, attractions)
+- Derived from validated canonical mapper output only (no re-mapping in generator)
+- Controlled field set per location kind (core fields + kind-specific fields)
+- Metadata header with generation timestamp, schema version, canonical URL, language coverage, and record counts
+
+Generation pipeline:
+
+1. `npm run data:validate` — Validates all datasets through mappers + Zod schemas
+2. `npm run data:generate-entities` — Aggregates mapper output, projects to controlled fields, writes index
+3. `npm run data:prepare` — Orchestrates both steps (validate → generate)
+4. `npm run build` — Calls `prebuild` to copy all JSON to `public/data/`, then builds Next.js app
+
+Output location:
+
+- Source: `public/data/entities.json`
+- Static export: `out/data/entities.json`
+- Web URL: `/data/entities.json`
+
+Entity structure (controlled field set):
+
+**Core fields (all kinds):**
+- `id` — stable identifier (e.g., `greekRestaurants_7b449c4e0fce`)
+- `slug` — human-readable slug (e.g., `ta-platania-7b44`)
+- `kind` — location type: `restaurant`, `municipality`, or `attraction`
+- `name` — display name (original language, may be Greek or Latin)
+- `lat`, `lng` — coordinates within Greece bounds
+- `aliases` — alternative names (Greek↔Latin transliterations)
+- `url` — external link (optional)
+
+**Restaurant-specific fields:**
+- `address` — street address
+- `categoryIds` — taxonomy classification (e.g., `["greekRestaurants"]`)
+
+**Municipality-specific fields:**
+- `region` — administrative region (Greek)
+- `name_en` — English name
+- `region_en` — English region name
+
+Example entities.json structure:
+
+```json
+{
+	"meta": {
+		"generated_at": "2026-05-20T14:32:00Z",
+		"generator_version": "1.0",
+		"schema_version": 1,
+		"canonical_url": "https://googlementor.com/data/entities.json",
+		"language_coverage": ["el", "en"],
+		"record_count": 4118,
+		"by_kind": {
+			"restaurant": 3766,
+			"municipality": 352,
+			"attraction": 0
+		}
+	},
+	"entities": [
+		{
+			"id": "greekRestaurants_7b449c4e0fce",
+			"slug": "ta-platania-7b44",
+			"kind": "restaurant",
+			"name": "Τα Πλατάνια",
+			"lat": 38.0345,
+			"lng": 23.7195,
+			"aliases": ["Ta Platania", "Platania Taverna"],
+			"address": "Plaka, Athens",
+			"categoryIds": ["greekRestaurants"],
+			"url": "https://..."
+		},
+		{
+			"id": "municipalities_3794cfd925db",
+			"slug": "kypseli-3794",
+			"kind": "municipality",
+			"name": "Κυψέλη",
+			"lat": 38.0002,
+			"lng": 23.7417,
+			"aliases": ["Kypseli", "Kipseli"],
+			"region": "Κέντρο Αθήνας",
+			"name_en": "Kypseli",
+			"region_en": "Athens Center",
+			"url": null
+		}
+	]
+}
+```
+
+Design principles:
+
+- **Derived, not duplicated** — Generated from validated mapper output, no re-validation
+- **Deterministic** — Sorted by id, same output on consecutive runs
+- **Controlled fields** — Rich enough for AI discovery, not bloated with internal data
+- **Build-time artifact** — Part of static export, included in deployment
+- **AI-ready** — Machine-readable format, discoverable via `llms.txt`, suitable for embeddings/semantic search
+
+Metadata compatibility contract:
+
+- `schema_version` increments only when the entity schema changes in a backward-incompatible way
+- `canonical_url` is the guaranteed canonical absolute URL for the entity index
+- `language_coverage` states primary language coverage: Greek (`el`) and English (`en`)
+
+Joining with enrichment:
+
+- Use `id` field as primary join key for enrichment datasets
+- Enrichment files reference `record_id` = entity `id`
+- Slug can be used for readable URLs (e.g., blog post permalinks)
+
 
 ## Operational Commands
+Generate/validate data and build entity index:
+
+- `npm run data:prepare` — Validate all datasets + generate entities.json
+
 
 Generate IDs/slugs:
 
