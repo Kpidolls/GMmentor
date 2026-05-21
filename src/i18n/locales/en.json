@@ -11,7 +11,7 @@
     "register": "Register",
     "search": "Find: Destinations, Dining, Activities & Travel Gear",
     "searchTitle": "Search",
-    "searchHint": "Search maps, food, and travel gear"
+    "searchHint": "Best places, beaches & food spots"
   },
   "language": {
     "label": "Language",
@@ -224,6 +224,20 @@
     "scrollHint": "Scroll",
     "coverAlt": "Greece travel scene",
     "viewProduct": "View Product",
+    "athens": "Athens",
+    "athensAndSurroundings": "Athens & Surroundings",
+    "areas": "areas",
+    "backToSearchOptions": "Back to Search Options",
+    "exploreByLocation": "Explore by Location",
+    "choosePreferredArea": "Choose your preferred area to discover amazing {{category}} nearby",
+    "clickToReturnToMain": "Click to return to main page",
+    "chooseDifferentCuisine": "Choose Different Cuisine",
+    "features": {
+      "curatedSelection": "Curated Selection",
+      "qualityAssured": "Quality Assured",
+      "directNavigation": "Direct Navigation",
+      "localFavorites": "Local Favorites"
+    },
     "description": "Google Maps Lists for trip planning.",
     "primaryAction": {
       "text": {
@@ -243,6 +257,8 @@
   "restaurantFinder": {
     "title": "Discover Authentic Greek Restaurants",
     "subtitle": "Find traditional Greek tavernas and restaurants near you",
+    "discoverGreekCuisine": "Discover Greek Cuisine",
+    "findPerfectDining": "Find the perfect dining experience tailored to your preferences",
     "searchNearLocation": "Search Near My Location",
     "chooseRegion": "Choose Athens Region",
     "chooseMunicipality": "Choose Your Municipality",
@@ -257,8 +273,15 @@
     "or": "OR",
     "tryAgain": "Try again",
     "resultsTitle": "{{category}}",
+    "restaurants": "Restaurants",
+    "found": "Found",
     "inArea": "in",
     "nearYou": "Near You",
+    "findCategoryNearLocation": "Find {{category}} near your location",
+    "byCuisine": "By Cuisine",
+    "exploreFoodCategories": "Explore different food categories",
+    "byRegion": "By Region",
+    "chooseAthensAreas": "Choose specific Athens areas",
     "foundCount": "Found",
     "restaurantsNear": "restaurants near",
     "placesNear": "places near",
@@ -266,7 +289,9 @@
     "closest": "closest",
     "showingClosest": "Showing",
     "closestTavernas": "closest authentic Greek tavernas",
+    "of": "of",
     "viewOnMaps": "View on Google Maps",
+    "goToRestaurant": "Go to restaurant",
     "searchAgain": "Search Again",
     "previous": "Previous",
     "next": "Next",
@@ -298,9 +323,9 @@
     }
   },
   "locationOptions": {
-    "chooseLocationMethod": "Choose Location Method",
+    "chooseLocationMethod": "Pick a search method",
     "selectLocationOption": "Select how you would like to search for {{experience}}",
-    "selectLocationFirst": "Start by choosing how to search, then select a category.",
+    "selectLocationFirst": "Next, select a category.",
     "selectNeighborhoodFirst": "Choose your neighborhood first, then pick a category.",
     "nearYou": "Near You",
     "nearYouDesc": "Use your current location to find nearby places",
@@ -321,6 +346,9 @@
     "clearSearchToSeeAll": "Clear search to see all locations"
   },
   "categorySelection": {
+    "chooseYourCuisine": "Choose Your Cuisine",
+    "selectFromCurated": "Choose from our curated categories to find the perfect dining experience",
+    "backToSearchOptions": "Back to Search Options",
     "backToLocationStep": "Back to Search Method"
   },
   "reviews": {
@@ -374,6 +402,7 @@
       "wineries-vineyards": "Taste exceptional Greek wines and visit vineyards"
     }
   },
+  "hiking": "Hiking",
   "aria": {
     "exploreCategory": "Explore {{name}} category",
     "homepage": "Homepage",
@@ -422,6 +451,10 @@
     "descriptions": {
       "title": "📍 Dessert Shops",
       "description": "Treat yourself to Greece’s most irresistible desserts, from creamy baklava to luscious loukoumades, perfect for every sweet tooth."
+    },
+    "desserts": {
+      "title": "📍 Dessert Shops",
+      "description": "Treat yourself to Greece's most irresistible desserts, from creamy baklava to luscious loukoumades, perfect for every sweet tooth."
     },
     "coffee": {
       "title": "📍 Coffee & Brunch",
@@ -632,6 +665,7 @@
     },
     "title": "Buy Travel Gear",
     "subtitle": "Discover the perfect travel accessories for your next adventure.",
+    "buyNow": "Buy Now",
     "products": {
       "universalTravelAdapter": {
         "name": "Universal Travel Adapter",
@@ -893,7 +927,6 @@
         "name": "Lip Protection Balm",
         "description": "Protect your lips from the sun with this SPF 30 lip balm. Moisturizing and nourishing, perfect for outdoor adventures."
       },
-
       "learnMoreButton": "Learn More",
       "readMoreButton": "Read More",
       "showLessButton": "Show Less",
@@ -905,6 +938,17 @@
   },
   "blog": {
     "backToBlog": "Back to Blog",
+    "title": "Blog",
+    "subtitle": "Discover Greece through our curated guides, travel tips, and local insights",
+    "articleSingular": "Article",
+    "articlePlural": "Articles",
+    "languageEnglish": "English",
+    "languageGreek": "Greek",
+    "noArticles": "No articles available in this language yet.",
+    "readMore": "Read More",
+    "ctaTitle": "Ready to Explore Greece?",
+    "ctaSubtitle": "Discover authentic restaurants, hidden gems, and local favorites with our curated maps and guides.",
+    "ctaButton": "Start Exploring 🗺️",
     "noEnglishVersion": "This article is not available in English.",
     "noGreekVersion": "This article is not available in Greek.",
     "langSwitchLabel": "{{label}}",
@@ -1000,6 +1044,7 @@
     "description1": "Traveling can be unpredictable. Ensure you are covered with SafetyWing's comprehensive travel insurance. We trust SafetyWing because they offer reliable coverage, affordable plans, and exceptional customer support, making them our go-to choice for travel insurance.",
     "description2": "This travel insurance offers coverage for medical expenses, trip cancellations, lost luggage, and more. Buy your peace of mind today and enjoy your travels without worries.",
     "ctaTitle": "Get Covered Today!",
+    "ctaSubtitle": "Discover the insurance that covers you at every destination.",
     "ctaDescription": "Travel insurance is essential for challenging trips involving adventure, remote destinations, or unpredictable circumstances. We recommend SafetyWing for its reliability and affordability."
   },
   "aboutUs": {

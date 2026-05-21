@@ -55,7 +55,7 @@ const Store: React.FC = () => {
                 : 'bg-gray-200 text-gray-800'
               }`}
             >
-              {t(`filters.${key}`, { defaultValue: key.charAt(0).toUpperCase() + key.slice(1) })}
+              {t(`store.filters.${key}`, { defaultValue: key.charAt(0).toUpperCase() + key.slice(1) })}
             </button>
             ))}
         </div>
@@ -105,7 +105,7 @@ const Store: React.FC = () => {
                       ? 'Amazon'
                       : product.link?.includes('temu')
                       ? 'Temu'
-                      : 'Buy Now'}
+                      : t('store.buyNow', { defaultValue: 'Buy Now' })}
                   </a>
                   <a
                     href={product.link}

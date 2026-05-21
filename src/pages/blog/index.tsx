@@ -122,10 +122,10 @@ export default function Blog({ allPosts }: BlogProps) {
                 WebkitTextFillColor: 'transparent'
               }}
             >
-              Blog
+              {t('blog.title')}
             </Heading>
             <Text fontSize="xl" color="gray.600" maxW="2xl" mx="auto" mb={6}>
-              Discover Greece through our curated guides, travel tips, and local insights
+              {t('blog.subtitle')}
             </Text>
             <Box h="1" w="32" bg="blue.500" mx="auto" borderRadius="full" />
           </Box>
@@ -134,10 +134,11 @@ export default function Blog({ allPosts }: BlogProps) {
           <Flex justify="space-between" align="center" mb={8} flexWrap="wrap" gap={4}>
             <HStack spacing={4}>
               <Badge colorScheme="blue" px={3} py={1} borderRadius="full" fontSize="sm">
-                {posts.length} {posts.length === 1 ? 'Article' : 'Articles'}
+                {posts.length}{' '}
+                {posts.length === 1 ? t('blog.articleSingular') : t('blog.articlePlural')}
               </Badge>
               <Badge colorScheme="green" px={3} py={1} borderRadius="full" fontSize="sm">
-                {currentLanguage === 'en' ? 'English' : 'Ελληνικά'}
+                {currentLanguage === 'en' ? t('blog.languageEnglish') : t('blog.languageGreek')}
               </Badge>
             </HStack>
             <Button 
@@ -156,7 +157,7 @@ export default function Blog({ allPosts }: BlogProps) {
           {posts.length === 0 ? (
             <Box textAlign="center" py={16}>
               <Text fontSize="lg" color="gray.500">
-                No articles available in this language yet.
+                {t('blog.noArticles')}
               </Text>
             </Box>
           ) : (
@@ -286,7 +287,7 @@ export default function Blog({ allPosts }: BlogProps) {
                               _hover={{ color: 'blue.700' }}
                               transition="color 0.2s"
                             >
-                              {t('blog.readMore', 'Read More')} →
+                              {t('blog.readMore')} →
                             </Text>
                             <Text fontSize="xs" color="gray.400">
                               {post.language === 'el' ? '🇬🇷' : '🇬🇧'}
@@ -303,10 +304,10 @@ export default function Blog({ allPosts }: BlogProps) {
           {/* Call to Action */}
           <Box textAlign="center" mt={16} py={12} bg="blue.50" borderRadius="2xl" border="1px solid" borderColor="blue.100">
             <Heading size="lg" mb={4} color="blue.800">
-              Ready to Explore Greece?
+              {t('blog.ctaTitle')}
             </Heading>
             <Text color="blue.600" mb={6} maxW="2xl" mx="auto">
-              Discover authentic restaurants, hidden gems, and local favorites with our curated maps and guides.
+              {t('blog.ctaSubtitle')}
             </Text>
             <Button 
               as={Link}
@@ -318,7 +319,7 @@ export default function Blog({ allPosts }: BlogProps) {
               _hover={{ transform: "translateY(-2px)" }}
               transition="all 0.2s"
             >
-              Start Exploring 🗺️
+              {t('blog.ctaButton')}
             </Button>
           </Box>
         </Container>

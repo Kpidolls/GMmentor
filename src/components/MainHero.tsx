@@ -1067,9 +1067,6 @@ const MainHero = () => {
                   <h1 className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-sky-900 via-blue-700 to-cyan-700 bg-clip-text text-transparent leading-tight px-1 group-hover:from-sky-800 group-hover:via-blue-700 group-hover:to-cyan-600 transition-all duration-500 drop-shadow-lg">
                     {t('mainHero.title')}
                   </h1>
-                  <p className="mt-3 text-sm sm:text-base md:text-lg text-slate-700 max-w-2xl mx-auto font-medium">
-                    {t('mainHero.tagline', 'Curated maps, local guides and vetted lists to help you explore Greece with confidence.')}
-                  </p>
                 </div>
               </div>
               
@@ -1428,6 +1425,10 @@ const MainHero = () => {
                       </div>
                     </button>
                   </div>
+
+                  <p className="text-slate-700 text-sm sm:text-base md:text-lg max-w-2xl mx-auto text-center font-medium">
+                    {t('mainHero.tagline', 'Curated maps, local guides and vetted lists to help you explore Greece with confidence.')}
+                  </p>
 
                 </div>
               </div>
