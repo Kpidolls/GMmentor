@@ -17,6 +17,46 @@ function loadEnvKey() {
 
 const INDEXNOW_KEY = loadEnvKey();
 const SITE_URL = 'https://googlementor.com';
+const INDEXNOW_ENDPOINT = process.env.INDEXNOW_ENDPOINT || 'api.indexnow.org';
+
+function httpsGet(url) {
+  return new Promise((resolve, reject) => {
+    https
+      .get(url, (res) => {
+        let data = '';
+        res.on('data', (chunk) => {
+          data += chunk;
+        });
+        res.on('end', () => {
+          resolve({ statusCode: res.statusCode || 0, body: data });
+        });
+      })
+      .on('error', reject);
+  });
+}
+
+async function verifyPublicKeyFile(key) {
+  const keyUrl = `${SITE_URL}/${key}.txt`;
+
+  try {
+    const response = await httpsGet(keyUrl);
+    if (response.statusCode !== 200) {
+      console.log(`⚠️  Key file check failed: ${keyUrl} returned ${response.statusCode}`);
+      return false;
+    }
+
+    if (response.body.trim() !== key) {
+      console.log(`⚠️  Key file check failed: ${keyUrl} content does not match configured key`);
+      return false;
+    }
+
+    console.log(`✓ Key file reachable: ${keyUrl}`);
+    return true;
+  } catch (error) {
+    console.log(`⚠️  Could not verify key file at ${keyUrl}: ${error.message}`);
+    return false;
+  }
+}
 
 function parseSitemap(sitemapPath) {
   if (!fs.existsSync(sitemapPath)) {
@@ -33,15 +73,16 @@ function parseSitemap(sitemapPath) {
 
 function submitToIndexNow(urls, key) {
   return new Promise((resolve, reject) => {
+    const keyLocation = `${SITE_URL}/${key}.txt`;
     const payload = JSON.stringify({
       host: 'googlementor.com',
       key: key,
-      keyLocation: `${SITE_URL}/${key}.txt`,
+      keyLocation,
       urlList: urls.slice(0, 10000), // IndexNow limit
     });
     
     const options = {
-      hostname: 'api.indexnow.org',
+      hostname: INDEXNOW_ENDPOINT,
       path: '/indexnow',
       method: 'POST',
       headers: {
@@ -64,9 +105,27 @@ function submitToIndexNow(urls, key) {
           console.log(`   Search engines will crawl these URLs within minutes to hours.`);
           resolve({ success: true, status: res.statusCode });
         } else {
+          let parsed = null;
+          try {
+            parsed = data ? JSON.parse(data) : null;
+          } catch {
+            parsed = null;
+          }
+
+          if (res.statusCode === 403) {
+            console.log('ℹ️  IndexNow authorization not active yet (HTTP 403).');
+            if (data) console.log(`   Response: ${data}`);
+            console.log('   Next steps:');
+            console.log('   1. Verify googlementor.com in Bing Webmaster Tools using the same key file.');
+            console.log(`   2. Confirm key URL is publicly reachable: ${keyLocation}`);
+            console.log('   3. Submit sitemap.xml in Bing Webmaster Tools and retry after verification propagates.');
+            resolve({ success: false, status: res.statusCode, blockedByAuthorization: true, error: parsed });
+            return;
+          }
+
           console.log(`⚠️  IndexNow returned status ${res.statusCode}`);
           if (data) console.log(`   Response: ${data}`);
-          resolve({ success: false, status: res.statusCode });
+          resolve({ success: false, status: res.statusCode, error: parsed });
         }
       });
     });
@@ -96,6 +155,12 @@ async function main() {
   }
   
   console.log(`✓ API Key configured: ${INDEXNOW_KEY.substring(0, 8)}...`);
+
+  const keyFileReady = await verifyPublicKeyFile(INDEXNOW_KEY);
+  if (!keyFileReady) {
+    console.log('   Skipping IndexNow submission until key file check passes.\n');
+    process.exit(0);
+  }
   
   // Try sitemap.xml first (main sitemap), then fall back to sitemap-0.xml
   let sitemapPath = path.join(process.cwd(), 'out', 'sitemap.xml');
@@ -114,7 +179,7 @@ async function main() {
   }
   
   console.log(`✓ Found ${urls.length} URLs in sitemap\n`);
-  console.log('Submitting to IndexNow API...');
+  console.log(`Submitting to IndexNow API (${INDEXNOW_ENDPOINT})...`);
   
   try {
     await submitToIndexNow(urls, INDEXNOW_KEY);
