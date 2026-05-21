@@ -211,6 +211,45 @@ export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostPro
     post.content
   )
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: metaDescription,
+    datePublished: post.date,
+    dateModified: post.date,
+    inLanguage: post.language === 'el' ? 'el-GR' : 'en-US',
+    url: `https://googlementor.com/blog/${post.slug}`,
+    author: {
+      '@type': 'Organization',
+      name: 'Googlementor',
+      url: 'https://googlementor.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Googlementor',
+      url: 'https://googlementor.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://googlementor.com/icons/icon-192x192.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://googlementor.com/blog/${post.slug}`,
+    },
+    ...(post.tags?.length ? { keywords: post.tags.join(', ') } : {}),
+    ...(alternatePost
+      ? {
+          translationOfWork: {
+            '@type': 'BlogPosting',
+            url: `https://googlementor.com/blog/${alternatePost.slug}`,
+            inLanguage: alternatePost.language === 'el' ? 'el-GR' : 'en-US',
+          },
+        }
+      : {}),
+  }
+
   const handleLanguageSwitch = () => {
     if (alternatePost) {
       router.push(`/blog/${alternatePost.slug}`)
@@ -279,6 +318,12 @@ export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostPro
           rel="alternate" 
           hrefLang="x-default" 
           href={`https://googlementor.com/blog/${post.language === 'en' ? post.slug : (alternatePost?.slug || post.slug)}`} 
+        />
+
+        {/* BlogPosting JSON-LD for AI model and search engine attribution */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
       
