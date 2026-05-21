@@ -1020,7 +1020,7 @@ const MainHero = () => {
             
             <span className="relative inline-flex items-center px-3 py-2 xs:px-4 xs:py-2 bg-white/80 backdrop-blur-md text-slate-800 font-semibold rounded-full text-xs xs:text-sm gap-2 hover:bg-white hover:scale-105 transition-all duration-300 border border-cyan-200/70 shadow-lg">
               <span className="text-sm xs:text-base animate-pulse">🇬🇷</span>
-              <span className="hidden xs:inline font-medium tracking-wide">{t('mainHero.athens', 'Athens')}</span>
+              <span className="hidden font-medium tracking-wide">{t('mainHero.athens', 'Athens')}</span>
               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
             </span>
           </div>

@@ -58,30 +58,54 @@ const Header = () => {
   const bg = 'white'; // Default background color
   const textColor = 'gray.800'; // Default text color
   const navButtonStyles = {
-    bg: 'linear-gradient(180deg, #ffffff 0%, #f8fbff 100%)',
+    bg: 'gray.50',
     border: '1px solid',
-    borderColor: 'blue.100',
-    borderRadius: 'full',
+    borderColor: 'gray.200',
+    borderRadius: 'xl',
     fontWeight: 'semibold',
-    letterSpacing: '0.02em',
+    letterSpacing: '0.01em',
     fontSize: 'sm',
-    px: 5,
+    px: 4,
     h: 10,
-    boxShadow: '0 2px 10px rgba(15, 23, 42, 0.06)',
-    transition: 'all 0.22s ease',
+    boxShadow: '0 1px 2px rgba(15, 23, 42, 0.06)',
+    transition: 'background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
     _hover: {
-      bg: 'linear-gradient(180deg, #f9fcff 0%, #eef6ff 100%)',
-      borderColor: 'blue.300',
-      color: 'blue.700',
-      transform: 'translateY(-1px)',
-      boxShadow: '0 10px 22px rgba(59, 130, 246, 0.16)'
+      bg: 'white',
+      borderColor: 'gray.300',
+      color: 'gray.900',
+      boxShadow: '0 4px 12px rgba(15, 23, 42, 0.08)'
     },
     _active: {
-      bg: 'blue.50',
-      transform: 'translateY(0)'
+      bg: 'gray.100',
+      borderColor: 'gray.300',
+      color: 'gray.900'
     },
     _focusVisible: {
-      boxShadow: '0 0 0 3px rgba(66, 153, 225, 0.3)'
+      boxShadow: '0 0 0 3px rgba(59, 130, 246, 0.28)'
+    },
+    sx: {
+      '.chakra-button__icon:first-of-type': {
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        w: '20px',
+        h: '20px',
+        borderRadius: 'md',
+        bg: 'gray.100',
+        border: '1px solid',
+        borderColor: 'gray.200',
+        color: 'gray.600',
+        marginInlineEnd: '10px',
+        transition: 'background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease'
+      },
+      '.chakra-button__icon:last-of-type': {
+        color: 'gray.500'
+      },
+      '&:hover .chakra-button__icon:first-of-type': {
+        bg: 'white',
+        borderColor: 'gray.300',
+        color: 'gray.800'
+      }
     }
   };
   const dropdownNavButtonStyles = {
@@ -90,8 +114,18 @@ const Header = () => {
       bg: 'blue.600',
       color: 'white',
       borderColor: 'blue.600',
-      boxShadow: '0 12px 24px rgba(37, 99, 235, 0.28)',
-      transform: 'translateY(-1px)'
+      boxShadow: '0 8px 20px rgba(37, 99, 235, 0.24)'
+    },
+    sx: {
+      ...navButtonStyles.sx,
+      '&[aria-expanded=true] .chakra-button__icon:first-of-type': {
+        bg: 'whiteAlpha.200',
+        borderColor: 'whiteAlpha.300',
+        color: 'white'
+      },
+      '&[aria-expanded=true] .chakra-button__icon:last-of-type': {
+        color: 'whiteAlpha.900'
+      }
     }
   };
   const mobileNavButtonStyles = {
@@ -106,6 +140,7 @@ const Header = () => {
     bg: 'white',
     border: '1px solid',
     borderColor: 'blue.100',
+    color: 'gray.800',
     boxShadow: 'sm',
     _hover: {
       bg: 'blue.50',
@@ -126,12 +161,12 @@ const Header = () => {
     switch (name) {
       case 'navigation.maps':
         return (
-          <Icon viewBox="0 0 24 24" boxSize={{ base: 4.5, md: 3.5 }} color="blue.500">
+          <Icon viewBox="0 0 24 24" boxSize={{ base: 4, md: 3.5 }} color="currentColor">
             <path
               d="M9 20l-5-2.5V4l5 2.5 6-3 5 2.5V20l-5-2.5-6 3Z"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1.5"
+              strokeWidth="1.75"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
@@ -139,12 +174,12 @@ const Header = () => {
         );
       case 'navigation.store':
         return (
-          <Icon viewBox="0 0 24 24" boxSize={{ base: 4.5, md: 3.5 }} color="blue.500">
+          <Icon viewBox="0 0 24 24" boxSize={{ base: 4, md: 3.5 }} color="currentColor">
             <path
               d="M6 9h12l-1 11H7L6 9Zm2-4h8l1 4H7l1-4Zm-3 4h14"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1.5"
+              strokeWidth="1.75"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
@@ -152,12 +187,12 @@ const Header = () => {
         );
       case 'navigation.aboutUs':
         return (
-          <Icon viewBox="0 0 24 24" boxSize={{ base: 4.5, md: 3.5 }} color="blue.500">
+          <Icon viewBox="0 0 24 24" boxSize={{ base: 4, md: 3.5 }} color="currentColor">
             <path
               d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-7 8a7 7 0 0 1 14 0"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1.5"
+              strokeWidth="1.75"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
@@ -521,7 +556,7 @@ const Header = () => {
                   onClick={() => handleNavigation(item.href)}
                   leftIcon={renderNavIcon(item.name) || undefined}
                   {...navButtonStyles}
-                  color={textColor}
+                  color="gray.700"
                 >
                   {t(item.name)}
                 </Button>
@@ -533,9 +568,11 @@ const Header = () => {
                     rightIcon={<ChevronDownIcon />}
                     leftIcon={renderNavIcon(item.name) || undefined}
                     {...dropdownNavButtonStyles}
-                    color={textColor}
+                    color="gray.700"
                     sx={{
+                      ...(dropdownNavButtonStyles.sx || {}),
                       '.chakra-button__icon:last-of-type': {
+                        color: 'currentColor',
                         transition: 'transform 0.2s ease'
                       },
                       '&[aria-expanded=true] .chakra-button__icon:last-of-type': {
@@ -570,8 +607,23 @@ const Header = () => {
                         transition="all 0.18s ease"
                       >
                         {renderSubNavIcon(subItem.name) ? (
-                          <HStack spacing={2}>
-                            {renderSubNavIcon(subItem.name)}
+                          <HStack spacing={2.5}>
+                            <Box
+                              display="inline-flex"
+                              alignItems="center"
+                              justifyContent="center"
+                              w="20px"
+                              h="20px"
+                              borderRadius="md"
+                              bg="gray.100"
+                              border="1px solid"
+                              borderColor="gray.200"
+                              color="blue.500"
+                              transition="background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease"
+                              _groupHover={{ bg: 'white', borderColor: 'blue.200', color: 'blue.700' }}
+                            >
+                              {renderSubNavIcon(subItem.name)}
+                            </Box>
                             <Text>{t(subItem.name)}</Text>
                           </HStack>
                         ) : (
@@ -639,7 +691,6 @@ const Header = () => {
                   <Button
                     variant="ghost"
                     onClick={() => handleNavigation(item.href)}
-                    color="gray.800"
                     leftIcon={renderNavIcon(item.name) || undefined}
                     {...mobileNavButtonStyles}
                   >
@@ -661,6 +712,27 @@ const Header = () => {
                           borderRadius="lg"
                           px={3}
                           h={10}
+                          sx={{
+                            '.chakra-button__icon:first-of-type': {
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              w: '20px',
+                              h: '20px',
+                              borderRadius: 'md',
+                              bg: 'gray.100',
+                              border: '1px solid',
+                              borderColor: 'gray.200',
+                              color: 'blue.500',
+                              marginInlineEnd: '10px',
+                              transition: 'background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease'
+                            },
+                            '&:hover .chakra-button__icon:first-of-type': {
+                              bg: 'white',
+                              borderColor: 'blue.200',
+                              color: 'blue.700'
+                            }
+                          }}
                         >
                           {t(subItem.name)}
                         </Button>
