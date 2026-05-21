@@ -2,6 +2,8 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
+const { readFileSync } = require('fs');
+const { join } = require('path');
 
 const withPWA = require('@ducanh2912/next-pwa').default({
   dest: 'public',
@@ -272,6 +274,29 @@ const nextConfig = withPWA(withBundleAnalyzer({
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
   ) {
+    let placePaths = {};
+
+    try {
+      const entitiesFile = join(process.cwd(), 'public', 'data', 'entities.json');
+      const parsed = JSON.parse(readFileSync(entitiesFile, 'utf8'));
+      const entities = Array.isArray(parsed?.entities) ? parsed.entities : [];
+
+      placePaths = entities.reduce((acc, entity) => {
+        if (!entity?.slug) {
+          return acc;
+        }
+
+        acc[`/place/${entity.slug}`] = {
+          page: '/place/[slug]',
+          params: { slug: entity.slug },
+        };
+
+        return acc;
+      }, {});
+    } catch {
+      placePaths = {};
+    }
+
     return {
       '/': { page: '/' },
       '/terms': { page: '/terms' },
@@ -287,6 +312,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
         page: '/blog/[slug]',
         params: { slug: 'greek-bakeries-brunch-coffee-guide' },
       },
+      ...placePaths,
     };
   },
   eslint: {

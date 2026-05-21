@@ -17,11 +17,34 @@ import type { DiscoverableLocation } from '../src/types/location';
 import { toRestaurantList, toMunicipalityList } from '../src/utils/mappers';
 
 const DATA_DIR = join(process.cwd(), 'src', 'data');
+const PUBLIC_DATA_DIR = join(process.cwd(), 'public', 'data');
 const OUTPUT_DIR = join(process.cwd(), 'public', 'data');
 const OUTPUT_FILE = join(OUTPUT_DIR, 'entities.json');
 const CANONICAL_SITE_URL = 'https://googlementor.com';
 const ENTITIES_CANONICAL_URL = `${CANONICAL_SITE_URL}/data/entities.json`;
 const ENTITY_SCHEMA_VERSION = 1;
+
+// ---------------------------------------------------------------------------
+// Category label lookup: categoryId → human-readable name
+// e.g. "greek-restaurants" → "Greek Restaurants"
+// ---------------------------------------------------------------------------
+
+interface CategoryMeta {
+  id: string;
+  name: string;
+}
+
+function buildCategoryLookup(): Map<string, string> {
+  const filePath = join(PUBLIC_DATA_DIR, 'restaurantCategories.json');
+  const raw: CategoryMeta[] = JSON.parse(readFileSync(filePath, 'utf8'));
+  const map = new Map<string, string>();
+  for (const cat of raw) {
+    map.set(cat.id, cat.name);
+  }
+  return map;
+}
+
+const CATEGORY_LABEL = buildCategoryLookup();
 
 // ---------------------------------------------------------------------------
 // Dataset registry - same as validate-data.ts
@@ -32,33 +55,36 @@ type DatasetMapper = (raw: unknown[]) => DiscoverableLocation[];
 
 interface DatasetConfig {
   mapper: DatasetMapper;
+  categoryId?: string; // Category to assign to all entities from this file
 }
 
-const RESTAURANT_FILES: readonly string[] = [
-  'asianRestaurants.json',
-  'burgersRestaurants.json',
-  'cheapEatsRestaurants.json',
-  'coffeeBrunchRestaurants.json',
-  'dessertsRestaurants.json',
-  'familyFriendly.json',
-  'fishTavernasRestaurants.json',
-  'greekRestaurants.json',
-  'gyrosSouvlakiRestaurants.json',
-  'italianRestaurants.json',
-  'luxuryDiningRestaurants.json',
-  'mexicanRestaurants.json',
-  'monasteriesChurches.json',
-  'mustSeeAttractions.json',
-  'rooftopLoungesRestaurants.json',
-  'vegetarianRestaurants.json',
-  'wineriesVineyards.json',
-];
+// Mapping from source filename to canonical category id (from restaurantCategories.json)
+const RESTAURANT_CATEGORY_MAP: Record<string, string> = {
+  'asianRestaurants.json':          'asian',
+  'burgersRestaurants.json':        'burgers',
+  'cheapEatsRestaurants.json':      'cheap-eats',
+  'coffeeBrunchRestaurants.json':   'coffee-brunch',
+  'dessertsRestaurants.json':       'desserts',
+  'familyFriendly.json':            'family-friendly',
+  'fishTavernasRestaurants.json':   'fish-tavernas',
+  'greekRestaurants.json':          'greek-restaurants',
+  'gyrosSouvlakiRestaurants.json':  'cheap-eats',
+  'italianRestaurants.json':        'italian',
+  'luxuryDiningRestaurants.json':   'luxury-dining',
+  'mexicanRestaurants.json':        'mexican',
+  'monasteriesChurches.json':       'monasteries-churches',
+  'mustSeeAttractions.json':        'attractions',
+  'rooftopLoungesRestaurants.json': 'rooftop-lounges',
+  'vegetarianRestaurants.json':     'vegetarian',
+  'wineriesVineyards.json':         'wineries-vineyards',
+};
 
 const REGISTRY: Record<string, DatasetConfig> = {};
 
-for (const filename of RESTAURANT_FILES) {
+for (const [filename, categoryId] of Object.entries(RESTAURANT_CATEGORY_MAP)) {
   REGISTRY[filename] = {
     mapper: toRestaurantList as unknown as DatasetMapper,
+    categoryId,
   };
 }
 
@@ -82,6 +108,7 @@ interface EntityRecord {
   // Restaurant-specific
   address?: string;
   categoryIds?: string[];
+  categories?: string[];   // Human-readable category labels, resolved from categoryIds
   // Municipality-specific
   region?: string;
   name_en?: string;
@@ -92,7 +119,7 @@ interface EntityRecord {
  * Project a canonical location to the controlled entity schema.
  * Includes only fields relevant for AI discovery, omits internal fields.
  */
-function projectEntity(location: DiscoverableLocation): EntityRecord {
+function projectEntity(location: DiscoverableLocation, injectCategoryId?: string): EntityRecord {
   const base: EntityRecord = {
     id: location.id,
     slug: location.slug,
@@ -107,7 +134,18 @@ function projectEntity(location: DiscoverableLocation): EntityRecord {
   // Add kind-specific fields
   if (location.kind === 'restaurant') {
     base.address = location.address;
-    base.categoryIds = location.categoryIds;
+    // Merge injected category with any existing categoryIds on the source record
+    const sourceIds = location.categoryIds ?? [];
+    const allIds = injectCategoryId
+      ? Array.from(new Set([injectCategoryId, ...sourceIds]))
+      : sourceIds;
+    if (allIds.length) {
+      base.categoryIds = allIds;
+      const labels = allIds
+        .map((id) => CATEGORY_LABEL.get(id))
+        .filter((label): label is string => label !== undefined);
+      if (labels.length) base.categories = labels;
+    }
   }
 
   if (location.kind === 'municipality') {
@@ -130,7 +168,7 @@ async function generateEntities() {
     const entities: EntityRecord[] = [];
 
     // 1. Load all datasets through mappers
-    for (const [filename, { mapper }] of Object.entries(REGISTRY)) {
+    for (const [filename, { mapper, categoryId }] of Object.entries(REGISTRY)) {
       const filePath = join(DATA_DIR, filename);
 
       try {
@@ -143,8 +181,8 @@ async function generateEntities() {
         // Run through mapper (already validated during data:validate phase)
         const mapped = mapper(rawData);
 
-        // Project to controlled entity fields
-        const projected = mapped.map(projectEntity);
+        // Project to controlled entity fields, injecting the file's category
+        const projected = mapped.map((loc) => projectEntity(loc, categoryId));
         entities.push(...projected);
 
         console.log(`  ✓ ${filename}: ${mapped.length} records`);

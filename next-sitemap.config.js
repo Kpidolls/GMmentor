@@ -1,4 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
+const { readFileSync } = require('fs');
+const { join } = require('path');
+
 module.exports = {
   siteUrl: 'https://googlementor.com',
   generateRobotsTxt: true,
@@ -52,5 +55,23 @@ module.exports = {
       priority,
       lastmod: new Date().toISOString(),
     };
+  },
+  additionalPaths: async (config) => {
+    try {
+      const entitiesFile = join(process.cwd(), 'public', 'data', 'entities.json');
+      const parsed = JSON.parse(readFileSync(entitiesFile, 'utf8'));
+      const entities = Array.isArray(parsed?.entities) ? parsed.entities : [];
+
+      return entities
+        .filter((entity) => entity?.slug)
+        .map((entity) => ({
+          loc: `/place/${entity.slug}`,
+          changefreq: 'weekly',
+          priority: 0.7,
+          lastmod: new Date().toISOString(),
+        }));
+    } catch {
+      return [];
+    }
   },
 }
