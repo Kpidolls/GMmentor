@@ -19,6 +19,7 @@
     "greek": "Greek"
   },
   "search": {
+    "title": "Points of interest or activities",
     "placeholder": "Search...",
     "inputAria": "Search input for destinations, maps, or travel gear",
     "executeSearchAria": "Execute search",
