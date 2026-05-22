@@ -22,6 +22,23 @@ const PRIORITY_GUIDE_SLUGS = new Set([
   'traveling-to-greece-on-a-budget',
 ]);
 
+const GUIDE_ENTITY_SEEDS: Record<string, string[]> = {
+  'acropolis-complete-guide': ['acropolis', 'acropolis museum', 'parthenon', 'plaka', 'monastiraki', 'ancient agora', 'odeon of herodes atticus'],
+  'athens-airport-to-city-guide': ['athens international airport', 'syntagma', 'monastiraki', 'piraeus', 'acropoli'],
+  'athens-day-trips-guide': ['meteora', 'delphi', 'nafplio', 'aegina', 'epidaurus', 'mycenae'],
+  'athens-hop-on-hop-off-guide': ['acropolis', 'syntagma', 'monastiraki', 'plaka', 'panathenaic stadium', 'lycabettus'],
+  'athens-layover-6-hours-guide': ['athens international airport', 'acropolis', 'plaka', 'syntagma', 'monastiraki'],
+  'athens-live-greek-music-guide': ['psyrri', 'plaka', 'gkazi', 'monastiraki', 'thiseio'],
+  'best-greek-souvenirs-athens': ['monastiraki', 'plaka', 'syntagma', 'ermou', 'kolonaki'],
+  'choose-perfect-greek-island': ['santorini', 'mykonos', 'paros', 'naxos', 'milos', 'crete', 'corfu'],
+  'greece-weather-swimming-ferry-guide': ['santorini', 'mykonos', 'paros', 'naxos', 'crete', 'rhodes', 'piraeus'],
+  'greek-bakeries-brunch-coffee-guide': ['psyrri', 'kolonaki', 'pangrati', 'thessaloniki', 'chania', 'santorini', 'mykonos'],
+  'luxury-rooftop-restaurants-athens': ['syntagma', 'acropolis', 'monastiraki', 'kolonaki', 'lycabettus'],
+  'meteora-complete-guide': ['meteora', 'kalampaka', 'trikala'],
+  'tap-water-safe-greece': ['athens', 'thessaloniki', 'santorini', 'mykonos', 'crete', 'rhodes'],
+  'traveling-to-greece-on-a-budget': ['athens', 'thessaloniki', 'piraeus', 'crete', 'naxos', 'paros'],
+};
+
 const GREEK_TO_LATIN: Record<string, string> = {
   α: 'a', ά: 'a', β: 'v', γ: 'g', δ: 'd', ε: 'e', έ: 'e', ζ: 'z', η: 'i', ή: 'i', θ: 'th',
   ι: 'i', ί: 'i', ϊ: 'i', ΐ: 'i', κ: 'k', λ: 'l', μ: 'm', ν: 'n', ξ: 'x', ο: 'o', ό: 'o',
@@ -96,6 +113,50 @@ function getTerms(entity: EntityRecord): string[] {
   return Array.from(terms);
 }
 
+function getGuideSeeds(post: Post): string[] {
+  return GUIDE_ENTITY_SEEDS[getGuideSlug(post)] || [];
+}
+
+function entityMatchesSeed(entity: EntityRecord, seed: string): boolean {
+  const normalizedSeed = normalizeForMatching(seed);
+  if (!normalizedSeed) return false;
+
+  return getTerms(entity).some((term) => {
+    if (term === normalizedSeed) return true;
+    return matchesTerm(term, normalizedSeed) || matchesTerm(normalizedSeed, term);
+  });
+}
+
+function getSeededEntitiesForGuide(post: Post, entities: EntityRecord[], limit: number): EntityRecord[] {
+  const seeds = getGuideSeeds(post);
+  if (!seeds.length) return [];
+
+  const picked = new Map<string, EntityRecord>();
+
+  for (const seed of seeds) {
+    const candidates = entities
+      .filter((entity) => entityMatchesSeed(entity, seed))
+      .sort((left, right) => {
+        const leftName = normalizeForMatching(left.name);
+        const rightName = normalizeForMatching(right.name);
+        const normalizedSeed = normalizeForMatching(seed);
+        const leftExact = leftName === normalizedSeed ? 1 : 0;
+        const rightExact = rightName === normalizedSeed ? 1 : 0;
+        if (rightExact !== leftExact) return rightExact - leftExact;
+        return left.name.localeCompare(right.name);
+      });
+
+    for (const candidate of candidates) {
+      picked.set(candidate.id, candidate);
+      if (picked.size >= limit) {
+        return Array.from(picked.values());
+      }
+    }
+  }
+
+  return Array.from(picked.values());
+}
+
 function scoreEntityMention(post: Post, entity: EntityRecord): number {
   const title = normalizeForMatching(post.title);
   const summary = normalizeForMatching(post.summary);
@@ -108,6 +169,11 @@ function scoreEntityMention(post: Post, entity: EntityRecord): number {
     if (matchesTerm(title, term)) score += 120;
     if (matchesTerm(summary, term)) score += 80;
     if (matchesTerm(combined, term)) score += 30;
+  }
+
+  const seedBoost = getGuideSeeds(post).some((seed) => entityMatchesSeed(entity, seed));
+  if (seedBoost) {
+    score += 250;
   }
 
   return score;
@@ -130,15 +196,32 @@ export function getMentionedEntitiesForPost(post: Post, limit = 10): EntityRecor
     return [];
   }
 
-  return getAllCachedEntities()
+  const entities = getAllCachedEntities();
+  const seeded = getSeededEntitiesForGuide(post, entities, limit);
+
+  if (seeded.length >= limit) {
+    return seeded.slice(0, limit);
+  }
+
+  const scored = entities
     .map((entity) => ({ entity, score: scoreEntityMention(post, entity) }))
     .filter((match): match is { entity: EntityRecord; score: number } => match.score > 0)
     .sort((left, right) => {
       if (right.score !== left.score) return right.score - left.score;
       return left.entity.name.localeCompare(right.entity.name);
     })
-    .slice(0, limit)
     .map((match) => match.entity);
+
+  const combined = new Map<string, EntityRecord>();
+  for (const entity of seeded) {
+    combined.set(entity.id, entity);
+  }
+  for (const entity of scored) {
+    combined.set(entity.id, entity);
+    if (combined.size >= limit) break;
+  }
+
+  return Array.from(combined.values()).slice(0, limit);
 }
 
 export function getMentionedGuidesForEntity(entity: EntityRecord, limit = 8): Post[] {

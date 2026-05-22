@@ -7,6 +7,49 @@ const ENTITIES_FILE = path.join(ROOT, 'public', 'data', 'entities.json');
 const OUT_PLACE_DIR = path.join(ROOT, 'out', 'place');
 const SITEMAP_FILE = path.join(ROOT, 'out', 'sitemap.xml');
 const SITEMAP_SHARD_FILE = path.join(ROOT, 'out', 'sitemap-0.xml');
+const BLOG_DIR = path.join(ROOT, 'src', 'blog');
+const PRIORITY_GUIDE_SLUGS = new Set([
+  'acropolis-complete-guide',
+  'american-college-of-greece-agia-paraskevi-guide',
+  'athens-airport-to-city-guide',
+  'athens-day-trips-guide',
+  'athens-hop-on-hop-off-guide',
+  'athens-layover-6-hours-guide',
+  'athens-live-greek-music-guide',
+  'best-greek-souvenirs-athens',
+  'choose-perfect-greek-island',
+  'greece-2026-holidays-guide',
+  'greece-weather-swimming-ferry-guide',
+  'greek-bakeries-brunch-coffee-guide',
+  'luxury-rooftop-restaurants-athens',
+  'meteora-complete-guide',
+  'tap-water-safe-greece',
+  'traveling-to-greece-on-a-budget',
+]);
+const GUIDE_ENTITY_SEEDS = {
+  'acropolis-complete-guide': ['acropolis', 'acropolis museum', 'parthenon', 'plaka', 'monastiraki', 'ancient agora', 'odeon of herodes atticus'],
+  'athens-airport-to-city-guide': ['athens international airport', 'syntagma', 'monastiraki', 'piraeus', 'acropoli'],
+  'athens-day-trips-guide': ['meteora', 'delphi', 'nafplio', 'aegina', 'epidaurus', 'mycenae'],
+  'athens-hop-on-hop-off-guide': ['acropolis', 'syntagma', 'monastiraki', 'plaka', 'panathenaic stadium', 'lycabettus'],
+  'athens-layover-6-hours-guide': ['athens international airport', 'acropolis', 'plaka', 'syntagma', 'monastiraki'],
+  'athens-live-greek-music-guide': ['psyrri', 'plaka', 'gkazi', 'monastiraki', 'thiseio'],
+  'best-greek-souvenirs-athens': ['monastiraki', 'plaka', 'syntagma', 'ermou', 'kolonaki'],
+  'choose-perfect-greek-island': ['santorini', 'mykonos', 'paros', 'naxos', 'milos', 'crete', 'corfu'],
+  'greece-weather-swimming-ferry-guide': ['santorini', 'mykonos', 'paros', 'naxos', 'crete', 'rhodes', 'piraeus'],
+  'greek-bakeries-brunch-coffee-guide': ['psyrri', 'kolonaki', 'pangrati', 'thessaloniki', 'chania', 'santorini', 'mykonos'],
+  'luxury-rooftop-restaurants-athens': ['syntagma', 'acropolis', 'monastiraki', 'kolonaki', 'lycabettus'],
+  'meteora-complete-guide': ['meteora', 'kalampaka', 'trikala'],
+  'tap-water-safe-greece': ['athens', 'thessaloniki', 'santorini', 'mykonos', 'crete', 'rhodes'],
+  'traveling-to-greece-on-a-budget': ['athens', 'thessaloniki', 'piraeus', 'crete', 'naxos', 'paros'],
+};
+const GREEK_TO_LATIN = {
+  'α': 'a', 'ά': 'a', 'β': 'v', 'γ': 'g', 'δ': 'd', 'ε': 'e', 'έ': 'e', 'ζ': 'z', 'η': 'i', 'ή': 'i', 'θ': 'th',
+  'ι': 'i', 'ί': 'i', 'ϊ': 'i', 'ΐ': 'i', 'κ': 'k', 'λ': 'l', 'μ': 'm', 'ν': 'n', 'ξ': 'x', 'ο': 'o', 'ό': 'o',
+  'π': 'p', 'ρ': 'r', 'σ': 's', 'ς': 's', 'τ': 't', 'υ': 'y', 'ύ': 'y', 'ϋ': 'y', 'ΰ': 'y', 'φ': 'f', 'χ': 'ch',
+  'ψ': 'ps', 'ω': 'o', 'ώ': 'o', 'Α': 'a', 'Ά': 'a', 'Β': 'v', 'Γ': 'g', 'Δ': 'd', 'Ε': 'e', 'Έ': 'e', 'Ζ': 'z',
+  'Η': 'i', 'Ή': 'i', 'Θ': 'th', 'Ι': 'i', 'Ί': 'i', 'Κ': 'k', 'Λ': 'l', 'Μ': 'm', 'Ν': 'n', 'Ξ': 'x', 'Ο': 'o',
+  'Ό': 'o', 'Π': 'p', 'Ρ': 'r', 'Σ': 's', 'Τ': 't', 'Υ': 'y', 'Ύ': 'y', 'Φ': 'f', 'Χ': 'ch', 'Ψ': 'ps', 'Ω': 'o', 'Ώ': 'o',
+};
 
 function fail(message) {
   console.error(`❌  ${message}`);
@@ -15,6 +58,125 @@ function fail(message) {
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+}
+
+function parseFrontmatter(content) {
+  const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
+  if (!match) return {};
+
+  const result = {};
+  for (const line of match[1].split('\n')) {
+    const colon = line.indexOf(':');
+    if (colon <= 0) continue;
+
+    const key = line.slice(0, colon).trim();
+    let value = line.slice(colon + 1).trim();
+
+    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+      value = value.slice(1, -1);
+    }
+
+    result[key] = value;
+  }
+
+  return result;
+}
+
+function transliterateGreek(value) {
+  return Array.from(value).map((character) => GREEK_TO_LATIN[character] || character).join('');
+}
+
+function normalizeForMatching(value) {
+  return transliterateGreek(value)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function matchesTerm(haystack, needle) {
+  if (!needle || needle.length < 3) return false;
+  const escaped = needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`(^|\\s)${escaped}(\\s|$)`).test(haystack);
+}
+
+function getTerms(entity) {
+  const terms = new Set();
+  const add = (value) => {
+    if (!value) return;
+    const normalized = normalizeForMatching(value);
+    if (normalized.length >= 3) {
+      terms.add(normalized);
+    }
+  };
+
+  add(entity.name);
+  add(transliterateGreek(entity.name));
+
+  for (const alias of entity.aliases || []) {
+    add(alias);
+    add(transliterateGreek(alias));
+  }
+
+  return Array.from(terms);
+}
+
+function getGuideSeeds(post) {
+  return GUIDE_ENTITY_SEEDS[post.originalSlug || post.slug] || [];
+}
+
+function entityMatchesSeed(entity, seed) {
+  const normalizedSeed = normalizeForMatching(seed);
+  if (!normalizedSeed) return false;
+
+  return getTerms(entity).some((term) => {
+    if (term === normalizedSeed) return true;
+    return matchesTerm(term, normalizedSeed) || matchesTerm(normalizedSeed, term);
+  });
+}
+
+function scoreEntityMention(post, entity) {
+  const title = normalizeForMatching(post.title || '');
+  const summary = normalizeForMatching(post.summary || '');
+  const content = normalizeForMatching(post.content || '');
+  const combined = `${title} ${summary} ${content}`;
+
+  let score = 0;
+  for (const term of getTerms(entity)) {
+    if (matchesTerm(title, term)) score += 120;
+    if (matchesTerm(summary, term)) score += 80;
+    if (matchesTerm(combined, term)) score += 30;
+  }
+
+  const seedBoost = getGuideSeeds(post).some((seed) => entityMatchesSeed(entity, seed));
+  if (seedBoost) {
+    score += 250;
+  }
+
+  return score;
+}
+
+function getPriorityGuidePosts() {
+  if (!fs.existsSync(BLOG_DIR)) return [];
+
+  return fs
+    .readdirSync(BLOG_DIR)
+    .filter((file) => /\.mdx?$/.test(file) && !file.includes('-el.'))
+    .map((filename) => {
+      const content = fs.readFileSync(path.join(BLOG_DIR, filename), 'utf8');
+      const meta = parseFrontmatter(content);
+      const slug = filename.replace(/\.mdx?$/, '');
+      return {
+        slug,
+        originalSlug: slug,
+        title: meta.title || slug,
+        summary: meta.summary || '',
+        content,
+      };
+    })
+    .filter((post) => PRIORITY_GUIDE_SLUGS.has(post.originalSlug || post.slug));
 }
 
 function getPlaceHtmlPath(slug) {
@@ -63,6 +225,17 @@ function main() {
   const missingFiles = [];
   const invalidCanonical = [];
   const missingJsonLd = [];
+  const linkedEntityIds = new Set();
+  const priorityPosts = getPriorityGuidePosts();
+
+  for (const post of priorityPosts) {
+    for (const entity of entities) {
+      if (!entity?.id) continue;
+      if (scoreEntityMention(post, entity) > 0) {
+        linkedEntityIds.add(entity.id);
+      }
+    }
+  }
 
   for (const entity of entities) {
     if (!entity?.slug) continue;
@@ -107,7 +280,11 @@ function main() {
     fail(`Missing JSON-LD on place pages: ${missingJsonLd.slice(0, 10).join(', ')}${missingJsonLd.length > 10 ? ' ...' : ''}`);
   }
 
+  const orphanCount = entities.filter((entity) => !linkedEntityIds.has(entity.id)).length;
+  const orphanRate = expectedCount > 0 ? (orphanCount / expectedCount) * 100 : 0;
+
   console.log(`✅  Knowledge graph checks passed for ${expectedCount} place pages.`);
+  console.log(`ℹ️  Graph KPI: ${linkedEntityIds.size} entities linked from priority guides, ${orphanCount} orphans (${orphanRate.toFixed(1)}%).`);
 }
 
 main();
