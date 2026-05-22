@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { getAllPosts, Post, getAlternateLanguagePost } from '../../lib/posts'
-import { Box, Heading, Text, Container, Image, Link, Code, HStack, Button, Alert, AlertIcon } from '@chakra-ui/react'
+import { Box, Heading, Text, Container, Image, Link, Code, HStack, Button, Alert, AlertIcon, SimpleGrid } from '@chakra-ui/react'
 import Head from 'next/head'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -12,6 +12,8 @@ import { useEffect, useMemo, useState } from 'react'
 import NextLink from 'next/link'
 import { generateBlogMetaDescription, getBlogMetaDescriptionBySlug } from '../../config/metaDescriptions'
 import { formatPostDate } from '../../utils/dateUtils'
+import { getMentionedEntitiesForPost } from '../../lib/knowledgeGraph'
+import type { EntityRecord } from '../../lib/entities'
 
 const MarkdownComponents = {
   h1: (props: ComponentProps<'h1'>) => <Heading as="h2" size="lg" mt={6} mb={3} {...props} />,
@@ -54,6 +56,7 @@ type BlogPostProps = {
   post: Post
   mdxSource: MDXRemoteSerializeResult
   alternatePost?: Post
+  mentionedEntities: EntityRecord[]
 }
 
 type ShareAudience = 'foodies' | 'families' | 'adventurers' | 'culture' | 'budget' | 'default'
@@ -122,6 +125,7 @@ export const getStaticProps: GetStaticProps<BlogPostProps> = async ({ params }) 
 
   // Get alternate language post
   const alternatePost = getAlternateLanguagePost(post)
+  const mentionedEntities = getMentionedEntitiesForPost(post, 10)
 
   const mdxSource = await serialize(post.content, { mdxOptions: { remarkPlugins: [remarkGfm] } })
 
@@ -129,12 +133,13 @@ export const getStaticProps: GetStaticProps<BlogPostProps> = async ({ params }) 
     props: { 
       post, 
       mdxSource,
+      mentionedEntities,
       ...(alternatePost ? { alternatePost } : {})
     },
   }
 }
 
-export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostProps) {
+export default function BlogPost({ post, mdxSource, alternatePost, mentionedEntities }: BlogPostProps) {
   const { t, i18n } = useTranslation()
   const router = useRouter()
   const [copied, setCopied] = useState(false)
@@ -379,6 +384,26 @@ export default function BlogPost({ post, mdxSource, alternatePost }: BlogPostPro
       <Box className="blog-content">
         <MDXRemote {...mdxSource} components={MarkdownComponents} />
       </Box>
+
+      {mentionedEntities.length > 0 ? (
+        <Box mt={10} mb={2}>
+          <Heading as="h2" size="md" mb={3}>
+            {t('blog.placesMentioned', 'Places Mentioned in This Guide')}
+          </Heading>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
+            {mentionedEntities.map((entity) => (
+              <Box key={entity.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                <Link as={NextLink} href={`/place/${entity.slug}`} color="blue.600" fontWeight="semibold">
+                  {entity.name}
+                </Link>
+                <Text fontSize="sm" color="gray.600" mt={1}>
+                  {entity.address || entity.region || entity.region_en || t('common.greece', 'Greece')}
+                </Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      ) : null}
 
       <Box mt={{ base: 10, md: 12 }} mb={2}>
         <Box h="1px" bg="gray.200" mb={{ base: 5, md: 6 }} />

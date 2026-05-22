@@ -11,6 +11,7 @@ import {
   getSameRegionEntities,
   loadEntitiesIndex,
 } from '../../lib/entities';
+import { getMentionedGuidesForEntity } from '../../lib/knowledgeGraph';
 import { calculateDistance, formatDistance } from '../../utils/locationUtils';
 
 const SITE_URL = 'https://googlementor.com';
@@ -20,6 +21,7 @@ type EntityPageProps = {
   sameCategory: EntityRecord[];
   nearby: Array<EntityRecord & { distanceKm: number }>;
   sameRegion: EntityRecord[];
+  mentionedGuides: Array<{ slug: string; title: string }>;
 };
 
 function displayContext(entity: EntityRecord): string {
@@ -71,11 +73,15 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
       sameCategory: getSameCategoryEntities(entity, index.entities, 8),
       nearby: nearbyWithDistance,
       sameRegion: getSameRegionEntities(entity, index.entities, 8),
+      mentionedGuides: getMentionedGuidesForEntity(entity, 8).map((post) => ({
+        slug: post.slug,
+        title: post.title,
+      })),
     },
   };
 };
 
-export default function PlacePage({ entity, sameCategory, nearby, sameRegion }: EntityPageProps) {
+export default function PlacePage({ entity, sameCategory, nearby, sameRegion, mentionedGuides }: EntityPageProps) {
   const canonicalUrl = `${SITE_URL}/place/${entity.slug}`;
   const context = displayContext(entity);
   const entityJsonLd = buildEntityJsonLd(entity, canonicalUrl);
@@ -179,6 +185,23 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion }: 
                   {candidate.name}
                 </Link>
                 {candidate.region ? <Text color="gray.600" fontSize="sm" mt={1}>{candidate.region}</Text> : null}
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      ) : null}
+
+      {mentionedGuides.length > 0 ? (
+        <Box mt={8}>
+          <Heading as="h2" size="md" mb={3}>
+            Mentioned in Guides
+          </Heading>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
+            {mentionedGuides.map((guide) => (
+              <Box key={guide.slug} borderWidth="1px" borderRadius="lg" p={4}>
+                <Link as={NextLink} href={`/blog/${guide.slug}`} color="blue.600" fontWeight="semibold">
+                  {guide.title}
+                </Link>
               </Box>
             ))}
           </SimpleGrid>
