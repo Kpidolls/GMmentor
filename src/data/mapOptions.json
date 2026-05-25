@@ -22,7 +22,14 @@
       "monastiraki",
       "sightseeing",
       "historical sites",
-      "cultural sites"
+      "cultural sites",
+      "αξιοθεατα",
+      "μνημεια",
+      "μουσεια",
+      "ακροπολη",
+      "παρθενωνας",
+      "ιστορικα σημεια",
+      "πολιτιστικα σημεια"
     ],
     "slug": "product-mustsee-title-985d"
   },
@@ -43,7 +50,14 @@
       "adventure",
       "mountains",
       "landscapes",
-      "exploration"
+      "exploration",
+      "trekking",
+      "mountain trails",
+      "πεζοπορια",
+      "μονοπατια",
+      "βουνο",
+      "φυση",
+      "ορειβασια"
     ],
     "slug": "product-hiking-title-afdc"
   },
@@ -64,7 +78,13 @@
       "architecture",
       "ekklisia",
       "agios",
-      "agias"
+      "agias",
+      "monasteries",
+      "εκκλησιες",
+      "μοναστηρια",
+      "ναοι",
+      "θρησκευτικα μνημεια",
+      "προσκυνημα"
     ],
     "slug": "product-churches-title-9d80"
   },
@@ -87,7 +107,12 @@
       "vineyard",
       "krasi",
       "wine tasting",
-      "wine tours"
+      "wine tours",
+      "οινοποιεια",
+      "αμπελωνες",
+      "κρασι",
+      "γευσιγνωσια",
+      "οινοτουρισμος"
     ],
     "slug": "product-wineries-title-6a7a"
   },
@@ -106,7 +131,13 @@
       "drinks",
       "cocktails",
       "pubs",
-      "mpar"
+      "mpar",
+      "rooftop bar",
+      "wine bar",
+      "μπαρ",
+      "κοκτειλ",
+      "νυχτερινη ζωη",
+      "ποτο"
     ],
     "slug": "product-bars-title-794c"
   },
@@ -126,7 +157,14 @@
       "pastries",
       "snacks",
       "mpougatsa",
-      "gluko"
+      "gluko",
+      "breakfast",
+      "street food",
+      "μπουγατσα",
+      "γλυκο",
+      "ζαχαροπλαστειο",
+      "αρτοποιειο",
+      "πρωινο"
     ],
     "slug": "product-bougatsa-title-a5fe"
   },
@@ -146,7 +184,14 @@
       "ocean",
       "adventure",
       "serf",
-      "thalassa"
+      "thalassa",
+      "kitesurf",
+      "windsurf",
+      "σερφ",
+      "θαλασσια σπορ",
+      "κυματα",
+      "παραλια",
+      "θαλασσα"
     ],
     "slug": "product-surf-title-69b7"
   },
@@ -169,7 +214,12 @@
       "dancing",
       "greek music",
       "traditional music",
-      "mpouzoukia"
+      "mpouzoukia",
+      "μπουζουκια",
+      "λαϊκη μουσικη",
+      "ζωντανη μουσικη",
+      "νυχτερινη διασκεδαση",
+      "χορος"
     ],
     "slug": "product-bouzoukia-title-f57d"
   }

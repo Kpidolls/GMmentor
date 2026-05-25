@@ -337,7 +337,7 @@
     "byNeighborhood": "Neighborhood",
     "byNeighborhoodDesc": "Choose a specific neighborhood or municipality",
     "destinations": "Destinations",
-    "destinationsDesc": "Open curated maps for islands and major Greek destinations"
+    "destinationsDesc": "Explore all points of interest for top destinations"
   },
   "municipalitySearch": {
     "placeholder": "Search locations...",
