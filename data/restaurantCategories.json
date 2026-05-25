@@ -11,7 +11,13 @@
       "culture",
       "history",
       "must-see",
-      "museums"
+      "museums",
+      "sightseeing",
+      "αξιοθεατα",
+      "μνημεια",
+      "μουσεια",
+      "ιστορια",
+      "πολιτισμος"
     ],
     "slug": "must-see-attractions-551a"
   },
@@ -27,7 +33,13 @@
       "authentic",
       "taverna",
       "mediterranean",
-      "hellenic"
+      "hellenic",
+      "greek food",
+      "ταβερνα",
+      "ελληνικη κουζινα",
+      "παραδοσιακο",
+      "μεζεδες",
+      "μαγειρευτα"
     ],
     "slug": "greek-restaurants-83dc"
   },
@@ -43,7 +55,13 @@
       "bakery",
       "pastry",
       "ice cream",
-      "gelato"
+      "gelato",
+      "patisserie",
+      "γλυκα",
+      "ζαχαροπλαστειο",
+      "παγωτο",
+      "γλυκο",
+      "μπουγατσα"
     ],
     "slug": "dessert-shops-4cb7"
   },
@@ -61,13 +79,13 @@
       "stroller",
       "family menu",
       "kid-friendly",
-      "child-friendly",
-      "playground",
-      "stroller",
-      "family menu",
-      "kid-friendly",
       "children",
-      "casual"
+      "casual",
+      "οικογενεια",
+      "παιδια",
+      "παιδικο",
+      "καροτσι",
+      "παιδοτοπος"
     ],
     "slug": "kid-friendly-locations-05af"
   },
@@ -82,7 +100,13 @@
       "brunch",
       "breakfast",
       "cafe",
-      "espresso"
+      "espresso",
+      "all day brunch",
+      "specialty coffee",
+      "καφες",
+      "μπραντς",
+      "πρωινο",
+      "καφετερια"
     ],
     "slug": "coffee-brunch-spots-eb8a"
   },
@@ -97,7 +121,11 @@
       "seafood",
       "taverna",
       "fresh",
-      "mediterranean"
+      "mediterranean",
+      "ψαρι",
+      "θαλασσινα",
+      "ψαροταβερνα",
+      "ουζερι"
     ],
     "slug": "fish-tavernas-2dbf"
   },
@@ -112,7 +140,13 @@
       "church",
       "spiritual",
       "retreat",
-      "sacred"
+      "sacred",
+      "religious",
+      "μοναστηρι",
+      "εκκλησια",
+      "ναος",
+      "προσκυνημα",
+      "θρησκευτικα"
     ],
     "slug": "monasteries-spiritual-sites-02c7"
   },
@@ -127,7 +161,11 @@
       "pasta",
       "pizza",
       "risotto",
-      "trattoria"
+      "trattoria",
+      "italian food",
+      "ιταλικο",
+      "μακαροναδα",
+      "πιτσα"
     ],
     "slug": "italian-restaurants-22a4"
   },
@@ -142,7 +180,13 @@
       "budget",
       "affordable",
       "value",
-      "economical"
+      "economical",
+      "street food",
+      "low cost",
+      "φθηνο",
+      "οικονομικο",
+      "σουβλακι",
+      "γυρος"
     ],
     "slug": "gyros-cheap-eats-8dad"
   },
@@ -158,7 +202,12 @@
       "japanese",
       "thai",
       "sushi",
-      "ramen"
+      "ramen",
+      "asian food",
+      "ασιατικο",
+      "κινεζικο",
+      "ιαπωνικο",
+      "σουσι"
     ],
     "slug": "asian-restaurants-04d1"
   },
@@ -173,7 +222,10 @@
       "grill",
       "casual",
       "american",
-      "fries"
+      "fries",
+      "smash burger",
+      "μπεργκερ",
+      "ψητοπωλειο"
     ],
     "slug": "burger-spots-1aa6"
   },
@@ -188,7 +240,12 @@
       "vegan",
       "healthy",
       "organic",
-      "plant-based"
+      "plant-based",
+      "meat free",
+      "χορτοφαγικο",
+      "βιγκαν",
+      "νηστισιμο",
+      "υγιεινο"
     ],
     "slug": "vegetarian-friendly-restaurants-8e2f"
   },
@@ -203,7 +260,11 @@
       "tacos",
       "burrito",
       "spicy",
-      "authentic"
+      "authentic",
+      "mexican food",
+      "μεξικανικο",
+      "τακος",
+      "καυτερο"
     ],
     "slug": "mexican-restaurants-fda3"
   },
@@ -218,7 +279,10 @@
       "fine dining",
       "upscale",
       "gourmet",
-      "michelin"
+      "michelin",
+      "tasting menu",
+      "πολυτελες",
+      "γαστρονομια"
     ],
     "slug": "luxury-dining-1bbe"
   },
@@ -233,7 +297,13 @@
       "lounge",
       "view",
       "skybar",
-      "terrace"
+      "terrace",
+      "cocktail bar",
+      "roof garden",
+      "ταρατσα",
+      "ροοφτοπ",
+      "θεα",
+      "κοκτειλ"
     ],
     "slug": "rooftop-lounges-73c3"
   },
@@ -248,7 +318,12 @@
       "vineyard",
       "tasting",
       "greek wine",
-      "winery"
+      "winery",
+      "wine tour",
+      "οινοποιειο",
+      "αμπελωνας",
+      "κρασι",
+      "γευσιγνωσια"
     ],
     "slug": "wineries-vineyards-9cfd"
   }
