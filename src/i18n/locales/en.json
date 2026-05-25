@@ -253,7 +253,9 @@
     "fastestBadge": "Quick",
     "mostAccurateBadge": "Most Accurate",
     "useMyLocation": "Use my location",
-    "browseAreas": "Browse areas"
+    "browseAreas": "Browse areas",
+    "curatedBadge": "Curated",
+    "exploreDestinations": "Explore destinations"
   },
   "restaurantFinder": {
     "title": "Discover Authentic Greek Restaurants",
@@ -333,7 +335,9 @@
     "byRegion": "By Region",
     "byRegionDesc": "Select a specific region or municipality",
     "byNeighborhood": "Neighborhood",
-    "byNeighborhoodDesc": "Choose a specific neighborhood or municipality"
+    "byNeighborhoodDesc": "Choose a specific neighborhood or municipality",
+    "destinations": "Destinations",
+    "destinationsDesc": "Open curated maps for islands and major Greek destinations"
   },
   "municipalitySearch": {
     "placeholder": "Search locations...",
@@ -345,6 +349,25 @@
     "areaPlural": "areas",
     "noResults": "No locations found matching your search.",
     "clearSearchToSeeAll": "Clear search to see all locations"
+  },
+  "destinationSearch": {
+    "title": "Choose a Destination",
+    "subtitle": "Pick an island, city or region to open its curated Google Maps list.",
+    "placeholder": "Search destination...",
+    "clearSearch": "Clear search",
+    "filterAll": "All",
+    "filterIslands": "Islands",
+    "filterMainland": "Mainland",
+    "resultsCount": "Showing {{count}} destinations",
+    "destinationTypeIsland": "Island",
+    "destinationTypeMainland": "Mainland",
+    "openCuratedMap": "Open Curated Map",
+    "openCuratedMapShort": "Map",
+    "shareMap": "Share Map",
+    "shareMapShort": "Share",
+    "shareText": "Check this curated destination map:",
+    "copiedDestinationLink": "Destination map link copied to clipboard.",
+    "shareFailed": "Unable to share this destination right now."
   },
   "categorySelection": {
     "chooseYourCuisine": "Choose Your Cuisine",

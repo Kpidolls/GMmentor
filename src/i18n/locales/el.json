@@ -253,7 +253,9 @@
     "fastestBadge": "Γρηγορα",
     "mostAccurateBadge": "Πιο Ακριβες",
     "useMyLocation": "Χρησιμοποίησε την τοποθεσία μου",
-    "browseAreas": "Περιηγήσου σε περιοχές"
+    "browseAreas": "Περιηγήσου σε περιοχές",
+    "curatedBadge": "Επιμελημένο",
+    "exploreDestinations": "Εξερεύνηση προορισμών"
   },
   "restaurantFinder": {
     "title": "Ανακαλύψτε Αυθεντική Ελληνική Κουζίνα",
@@ -333,7 +335,9 @@
     "byRegion": "Ανά Περιοχή",
     "byRegionDesc": "Επιλέξτε συγκεκριμένη περιοχή ή δήμο",
     "byNeighborhood": "Ανά Γειτονιά",
-    "byNeighborhoodDesc": "Επιλέξτε συγκεκριμένη γειτονιά ή δήμο για να βρειτε μέρη"
+    "byNeighborhoodDesc": "Επιλέξτε συγκεκριμένη γειτονιά ή δήμο για να βρειτε μέρη",
+    "destinations": "Προορισμοί",
+    "destinationsDesc": "Ανοίξτε επιμελημένους χάρτες για νησιά και μεγάλους προορισμούς στην Ελλάδα"
   },
   "municipalitySearch": {
     "placeholder": "Αναζήτηση τοποθεσιών...",
@@ -345,6 +349,25 @@
     "areaPlural": "περιοχές",
     "noResults": "Δεν βρέθηκαν τοποθεσίες που να ταιριάζουν στην αναζήτησή σας.",
     "clearSearchToSeeAll": "Καθαρίστε την αναζήτηση για να δείτε όλες τις τοποθεσίες"
+  },
+  "destinationSearch": {
+    "title": "Επιλέξτε Προορισμό",
+    "subtitle": "Διαλέξτε νησί, πόλη ή περιοχή για να ανοίξετε την επιμελημένη λίστα Google Maps.",
+    "placeholder": "Αναζήτηση προορισμού...",
+    "clearSearch": "Καθαρισμός αναζήτησης",
+    "filterAll": "Όλα",
+    "filterIslands": "Νησιά",
+    "filterMainland": "Ηπειρωτική Ελλάδα",
+    "resultsCount": "Εμφάνιση {{count}} προορισμών",
+    "destinationTypeIsland": "Νησί",
+    "destinationTypeMainland": "Ηπειρωτική",
+    "openCuratedMap": "Άνοιγμα επιμελημένου χάρτη",
+    "openCuratedMapShort": "Χάρτης",
+    "shareMap": "Κοινοποίηση χάρτη",
+    "shareMapShort": "Κοινοποίηση",
+    "shareText": "Δείτε αυτόν τον επιμελημένο χάρτη προορισμού:",
+    "copiedDestinationLink": "Ο σύνδεσμος του χάρτη αντιγράφηκε στο πρόχειρο.",
+    "shareFailed": "Η κοινοποίηση δεν ήταν δυνατή αυτή τη στιγμή."
   },
   "categorySelection": {
     "chooseYourCuisine": "Επιλέξτε την Κουζίνα σας",

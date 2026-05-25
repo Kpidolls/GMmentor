@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
 import dynamic from 'next/dynamic';
 import municipalitiesData from '../data/municipalities.json';
+import islandsData from '../data/islands.json';
 import categoriesData from '../data/restaurantCategories.json';
 import type { MunicipalityLocation, RestaurantLocation } from '../types/location';
 import { toRestaurantList, toMunicipalityList } from '../utils/mappers';
@@ -42,10 +43,23 @@ interface RestaurantCategory {
 }
 
 interface SearchMode {
-  type: 'location' | 'municipality' | 'category';
+  type: 'location' | 'municipality' | 'destination' | 'category';
   selectedMunicipality?: Municipality;
   selectedCategory?: RestaurantCategory;
   selectedExperienceType?: ExperienceType;
+  selectedDestination?: DestinationEntry;
+}
+
+interface DestinationEntry {
+  id: string;
+  title: string;
+  img: string;
+  description: string;
+  link: string;
+  target?: string;
+  rel?: string;
+  keywords?: string[];
+  slug?: string;
 }
 
 interface ExperienceType {
@@ -193,14 +207,23 @@ const MainHero = () => {
   const [error, setError] = useState<string | null>(null);
   const [showRestaurantFinder, setShowRestaurantFinder] = useState(false);
   const [showMunicipalityList, setShowMunicipalityList] = useState(false);
+  const [showDestinationList, setShowDestinationList] = useState(false);
   const [showCategorySelection, setShowCategorySelection] = useState(false);
   const [showLocationOptions, setShowLocationOptions] = useState(true);
   const [municipalitySearchQuery, setMunicipalitySearchQuery] = useState('');
+  const [destinationSearchQuery, setDestinationSearchQuery] = useState('');
+  const [destinationViewFilter, setDestinationViewFilter] = useState<'all' | 'islands' | 'mainland'>('all');
+  const [selectedDestination, setSelectedDestination] = useState<DestinationEntry | null>(null);
   const [searchRadius, setSearchRadius] = useState(5);
   const [maxResults, setMaxResults] = useState(50);
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
   const [initialSearchDone, setInitialSearchDone] = useState(false);
   const [showDeferredUi, setShowDeferredUi] = useState(false);
+
+  const destinationsData: DestinationEntry[] = (islandsData as DestinationEntry[]).map((destination) => ({
+    ...destination,
+    id: String(destination.id || '').trim(),
+  }));
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -266,6 +289,7 @@ const MainHero = () => {
     setError(null);
     setShowCategorySelection(false);
     setShowMunicipalityList(false);
+    setShowDestinationList(false);
     setShowLocationOptions(false);
     setShowRestaurantFinder(true);
     setSearchMode({ type: 'location', selectedCategory: effectiveCategory, selectedMunicipality: undefined });
@@ -388,6 +412,7 @@ const MainHero = () => {
     setShowCategorySelection(false);
     setShowRestaurantFinder(true);
     setShowMunicipalityList(false);
+    setShowDestinationList(false);
     setSearchMode({ type: 'municipality', selectedMunicipality: municipality, selectedCategory: effectiveCategory });
 
     // Responsive scroll based on screen size
@@ -546,24 +571,39 @@ const MainHero = () => {
 
   // Removed unused handleLocationOptions
 
-  const selectSearchMode = (type: 'location' | 'municipality') => {
+  const selectSearchMode = (type: 'location' | 'municipality' | 'destination') => {
     setError(null);
     setNearestRestaurants(null);
     setCurrentIndex(0);
     setShowRestaurantFinder(false);
+    setSelectedDestination(null);
+    setDestinationSearchQuery('');
+    setDestinationViewFilter('all');
 
     if (type === 'location') {
-      setSearchMode({ type: 'location', selectedMunicipality: undefined, selectedCategory: undefined });
+      setSearchMode({ type: 'location', selectedMunicipality: undefined, selectedCategory: undefined, selectedDestination: undefined });
       setShowMunicipalityList(false);
+      setShowDestinationList(false);
       setShowLocationOptions(false);
       setShowCategorySelection(true);
       alignViewport();
       return;
     }
 
-    setSearchMode({ type: 'municipality', selectedMunicipality: undefined, selectedCategory: undefined });
+    if (type === 'destination') {
+      setSearchMode({ type: 'destination', selectedMunicipality: undefined, selectedCategory: undefined, selectedDestination: undefined });
+      setShowCategorySelection(false);
+      setShowMunicipalityList(false);
+      setShowLocationOptions(false);
+      setShowDestinationList(true);
+      alignViewport();
+      return;
+    }
+
+    setSearchMode({ type: 'municipality', selectedMunicipality: undefined, selectedCategory: undefined, selectedDestination: undefined });
     setShowCategorySelection(false);
     setShowLocationOptions(false);
+    setShowDestinationList(false);
     setShowMunicipalityList(true);
     alignViewport();
   };
@@ -575,8 +615,60 @@ const MainHero = () => {
     setShowRestaurantFinder(false);
     setSearchMode(prev => ({ ...prev, type: 'municipality', selectedMunicipality: municipality }));
     setShowMunicipalityList(false);
+    setShowDestinationList(false);
     setShowCategorySelection(true);
     alignViewport();
+  };
+
+  const isIslandDestination = (destination: DestinationEntry): boolean => destination.id.startsWith('island-');
+
+  const getDestinationTypeLabel = (destination: DestinationEntry): string => {
+    return isIslandDestination(destination)
+      ? t('destinationSearch.destinationTypeIsland', 'Island')
+      : t('destinationSearch.destinationTypeMainland', 'Mainland');
+  };
+
+  const getDestinationLabel = (destination: DestinationEntry): string => {
+    const translated = t(destination.title, destination.id);
+    return translated.replace(/^📍\s*/, '').trim();
+  };
+
+  const getDestinationDescription = (destination: DestinationEntry): string => {
+    return t(destination.description, 'Curated points of interest for this destination.');
+  };
+
+  const selectDestination = (destination: DestinationEntry) => {
+    setError(null);
+    setNearestRestaurants(null);
+    setCurrentIndex(0);
+    setShowRestaurantFinder(false);
+    setSelectedDestination(destination);
+    setSearchMode({ type: 'destination', selectedDestination: destination, selectedCategory: undefined, selectedMunicipality: undefined });
+  };
+
+  const shareDestinationMap = async (destination: DestinationEntry) => {
+    const shareText = `${getDestinationLabel(destination)}\n${destination.link}`;
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: getDestinationLabel(destination),
+          text: t('destinationSearch.shareText', 'Check this curated destination map:'),
+          url: destination.link,
+        });
+        return;
+      }
+
+      await navigator.clipboard.writeText(shareText);
+      setShareSnackbar({ open: true, message: t('destinationSearch.copiedDestinationLink', 'Destination map link copied to clipboard.'), type: 'success' });
+      setTimeout(() => {
+        setShareSnackbar((prev) => ({ ...prev, open: false }));
+      }, 3000);
+    } catch {
+      setShareSnackbar({ open: true, message: t('destinationSearch.shareFailed', 'Unable to share this destination right now.'), type: 'error' });
+      setTimeout(() => {
+        setShareSnackbar((prev) => ({ ...prev, open: false }));
+      }, 3000);
+    }
   };
 
   const runSearchWithCategory = async (category: RestaurantCategory) => {
@@ -602,6 +694,7 @@ const MainHero = () => {
     setShowRestaurantFinder(false);
     setShowLocationOptions(true);
     setShowMunicipalityList(false);
+    setShowDestinationList(false);
     setShowCategorySelection(false);
     setSearchMode({ type: 'location' });
     alignViewport();
@@ -614,12 +707,16 @@ const MainHero = () => {
     setError(null);
     setShowRestaurantFinder(false);
     setShowMunicipalityList(false);
+    setShowDestinationList(false);
     setShowCategorySelection(false);
     setShowLocationOptions(true);
     setSearchMode({ type: 'location' });
     setSelectedDisplayCategory(undefined);
     setSelectedExperienceType(undefined);
     setSelectedType(undefined);
+    setSelectedDestination(null);
+    setDestinationSearchQuery('');
+    setDestinationViewFilter('all');
     setMunicipalitySearchQuery(''); // Clear municipality search
     setSelectedRestaurants(new Set()); // Clear selection
     setSearchRadius(2); // Reset to initial 2km
@@ -645,12 +742,16 @@ const MainHero = () => {
     setError(null);
     setShowRestaurantFinder(false);
     setShowMunicipalityList(false);
+    setShowDestinationList(false);
     setShowCategorySelection(false);
     setShowLocationOptions(true);
     setSearchMode({ type: 'location' });
     setSelectedDisplayCategory(undefined);
     setSelectedExperienceType(undefined);
     setSelectedType(undefined);
+    setSelectedDestination(null);
+    setDestinationSearchQuery('');
+    setDestinationViewFilter('all');
     setMunicipalitySearchQuery(''); // Clear municipality search
     setSelectedRestaurants(new Set()); // Clear selection
     setSearchRadius(2); // Reset to initial 2km
@@ -887,6 +988,31 @@ const MainHero = () => {
     return false;
   };
 
+  const filteredDestinations = destinationsData
+    .filter((destination) => {
+      if (destinationViewFilter === 'islands') return isIslandDestination(destination);
+      if (destinationViewFilter === 'mainland') return !isIslandDestination(destination);
+      return true;
+    })
+    .filter((destination) => {
+      if (!destinationSearchQuery.trim()) return true;
+
+      const query = destinationSearchQuery.trim();
+      const translatedTitle = getDestinationLabel(destination);
+      const translatedDescription = getDestinationDescription(destination);
+
+      if (searchMatches(query, translatedTitle)) return true;
+      if (searchMatches(query, translatedDescription)) return true;
+
+      if (Array.isArray(destination.keywords) && destination.keywords.some((keyword) => searchMatches(query, keyword))) {
+        return true;
+      }
+
+      if (searchMatches(query, destination.id)) return true;
+
+      return false;
+    });
+
   // PWA Enhancement: Get municipalities with offline fallback
   const getMunicipalitiesData = (): Municipality[] => {
     if (typeof window !== 'undefined' && !navigator.onLine && isStandalone) {
@@ -981,8 +1107,9 @@ const MainHero = () => {
         {/* Professional Background with Enhanced Visual Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-sky-100 via-cyan-50 to-blue-100">
           {/* Simplified background pattern for faster first paint */}
-          <div className="absolute inset-0 opacity-30 hidden md:block">
-            <div className="absolute top-20 left-20 w-64 h-64 bg-sky-300 rounded-full blur-2xl" />
+          <div className="absolute inset-0 opacity-45 hidden md:block">
+            <div className="absolute top-16 left-16 w-72 h-72 bg-sky-300/70 rounded-full blur-3xl" />
+            <div className="absolute bottom-12 right-14 w-80 h-80 bg-cyan-300/55 rounded-full blur-3xl" />
           </div>
           
           <picture className="absolute inset-0 block w-full h-full">
@@ -1000,14 +1127,14 @@ const MainHero = () => {
               fetchpriority="high"
               sizes="100vw"
               srcSet="/assets/images/cover-480.webp 480w, /assets/images/cover-627.webp 627w"
-              style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.28 }}
+              style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.38 }}
             />
           </picture>
           
           {/* Enhanced gradient overlay with better depth (muted so image is visible) */}
-          <div className="absolute inset-0 bg-gradient-to-t from-white/35 via-sky-100/40 to-blue-100/35 pointer-events-none" />
-          {/* removed heavy horizontal rail to reveal cover image */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-cyan-100/25 to-blue-200/25 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-white/20 to-blue-100/15 pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.08),rgba(255,255,255,0.55)_72%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-sky-50/5 via-cyan-100/18 to-blue-200/35 pointer-events-none" />
         </div>
 
 
@@ -1080,7 +1207,7 @@ const MainHero = () => {
 
             {/* Professional Discovery Interface */}
             <div className="max-w-5xl mx-auto px-1 xs:px-2 sm:px-4 w-full">
-              {showCategorySelection && !showRestaurantFinder && !showMunicipalityList && (
+              {showCategorySelection && !showRestaurantFinder && !showMunicipalityList && !showDestinationList && (
                 <div className="relative group">
                   <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 via-teal-400/30 to-emerald-400/30 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   <div className="relative bg-white/75 backdrop-blur-2xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-4 xs:p-6 sm:p-8 lg:p-12 border border-white/60 shadow-2xl">
@@ -1281,6 +1408,139 @@ const MainHero = () => {
                   </button>
                 </div>
               </div>
+            ) : showDestinationList ? (
+              <div className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/30 shadow-2xl max-w-5xl mx-auto">
+                <div className="text-center mb-4">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 flex items-center justify-center gap-2">
+                    🧭 {t('destinationSearch.title', 'Choose a Destination')}
+                  </h3>
+                  <p className="text-gray-600 text-sm px-2">
+                    {t('destinationSearch.subtitle', 'Pick an island, city or region to open its curated Google Maps list.')}
+                  </p>
+                </div>
+
+                <div className="mb-5 space-y-3">
+                  <div className="relative max-w-md mx-auto">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                    </div>
+                    <input
+                      type="text"
+                      value={destinationSearchQuery}
+                      onChange={(e) => setDestinationSearchQuery(e.target.value)}
+                      className="block w-full pl-9 pr-10 py-2.5 border border-gray-300 rounded-lg text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                      placeholder={t('destinationSearch.placeholder', 'Search destination...')}
+                    />
+                    {destinationSearchQuery && (
+                      <button
+                        onClick={() => setDestinationSearchQuery('')}
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                        title={t('destinationSearch.clearSearch', 'Clear search')}
+                        aria-label={t('destinationSearch.clearSearch', 'Clear search')}
+                      >
+                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+
+                  <div className="flex items-center justify-center gap-2 flex-wrap">
+                    {([
+                      { id: 'all', label: t('destinationSearch.filterAll', 'All') },
+                      { id: 'islands', label: t('destinationSearch.filterIslands', 'Islands') },
+                      { id: 'mainland', label: t('destinationSearch.filterMainland', 'Mainland') },
+                    ] as const).map((option) => (
+                      <button
+                        key={option.id}
+                        onClick={() => setDestinationViewFilter(option.id)}
+                        className={`px-3 py-1.5 rounded-full text-xs sm:text-sm border transition-colors duration-200 ${destinationViewFilter === option.id ? 'bg-sky-100 text-sky-700 border-sky-300' : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-50'}`}
+                      >
+                        {option.label}
+                      </button>
+                    ))}
+                  </div>
+
+                  <div className="text-center">
+                    <span className="text-xs text-gray-500">
+                      {t('destinationSearch.resultsCount', 'Showing {{count}} destinations', { count: filteredDestinations.length })}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 items-stretch">
+                  {filteredDestinations.map((destination) => {
+                    const active = selectedDestination?.id === destination.id;
+                    return (
+                      <article
+                        key={destination.id}
+                        onClick={() => selectDestination(destination)}
+                        className={`group text-left rounded-xl border overflow-hidden transition-all duration-300 cursor-pointer h-[360px] sm:h-[382px] lg:h-[400px] flex flex-col ${active ? 'border-sky-400 bg-sky-50 shadow-md' : 'border-gray-200 bg-white hover:border-sky-200 hover:bg-sky-50/40 hover:shadow-md'}`}
+                      >
+                        <div className="relative h-40 sm:h-44 w-full overflow-hidden">
+                          <img
+                            src={destination.img}
+                            alt={getDestinationLabel(destination)}
+                            className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                          <span className="absolute top-2 right-2 text-[11px] px-2 py-1 rounded-full bg-white/90 border border-white text-gray-700 whitespace-nowrap">
+                            {getDestinationTypeLabel(destination)}
+                          </span>
+                          <h4 className="absolute bottom-2 left-3 right-3 text-base sm:text-lg font-bold text-white leading-tight drop-shadow">
+                            {getDestinationLabel(destination)}
+                          </h4>
+                        </div>
+
+                        <div className="p-4 flex flex-col flex-1">
+                          <p className="text-xs sm:text-sm text-gray-600 line-clamp-3 min-h-[60px] sm:min-h-[64px]">
+                            {getDestinationDescription(destination)}
+                          </p>
+
+                          <div className="mt-auto pt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <a
+                              href={destination.link}
+                              target={destination.target || '_blank'}
+                              rel={destination.rel || 'noopener noreferrer'}
+                              onClick={(e) => e.stopPropagation()}
+                              className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700 transition-colors duration-200 text-center whitespace-nowrap truncate"
+                            >
+                              <span className="sm:hidden">🗺️ {t('destinationSearch.openCuratedMapShort', 'Map')}</span>
+                              <span className="hidden sm:inline">🗺️ {t('destinationSearch.openCuratedMap', 'Open Curated Map')}</span>
+                            </a>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                void shareDestinationMap(destination);
+                              }}
+                              className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 transition-colors duration-200 whitespace-nowrap truncate"
+                            >
+                              <span className="sm:hidden">🔗 {t('destinationSearch.shareMapShort', 'Share')}</span>
+                              <span className="hidden sm:inline">🔗 {t('destinationSearch.shareMap', 'Share Map')}</span>
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+
+                <div className="text-center pt-4 border-t border-gray-200">
+                  <button
+                    onClick={() => {
+                      resetSearch();
+                      alignViewport();
+                    }}
+                    className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors duration-200 font-medium text-sm px-3 py-2 rounded-lg hover:bg-gray-50"
+                  >
+                    ← {t('mainHero.backToSearchOptions', 'Back to Search Options')}
+                  </button>
+                </div>
+              </div>
             ) : showLocationOptions ? (
               /* Location Options Selection - Enhanced UI */
               <div className="relative">
@@ -1302,7 +1562,7 @@ const MainHero = () => {
                   </div>
 
                   {/* Options Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 xs:gap-6 sm:gap-8 lg:gap-10 mb-6 xs:mb-8 max-w-5xl mx-auto">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xs:gap-6 sm:gap-8 lg:gap-10 mb-6 xs:mb-8 max-w-5xl mx-auto">
                     {/* Near You Option - Enhanced */}
                     <button
                       onClick={() => {
@@ -1417,6 +1677,58 @@ const MainHero = () => {
                         <div className="flex justify-center">
                           <div className="flex items-center gap-2 text-[clamp(0.8125rem,1.2vw,0.95rem)] font-bold group-hover:gap-4 transition-all duration-300">
                             <span>{t('mainHero.browseAreas', 'Browse areas')}</span>
+                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+
+                    {/* Destinations Option */}
+                    <button
+                      onClick={() => {
+                        selectSearchMode('destination');
+                      }}
+                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98]"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-orange-100 to-rose-100 transition-all duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-100 to-rose-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+                      </div>
+
+                      <div className="relative p-6 xs:p-8 sm:p-10 lg:p-12 text-slate-900">
+                        <div className="flex justify-center mb-6">
+                          <div className="relative">
+                            <div className="absolute inset-0 bg-amber-300/35 rounded-full blur-2xl scale-150 group-hover:scale-[2] transition-transform duration-500" />
+                            <div className="relative bg-white/70 backdrop-blur-sm rounded-full p-4 xs:p-5 sm:p-6 border-2 border-white/70 group-hover:border-white transition-all duration-300 group-hover:rotate-12">
+                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-110 transition-transform duration-300">
+                                🧭
+                              </div>
+                            </div>
+                            <div className="absolute inset-0 bg-amber-300/35 rounded-full animate-ping opacity-0 group-hover:opacity-20" />
+                          </div>
+                        </div>
+
+                        <div className="flex justify-center mb-4">
+                          <span className="px-4 py-1.5 bg-white/70 backdrop-blur-sm rounded-full text-xs font-bold tracking-wider uppercase border border-white/80 text-amber-700">
+                            {t('mainHero.curatedBadge', 'Curated')}
+                          </span>
+                        </div>
+
+                        <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black mb-4 leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal]">
+                          {t('locationOptions.destinations', 'Destinations')}
+                        </h3>
+
+                        <p className="text-slate-700 text-[clamp(0.875rem,1.45vw,1.125rem)] font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                          {t('locationOptions.destinationsDesc', 'Open curated maps for islands and major Greek destinations')}
+                        </p>
+
+                        <div className="flex justify-center">
+                          <div className="flex items-center gap-2 text-[clamp(0.8125rem,1.2vw,0.95rem)] font-bold group-hover:gap-4 transition-all duration-300">
+                            <span>{t('mainHero.exploreDestinations', 'Explore destinations')}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
