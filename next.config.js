@@ -4,6 +4,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 const { readFileSync } = require('fs');
 const { join } = require('path');
+const featureFlags = require('./src/config/featureFlags.json');
 
 const withPWA = require('@ducanh2912/next-pwa').default({
   dest: 'public',
@@ -297,12 +298,11 @@ const nextConfig = withPWA(withBundleAnalyzer({
       placePaths = {};
     }
 
-    return {
+    const pathMap = {
       '/': { page: '/' },
       '/terms': { page: '/terms' },
       '/privacy-policy': { page: '/privacy-policy' },
       '/login': { page: '/login' },
-      '/store': { page: '/store' },
       '/airalo': { page: '/airalo' },
       '/insurance': { page: '/insurance' },
       '/search': { page: '/search' },
@@ -314,6 +314,12 @@ const nextConfig = withPWA(withBundleAnalyzer({
       },
       ...placePaths,
     };
+
+    if (featureFlags.storeEnabled) {
+      pathMap['/store'] = { page: '/store' };
+    }
+
+    return pathMap;
   },
   eslint: {
     ignoreDuringBuilds: false,

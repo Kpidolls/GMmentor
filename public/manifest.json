@@ -100,19 +100,6 @@
           "type": "image/png"
         }
       ]
-    },
-    {
-      "name": "Travel Store",
-      "short_name": "Store",
-      "description": "Browse travel gear and accessories",
-      "url": "/store",
-      "icons": [
-        {
-          "src": "/icons/shortcut-store.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
     }
   ],
   "prefer_related_applications": false

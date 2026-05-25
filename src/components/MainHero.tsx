@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
+import featureFlags from '../config/featureFlags.json';
 import dynamic from 'next/dynamic';
 import municipalitiesData from '../data/municipalities.json';
 import islandsData from '../data/islands.json';
@@ -2256,28 +2257,29 @@ const MainHero = () => {
               </div>
             )}
 
-            {/* Enhanced Professional CTA Button */}
-            <div className="flex justify-center max-w-md mx-auto mt-10 sm:mt-16 px-4">
-              <div className="relative group w-full">
-                {/* Subtle glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-sky-300/25 via-cyan-300/25 to-blue-300/25 rounded-2xl sm:rounded-3xl blur opacity-30 group-hover:opacity-70 transition duration-500" />
-                
-                <a
-                  href={mainHero.secondaryAction.href}
-                  className="relative group overflow-hidden bg-white/80 backdrop-blur-md text-slate-800 border-2 border-white/70 px-7 sm:px-9 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg lg:text-xl hover:bg-white hover:border-sky-200 transition-all duration-500 hover:scale-[1.02] w-full block text-center shadow-xl"
-                >
-                  {/* Animated background overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-sky-100/50 via-cyan-100/50 to-blue-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Shimmer effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                  
-                  <span className="relative font-black tracking-wide text-sky-800">
-                    {t('mainHero.secondaryAction.text')}
-                  </span>
-                </a>
+            {featureFlags.storeEnabled && (
+              <div className="flex justify-center max-w-md mx-auto mt-10 sm:mt-16 px-4">
+                <div className="relative group w-full">
+                  {/* Subtle glow effect */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-sky-300/25 via-cyan-300/25 to-blue-300/25 rounded-2xl sm:rounded-3xl blur opacity-30 group-hover:opacity-70 transition duration-500" />
+
+                  <a
+                    href={mainHero.secondaryAction.href}
+                    className="relative group overflow-hidden bg-white/80 backdrop-blur-md text-slate-800 border-2 border-white/70 px-7 sm:px-9 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg lg:text-xl hover:bg-white hover:border-sky-200 transition-all duration-500 hover:scale-[1.02] w-full block text-center shadow-xl"
+                  >
+                    {/* Animated background overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-sky-100/50 via-cyan-100/50 to-blue-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                    {/* Shimmer effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+
+                    <span className="relative font-black tracking-wide text-sky-800">
+                      {t('mainHero.secondaryAction.text')}
+                    </span>
+                  </a>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Elegant scroll indicator */}
             {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">

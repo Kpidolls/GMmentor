@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import type { GetStaticProps } from 'next';
 import { useTranslation } from 'react-i18next';
 import productsData from '../data/products.json';
 import { metaDescriptions } from '../config/metaDescriptions';
+import featureFlags from '../config/featureFlags.json';
 
 const Store: React.FC = () => {
   const { t } = useTranslation();
@@ -142,6 +144,16 @@ const Store: React.FC = () => {
       </div>
     </main>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  if (!featureFlags.storeEnabled) {
+    return { notFound: true };
+  }
+
+  return {
+    props: {},
+  };
 };
 
 export default Store;

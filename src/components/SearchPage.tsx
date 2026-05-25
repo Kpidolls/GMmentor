@@ -19,6 +19,7 @@ import { SearchIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import { useTranslation } from 'react-i18next';
 import debounce from 'lodash.debounce';
+import featureFlags from '../config/featureFlags.json';
 
 import islandsData from '../data/islands.json';
 import productData from '../data/mapOptions.json';
@@ -58,8 +59,6 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
         return t('search.sectionTitles.destinations', 'Destinations');
       case 'product':
         return t('search.sectionTitles.mapLists', 'Map lists');
-      case 'store':
-        return t('search.sectionTitles.travelGear', 'Travel Gear');
       default:
         return type;
     }
@@ -87,16 +86,22 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
       image: item.img || '/placeholder.png',
       keywords: item.keywords || [],
     })),
-    ...storeData.map((item) => ({
-      id: item.id,
-      title: t(item.name) || item.name,
-      description: t(item.description) || item.description,
-      link: item.link,
-      type: 'store',
-      image: item.image || '/placeholder.png',
-      keywords: item.keywords || [],
-    })),
+    ...(featureFlags.storeEnabled
+      ? storeData.map((item) => ({
+          id: item.id,
+          title: t(item.name) || item.name,
+          description: t(item.description) || item.description,
+          link: item.link,
+          type: 'store',
+          image: item.image || '/placeholder.png',
+          keywords: item.keywords || [],
+        }))
+      : []),
   ], [t]);
+
+  const visibleSections = featureFlags.storeEnabled
+    ? ['islands', 'product', 'store']
+    : ['islands', 'product'];
 
   const debouncedSearch = useMemo(() =>
     debounce((query: string) => {
@@ -154,7 +159,7 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
         <Input
           ref={searchInputRef}
           placeholder={t('search.placeholder', 'Search...')}
-          aria-label={t('search.inputAria', 'Search input for destinations, maps, or travel gear')}
+          aria-label={t('search.inputAriaNoStore', 'Search input for destinations and map lists')}
           value={searchQuery}
           onChange={(e) => handleSearch(e.target.value)}
           onClick={handleFocus}
@@ -178,7 +183,7 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
       </InputGroup>
 
       <VStack spacing={6} align="stretch">
-        {['islands', 'product', 'store'].map((type) => {
+        {visibleSections.map((type) => {
           const sectionResults = filteredResults.filter((item) => item.type === type);
           if (sectionResults.length === 0) return null;
 

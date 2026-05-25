@@ -1,6 +1,12 @@
 /** @type {import('next-sitemap').IConfig} */
 const { readFileSync } = require('fs');
 const { join } = require('path');
+const featureFlags = require('./src/config/featureFlags.json');
+
+const exclude = ['/404', '/500', '/api/*', '/pwa-test', '/pwa-test/'];
+if (!featureFlags.storeEnabled) {
+  exclude.push('/store');
+}
 
 module.exports = {
   siteUrl: 'https://googlementor.com',
@@ -10,7 +16,7 @@ module.exports = {
   changefreq: 'weekly',
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: ['/404', '/500', '/api/*', '/pwa-test', '/pwa-test/'],
+  exclude,
   robotsTxtOptions: {
     policies: [
       {
@@ -39,7 +45,9 @@ module.exports = {
       changefreq = 'monthly';
     }
     // Main navigation pages - high priority
-    else if (['/search', '/store', '/airalo', '/insurance'].includes(path)) {
+    else if (
+      ['/search', '/airalo', '/insurance', ...(featureFlags.storeEnabled ? ['/store'] : [])].includes(path)
+    ) {
       priority = 0.9;
       changefreq = 'weekly';
     }

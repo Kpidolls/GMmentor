@@ -10,6 +10,7 @@ import dynamic from 'next/dynamic';
 import { GetStaticProps } from 'next';
 import { Post, getAllPosts } from '../lib/posts';
 import BlogHighlight from '../components/BlogHighlight';
+import featureFlags from '../config/featureFlags.json';
 // FeaturedCarousel removed — using static blog highlight only
 
 const AboutUs = dynamic(() => import('../components/AboutUs'));
@@ -151,33 +152,34 @@ const App = ({ allPosts }: { allPosts: MinimalPost[] }) => {
       <Reviews />
       </LazyShow>
 
-      {/* Product Showcase Section */}
-      <LazyShow deferRender rootMargin="200px">
-      <section className="py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
-                {t('productShowcaseTitle', 'Travel Essentials')}
-              </span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              {t('productShowcase.subtitle', 'Carefully selected travel gear and essentials to enhance your Greek adventure')}
-            </p>
-            <div className="mt-6 mx-auto w-32 h-1 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full" />
-          </div>
-          
-          {/* Product Showcase Container */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-white to-slate-50 rounded-3xl transform -rotate-1" />
-            <div className="relative bg-white rounded-3xl shadow-xl border border-gray-100 p-8">
-              <ProductShowcase />
+      {featureFlags.storeEnabled && (
+        <LazyShow deferRender rootMargin="200px">
+          <section className="py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {/* Section Header */}
+              <div className="text-center mb-12">
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                  <span className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
+                    {t('productShowcaseTitle', 'Travel Essentials')}
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                  {t('productShowcase.subtitle', 'Carefully selected travel gear and essentials to enhance your Greek adventure')}
+                </p>
+                <div className="mt-6 mx-auto w-32 h-1 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full" />
+              </div>
+
+              {/* Product Showcase Container */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-white to-slate-50 rounded-3xl transform -rotate-1" />
+                <div className="relative bg-white rounded-3xl shadow-xl border border-gray-100 p-8">
+                  <ProductShowcase />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      </LazyShow>
+          </section>
+        </LazyShow>
+      )}
 
       {/* Canvas Divider */}
       <LazyShow deferRender rootMargin="200px">

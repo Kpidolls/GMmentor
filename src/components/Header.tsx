@@ -27,6 +27,7 @@ import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import config from '../config/index.json';
+import featureFlags from '../config/featureFlags.json';
 import SearchPage from './SearchPage';
 import { usePWA } from '../hooks/usePWA';
 
@@ -39,6 +40,9 @@ const Header = () => {
 
   const { company, navigation } = config;
   const { logo } = company;
+  const visibleNavigation = featureFlags.storeEnabled
+    ? navigation
+    : navigation.filter((item) => item.name !== 'navigation.store' && item.href !== '/store');
 
   const router = useRouter();
   const { t, i18n } = useTranslation();
@@ -516,7 +520,7 @@ const Header = () => {
             color="whiteAlpha.900"
             fontWeight="medium"
           >
-            {t('header.searchHint', 'Search maps, food, and travel gear')}
+            {t('header.searchHint', 'Find places')}
           </Text>
         </Button>
       </Flex>
@@ -548,7 +552,7 @@ const Header = () => {
 
           {/* Desktop Nav */}
           <HStack spacing={6} display={{ base: 'none', md: 'flex' }}>
-            {navigation.map((item) =>
+            {visibleNavigation.map((item) =>
               !item.submenu ? (
                 <Button
                   key={item.name}
@@ -686,7 +690,7 @@ const Header = () => {
               </Button>
             </Flex>
             <VStack spacing={2} align="stretch">
-              {navigation.map((item) => (
+              {visibleNavigation.map((item) => (
                 <Box key={item.name}>
                   <Button
                     variant="ghost"
