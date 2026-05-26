@@ -75,8 +75,10 @@ export interface IntentCounts {
 
 export interface RelatedCategorySummary {
   categoryId: string;
+  categorySlug: string;
   categoryName: string;
   count: number;
+  passesThreshold: boolean;
 }
 
 export interface RelatedAreaSummary {
@@ -89,7 +91,7 @@ export interface RelatedAreaSummary {
 
 export interface IntentResultsPayload {
   area: AreaIntentRecord;
-  category?: CategoryIntentRecord;
+  category: CategoryIntentRecord | null;
   entities: RankedEntity[];
   counts: IntentCounts;
   relatedCategories: RelatedCategorySummary[];

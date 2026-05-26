@@ -1,0 +1,22 @@
+{
+  "minAreaEntityCount": 8,
+  "minCategoryAreaCount": 5,
+  "categoryMinMatches": {
+    "greek-restaurants": 8,
+    "coffee-brunch": 7,
+    "cheap-eats": 7,
+    "desserts": 6,
+    "fish-tavernas": 6,
+    "italian": 5,
+    "luxury-dining": 4,
+    "burgers": 4,
+    "asian": 4,
+    "rooftop-lounges": 4,
+    "vegetarian": 4,
+    "mexican": 4,
+    "family-friendly": 4,
+    "attractions": 4,
+    "wineries-vineyards": 3,
+    "monasteries-churches": 3
+  }
+}

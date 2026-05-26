@@ -226,6 +226,24 @@ export default function CategoryAreaPage({ payload }: CategoryAreaPageProps) {
         </Box>
       ) : null}
 
+      {payload.relatedCategories.some((item) => item.passesThreshold) ? (
+        <Box mb={8}>
+          <Heading as="h2" size="md" mb={3}>Explore more categories in {payload.area.name}</Heading>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
+            {payload.relatedCategories
+              .filter((item) => item.passesThreshold)
+              .map((item) => (
+                <Box key={item.categoryId} borderWidth="1px" borderRadius="lg" p={4}>
+                  <Link as={NextLink} href={`/${item.categorySlug}/${payload.area.urlSlug}`} color="blue.600" fontWeight="semibold">
+                    {item.categoryName} in {payload.area.name}
+                  </Link>
+                  <Text color="gray.600" fontSize="sm">{item.count} places</Text>
+                </Box>
+              ))}
+          </SimpleGrid>
+        </Box>
+      ) : null}
+
       <Button as={NextLink} href={`/area/${payload.area.urlSlug}`} variant="outline" mr={3}>
         View area guide
       </Button>

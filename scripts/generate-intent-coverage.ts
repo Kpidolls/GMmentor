@@ -36,25 +36,76 @@ interface IntentCoverageReport {
     generatedCategoryAreaPages: number;
   };
   filteredCombinations: Record<FilterReason, number>;
+  generatedAreaRoutes: string[];
   generatedCategoryAreaRoutes: Array<{ categorySlug: string; areaSlug: string }>;
+  densityAnalysis: {
+    areaEntityCounts: {
+      min: number;
+      max: number;
+      avg: number;
+      p50: number;
+      p75: number;
+      p90: number;
+    };
+    categoryEntityCounts: {
+      min: number;
+      max: number;
+      avg: number;
+      p50: number;
+      p75: number;
+      p90: number;
+    };
+    categoryAreaCounts: {
+      min: number;
+      max: number;
+      avg: number;
+      p50: number;
+      p75: number;
+      p90: number;
+    };
+  };
+  categoryPerformance: Array<{
+    categoryId: string;
+    categorySlug: string;
+    threshold: number;
+    candidates: number;
+    generated: number;
+    filteredBelowThreshold: number;
+  }>;
   highestDensityAreas: DensityEntry[];
   highestDensityCategories: DensityEntry[];
   strongestCategoryAreaCombinations: StrongCombinationEntry[];
 }
-
-const MIN_AREA_ENTITY_COUNT = 8;
-const MIN_CATEGORY_AREA_COUNT = 5;
 const TOP_LIMIT = 20;
+
+function percentile(values: number[], pct: number): number {
+  if (values.length === 0) return 0;
+  const sorted = [...values].sort((a, b) => a - b);
+  const index = Math.max(0, Math.min(sorted.length - 1, Math.floor((pct / 100) * (sorted.length - 1))));
+  return sorted[index] ?? 0;
+}
+
+function summarize(values: number[]) {
+  if (values.length === 0) {
+    return { min: 0, max: 0, avg: 0, p50: 0, p75: 0, p90: 0 };
+  }
+
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const avg = values.reduce((sum, value) => sum + value, 0) / values.length;
+  return {
+    min,
+    max,
+    avg: Number(avg.toFixed(2)),
+    p50: percentile(values, 50),
+    p75: percentile(values, 75),
+    p90: percentile(values, 90),
+  };
+}
 
 function main(): void {
   const index = loadEntitiesIndex();
-  const engine = createIntentEngine({
-    entities: index.entities,
-    thresholds: {
-      minAreaEntityCount: MIN_AREA_ENTITY_COUNT,
-      minCategoryAreaCount: MIN_CATEGORY_AREA_COUNT,
-    },
-  });
+  const engine = createIntentEngine({ entities: index.entities });
 
   const totals = {
     areas: engine.areas.records.length,
@@ -72,6 +123,8 @@ function main(): void {
   };
 
   const highestDensityAreas: DensityEntry[] = [];
+  const generatedAreaRoutes: string[] = [];
+  const areaDensityValues: number[] = [];
   for (const area of engine.areas.records) {
     const payload = engine.query.getIntentResults({ areaId: area.id });
     if (!payload) {
@@ -80,8 +133,10 @@ function main(): void {
 
     if (payload.passesThreshold) {
       totals.generatedAreaPages += 1;
+      generatedAreaRoutes.push(area.urlSlug);
     }
 
+    areaDensityValues.push(payload.counts.totalInArea);
     highestDensityAreas.push({
       id: area.id,
       slug: area.urlSlug,
@@ -107,9 +162,29 @@ function main(): void {
   const strongestCombinations: StrongCombinationEntry[] = [];
   const generatedCategoryAreaRoutes: Array<{ categorySlug: string; areaSlug: string }> = [];
   const canonicalIntentKeys = new Set<string>();
+  const categoryAreaValues: number[] = [];
+  const categoryPerformance = new Map<string, {
+    categoryId: string;
+    categorySlug: string;
+    threshold: number;
+    candidates: number;
+    generated: number;
+    filteredBelowThreshold: number;
+  }>();
 
   for (const area of engine.areas.records) {
     for (const category of engine.categories.records) {
+      const categoryBucket = categoryPerformance.get(category.id) ?? {
+        categoryId: category.id,
+        categorySlug: category.urlSlug,
+        threshold: engine.query.getEffectiveCategoryThreshold(category.id),
+        candidates: 0,
+        generated: 0,
+        filteredBelowThreshold: 0,
+      };
+      categoryBucket.candidates += 1;
+      categoryPerformance.set(category.id, categoryBucket);
+
       const resolution = engine.resolver.resolveIntent(category.urlSlug, area.urlSlug);
       if (!resolution.categoryId) {
         filteredCombinations.invalid_category += 1;
@@ -147,10 +222,15 @@ function main(): void {
 
       if (!payload || !payload.passesThreshold || payload.entities.length === 0) {
         filteredCombinations.below_threshold += 1;
+        categoryBucket.filteredBelowThreshold += 1;
+        categoryPerformance.set(category.id, categoryBucket);
         continue;
       }
 
       totals.generatedCategoryAreaPages += 1;
+      categoryBucket.generated += 1;
+      categoryPerformance.set(category.id, categoryBucket);
+      categoryAreaValues.push(payload.counts.totalCategoryArea);
       generatedCategoryAreaRoutes.push({
         categorySlug: canonicalCategory.urlSlug,
         areaSlug: canonicalArea.urlSlug,
@@ -173,12 +253,19 @@ function main(): void {
   const report: IntentCoverageReport = {
     generatedAt: new Date().toISOString(),
     thresholds: {
-      minAreaEntityCount: MIN_AREA_ENTITY_COUNT,
-      minCategoryAreaCount: MIN_CATEGORY_AREA_COUNT,
+      minAreaEntityCount: engine.thresholds.minAreaEntityCount,
+      minCategoryAreaCount: engine.thresholds.minCategoryAreaCount,
     },
     totals,
     filteredCombinations,
+    generatedAreaRoutes,
     generatedCategoryAreaRoutes,
+    densityAnalysis: {
+      areaEntityCounts: summarize(areaDensityValues),
+      categoryEntityCounts: summarize(highestDensityCategories.map((item) => item.count)),
+      categoryAreaCounts: summarize(categoryAreaValues),
+    },
+    categoryPerformance: Array.from(categoryPerformance.values()).sort((left, right) => right.generated - left.generated),
     highestDensityAreas: highestDensityAreas.slice(0, TOP_LIMIT),
     highestDensityCategories: highestDensityCategories.slice(0, TOP_LIMIT),
     strongestCategoryAreaCombinations: strongestCombinations.slice(0, TOP_LIMIT),
@@ -199,6 +286,8 @@ function main(): void {
   console.log(`- Filtered invalid area: ${report.filteredCombinations.invalid_area}`);
   console.log(`- Filtered invalid category: ${report.filteredCombinations.invalid_category}`);
   console.log(`- Filtered duplicate intent: ${report.filteredCombinations.duplicate_intent}`);
+  console.log(`- Area density p75/p90: ${report.densityAnalysis.areaEntityCounts.p75}/${report.densityAnalysis.areaEntityCounts.p90}`);
+  console.log(`- Category×area density p75/p90: ${report.densityAnalysis.categoryAreaCounts.p75}/${report.densityAnalysis.categoryAreaCounts.p90}`);
   console.log(`- Artifact: ${targetFile}\n`);
 }
 

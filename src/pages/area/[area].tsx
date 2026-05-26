@@ -157,8 +157,24 @@ export default function AreaPage({ payload }: AreaPageProps) {
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
             {payload.relatedCategories.map((item) => (
               <Box key={item.categoryId} borderWidth="1px" borderRadius="lg" p={4}>
-                <Text fontWeight="semibold">{item.categoryName}</Text>
+                {item.passesThreshold ? (
+                  <Link
+                    as={NextLink}
+                    href={`/${item.categorySlug}/${payload.area.urlSlug}`}
+                    color="blue.600"
+                    fontWeight="semibold"
+                  >
+                    {item.categoryName}
+                  </Link>
+                ) : (
+                  <Text fontWeight="semibold">{item.categoryName}</Text>
+                )}
                 <Text color="gray.600" fontSize="sm">{item.count} places nearby</Text>
+                {item.passesThreshold ? (
+                  <Text color="blue.600" fontSize="sm" mt={1}>
+                    View {item.categoryName.toLowerCase()} in {payload.area.name}
+                  </Text>
+                ) : null}
               </Box>
             ))}
           </SimpleGrid>

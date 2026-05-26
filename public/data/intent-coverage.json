@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T07:14:25.264Z",
+  "generatedAt": "2026-05-26T07:42:46.963Z",
   "thresholds": {
     "minAreaEntityCount": 8,
     "minCategoryAreaCount": 5
@@ -9,14 +9,160 @@
     "categories": 16,
     "candidateCombinations": 5632,
     "generatedAreaPages": 144,
-    "generatedCategoryAreaPages": 1021
+    "generatedCategoryAreaPages": 1043
   },
   "filteredCombinations": {
-    "below_threshold": 4611,
+    "below_threshold": 4589,
     "invalid_area": 0,
     "invalid_category": 0,
     "duplicate_intent": 0
   },
+  "generatedAreaRoutes": [
+    "ampelokipoi",
+    "exarcheia",
+    "zografoy",
+    "goydi",
+    "ilisia",
+    "gkazi",
+    "kolonaki",
+    "monastiraki",
+    "syntagma",
+    "kaisariani",
+    "petralona",
+    "pagkrati",
+    "neos-kosmos",
+    "nea-erythraia",
+    "kifisia",
+    "lykovrysi",
+    "metamorfosi",
+    "peyki",
+    "maroysi",
+    "melissia",
+    "nea-ionia",
+    "nea-filadelfeia",
+    "filothei",
+    "chalandri",
+    "agia-paraskeyi",
+    "psychiko",
+    "galatsi",
+    "papagoy-cholargos",
+    "vyronas",
+    "ymittos",
+    "kallithea",
+    "dafni",
+    "nea-smyrni",
+    "ilioypoli",
+    "palaio-faliro",
+    "alimos",
+    "argyroypoli",
+    "elliniko",
+    "glyfada",
+    "voyla",
+    "vari",
+    "voyliagmeni",
+    "dionysos",
+    "nea-makri",
+    "anthoysa",
+    "gerakas",
+    "pallini",
+    "pikermi",
+    "kamatero",
+    "agioi-anargyroi",
+    "ilion",
+    "petroypoli",
+    "peristeri",
+    "chaidari",
+    "aigaleo",
+    "agia-varvara",
+    "korydallos",
+    "nikaia",
+    "peiraias",
+    "thessaloniki",
+    "peyka",
+    "panorama",
+    "pylaia-chortiatis",
+    "kalamaria",
+    "thermi",
+    "mikra",
+    "eleytherio-kordelio",
+    "kordelio-eyosmos",
+    "polichni",
+    "stayroypoli",
+    "ampelokipoi-menemeni",
+    "neapoli-sykies",
+    "kerkyra",
+    "volos",
+    "skiathos",
+    "karpenisi",
+    "chalkida",
+    "patra",
+    "acharnes",
+    "nayplio",
+    "tinos",
+    "mykonos",
+    "syros",
+    "kythnos",
+    "naxos",
+    "sifnos",
+    "kos",
+    "amorgos",
+    "astypalaia",
+    "rodos",
+    "santorini",
+    "chania",
+    "plaka",
+    "psyrri",
+    "koykaki",
+    "thiseio",
+    "metaxoyrgeio",
+    "akropoli",
+    "votanikos",
+    "royf",
+    "ekali",
+    "rodopoli",
+    "stamata",
+    "agios-stefanos",
+    "kastella",
+    "pasalimani",
+    "mikrolimano",
+    "freattyda",
+    "aigina",
+    "ydra",
+    "ladadika",
+    "valaoritoy",
+    "ano-poli",
+    "kaytanzogleio-periochi",
+    "nea-paralia",
+    "karampoyrnaki",
+    "martioy",
+    "toympa",
+    "charilaoy",
+    "nikiti",
+    "peykochori",
+    "kallithea-chalkidiki",
+    "oia",
+    "fira",
+    "imerovigli",
+    "kamari",
+    "naoysa-paros",
+    "karpenisi-central-greece",
+    "patisia",
+    "sepolia",
+    "mets",
+    "gyzi",
+    "attiki",
+    "ano-petralona",
+    "kaminia",
+    "drapetsona",
+    "keratsini",
+    "vardaris",
+    "triandria",
+    "eptapyrgio",
+    "aggelochori",
+    "naoysa-paroy",
+    "ormos",
+    "ixia"
+  ],
   "generatedCategoryAreaRoutes": [
     {
       "categorySlug": "attractions",
@@ -43,6 +189,10 @@
       "areaSlug": "ampelokipoi"
     },
     {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "ampelokipoi"
+    },
+    {
       "categorySlug": "italian",
       "areaSlug": "ampelokipoi"
     },
@@ -564,6 +714,10 @@
     },
     {
       "categorySlug": "brunch",
+      "areaSlug": "kaisariani"
+    },
+    {
+      "categorySlug": "monasteries-churches",
       "areaSlug": "kaisariani"
     },
     {
@@ -787,6 +941,10 @@
       "areaSlug": "nea-erythraia"
     },
     {
+      "categorySlug": "mexican",
+      "areaSlug": "nea-erythraia"
+    },
+    {
       "categorySlug": "luxury-dining",
       "areaSlug": "nea-erythraia"
     },
@@ -803,19 +961,15 @@
       "areaSlug": "kifisia"
     },
     {
-      "categorySlug": "brunch",
-      "areaSlug": "kifisia"
-    },
-    {
-      "categorySlug": "fish-tavernas",
-      "areaSlug": "kifisia"
-    },
-    {
       "categorySlug": "italian",
       "areaSlug": "kifisia"
     },
     {
       "categorySlug": "cheap-eats",
+      "areaSlug": "kifisia"
+    },
+    {
+      "categorySlug": "asian-restaurants",
       "areaSlug": "kifisia"
     },
     {
@@ -855,6 +1009,10 @@
       "areaSlug": "lykovrysi"
     },
     {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "lykovrysi"
+    },
+    {
       "categorySlug": "burgers",
       "areaSlug": "lykovrysi"
     },
@@ -879,11 +1037,11 @@
       "areaSlug": "metamorfosi"
     },
     {
-      "categorySlug": "brunch",
+      "categorySlug": "cheap-eats",
       "areaSlug": "metamorfosi"
     },
     {
-      "categorySlug": "cheap-eats",
+      "categorySlug": "burgers",
       "areaSlug": "metamorfosi"
     },
     {
@@ -911,7 +1069,15 @@
       "areaSlug": "peyki"
     },
     {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "peyki"
+    },
+    {
       "categorySlug": "burgers",
+      "areaSlug": "peyki"
+    },
+    {
+      "categorySlug": "mexican",
       "areaSlug": "peyki"
     },
     {
@@ -979,10 +1145,6 @@
       "areaSlug": "melissia"
     },
     {
-      "categorySlug": "fish-tavernas",
-      "areaSlug": "melissia"
-    },
-    {
       "categorySlug": "italian",
       "areaSlug": "melissia"
     },
@@ -1039,6 +1201,10 @@
       "areaSlug": "nea-ionia"
     },
     {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "nea-ionia"
+    },
+    {
       "categorySlug": "greek-restaurants",
       "areaSlug": "nea-filadelfeia"
     },
@@ -1060,6 +1226,14 @@
     },
     {
       "categorySlug": "cheap-eats",
+      "areaSlug": "nea-filadelfeia"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "nea-filadelfeia"
+    },
+    {
+      "categorySlug": "burgers",
       "areaSlug": "nea-filadelfeia"
     },
     {
@@ -1175,10 +1349,6 @@
       "areaSlug": "agia-paraskeyi"
     },
     {
-      "categorySlug": "fish-tavernas",
-      "areaSlug": "agia-paraskeyi"
-    },
-    {
       "categorySlug": "italian",
       "areaSlug": "agia-paraskeyi"
     },
@@ -1260,10 +1430,6 @@
     },
     {
       "categorySlug": "brunch",
-      "areaSlug": "galatsi"
-    },
-    {
-      "categorySlug": "fish-tavernas",
       "areaSlug": "galatsi"
     },
     {
@@ -1643,6 +1809,10 @@
       "areaSlug": "ilioypoli"
     },
     {
+      "categorySlug": "family-friendly",
+      "areaSlug": "ilioypoli"
+    },
+    {
       "categorySlug": "brunch",
       "areaSlug": "ilioypoli"
     },
@@ -1675,7 +1845,7 @@
       "areaSlug": "palaio-faliro"
     },
     {
-      "categorySlug": "fish-tavernas",
+      "categorySlug": "monasteries-churches",
       "areaSlug": "palaio-faliro"
     },
     {
@@ -1703,7 +1873,7 @@
       "areaSlug": "alimos"
     },
     {
-      "categorySlug": "brunch",
+      "categorySlug": "monasteries-churches",
       "areaSlug": "alimos"
     },
     {
@@ -1715,27 +1885,19 @@
       "areaSlug": "alimos"
     },
     {
-      "categorySlug": "greek-restaurants",
+      "categorySlug": "desserts",
+      "areaSlug": "argyroypoli"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "argyroypoli"
+    },
+    {
+      "categorySlug": "cheap-eats",
       "areaSlug": "argyroypoli"
     },
     {
       "categorySlug": "desserts",
-      "areaSlug": "argyroypoli"
-    },
-    {
-      "categorySlug": "family-friendly",
-      "areaSlug": "argyroypoli"
-    },
-    {
-      "categorySlug": "cheap-eats",
-      "areaSlug": "argyroypoli"
-    },
-    {
-      "categorySlug": "greek-restaurants",
-      "areaSlug": "elliniko"
-    },
-    {
-      "categorySlug": "desserts",
       "areaSlug": "elliniko"
     },
     {
@@ -1803,6 +1965,10 @@
       "areaSlug": "voyla"
     },
     {
+      "categorySlug": "family-friendly",
+      "areaSlug": "voyla"
+    },
+    {
       "categorySlug": "brunch",
       "areaSlug": "voyla"
     },
@@ -1815,28 +1981,16 @@
       "areaSlug": "voyla"
     },
     {
-      "categorySlug": "brunch",
+      "categorySlug": "luxury-dining",
       "areaSlug": "vari"
     },
     {
       "categorySlug": "luxury-dining",
-      "areaSlug": "vari"
-    },
-    {
-      "categorySlug": "brunch",
       "areaSlug": "voyliagmeni"
     },
     {
-      "categorySlug": "luxury-dining",
-      "areaSlug": "voyliagmeni"
-    },
-    {
-      "categorySlug": "fish-tavernas",
-      "areaSlug": "nea-makri"
-    },
-    {
-      "categorySlug": "greek-restaurants",
-      "areaSlug": "anthoysa"
+      "categorySlug": "family-friendly",
+      "areaSlug": "dionysos"
     },
     {
       "categorySlug": "family-friendly",
@@ -1879,10 +2033,6 @@
       "areaSlug": "kamatero"
     },
     {
-      "categorySlug": "brunch",
-      "areaSlug": "kamatero"
-    },
-    {
       "categorySlug": "cheap-eats",
       "areaSlug": "kamatero"
     },
@@ -1919,6 +2069,10 @@
       "areaSlug": "ilion"
     },
     {
+      "categorySlug": "family-friendly",
+      "areaSlug": "ilion"
+    },
+    {
       "categorySlug": "brunch",
       "areaSlug": "ilion"
     },
@@ -1935,6 +2089,14 @@
       "areaSlug": "ilion"
     },
     {
+      "categorySlug": "burgers",
+      "areaSlug": "ilion"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "ilion"
+    },
+    {
       "categorySlug": "greek-restaurants",
       "areaSlug": "petroypoli"
     },
@@ -1955,6 +2117,14 @@
       "areaSlug": "petroypoli"
     },
     {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "petroypoli"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "petroypoli"
+    },
+    {
       "categorySlug": "greek-restaurants",
       "areaSlug": "peristeri"
     },
@@ -1972,6 +2142,14 @@
     },
     {
       "categorySlug": "cheap-eats",
+      "areaSlug": "peristeri"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "peristeri"
+    },
+    {
+      "categorySlug": "vegetarian",
       "areaSlug": "peristeri"
     },
     {
@@ -1999,6 +2177,10 @@
       "areaSlug": "chaidari"
     },
     {
+      "categorySlug": "mexican",
+      "areaSlug": "chaidari"
+    },
+    {
       "categorySlug": "greek-restaurants",
       "areaSlug": "aigaleo"
     },
@@ -2023,6 +2205,14 @@
       "areaSlug": "aigaleo"
     },
     {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "aigaleo"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "aigaleo"
+    },
+    {
       "categorySlug": "greek-restaurants",
       "areaSlug": "agia-varvara"
     },
@@ -2043,6 +2233,10 @@
       "areaSlug": "agia-varvara"
     },
     {
+      "categorySlug": "mexican",
+      "areaSlug": "agia-varvara"
+    },
+    {
       "categorySlug": "greek-restaurants",
       "areaSlug": "korydallos"
     },
@@ -2056,10 +2250,6 @@
     },
     {
       "categorySlug": "brunch",
-      "areaSlug": "korydallos"
-    },
-    {
-      "categorySlug": "fish-tavernas",
       "areaSlug": "korydallos"
     },
     {
@@ -2072,10 +2262,6 @@
     },
     {
       "categorySlug": "desserts",
-      "areaSlug": "nikaia"
-    },
-    {
-      "categorySlug": "brunch",
       "areaSlug": "nikaia"
     },
     {
@@ -2103,10 +2289,6 @@
       "areaSlug": "peiraias"
     },
     {
-      "categorySlug": "brunch",
-      "areaSlug": "peiraias"
-    },
-    {
       "categorySlug": "fish-tavernas",
       "areaSlug": "peiraias"
     },
@@ -2124,6 +2306,10 @@
     },
     {
       "categorySlug": "burgers",
+      "areaSlug": "peiraias"
+    },
+    {
+      "categorySlug": "luxury-dining",
       "areaSlug": "peiraias"
     },
     {
@@ -2171,7 +2357,15 @@
       "areaSlug": "thessaloniki"
     },
     {
+      "categorySlug": "mexican",
+      "areaSlug": "thessaloniki"
+    },
+    {
       "categorySlug": "luxury-dining",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "rooftops",
       "areaSlug": "thessaloniki"
     },
     {
@@ -2188,6 +2382,10 @@
     },
     {
       "categorySlug": "desserts",
+      "areaSlug": "kalamaria"
+    },
+    {
+      "categorySlug": "family-friendly",
       "areaSlug": "kalamaria"
     },
     {
@@ -2320,10 +2518,6 @@
     },
     {
       "categorySlug": "greek-restaurants",
-      "areaSlug": "ampelokipoi-menemeni"
-    },
-    {
-      "categorySlug": "desserts",
       "areaSlug": "ampelokipoi-menemeni"
     },
     {
@@ -2387,28 +2581,32 @@
       "areaSlug": "neapoli-sykies"
     },
     {
+      "categorySlug": "mexican",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
       "categorySlug": "luxury-dining",
       "areaSlug": "neapoli-sykies"
     },
     {
-      "categorySlug": "greek-restaurants",
-      "areaSlug": "xanthi"
-    },
-    {
-      "categorySlug": "cheap-eats",
-      "areaSlug": "volos"
+      "categorySlug": "rooftops",
+      "areaSlug": "neapoli-sykies"
     },
     {
       "categorySlug": "greek-restaurants",
       "areaSlug": "skiathos"
     },
     {
+      "categorySlug": "attractions",
+      "areaSlug": "delfoi"
+    },
+    {
       "categorySlug": "fish-tavernas",
       "areaSlug": "chalkida"
     },
     {
-      "categorySlug": "brunch",
-      "areaSlug": "tinos"
+      "categorySlug": "wineries-vineyards",
+      "areaSlug": "nemea"
     },
     {
       "categorySlug": "greek-restaurants",
@@ -2424,27 +2622,7 @@
     },
     {
       "categorySlug": "greek-restaurants",
-      "areaSlug": "syros"
-    },
-    {
-      "categorySlug": "brunch",
-      "areaSlug": "kythnos"
-    },
-    {
-      "categorySlug": "greek-restaurants",
       "areaSlug": "naxos"
-    },
-    {
-      "categorySlug": "brunch",
-      "areaSlug": "naxos"
-    },
-    {
-      "categorySlug": "greek-restaurants",
-      "areaSlug": "sifnos"
-    },
-    {
-      "categorySlug": "greek-restaurants",
-      "areaSlug": "amorgos"
     },
     {
       "categorySlug": "greek-restaurants",
@@ -2935,27 +3113,15 @@
       "areaSlug": "royf"
     },
     {
+      "categorySlug": "family-friendly",
+      "areaSlug": "ekali"
+    },
+    {
       "categorySlug": "italian",
       "areaSlug": "ekali"
     },
     {
       "categorySlug": "greek-restaurants",
-      "areaSlug": "rodopoli"
-    },
-    {
-      "categorySlug": "greek-restaurants",
-      "areaSlug": "agios-stefanos"
-    },
-    {
-      "categorySlug": "fish-tavernas",
-      "areaSlug": "soynio"
-    },
-    {
-      "categorySlug": "greek-restaurants",
-      "areaSlug": "kastella"
-    },
-    {
-      "categorySlug": "brunch",
       "areaSlug": "kastella"
     },
     {
@@ -2971,6 +3137,14 @@
       "areaSlug": "kastella"
     },
     {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "kastella"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "kastella"
+    },
+    {
       "categorySlug": "luxury-dining",
       "areaSlug": "kastella"
     },
@@ -2979,7 +3153,7 @@
       "areaSlug": "pasalimani"
     },
     {
-      "categorySlug": "desserts",
+      "categorySlug": "family-friendly",
       "areaSlug": "pasalimani"
     },
     {
@@ -3076,6 +3250,10 @@
     },
     {
       "categorySlug": "asian-restaurants",
+      "areaSlug": "freattyda"
+    },
+    {
+      "categorySlug": "vegetarian",
       "areaSlug": "freattyda"
     },
     {
@@ -3127,7 +3305,15 @@
       "areaSlug": "ladadika"
     },
     {
+      "categorySlug": "mexican",
+      "areaSlug": "ladadika"
+    },
+    {
       "categorySlug": "luxury-dining",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "rooftops",
       "areaSlug": "ladadika"
     },
     {
@@ -3175,7 +3361,15 @@
       "areaSlug": "valaoritoy"
     },
     {
+      "categorySlug": "mexican",
+      "areaSlug": "valaoritoy"
+    },
+    {
       "categorySlug": "luxury-dining",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "rooftops",
       "areaSlug": "valaoritoy"
     },
     {
@@ -3223,7 +3417,15 @@
       "areaSlug": "ano-poli"
     },
     {
+      "categorySlug": "mexican",
+      "areaSlug": "ano-poli"
+    },
+    {
       "categorySlug": "luxury-dining",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "rooftops",
       "areaSlug": "ano-poli"
     },
     {
@@ -3359,6 +3561,10 @@
       "areaSlug": "karampoyrnaki"
     },
     {
+      "categorySlug": "vegetarian",
+      "areaSlug": "karampoyrnaki"
+    },
+    {
       "categorySlug": "luxury-dining",
       "areaSlug": "karampoyrnaki"
     },
@@ -3407,6 +3613,10 @@
       "areaSlug": "martioy"
     },
     {
+      "categorySlug": "attractions",
+      "areaSlug": "toympa"
+    },
+    {
       "categorySlug": "greek-restaurants",
       "areaSlug": "toympa"
     },
@@ -3467,10 +3677,6 @@
       "areaSlug": "charilaoy"
     },
     {
-      "categorySlug": "fish-tavernas",
-      "areaSlug": "charilaoy"
-    },
-    {
       "categorySlug": "italian",
       "areaSlug": "charilaoy"
     },
@@ -3483,8 +3689,24 @@
       "areaSlug": "charilaoy"
     },
     {
-      "categorySlug": "brunch",
-      "areaSlug": "peykochori"
+      "categorySlug": "vegetarian",
+      "areaSlug": "charilaoy"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "oia"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "fira"
+    },
+    {
+      "categorySlug": "wineries-vineyards",
+      "areaSlug": "fira"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "imerovigli"
     },
     {
       "categorySlug": "wineries-vineyards",
@@ -3555,6 +3777,10 @@
       "areaSlug": "sepolia"
     },
     {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "sepolia"
+    },
+    {
       "categorySlug": "italian",
       "areaSlug": "sepolia"
     },
@@ -3859,15 +4085,15 @@
       "areaSlug": "kaminia"
     },
     {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "kaminia"
+    },
+    {
       "categorySlug": "greek-restaurants",
       "areaSlug": "drapetsona"
     },
     {
       "categorySlug": "desserts",
-      "areaSlug": "drapetsona"
-    },
-    {
-      "categorySlug": "brunch",
       "areaSlug": "drapetsona"
     },
     {
@@ -3891,16 +4117,8 @@
       "areaSlug": "drapetsona"
     },
     {
-      "categorySlug": "greek-restaurants",
-      "areaSlug": "keratsini"
-    },
-    {
-      "categorySlug": "desserts",
-      "areaSlug": "keratsini"
-    },
-    {
-      "categorySlug": "brunch",
-      "areaSlug": "keratsini"
+      "categorySlug": "luxury-dining",
+      "areaSlug": "drapetsona"
     },
     {
       "categorySlug": "fish-tavernas",
@@ -3924,6 +4142,10 @@
     },
     {
       "categorySlug": "desserts",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "family-friendly",
       "areaSlug": "vardaris"
     },
     {
@@ -3955,7 +4177,15 @@
       "areaSlug": "vardaris"
     },
     {
+      "categorySlug": "mexican",
+      "areaSlug": "vardaris"
+    },
+    {
       "categorySlug": "luxury-dining",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "rooftops",
       "areaSlug": "vardaris"
     },
     {
@@ -4051,7 +4281,15 @@
       "areaSlug": "eptapyrgio"
     },
     {
+      "categorySlug": "mexican",
+      "areaSlug": "eptapyrgio"
+    },
+    {
       "categorySlug": "luxury-dining",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "rooftops",
       "areaSlug": "eptapyrgio"
     },
     {
@@ -4095,12 +4333,164 @@
       "areaSlug": "ormos"
     },
     {
-      "categorySlug": "fish-tavernas",
-      "areaSlug": "ormos"
-    },
-    {
       "categorySlug": "luxury-dining",
       "areaSlug": "ormos"
+    }
+  ],
+  "densityAnalysis": {
+    "areaEntityCounts": {
+      "min": 0,
+      "max": 873,
+      "avg": 92.68,
+      "p50": 3,
+      "p75": 63,
+      "p90": 329
+    },
+    "categoryEntityCounts": {
+      "min": 45,
+      "max": 779,
+      "avg": 235.38,
+      "p50": 149,
+      "p75": 330,
+      "p90": 440
+    },
+    "categoryAreaCounts": {
+      "min": 3,
+      "max": 142,
+      "avg": 29.78,
+      "p50": 16,
+      "p75": 43,
+      "p90": 73
+    }
+  },
+  "categoryPerformance": [
+    {
+      "categoryId": "greek-restaurants",
+      "categorySlug": "greek-restaurants",
+      "threshold": 8,
+      "candidates": 352,
+      "generated": 96,
+      "filteredBelowThreshold": 256
+    },
+    {
+      "categoryId": "cheap-eats",
+      "categorySlug": "cheap-eats",
+      "threshold": 7,
+      "candidates": 352,
+      "generated": 92,
+      "filteredBelowThreshold": 260
+    },
+    {
+      "categoryId": "desserts",
+      "categorySlug": "desserts",
+      "threshold": 6,
+      "candidates": 352,
+      "generated": 90,
+      "filteredBelowThreshold": 262
+    },
+    {
+      "categoryId": "family-friendly",
+      "categorySlug": "family-friendly",
+      "threshold": 4,
+      "candidates": 352,
+      "generated": 85,
+      "filteredBelowThreshold": 267
+    },
+    {
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "threshold": 7,
+      "candidates": 352,
+      "generated": 83,
+      "filteredBelowThreshold": 269
+    },
+    {
+      "categoryId": "italian",
+      "categorySlug": "italian",
+      "threshold": 5,
+      "candidates": 352,
+      "generated": 82,
+      "filteredBelowThreshold": 270
+    },
+    {
+      "categoryId": "burgers",
+      "categorySlug": "burgers",
+      "threshold": 4,
+      "candidates": 352,
+      "generated": 82,
+      "filteredBelowThreshold": 270
+    },
+    {
+      "categoryId": "luxury-dining",
+      "categorySlug": "luxury-dining",
+      "threshold": 4,
+      "candidates": 352,
+      "generated": 74,
+      "filteredBelowThreshold": 278
+    },
+    {
+      "categoryId": "asian",
+      "categorySlug": "asian-restaurants",
+      "threshold": 4,
+      "candidates": 352,
+      "generated": 70,
+      "filteredBelowThreshold": 282
+    },
+    {
+      "categoryId": "fish-tavernas",
+      "categorySlug": "fish-tavernas",
+      "threshold": 6,
+      "candidates": 352,
+      "generated": 62,
+      "filteredBelowThreshold": 290
+    },
+    {
+      "categoryId": "mexican",
+      "categorySlug": "mexican",
+      "threshold": 4,
+      "candidates": 352,
+      "generated": 54,
+      "filteredBelowThreshold": 298
+    },
+    {
+      "categoryId": "vegetarian",
+      "categorySlug": "vegetarian",
+      "threshold": 4,
+      "candidates": 352,
+      "generated": 53,
+      "filteredBelowThreshold": 299
+    },
+    {
+      "categoryId": "attractions",
+      "categorySlug": "attractions",
+      "threshold": 4,
+      "candidates": 352,
+      "generated": 43,
+      "filteredBelowThreshold": 309
+    },
+    {
+      "categoryId": "rooftop-lounges",
+      "categorySlug": "rooftops",
+      "threshold": 4,
+      "candidates": 352,
+      "generated": 40,
+      "filteredBelowThreshold": 312
+    },
+    {
+      "categoryId": "monasteries-churches",
+      "categorySlug": "monasteries-churches",
+      "threshold": 3,
+      "candidates": 352,
+      "generated": 33,
+      "filteredBelowThreshold": 319
+    },
+    {
+      "categoryId": "wineries-vineyards",
+      "categorySlug": "wineries-vineyards",
+      "threshold": 3,
+      "candidates": 352,
+      "generated": 4,
+      "filteredBelowThreshold": 348
     }
   ],
   "highestDensityAreas": [

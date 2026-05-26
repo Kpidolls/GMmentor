@@ -69,8 +69,22 @@ module.exports = {
       const entitiesFile = join(process.cwd(), 'public', 'data', 'entities.json');
       const parsed = JSON.parse(readFileSync(entitiesFile, 'utf8'));
       const entities = Array.isArray(parsed?.entities) ? parsed.entities : [];
+      const coverageFile = join(process.cwd(), 'public', 'data', 'intent-coverage.json');
 
-      return entities
+      let generatedAreaRoutes = [];
+      let generatedCategoryAreaRoutes = [];
+      try {
+        const coverage = JSON.parse(readFileSync(coverageFile, 'utf8'));
+        generatedAreaRoutes = Array.isArray(coverage?.generatedAreaRoutes) ? coverage.generatedAreaRoutes : [];
+        generatedCategoryAreaRoutes = Array.isArray(coverage?.generatedCategoryAreaRoutes)
+          ? coverage.generatedCategoryAreaRoutes
+          : [];
+      } catch {
+        generatedAreaRoutes = [];
+        generatedCategoryAreaRoutes = [];
+      }
+
+      const placePaths = entities
         .filter((entity) => entity?.slug)
         .map((entity) => ({
           loc: `/place/${entity.slug}`,
@@ -78,6 +92,24 @@ module.exports = {
           priority: 0.7,
           lastmod: new Date().toISOString(),
         }));
+
+      const areaPaths = generatedAreaRoutes.map((areaSlug) => ({
+        loc: `/area/${areaSlug}`,
+        changefreq: 'weekly',
+        priority: 0.78,
+        lastmod: new Date().toISOString(),
+      }));
+
+      const categoryAreaPaths = generatedCategoryAreaRoutes
+        .filter((route) => route?.categorySlug && route?.areaSlug)
+        .map((route) => ({
+          loc: `/${route.categorySlug}/${route.areaSlug}`,
+          changefreq: 'weekly',
+          priority: 0.82,
+          lastmod: new Date().toISOString(),
+        }));
+
+      return [...placePaths, ...areaPaths, ...categoryAreaPaths];
     } catch {
       return [];
     }

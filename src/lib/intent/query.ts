@@ -12,6 +12,7 @@ import type {
 export interface IntentQueryThresholds {
   minAreaEntityCount: number;
   minCategoryAreaCount: number;
+  categoryMinMatches: Record<string, number>;
 }
 
 export interface IntentQueryService {
@@ -29,6 +30,7 @@ export interface IntentQueryService {
     limit?: number;
     relatedLimit?: number;
   }): IntentResultsPayload | null;
+  getEffectiveCategoryThreshold(categoryId: string): number;
 }
 
 const DEFAULT_RADIUS_KM = 3.5;
@@ -68,7 +70,11 @@ export function createIntentQueryService(deps: {
   const thresholds: IntentQueryThresholds = {
     minAreaEntityCount: deps.thresholds?.minAreaEntityCount ?? 8,
     minCategoryAreaCount: deps.thresholds?.minCategoryAreaCount ?? 5,
+    categoryMinMatches: deps.thresholds?.categoryMinMatches ?? {},
   };
+
+  const getEffectiveCategoryThreshold = (categoryId: string): number =>
+    thresholds.categoryMinMatches[categoryId] ?? thresholds.minCategoryAreaCount;
 
   const getAreaAuthorityPayload: IntentQueryService['getAreaAuthorityPayload'] = ({
     areaId,
@@ -124,7 +130,7 @@ export function createIntentQueryService(deps: {
       area,
       totalMatches: ranked.length,
       topEntities: ranked.slice(0, limit),
-      passesThreshold: ranked.length >= thresholds.minCategoryAreaCount,
+      passesThreshold: ranked.length >= getEffectiveCategoryThreshold(categoryId),
     };
   };
 
@@ -162,8 +168,10 @@ export function createIntentQueryService(deps: {
     const relatedCategories = Array.from(categoryCounter.entries())
       .map(([id, count]) => ({
         categoryId: id,
+        categorySlug: deps.categories.byId.get(id)?.urlSlug ?? id,
         categoryName: deps.categories.byId.get(id)?.name ?? id,
         count,
+        passesThreshold: count >= getEffectiveCategoryThreshold(id),
       }))
       .filter((item) => item.count > 0 && (!categoryId || item.categoryId !== categoryId))
       .sort((left, right) => right.count - left.count)
@@ -198,7 +206,7 @@ export function createIntentQueryService(deps: {
 
     return {
       area,
-      category,
+      category: category ?? null,
       entities: selectedEntities.slice(0, limit),
       counts: {
         totalEntities: deps.entities.length,
@@ -209,7 +217,7 @@ export function createIntentQueryService(deps: {
       relatedCategories,
       relatedAreas,
       passesThreshold: categoryId
-        ? categoryInArea.length >= thresholds.minCategoryAreaCount
+        ? categoryInArea.length >= getEffectiveCategoryThreshold(categoryId)
         : inArea.length >= thresholds.minAreaEntityCount,
     };
   };
@@ -218,5 +226,6 @@ export function createIntentQueryService(deps: {
     getAreaAuthorityPayload,
     getCategoryAreaPayload,
     getIntentResults,
+    getEffectiveCategoryThreshold,
   };
 }
