@@ -277,6 +277,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
   ) {
     let placePaths = {};
     let areaPaths = {};
+    let categoryAreaPaths = {};
 
     const slugify = (value) =>
       String(value || '')
@@ -358,6 +359,33 @@ const nextConfig = withPWA(withBundleAnalyzer({
       areaPaths = {};
     }
 
+    try {
+      const coverageFile = join(process.cwd(), 'public', 'data', 'intent-coverage.json');
+      const coverage = JSON.parse(readFileSync(coverageFile, 'utf8'));
+      const routes = Array.isArray(coverage?.generatedCategoryAreaRoutes)
+        ? coverage.generatedCategoryAreaRoutes
+        : [];
+
+      categoryAreaPaths = routes.reduce((acc, route) => {
+        const categorySlug = route?.categorySlug;
+        const areaSlug = route?.areaSlug;
+        if (!categorySlug || !areaSlug) {
+          return acc;
+        }
+
+        acc[`/${categorySlug}/${areaSlug}`] = {
+          page: '/[category]/[area]',
+          params: {
+            category: categorySlug,
+            area: areaSlug,
+          },
+        };
+        return acc;
+      }, {});
+    } catch {
+      categoryAreaPaths = {};
+    }
+
     const pathMap = {
       '/': { page: '/' },
       '/terms': { page: '/terms' },
@@ -372,6 +400,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
         page: '/blog/[slug]',
         params: { slug: 'greek-bakeries-brunch-coffee-guide' },
       },
+      ...categoryAreaPaths,
       ...areaPaths,
       ...placePaths,
     };

@@ -1,0 +1,4488 @@
+{
+  "generatedAt": "2026-05-26T07:14:25.264Z",
+  "thresholds": {
+    "minAreaEntityCount": 8,
+    "minCategoryAreaCount": 5
+  },
+  "totals": {
+    "areas": 352,
+    "categories": 16,
+    "candidateCombinations": 5632,
+    "generatedAreaPages": 144,
+    "generatedCategoryAreaPages": 1021
+  },
+  "filteredCombinations": {
+    "below_threshold": 4611,
+    "invalid_area": 0,
+    "invalid_category": 0,
+    "duplicate_intent": 0
+  },
+  "generatedCategoryAreaRoutes": [
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "ampelokipoi"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "exarcheia"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "zografoy"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "goydi"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "ilisia"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "gkazi"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "kolonaki"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "monastiraki"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "syntagma"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "kaisariani"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "kaisariani"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "kaisariani"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "kaisariani"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "kaisariani"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "kaisariani"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "kaisariani"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "kaisariani"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "kaisariani"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "petralona"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "pagkrati"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "neos-kosmos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "nea-erythraia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "nea-erythraia"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "nea-erythraia"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "nea-erythraia"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "nea-erythraia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "kifisia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "kifisia"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "kifisia"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "kifisia"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "kifisia"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "kifisia"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "kifisia"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "kifisia"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "kifisia"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "kifisia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "lykovrysi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "lykovrysi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "lykovrysi"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "lykovrysi"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "lykovrysi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "lykovrysi"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "lykovrysi"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "lykovrysi"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "lykovrysi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "metamorfosi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "metamorfosi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "metamorfosi"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "metamorfosi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "metamorfosi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "peyki"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "peyki"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "peyki"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "peyki"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "peyki"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "peyki"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "peyki"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "peyki"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "maroysi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "maroysi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "maroysi"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "maroysi"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "maroysi"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "maroysi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "maroysi"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "maroysi"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "maroysi"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "maroysi"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "maroysi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "melissia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "melissia"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "melissia"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "melissia"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "melissia"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "melissia"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "melissia"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "melissia"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "melissia"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "melissia"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "melissia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "nea-ionia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "nea-ionia"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "nea-ionia"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "nea-ionia"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "nea-ionia"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "nea-ionia"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "nea-ionia"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "nea-ionia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "nea-filadelfeia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "nea-filadelfeia"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "nea-filadelfeia"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "nea-filadelfeia"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "nea-filadelfeia"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "nea-filadelfeia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "filothei"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "chalandri"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "agia-paraskeyi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "agia-paraskeyi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "agia-paraskeyi"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "agia-paraskeyi"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "agia-paraskeyi"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "agia-paraskeyi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "agia-paraskeyi"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "agia-paraskeyi"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "agia-paraskeyi"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "agia-paraskeyi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "psychiko"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "galatsi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "galatsi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "galatsi"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "galatsi"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "galatsi"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "galatsi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "galatsi"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "galatsi"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "galatsi"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "galatsi"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "galatsi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "papagoy-cholargos"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "papagoy-cholargos"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "papagoy-cholargos"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "papagoy-cholargos"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "papagoy-cholargos"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "papagoy-cholargos"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "papagoy-cholargos"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "papagoy-cholargos"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "papagoy-cholargos"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "papagoy-cholargos"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "papagoy-cholargos"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "vyronas"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "ymittos"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "kallithea"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "dafni"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "nea-smyrni"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "ilioypoli"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "ilioypoli"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "ilioypoli"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "ilioypoli"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "ilioypoli"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "ilioypoli"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "palaio-faliro"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "palaio-faliro"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "palaio-faliro"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "palaio-faliro"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "palaio-faliro"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "palaio-faliro"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "palaio-faliro"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "palaio-faliro"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "alimos"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "alimos"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "alimos"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "alimos"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "alimos"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "alimos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "argyroypoli"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "argyroypoli"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "argyroypoli"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "argyroypoli"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "elliniko"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "elliniko"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "elliniko"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "elliniko"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "elliniko"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "elliniko"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "elliniko"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "glyfada"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "glyfada"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "glyfada"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "glyfada"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "glyfada"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "glyfada"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "glyfada"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "glyfada"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "glyfada"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "voyla"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "voyla"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "voyla"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "voyla"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "voyla"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "vari"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "vari"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "voyliagmeni"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "voyliagmeni"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "nea-makri"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "anthoysa"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "anthoysa"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "gerakas"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "gerakas"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "gerakas"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "gerakas"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "gerakas"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "pallini"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "pikermi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "kamatero"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "kamatero"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "kamatero"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "kamatero"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "agioi-anargyroi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "agioi-anargyroi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "agioi-anargyroi"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "agioi-anargyroi"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "agioi-anargyroi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "agioi-anargyroi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "ilion"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "ilion"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "ilion"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "ilion"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "ilion"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "ilion"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "petroypoli"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "petroypoli"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "petroypoli"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "petroypoli"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "petroypoli"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "peristeri"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "peristeri"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "peristeri"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "peristeri"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "peristeri"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "chaidari"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "chaidari"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "chaidari"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "chaidari"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "chaidari"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "chaidari"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "aigaleo"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "aigaleo"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "aigaleo"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "aigaleo"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "aigaleo"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "aigaleo"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "agia-varvara"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "agia-varvara"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "agia-varvara"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "agia-varvara"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "agia-varvara"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "korydallos"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "korydallos"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "korydallos"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "korydallos"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "korydallos"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "korydallos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "nikaia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "nikaia"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "nikaia"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "nikaia"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "nikaia"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "nikaia"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "nikaia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "peiraias"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "peiraias"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "peiraias"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "peiraias"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "peiraias"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "peiraias"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "peiraias"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "peiraias"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "thessaloniki"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "panorama"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "panorama"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "kalamaria"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "kalamaria"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "kalamaria"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "kalamaria"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "kalamaria"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "kalamaria"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "kalamaria"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "thermi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "thermi"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "thermi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "mikra"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "mikra"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "mikra"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "eleytherio-kordelio"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "eleytherio-kordelio"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "eleytherio-kordelio"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "kordelio-eyosmos"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "kordelio-eyosmos"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "kordelio-eyosmos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "polichni"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "polichni"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "polichni"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "polichni"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "polichni"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "polichni"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "polichni"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "stayroypoli"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "stayroypoli"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "stayroypoli"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "stayroypoli"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "stayroypoli"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "stayroypoli"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "stayroypoli"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "stayroypoli"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "ampelokipoi-menemeni"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "ampelokipoi-menemeni"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "ampelokipoi-menemeni"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "ampelokipoi-menemeni"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "ampelokipoi-menemeni"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "ampelokipoi-menemeni"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "ampelokipoi-menemeni"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "xanthi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "volos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "skiathos"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "chalkida"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "tinos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "mykonos"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "mykonos"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "mykonos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "syros"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "kythnos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "naxos"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "naxos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "sifnos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "amorgos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "astypalaia"
+    },
+    {
+      "categorySlug": "wineries-vineyards",
+      "areaSlug": "santorini"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "plaka"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "psyrri"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "koykaki"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "thiseio"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "metaxoyrgeio"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "akropoli"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "votanikos"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "royf"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "ekali"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "rodopoli"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "agios-stefanos"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "soynio"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "kastella"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "kastella"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "kastella"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "kastella"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "kastella"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "kastella"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "pasalimani"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "pasalimani"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "pasalimani"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "pasalimani"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "pasalimani"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "pasalimani"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "pasalimani"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "pasalimani"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "pasalimani"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "mikrolimano"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "mikrolimano"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "mikrolimano"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "mikrolimano"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "mikrolimano"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "mikrolimano"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "mikrolimano"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "mikrolimano"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "mikrolimano"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "freattyda"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "freattyda"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "freattyda"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "freattyda"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "freattyda"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "freattyda"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "freattyda"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "freattyda"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "freattyda"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "ladadika"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "valaoritoy"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "ano-poli"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "kaytanzogleio-periochi"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "nea-paralia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "karampoyrnaki"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "karampoyrnaki"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "karampoyrnaki"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "karampoyrnaki"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "karampoyrnaki"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "karampoyrnaki"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "karampoyrnaki"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "karampoyrnaki"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "martioy"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "martioy"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "martioy"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "martioy"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "martioy"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "martioy"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "martioy"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "martioy"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "martioy"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "martioy"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "martioy"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "toympa"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "toympa"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "toympa"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "toympa"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "toympa"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "toympa"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "toympa"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "toympa"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "toympa"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "toympa"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "toympa"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "charilaoy"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "charilaoy"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "charilaoy"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "charilaoy"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "charilaoy"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "charilaoy"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "charilaoy"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "charilaoy"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "peykochori"
+    },
+    {
+      "categorySlug": "wineries-vineyards",
+      "areaSlug": "kamari"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "patisia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "patisia"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "patisia"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "patisia"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "patisia"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "patisia"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "patisia"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "patisia"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "patisia"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "patisia"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "sepolia"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "mets"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "gyzi"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "attiki"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "mexican",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "ano-petralona"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "kaminia"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "kaminia"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "kaminia"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "kaminia"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "kaminia"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "kaminia"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "kaminia"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "kaminia"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "drapetsona"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "drapetsona"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "drapetsona"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "drapetsona"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "drapetsona"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "drapetsona"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "drapetsona"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "drapetsona"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "keratsini"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "keratsini"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "keratsini"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "keratsini"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "keratsini"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "keratsini"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "vardaris"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "rooftops",
+      "areaSlug": "triandria"
+    },
+    {
+      "categorySlug": "attractions",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "asian-restaurants",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "vegetarian",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "eptapyrgio"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "aggelochori"
+    },
+    {
+      "categorySlug": "desserts",
+      "areaSlug": "aggelochori"
+    },
+    {
+      "categorySlug": "family-friendly",
+      "areaSlug": "aggelochori"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "aggelochori"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "aggelochori"
+    },
+    {
+      "categorySlug": "italian",
+      "areaSlug": "aggelochori"
+    },
+    {
+      "categorySlug": "cheap-eats",
+      "areaSlug": "aggelochori"
+    },
+    {
+      "categorySlug": "burgers",
+      "areaSlug": "aggelochori"
+    },
+    {
+      "categorySlug": "greek-restaurants",
+      "areaSlug": "ormos"
+    },
+    {
+      "categorySlug": "brunch",
+      "areaSlug": "ormos"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "ormos"
+    },
+    {
+      "categorySlug": "luxury-dining",
+      "areaSlug": "ormos"
+    }
+  ],
+  "highestDensityAreas": [
+    {
+      "id": "municipalities_5bc013791cf8",
+      "slug": "plaka",
+      "name": "Πλάκα",
+      "count": 873
+    },
+    {
+      "id": "municipalities_877c3bc81df5",
+      "slug": "syntagma",
+      "name": "Σύνταγμα",
+      "count": 868
+    },
+    {
+      "id": "municipalities_0cae2c00b932",
+      "slug": "kolonaki",
+      "name": "Κολωνάκι",
+      "count": 859
+    },
+    {
+      "id": "municipalities_d7e1aaaed4f9",
+      "slug": "monastiraki",
+      "name": "Μοναστηράκι",
+      "count": 858
+    },
+    {
+      "id": "municipalities_4149fa79e27b",
+      "slug": "akropoli",
+      "name": "Ακρόπολη",
+      "count": 857
+    },
+    {
+      "id": "municipalities_0fd1d03201a0",
+      "slug": "mets",
+      "name": "Μετς",
+      "count": 857
+    },
+    {
+      "id": "municipalities_2bcfcb8b899f",
+      "slug": "psyrri",
+      "name": "Ψυρρή",
+      "count": 856
+    },
+    {
+      "id": "municipalities_616efd2a0d9b",
+      "slug": "koykaki",
+      "name": "Κουκάκι",
+      "count": 855
+    },
+    {
+      "id": "municipalities_b85b54408d92",
+      "slug": "thiseio",
+      "name": "Θησείο",
+      "count": 849
+    },
+    {
+      "id": "municipalities_2f324ee27306",
+      "slug": "exarcheia",
+      "name": "Εξάρχεια",
+      "count": 848
+    },
+    {
+      "id": "municipalities_0eb5ad956816",
+      "slug": "neos-kosmos",
+      "name": "Νέος Κόσμος",
+      "count": 836
+    },
+    {
+      "id": "municipalities_7e1691d5f08d",
+      "slug": "metaxoyrgeio",
+      "name": "Μεταξουργείο",
+      "count": 830
+    },
+    {
+      "id": "municipalities_75ddb64a42fd",
+      "slug": "gyzi",
+      "name": "Γύζη",
+      "count": 824
+    },
+    {
+      "id": "municipalities_80c55a9453fa",
+      "slug": "ano-petralona",
+      "name": "Άνω Πετράλωνα",
+      "count": 819
+    },
+    {
+      "id": "municipalities_af1f7d07cb18",
+      "slug": "gkazi",
+      "name": "Γκάζι",
+      "count": 818
+    },
+    {
+      "id": "municipalities_0889636ab7df",
+      "slug": "petralona",
+      "name": "Πετράλωνα",
+      "count": 816
+    },
+    {
+      "id": "municipalities_f73663b8f738",
+      "slug": "attiki",
+      "name": "Αττική",
+      "count": 799
+    },
+    {
+      "id": "municipalities_e7a6ea2b75ba",
+      "slug": "pagkrati",
+      "name": "Παγκράτι",
+      "count": 798
+    },
+    {
+      "id": "municipalities_61eaea5bd3d9",
+      "slug": "ilisia",
+      "name": "Ιλίσια",
+      "count": 781
+    },
+    {
+      "id": "municipalities_2dbf77b73060",
+      "slug": "royf",
+      "name": "Ρουφ",
+      "count": 776
+    }
+  ],
+  "highestDensityCategories": [
+    {
+      "id": "greek-restaurants",
+      "slug": "greek-restaurants",
+      "name": "Greek Restaurants",
+      "count": 779
+    },
+    {
+      "id": "coffee-brunch",
+      "slug": "brunch",
+      "name": "Coffee & Brunch Spots",
+      "count": 506
+    },
+    {
+      "id": "cheap-eats",
+      "slug": "cheap-eats",
+      "name": "Gyros & Cheap Eats",
+      "count": 440
+    },
+    {
+      "id": "desserts",
+      "slug": "desserts",
+      "name": "Dessert Shops",
+      "count": 379
+    },
+    {
+      "id": "fish-tavernas",
+      "slug": "fish-tavernas",
+      "name": "Fish Tavernas",
+      "count": 330
+    },
+    {
+      "id": "luxury-dining",
+      "slug": "luxury-dining",
+      "name": "Luxury Dining",
+      "count": 207
+    },
+    {
+      "id": "italian",
+      "slug": "italian",
+      "name": "Italian Restaurants",
+      "count": 187
+    },
+    {
+      "id": "family-friendly",
+      "slug": "family-friendly",
+      "name": "Kid Friendly Locations",
+      "count": 184
+    },
+    {
+      "id": "burgers",
+      "slug": "burgers",
+      "name": "Burger Spots",
+      "count": 149
+    },
+    {
+      "id": "attractions",
+      "slug": "attractions",
+      "name": "Must-See Attractions",
+      "count": 130
+    },
+    {
+      "id": "vegetarian",
+      "slug": "vegetarian",
+      "name": "Vegetarian Friendly Restaurants",
+      "count": 115
+    },
+    {
+      "id": "asian",
+      "slug": "asian-restaurants",
+      "name": "Asian Restaurants",
+      "count": 102
+    },
+    {
+      "id": "wineries-vineyards",
+      "slug": "wineries-vineyards",
+      "name": "Wineries & Vineyards",
+      "count": 85
+    },
+    {
+      "id": "rooftop-lounges",
+      "slug": "rooftops",
+      "name": "Rooftop Lounges",
+      "count": 76
+    },
+    {
+      "id": "mexican",
+      "slug": "mexican",
+      "name": "Mexican Restaurants",
+      "count": 52
+    },
+    {
+      "id": "monasteries-churches",
+      "slug": "monasteries-churches",
+      "name": "Monasteries & Spiritual Sites",
+      "count": 45
+    }
+  ],
+  "strongestCategoryAreaCombinations": [
+    {
+      "key": "brunch/plaka",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_5bc013791cf8",
+      "areaSlug": "plaka",
+      "count": 142
+    },
+    {
+      "key": "brunch/thiseio",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_b85b54408d92",
+      "areaSlug": "thiseio",
+      "count": 137
+    },
+    {
+      "key": "brunch/syntagma",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_877c3bc81df5",
+      "areaSlug": "syntagma",
+      "count": 136
+    },
+    {
+      "key": "brunch/akropoli",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_4149fa79e27b",
+      "areaSlug": "akropoli",
+      "count": 136
+    },
+    {
+      "key": "brunch/monastiraki",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_d7e1aaaed4f9",
+      "areaSlug": "monastiraki",
+      "count": 135
+    },
+    {
+      "key": "brunch/psyrri",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_2bcfcb8b899f",
+      "areaSlug": "psyrri",
+      "count": 135
+    },
+    {
+      "key": "brunch/koykaki",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_616efd2a0d9b",
+      "areaSlug": "koykaki",
+      "count": 135
+    },
+    {
+      "key": "brunch/mets",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_0fd1d03201a0",
+      "areaSlug": "mets",
+      "count": 134
+    },
+    {
+      "key": "brunch/kolonaki",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_0cae2c00b932",
+      "areaSlug": "kolonaki",
+      "count": 133
+    },
+    {
+      "key": "brunch/neos-kosmos",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_0eb5ad956816",
+      "areaSlug": "neos-kosmos",
+      "count": 132
+    },
+    {
+      "key": "brunch/ano-petralona",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_80c55a9453fa",
+      "areaSlug": "ano-petralona",
+      "count": 131
+    },
+    {
+      "key": "brunch/gkazi",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_af1f7d07cb18",
+      "areaSlug": "gkazi",
+      "count": 130
+    },
+    {
+      "key": "brunch/exarcheia",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_2f324ee27306",
+      "areaSlug": "exarcheia",
+      "count": 129
+    },
+    {
+      "key": "brunch/petralona",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_0889636ab7df",
+      "areaSlug": "petralona",
+      "count": 129
+    },
+    {
+      "key": "brunch/metaxoyrgeio",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_7e1691d5f08d",
+      "areaSlug": "metaxoyrgeio",
+      "count": 127
+    },
+    {
+      "key": "brunch/royf",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_2dbf77b73060",
+      "areaSlug": "royf",
+      "count": 125
+    },
+    {
+      "key": "brunch/pagkrati",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_e7a6ea2b75ba",
+      "areaSlug": "pagkrati",
+      "count": 124
+    },
+    {
+      "key": "cheap-eats/syntagma",
+      "categoryId": "cheap-eats",
+      "categorySlug": "cheap-eats",
+      "areaId": "municipalities_877c3bc81df5",
+      "areaSlug": "syntagma",
+      "count": 120
+    },
+    {
+      "key": "brunch/gyzi",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_75ddb64a42fd",
+      "areaSlug": "gyzi",
+      "count": 120
+    },
+    {
+      "key": "brunch/dafni",
+      "categoryId": "coffee-brunch",
+      "categorySlug": "brunch",
+      "areaId": "municipalities_54bb39e9ab94",
+      "areaSlug": "dafni",
+      "count": 117
+    }
+  ]
+}
