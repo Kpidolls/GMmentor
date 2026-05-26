@@ -35,6 +35,9 @@ export type IntentResolutionStatus = 'resolved' | 'partial' | 'unresolved';
 
 export interface IntentResolution {
   status: IntentResolutionStatus;
+  categoryId?: string;
+  areaId?: string;
+  confidence: number;
   category?: CategoryIntentRecord;
   area?: AreaIntentRecord;
   categoryInput?: string;

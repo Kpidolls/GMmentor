@@ -12,7 +12,6 @@ import type {
 interface RawCategory {
   id: string;
   name: string;
-  keywords?: string[];
 }
 
 const CATEGORY_URL_OVERRIDES: Record<string, string> = {
@@ -54,7 +53,7 @@ export function buildCategoryRegistry(): CategoryRegistry {
       const aliases = [
         category.id,
         category.name,
-        ...(category.keywords ?? []),
+        slugifyIntent(category.name),
         ...(CATEGORY_EXTRA_ALIASES[category.id] ?? []),
       ];
 
@@ -62,7 +61,7 @@ export function buildCategoryRegistry(): CategoryRegistry {
         id: category.id,
         name: category.name,
         urlSlug,
-        aliases,
+        aliases: Array.from(new Set(aliases.map((alias) => alias.trim()).filter(Boolean))),
       };
     });
 
@@ -107,16 +106,19 @@ export function buildAreaRegistry(): AreaRegistry {
   const municipalities = toMunicipalityList(municipalitiesRaw as unknown[]);
   const usedSlugs = new Set<string>();
 
-  const records: AreaIntentRecord[] = municipalities
+  const seededRecords: AreaIntentRecord[] = municipalities
     .filter((municipality) => municipality.name && municipality.region)
     .map((municipality) => {
       const baseSlug = canonicalAreaSlug(municipality.name, municipality.name_en);
       const urlSlug = ensureUniqueAreaSlug(baseSlug, municipality.region_en ?? municipality.region, usedSlugs);
       const normalizedSourceSlug = municipality.slug ? stripHashSuffixFromSlug(municipality.slug) : undefined;
+      const regionName = municipality.region_en ?? municipality.region;
 
       const aliases = [
         municipality.name,
         municipality.name_en,
+        `${municipality.name} ${regionName}`,
+        municipality.name_en ? `${municipality.name_en} ${regionName}` : undefined,
         ...(municipality.aliases ?? []),
         municipality.slug,
         normalizedSourceSlug,
@@ -131,9 +133,27 @@ export function buildAreaRegistry(): AreaRegistry {
         lat: municipality.lat,
         lng: municipality.lng,
         urlSlug,
-        aliases,
+        aliases: Array.from(new Set(aliases.map((alias) => alias.trim()).filter(Boolean))),
       };
     });
+
+  const aliasFrequency = new Map<string, number>();
+  for (const record of seededRecords) {
+    const normalizedUnique = new Set(record.aliases.map((alias) => normalizeForLookup(alias)).filter(Boolean));
+    for (const alias of normalizedUnique) {
+      aliasFrequency.set(alias, (aliasFrequency.get(alias) ?? 0) + 1);
+    }
+  }
+
+  const records: AreaIntentRecord[] = seededRecords.map((record) => ({
+    ...record,
+    // Keep only globally unique aliases; canonical urlSlug and id remain unique lookup keys.
+    aliases: record.aliases.filter((alias) => {
+      const normalized = normalizeForLookup(alias);
+      if (!normalized) return false;
+      return (aliasFrequency.get(normalized) ?? 0) === 1;
+    }),
+  }));
 
   const byId = new Map<string, AreaIntentRecord>();
   const lookup = new Map<string, AreaIntentRecord>();
