@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import config from '../config/index.json';
 import featureFlags from '../config/featureFlags.json';
@@ -10,6 +10,7 @@ import islandsData from '../data/islands.json';
 import categoriesData from '../data/restaurantCategories.json';
 import type { MunicipalityLocation, RestaurantLocation } from '../types/location';
 import { toRestaurantList, toMunicipalityList } from '../utils/mappers';
+import { buildAreaRegistry, buildCategoryRegistry, createIntentResolver } from '../lib/intent';
 
 import { usePWA } from '../hooks/usePWA';
 
@@ -88,6 +89,11 @@ const MainHero = () => {
   const { isOnline, isStandalone, dataPreloadStatus, isInstallable, isInstalled, installApp } = usePWA();
 
   const categoryDataCacheRef = useRef<Record<string, Restaurant[]>>({});
+  const intentDeepLinkHandledRef = useRef(false);
+  const intentResolver = useMemo(
+    () => createIntentResolver({ categories: buildCategoryRegistry(), areas: buildAreaRegistry() }),
+    []
+  );
   const categoryDataUrls: Record<string, string> = {
     'greek-restaurants': '/data/greekRestaurants.json',
     desserts: '/data/dessertsRestaurants.json',
@@ -1028,6 +1034,38 @@ const MainHero = () => {
     }
     return toMunicipalityList(municipalitiesData as unknown[]);
   };
+
+  useEffect(() => {
+    if (intentDeepLinkHandledRef.current || typeof window === 'undefined') {
+      return;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const categorySlug = params.get('category') ?? undefined;
+    const areaSlug = params.get('area') ?? undefined;
+
+    if (!categorySlug && !areaSlug) {
+      intentDeepLinkHandledRef.current = true;
+      return;
+    }
+
+    const resolution = intentResolver.resolveIntent(categorySlug, areaSlug);
+    if (resolution.status !== 'resolved' || !resolution.categoryId || !resolution.areaId) {
+      intentDeepLinkHandledRef.current = true;
+      return;
+    }
+
+    const category = categoriesData.find((item) => item.id === resolution.categoryId);
+    const municipality = getMunicipalitiesData().find((item) => item.id === resolution.areaId);
+
+    if (!category || !municipality) {
+      intentDeepLinkHandledRef.current = true;
+      return;
+    }
+
+    intentDeepLinkHandledRef.current = true;
+    void searchByMunicipality(municipality, category as RestaurantCategory);
+  }, [intentResolver]);
 
   // Filter municipalities based on enhanced search query
   const filteredMunicipalities = getMunicipalitiesData().filter((municipality: Municipality) => {

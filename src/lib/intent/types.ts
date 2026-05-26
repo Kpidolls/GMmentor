@@ -65,3 +65,34 @@ export interface CategoryAreaPayload {
   topEntities: RankedEntity[];
   passesThreshold: boolean;
 }
+
+export interface IntentCounts {
+  totalEntities: number;
+  totalInArea: number;
+  totalInCategory: number;
+  totalCategoryArea: number;
+}
+
+export interface RelatedCategorySummary {
+  categoryId: string;
+  categoryName: string;
+  count: number;
+}
+
+export interface RelatedAreaSummary {
+  areaId: string;
+  areaName: string;
+  areaSlug: string;
+  count: number;
+  nearestDistanceKm: number;
+}
+
+export interface IntentResultsPayload {
+  area: AreaIntentRecord;
+  category?: CategoryIntentRecord;
+  entities: RankedEntity[];
+  counts: IntentCounts;
+  relatedCategories: RelatedCategorySummary[];
+  relatedAreas: RelatedAreaSummary[];
+  passesThreshold: boolean;
+}
