@@ -76,7 +76,11 @@ export function buildCategoryRegistry(): CategoryRegistry {
   return { records, byId, lookup };
 }
 
-function canonicalAreaSlug(name: string, nameEn: string | undefined): string {
+function canonicalAreaSlug(name: string, nameEn: string | undefined, sourceSlug?: string): string {
+  if (sourceSlug && sourceSlug.trim()) {
+    return slugifyIntent(stripHashSuffixFromSlug(sourceSlug));
+  }
+
   const preferred = nameEn && nameEn.trim() ? nameEn : name;
   return slugifyIntent(preferred);
 }
@@ -109,7 +113,7 @@ export function buildAreaRegistry(): AreaRegistry {
   const seededRecords: AreaIntentRecord[] = municipalities
     .filter((municipality) => municipality.name && municipality.region)
     .map((municipality) => {
-      const baseSlug = canonicalAreaSlug(municipality.name, municipality.name_en);
+      const baseSlug = canonicalAreaSlug(municipality.name, municipality.name_en, municipality.slug);
       const urlSlug = ensureUniqueAreaSlug(baseSlug, municipality.region_en ?? municipality.region, usedSlugs);
       const normalizedSourceSlug = municipality.slug ? stripHashSuffixFromSlug(municipality.slug) : undefined;
       const regionName = municipality.region_en ?? municipality.region;

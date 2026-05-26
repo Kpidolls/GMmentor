@@ -276,6 +276,40 @@ const nextConfig = withPWA(withBundleAnalyzer({
     { dev, dir, outDir, distDir, buildId }
   ) {
     let placePaths = {};
+    let areaPaths = {};
+
+    const slugify = (value) =>
+      String(value || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '')
+        .replace(/-{2,}/g, '-');
+
+    const stripHashSuffix = (slug) => String(slug || '').replace(/-[0-9a-f]{4,8}$/i, '');
+
+    const ensureUniqueAreaSlug = (base, region, used) => {
+      if (!used.has(base)) {
+        used.add(base);
+        return base;
+      }
+
+      const withRegion = `${base}-${slugify(region)}`;
+      if (!used.has(withRegion)) {
+        used.add(withRegion);
+        return withRegion;
+      }
+
+      let index = 2;
+      while (used.has(`${withRegion}-${index}`)) {
+        index += 1;
+      }
+
+      const fallback = `${withRegion}-${index}`;
+      used.add(fallback);
+      return fallback;
+    };
 
     try {
       const entitiesFile = join(process.cwd(), 'public', 'data', 'entities.json');
@@ -298,6 +332,32 @@ const nextConfig = withPWA(withBundleAnalyzer({
       placePaths = {};
     }
 
+    try {
+      const municipalitiesFile = join(process.cwd(), 'public', 'data', 'municipalities.json');
+      const parsed = JSON.parse(readFileSync(municipalitiesFile, 'utf8'));
+      const municipalities = Array.isArray(parsed) ? parsed : [];
+      const used = new Set();
+
+      areaPaths = municipalities
+        .filter((item) => item && item.region && item.name)
+        .reduce((acc, item) => {
+          const preferredBase = slugify(stripHashSuffix(item.slug) || item.name_en || item.name);
+          if (!preferredBase) {
+            return acc;
+          }
+
+          const areaSlug = ensureUniqueAreaSlug(preferredBase, item.region_en || item.region, used);
+          acc[`/area/${areaSlug}`] = {
+            page: '/area/[area]',
+            params: { area: areaSlug },
+          };
+
+          return acc;
+        }, {});
+    } catch {
+      areaPaths = {};
+    }
+
     const pathMap = {
       '/': { page: '/' },
       '/terms': { page: '/terms' },
@@ -312,6 +372,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
         page: '/blog/[slug]',
         params: { slug: 'greek-bakeries-brunch-coffee-guide' },
       },
+      ...areaPaths,
       ...placePaths,
     };
 
