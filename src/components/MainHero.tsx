@@ -90,6 +90,8 @@ const MainHero = () => {
 
   const categoryDataCacheRef = useRef<Record<string, Restaurant[]>>({});
   const intentDeepLinkHandledRef = useRef(false);
+  const getMunicipalitiesDataRef = useRef<() => Municipality[]>(() => toMunicipalityList(municipalitiesData as unknown[]));
+  const searchByMunicipalityRef = useRef<(municipality: Municipality, category?: RestaurantCategory) => Promise<void>>(async () => undefined);
   const intentResolver = useMemo(
     () => createIntentResolver({ categories: buildCategoryRegistry(), areas: buildAreaRegistry() }),
     []
@@ -226,7 +228,6 @@ const MainHero = () => {
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
   const [initialSearchDone, setInitialSearchDone] = useState(false);
   const [showDeferredUi, setShowDeferredUi] = useState(false);
-
   const destinationsData: DestinationEntry[] = (islandsData as DestinationEntry[]).map((destination) => ({
     ...destination,
     id: String(destination.id || '').trim(),
@@ -251,6 +252,8 @@ const MainHero = () => {
     const timeoutId = window.setTimeout(enableDeferredUi, 600);
     return () => window.clearTimeout(timeoutId);
   }, []);
+
+
   // Restaurant finder functions
   const calculateDistance = (lat1: number, lng1: number, lat2: number, lng2: number): number => {
     const R = 6371; // Earth's radius in km
@@ -1036,6 +1039,11 @@ const MainHero = () => {
   };
 
   useEffect(() => {
+    getMunicipalitiesDataRef.current = getMunicipalitiesData;
+    searchByMunicipalityRef.current = searchByMunicipality;
+  });
+
+  useEffect(() => {
     if (intentDeepLinkHandledRef.current || typeof window === 'undefined') {
       return;
     }
@@ -1056,7 +1064,7 @@ const MainHero = () => {
     }
 
     const category = categoriesData.find((item) => item.id === resolution.categoryId);
-    const municipality = getMunicipalitiesData().find((item) => item.id === resolution.areaId);
+    const municipality = getMunicipalitiesDataRef.current().find((item) => item.id === resolution.areaId);
 
     if (!category || !municipality) {
       intentDeepLinkHandledRef.current = true;
@@ -1064,7 +1072,7 @@ const MainHero = () => {
     }
 
     intentDeepLinkHandledRef.current = true;
-    void searchByMunicipality(municipality, category as RestaurantCategory);
+    void searchByMunicipalityRef.current(municipality, category as RestaurantCategory);
   }, [intentResolver]);
 
   // Filter municipalities based on enhanced search query
@@ -1143,12 +1151,13 @@ const MainHero = () => {
 
 
       <main className="relative min-h-screen w-full flex items-center justify-center">
+
         {/* Professional Background with Enhanced Visual Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-100 via-cyan-50 to-blue-100">
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-cyan-50 to-blue-100">
           {/* Simplified background pattern for faster first paint */}
           <div className="absolute inset-0 opacity-45 hidden md:block">
-            <div className="absolute top-16 left-16 w-72 h-72 bg-sky-300/70 rounded-full blur-3xl" />
-            <div className="absolute bottom-12 right-14 w-80 h-80 bg-cyan-300/55 rounded-full blur-3xl" />
+            <div className="absolute top-16 left-16 w-72 h-72 rounded-full blur-3xl bg-teal-300/35" />
+            <div className="absolute bottom-12 right-14 w-80 h-80 rounded-full blur-3xl bg-cyan-300/35" />
           </div>
           
           <picture className="absolute inset-0 block w-full h-full">
@@ -1166,31 +1175,33 @@ const MainHero = () => {
               fetchpriority="high"
               sizes="100vw"
               srcSet="/assets/images/cover-480.webp 480w, /assets/images/cover-627.webp 627w"
-              style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.38 }}
+              style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.24 }}
             />
           </picture>
           
           {/* Enhanced gradient overlay with better depth (muted so image is visible) */}
-          <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-white/20 to-blue-100/15 pointer-events-none" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.08),rgba(255,255,255,0.55)_72%)] pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-b from-sky-50/5 via-cyan-100/18 to-blue-200/35 pointer-events-none" />
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-emerald-50/70 via-white/50 to-cyan-200/15" />
+          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.03),rgba(255,255,255,0.62)_72%)]" />
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-cyan-100/10 via-teal-100/20 to-blue-200/45" />
         </div>
 
 
 
         {/* Enhanced Location Badge with Animation */}
+        {!showLocationOptions && (
         <div className="absolute top-4 right-4 z-40 xs:top-6 xs:right-6 md:top-6 md:right-8 lg:top-8 lg:right-8">
           <div className="relative group">
             {/* Glow effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-300 via-sky-300 to-emerald-300 rounded-full blur opacity-35 group-hover:opacity-60 transition duration-300" />
+            <div className="absolute -inset-1 rounded-full blur opacity-35 group-hover:opacity-60 transition duration-300 bg-gradient-to-r from-slate-400 via-zinc-300 to-stone-300" />
             
-            <span className="relative inline-flex items-center px-3 py-2 xs:px-4 xs:py-2 bg-white/80 backdrop-blur-md text-slate-800 font-semibold rounded-full text-xs xs:text-sm gap-2 hover:bg-white hover:scale-105 transition-all duration-300 border border-cyan-200/70 shadow-lg">
+            <span className="relative inline-flex items-center px-3 py-2 xs:px-4 xs:py-2 backdrop-blur-md text-slate-800 font-semibold rounded-full text-xs xs:text-sm gap-2 hover:scale-105 transition-all duration-300 shadow-lg bg-white/88 hover:bg-white border border-slate-300/80">
               <span className="text-sm xs:text-base animate-pulse">🇬🇷</span>
               <span className="hidden font-medium tracking-wide">{t('mainHero.athens', 'Athens')}</span>
               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
             </span>
           </div>
         </div>
+        )}
         
         {/* Ticker */}
         {showDeferredUi && (
@@ -1202,16 +1213,18 @@ const MainHero = () => {
 
 
         {/* Professional Hero Content */}
-        <section role="main" aria-label={t('aria.homepage', 'Homepage')} className="relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center">
+        <section role="main" aria-label={t('aria.homepage', 'Homepage')} className={`relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center ${showLocationOptions ? 'pt-16 pb-4 sm:pt-20 sm:pb-6' : 'py-8 sm:py-12'}`}>
           {/* Lightweight content backdrop */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-sky-100/20 to-blue-100/30" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-slate-100/20 to-slate-200/35" />
           </div>
-          <div className="text-center space-y-6 xs:space-y-8 sm:space-y-10 lg:space-y-12 w-full">
+          <div className={`text-center w-full ${showLocationOptions ? 'space-y-4 xs:space-y-5 sm:space-y-6 lg:space-y-8' : 'space-y-6 xs:space-y-8 sm:space-y-10 lg:space-y-12'}`}>
             {/* Enhanced Title with Modern Typography */}
-            <header className="space-y-4 xs:space-y-5 sm:space-y-7 relative">
+            <header className={`relative ${showLocationOptions ? 'space-y-2 xs:space-y-3 sm:space-y-4' : 'space-y-4 xs:space-y-5 sm:space-y-7'}`}>
               {/* Decorative elements */}
-              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-cyan-300 to-transparent rounded-full opacity-70" />
+              {!showLocationOptions && (
+                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-24 h-1 rounded-full opacity-70 bg-gradient-to-r from-transparent via-slate-400 to-transparent" />
+              )}
               
               <div 
                 onClick={fullReset}
@@ -1222,39 +1235,41 @@ const MainHero = () => {
                 title={t('mainHero.clickToReturnToMain', 'Click to return to main page')}
               >
                 {/* Glow effect behind title */}
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/15 via-teal-300/20 to-amber-200/20 blur-3xl scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 blur-3xl scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-slate-500/10 via-zinc-300/20 to-stone-300/20" />
                 
                 <div className="relative">
-                  <span className="block text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl text-sky-700 font-semibold mb-3 xs:mb-4 sm:mb-5 tracking-[0.2em] uppercase group-hover:text-cyan-700 transition-all duration-500 relative drop-shadow-sm">
+                  <span className={`block font-semibold tracking-[0.2em] uppercase transition-all duration-500 relative drop-shadow-sm ${showLocationOptions ? 'text-xs xs:text-sm sm:text-base lg:text-lg mb-1 xs:mb-2 sm:mb-3' : 'text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl mb-3 xs:mb-4 sm:mb-5'} text-slate-700 group-hover:text-slate-800`}>
                     <span className="relative z-10">{t('mainHero.subtitle')}</span>
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-slate-600 to-transparent" />
                   </span>
                   
-                  <h1 className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-sky-900 via-blue-700 to-cyan-700 bg-clip-text text-transparent leading-tight px-1 group-hover:from-sky-800 group-hover:via-blue-700 group-hover:to-cyan-600 transition-all duration-500 drop-shadow-lg">
+                  <h1 className={`block font-extrabold bg-clip-text text-transparent leading-tight px-1 transition-all duration-500 drop-shadow-lg ${showLocationOptions ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl' : 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl'} bg-gradient-to-r from-teal-900 via-cyan-700 to-blue-700 group-hover:from-teal-800 group-hover:via-cyan-700 group-hover:to-blue-600`}>
                     {t('mainHero.title')}
                   </h1>
                 </div>
               </div>
               
               {/* Decorative dots */}
+              {!showLocationOptions && (
               <div className="flex justify-center space-x-2 mt-6">
-                <div className="w-2 h-2 bg-sky-300 rounded-full animate-pulse" />
-                <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse animation-delay-300" />
-                <div className="w-2 h-2 bg-emerald-300 rounded-full animate-pulse animation-delay-600" />
+                <div className="w-2 h-2 rounded-full animate-pulse bg-slate-400" />
+                <div className="w-2 h-2 rounded-full animate-pulse animation-delay-300 bg-zinc-400" />
+                <div className="w-2 h-2 rounded-full animate-pulse animation-delay-600 bg-stone-400" />
               </div>
+              )}
             </header>
 
             {/* Professional Discovery Interface */}
             <div className="max-w-5xl mx-auto px-1 xs:px-2 sm:px-4 w-full">
               {showCategorySelection && !showRestaurantFinder && !showMunicipalityList && !showDestinationList && (
                 <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 via-teal-400/30 to-emerald-400/30 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  <div className="relative bg-white/75 backdrop-blur-2xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-4 xs:p-6 sm:p-8 lg:p-12 border border-white/60 shadow-2xl">
+                  <div className="absolute -inset-1 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-r from-slate-500/20 via-zinc-400/20 to-stone-400/20" />
+                  <div className="relative backdrop-blur-2xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-4 xs:p-6 sm:p-8 lg:p-12 shadow-2xl bg-white/90 border border-slate-200/80">
                     <div className="text-center mb-8 xs:mb-10 lg:mb-12 relative">
-                      <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-cyan-300 to-transparent mx-auto mb-6 opacity-70" />
+                      <div className="w-20 h-0.5 mx-auto mb-6 opacity-70 bg-gradient-to-r from-transparent via-slate-400 to-transparent" />
                       <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-4 xs:mb-5 sm:mb-6 relative">
                         <span className="relative z-10">{t('discovery.chooseCategoryAfterLocation', 'Choose a Category')}</span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-emerald-300/20 blur-lg scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute inset-0 blur-lg scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-slate-500/15 to-zinc-400/15" />
                       </h2>
                       <p className="text-slate-700 text-sm xs:text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed font-light mb-6">
                         {t('discovery.selectCategoryAfterLocation', 'Select a category to continue with your search.')}
@@ -1308,11 +1323,11 @@ const MainHero = () => {
               )}
               {showMunicipalityList ? (
               /* Location Selection - User-Friendly Compact Design */
-              <div className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/30 shadow-2xl max-w-4xl mx-auto">
+              <div className="backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-2xl max-w-4xl mx-auto bg-white/92 border border-slate-200/90">
                 
                 {/* Compact Header */}
                 <div className="text-center mb-4">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 flex items-center justify-center gap-2">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 flex items-center justify-center gap-2 text-slate-800">
                     📍 {t('restaurantFinder.chooseMunicipality', 'Choose Your Municipality')}
                   </h3>
                   <p className="text-gray-600 text-sm px-2">
@@ -1332,7 +1347,7 @@ const MainHero = () => {
                       type="text"
                       value={municipalitySearchQuery}
                       onChange={(e) => setMunicipalitySearchQuery(e.target.value)}
-                      className="block w-full pl-9 pr-10 py-2.5 border border-gray-300 rounded-lg text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                      className="block w-full pl-9 pr-10 py-2.5 border rounded-lg text-sm placeholder-gray-500 focus:outline-none transition-colors duration-200 border-slate-300 bg-white text-slate-800 focus:ring-2 focus:ring-slate-400 focus:border-slate-500"
                       placeholder={t('municipalitySearch.placeholder', 'Search locations...')}
                     />
                     {municipalitySearchQuery && (
@@ -1381,7 +1396,7 @@ const MainHero = () => {
                       </p>
                       <button
                         onClick={() => setMunicipalitySearchQuery('')}
-                        className="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
+                        className="px-4 py-2 text-white rounded-lg font-medium transition-colors duration-200 bg-slate-700 hover:bg-slate-800"
                       >
                         {t('municipalitySearch.clearSearchToSeeAll', 'Clear search to see all locations')}
                       </button>
@@ -1396,9 +1411,9 @@ const MainHero = () => {
                           return acc;
                         }, {})
                       ).map(([region, municipalities]) => (
-                        <div key={region} className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+                        <div key={region} className="rounded-lg p-4 shadow-sm border bg-slate-50/70 border-slate-200">
                           <h4 className="text-sm font-bold text-gray-800 mb-3 flex items-center gap-2">
-                            <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                            <span className="w-2 h-2 rounded-full bg-slate-600"></span>
                             {t(`regions.${region}`, region)}
                             <span className="text-xs text-gray-500 font-normal ml-auto">
                               {municipalities.length}{' '}
@@ -1415,13 +1430,13 @@ const MainHero = () => {
                                   selectMunicipalityForCategory(municipality);
                                   alignViewport();
                                 }}
-                                className="text-left p-3 rounded-lg hover:bg-blue-50 hover:border-blue-200 border border-gray-200 transition-all duration-200 group"
+                                className="text-left p-3 rounded-lg border transition-all duration-200 group border-slate-200 hover:bg-slate-100 hover:border-slate-300"
                               >
                                 <div className="flex items-center justify-between">
-                                  <span className="font-medium text-gray-800 group-hover:text-blue-600 text-sm leading-tight">
+                                  <span className="font-medium text-sm leading-tight text-slate-800 group-hover:text-slate-900">
                                     {t(`municipalities.${municipality.name}`, municipality.name)}
                                   </span>
-                                  <span className="text-blue-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                  <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-slate-500">
                                     →
                                   </span>
                                 </div>
@@ -1435,20 +1450,20 @@ const MainHero = () => {
                 </div>
 
                 {/* Footer */}
-                <div className="text-center pt-4 border-t border-gray-200">
+                <div className="text-center pt-4 border-t border-slate-300/80">
                   <button
                     onClick={() => {
                       resetSearch();
                       alignViewport();
                     }}
-                    className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors duration-200 font-medium text-sm px-3 py-2 rounded-lg hover:bg-gray-50"
+                    className="inline-flex items-center gap-2 transition-colors duration-200 font-medium text-sm px-3 py-2 rounded-lg text-slate-600 hover:text-slate-800 hover:bg-slate-100"
                   >
                     ← {t('mainHero.backToSearchOptions', 'Back to Search Options')}
                   </button>
                 </div>
               </div>
             ) : showDestinationList ? (
-              <div className="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/30 shadow-2xl max-w-5xl mx-auto">
+              <div className="backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-2xl max-w-5xl mx-auto bg-white/92 border border-slate-200/90">
                 <div className="text-center mb-4">
                   <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 flex items-center justify-center gap-2">
                     🧭 {t('destinationSearch.title', 'Choose a Destination')}
@@ -1469,7 +1484,7 @@ const MainHero = () => {
                       type="text"
                       value={destinationSearchQuery}
                       onChange={(e) => setDestinationSearchQuery(e.target.value)}
-                      className="block w-full pl-9 pr-10 py-2.5 border border-gray-300 rounded-lg text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                      className="block w-full pl-9 pr-10 py-2.5 border rounded-lg text-sm placeholder-gray-500 focus:outline-none transition-colors duration-200 border-slate-300 bg-white text-slate-800 focus:ring-2 focus:ring-slate-400 focus:border-slate-500"
                       placeholder={t('destinationSearch.placeholder', 'Search destination...')}
                     />
                     {destinationSearchQuery && (
@@ -1495,7 +1510,7 @@ const MainHero = () => {
                       <button
                         key={option.id}
                         onClick={() => setDestinationViewFilter(option.id)}
-                        className={`px-3 py-1.5 rounded-full text-xs sm:text-sm border transition-colors duration-200 ${destinationViewFilter === option.id ? 'bg-sky-100 text-sky-700 border-sky-300' : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-50'}`}
+                        className={`px-3 py-1.5 rounded-full text-xs sm:text-sm border transition-colors duration-200 ${destinationViewFilter === option.id ? 'bg-slate-800 text-white border-slate-700' : 'bg-white text-slate-600 border-slate-300 hover:bg-slate-100'}`}
                       >
                         {option.label}
                       </button>
@@ -1516,7 +1531,7 @@ const MainHero = () => {
                       <article
                         key={destination.id}
                         onClick={() => selectDestination(destination)}
-                        className={`group text-left rounded-xl border overflow-hidden transition-all duration-300 cursor-pointer h-[360px] sm:h-[382px] lg:h-[400px] flex flex-col ${active ? 'border-sky-400 bg-sky-50 shadow-md' : 'border-gray-200 bg-white hover:border-sky-200 hover:bg-sky-50/40 hover:shadow-md'}`}
+                        className={`group text-left rounded-xl border overflow-hidden transition-all duration-300 cursor-pointer h-[360px] sm:h-[382px] lg:h-[400px] flex flex-col ${active ? 'border-slate-500 bg-slate-100 shadow-md' : 'border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50 hover:shadow-md'}`}
                       >
                         <div className="relative h-40 sm:h-44 w-full overflow-hidden">
                           <img
@@ -1546,7 +1561,7 @@ const MainHero = () => {
                               target={destination.target || '_blank'}
                               rel={destination.rel || 'noopener noreferrer'}
                               onClick={(e) => e.stopPropagation()}
-                              className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700 transition-colors duration-200 text-center whitespace-nowrap truncate"
+                              className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg text-white transition-colors duration-200 text-center whitespace-nowrap truncate bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
                             >
                               <span className="sm:hidden">🗺️ {t('destinationSearch.openCuratedMapShort', 'Map')}</span>
                               <span className="hidden sm:inline">🗺️ {t('destinationSearch.openCuratedMap', 'Open Curated Map')}</span>
@@ -1556,7 +1571,7 @@ const MainHero = () => {
                                 e.stopPropagation();
                                 void shareDestinationMap(destination);
                               }}
-                              className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 transition-colors duration-200 whitespace-nowrap truncate"
+                              className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 whitespace-nowrap truncate bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
                             >
                               <span className="sm:hidden">🔗 {t('destinationSearch.shareMapShort', 'Share')}</span>
                               <span className="hidden sm:inline">🔗 {t('destinationSearch.shareMap', 'Share Map')}</span>
@@ -1568,13 +1583,13 @@ const MainHero = () => {
                   })}
                 </div>
 
-                <div className="text-center pt-4 border-t border-gray-200">
+                <div className="text-center pt-4 border-t border-slate-300/80">
                   <button
                     onClick={() => {
                       resetSearch();
                       alignViewport();
                     }}
-                    className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors duration-200 font-medium text-sm px-3 py-2 rounded-lg hover:bg-gray-50"
+                    className="inline-flex items-center gap-2 transition-colors duration-200 font-medium text-sm px-3 py-2 rounded-lg text-slate-600 hover:text-slate-800 hover:bg-slate-100"
                   >
                     ← {t('mainHero.backToSearchOptions', 'Back to Search Options')}
                   </button>
@@ -1584,14 +1599,14 @@ const MainHero = () => {
               /* Location Options Selection - Enhanced UI */
               <div className="relative">
                 {/* Background Glow Effect */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-sky-300/30 via-blue-300/25 to-cyan-300/25 rounded-3xl blur-3xl opacity-60" />
+                <div className="absolute -inset-4 rounded-3xl blur-3xl opacity-35 bg-gradient-to-r from-cyan-200/18 via-teal-200/16 to-blue-200/18" />
                 
-                <div className="relative bg-white/75 backdrop-blur-xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-6 xs:p-8 sm:p-10 lg:p-14 border border-white/60 shadow-2xl">
+                <div className={`relative backdrop-blur-xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] bg-gradient-to-br from-white/97 via-cyan-50/28 to-white/94 border border-cyan-100/80 shadow-[0_12px_36px_rgba(8,145,178,0.06)] ${showLocationOptions ? 'p-4 xs:p-5 sm:p-6 lg:p-8' : 'p-6 xs:p-8 sm:p-10 lg:p-14'}`}>
                   {/* Header Section */}
-                  <div className="text-center mb-8 xs:mb-10 lg:mb-14 relative">
-                    <div className="w-24 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto mb-6 opacity-60 rounded-full" />
+                  <div className={`text-center relative ${showLocationOptions ? 'mb-2 xs:mb-3 lg:mb-4' : 'mb-8 xs:mb-10 lg:mb-14'}`}>
+                    <div className="w-24 h-1 mx-auto mb-6 opacity-45 rounded-full bg-gradient-to-r from-transparent via-teal-400 to-transparent" />
                     <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mb-4 xs:mb-5 relative">
-                      <span className="relative z-10 bg-gradient-to-r from-sky-900 via-blue-700 to-cyan-700 bg-clip-text text-transparent">
+                      <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-teal-900 via-cyan-700 to-blue-700">
                         {t('locationOptions.chooseLocationMethod', 'Choose Location Method')}
                       </span>
                     </h2>
@@ -1601,59 +1616,59 @@ const MainHero = () => {
                   </div>
 
                   {/* Options Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xs:gap-6 sm:gap-8 lg:gap-10 mb-6 xs:mb-8 max-w-5xl mx-auto">
+                  <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto ${showLocationOptions ? 'gap-5 xs:gap-6 sm:gap-7 lg:gap-8 mb-5 xs:mb-6' : 'gap-5 xs:gap-6 sm:gap-8 lg:gap-10 mb-6 xs:mb-8'}`}>
                     {/* Near You Option - Enhanced */}
                     <button
                       onClick={() => {
                         selectSearchMode('location');
                       }}
-                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98]"
+                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] ring-1 ring-cyan-300/70 hover:ring-teal-500/70 shadow-sm shadow-cyan-100/40 hover:shadow-md hover:shadow-cyan-100/50"
                     >
                       {/* Animated gradient background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-100 transition-all duration-500" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-cyan-100 to-blue-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      
+                      <div className="absolute inset-0 transition-all duration-500 bg-gradient-to-br from-cyan-50 via-white to-blue-50" />
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white via-cyan-50 to-blue-50" />
+
                       {/* Shine effect */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent" />
                       </div>
                       
                       {/* Content */}
-                      <div className="relative p-6 xs:p-8 sm:p-10 lg:p-12 text-slate-900">
+                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-5 xs:p-6 sm:p-7 lg:p-8' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
                         {/* Icon with badge */}
-                        <div className="flex justify-center mb-6">
+                        <div className="flex justify-center mb-4 xs:mb-5">
                           <div className="relative">
-                            <div className="absolute inset-0 bg-sky-300/35 rounded-full blur-2xl scale-150 group-hover:scale-[2] transition-transform duration-500" />
-                            <div className="relative bg-white/70 backdrop-blur-sm rounded-full p-4 xs:p-5 sm:p-6 border-2 border-white/70 group-hover:border-white transition-all duration-300 group-hover:rotate-12">
-                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-110 transition-transform duration-300">
+                            <div className="absolute inset-0 rounded-full blur-2xl scale-[1.25] group-hover:scale-[1.55] transition-transform duration-500 bg-gradient-to-r from-cyan-200/20 to-teal-200/16" />
+                            <div className="relative rounded-full p-4 xs:p-5 sm:p-6 border-2 transition-all duration-300 group-hover:rotate-3 bg-white/92 border-cyan-150/90 shadow-sm">
+                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-105 transition-transform duration-300 drop-shadow-none">
                                 📍
                               </div>
                             </div>
                             {/* Pulse effect */}
-                            <div className="absolute inset-0 bg-sky-300/35 rounded-full animate-ping opacity-0 group-hover:opacity-20" />
+                            <div className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-20 bg-cyan-200/20" />
                           </div>
                         </div>
                         
                         {/* Badge */}
-                        <div className="flex justify-center mb-4">
-                          <span className="px-4 py-1.5 bg-white/70 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider uppercase border border-white/80 text-sky-700">
+                        <div className="flex justify-center mb-3">
+                          <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-cyan-50/85 text-cyan-800 border-cyan-100/90 shadow-none">
                             {t('mainHero.fastestBadge', 'Quick')}
                           </span>
                         </div>
                         
                         {/* Title */}
-                        <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black mb-4 leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal]">
+                        <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal] mb-2 xs:mb-3 tracking-[-0.04em]">
                           {t('locationOptions.nearYou', 'Near You')}
                         </h3>
                         
                         {/* Description */}
-                        <p className="text-slate-700 text-[clamp(0.875rem,1.45vw,1.125rem)] font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-slate-600 text-[clamp(0.875rem,1.45vw,1.125rem)] font-normal leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 mb-4 xs:mb-5">
                           {t('locationOptions.nearYouDesc', 'Use your current location to find nearby places')}
                         </p>
                         
                         {/* Arrow indicator */}
                         <div className="flex justify-center">
-                          <div className="flex items-center gap-2 text-[clamp(0.8125rem,1.2vw,0.95rem)] font-semibold group-hover:gap-4 transition-all duration-300">
+                          <div className="flex items-center text-[clamp(0.8125rem,1.2vw,0.95rem)] font-medium group-hover:gap-4 transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-white/65 border border-cyan-100/80 shadow-none text-cyan-900">
                             <span>{t('mainHero.useMyLocation', 'Use my location')}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -1668,53 +1683,53 @@ const MainHero = () => {
                       onClick={() => {
                         selectSearchMode('municipality');
                       }}
-                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98]"
+                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] ring-1 ring-cyan-300/80 hover:ring-teal-500/80"
                     >
                       {/* Animated gradient background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 transition-all duration-500" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-100 to-cyan-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 transition-all duration-500 bg-gradient-to-br from-cyan-50 via-white to-blue-50" />
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white via-cyan-50 to-blue-50" />
                       
                       {/* Shine effect */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent" />
                       </div>
                       
                       {/* Content */}
-                      <div className="relative p-6 xs:p-8 sm:p-10 lg:p-12 text-slate-900">
+                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 xs:p-5 sm:p-6 lg:p-7' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
                         {/* Icon with badge */}
-                        <div className="flex justify-center mb-6">
+                        <div className="flex justify-center mb-4 xs:mb-5">
                           <div className="relative">
-                            <div className="absolute inset-0 bg-emerald-300/35 rounded-full blur-2xl scale-150 group-hover:scale-[2] transition-transform duration-500" />
-                            <div className="relative bg-white/70 backdrop-blur-sm rounded-full p-4 xs:p-5 sm:p-6 border-2 border-white/70 group-hover:border-white transition-all duration-300 group-hover:rotate-12">
-                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-110 transition-transform duration-300">
+                            <div className="absolute inset-0 rounded-full blur-2xl scale-[1.25] group-hover:scale-[1.55] transition-transform duration-500 bg-gradient-to-r from-cyan-200/20 to-teal-200/16" />
+                            <div className="relative rounded-full p-4 xs:p-5 sm:p-6 border-2 transition-all duration-300 group-hover:rotate-3 bg-white/92 border-cyan-150/90 shadow-sm">
+                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-105 transition-transform duration-300 drop-shadow-none">
                                 🗺️
                               </div>
                             </div>
                             {/* Pulse effect */}
-                            <div className="absolute inset-0 bg-emerald-300/35 rounded-full animate-ping opacity-0 group-hover:opacity-20" />
+                            <div className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-20 bg-cyan-200/20" />
                           </div>
                         </div>
                         
                         {/* Badge */}
-                        <div className="flex justify-center mb-4">
-                          <span className="px-4 py-1.5 bg-white/70 backdrop-blur-sm rounded-full text-xs font-bold tracking-wider uppercase border border-white/80 text-emerald-700">
+                        <div className="flex justify-center mb-3">
+                          <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-cyan-50/85 text-cyan-800 border-cyan-100/90 shadow-none">
                             {t('mainHero.mostAccurateBadge', 'Most Accurate')}
                           </span>
                         </div>
                         
                         {/* Title */}
-                        <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black mb-4 leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal]">
+                        <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal] mb-2 xs:mb-3 tracking-[-0.04em]">
                           {t('locationOptions.byNeighborhood', 'Neighborhood')}
                         </h3>
                         
                         {/* Description */}
-                        <p className="text-slate-700 text-[clamp(0.875rem,1.45vw,1.125rem)] font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-slate-600 text-[clamp(0.875rem,1.45vw,1.125rem)] font-normal leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 mb-4 xs:mb-5">
                           {t('locationOptions.byNeighborhoodDesc', 'Choose a specific neighborhood or municipality')}
                         </p>
                         
                         {/* Arrow indicator */}
                         <div className="flex justify-center">
-                          <div className="flex items-center gap-2 text-[clamp(0.8125rem,1.2vw,0.95rem)] font-bold group-hover:gap-4 transition-all duration-300">
+                          <div className="flex items-center text-[clamp(0.8125rem,1.2vw,0.95rem)] font-medium group-hover:gap-4 transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-white/65 border border-cyan-100/80 shadow-none text-cyan-900">
                             <span>{t('mainHero.browseAreas', 'Browse areas')}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -1729,44 +1744,44 @@ const MainHero = () => {
                       onClick={() => {
                         selectSearchMode('destination');
                       }}
-                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98]"
+                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] ring-1 ring-cyan-300/80 hover:ring-teal-500/80"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-orange-100 to-rose-100 transition-all duration-500" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-100 to-rose-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 transition-all duration-500 bg-gradient-to-br from-cyan-50 via-white to-blue-50" />
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white via-cyan-50 to-blue-50" />
 
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent" />
                       </div>
 
-                      <div className="relative p-6 xs:p-8 sm:p-10 lg:p-12 text-slate-900">
-                        <div className="flex justify-center mb-6">
+                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 xs:p-5 sm:p-6 lg:p-7' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
+                        <div className="flex justify-center mb-5">
                           <div className="relative">
-                            <div className="absolute inset-0 bg-amber-300/35 rounded-full blur-2xl scale-150 group-hover:scale-[2] transition-transform duration-500" />
-                            <div className="relative bg-white/70 backdrop-blur-sm rounded-full p-4 xs:p-5 sm:p-6 border-2 border-white/70 group-hover:border-white transition-all duration-300 group-hover:rotate-12">
-                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-110 transition-transform duration-300">
+                            <div className="absolute inset-0 rounded-full blur-2xl scale-[1.25] group-hover:scale-[1.55] transition-transform duration-500 bg-gradient-to-r from-cyan-200/20 to-teal-200/16" />
+                            <div className="relative rounded-full p-4 xs:p-5 sm:p-6 border-2 transition-all duration-300 group-hover:rotate-3 bg-white/92 border-cyan-150/90 shadow-sm">
+                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-105 transition-transform duration-300 drop-shadow-none">
                                 🧭
                               </div>
                             </div>
-                            <div className="absolute inset-0 bg-amber-300/35 rounded-full animate-ping opacity-0 group-hover:opacity-20" />
+                            <div className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-20 bg-cyan-200/20" />
                           </div>
                         </div>
 
-                        <div className="flex justify-center mb-4">
-                          <span className="px-4 py-1.5 bg-white/70 backdrop-blur-sm rounded-full text-xs font-bold tracking-wider uppercase border border-white/80 text-amber-700">
+                        <div className="flex justify-center mb-3">
+                          <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-cyan-50/85 text-cyan-800 border-cyan-100/90 shadow-none">
                             {t('mainHero.curatedBadge', 'Curated')}
                           </span>
                         </div>
 
-                        <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black mb-4 leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal]">
+                        <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal] mb-2 xs:mb-3 tracking-[-0.04em]">
                           {t('locationOptions.destinations', 'Destinations')}
                         </h3>
 
-                        <p className="text-slate-700 text-[clamp(0.875rem,1.45vw,1.125rem)] font-medium leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-slate-600 text-[clamp(0.875rem,1.45vw,1.125rem)] font-normal leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 mb-4 xs:mb-5">
                           {t('locationOptions.destinationsDesc', 'Open curated maps for islands and major Greek destinations')}
                         </p>
 
                         <div className="flex justify-center">
-                          <div className="flex items-center gap-2 text-[clamp(0.8125rem,1.2vw,0.95rem)] font-bold group-hover:gap-4 transition-all duration-300">
+                          <div className="flex items-center text-[clamp(0.8125rem,1.2vw,0.95rem)] font-medium group-hover:gap-4 transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-white/65 border border-cyan-100/80 shadow-none text-cyan-900">
                             <span>{t('mainHero.exploreDestinations', 'Explore destinations')}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
