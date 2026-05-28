@@ -48,6 +48,7 @@ const Header = () => {
   const { t, i18n } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure({ defaultIsOpen: false });
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [openMobileSection, setOpenMobileSection] = useState<string | null>(null);
   const [isLanguageReady, setIsLanguageReady] = useState(false);
   
   // PWA Hook for install functionality
@@ -177,6 +178,7 @@ const Header = () => {
           </Icon>
         );
       case 'navigation.store':
+      case 'navigation.travelTools':
         return (
           <Icon viewBox="0 0 24 24" boxSize={{ base: 4, md: 3.5 }} color="currentColor">
             <path
@@ -350,6 +352,7 @@ const Header = () => {
       router.push(href.startsWith('/') ? href : `/#${href}`);
       onClose();
       setMenuOpen(false);
+      setOpenMobileSection(null);
     }
   };
 
@@ -681,7 +684,10 @@ const Header = () => {
               <Button
                 size="xs"
                 variant="ghost"
-                onClick={() => setMenuOpen(false)}
+                onClick={() => {
+                  setMenuOpen(false);
+                  setOpenMobileSection(null);
+                }}
                 borderRadius="full"
                 color="gray.600"
                 _hover={{ bg: 'gray.100' }}
@@ -694,13 +700,20 @@ const Header = () => {
                 <Box key={item.name}>
                   <Button
                     variant="ghost"
-                    onClick={() => handleNavigation(item.href)}
+                    onClick={() => {
+                      if (item.submenu) {
+                        setOpenMobileSection((current) => (current === item.name ? null : item.name));
+                        return;
+                      }
+                      handleNavigation(item.href);
+                    }}
                     leftIcon={renderNavIcon(item.name) || undefined}
+                    rightIcon={item.submenu ? <ChevronDownIcon transform={openMobileSection === item.name ? 'rotate(180deg)' : 'none'} transition="transform 0.2s ease" /> : undefined}
                     {...mobileNavButtonStyles}
                   >
                     {t(item.name)}
                   </Button>
-                  {item.submenu && (
+                  {item.submenu && openMobileSection === item.name && (
                     <VStack align="start" pl={3} pr={1} py={2} spacing={1.5} bg="gray.50" borderRadius="lg" mt={1} border="1px solid" borderColor="gray.100">
                       {item.submenu.map((subItem) => (
                         <Button

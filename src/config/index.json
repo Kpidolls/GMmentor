@@ -15,14 +15,13 @@
       "submenu": [
         { "name": "navigation.mustSee", "href": "maps" },
         { "name": "navigation.islands", "href": "destinations" },
-        { "name": "navigation.activities", "href": "hiking" }
+        { "name": "navigation.activities", "href": "categories" }
       ]
     },
     {
-      "name": "navigation.store",
-      "href": "/store",
+      "name": "navigation.travelTools",
+      "href": "/airalo",
       "submenu": [
-        { "name": "navigation.travelItems", "href": "/store" },
         { "name": "navigation.mobileTravelData", "href": "/airalo" },
         { "name": "navigation.travelInsurance", "href": "/insurance" }
       ]
