@@ -406,7 +406,26 @@ const Header = () => {
               _active={{ bg: i18n.language === 'en' ? 'blue.500' : 'gray.200' }}
               aria-label={t('language.english', 'English')}
             >
-              EN
+              <Box
+                as="span"
+                display="inline-flex"
+                alignItems="center"
+                justifyContent="center"
+                borderRadius="sm"
+                overflow="hidden"
+                boxShadow="inset 0 0 0 1px rgba(0,0,0,0.12)"
+                w={{ base: '20px', md: '22px' }}
+                h={{ base: '14px', md: '15px' }}
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 60 30" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="presentation" aria-hidden="true">
+                  <rect width="60" height="30" fill="#012169" />
+                  <path d="M0 0 L25 12.5 M35 17.5 L60 30 M60 0 L35 12.5 M25 17.5 L0 30" stroke="#FFFFFF" strokeWidth="6" />
+                  <path d="M0 0 L25 12.5 M35 17.5 L60 30 M60 0 L35 12.5 M25 17.5 L0 30" stroke="#C8102E" strokeWidth="4" />
+                  <path d="M30 0 V30 M0 15 H60" stroke="#FFFFFF" strokeWidth="10" />
+                  <path d="M30 0 V30 M0 15 H60" stroke="#C8102E" strokeWidth="6" />
+                </svg>
+              </Box>
             </Button>
             <Button
               size="xs"
@@ -423,7 +442,29 @@ const Header = () => {
               _active={{ bg: i18n.language === 'el' ? 'blue.500' : 'gray.200' }}
               aria-label={t('language.greek', 'Greek')}
             >
-              ΕΛ
+              <Box
+                as="span"
+                display="inline-flex"
+                alignItems="center"
+                justifyContent="center"
+                borderRadius="sm"
+                overflow="hidden"
+                boxShadow="inset 0 0 0 1px rgba(0,0,0,0.12)"
+                w={{ base: '20px', md: '22px' }}
+                h={{ base: '14px', md: '15px' }}
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 27 18" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="presentation" aria-hidden="true">
+                  <rect width="27" height="18" fill="#0D5EAF" />
+                  <rect y="2" width="27" height="2" fill="#FFFFFF" />
+                  <rect y="6" width="27" height="2" fill="#FFFFFF" />
+                  <rect y="10" width="27" height="2" fill="#FFFFFF" />
+                  <rect y="14" width="27" height="2" fill="#FFFFFF" />
+                  <rect width="10" height="10" fill="#0D5EAF" />
+                  <rect x="4" width="2" height="10" fill="#FFFFFF" />
+                  <rect y="4" width="10" height="2" fill="#FFFFFF" />
+                </svg>
+              </Box>
             </Button>
           </HStack>
           
