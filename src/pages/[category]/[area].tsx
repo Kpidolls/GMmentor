@@ -22,6 +22,7 @@ const SITE_URL = 'https://googlementor.com';
 
 type CategoryAreaPageProps = {
   payload: IntentResultsPayload;
+  hasAreaGuidePage: boolean;
 };
 
 function buildBreadcrumbJsonLd(categorySlug: string, areaSlug: string, categoryName: string, areaName: string): Record<string, unknown> {
@@ -131,6 +132,11 @@ export const getStaticProps: GetStaticProps<CategoryAreaPageProps> = async ({ pa
     relatedLimit: 10,
   });
 
+  const areaGuidePayload = engine.query.getIntentResults({
+    areaId: resolution.areaId,
+    limit: 1,
+  });
+
   if (!payload || !payload.category || !payload.passesThreshold || payload.entities.length === 0) {
     return { notFound: true };
   }
@@ -142,11 +148,12 @@ export const getStaticProps: GetStaticProps<CategoryAreaPageProps> = async ({ pa
   return {
     props: {
       payload,
+      hasAreaGuidePage: Boolean(areaGuidePayload?.passesThreshold),
     },
   };
 };
 
-export default function CategoryAreaPage({ payload }: CategoryAreaPageProps) {
+export default function CategoryAreaPage({ payload, hasAreaGuidePage }: CategoryAreaPageProps) {
   if (!payload.category) {
     return null;
   }
@@ -210,11 +217,13 @@ export default function CategoryAreaPage({ payload }: CategoryAreaPageProps) {
         </Box>
       ) : null}
 
-      {payload.relatedAreas.length > 0 ? (
+      {payload.relatedAreas.some((item) => item.passesThreshold) ? (
         <Box mb={8}>
           <Heading as="h2" size="md" mb={3}>Nearby areas for this category</Heading>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
-            {payload.relatedAreas.map((item) => (
+            {payload.relatedAreas
+              .filter((item) => item.passesThreshold)
+              .map((item) => (
               <Box key={item.areaId} borderWidth="1px" borderRadius="lg" p={4}>
                 <Link as={NextLink} href={`/${payload.category?.urlSlug}/${item.areaSlug}`} color="blue.600" fontWeight="semibold">
                   {payload.category?.name} in {item.areaName}
@@ -244,9 +253,11 @@ export default function CategoryAreaPage({ payload }: CategoryAreaPageProps) {
         </Box>
       ) : null}
 
-      <Button as={NextLink} href={`/area/${payload.area.urlSlug}`} variant="outline" mr={3}>
-        View area guide
-      </Button>
+      {hasAreaGuidePage ? (
+        <Button as={NextLink} href={`/area/${payload.area.urlSlug}`} variant="outline" mr={3}>
+          View area guide
+        </Button>
+      ) : null}
       <Button as={NextLink} href="/search" variant="outline">
         Explore all locations
       </Button>

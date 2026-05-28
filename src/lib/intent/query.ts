@@ -189,6 +189,9 @@ export function createIntentQueryService(deps: {
           areaName: candidate.name,
           areaSlug: candidate.urlSlug,
           count: ranked.length,
+          passesThreshold: categoryId
+            ? ranked.length >= getEffectiveCategoryThreshold(categoryId)
+            : ranked.length >= thresholds.minAreaEntityCount,
           nearestDistanceKm:
             ranked.length > 0
               ? ranked[0]!.distanceKm

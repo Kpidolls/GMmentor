@@ -199,11 +199,13 @@ export default function AreaPage({ payload }: AreaPageProps) {
         </UnorderedList>
       </Box>
 
-      {payload.relatedAreas.length > 0 ? (
+      {payload.relatedAreas.some((item) => item.passesThreshold) ? (
         <Box mb={8}>
           <Heading as="h2" size="md" mb={3}>Related nearby areas</Heading>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
-            {payload.relatedAreas.map((item) => (
+            {payload.relatedAreas
+              .filter((item) => item.passesThreshold)
+              .map((item) => (
               <Box key={item.areaId} borderWidth="1px" borderRadius="lg" p={4}>
                 <Link as={NextLink} href={`/area/${item.areaSlug}`} color="blue.600" fontWeight="semibold">
                   {item.areaName}

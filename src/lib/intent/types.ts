@@ -87,6 +87,7 @@ export interface RelatedAreaSummary {
   areaSlug: string;
   count: number;
   nearestDistanceKm: number;
+  passesThreshold: boolean;
 }
 
 export interface IntentResultsPayload {
