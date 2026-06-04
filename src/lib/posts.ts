@@ -12,6 +12,7 @@ export type Post = {
   language: string
   originalSlug?: string
   tags?: string[]
+  entity_targets?: string[]
 }
 
 const postsDirectory = path.join(process.cwd(), 'src', 'blog')
@@ -26,7 +27,7 @@ export function getAllPosts(language?: string): Post[] {
     const fileContents = fs.readFileSync(filePath, 'utf8')
     const { data, content } = matter(fileContents)
 
-    const { title, date, summary, paragraphs, tags } = data
+    const { title, date, summary, paragraphs, tags, entity_targets } = data
 
     if (!date) throw new Error(`Missing date in frontmatter of ${filename}`)
 
@@ -34,6 +35,12 @@ export function getAllPosts(language?: string): Post[] {
     const isGreek = filename.includes('-el.')
     const cleanSlug = filename.replace(/\.mdx?$/, '').replace(/-el$/, '')
     const postLanguage = isGreek ? 'el' : 'en'
+
+    const normalizedEntityTargets = Array.isArray(entity_targets)
+      ? entity_targets.map((value) => String(value).trim()).filter(Boolean)
+      : typeof entity_targets === 'string'
+        ? entity_targets.split(',').map((value) => value.trim()).filter(Boolean)
+        : []
 
     return {
       slug: filename.replace(/\.mdx?$/, ''),
@@ -45,6 +52,7 @@ export function getAllPosts(language?: string): Post[] {
       language: postLanguage,
       ...(Array.isArray(paragraphs) ? { paragraphs } : {}),
       ...(Array.isArray(tags) ? { tags } : {}),
+      ...(normalizedEntityTargets.length ? { entity_targets: normalizedEntityTargets } : {}),
     }
   })
 
