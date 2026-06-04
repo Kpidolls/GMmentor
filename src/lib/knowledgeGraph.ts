@@ -117,6 +117,29 @@ function getGuideSeeds(post: Post): string[] {
   return GUIDE_ENTITY_SEEDS[getGuideSlug(post)] || [];
 }
 
+function getGuideTargetEntityIds(post: Post): string[] {
+  return Array.isArray(post.entity_targets) ? post.entity_targets : [];
+}
+
+function getTargetedEntitiesForGuide(post: Post, entities: EntityRecord[], limit: number): EntityRecord[] {
+  const ids = getGuideTargetEntityIds(post);
+  if (!ids.length) {
+    return [];
+  }
+
+  const byId = new Map<string, EntityRecord>(entities.map((entity) => [entity.id, entity]));
+  const targeted: EntityRecord[] = [];
+
+  for (const id of ids) {
+    const entity = byId.get(id);
+    if (!entity) continue;
+    targeted.push(entity);
+    if (targeted.length >= limit) break;
+  }
+
+  return targeted;
+}
+
 function entityMatchesSeed(entity: EntityRecord, seed: string): boolean {
   const normalizedSeed = normalizeForMatching(seed);
   if (!normalizedSeed) return false;
@@ -197,10 +220,24 @@ export function getMentionedEntitiesForPost(post: Post, limit = 10): EntityRecor
   }
 
   const entities = getAllCachedEntities();
+  const targeted = getTargetedEntitiesForGuide(post, entities, limit);
+
+  if (targeted.length >= limit) {
+    return targeted.slice(0, limit);
+  }
+
   const seeded = getSeededEntitiesForGuide(post, entities, limit);
 
-  if (seeded.length >= limit) {
-    return seeded.slice(0, limit);
+  if (targeted.length + seeded.length >= limit) {
+    const combined = new Map<string, EntityRecord>();
+    for (const entity of targeted) {
+      combined.set(entity.id, entity);
+    }
+    for (const entity of seeded) {
+      combined.set(entity.id, entity);
+      if (combined.size >= limit) break;
+    }
+    return Array.from(combined.values()).slice(0, limit);
   }
 
   const scored = entities
@@ -213,6 +250,9 @@ export function getMentionedEntitiesForPost(post: Post, limit = 10): EntityRecor
     .map((match) => match.entity);
 
   const combined = new Map<string, EntityRecord>();
+  for (const entity of targeted) {
+    combined.set(entity.id, entity);
+  }
   for (const entity of seeded) {
     combined.set(entity.id, entity);
   }
@@ -227,7 +267,11 @@ export function getMentionedEntitiesForPost(post: Post, limit = 10): EntityRecor
 export function getMentionedGuidesForEntity(entity: EntityRecord, limit = 8): Post[] {
   return getAllCachedPosts()
     .filter(isPriorityGuide)
-    .map((post) => ({ post, score: scoreEntityMention(post, entity) }))
+    .map((post) => {
+      const explicitTarget = getGuideTargetEntityIds(post).includes(entity.id);
+      const score = scoreEntityMention(post, entity) + (explicitTarget ? 10000 : 0);
+      return { post, score };
+    })
     .filter((match): match is { post: Post; score: number } => match.score > 0)
     .sort((left, right) => {
       if (right.score !== left.score) return right.score - left.score;
