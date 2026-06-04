@@ -95,6 +95,13 @@ function getShareContextKey(post: Post): ShareContext {
   return 'default'
 }
 
+function getEntityCardImage(entity: EntityRecord): string {
+  if (entity.kind === 'restaurant') return '/assets/images/eat.webp'
+  if (entity.kind === 'attraction') return '/assets/images/acropolis.webp'
+  if (entity.kind === 'municipality') return '/assets/images/athens.webp'
+  return '/assets/images/newlogo1.webp'
+}
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getAllPosts()
   // Create paths for both the original slug and the full slug with language suffix
@@ -243,6 +250,13 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
       '@type': 'WebPage',
       '@id': `https://googlementor.com/blog/${post.slug}`,
     },
+    ...(mentionedEntities.length
+      ? {
+          mentions: mentionedEntities
+            .filter((entity) => Boolean(entity.slug))
+            .map((entity) => ({ '@id': `https://googlementor.com/place/${entity.slug}` })),
+        }
+      : {}),
     ...(post.tags?.length ? { keywords: post.tags.join(', ') } : {}),
     ...(alternatePost
       ? {
@@ -388,17 +402,26 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
       {mentionedEntities.length > 0 ? (
         <Box mt={10} mb={2}>
           <Heading as="h2" size="md" mb={3}>
-            {t('blog.placesMentioned', 'Places Mentioned in This Guide')}
+            {t('blog.placesMentioned', 'Featured Places In This Guide')}
           </Heading>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
             {mentionedEntities.map((entity) => (
-              <Box key={entity.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
-                <Link as={NextLink} href={`/place/${entity.slug}`} color="blue.600" fontWeight="semibold">
-                  {entity.name}
-                </Link>
-                <Text fontSize="sm" color="gray.600" mt={1}>
-                  {entity.address || entity.region || entity.region_en || t('common.greece', 'Greece')}
-                </Text>
+              <Box key={entity.id} borderWidth="1px" borderRadius="lg" overflow="hidden" bg="white">
+                <Image src={getEntityCardImage(entity)} alt={entity.name} w="100%" h="140px" objectFit="cover" />
+                <Box p={4}>
+                  <Link as={NextLink} href={`/place/${entity.slug}`} color="blue.600" fontWeight="semibold">
+                    {entity.name}
+                  </Link>
+                  <Text fontSize="sm" color="gray.600" mt={1}>
+                    {entity.categories?.[0] || entity.categoryIds?.[0] || t('blog.placeTypeFallback', 'Local place')}
+                  </Text>
+                  <Text fontSize="sm" color="gray.600" mt={1}>
+                    {entity.address || entity.region || entity.region_en || t('common.greece', 'Greece')}
+                  </Text>
+                  <Button as={NextLink} href={`/place/${entity.slug}`} size="sm" colorScheme="blue" mt={3}>
+                    {t('blog.viewPlace', 'View place')}
+                  </Button>
+                </Box>
               </Box>
             ))}
           </SimpleGrid>

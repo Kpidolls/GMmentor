@@ -19,7 +19,11 @@ function buildAddress(entity: EntityRecord): { '@type': 'PostalAddress'; streetA
   };
 }
 
-export function buildEntityJsonLd(entity: EntityRecord, canonicalUrl: string): Record<string, unknown> {
+export function buildEntityJsonLd(
+  entity: EntityRecord,
+  canonicalUrl: string,
+  subjectOfUrls: string[] = []
+): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
     '@type': toSchemaType(entity.kind),
@@ -34,6 +38,11 @@ export function buildEntityJsonLd(entity: EntityRecord, canonicalUrl: string): R
       latitude: entity.lat,
       longitude: entity.lng,
     },
+    ...(subjectOfUrls.length
+      ? {
+          subjectOf: subjectOfUrls.map((url) => ({ '@id': url })),
+        }
+      : {}),
     ...(entity.url ? { sameAs: [entity.url] } : {}),
   };
 }

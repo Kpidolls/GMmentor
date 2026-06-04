@@ -84,7 +84,8 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
 export default function PlacePage({ entity, sameCategory, nearby, sameRegion, mentionedGuides }: EntityPageProps) {
   const canonicalUrl = `${SITE_URL}/place/${entity.slug}`;
   const context = displayContext(entity);
-  const entityJsonLd = buildEntityJsonLd(entity, canonicalUrl);
+  const subjectOfUrls = mentionedGuides.map((guide) => `${SITE_URL}/blog/${guide.slug}`);
+  const entityJsonLd = buildEntityJsonLd(entity, canonicalUrl, subjectOfUrls);
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(entity, canonicalUrl);
 
   return (
