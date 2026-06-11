@@ -362,7 +362,7 @@
     "resultsCount": "Εμφάνιση {{count}} προορισμών",
     "destinationTypeIsland": "Νησί",
     "destinationTypeMainland": "Ηπειρωτική",
-    "openCuratedMap": "Άνοιγμα επιμελημένου χάρτη",
+    "openCuratedMap": "Άνοιγμα χάρτη",
     "openCuratedMapShort": "Χάρτης",
     "shareMap": "Κοινοποίηση χάρτη",
     "shareMapShort": "Κοινοποίηση",
@@ -1134,6 +1134,8 @@
     "facebook": "https://www.facebook.com/profile.php?id=61577374641336"
   },
   "ticker": {
+    "destinationLead": "Πατήστε έναν προορισμό για να ανοίξει ο χάρτης του.",
+    "destinationAriaLabel": "Άνοιγμα χάρτη σημείων ενδιαφέροντος για {{destination}}",
     "usefulApps": "ΧΡΗΣΙΜΕΣ ΕΦΑΡΜΟΓΕΣ: ΕΛΛΑΔΑ",
     "accommodation": "Διαμονή: Booking.com - Airbnb",
     "bankAtms": "ΑΤΜ Τραπεζών: ALPHA - Πειραιώς - Εθνική - Eurobank (αποφύγετε Euronet)",

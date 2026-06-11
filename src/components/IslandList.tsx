@@ -7,6 +7,12 @@ const IslandList = () => {
   const { t } = useTranslation();
   const [visibleIslands, setVisibleIslands] = useState(9);
 
+  const isIsland = (id: string) => String(id || '').startsWith('island-');
+  const getDestinationTypeLabel = (id: string) =>
+    isIsland(id)
+      ? t('destinationSearch.destinationTypeIsland', 'Island')
+      : t('destinationSearch.destinationTypeMainland', 'Mainland');
+
   const handleViewMore = () => {
     setVisibleIslands(islands.length);
   };
@@ -16,38 +22,45 @@ const IslandList = () => {
       {/* <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center tracking-tight drop-shadow-lg">
         {t('islands.title')}
       </h1> */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {islands.slice(0, visibleIslands).map((island, index) => (
           <div
             key={index}
             id={island.id}
-            className="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
+            className="group text-left rounded-xl border overflow-hidden transition-all duration-300 h-[360px] sm:h-[382px] lg:h-[400px] flex flex-col border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50 hover:shadow-md"
           >
-            <div className="relative w-full h-48">
+            <div className="relative h-40 sm:h-44 w-full overflow-hidden">
               <Image
                 src={island.img}
                 alt={t(island.title)}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-            </div>
-            <div className="p-4 flex flex-col flex-1">
-              <h3 className="text-lg sm:text-xl font-semibold font-primary text-gray-800 mb-2 sm:mb-4 leading-tight text-center group-hover:text-blue-700 transition-colors duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <span className="absolute top-2 right-2 text-[11px] px-2 py-1 rounded-full bg-white/90 border border-white text-gray-700 whitespace-nowrap">
+                {getDestinationTypeLabel(island.id)}
+              </span>
+              <h3 className="absolute bottom-2 left-3 right-3 text-base sm:text-lg font-bold text-white leading-tight drop-shadow">
                 {t(island.title)}
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base font-secondary mb-6 leading-relaxed min-h-[48px] sm:min-h-[100px] text-center">
+            </div>
+            <div className="p-4 flex flex-col flex-1">
+              <p className="text-xs sm:text-sm text-gray-600 line-clamp-3 min-h-[60px] sm:min-h-[64px]">
                 {t(island.description)}
               </p>
-              <div className="flex flex-wrap gap-4 mt-auto justify-center">
+
+              <div className="mt-auto pt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <a
                   href={island.link}
                   target={island.target}
                   rel={island.rel}
-                  className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-blue-700 text-white font-semibold rounded shadow hover:bg-blue-800 transition duration-300 text-center"
+                  className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg text-white transition-colors duration-200 text-center whitespace-nowrap truncate bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
                   aria-label={t('islands.openMapAria', 'Open map for islands')}
                 >
-                  {t('islands.exploreButton')}
+                  <span className="sm:hidden">🗺️ {t('destinationSearch.openCuratedMapShort', 'Map')}</span>
+                  <span className="hidden sm:inline">🗺️ {t('destinationSearch.openCuratedMap', 'Open Curated Map')}</span>
                 </a>
                 <button
                   onClick={() => {
@@ -62,10 +75,11 @@ const IslandList = () => {
                       alert(t('islands.shareNotSupported'));
                     }
                   }}
-                  className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-green-700 text-white font-semibold rounded shadow hover:bg-green-800 transition duration-300 text-center"
+                  className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 whitespace-nowrap truncate bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
                   aria-label={t('islands.shareIslandAria', 'Share this island')}
                 >
-                  {t('islands.shareButton')}
+                  <span className="sm:hidden">🔗 {t('destinationSearch.shareMapShort', 'Share')}</span>
+                  <span className="hidden sm:inline">🔗 {t('destinationSearch.shareMap', 'Share Map')}</span>
                 </button>
               </div>
             </div>

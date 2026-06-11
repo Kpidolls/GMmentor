@@ -6,7 +6,6 @@ import config from '../config/index.json';
 import featureFlags from '../config/featureFlags.json';
 import dynamic from 'next/dynamic';
 import municipalitiesData from '../data/municipalities.json';
-import islandsData from '../data/islands.json';
 import categoriesData from '../data/restaurantCategories.json';
 import type { MunicipalityLocation, RestaurantLocation } from '../types/location';
 import { toRestaurantList, toMunicipalityList } from '../utils/mappers';
@@ -16,7 +15,7 @@ import { usePWA } from '../hooks/usePWA';
 
 // Region matching utilities no longer needed - using coordinate-based distance
 
-const MyTicker = dynamic(() => import('../components/Ticker'), { ssr: false });
+const MyTicker = dynamic(() => import('../components/Ticker'));
 const InstallBanner = dynamic(() => import('./InstallBanner'), { ssr: false });
 const OfflineNotice = dynamic(() => import('./OfflineNotice'), { ssr: false });
 
@@ -45,23 +44,10 @@ interface RestaurantCategory {
 }
 
 interface SearchMode {
-  type: 'location' | 'municipality' | 'destination' | 'category';
+  type: 'location' | 'municipality' | 'category';
   selectedMunicipality?: Municipality;
   selectedCategory?: RestaurantCategory;
   selectedExperienceType?: ExperienceType;
-  selectedDestination?: DestinationEntry;
-}
-
-interface DestinationEntry {
-  id: string;
-  title: string;
-  img: string;
-  description: string;
-  link: string;
-  target?: string;
-  rel?: string;
-  keywords?: string[];
-  slug?: string;
 }
 
 interface ExperienceType {
@@ -72,6 +58,8 @@ interface ExperienceType {
   color: string;
   categories: RestaurantCategory[] | any[]; // Will hold different types of data
 }
+
+const LOCATION_RESULTS_RADIUS_KM = 10;
 
 const MainHero = () => {
   const logDevWarning = (...args: unknown[]) => {
@@ -216,22 +204,14 @@ const MainHero = () => {
   const [error, setError] = useState<string | null>(null);
   const [showRestaurantFinder, setShowRestaurantFinder] = useState(false);
   const [showMunicipalityList, setShowMunicipalityList] = useState(false);
-  const [showDestinationList, setShowDestinationList] = useState(false);
   const [showCategorySelection, setShowCategorySelection] = useState(false);
   const [showLocationOptions, setShowLocationOptions] = useState(true);
   const [municipalitySearchQuery, setMunicipalitySearchQuery] = useState('');
-  const [destinationSearchQuery, setDestinationSearchQuery] = useState('');
-  const [destinationViewFilter, setDestinationViewFilter] = useState<'all' | 'islands' | 'mainland'>('all');
-  const [selectedDestination, setSelectedDestination] = useState<DestinationEntry | null>(null);
   const [searchRadius, setSearchRadius] = useState(5);
   const [maxResults, setMaxResults] = useState(50);
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
   const [initialSearchDone, setInitialSearchDone] = useState(false);
   const [showDeferredUi, setShowDeferredUi] = useState(false);
-  const destinationsData: DestinationEntry[] = (islandsData as DestinationEntry[]).map((destination) => ({
-    ...destination,
-    id: String(destination.id || '').trim(),
-  }));
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -274,7 +254,13 @@ const MainHero = () => {
   };
 
   // Use selectedType to determine which data to use for search
-  const findNearestPlaces = async (userLat: number, userLng: number, count: number = 10, category?: RestaurantCategory) => {
+  const findNearestPlaces = async (
+    userLat: number,
+    userLng: number,
+    count: number = 10,
+    category?: RestaurantCategory,
+    maxRadiusKm: number = LOCATION_RESULTS_RADIUS_KM
+  ) => {
     const sourceData = category
       ? await loadRestaurantDataByCategory(category)
       : await loadCurrentSourceData();
@@ -283,6 +269,7 @@ const MainHero = () => {
       distance: calculateDistance(userLat, userLng, place.lat, place.lng)
     }));
     return placesWithDistance
+      .filter((item) => item.distance <= maxRadiusKm)
       .sort((a, b) => a.distance - b.distance)
       .slice(0, count);
   };
@@ -299,7 +286,6 @@ const MainHero = () => {
     setError(null);
     setShowCategorySelection(false);
     setShowMunicipalityList(false);
-    setShowDestinationList(false);
     setShowLocationOptions(false);
     setShowRestaurantFinder(true);
     setSearchMode({ type: 'location', selectedCategory: effectiveCategory, selectedMunicipality: undefined });
@@ -315,7 +301,15 @@ const MainHero = () => {
             setNearestRestaurants(nearest);
             setCurrentIndex(0);
             setLoading(false);
-            setError(t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.'));
+            setError(
+              nearest.length > 0
+                ? t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.')
+                : t(
+                    'restaurantFinder.noResultsInRadius',
+                    'No places found within {{radius}}km from your location. Try municipality search for wider coverage.',
+                    { radius: LOCATION_RESULTS_RADIUS_KM }
+                  )
+            );
           });
           setCurrentIndex(0);
           return;
@@ -343,10 +337,19 @@ const MainHero = () => {
           setUserLocation({ lat: latitude, lng: longitude });
           
           // Use the currently selected experience type for location search
-          const nearest = await findNearestPlaces(latitude, longitude, 50, effectiveCategory); // Fetch up to 50 results
-          setNearestRestaurants(nearest); // Display all results within 5km
+          const nearest = await findNearestPlaces(latitude, longitude, 50, effectiveCategory);
+          setNearestRestaurants(nearest);
           setCurrentIndex(0);
           setLoading(false);
+          if (nearest.length === 0) {
+            setError(
+              t(
+                'restaurantFinder.noResultsInRadius',
+                'No places found within {{radius}}km from your location. Try municipality search for wider coverage.',
+                { radius: LOCATION_RESULTS_RADIUS_KM }
+              )
+            );
+          }
           
           // PWA Enhancement: Cache location for offline use
           if (isStandalone) {
@@ -373,7 +376,15 @@ const MainHero = () => {
                 setNearestRestaurants(nearest);
                 setCurrentIndex(0);
                 setLoading(false);
-                setError(t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.'));
+                setError(
+                  nearest.length > 0
+                    ? t('pwa.usingCachedLocation', 'Using your last known location. Results may not be current.')
+                    : t(
+                        'restaurantFinder.noResultsInRadius',
+                        'No places found within {{radius}}km from your location. Try municipality search for wider coverage.',
+                        { radius: LOCATION_RESULTS_RADIUS_KM }
+                      )
+                );
                 return;
               } catch (e) {
                 logDevWarning('Failed to parse cached location:', e);
@@ -422,7 +433,6 @@ const MainHero = () => {
     setShowCategorySelection(false);
     setShowRestaurantFinder(true);
     setShowMunicipalityList(false);
-    setShowDestinationList(false);
     setSearchMode({ type: 'municipality', selectedMunicipality: municipality, selectedCategory: effectiveCategory });
 
     // Responsive scroll based on screen size
@@ -581,39 +591,24 @@ const MainHero = () => {
 
   // Removed unused handleLocationOptions
 
-  const selectSearchMode = (type: 'location' | 'municipality' | 'destination') => {
+  const selectSearchMode = (type: 'location' | 'municipality') => {
     setError(null);
     setNearestRestaurants(null);
     setCurrentIndex(0);
     setShowRestaurantFinder(false);
-    setSelectedDestination(null);
-    setDestinationSearchQuery('');
-    setDestinationViewFilter('all');
 
     if (type === 'location') {
-      setSearchMode({ type: 'location', selectedMunicipality: undefined, selectedCategory: undefined, selectedDestination: undefined });
+      setSearchMode({ type: 'location', selectedMunicipality: undefined, selectedCategory: undefined });
       setShowMunicipalityList(false);
-      setShowDestinationList(false);
       setShowLocationOptions(false);
       setShowCategorySelection(true);
       alignViewport();
       return;
     }
 
-    if (type === 'destination') {
-      setSearchMode({ type: 'destination', selectedMunicipality: undefined, selectedCategory: undefined, selectedDestination: undefined });
-      setShowCategorySelection(false);
-      setShowMunicipalityList(false);
-      setShowLocationOptions(false);
-      setShowDestinationList(true);
-      alignViewport();
-      return;
-    }
-
-    setSearchMode({ type: 'municipality', selectedMunicipality: undefined, selectedCategory: undefined, selectedDestination: undefined });
+    setSearchMode({ type: 'municipality', selectedMunicipality: undefined, selectedCategory: undefined });
     setShowCategorySelection(false);
     setShowLocationOptions(false);
-    setShowDestinationList(false);
     setShowMunicipalityList(true);
     alignViewport();
   };
@@ -625,60 +620,8 @@ const MainHero = () => {
     setShowRestaurantFinder(false);
     setSearchMode(prev => ({ ...prev, type: 'municipality', selectedMunicipality: municipality }));
     setShowMunicipalityList(false);
-    setShowDestinationList(false);
     setShowCategorySelection(true);
     alignViewport();
-  };
-
-  const isIslandDestination = (destination: DestinationEntry): boolean => destination.id.startsWith('island-');
-
-  const getDestinationTypeLabel = (destination: DestinationEntry): string => {
-    return isIslandDestination(destination)
-      ? t('destinationSearch.destinationTypeIsland', 'Island')
-      : t('destinationSearch.destinationTypeMainland', 'Mainland');
-  };
-
-  const getDestinationLabel = (destination: DestinationEntry): string => {
-    const translated = t(destination.title, destination.id);
-    return translated.replace(/^📍\s*/, '').trim();
-  };
-
-  const getDestinationDescription = (destination: DestinationEntry): string => {
-    return t(destination.description, 'Curated points of interest for this destination.');
-  };
-
-  const selectDestination = (destination: DestinationEntry) => {
-    setError(null);
-    setNearestRestaurants(null);
-    setCurrentIndex(0);
-    setShowRestaurantFinder(false);
-    setSelectedDestination(destination);
-    setSearchMode({ type: 'destination', selectedDestination: destination, selectedCategory: undefined, selectedMunicipality: undefined });
-  };
-
-  const shareDestinationMap = async (destination: DestinationEntry) => {
-    const shareText = `${getDestinationLabel(destination)}\n${destination.link}`;
-    try {
-      if (navigator.share) {
-        await navigator.share({
-          title: getDestinationLabel(destination),
-          text: t('destinationSearch.shareText', 'Check this curated destination map:'),
-          url: destination.link,
-        });
-        return;
-      }
-
-      await navigator.clipboard.writeText(shareText);
-      setShareSnackbar({ open: true, message: t('destinationSearch.copiedDestinationLink', 'Destination map link copied to clipboard.'), type: 'success' });
-      setTimeout(() => {
-        setShareSnackbar((prev) => ({ ...prev, open: false }));
-      }, 3000);
-    } catch {
-      setShareSnackbar({ open: true, message: t('destinationSearch.shareFailed', 'Unable to share this destination right now.'), type: 'error' });
-      setTimeout(() => {
-        setShareSnackbar((prev) => ({ ...prev, open: false }));
-      }, 3000);
-    }
   };
 
   const runSearchWithCategory = async (category: RestaurantCategory) => {
@@ -704,7 +647,6 @@ const MainHero = () => {
     setShowRestaurantFinder(false);
     setShowLocationOptions(true);
     setShowMunicipalityList(false);
-    setShowDestinationList(false);
     setShowCategorySelection(false);
     setSearchMode({ type: 'location' });
     alignViewport();
@@ -717,16 +659,12 @@ const MainHero = () => {
     setError(null);
     setShowRestaurantFinder(false);
     setShowMunicipalityList(false);
-    setShowDestinationList(false);
     setShowCategorySelection(false);
     setShowLocationOptions(true);
     setSearchMode({ type: 'location' });
     setSelectedDisplayCategory(undefined);
     setSelectedExperienceType(undefined);
     setSelectedType(undefined);
-    setSelectedDestination(null);
-    setDestinationSearchQuery('');
-    setDestinationViewFilter('all');
     setMunicipalitySearchQuery(''); // Clear municipality search
     setSelectedRestaurants(new Set()); // Clear selection
     setSearchRadius(2); // Reset to initial 2km
@@ -752,16 +690,12 @@ const MainHero = () => {
     setError(null);
     setShowRestaurantFinder(false);
     setShowMunicipalityList(false);
-    setShowDestinationList(false);
     setShowCategorySelection(false);
     setShowLocationOptions(true);
     setSearchMode({ type: 'location' });
     setSelectedDisplayCategory(undefined);
     setSelectedExperienceType(undefined);
     setSelectedType(undefined);
-    setSelectedDestination(null);
-    setDestinationSearchQuery('');
-    setDestinationViewFilter('all');
     setMunicipalitySearchQuery(''); // Clear municipality search
     setSelectedRestaurants(new Set()); // Clear selection
     setSearchRadius(2); // Reset to initial 2km
@@ -807,6 +741,53 @@ const MainHero = () => {
 
   const clearSelection = () => {
     setSelectedRestaurants(new Set());
+  };
+
+  const shareSinglePlace = async (item: { restaurant: Restaurant; distance: number }) => {
+    const fullText = `${item.restaurant.name}\n${item.restaurant.url}`;
+
+    let copied = false;
+    let shared = false;
+    let message = '';
+    let type = 'info';
+
+    try {
+      await navigator.clipboard.writeText(fullText);
+      copied = true;
+    } catch {
+      copied = false;
+    }
+
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: item.restaurant.name,
+          text: fullText,
+        });
+        shared = true;
+      }
+    } catch {
+      shared = false;
+    }
+
+    if (copied && shared) {
+      message = t('restaurantFinder.copiedAndShared', 'Selected locations copied and ready to share!');
+      type = 'success';
+    } else if (shared && !copied) {
+      message = t('restaurantFinder.sharedButNotCopied', 'Shared successfully, but could not copy to clipboard.');
+      type = 'warning';
+    } else if (copied && !shared) {
+      message = t('restaurantFinder.copiedToClipboard', 'Selected locations copied to clipboard!');
+      type = 'success';
+    } else {
+      message = t('restaurantFinder.shareFailed', 'Unable to share or copy results. Please try again.');
+      type = 'error';
+    }
+
+    setShareSnackbar({ open: true, message, type });
+    setTimeout(() => {
+      setShareSnackbar((prev) => ({ ...prev, open: false }));
+    }, 4000);
   };
 
   // Helper: determine whether a category represents dining/restaurant results
@@ -997,31 +978,6 @@ const MainHero = () => {
     
     return false;
   };
-
-  const filteredDestinations = destinationsData
-    .filter((destination) => {
-      if (destinationViewFilter === 'islands') return isIslandDestination(destination);
-      if (destinationViewFilter === 'mainland') return !isIslandDestination(destination);
-      return true;
-    })
-    .filter((destination) => {
-      if (!destinationSearchQuery.trim()) return true;
-
-      const query = destinationSearchQuery.trim();
-      const translatedTitle = getDestinationLabel(destination);
-      const translatedDescription = getDestinationDescription(destination);
-
-      if (searchMatches(query, translatedTitle)) return true;
-      if (searchMatches(query, translatedDescription)) return true;
-
-      if (Array.isArray(destination.keywords) && destination.keywords.some((keyword) => searchMatches(query, keyword))) {
-        return true;
-      }
-
-      if (searchMatches(query, destination.id)) return true;
-
-      return false;
-    });
 
   // PWA Enhancement: Get municipalities with offline fallback
   const getMunicipalitiesData = (): Municipality[] => {
@@ -1261,7 +1217,7 @@ const MainHero = () => {
 
             {/* Professional Discovery Interface */}
             <div className="max-w-5xl mx-auto px-1 xs:px-2 sm:px-4 w-full">
-              {showCategorySelection && !showRestaurantFinder && !showMunicipalityList && !showDestinationList && (
+              {showCategorySelection && !showRestaurantFinder && !showMunicipalityList && (
                 <div className="relative group">
                   <div className="absolute -inset-1 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-r from-slate-500/20 via-zinc-400/20 to-stone-400/20" />
                   <div className="relative backdrop-blur-2xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-4 xs:p-6 sm:p-8 lg:p-12 shadow-2xl bg-white/90 border border-slate-200/80">
@@ -1462,139 +1418,6 @@ const MainHero = () => {
                   </button>
                 </div>
               </div>
-            ) : showDestinationList ? (
-              <div className="backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-2xl max-w-5xl mx-auto bg-white/92 border border-slate-200/90">
-                <div className="text-center mb-4">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 flex items-center justify-center gap-2">
-                    🧭 {t('destinationSearch.title', 'Choose a Destination')}
-                  </h3>
-                  <p className="text-gray-600 text-sm px-2">
-                    {t('destinationSearch.subtitle', 'Pick an island, city or region to open its curated Google Maps list.')}
-                  </p>
-                </div>
-
-                <div className="mb-5 space-y-3">
-                  <div className="relative max-w-md mx-auto">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                      </svg>
-                    </div>
-                    <input
-                      type="text"
-                      value={destinationSearchQuery}
-                      onChange={(e) => setDestinationSearchQuery(e.target.value)}
-                      className="block w-full pl-9 pr-10 py-2.5 border rounded-lg text-sm placeholder-gray-500 focus:outline-none transition-colors duration-200 border-slate-300 bg-white text-slate-800 focus:ring-2 focus:ring-slate-400 focus:border-slate-500"
-                      placeholder={t('destinationSearch.placeholder', 'Search destination...')}
-                    />
-                    {destinationSearchQuery && (
-                      <button
-                        onClick={() => setDestinationSearchQuery('')}
-                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors duration-200"
-                        title={t('destinationSearch.clearSearch', 'Clear search')}
-                        aria-label={t('destinationSearch.clearSearch', 'Clear search')}
-                      >
-                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </button>
-                    )}
-                  </div>
-
-                  <div className="flex items-center justify-center gap-2 flex-wrap">
-                    {([
-                      { id: 'all', label: t('destinationSearch.filterAll', 'All') },
-                      { id: 'islands', label: t('destinationSearch.filterIslands', 'Islands') },
-                      { id: 'mainland', label: t('destinationSearch.filterMainland', 'Mainland') },
-                    ] as const).map((option) => (
-                      <button
-                        key={option.id}
-                        onClick={() => setDestinationViewFilter(option.id)}
-                        className={`px-3 py-1.5 rounded-full text-xs sm:text-sm border transition-colors duration-200 ${destinationViewFilter === option.id ? 'bg-slate-800 text-white border-slate-700' : 'bg-white text-slate-600 border-slate-300 hover:bg-slate-100'}`}
-                      >
-                        {option.label}
-                      </button>
-                    ))}
-                  </div>
-
-                  <div className="text-center">
-                    <span className="text-xs text-gray-500">
-                      {t('destinationSearch.resultsCount', 'Showing {{count}} destinations', { count: filteredDestinations.length })}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 items-stretch">
-                  {filteredDestinations.map((destination) => {
-                    const active = selectedDestination?.id === destination.id;
-                    return (
-                      <article
-                        key={destination.id}
-                        onClick={() => selectDestination(destination)}
-                        className={`group text-left rounded-xl border overflow-hidden transition-all duration-300 cursor-pointer h-[360px] sm:h-[382px] lg:h-[400px] flex flex-col ${active ? 'border-slate-500 bg-slate-100 shadow-md' : 'border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50 hover:shadow-md'}`}
-                      >
-                        <div className="relative h-40 sm:h-44 w-full overflow-hidden">
-                          <img
-                            src={destination.img}
-                            alt={getDestinationLabel(destination)}
-                            className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                            loading="lazy"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent" />
-                          <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                          <span className="absolute top-2 right-2 text-[11px] px-2 py-1 rounded-full bg-white/90 border border-white text-gray-700 whitespace-nowrap">
-                            {getDestinationTypeLabel(destination)}
-                          </span>
-                          <h4 className="absolute bottom-2 left-3 right-3 text-base sm:text-lg font-bold text-white leading-tight drop-shadow">
-                            {getDestinationLabel(destination)}
-                          </h4>
-                        </div>
-
-                        <div className="p-4 flex flex-col flex-1">
-                          <p className="text-xs sm:text-sm text-gray-600 line-clamp-3 min-h-[60px] sm:min-h-[64px]">
-                            {getDestinationDescription(destination)}
-                          </p>
-
-                          <div className="mt-auto pt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            <a
-                              href={destination.link}
-                              target={destination.target || '_blank'}
-                              rel={destination.rel || 'noopener noreferrer'}
-                              onClick={(e) => e.stopPropagation()}
-                              className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg text-white transition-colors duration-200 text-center whitespace-nowrap truncate bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
-                            >
-                              <span className="sm:hidden">🗺️ {t('destinationSearch.openCuratedMapShort', 'Map')}</span>
-                              <span className="hidden sm:inline">🗺️ {t('destinationSearch.openCuratedMap', 'Open Curated Map')}</span>
-                            </a>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                void shareDestinationMap(destination);
-                              }}
-                              className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 whitespace-nowrap truncate bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
-                            >
-                              <span className="sm:hidden">🔗 {t('destinationSearch.shareMapShort', 'Share')}</span>
-                              <span className="hidden sm:inline">🔗 {t('destinationSearch.shareMap', 'Share Map')}</span>
-                            </button>
-                          </div>
-                        </div>
-                      </article>
-                    );
-                  })}
-                </div>
-
-                <div className="text-center pt-4 border-t border-slate-300/80">
-                  <button
-                    onClick={() => {
-                      resetSearch();
-                      alignViewport();
-                    }}
-                    className="inline-flex items-center gap-2 transition-colors duration-200 font-medium text-sm px-3 py-2 rounded-lg text-slate-600 hover:text-slate-800 hover:bg-slate-100"
-                  >
-                    ← {t('mainHero.backToSearchOptions', 'Back to Search Options')}
-                  </button>
-                </div>
-              </div>
             ) : showLocationOptions ? (
               /* Location Options Selection - Enhanced UI */
               <div className="relative">
@@ -1616,27 +1439,22 @@ const MainHero = () => {
                   </div>
 
                   {/* Options Grid */}
-                  <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto ${showLocationOptions ? 'gap-5 xs:gap-6 sm:gap-7 lg:gap-8 mb-5 xs:mb-6' : 'gap-5 xs:gap-6 sm:gap-8 lg:gap-10 mb-6 xs:mb-8'}`}>
+                  <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto ${showLocationOptions ? 'gap-5 xs:gap-6 sm:gap-7 lg:gap-8 mb-5 xs:mb-6' : 'gap-5 xs:gap-6 sm:gap-8 lg:gap-10 mb-6 xs:mb-8'}`}>
                     {/* Near You Option - Enhanced */}
                     <button
                       onClick={() => {
                         selectSearchMode('location');
                       }}
-                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] ring-1 ring-cyan-300/70 hover:ring-teal-500/70 shadow-sm shadow-cyan-100/40 hover:shadow-md hover:shadow-cyan-100/50"
+                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] ring-1 ring-cyan-300/80 hover:ring-teal-500/80"
                     >
-                      {/* Animated gradient background */}
                       <div className="absolute inset-0 transition-all duration-500 bg-gradient-to-br from-cyan-50 via-white to-blue-50" />
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white via-cyan-50 to-blue-50" />
-
-                      {/* Shine effect */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent" />
                       </div>
-                      
-                      {/* Content */}
-                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-5 xs:p-6 sm:p-7 lg:p-8' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
-                        {/* Icon with badge */}
-                        <div className="flex justify-center mb-4 xs:mb-5">
+
+                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 xs:p-5 sm:p-6 lg:p-7' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
+                        <div className="flex justify-center mb-5">
                           <div className="relative">
                             <div className="absolute inset-0 rounded-full blur-2xl scale-[1.25] group-hover:scale-[1.55] transition-transform duration-500 bg-gradient-to-r from-cyan-200/20 to-teal-200/16" />
                             <div className="relative rounded-full p-4 xs:p-5 sm:p-6 border-2 transition-all duration-300 group-hover:rotate-3 bg-white/92 border-cyan-150/90 shadow-sm">
@@ -1644,29 +1462,24 @@ const MainHero = () => {
                                 📍
                               </div>
                             </div>
-                            {/* Pulse effect */}
                             <div className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-20 bg-cyan-200/20" />
                           </div>
                         </div>
-                        
-                        {/* Badge */}
+
                         <div className="flex justify-center mb-3">
                           <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-cyan-50/85 text-cyan-800 border-cyan-100/90 shadow-none">
                             {t('mainHero.fastestBadge', 'Quick')}
                           </span>
                         </div>
-                        
-                        {/* Title */}
+
                         <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal] mb-2 xs:mb-3 tracking-[-0.04em]">
                           {t('locationOptions.nearYou', 'Near You')}
                         </h3>
-                        
-                        {/* Description */}
+
                         <p className="text-slate-600 text-[clamp(0.875rem,1.45vw,1.125rem)] font-normal leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 mb-4 xs:mb-5">
                           {t('locationOptions.nearYouDesc', 'Use your current location to find nearby places')}
                         </p>
-                        
-                        {/* Arrow indicator */}
+
                         <div className="flex justify-center">
                           <div className="flex items-center text-[clamp(0.8125rem,1.2vw,0.95rem)] font-medium group-hover:gap-4 transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-white/65 border border-cyan-100/80 shadow-none text-cyan-900">
                             <span>{t('mainHero.useMyLocation', 'Use my location')}</span>
@@ -1685,70 +1498,8 @@ const MainHero = () => {
                       }}
                       className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] ring-1 ring-cyan-300/80 hover:ring-teal-500/80"
                     >
-                      {/* Animated gradient background */}
                       <div className="absolute inset-0 transition-all duration-500 bg-gradient-to-br from-cyan-50 via-white to-blue-50" />
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white via-cyan-50 to-blue-50" />
-                      
-                      {/* Shine effect */}
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent" />
-                      </div>
-                      
-                      {/* Content */}
-                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 xs:p-5 sm:p-6 lg:p-7' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
-                        {/* Icon with badge */}
-                        <div className="flex justify-center mb-4 xs:mb-5">
-                          <div className="relative">
-                            <div className="absolute inset-0 rounded-full blur-2xl scale-[1.25] group-hover:scale-[1.55] transition-transform duration-500 bg-gradient-to-r from-cyan-200/20 to-teal-200/16" />
-                            <div className="relative rounded-full p-4 xs:p-5 sm:p-6 border-2 transition-all duration-300 group-hover:rotate-3 bg-white/92 border-cyan-150/90 shadow-sm">
-                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-105 transition-transform duration-300 drop-shadow-none">
-                                🗺️
-                              </div>
-                            </div>
-                            {/* Pulse effect */}
-                            <div className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-20 bg-cyan-200/20" />
-                          </div>
-                        </div>
-                        
-                        {/* Badge */}
-                        <div className="flex justify-center mb-3">
-                          <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-cyan-50/85 text-cyan-800 border-cyan-100/90 shadow-none">
-                            {t('mainHero.mostAccurateBadge', 'Most Accurate')}
-                          </span>
-                        </div>
-                        
-                        {/* Title */}
-                        <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal] mb-2 xs:mb-3 tracking-[-0.04em]">
-                          {t('locationOptions.byNeighborhood', 'Neighborhood')}
-                        </h3>
-                        
-                        {/* Description */}
-                        <p className="text-slate-600 text-[clamp(0.875rem,1.45vw,1.125rem)] font-normal leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 mb-4 xs:mb-5">
-                          {t('locationOptions.byNeighborhoodDesc', 'Choose a specific neighborhood or municipality')}
-                        </p>
-                        
-                        {/* Arrow indicator */}
-                        <div className="flex justify-center">
-                          <div className="flex items-center text-[clamp(0.8125rem,1.2vw,0.95rem)] font-medium group-hover:gap-4 transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-white/65 border border-cyan-100/80 shadow-none text-cyan-900">
-                            <span>{t('mainHero.browseAreas', 'Browse areas')}</span>
-                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </button>
-
-                    {/* Destinations Option */}
-                    <button
-                      onClick={() => {
-                        selectSearchMode('destination');
-                      }}
-                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] ring-1 ring-cyan-300/80 hover:ring-teal-500/80"
-                    >
-                      <div className="absolute inset-0 transition-all duration-500 bg-gradient-to-br from-cyan-50 via-white to-blue-50" />
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white via-cyan-50 to-blue-50" />
-
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent" />
                       </div>
@@ -1759,7 +1510,7 @@ const MainHero = () => {
                             <div className="absolute inset-0 rounded-full blur-2xl scale-[1.25] group-hover:scale-[1.55] transition-transform duration-500 bg-gradient-to-r from-cyan-200/20 to-teal-200/16" />
                             <div className="relative rounded-full p-4 xs:p-5 sm:p-6 border-2 transition-all duration-300 group-hover:rotate-3 bg-white/92 border-cyan-150/90 shadow-sm">
                               <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-105 transition-transform duration-300 drop-shadow-none">
-                                🧭
+                                🗺️
                               </div>
                             </div>
                             <div className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-20 bg-cyan-200/20" />
@@ -1768,21 +1519,21 @@ const MainHero = () => {
 
                         <div className="flex justify-center mb-3">
                           <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-cyan-50/85 text-cyan-800 border-cyan-100/90 shadow-none">
-                            {t('mainHero.curatedBadge', 'Curated')}
+                            {t('mainHero.mostAccurateBadge', 'Most Accurate')}
                           </span>
                         </div>
 
                         <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal] mb-2 xs:mb-3 tracking-[-0.04em]">
-                          {t('locationOptions.destinations', 'Destinations')}
+                          {t('locationOptions.byNeighborhood', 'Neighborhood')}
                         </h3>
 
                         <p className="text-slate-600 text-[clamp(0.875rem,1.45vw,1.125rem)] font-normal leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 mb-4 xs:mb-5">
-                          {t('locationOptions.destinationsDesc', 'Open curated maps for islands and major Greek destinations')}
+                          {t('locationOptions.byNeighborhoodDesc', 'Choose a specific neighborhood or municipality')}
                         </p>
 
                         <div className="flex justify-center">
                           <div className="flex items-center text-[clamp(0.8125rem,1.2vw,0.95rem)] font-medium group-hover:gap-4 transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-white/65 border border-cyan-100/80 shadow-none text-cyan-900">
-                            <span>{t('mainHero.exploreDestinations', 'Explore destinations')}</span>
+                            <span>{t('mainHero.browseAreas', 'Browse areas')}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
@@ -1957,6 +1708,11 @@ const MainHero = () => {
                       <p className="text-gray-500 text-sm sm:text-base mt-2">
                         {t('restaurantFinder.sortedByDistance', 'Results are sorted by distance from location selected')}
                       </p>
+                      {searchMode.type === 'location' && (
+                        <span className="inline-block mt-2 px-2 sm:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs sm:text-sm font-medium">
+                          {t('restaurantFinder.withinRadius', 'Within {{radius}}km radius', { radius: LOCATION_RESULTS_RADIUS_KM })}
+                        </span>
+                      )}
                       {searchMode.type === 'municipality' && (
                         <span className="inline-block mt-2 px-2 sm:px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs sm:text-sm font-medium">
                           📍 {searchMode.selectedMunicipality?.name ? t(`municipalities.${searchMode.selectedMunicipality.name}`, searchMode.selectedMunicipality.name) : ''}{searchMode.selectedMunicipality?.region ? `, ${t(`regions.${searchMode.selectedMunicipality.region}`, searchMode.selectedMunicipality.region)}` : ''}
@@ -2059,15 +1815,14 @@ const MainHero = () => {
                                       setShareSnackbar((prev) => ({ ...prev, open: false }));
                                     }, 5000);
                                   }}
-                                  className="relative overflow-hidden group inline-flex items-center gap-2 px-6 py-2.5 rounded-lg font-bold text-sm sm:text-base bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white shadow-lg border border-sky-300/40 transition-all duration-300 hover:scale-105 active:scale-95"
+                                  className="inline-flex items-center gap-2 px-4 py-2 text-sm sm:text-base font-semibold rounded-lg border transition-colors duration-200 bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
                                   title={t('restaurantFinder.shareSelected', 'Share selected locations')}
                                 >
-                                  <span className="absolute inset-0 bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                  <span className="relative flex items-center gap-2">
+                                  <span className="flex items-center gap-2">
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                                     </svg>
-                                    {t('restaurantFinder.shareSelected', `Share (${selectedRestaurants.size})`)}
+                                    🔗 {t('restaurantFinder.shareSelected', `Share (${selectedRestaurants.size})`)}
                                   </span>
                                 </button>
                               </>
@@ -2112,63 +1867,68 @@ const MainHero = () => {
                           return (
                             <div
                               key={index}
-                              className={`relative w-full bg-gradient-to-br from-white via-sky-50/40 to-cyan-50/50 rounded-2xl p-4 sm:p-5 border transition-all duration-300 flex flex-col shadow-md hover:shadow-xl ${
+                              className={`group text-left rounded-xl border overflow-hidden transition-all duration-300 h-[280px] sm:h-[300px] lg:h-[320px] flex flex-col ${
                                 isSelected
-                                  ? 'border-emerald-500 ring-2 ring-emerald-200'
-                                  : 'border-slate-200 hover:border-sky-300'
+                                  ? 'border-slate-500 bg-slate-100 shadow-md'
+                                  : 'border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50 hover:shadow-md'
                               }`}
                             >
-                              <div className="absolute inset-y-3 left-0 w-1.5 rounded-r-full bg-gradient-to-b from-sky-400 via-cyan-500 to-teal-500 opacity-70" />
-                              <div className="flex items-start gap-4 pl-3">
-                                <div className="flex-1 space-y-3">
-                                  <div className="flex items-start gap-2">
-                                    <h4 className="font-semibold text-slate-900 text-lg sm:text-xl flex items-start gap-2 line-clamp-2 leading-tight">
-                                      🍽️ <span className="flex-1">{restaurantData.restaurant.name}</span>
-                                    </h4>
-                                  </div>
-                                  <div>
-                                    <p className="text-slate-600 text-sm sm:text-[15px] flex items-start gap-2 line-clamp-2 leading-snug">
-                                      📍 <span className="flex-1">{restaurantData.restaurant.address}</span>
-                                    </p>
-                                  </div>
-                                  <div className="flex flex-wrap items-center gap-2 pt-1">
-                                    <span className="bg-gradient-to-r from-sky-600 to-cyan-600 text-white px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap shadow-sm">
-                                      📏 {formatDistance(restaurantData.distance)}
-                                    </span>
-                                    {isVegan && (
-                                      <span title={t('restaurantFinder.badges.veganTitle', 'Vegan Friendly')} className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-semibold border border-emerald-200">🌿 {t('restaurantFinder.badges.veganLabel', 'Vegan')}</span>
-                                    )}
-                                    {isLuxury && (
-                                      <span title={t('restaurantFinder.badges.luxuryTitle', 'Luxury/Pricey')} className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-xs font-semibold border border-amber-200">✨ {t('restaurantFinder.badges.luxuryLabel', 'Luxury')}</span>
-                                    )}
-                                  </div>
-                                </div>
-
-                                <div className="flex flex-col items-end gap-2">
-                                  <label className="flex items-center gap-2 cursor-pointer group">
-                                    <input
-                                      type="checkbox"
-                                      checked={isSelected}
-                                      onChange={() => toggleRestaurantSelection(index)}
-                                      disabled={!isSelected && selectedRestaurants.size >= 10}
-                                      className="w-5 h-5 rounded-md border-2 border-slate-400 text-emerald-600 focus:ring-2 focus:ring-emerald-500 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed transition-all"
-                                    />
-                                    <span className="text-sm font-semibold text-slate-700 group-hover:text-slate-900">
-                                      {isSelected ? t('restaurantFinder.selected', 'Selected') : t('restaurantFinder.select', 'Select')}
-                                    </span>
-                                  </label>
-                                </div>
+                              <div className="px-4 pt-4 flex items-start justify-between gap-3">
+                                <h4 className="font-bold text-slate-900 text-lg sm:text-xl line-clamp-2 leading-tight">
+                                  {restaurantData.restaurant.name}
+                                </h4>
+                                <label className="flex items-center gap-2 cursor-pointer">
+                                  <input
+                                    type="checkbox"
+                                    checked={isSelected}
+                                    onChange={() => toggleRestaurantSelection(index)}
+                                    disabled={!isSelected && selectedRestaurants.size >= 10}
+                                    className="w-4 h-4 rounded border border-slate-400 text-emerald-600 focus:ring-2 focus:ring-emerald-500 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                                  />
+                                  <span className="text-xs font-semibold text-slate-600 whitespace-nowrap">
+                                    {isSelected ? t('restaurantFinder.selected', 'Selected') : t('restaurantFinder.select', 'Select')}
+                                  </span>
+                                </label>
                               </div>
 
-                              <div className="mt-4">
+                              <div className="px-4 mt-2">
+                                <p className="text-slate-600 text-sm sm:text-base line-clamp-3 leading-relaxed">
+                                  📍 {restaurantData.restaurant.address}
+                                </p>
+                              </div>
+
+                              <div className="px-4 mt-3 flex flex-wrap items-center gap-2">
+                                <span className="bg-gradient-to-r from-slate-700 to-slate-900 text-white px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap shadow-sm">
+                                  📏 {formatDistance(restaurantData.distance)}
+                                </span>
+                                {isVegan && (
+                                  <span title={t('restaurantFinder.badges.veganTitle', 'Vegan Friendly')} className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-semibold border border-emerald-200">🌿 {t('restaurantFinder.badges.veganLabel', 'Vegan')}</span>
+                                )}
+                                {isLuxury && (
+                                  <span title={t('restaurantFinder.badges.luxuryTitle', 'Luxury/Pricey')} className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-xs font-semibold border border-amber-200">✨ {t('restaurantFinder.badges.luxuryLabel', 'Luxury')}</span>
+                                )}
+                              </div>
+
+                              <div className="mt-auto px-4 sm:px-5 pb-4 sm:pb-5 grid grid-cols-1 sm:grid-cols-2 gap-2">
                                 <a
                                   href={restaurantData.restaurant.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="block w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white py-3 px-4 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-200 text-center text-base transform hover:scale-[1.01] active:scale-95"
+                                  className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg text-white transition-colors duration-200 text-center whitespace-nowrap truncate bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
                                 >
-                                  {t('restaurantFinder.viewOnMaps', 'View on Google Maps')}
+                                  <span className="sm:hidden">🗺️ {t('destinationSearch.openCuratedMapShort', 'Map')}</span>
+                                  <span className="hidden sm:inline">🗺️ {t('destinationSearch.openCuratedMap', 'Open Curated Map')}</span>
                                 </a>
+
+                                <button
+                                  onClick={() => {
+                                    void shareSinglePlace(restaurantData);
+                                  }}
+                                  className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 whitespace-nowrap truncate bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
+                                >
+                                  <span className="sm:hidden">🔗 {t('destinationSearch.shareMapShort', 'Share')}</span>
+                                  <span className="hidden sm:inline">🔗 {t('destinationSearch.shareMap', 'Share Map')}</span>
+                                </button>
                               </div>
                             </div>
                           );

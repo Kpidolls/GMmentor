@@ -107,7 +107,7 @@ const Reviews = () => {
         {/* Reviews Carousel */}
         <div className="relative max-w-4xl mx-auto">
           {/* Main Review Card */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-gray-100 overflow-hidden">
+          <div className="bg-white rounded-xl shadow-md p-8 lg:p-12 border border-slate-200 overflow-hidden">
             {/* Quote Mark */}
             <div className="absolute top-6 left-6 text-6xl text-[#0878fe]/10 font-serif leading-none">
               &ldquo;
@@ -132,7 +132,7 @@ const Reviews = () => {
               <div className="text-center">
                 <div className="inline-flex items-center space-x-4">
                   {/* Avatar Placeholder */}
-                  <div className="w-12 h-12 bg-gradient-to-r from-[#0878fe] to-[#0053b8] rounded-full flex items-center justify-center text-white font-semibold text-lg">
+                  <div className="w-12 h-12 bg-gradient-to-r from-slate-700 to-slate-900 rounded-full flex items-center justify-center text-white font-semibold text-lg">
                     {currentReview.author?.charAt(0) || 'U'}
                   </div>
                   
@@ -154,7 +154,7 @@ const Reviews = () => {
           {/* Navigation Buttons */}
           <button
             onClick={handlePrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#0878fe] hover:bg-blue-50 transition duration-300 group"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-md border border-slate-200 flex items-center justify-center text-gray-600 hover:text-slate-900 hover:bg-slate-100 transition duration-300 group"
             aria-label={t('reviews.previousReview', 'Previous review')}
           >
             <ChevronLeftIcon className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
@@ -162,7 +162,7 @@ const Reviews = () => {
 
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#0878fe] hover:bg-blue-50 transition duration-300 group"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-md border border-slate-200 flex items-center justify-center text-gray-600 hover:text-slate-900 hover:bg-slate-100 transition duration-300 group"
             aria-label={t('reviews.nextReview', 'Next review')}
           >
             <ChevronRightIcon className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
@@ -177,7 +177,7 @@ const Reviews = () => {
               onClick={() => handleDotClick(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentReviewIndex
-                  ? 'bg-[#0878fe] w-8'
+                  ? 'bg-slate-700 w-8'
                   : 'bg-gray-300 hover:bg-gray-400'
               }`}
               aria-label={t('reviews.goToReview', `Go to review ${index + 1}`)}
@@ -231,7 +231,7 @@ const Reviews = () => {
           </p>
           <a
             href="#maps"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#0878fe] to-[#0053b8] text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-slate-700 to-slate-900 text-white font-semibold rounded-lg shadow-md hover:from-slate-800 hover:to-black hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             {t('reviews.cta.button', 'Explore Our Maps')}
             <svg

@@ -260,6 +260,10 @@ const nextConfig = withPWA(withBundleAnalyzer({
   reactStrictMode: true,
   devIndicators: false,
   productionBrowserSourceMaps: false,
+  staticPageGenerationTimeout: 300,
+  experimental: {
+    cpus: 1,
+  },
 
   compiler: {
     styledComponents: true,
@@ -278,6 +282,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
     let placePaths = {};
     let areaPaths = {};
     let categoryAreaPaths = {};
+    let destinationPaths = {};
 
     const slugify = (value) =>
       String(value || '')
@@ -386,6 +391,28 @@ const nextConfig = withPWA(withBundleAnalyzer({
       categoryAreaPaths = {};
     }
 
+    try {
+      const destinationsFile = join(process.cwd(), 'public', 'data', 'islands.json');
+      const parsed = JSON.parse(readFileSync(destinationsFile, 'utf8'));
+      const destinations = Array.isArray(parsed) ? parsed : [];
+
+      destinationPaths = destinations.reduce((acc, destination) => {
+        const id = String(destination?.id || '').trim();
+        if (!id) {
+          return acc;
+        }
+
+        acc[`/destination/${id}`] = {
+          page: '/destination/[id]',
+          params: { id },
+        };
+
+        return acc;
+      }, {});
+    } catch {
+      destinationPaths = {};
+    }
+
     const pathMap = {
       '/': { page: '/' },
       '/terms': { page: '/terms' },
@@ -400,6 +427,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
         page: '/blog/[slug]',
         params: { slug: 'greek-bakeries-brunch-coffee-guide' },
       },
+      ...destinationPaths,
       ...categoryAreaPaths,
       ...areaPaths,
       ...placePaths,

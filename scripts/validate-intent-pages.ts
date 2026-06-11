@@ -10,6 +10,7 @@ type QaIssue = {
     | 'missing_h1'
     | 'missing_canonical'
     | 'missing_jsonld'
+    | 'missing_internal_hub_links'
     | 'invalid_area_route'
     | 'invalid_category_area_route'
     | 'duplicate_route';
@@ -30,6 +31,18 @@ function validateTemplateMarkers(filePath: string, issues: QaIssue[]): void {
   }
   if (!hasText(content, 'application/ld+json')) {
     issues.push({ code: 'missing_jsonld', detail: `${filePath} is missing JSON-LD output` });
+  }
+
+  const hasPlaceLinks = hasText(content, 'href={`/place/');
+  const hasAreaLinks = hasText(content, 'href={`/area/');
+  const hasCategoryAreaLinks = hasText(content, 'href={`/${item.categorySlug}/${payload.area.urlSlug}`}');
+  const hasBlogLinks = hasText(content, 'href={`/blog/');
+
+  if (!hasPlaceLinks || !hasAreaLinks || !hasCategoryAreaLinks || !hasBlogLinks) {
+    issues.push({
+      code: 'missing_internal_hub_links',
+      detail: `${filePath} is missing one or more internal hub link sections (place/area/category/blog)`,
+    });
   }
 }
 

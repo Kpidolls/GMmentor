@@ -1,112 +1,152 @@
 [
-  {
-    "key": "usefulApps",
-    "id": "tickerItems_c87ef205ddca",
-    "slug": "usefulapps-c87e"
-  },
-  {
-    "key": "accommodation",
-    "id": "tickerItems_8e9d8d33a0ce",
-    "slug": "accommodation-8e9d"
-  },
-  {
-    "key": "bankAtms",
-    "id": "tickerItems_e341c112dab3",
-    "slug": "bankatms-e341"
-  },
-  {
-    "key": "orderFood",
-    "id": "tickerItems_ee493fac7bb6",
-    "slug": "orderfood-ee49"
-  },
-  {
-    "key": "ferryTickets",
-    "id": "tickerItems_3eca5b22103b",
-    "slug": "ferrytickets-3eca"
-  },
-  {
-    "key": "health",
-    "id": "tickerItems_f62dd3a51fd4",
-    "slug": "health-f62d"
-  },
-  {
-    "key": "handyman",
-    "id": "tickerItems_765a207f24ed",
-    "slug": "handyman-765a"
-  },
-  {
-    "key": "shopping",
-    "id": "tickerItems_97f8c3fd713f",
-    "slug": "shopping-97f8"
-  },
-  {
-    "key": "taxi",
-    "id": "tickerItems_e93f9615dba6",
-    "slug": "taxi-e93f"
-  },
-  {
-    "key": "carRentals",
-    "id": "tickerItems_ff06e6d800de",
-    "slug": "carrentals-ff06"
-  },
-  {
-    "key": "luggageStorage",
-    "id": "tickerItems_cd3515893aa3",
-    "slug": "luggagestorage-cd35"
-  },
-  {
-    "key": "events",
-    "id": "tickerItems_2c5ab19bcf52",
-    "slug": "events-2c5a"
-  },
-  {
-    "key": "eSim",
-    "id": "tickerItems_e17a5b2674f0",
-    "slug": "esim-e17a"
-  },
-  {
-    "key": "travelInsurance",
-    "id": "tickerItems_c9c6e7ee0d28",
-    "slug": "travelinsurance-c9c6"
-  },
-  {
-    "key": "language",
-    "id": "tickerItems_2f8ef8eaf11e",
-    "slug": "language-2f8e"
-  },
-  {
-    "key": "planning",
-    "id": "tickerItems_c5a220af8973",
-    "slug": "planning-c5a2"
-  },
-  {
-    "key": "tours",
-    "id": "tickerItems_dfad86ac83a6",
-    "slug": "tours-dfad"
-  },
-  {
-    "key": "parking",
-    "id": "tickerItems_d77fb19b3dec",
-    "slug": "parking-d77f"
-  },
-  {
-    "key": "expenseTracker",
-    "id": "tickerItems_2757e75c6271",
-    "slug": "expensetracker-2757"
-  },
-  {
-    "key": "welcomePickups",
-    "id": "tickerItems_64f041421f11",
-    "slug": "welcomepickups-64f0"
-  },
-  {
-    "key": "moovit",
-    "id": "tickerItems_aab89cb9ebb2",
-    "slug": "moovit-aab8"
-  },
-  {
-    "key": "revolut",
-    "id": "tickerItems_823bf8c82161",
-    "slug": "revolut-823b"
-  }
+    {
+        "destinationId":  "athens",
+        "id":  "tickerDest_01_athens",
+        "slug":  "destination-athens"
+    },
+    {
+        "destinationId":  "island-crete",
+        "id":  "tickerDest_02_island-crete",
+        "slug":  "destination-island-crete"
+    },
+    {
+        "destinationId":  "thessaloniki",
+        "id":  "tickerDest_03_thessaloniki",
+        "slug":  "destination-thessaloniki"
+    },
+    {
+        "destinationId":  "island-mykonos",
+        "id":  "tickerDest_04_island-mykonos",
+        "slug":  "destination-island-mykonos"
+    },
+    {
+        "destinationId":  "island-santorini",
+        "id":  "tickerDest_05_island-santorini",
+        "slug":  "destination-island-santorini"
+    },
+    {
+        "destinationId":  "island-rhodes",
+        "id":  "tickerDest_06_island-rhodes",
+        "slug":  "destination-island-rhodes"
+    },
+    {
+        "destinationId":  "island-aegina",
+        "id":  "tickerDest_07_island-aegina",
+        "slug":  "destination-island-aegina"
+    },
+    {
+        "destinationId":  "island-corfu",
+        "id":  "tickerDest_08_island-corfu",
+        "slug":  "destination-island-corfu"
+    },
+    {
+        "destinationId":  "island-paros",
+        "id":  "tickerDest_09_island-paros",
+        "slug":  "destination-island-paros"
+    },
+    {
+        "destinationId":  "island-zakynthos",
+        "id":  "tickerDest_10_island-zakynthos",
+        "slug":  "destination-island-zakynthos"
+    },
+    {
+        "destinationId":  "island-leukada",
+        "id":  "tickerDest_11_island-leukada",
+        "slug":  "destination-island-leukada"
+    },
+    {
+        "destinationId":  "island-skiathos",
+        "id":  "tickerDest_12_island-skiathos",
+        "slug":  "destination-island-skiathos"
+    },
+    {
+        "destinationId":  "island-naxos",
+        "id":  "tickerDest_13_island-naxos",
+        "slug":  "destination-island-naxos"
+    },
+    {
+        "destinationId":  "island-karpathos",
+        "id":  "tickerDest_14_island-karpathos",
+        "slug":  "destination-island-karpathos"
+    },
+    {
+        "destinationId":  "island-syros",
+        "id":  "tickerDest_15_island-syros",
+        "slug":  "destination-island-syros"
+    },
+    {
+        "destinationId":  "island-kos",
+        "id":  "tickerDest_16_island-kos",
+        "slug":  "destination-island-kos"
+    },
+    {
+        "destinationId":  "island-kefalonia",
+        "id":  "tickerDest_17_island-kefalonia",
+        "slug":  "destination-island-kefalonia"
+    },
+    {
+        "destinationId":  "island-kythnos",
+        "id":  "tickerDest_18_island-kythnos",
+        "slug":  "destination-island-kythnos"
+    },
+    {
+        "destinationId":  "island-skyros",
+        "id":  "tickerDest_19_island-skyros",
+        "slug":  "destination-island-skyros"
+    },
+    {
+        "destinationId":  "island-lemnos",
+        "id":  "tickerDest_20_island-lemnos",
+        "slug":  "destination-island-lemnos"
+    },
+    {
+        "destinationId":  "island-sifnos",
+        "id":  "tickerDest_21_island-sifnos",
+        "slug":  "destination-island-sifnos"
+    },
+    {
+        "destinationId":  "halkidiki",
+        "id":  "tickerDest_22_halkidiki",
+        "slug":  "destination-halkidiki"
+    },
+    {
+        "destinationId":  "island-evia",
+        "id":  "tickerDest_23_island-evia",
+        "slug":  "destination-island-evia"
+    },
+    {
+        "destinationId":  "island-chios",
+        "id":  "tickerDest_24_island-chios",
+        "slug":  "destination-island-chios"
+    },
+    {
+        "destinationId":  "island-tinos",
+        "id":  "tickerDest_25_island-tinos",
+        "slug":  "destination-island-tinos"
+    },
+    {
+        "destinationId":  "nafplio",
+        "id":  "tickerDest_26_nafplio",
+        "slug":  "destination-nafplio"
+    },
+    {
+        "destinationId":  "island-astypalea",
+        "id":  "tickerDest_27_island-astypalea",
+        "slug":  "destination-island-astypalea"
+    },
+    {
+        "destinationId":  "island-hydra",
+        "id":  "tickerDest_28_island-hydra",
+        "slug":  "destination-island-hydra"
+    },
+    {
+        "destinationId":  "island-amorgos",
+        "id":  "tickerDest_29_island-amorgos",
+        "slug":  "destination-island-amorgos"
+    },
+    {
+        "destinationId":  "pelion",
+        "id":  "tickerDest_30_pelion",
+        "slug":  "destination-pelion"
+    }
 ]

@@ -67,7 +67,7 @@ const TravelInsurance = () => {
             <a
               href="https://safetywing.com/?referenceID=26193325&utm_source=26193325&utm_medium=Ambassador"
               target="_self"
-              rel="noopener noreferrer"
+              rel="nofollow sponsored noopener noreferrer"
               className="px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-blue-600 text-white font-medium rounded-full shadow-lg hover:bg-blue-700 hover:shadow-xl transition text-base sm:text-lg lg:text-xl"
               aria-label={t('travelInsurance.ctaAriaLabel', 'Sign up for travel insurance')}
             >

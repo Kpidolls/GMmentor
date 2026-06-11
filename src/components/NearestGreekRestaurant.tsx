@@ -97,7 +97,7 @@ const NearestGreekRestaurant: React.FC = () => {
   const currentRestaurant = nearestRestaurants?.[currentIndex];
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6 max-w-md mx-auto">
+    <div className="bg-white rounded-xl border border-slate-200 shadow-md p-6 max-w-md mx-auto">
       <div className="text-center mb-6">
         <h3 className="text-xl font-bold text-gray-800 mb-2">
           {t('nearestGreekRestaurant.title', '🎯 Find Your Nearest Greek Taverna')}
@@ -110,7 +110,7 @@ const NearestGreekRestaurant: React.FC = () => {
       {!userLocation && !loading && (
         <button
           onClick={getUserLocation}
-          className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition duration-200 flex items-center justify-center gap-2"
+          className="w-full bg-gradient-to-r from-slate-700 to-slate-900 text-white py-3 px-4 rounded-lg font-medium hover:from-slate-800 hover:to-black transition duration-200 flex items-center justify-center gap-2"
         >
           <span>📍</span>
           {t('nearestGreekRestaurant.findButton', 'Find Nearest Restaurants')}
@@ -138,7 +138,7 @@ const NearestGreekRestaurant: React.FC = () => {
 
       {currentRestaurant && (
         <div className="space-y-4">
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-4">
+          <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
             <div className="flex justify-between items-start mb-3">
               <div className="flex-1">
                 <h4 className="font-semibold text-gray-800 mb-1">
@@ -148,7 +148,7 @@ const NearestGreekRestaurant: React.FC = () => {
                   📍 {currentRestaurant.restaurant.address}
                 </p>
                 <div className="flex items-center gap-2">
-                  <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+                  <span className="bg-gradient-to-r from-slate-700 to-slate-900 text-white px-2 py-1 rounded-full text-xs font-medium">
                     📏 {formatDistance(currentRestaurant.distance)}
                   </span>
                   <span className="text-gray-500 text-xs">
@@ -167,7 +167,7 @@ const NearestGreekRestaurant: React.FC = () => {
                 href={currentRestaurant.restaurant.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-green-700 text-white py-2 px-3 rounded-lg text-sm font-medium hover:bg-green-800 transition duration-200 text-center"
+                className="flex-1 px-3 py-2 text-sm font-semibold rounded-lg text-white transition-colors duration-200 text-center bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
               >
                 {t('nearestGreekRestaurant.viewOnMaps', 'View on Maps')}
               </a>

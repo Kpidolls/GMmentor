@@ -37,7 +37,7 @@ export default function MobileDataPage() {
               <Link
                 href="https://www.airalo.com/profile/referral"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow sponsored noopener noreferrer"
               >
                 <Image
                   src="/assets/images/airalo.webp"
@@ -84,7 +84,7 @@ export default function MobileDataPage() {
                   href="https://www.airalo.com/profile/referral"
                   className="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-full text-sm sm:text-base font-medium hover:bg-blue-700 transition"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow sponsored noopener noreferrer"
                 >
                   {t("airalo.ctaButton", "Get Your Airalo eSIM")}
                 </Link>

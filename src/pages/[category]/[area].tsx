@@ -23,6 +23,11 @@ const SITE_URL = 'https://googlementor.com';
 type CategoryAreaPageProps = {
   payload: IntentResultsPayload;
   hasAreaGuidePage: boolean;
+  topGuides: Array<{
+    slug: string;
+    title: string;
+    date: string;
+  }>;
 };
 
 function buildBreadcrumbJsonLd(categorySlug: string, areaSlug: string, categoryName: string, areaName: string): Record<string, unknown> {
@@ -71,6 +76,28 @@ function buildCollectionJsonLd(payload: IntentResultsPayload, canonicalUrl: stri
         url: item.entity.slug ? `${SITE_URL}/place/${item.entity.slug}` : item.entity.url || canonicalUrl,
       })),
     },
+  };
+}
+
+function buildGuideItemListJsonLd(
+  categoryName: string,
+  areaName: string,
+  canonicalUrl: string,
+  topGuides: Array<{ slug: string; title: string }>
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Top guides for ${categoryName} in ${areaName}`,
+    url: canonicalUrl,
+    numberOfItems: topGuides.length,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    itemListElement: topGuides.map((guide, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: guide.title,
+      url: `${SITE_URL}/blog/${guide.slug}`,
+    })),
   };
 }
 
@@ -145,15 +172,45 @@ export const getStaticProps: GetStaticProps<CategoryAreaPageProps> = async ({ pa
     return { notFound: true };
   }
 
+  const { getMentionedGuidesForEntity } = await import('../../lib/knowledgeGraph');
+  const topGuidesMap = new Map<string, { slug: string; title: string; date: string }>();
+
+  for (const rankedEntity of payload.entities.slice(0, 12)) {
+    const guides = getMentionedGuidesForEntity(rankedEntity.entity, 3);
+    for (const guide of guides) {
+      if (topGuidesMap.has(guide.slug)) {
+        continue;
+      }
+      topGuidesMap.set(guide.slug, {
+        slug: guide.slug,
+        title: guide.title,
+        date: guide.date,
+      });
+
+      if (topGuidesMap.size >= 8) {
+        break;
+      }
+    }
+
+    if (topGuidesMap.size >= 8) {
+      break;
+    }
+  }
+
+  const topGuides = Array.from(topGuidesMap.values()).sort((left, right) =>
+    right.date.localeCompare(left.date)
+  );
+
   return {
     props: {
       payload,
       hasAreaGuidePage: Boolean(areaGuidePayload?.passesThreshold),
+      topGuides,
     },
   };
 };
 
-export default function CategoryAreaPage({ payload, hasAreaGuidePage }: CategoryAreaPageProps) {
+export default function CategoryAreaPage({ payload, hasAreaGuidePage, topGuides }: CategoryAreaPageProps) {
   if (!payload.category) {
     return null;
   }
@@ -169,6 +226,14 @@ export default function CategoryAreaPage({ payload, hasAreaGuidePage }: Category
     payload.area.name
   );
   const collectionJsonLd = buildCollectionJsonLd(payload, canonicalUrl);
+  const guidesItemListJsonLd =
+    topGuides.length > 0
+      ? buildGuideItemListJsonLd(payload.category.name, payload.area.name, canonicalUrl, topGuides)
+      : null;
+  const topAttractions = payload.entities.filter((item) => item.entity.categoryIds?.includes('attractions')).slice(0, 8);
+  const topRestaurants = payload.entities
+    .filter((item) => item.entity.kind === 'restaurant' && !item.entity.categoryIds?.includes('attractions'))
+    .slice(0, 8);
 
   return (
     <Container maxW="5xl" py={10}>
@@ -184,6 +249,12 @@ export default function CategoryAreaPage({ payload, hasAreaGuidePage }: Category
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
         />
+        {guidesItemListJsonLd ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(guidesItemListJsonLd) }}
+          />
+        ) : null}
       </Head>
 
       <Box mb={8}>
@@ -217,6 +288,61 @@ export default function CategoryAreaPage({ payload, hasAreaGuidePage }: Category
         </Box>
       ) : null}
 
+      {topRestaurants.length > 0 ? (
+        <Box mb={8}>
+          <Heading as="h2" size="md" mb={3}>Top restaurants nearby</Heading>
+          <UnorderedList spacing={2} ml={5}>
+            {topRestaurants.map((item) => (
+              <ListItem key={item.entity.id}>
+                {item.entity.slug ? (
+                  <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
+                    {item.entity.name}
+                  </Link>
+                ) : (
+                  <Text as="span">{item.entity.name}</Text>
+                )}{' '}
+                <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
+      ) : null}
+
+      {topAttractions.length > 0 ? (
+        <Box mb={8}>
+          <Heading as="h2" size="md" mb={3}>Top attractions nearby</Heading>
+          <UnorderedList spacing={2} ml={5}>
+            {topAttractions.map((item) => (
+              <ListItem key={item.entity.id}>
+                {item.entity.slug ? (
+                  <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
+                    {item.entity.name}
+                  </Link>
+                ) : (
+                  <Text as="span">{item.entity.name}</Text>
+                )}{' '}
+                <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
+      ) : null}
+
+      {topGuides.length > 0 ? (
+        <Box mb={8}>
+          <Heading as="h2" size="md" mb={3}>Top guides for this area</Heading>
+          <UnorderedList spacing={2} ml={5}>
+            {topGuides.map((guide) => (
+              <ListItem key={guide.slug}>
+                <Link as={NextLink} href={`/blog/${guide.slug}`} color="blue.600">
+                  {guide.title}
+                </Link>
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
+      ) : null}
+
       {payload.relatedAreas.some((item) => item.passesThreshold) ? (
         <Box mb={8}>
           <Heading as="h2" size="md" mb={3}>Nearby areas for this category</Heading>
@@ -237,7 +363,7 @@ export default function CategoryAreaPage({ payload, hasAreaGuidePage }: Category
 
       {payload.relatedCategories.some((item) => item.passesThreshold) ? (
         <Box mb={8}>
-          <Heading as="h2" size="md" mb={3}>Explore more categories in {payload.area.name}</Heading>
+          <Heading as="h2" size="md" mb={3}>Related lists in {payload.area.name}</Heading>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
             {payload.relatedCategories
               .filter((item) => item.passesThreshold)

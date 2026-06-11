@@ -362,7 +362,7 @@
     "resultsCount": "Showing {{count}} destinations",
     "destinationTypeIsland": "Island",
     "destinationTypeMainland": "Mainland",
-    "openCuratedMap": "Open Curated Map",
+    "openCuratedMap": "Open Map",
     "openCuratedMapShort": "Map",
     "shareMap": "Share Map",
     "shareMapShort": "Share",
@@ -1134,6 +1134,8 @@
     "facebook": "https://www.facebook.com/profile.php?id=61577374641336"
   },
   "ticker": {
+    "destinationLead": "Tap a destination to open its map.",
+    "destinationAriaLabel": "Open points of interest map for {{destination}}",
     "usefulApps": "USEFUL RESOURCES: GREECE",
     "accommodation": "Accommodation: Booking.com - Airbnb",
     "bankAtms": "Bank ATMs: ALPHA - Piraeus - National Bank Greece - Eurobank (avoid Euronet)",

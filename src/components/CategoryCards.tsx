@@ -60,7 +60,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ name, Icon, link, descripti
       href={link}
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noopener noreferrer' : undefined}
-      className="group relative bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg hover:border-[#0878fe]/20 transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0878fe] overflow-hidden p-4"
+      className="group relative bg-white rounded-xl border border-slate-200 hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-400 overflow-hidden p-4"
       aria-label={t('aria.exploreCategory', { name: t(name) })}
     >
       {/* Subtle background gradient on hover */}
@@ -69,20 +69,20 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ name, Icon, link, descripti
       <div className="relative z-10">
         {/* Icon and External Link Indicator */}
         <div className="flex items-center justify-between mb-3">
-          <div className="bg-gradient-to-br from-[#e5f1ff] to-[#d1e9ff] p-3 rounded-lg group-hover:scale-110 transition-transform duration-300">
-            <Icon className="w-6 h-6 text-[#0878fe] group-hover:text-[#0053b8] transition-colors duration-300" />
+          <div className="bg-gradient-to-br from-slate-100 to-slate-200 p-3 rounded-lg group-hover:scale-110 transition-transform duration-300">
+            <Icon className="w-6 h-6 text-slate-700 group-hover:text-slate-900 transition-colors duration-300" />
           </div>
           
           {isExternal && (
             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <FaExternalLinkAlt className="w-3 h-3 text-gray-400 group-hover:text-[#0878fe]" />
+              <FaExternalLinkAlt className="w-3 h-3 text-gray-400 group-hover:text-slate-700" />
             </div>
           )}
         </div>
 
         {/* Content */}
         <div>
-          <h3 className="font-semibold font-primary text-gray-800 group-hover:text-[#0878fe] transition-colors duration-300 mb-1 text-sm sm:text-base">
+            <h3 className="font-semibold font-primary text-gray-800 group-hover:text-slate-900 transition-colors duration-300 mb-1 text-sm sm:text-base">
             {t(name)}
           </h3>
           
@@ -92,7 +92,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ name, Icon, link, descripti
         </div>
 
         {/* Action indicator */}
-        <div className="mt-3 flex items-center text-[#0878fe] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
+        <div className="mt-3 flex items-center text-slate-700 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-1 group-hover:translate-y-0">
           <span className="text-xs font-medium">
             {t('categories.explore', 'Explore')}
           </span>

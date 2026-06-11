@@ -61,16 +61,16 @@ export default function BlogHighlight({ allPosts }: Props) {
               <Link 
                 key={href} 
                 href={`/blog/${href}`} 
-                className="block h-full group no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-2xl"
+                className="block h-full group no-underline focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 rounded-xl"
               >
                 {/* Semantic article with proper styling and hover effects */}
                 <article 
-                  className="bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-200 p-6 flex flex-col h-full cursor-pointer hover:border-blue-200"
+                  className="bg-white border border-slate-200 rounded-xl hover:shadow-md hover:-translate-y-1 transition-all duration-200 p-6 flex flex-col h-full cursor-pointer hover:border-slate-400 hover:bg-slate-50"
                   role="article"
                 >
                   <div className="flex-1">
                     {/* Clickable title */}
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-slate-900 transition-colors duration-200">
                       {post.title}
                     </h3>
                     {/* Clickable summary */}
@@ -82,7 +82,7 @@ export default function BlogHighlight({ allPosts }: Props) {
                     <time dateTime={post.date} className="text-xs text-gray-500">
                       {formatPostDate(post.date, resolvedLanguage, { year: 'numeric', month: 'short', day: 'numeric' })}
                     </time>
-                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 group-hover:text-blue-800 transition-colors duration-200">
+                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-slate-700 group-hover:text-slate-900 transition-colors duration-200">
                       {t('blog.readMore', 'Read more')}
                       <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
                     </span>
@@ -96,7 +96,7 @@ export default function BlogHighlight({ allPosts }: Props) {
         <div className="text-center mt-8">
           <Link 
             href="/blog" 
-            className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-medium shadow hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="inline-block px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-900 text-white rounded-lg font-medium shadow hover:from-slate-800 hover:to-black hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
           >
             {t('blog.viewAll', 'View all articles')}
             <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>

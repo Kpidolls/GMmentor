@@ -58,8 +58,21 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
     return { notFound: true };
   }
 
-  const nearbyWithDistance = index.entities
-    .filter((candidate) => candidate.id !== entity.id)
+  const nearbyCandidates = index.entities.filter((candidate) => {
+    if (candidate.id === entity.id) {
+      return false;
+    }
+
+    // Build-time optimization: keep candidates local by region or coordinate box.
+    const inSameRegion = Boolean(entity.region && candidate.region && candidate.region === entity.region);
+    const inBoundingBox =
+      Math.abs(candidate.lat - entity.lat) <= 0.28 &&
+      Math.abs(candidate.lng - entity.lng) <= 0.28;
+
+    return inSameRegion || inBoundingBox;
+  });
+
+  const nearbyWithDistance = nearbyCandidates
     .map((candidate) => ({
       ...candidate,
       distanceKm: calculateDistance(entity.lat, entity.lng, candidate.lat, candidate.lng),

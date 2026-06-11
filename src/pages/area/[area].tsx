@@ -22,6 +22,11 @@ const SITE_URL = 'https://googlementor.com';
 
 type AreaPageProps = {
   payload: IntentResultsPayload;
+  topGuides: Array<{
+    slug: string;
+    title: string;
+    date: string;
+  }>;
 };
 
 function buildBreadcrumbJsonLd(areaSlug: string, areaName: string): Record<string, unknown> {
@@ -71,6 +76,27 @@ function buildCollectionJsonLd(payload: IntentResultsPayload, canonicalUrl: stri
   };
 }
 
+function buildGuideItemListJsonLd(
+  areaName: string,
+  canonicalUrl: string,
+  topGuides: Array<{ slug: string; title: string }>
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Top guides for ${areaName}`,
+    url: canonicalUrl,
+    numberOfItems: topGuides.length,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    itemListElement: topGuides.map((guide, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: guide.title,
+      url: `${SITE_URL}/blog/${guide.slug}`,
+    })),
+  };
+}
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const index = loadEntitiesIndex();
   const engine = createIntentEngine({ entities: index.entities });
@@ -106,20 +132,57 @@ export const getStaticProps: GetStaticProps<AreaPageProps> = async ({ params }) 
     return { notFound: true };
   }
 
+  const { getMentionedGuidesForEntity } = await import('../../lib/knowledgeGraph');
+  const topGuidesMap = new Map<string, { slug: string; title: string; date: string }>();
+
+  for (const rankedEntity of payload.entities.slice(0, 12)) {
+    const guides = getMentionedGuidesForEntity(rankedEntity.entity, 3);
+    for (const guide of guides) {
+      if (topGuidesMap.has(guide.slug)) {
+        continue;
+      }
+      topGuidesMap.set(guide.slug, {
+        slug: guide.slug,
+        title: guide.title,
+        date: guide.date,
+      });
+
+      if (topGuidesMap.size >= 8) {
+        break;
+      }
+    }
+
+    if (topGuidesMap.size >= 8) {
+      break;
+    }
+  }
+
+  const topGuides = Array.from(topGuidesMap.values()).sort((left, right) =>
+    right.date.localeCompare(left.date)
+  );
+
   return {
     props: {
       payload,
+      topGuides,
     },
   };
 };
 
-export default function AreaPage({ payload }: AreaPageProps) {
+export default function AreaPage({ payload, topGuides }: AreaPageProps) {
   const canonicalUrl = `${SITE_URL}/area/${payload.area.urlSlug}`;
   const title = `Best places in ${payload.area.name} | Googlementor`;
   const description = `Discover ${payload.counts.totalInArea} curated places in ${payload.area.name}, with nearby alternatives and top categories.`;
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(payload.area.urlSlug, payload.area.name);
   const collectionJsonLd = buildCollectionJsonLd(payload, canonicalUrl);
+  const topAttractions = payload.entities.filter((item) => item.entity.categoryIds?.includes('attractions')).slice(0, 10);
+  const topRestaurants = payload.entities
+    .filter((item) => item.entity.kind === 'restaurant' && !item.entity.categoryIds?.includes('attractions'))
+    .slice(0, 10);
+  const topPlaces = payload.entities.slice(0, 12);
+  const guidesItemListJsonLd =
+    topGuides.length > 0 ? buildGuideItemListJsonLd(payload.area.name, canonicalUrl, topGuides) : null;
 
   return (
     <Container maxW="5xl" py={10}>
@@ -135,6 +198,12 @@ export default function AreaPage({ payload }: AreaPageProps) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
         />
+        {guidesItemListJsonLd ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(guidesItemListJsonLd) }}
+          />
+        ) : null}
       </Head>
 
       <Box mb={8}>
@@ -153,7 +222,7 @@ export default function AreaPage({ payload }: AreaPageProps) {
 
       {payload.relatedCategories.length > 0 ? (
         <Box mb={8}>
-          <Heading as="h2" size="md" mb={3}>Top categories in this area</Heading>
+          <Heading as="h2" size="md" mb={3}>Related lists in this area</Heading>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
             {payload.relatedCategories.map((item) => (
               <Box key={item.categoryId} borderWidth="1px" borderRadius="lg" p={4}>
@@ -181,10 +250,65 @@ export default function AreaPage({ payload }: AreaPageProps) {
         </Box>
       ) : null}
 
+      {topAttractions.length > 0 ? (
+        <Box mb={8}>
+          <Heading as="h2" size="md" mb={3}>Top attractions in {payload.area.name}</Heading>
+          <UnorderedList spacing={2} ml={5}>
+            {topAttractions.map((item) => (
+              <ListItem key={item.entity.id}>
+                {item.entity.slug ? (
+                  <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
+                    {item.entity.name}
+                  </Link>
+                ) : (
+                  <Text as="span">{item.entity.name}</Text>
+                )}{' '}
+                <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
+      ) : null}
+
+      {topRestaurants.length > 0 ? (
+        <Box mb={8}>
+          <Heading as="h2" size="md" mb={3}>Top restaurants in {payload.area.name}</Heading>
+          <UnorderedList spacing={2} ml={5}>
+            {topRestaurants.map((item) => (
+              <ListItem key={item.entity.id}>
+                {item.entity.slug ? (
+                  <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
+                    {item.entity.name}
+                  </Link>
+                ) : (
+                  <Text as="span">{item.entity.name}</Text>
+                )}{' '}
+                <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
+      ) : null}
+
+      {topGuides.length > 0 ? (
+        <Box mb={8}>
+          <Heading as="h2" size="md" mb={3}>Top guides for {payload.area.name}</Heading>
+          <UnorderedList spacing={2} ml={5}>
+            {topGuides.map((guide) => (
+              <ListItem key={guide.slug}>
+                <Link as={NextLink} href={`/blog/${guide.slug}`} color="blue.600">
+                  {guide.title}
+                </Link>
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
+      ) : null}
+
       <Box mb={8}>
         <Heading as="h2" size="md" mb={3}>Top places near {payload.area.name}</Heading>
         <UnorderedList spacing={2} ml={5}>
-          {payload.entities.map((item) => (
+          {topPlaces.map((item) => (
             <ListItem key={item.entity.id}>
               {item.entity.slug ? (
                 <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">

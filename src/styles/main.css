@@ -41,6 +41,35 @@ a:hover {
   border: 1px solid #ccc;
 }
 
+.ticker-container a:hover {
+  border-bottom-width: 0;
+  border-color: transparent;
+}
+
+.ticker-pill-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid #dbeafe;
+  background: #ffffff;
+  color: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+}
+
+.ticker-pill-link:hover {
+  color: #1d4ed8;
+  border-color: #93c5fd;
+  text-decoration: none;
+}
+
+.ticker-pill-link:focus-visible {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.45);
+}
+
 .ticker-text {
   font-size: 16px;
   color: #333;
@@ -89,15 +118,29 @@ a:hover {
 
 @keyframes scroll {
   0% {
-    transform: translateX(100%);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
-.animate-scroll {
-  animation: scroll 40s linear infinite;
+.animate-scroll-track {
+  animation: scroll var(--ticker-duration, 90s) linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-track {
+    animation: none;
+    transform: none;
+  }
+
+  .ticker-container {
+    overflow-x: auto;
+  }
 }
 
 .fit-content-span {

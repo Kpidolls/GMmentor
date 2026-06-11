@@ -72,7 +72,7 @@ const Store: React.FC = () => {
               <a
                 href={product.link}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow sponsored noopener noreferrer"
                 className="block"
               >
                 <img
@@ -94,7 +94,7 @@ const Store: React.FC = () => {
                   <a
                     href={product.link}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow sponsored noopener noreferrer"
                     className={`inline-flex items-center text-xs font-medium px-2 py-1 rounded ${
                       product.link?.includes('amazon')
                         ? 'bg-black text-white'
@@ -112,7 +112,7 @@ const Store: React.FC = () => {
                   <a
                     href={product.link}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow sponsored noopener noreferrer"
                     className="inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 transition duration-300 text-center"
                   >
                     {t('store.products.learnMoreButton', { defaultValue: 'Learn More' })}

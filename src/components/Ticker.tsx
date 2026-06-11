@@ -1,50 +1,136 @@
 import React from 'react';
 import { Box, Flex, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import tickerItems from '../data/tickerItems.json';
+import islandsData from '../data/islands.json';
+
+type TickerDestinationItem = {
+  destinationId: string;
+  id: string;
+  slug: string;
+};
+
+type DestinationEntry = {
+  id: string;
+  title: string;
+  img: string;
+  link: string;
+  target?: string;
+  rel?: string;
+};
+
+const DESTINATION_TICKER_LIMIT = 30;
+const TICKER_SCROLL_DURATION_SECONDS = 90;
 
 function MyTicker() {
   const { t } = useTranslation();
+  const destinationsById = new Map(
+    (islandsData as DestinationEntry[]).map((destination) => [String(destination.id).trim(), destination])
+  );
+  const tickerDestinations = (tickerItems as TickerDestinationItem[])
+    .map((item) => destinationsById.get(String(item.destinationId).trim()))
+    .filter((destination): destination is DestinationEntry => Boolean(destination))
+    .slice(0, DESTINATION_TICKER_LIMIT);
+  const loopedDestinations = [...tickerDestinations, ...tickerDestinations];
+  const destinationLead = t(
+    'ticker.destinationLead',
+    'Tap a destination to open its map.'
+  );
+  const getDestinationHref = (destinationId: string) => `/destination/${encodeURIComponent(String(destinationId).trim())}`;
 
   return (
     <Box
+      as="nav"
       className="ticker-container"
+      aria-label={t('ticker.destinationNavAria', 'Destination ticker')}
       position="relative"
       zIndex="20"
       width="100%"
-      overflow="hidden"
       color="black"
       py="2"
+      style={{ '--ticker-duration': `${TICKER_SCROLL_DURATION_SECONDS}s` } as React.CSSProperties}
       sx={{
-        '&:hover .animate-scroll': {
+        '&:hover .animate-scroll-track': {
           animationPlayState: 'paused',
         },
       }}
     >
-      <Flex
-        className="animate-scroll"
-        whiteSpace="nowrap"
-        minWidth="max-content"
-        gap="5"
-        animation="scroll 60s linear infinite"
-      >
-        {tickerItems.map((item, index) => {
-          const [highlight, ...rest] = t(`ticker.${item.key}`).split(':');
-          return (
-            <Text
-              key={index}
-              display="inline-block"
-              fontSize="sm"
-              fontWeight="medium"
-              px="2"
-            >
-              <Text as="span" color="#0878fe" fontWeight="bold">
-                {highlight}:
-              </Text>{' '}
-              <Text as="span">{rest.join(':')}</Text>
-            </Text>
-          );
-        })}
+      <Flex alignItems="center" gap="3" whiteSpace="nowrap">
+        <Text
+          as="span"
+          display="inline-flex"
+          alignItems="center"
+          fontSize="sm"
+          fontWeight="semibold"
+          px="3"
+          py="1"
+          borderRadius="full"
+          bg="whiteAlpha.900"
+          border="1px solid"
+          borderColor="gray.300"
+          color="gray.700"
+          flexShrink={0}
+        >
+          {destinationLead}
+        </Text>
+
+        <Box overflow="hidden" flex="1" minW={0}>
+          <Box
+            as="ul"
+            className="animate-scroll-track"
+            display="flex"
+            alignItems="center"
+            whiteSpace="nowrap"
+            minWidth="max-content"
+            gap="4"
+            m="0"
+            p="0"
+            listStyleType="none"
+          >
+            {loopedDestinations.map((destination, index) => {
+              const destinationLabel = t(destination.title, destination.id);
+              return (
+                <Box
+                  as="li"
+                  key={`${destination.id}-${index}`}
+                  display="inline-flex"
+                  alignItems="center"
+                >
+                  <Link
+                    href={getDestinationHref(destination.id)}
+                    className="ticker-pill-link"
+                    title={t('ticker.destinationTitle', 'GoogleMentor curated points of interest for {{destination}}', {
+                      destination: destinationLabel,
+                    })}
+                    aria-label={t('ticker.destinationAriaLabel', 'Open destination page for {{destination}}', {
+                      destination: destinationLabel,
+                    })}
+                  >
+                    <Box
+                      as="img"
+                      src={destination.img}
+                      alt={destinationLabel}
+                      width={{ base: '24px', md: '28px' }}
+                      height={{ base: '24px', md: '28px' }}
+                      minWidth={{ base: '24px', md: '28px' }}
+                      borderRadius="full"
+                      objectFit="cover"
+                      mr="2"
+                      border="1px solid"
+                      borderColor="blue.200"
+                      loading="eager"
+                      decoding="async"
+                    />
+                    <Text as="span" color="blue.800" fontWeight="extrabold" mr="1">
+                      {destinationLabel}
+                    </Text>
+                  </Link>
+                </Box>
+              );
+            })}
+          </Box>
+        </Box>
       </Flex>
     </Box>
   );

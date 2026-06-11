@@ -20,7 +20,7 @@ const Product = () => {
           <div
             key={index}
             id={option.id}
-            className="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
+            className="group text-left rounded-xl border overflow-hidden transition-all duration-300 flex flex-col h-full border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50 hover:shadow-md"
           >
             <div className="relative w-full aspect-square bg-gray-100 flex items-center justify-center overflow-hidden">
               <img
@@ -35,18 +35,18 @@ const Product = () => {
               />
             </div>
             <div className="p-4 flex flex-col flex-1">
-              <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2 h-8 sm:h-14 overflow-hidden text-center group-hover:text-blue-700 transition-colors duration-300">
+              <h3 className="text-xl font-semibold font-primary text-gray-800 mb-2 h-8 sm:h-14 overflow-hidden group-hover:text-slate-900 transition-colors duration-300">
                 {t(option.title)}
               </h3>
-              <p className="text-gray-600 font-secondary text-sm mb-2 sm:mb-4 min-h-[3.5em] sm:min-h-[5em] text-center">
+              <p className="text-gray-600 font-secondary text-sm mb-2 sm:mb-4 min-h-[3.5em] sm:min-h-[5em]">
                 {t(option.description)}
               </p>
-              <div className="flex flex-wrap gap-4 mt-auto justify-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-auto">
                 <a
                   href={option.link}
                   target={option.target}
                   rel={option.rel}
-                  className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-blue-700 text-white font-semibold rounded shadow hover:bg-blue-800 transition duration-300 text-center"
+                  className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg text-white transition-colors duration-200 text-center whitespace-nowrap truncate bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
                   aria-label={t('product.explore', { title: t(option.title) })}
                 >
                   {t('product.exploreButton')}
@@ -64,7 +64,7 @@ const Product = () => {
                       alert(t('product.shareNotSupported'));
                     }
                   }}
-                  className="flex-1 min-w-[120px] inline-block px-4 py-2 bg-green-700 text-white font-semibold rounded shadow hover:bg-green-800 transition duration-300 text-center"
+                  className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 whitespace-nowrap truncate bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
                   aria-label={t('product.share', { title: t(option.title) })}
                 >
                   {t('product.shareButton')}
