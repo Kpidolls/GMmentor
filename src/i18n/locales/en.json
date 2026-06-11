@@ -431,6 +431,8 @@
   "aria": {
     "exploreCategory": "Explore {{name}} category",
     "homepage": "Homepage",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
     "closeNotification": "Close notification",
     "backToTop": "Back to Top",
     "navigateTo": "Navigate to {{label}}",

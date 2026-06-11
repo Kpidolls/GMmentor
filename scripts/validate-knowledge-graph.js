@@ -6,7 +6,7 @@ const SITE_URL = 'https://googlementor.com';
 const ENTITIES_FILE = path.join(ROOT, 'public', 'data', 'entities.json');
 const OUT_PLACE_DIR = path.join(ROOT, 'out', 'place');
 const SITEMAP_FILE = path.join(ROOT, 'out', 'sitemap.xml');
-const SITEMAP_SHARD_FILE = path.join(ROOT, 'out', 'sitemap-0.xml');
+const SITEMAP_DIR = path.join(ROOT, 'out');
 const BLOG_DIR = path.join(ROOT, 'src', 'blog');
 const PRIORITY_GUIDE_SLUGS = new Set([
   'acropolis-complete-guide',
@@ -194,6 +194,18 @@ function parseSitemapPaths(xml) {
   }));
 }
 
+function getSitemapFiles() {
+  if (!fs.existsSync(SITEMAP_DIR)) {
+    return [];
+  }
+
+  return fs
+    .readdirSync(SITEMAP_DIR)
+    .filter((name) => /^sitemap(?:-\d+)?\.xml$/.test(name))
+    .map((name) => path.join(SITEMAP_DIR, name))
+    .sort((left, right) => left.localeCompare(right));
+}
+
 function main() {
   if (!fs.existsSync(ENTITIES_FILE)) {
     fail(`Missing entity index: ${path.relative(ROOT, ENTITIES_FILE)}`);
@@ -207,8 +219,9 @@ function main() {
     fail(`Missing sitemap: ${path.relative(ROOT, SITEMAP_FILE)}`);
   }
 
-  if (!fs.existsSync(SITEMAP_SHARD_FILE)) {
-    fail(`Missing sitemap shard: ${path.relative(ROOT, SITEMAP_SHARD_FILE)}`);
+  const sitemapFiles = getSitemapFiles();
+  if (!sitemapFiles.length) {
+    fail('Missing sitemap files in out/ (expected sitemap.xml and/or sitemap-*.xml).');
   }
 
   const entitiesIndex = readJson(ENTITIES_FILE);
@@ -220,7 +233,13 @@ function main() {
     fail(`Place page count mismatch: expected ${expectedCount}, found ${actualFiles.length}`);
   }
 
-  const sitemapPaths = parseSitemapPaths(fs.readFileSync(SITEMAP_FILE, 'utf8'));
+  const sitemapPaths = new Set();
+  for (const sitemapFile of sitemapFiles) {
+    const paths = parseSitemapPaths(fs.readFileSync(sitemapFile, 'utf8'));
+    for (const sitemapPath of paths) {
+      sitemapPaths.add(sitemapPath);
+    }
+  }
   const missingFromSitemap = [];
   const missingFiles = [];
   const invalidCanonical = [];

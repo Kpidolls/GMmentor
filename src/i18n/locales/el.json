@@ -431,6 +431,8 @@
   "aria": {
     "exploreCategory": "Εξερεύνησε την κατηγορία {{name}}",
     "homepage": "Αρχική Σελίδα",
+    "openMenu": "Άνοιγμα μενού",
+    "closeMenu": "Κλείσιμο μενού",
     "closeNotification": "Κλείσιμο ειδοποίησης",
     "backToTop": "Επιστροφή στην κορυφή",
     "navigateTo": "Μετάβαση σε {{label}}",
