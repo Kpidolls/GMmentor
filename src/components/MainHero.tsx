@@ -1552,7 +1552,7 @@ const MainHero = () => {
             ) : null}
             {showRestaurantFinder && (
               /* Restaurant Finder Results */
-              <div id="results-section" className="bg-white/85 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/60 shadow-2xl max-w-6xl mx-auto">
+              <div id="results-section" className="bg-white/85 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-white/60 shadow-2xl max-w-6xl mx-auto">
                 {loading && (
                   <div className="text-center py-4 xs:py-6 sm:py-8">
                     <div className="inline-block animate-spin rounded-full h-5 w-5 xs:h-6 xs:w-6 sm:h-8 sm:w-8 border-b-2 border-sky-600 mb-2 xs:mb-3 sm:mb-4"></div>
@@ -1669,8 +1669,8 @@ const MainHero = () => {
                 {currentRestaurant && nearestRestaurants && nearestRestaurants.length > 0 && (
                   <div className="space-y-3 xs:space-y-4 sm:space-y-6">
                     
-                    <div className="text-center mb-6 max-w-3xl mx-auto">
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-3">
+                      <div className="text-center mb-4 sm:mb-5 max-w-3xl mx-auto">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-2">
                         {selectedType === 'experience' && selectedExperienceType ? (
                           <>
                             <span className="text-2xl mr-2">{selectedExperienceType.icon}</span>
@@ -1693,7 +1693,7 @@ const MainHero = () => {
                           <>{t('restaurantFinder.nearYou', 'Near You')}</>
                         )}
                       </h3>
-                      <p className="text-gray-600 text-base sm:text-lg font-medium">
+                      <p className="text-gray-600 text-sm sm:text-base font-medium leading-snug">
                         {selectedType === 'experience' && selectedExperienceType
                           ? `${t('restaurantFinder.found', 'Found')} ${nearestRestaurants.length} ${selectedExperienceType.name} ${t('restaurantFinder.places', 'places')}`
                           : selectedType === 'category' && selectedDisplayCategory
@@ -1705,21 +1705,21 @@ const MainHero = () => {
                           : `${t('restaurantFinder.showingClosest', 'Showing')} ${nearestRestaurants.length} ${t('restaurantFinder.closest', 'closest')} ${t('restaurantFinder.places', 'places')}`
                         }
                       </p>
-                      <p className="text-gray-500 text-sm sm:text-base mt-2">
+                      <p className="text-gray-500 text-xs sm:text-sm mt-1.5">
                         {t('restaurantFinder.sortedByDistance', 'Results are sorted by distance from location selected')}
                       </p>
                       {searchMode.type === 'location' && (
-                        <span className="inline-block mt-2 px-2 sm:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs sm:text-sm font-medium">
+                        <span className="inline-block mt-1.5 px-2 sm:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs sm:text-sm font-medium">
                           {t('restaurantFinder.withinRadius', 'Within {{radius}}km radius', { radius: LOCATION_RESULTS_RADIUS_KM })}
                         </span>
                       )}
                       {searchMode.type === 'municipality' && (
-                        <span className="inline-block mt-2 px-2 sm:px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs sm:text-sm font-medium">
+                        <span className="inline-block mt-1.5 px-2 sm:px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs sm:text-sm font-medium">
                           📍 {searchMode.selectedMunicipality?.name ? t(`municipalities.${searchMode.selectedMunicipality.name}`, searchMode.selectedMunicipality.name) : ''}{searchMode.selectedMunicipality?.region ? `, ${t(`regions.${searchMode.selectedMunicipality.region}`, searchMode.selectedMunicipality.region)}` : ''}
                         </span>
                       )}
                       {searchMode.type === 'category' && searchMode.selectedCategory && (
-                        <span className="inline-block mt-2 px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-gradient-to-r from-white to-sky-50 text-slate-700 border border-sky-100">
+                        <span className="inline-block mt-1.5 px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-gradient-to-r from-white to-sky-50 text-slate-700 border border-sky-100">
                           {t(`categories.descriptions.${searchMode.selectedCategory.id}`, searchMode.selectedCategory.description)}
                         </span>
                       )}
@@ -1728,7 +1728,7 @@ const MainHero = () => {
                     {/* Selection and Share Controls */}
                     {(nearestRestaurants && nearestRestaurants.length > 0) && (
                       <>
-                        <div className="flex flex-col items-center gap-4 mb-6 p-4 bg-gradient-to-r from-sky-50 to-cyan-50 rounded-xl border border-sky-200">
+                        <div className="flex flex-col items-center gap-3 mb-4 p-3 bg-gradient-to-r from-sky-50 to-cyan-50 rounded-xl border border-sky-200">
                           {/* Selection Info */}
                           <div className="text-center w-full">
                             <p className="text-sm sm:text-base font-semibold text-gray-700 mb-3">
@@ -1855,9 +1855,10 @@ const MainHero = () => {
                       </>
                     )}
                     {/* Vertical Scrollable Restaurant Cards */}
-                    <div className="relative max-w-4xl mx-auto">
+                    <div className="relative max-w-6xl mx-auto">
                       <div className="rounded-2xl border border-sky-100/80 bg-white/80 backdrop-blur-sm shadow-lg">
-                        <div className="max-h-[240vh] md:max-h-[1200px] overflow-y-auto px-3 sm:px-4 py-3 space-y-3 sm:space-y-4 custom-scrollbar">
+                        <div className="max-h-[240vh] md:max-h-[1200px] overflow-y-auto px-2 sm:px-3 py-2 custom-scrollbar">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-3">
                         {nearestRestaurants.map((restaurantData, index) => {
                           const vegetarianData = categoryDataCacheRef.current['vegetarian'] || [];
                           const luxuryDiningData = categoryDataCacheRef.current['luxury-dining'] || [];
@@ -1867,17 +1868,17 @@ const MainHero = () => {
                           return (
                             <div
                               key={index}
-                              className={`group text-left rounded-xl border overflow-hidden transition-all duration-300 h-[280px] sm:h-[300px] lg:h-[320px] flex flex-col ${
+                              className={`group text-left rounded-xl border overflow-hidden transition-all duration-300 flex flex-col ${
                                 isSelected
                                   ? 'border-slate-500 bg-slate-100 shadow-md'
                                   : 'border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50 hover:shadow-md'
                               }`}
                             >
-                              <div className="px-4 pt-4 flex items-start justify-between gap-3">
-                                <h4 className="font-bold text-slate-900 text-lg sm:text-xl line-clamp-2 leading-tight">
+                              <div className="px-3 pt-2.5 flex items-start justify-between gap-2">
+                                <h4 className="font-bold text-slate-900 text-base sm:text-lg line-clamp-2 leading-tight">
                                   {restaurantData.restaurant.name}
                                 </h4>
-                                <label className="flex items-center gap-2 cursor-pointer">
+                                <label className="flex items-center gap-1.5 cursor-pointer shrink-0">
                                   <input
                                     type="checkbox"
                                     checked={isSelected}
@@ -1885,36 +1886,36 @@ const MainHero = () => {
                                     disabled={!isSelected && selectedRestaurants.size >= 10}
                                     className="w-4 h-4 rounded border border-slate-400 text-emerald-600 focus:ring-2 focus:ring-emerald-500 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                                   />
-                                  <span className="text-xs font-semibold text-slate-600 whitespace-nowrap">
+                                  <span className="text-[11px] sm:text-xs font-semibold text-slate-600 whitespace-nowrap">
                                     {isSelected ? t('restaurantFinder.selected', 'Selected') : t('restaurantFinder.select', 'Select')}
                                   </span>
                                 </label>
                               </div>
 
-                              <div className="px-4 mt-2">
-                                <p className="text-slate-600 text-sm sm:text-base line-clamp-3 leading-relaxed">
+                              <div className="px-3 mt-1">
+                                <p className="text-slate-600 text-xs sm:text-sm line-clamp-2 leading-snug">
                                   📍 {restaurantData.restaurant.address}
                                 </p>
                               </div>
 
-                              <div className="px-4 mt-3 flex flex-wrap items-center gap-2">
-                                <span className="bg-gradient-to-r from-slate-700 to-slate-900 text-white px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap shadow-sm">
+                              <div className="px-3 mt-1.5 flex flex-wrap items-center gap-1.5">
+                                <span className="bg-gradient-to-r from-slate-700 to-slate-900 text-white px-2.5 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap shadow-sm">
                                   📏 {formatDistance(restaurantData.distance)}
                                 </span>
                                 {isVegan && (
-                                  <span title={t('restaurantFinder.badges.veganTitle', 'Vegan Friendly')} className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-semibold border border-emerald-200">🌿 {t('restaurantFinder.badges.veganLabel', 'Vegan')}</span>
+                                  <span title={t('restaurantFinder.badges.veganTitle', 'Vegan Friendly')} className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-[11px] font-semibold border border-emerald-200">🌿 {t('restaurantFinder.badges.veganLabel', 'Vegan')}</span>
                                 )}
                                 {isLuxury && (
-                                  <span title={t('restaurantFinder.badges.luxuryTitle', 'Luxury/Pricey')} className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-xs font-semibold border border-amber-200">✨ {t('restaurantFinder.badges.luxuryLabel', 'Luxury')}</span>
+                                  <span title={t('restaurantFinder.badges.luxuryTitle', 'Luxury/Pricey')} className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-[11px] font-semibold border border-amber-200">✨ {t('restaurantFinder.badges.luxuryLabel', 'Luxury')}</span>
                                 )}
                               </div>
 
-                              <div className="mt-auto px-4 sm:px-5 pb-4 sm:pb-5 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                              <div className="mt-auto px-3 pb-2.5 pt-2.5 grid grid-cols-1 sm:grid-cols-2 gap-2">
                                 <a
                                   href={restaurantData.restaurant.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg text-white transition-colors duration-200 text-center whitespace-nowrap truncate bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
+                                  className="px-3 py-2 text-xs font-semibold rounded-lg text-white transition-colors duration-200 text-center whitespace-nowrap truncate bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
                                 >
                                   <span className="sm:hidden">🗺️ {t('destinationSearch.openCuratedMapShort', 'Map')}</span>
                                   <span className="hidden sm:inline">🗺️ {t('destinationSearch.openCuratedMap', 'Open Curated Map')}</span>
@@ -1924,7 +1925,7 @@ const MainHero = () => {
                                   onClick={() => {
                                     void shareSinglePlace(restaurantData);
                                   }}
-                                  className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 whitespace-nowrap truncate bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
+                                  className="px-3 py-2 text-xs font-semibold rounded-lg border transition-colors duration-200 whitespace-nowrap truncate bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
                                 >
                                   <span className="sm:hidden">🔗 {t('destinationSearch.shareMapShort', 'Share')}</span>
                                   <span className="hidden sm:inline">🔗 {t('destinationSearch.shareMap', 'Share Map')}</span>
@@ -1933,6 +1934,7 @@ const MainHero = () => {
                             </div>
                           );
                         })}
+                        </div>
                         </div>
                       </div>
                     </div>

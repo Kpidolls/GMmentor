@@ -34,6 +34,7 @@ type InternalHubLink = {
   href: string;
   label: string;
   count?: number;
+  labelEl?: string;
 };
 
 type AreaCoverageEntry = {
@@ -55,7 +56,8 @@ type HomePageProps = {
 };
 
 const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePageProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language || 'en').split('-')[0];
   const toAbsoluteUrl = (href: string) =>
     href.startsWith('http') ? href : `https://googlementor.com${href.startsWith('/') ? '' : '/'}${href}`;
 
@@ -187,10 +189,10 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
                   {topAreaLinks.map((link) => (
                     <li key={link.href}>
                       <Link href={link.href} className="text-blue-700 hover:text-blue-900 hover:underline">
-                        {link.label}
+                        {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
                       </Link>
                       {typeof link.count === 'number' ? (
-                        <span className="ml-2 text-sm text-gray-500">({link.count} locations)</span>
+                        <span className="ml-2 text-sm text-gray-500">({link.count} {t('home.linkHub.locations', 'locations')})</span>
                       ) : null}
                     </li>
                   ))}
@@ -205,10 +207,10 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
                   {topListLinks.map((link) => (
                     <li key={link.href}>
                       <Link href={link.href} className="text-blue-700 hover:text-blue-900 hover:underline">
-                        {link.label}
+                        {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
                       </Link>
                       {typeof link.count === 'number' ? (
-                        <span className="ml-2 text-sm text-gray-500">({link.count} locations)</span>
+                        <span className="ml-2 text-sm text-gray-500">({link.count} {t('home.linkHub.locations', 'locations')})</span>
                       ) : null}
                     </li>
                   ))}
@@ -223,7 +225,7 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
                   {topGuideLinks.map((link) => (
                     <li key={link.href}>
                       <Link href={link.href} className="text-blue-700 hover:text-blue-900 hover:underline">
-                        {link.label}
+                        {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
                       </Link>
                     </li>
                   ))}
@@ -403,8 +405,32 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   const posts = getAllPosts()
+  const elLocale = JSON.parse(readFileSync(join(process.cwd(), 'src', 'i18n', 'locales', 'el.json'), 'utf8'));
+  const elCategoryNames: Record<string, string> = elLocale?.categories ?? {};
   const entitiesIndex = loadEntitiesIndex();
   const engine = createIntentEngine({ entities: entitiesIndex.entities });
+
+  const priorityAreaInputs = [
+    'Cape Sounion',
+    'Crete',
+    'Thessaloniki',
+    'Syntagma',
+    'Plaka',
+    'Psirri',
+    'Parthenon',
+    'Philopappos Hill',
+    'Glyfada',
+    'Piraeus',
+    'Sepolia',
+    'Vouliagmeni',
+  ];
+
+  const excludedAreaSlugs = new Set(['vyronas', 'dionysos', 'kamatero']);
+
+  const priorityCategoryAreaInputs = [
+    { categorySlug: 'greek-restaurants', areaSlug: 'plaka' },
+    { categorySlug: 'coffee-brunch', areaSlug: 'glyfada' },
+  ];
 
   type IntentCoverageArtifact = {
     generatedAreaRoutes?: string[];
@@ -437,7 +463,32 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     ...generatedAreaRoutes.map((slug, index) => ({ slug, score: Math.max(0, 10000 - index) })),
   ];
 
-  const canonicalAreaPool = areaCoveragePool
+  const priorityAreaLinks: InternalHubLink[] = [];
+  for (const input of priorityAreaInputs) {
+    const resolvedArea = engine.resolver.resolveArea(input);
+    if (!resolvedArea) {
+      continue;
+    }
+
+    const payload = engine.query.getIntentResults({
+      areaId: resolvedArea.id,
+      limit: 1,
+    });
+
+    if (!payload || !payload.passesThreshold) {
+      continue;
+    }
+
+    priorityAreaLinks.push({
+      href: `/area/${resolvedArea.urlSlug}`,
+      label: resolvedArea.nameEn || resolvedArea.name,
+      labelEl: resolvedArea.name || undefined,
+      count: payload.counts.totalInArea,
+    });
+  }
+
+  type AreaPoolItem = { href: string; label: string; labelEl: string | undefined; score: number; count: number; region: string };
+  const canonicalAreaPool = (areaCoveragePool
     .map((item) => {
       const resolvedArea = engine.resolver.resolveArea(item.slug);
       if (!resolvedArea) {
@@ -456,15 +507,20 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
       return {
         href: `/area/${resolvedArea.urlSlug}`,
         label: resolvedArea.nameEn || resolvedArea.name,
+        labelEl: resolvedArea.name || undefined,
         score: item.score,
         count: payload.counts.totalInArea,
         region: (resolvedArea.regionEn || resolvedArea.region || 'unknown').toLowerCase(),
       };
     })
-    .filter((item): item is { href: string; label: string; score: number; count: number; region: string } => Boolean(item))
-    .sort((left, right) => right.score - left.score);
+    .filter(Boolean)
+    .sort((a, b) => {
+      const left = a as AreaPoolItem | null;
+      const right = b as AreaPoolItem | null;
+      return (right?.score ?? 0) - (left?.score ?? 0);
+    })) as AreaPoolItem[];
 
-  const uniqueAreaByHref = new Map<string, { href: string; label: string; score: number; count: number; region: string }>();
+  const uniqueAreaByHref = new Map<string, AreaPoolItem>();
   for (const item of canonicalAreaPool) {
     if (!uniqueAreaByHref.has(item.href)) {
       uniqueAreaByHref.set(item.href, item);
@@ -475,6 +531,18 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   const topAreaLinks: InternalHubLink[] = [];
   const usedRegions = new Set<string>();
 
+  for (const item of priorityAreaLinks) {
+    if (topAreaLinks.length >= 12) {
+      break;
+    }
+
+    if (topAreaLinks.some((existing) => existing.href === item.href)) {
+      continue;
+    }
+
+    topAreaLinks.push(item);
+  }
+
   for (const area of uniqueAreaCandidates) {
     if (topAreaLinks.length >= 12) {
       break;
@@ -482,7 +550,8 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     if (usedRegions.has(area.region)) {
       continue;
     }
-    topAreaLinks.push({ href: area.href, label: area.label, count: area.count });
+    if (excludedAreaSlugs.has(area.href.replace('/area/', ''))) continue;
+    topAreaLinks.push({ href: area.href, label: area.label, labelEl: area.labelEl, count: area.count });
     usedRegions.add(area.region);
   }
 
@@ -493,7 +562,8 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     if (topAreaLinks.some((existing) => existing.href === area.href)) {
       continue;
     }
-    topAreaLinks.push({ href: area.href, label: area.label, count: area.count });
+    if (excludedAreaSlugs.has(area.href.replace('/area/', ''))) continue;
+    topAreaLinks.push({ href: area.href, label: area.label, labelEl: area.labelEl, count: area.count });
   }
 
   const categoryAreaCoveragePool: CategoryAreaCoverageEntry[] = [
@@ -509,7 +579,8 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     })),
   ];
 
-  const canonicalListPool = categoryAreaCoveragePool
+  type ListPoolItem = { href: string; label: string; labelEl: string; score: number; count: number; areaSlug: string; categorySlug: string };
+  const canonicalListPool = (categoryAreaCoveragePool
     .map((item) => {
       const resolution = engine.resolver.resolveIntent(item.categorySlug, item.areaSlug);
       if (resolution.status !== 'resolved' || !resolution.category || !resolution.area) {
@@ -526,19 +597,29 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
         return null;
       }
 
+      const categoryLabel = resolution.category.name;
+      const areaLabel = resolution.area.nameEn || resolution.area.name;
+      const categoryLabelEl = elCategoryNames[resolution.category.id] || categoryLabel;
+      const areaLabelEl = resolution.area.name || areaLabel;
+
       return {
         href: `/${resolution.category.urlSlug}/${resolution.area.urlSlug}`,
-        label: `${resolution.category.name} in ${resolution.area.name}`,
+        label: `${categoryLabel} in ${areaLabel}`,
+        labelEl: `${categoryLabelEl} – ${areaLabelEl}`,
         score: item.score,
         count: payload.counts.totalCategoryArea,
         areaSlug: resolution.area.urlSlug,
         categorySlug: resolution.category.urlSlug,
       };
     })
-    .filter((item): item is { href: string; label: string; score: number; count: number; areaSlug: string; categorySlug: string } => Boolean(item))
-    .sort((left, right) => right.score - left.score);
+    .filter(Boolean)
+    .sort((a, b) => {
+      const left = a as ListPoolItem | null;
+      const right = b as ListPoolItem | null;
+      return (right?.score ?? 0) - (left?.score ?? 0);
+    })) as ListPoolItem[];
 
-  const uniqueListByHref = new Map<string, { href: string; label: string; score: number; count: number; areaSlug: string; categorySlug: string }>();
+  const uniqueListByHref = new Map<string, ListPoolItem>();
   for (const item of canonicalListPool) {
     if (!uniqueListByHref.has(item.href)) {
       uniqueListByHref.set(item.href, item);
@@ -550,6 +631,35 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   const usedListAreas = new Set<string>();
   const usedListCategories = new Set<string>();
 
+  for (const item of priorityCategoryAreaInputs) {
+    const resolution = engine.resolver.resolveIntent(item.categorySlug, item.areaSlug);
+    if (resolution.status !== 'resolved' || !resolution.category || !resolution.area) {
+      continue;
+    }
+
+    const payload = engine.query.getIntentResults({
+      categoryId: resolution.category.id,
+      areaId: resolution.area.id,
+      limit: 1,
+    });
+
+    if (!payload || !payload.passesThreshold || payload.entities.length === 0) {
+      continue;
+    }
+
+    const href = `/${resolution.category.urlSlug}/${resolution.area.urlSlug}`;
+    const label = `${resolution.category.name} in ${resolution.area.nameEn || resolution.area.name}`;
+    const labelEl = `${elCategoryNames[resolution.category.id] || resolution.category.name} – ${resolution.area.name || resolution.area.nameEn || ''}`;
+
+    if (topListLinks.some((existing) => existing.href === href)) {
+      continue;
+    }
+
+    topListLinks.push({ href, label, labelEl, count: payload.counts.totalCategoryArea });
+    usedListAreas.add(resolution.area.urlSlug);
+    usedListCategories.add(resolution.category.urlSlug);
+  }
+
   for (const item of uniqueListCandidates) {
     if (topListLinks.length >= 12) {
       break;
@@ -557,7 +667,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     if (usedListAreas.has(item.areaSlug) || usedListCategories.has(item.categorySlug)) {
       continue;
     }
-    topListLinks.push({ href: item.href, label: item.label, count: item.count });
+    topListLinks.push({ href: item.href, label: item.label, labelEl: item.labelEl, count: item.count });
     usedListAreas.add(item.areaSlug);
     usedListCategories.add(item.categorySlug);
   }
@@ -572,7 +682,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     if (usedListAreas.has(item.areaSlug)) {
       continue;
     }
-    topListLinks.push({ href: item.href, label: item.label, count: item.count });
+    topListLinks.push({ href: item.href, label: item.label, labelEl: item.labelEl, count: item.count });
     usedListAreas.add(item.areaSlug);
     usedListCategories.add(item.categorySlug);
   }
@@ -587,7 +697,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     if (usedListCategories.has(item.categorySlug)) {
       continue;
     }
-    topListLinks.push({ href: item.href, label: item.label, count: item.count });
+    topListLinks.push({ href: item.href, label: item.label, labelEl: item.labelEl, count: item.count });
     usedListAreas.add(item.areaSlug);
     usedListCategories.add(item.categorySlug);
   }
@@ -599,17 +709,26 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     if (topListLinks.some((existing) => existing.href === item.href)) {
       continue;
     }
-    topListLinks.push({ href: item.href, label: item.label, count: item.count });
+    topListLinks.push({ href: item.href, label: item.label, labelEl: item.labelEl, count: item.count });
   }
 
+  const elGuideTitles = new Map(
+    posts
+      .filter((p) => p.language === 'el')
+      .map((p) => [p.originalSlug || p.slug.replace(/-el$/, ''), p.title])
+  );
   const topGuideLinks = posts
     .filter((post) => post.language === 'en' && isPriorityGuide(post))
     .sort((left, right) => new Date(right.date).getTime() - new Date(left.date).getTime())
     .slice(0, 10)
-    .map((post) => ({
-      href: `/blog/${post.slug}`,
-      label: post.title,
-    }));
+    .map((post) => {
+      const slug = post.originalSlug || post.slug.replace(/-el$/, '');
+      return {
+        href: `/blog/${slug}`,
+        label: post.title,
+        labelEl: elGuideTitles.get(slug),
+      };
+    });
 
   // only send minimal fields to reduce page payload
   const minimal = posts

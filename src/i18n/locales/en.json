@@ -159,6 +159,14 @@
     "intro": {
       "question": "Looking for the best places to eat and explore in Athens?",
       "answer": "These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike."
+    },
+    "linkHub": {
+      "title": "Explore Greece with static guides and lists",
+      "subtitle": "Browse top area pages, curated category lists, and practical travel guides.",
+      "areas": "Top areas",
+      "lists": "Top lists",
+      "guides": "Top guides",
+      "locations": "locations"
     }
   },
   "meta": {

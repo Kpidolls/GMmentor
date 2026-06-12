@@ -79,7 +79,7 @@ export const getStaticProps: GetStaticProps<BlogProps> = async () => {
 export default function Blog({ allPosts }: BlogProps) {
   const { t, i18n } = useTranslation()
   const currentLanguage = useMemo(() => {
-    const lang = i18n.resolvedLanguage || i18n.language || 'en'
+    const lang = i18n.language || i18n.resolvedLanguage || 'en'
     return lang.split('-')[0]
   }, [i18n.language, i18n.resolvedLanguage])
 

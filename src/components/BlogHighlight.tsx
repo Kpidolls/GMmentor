@@ -16,7 +16,7 @@ type Props = { allPosts: MinimalPost[] }
 
 export default function BlogHighlight({ allPosts }: Props) {
   const { t, i18n } = useTranslation()
-  const resolvedLanguage = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0] || 'en'
+  const resolvedLanguage = (i18n.language || i18n.resolvedLanguage || 'en').split('-')[0] || 'en'
 
   // Deduplicate by originalSlug, preferring current language then English
   const deduped = Object.values(
