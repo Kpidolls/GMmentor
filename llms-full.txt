@@ -7,9 +7,9 @@ language_coverage: el,en
 # Googlementor — Greece Travel & Restaurant Guide
 Site: https://googlementor.com
 Entities index: https://googlementor.com/data/entities.json
-Generated: 2026-06-12T11:11:29.342Z
+Generated: 2026-07-04T21:32:30.326Z
 
-Googlementor is a curated directory of restaurants, cafes, attractions, and neighborhoods in Athens and the Greek islands. All locations are verified, geocoded, and linked to Google Maps. The site covers 3766 curated dining and attraction entries across 352 Athens neighborhoods and Greek regions.
+Googlementor is a curated directory of restaurants, cafes, attractions, and neighborhoods in Athens and the Greek islands. All locations are verified, geocoded, and linked to Google Maps. The site covers 3765 curated dining and attraction entries across 352 Athens neighborhoods and Greek regions.
 
 ## Curated Locations by Category
 
@@ -3057,7 +3057,7 @@ Places welcoming families with kids
 - Family Sports Club — Tositsa 18, Thessaloniki 570 10
 - Little Land - Kids Play — Λεωφ. Ελ. Βενιζέλου 235, Παλαιό Φάληρο 175 63
 
-### Burger Spots (149 locations)
+### Burger Spots (148 locations)
 Gourmet burgers and casual dining
 
 - Queen Burger — Giannitsopoulou 3, Glifada 166 74
@@ -3198,7 +3198,6 @@ Gourmet burgers and casual dining
 - Hanky Panky Palaio Faliro — Πλ. Νταβάρη 2, Παλαιό Φάληρο 175 64
 - Rookie.skg — P. Mela 28, Evosmos 562 24
 - MPEAR — Ευφράνορος 8, Athina 116 35
-- ONE BURGER — One Burger, Agathonos 7, Greece 105 51
 - PO‘ BOYS skg — Ag. Mina 7, Thessaloniki 546 25
 - NOB Burger — Κολοκοτρώνη 15 &, Gyftopoulou 10, Chalandri 152 33
 - Pommes — Isavron 5, Thessaloniki 546 22

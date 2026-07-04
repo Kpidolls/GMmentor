@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T12:26:16.783Z",
+  "generatedAt": "2026-07-04T22:12:57.162Z",
   "thresholds": {
     "minAreaEntityCount": 8,
     "minCategoryAreaCount": 5
@@ -4340,8 +4340,8 @@
   "densityAnalysis": {
     "areaEntityCounts": {
       "min": 0,
-      "max": 873,
-      "avg": 92.68,
+      "max": 872,
+      "avg": 92.6,
       "p50": 3,
       "p75": 63,
       "p90": 329
@@ -4349,15 +4349,15 @@
     "categoryEntityCounts": {
       "min": 45,
       "max": 779,
-      "avg": 235.38,
-      "p50": 149,
+      "avg": 235.31,
+      "p50": 148,
       "p75": 330,
       "p90": 440
     },
     "categoryAreaCounts": {
       "min": 3,
       "max": 142,
-      "avg": 29.78,
+      "avg": 29.76,
       "p50": 16,
       "p75": 43,
       "p90": 73
@@ -4498,121 +4498,121 @@
       "id": "municipalities_5bc013791cf8",
       "slug": "plaka",
       "name": "Πλάκα",
-      "count": 873
+      "count": 872
     },
     {
       "id": "municipalities_877c3bc81df5",
       "slug": "syntagma",
       "name": "Σύνταγμα",
-      "count": 868
+      "count": 867
     },
     {
       "id": "municipalities_0cae2c00b932",
       "slug": "kolonaki",
       "name": "Κολωνάκι",
-      "count": 859
+      "count": 858
     },
     {
       "id": "municipalities_d7e1aaaed4f9",
       "slug": "monastiraki",
       "name": "Μοναστηράκι",
-      "count": 858
+      "count": 857
     },
     {
       "id": "municipalities_4149fa79e27b",
       "slug": "akropoli",
       "name": "Ακρόπολη",
-      "count": 857
+      "count": 856
     },
     {
       "id": "municipalities_0fd1d03201a0",
       "slug": "mets",
       "name": "Μετς",
-      "count": 857
+      "count": 856
     },
     {
       "id": "municipalities_2bcfcb8b899f",
       "slug": "psyrri",
       "name": "Ψυρρή",
-      "count": 856
+      "count": 855
     },
     {
       "id": "municipalities_616efd2a0d9b",
       "slug": "koykaki",
       "name": "Κουκάκι",
-      "count": 855
+      "count": 854
     },
     {
       "id": "municipalities_b85b54408d92",
       "slug": "thiseio",
       "name": "Θησείο",
-      "count": 849
+      "count": 848
     },
     {
       "id": "municipalities_2f324ee27306",
       "slug": "exarcheia",
       "name": "Εξάρχεια",
-      "count": 848
+      "count": 847
     },
     {
       "id": "municipalities_0eb5ad956816",
       "slug": "neos-kosmos",
       "name": "Νέος Κόσμος",
-      "count": 836
+      "count": 835
     },
     {
       "id": "municipalities_7e1691d5f08d",
       "slug": "metaxoyrgeio",
       "name": "Μεταξουργείο",
-      "count": 830
+      "count": 829
     },
     {
       "id": "municipalities_75ddb64a42fd",
       "slug": "gyzi",
       "name": "Γύζη",
-      "count": 824
+      "count": 823
     },
     {
       "id": "municipalities_80c55a9453fa",
       "slug": "ano-petralona",
       "name": "Άνω Πετράλωνα",
-      "count": 819
+      "count": 818
     },
     {
       "id": "municipalities_af1f7d07cb18",
       "slug": "gkazi",
       "name": "Γκάζι",
-      "count": 818
+      "count": 817
     },
     {
       "id": "municipalities_0889636ab7df",
       "slug": "petralona",
       "name": "Πετράλωνα",
-      "count": 816
+      "count": 815
     },
     {
       "id": "municipalities_f73663b8f738",
       "slug": "attiki",
       "name": "Αττική",
-      "count": 799
+      "count": 798
     },
     {
       "id": "municipalities_e7a6ea2b75ba",
       "slug": "pagkrati",
       "name": "Παγκράτι",
-      "count": 798
+      "count": 797
     },
     {
       "id": "municipalities_61eaea5bd3d9",
       "slug": "ilisia",
       "name": "Ιλίσια",
-      "count": 781
+      "count": 780
     },
     {
       "id": "municipalities_2dbf77b73060",
       "slug": "royf",
       "name": "Ρουφ",
-      "count": 776
+      "count": 775
     }
   ],
   "highestDensityCategories": [
@@ -4668,7 +4668,7 @@
       "id": "burgers",
       "slug": "burgers",
       "name": "Burger Spots",
-      "count": 149
+      "count": 148
     },
     {
       "id": "attractions",

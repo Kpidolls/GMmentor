@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-12T12:25:07.516Z",
+    "generated_at": "2026-07-04T22:12:01.859Z",
     "generator_version": "1.0",
     "schema_version": 1,
     "canonical_url": "https://googlementor.com/data/entities.json",
@@ -8,9 +8,9 @@
       "el",
       "en"
     ],
-    "record_count": 4118,
+    "record_count": 4117,
     "by_kind": {
-      "restaurant": 3766,
+      "restaurant": 3765,
       "municipality": 352
     }
   },
@@ -3848,22 +3848,6 @@
       "lng": 23.744555997873523,
       "url": "https://maps.app.goo.gl/7youU9MYZn4rqr2E8?g_st=ic",
       "address": "Ευφράνορος 8, Athina 116 35",
-      "categoryIds": [
-        "burgers"
-      ],
-      "categories": [
-        "Burger Spots"
-      ]
-    },
-    {
-      "id": "burgersRestaurants_e836c8590f61",
-      "slug": "one-burger-e836",
-      "kind": "restaurant",
-      "name": "ONE BURGER",
-      "lat": 37.97831689957045,
-      "lng": 23.72749322677574,
-      "url": "https://maps.app.goo.gl/ntrNb7xRjJ6JvZ9AA?g_st=ic",
-      "address": "One Burger, Agathonos 7, Greece 105 51",
       "categoryIds": [
         "burgers"
       ],
