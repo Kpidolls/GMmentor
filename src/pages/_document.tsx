@@ -56,7 +56,6 @@ class MyDocument extends Document {
             content="Googlementor – Travel lists for trip planning"
           />
           <meta property="og:image" content="/assets/images/newlogo1.webp" />
-          <meta property="og:url" content="https://googlementor.com" />
 
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />

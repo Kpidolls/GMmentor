@@ -6,6 +6,7 @@ const TARGET_FILES = [
   path.join(process.cwd(), 'public', 'sitemap-0.xml'),
   path.join(process.cwd(), 'out', 'sitemap-0.xml')
 ];
+const SYNC_FILES = ['robots.txt', 'sitemap.xml', 'sitemap-0.xml', 'sitemap-1.xml'];
 
 function sanitizeSitemap(filePath) {
   if (!fs.existsSync(filePath)) {
@@ -46,6 +47,18 @@ function sanitizeSitemap(filePath) {
   return { filePath, changed: true, removed, skipped: false };
 }
 
+function syncPublicFileToOut(fileName) {
+  const sourcePath = path.join(process.cwd(), 'public', fileName);
+  const destinationPath = path.join(process.cwd(), 'out', fileName);
+
+  if (!fs.existsSync(sourcePath)) {
+    return { fileName, copied: false, skipped: true };
+  }
+
+  fs.copyFileSync(sourcePath, destinationPath);
+  return { fileName, copied: true, skipped: false };
+}
+
 function main() {
   const results = TARGET_FILES.map(sanitizeSitemap);
   results.forEach((r) => {
@@ -58,6 +71,17 @@ function main() {
       return;
     }
     console.log(`${path.relative(process.cwd(), r.filePath)}: removed ${r.removed} blocked entries`);
+  });
+
+  const syncResults = SYNC_FILES.map(syncPublicFileToOut);
+  syncResults.forEach((result) => {
+    if (result.skipped) {
+      console.log(`${result.fileName}: skipped public source not found`);
+      return;
+    }
+    if (result.copied) {
+      console.log(`${result.fileName}: synced public -> out`);
+    }
   });
 }
 

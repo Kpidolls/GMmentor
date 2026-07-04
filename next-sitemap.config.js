@@ -22,7 +22,7 @@ module.exports = {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/pwa-test', '/pwa-test/'],
+        disallow: ['/api/', '/_next/', '/pwa-test', '/pwa-test/', '/*.html', '/*?*'],
       },
     ],
     additionalSitemaps: [

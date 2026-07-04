@@ -17,7 +17,7 @@ const TravelInsurance = () => {
         <meta property="og:title" content={t('meta.insuranceTitle')} />
   <meta property="og:description" content={t('meta.insuranceDescriptionShort')} />
         <meta property="og:image" content="/assets/images/NI-info-2.webp" />
-        <meta property="og:url" content="https://www.googlementor.com/insurance" />
+          <meta property="og:url" content="https://googlementor.com/insurance" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('meta.insuranceTitle')} />
   <meta name="twitter:description" content={t('meta.insuranceDescriptionShort')} />
