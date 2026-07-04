@@ -86,7 +86,7 @@ const InstallBanner: React.FC<InstallBannerProps> = ({
     : 'translate-y-full opacity-0';
 
   return (
-    <div className={`fixed ${positionClasses} left-4 right-4 z-50 mx-auto max-w-md ${className}`}>
+    <div className={`fixed ${positionClasses} left-2 right-2 sm:left-4 sm:right-4 z-50 mx-auto max-w-md ${className}`}>
       <div className={`
         transform transition-all duration-300 ease-out
         ${animationClasses}
@@ -95,10 +95,10 @@ const InstallBanner: React.FC<InstallBannerProps> = ({
         backdrop-blur-sm p-4
       `}>
         {/* Main Content */}
-        <div className="flex items-start space-x-3">
+        <div className="flex items-start space-x-2.5 sm:space-x-3">
           {/* Icon */}
           <div className="flex-shrink-0">
-            <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-white/20 rounded-lg flex items-center justify-center">
               <span className="text-xl">📱</span>
             </div>
           </div>
@@ -129,12 +129,12 @@ const InstallBanner: React.FC<InstallBannerProps> = ({
             </div>
 
             {/* Actions */}
-            <div className="flex space-x-2 mt-3">
+            <div className="flex flex-wrap gap-2 mt-3">
               <button
                 onClick={handleInstall}
                 disabled={isInstalling}
                 className="
-                  bg-white text-blue-600 px-3 py-1.5 rounded-md text-sm font-medium 
+                  w-full sm:w-auto justify-center bg-white text-blue-600 px-3 py-1.5 rounded-md text-sm font-medium 
                   hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed
                   transition-colors duration-200 flex items-center space-x-1
                 "
@@ -155,7 +155,7 @@ const InstallBanner: React.FC<InstallBannerProps> = ({
               <button
                 onClick={handleDismiss}
                 className="
-                  text-blue-100 hover:text-white px-3 py-1.5 text-sm 
+                  w-full sm:w-auto text-center text-blue-100 hover:text-white px-3 py-1.5 text-sm 
                   transition-colors duration-200 flex items-center space-x-1
                 "
               >

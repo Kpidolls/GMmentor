@@ -48,7 +48,7 @@ function MyTicker() {
       zIndex="20"
       width="100%"
       color="black"
-      py="2"
+      py={{ base: 1.5, sm: 2 }}
       style={{ '--ticker-duration': `${TICKER_SCROLL_DURATION_SECONDS}s` } as React.CSSProperties}
       sx={{
         '&:hover .animate-scroll-track': {
@@ -56,10 +56,10 @@ function MyTicker() {
         },
       }}
     >
-      <Flex alignItems="center" gap="3" whiteSpace="nowrap">
+      <Flex className="ticker-row" whiteSpace="nowrap">
         <Text
           as="span"
-          display="inline-flex"
+          display={{ base: 'none', sm: 'inline-flex' }}
           alignItems="center"
           fontSize="sm"
           fontWeight="semibold"
@@ -71,18 +71,16 @@ function MyTicker() {
           borderColor="gray.300"
           color="gray.700"
           flexShrink={0}
+          whiteSpace="nowrap"
         >
           {destinationLead}
         </Text>
 
-        <Box overflow="hidden" flex="1" minW={0}>
+        <Box className="ticker-track-viewport">
           <Box
             as="ul"
-            className="animate-scroll-track"
-            display="flex"
-            alignItems="center"
+            className="ticker-track animate-scroll-track"
             whiteSpace="nowrap"
-            minWidth="max-content"
             gap="4"
             m="0"
             p="0"
@@ -122,7 +120,7 @@ function MyTicker() {
                       loading="eager"
                       decoding="async"
                     />
-                    <Text as="span" color="blue.800" fontWeight="extrabold" mr="1">
+                    <Text as="span" color="blue.800" fontWeight="extrabold" fontSize={{ base: 'xs', md: 'sm' }} mr="1">
                       {destinationLabel}
                     </Text>
                   </Link>

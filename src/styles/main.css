@@ -8,6 +8,35 @@
   --color-secondary: #0284c7;
   --color-tertiary: #dbeafe;
   --color-quaternary: #FFD700;
+  --gm-sea-700: #0f5f73;
+  --gm-sea-500: #1b7f95;
+  --gm-sun-500: #dca63b;
+  --gm-stone-700: #3f4a57;
+  --gm-stone-200: #d8e0e8;
+  --gm-white: #fdfdfc;
+  --gm-radius-sm: 10px;
+  --gm-radius-md: 14px;
+  --gm-radius-lg: 20px;
+  --gm-shadow-1: 0 2px 8px rgba(15, 23, 42, 0.08);
+  --gm-shadow-2: 0 10px 24px rgba(15, 23, 42, 0.1);
+  --gm-focus-ring: 0 0 0 3px rgba(27, 127, 149, 0.28);
+}
+
+html,
+body,
+#__next {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* Keep third-party consent UI from creating horizontal layout overflow on mobile. */
+#cky-consent-container,
+.cky-consent-container,
+[id*="cookie" i][class*="banner" i],
+[id*="consent" i][class*="cookie" i] {
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: clip;
 }
 
 a { 
@@ -16,6 +45,23 @@ a {
 
 a:hover {
   @apply border-b-2 border-blue-700;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: var(--gm-focus-ring);
+}
+
+.gm-surface-card {
+  border-radius: var(--gm-radius-lg);
+  background: color-mix(in srgb, var(--gm-white) 92%, white 8%);
+  border: 1px solid var(--gm-stone-200);
+  box-shadow: var(--gm-shadow-1);
 }
 
 .gyg-widget-wrapper a:hover {
@@ -39,6 +85,59 @@ a:hover {
   background-color: #f0f0f0;
   padding: 2px;
   border: 1px solid #ccc;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  overflow-y: hidden;
+  contain: layout paint;
+  isolation: isolate;
+}
+
+.ticker-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.ticker-track-viewport {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  height: 2.75rem;
+  overflow-x: clip;
+  overflow-y: hidden;
+}
+
+.ticker-track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  min-width: max-content;
+  max-width: none;
+}
+
+@media (max-width: 480px) {
+  .ticker-row {
+    gap: 0.5rem;
+  }
+
+  .ticker-track-viewport {
+    height: 2.4rem;
+  }
+
+  .ticker-pill-link {
+    padding: 0.2rem 0.55rem;
+  }
 }
 
 .ticker-container a:hover {

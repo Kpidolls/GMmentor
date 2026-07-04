@@ -1161,7 +1161,7 @@ const MainHero = () => {
         
         {/* Ticker */}
         {showDeferredUi && (
-          <div className="absolute top-0 left-0 w-full z-30">
+          <div className="absolute top-0 left-0 w-full max-w-full overflow-hidden z-30">
             <MyTicker />
           </div>
         )}
@@ -1169,10 +1169,10 @@ const MainHero = () => {
 
 
         {/* Professional Hero Content */}
-        <section role="main" aria-label={t('aria.homepage', 'Homepage')} className={`relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center ${showLocationOptions ? 'pt-16 pb-4 sm:pt-20 sm:pb-6' : 'py-8 sm:py-12'}`}>
+        <section role="main" aria-label={t('aria.homepage', 'Homepage')} className={`relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center ${showLocationOptions ? 'pt-8 pb-4 sm:pt-10 sm:pb-6' : 'py-8 sm:py-12'}`}>
           {/* Lightweight content backdrop */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-slate-100/20 to-slate-200/35" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-slate-100/25 to-slate-200/30" />
           </div>
           <div className={`text-center w-full ${showLocationOptions ? 'space-y-4 xs:space-y-5 sm:space-y-6 lg:space-y-8' : 'space-y-6 xs:space-y-8 sm:space-y-10 lg:space-y-12'}`}>
             {/* Enhanced Title with Modern Typography */}
@@ -1184,22 +1184,18 @@ const MainHero = () => {
               
               <div 
                 onClick={fullReset}
-                className="font-bold tracking-tight text-slate-900 hover:scale-[1.02] transition-all duration-500 cursor-pointer group relative"
+                className="font-bold tracking-tight text-slate-900 transition-all duration-300 cursor-pointer group relative"
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') fullReset(); }}
                 title={t('mainHero.clickToReturnToMain', 'Click to return to main page')}
               >
-                {/* Glow effect behind title */}
-                <div className="absolute inset-0 blur-3xl scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-slate-500/10 via-zinc-300/20 to-stone-300/20" />
-                
                 <div className="relative">
-                  <span className={`block font-semibold tracking-[0.2em] uppercase transition-all duration-500 relative drop-shadow-sm ${showLocationOptions ? 'text-xs xs:text-sm sm:text-base lg:text-lg mb-1 xs:mb-2 sm:mb-3' : 'text-sm xs:text-base sm:text-lg lg:text-xl xl:text-2xl mb-3 xs:mb-4 sm:mb-5'} text-slate-700 group-hover:text-slate-800`}>
+                  <span className={`block font-semibold tracking-[0.12em] uppercase transition-colors duration-300 relative ${showLocationOptions ? 'text-xs xs:text-sm sm:text-base mb-1 xs:mb-2 sm:mb-3' : 'text-sm xs:text-base sm:text-lg lg:text-xl mb-3 xs:mb-4 sm:mb-5'} text-slate-700`}>
                     <span className="relative z-10">{t('mainHero.subtitle')}</span>
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-slate-600 to-transparent" />
                   </span>
                   
-                  <h1 className={`block font-extrabold bg-clip-text text-transparent leading-tight px-1 transition-all duration-500 drop-shadow-lg ${showLocationOptions ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl' : 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl'} bg-gradient-to-r from-teal-900 via-cyan-700 to-blue-700 group-hover:from-teal-800 group-hover:via-cyan-700 group-hover:to-blue-600`}>
+                  <h1 className={`block font-extrabold bg-clip-text text-transparent leading-tight px-1 transition-colors duration-300 ${showLocationOptions ? 'text-3xl sm:text-4xl md:text-5xl' : 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl'} bg-gradient-to-r from-teal-900 via-cyan-700 to-blue-700`}>
                     {t('mainHero.title')}
                   </h1>
                 </div>
@@ -1419,50 +1415,41 @@ const MainHero = () => {
                 </div>
               </div>
             ) : showLocationOptions ? (
-              /* Location Options Selection - Enhanced UI */
+              /* Location Options Selection */
               <div className="relative">
-                {/* Background Glow Effect */}
-                <div className="absolute -inset-4 rounded-3xl blur-3xl opacity-35 bg-gradient-to-r from-cyan-200/18 via-teal-200/16 to-blue-200/18" />
-                
-                <div className={`relative backdrop-blur-xl rounded-2xl xs:rounded-3xl sm:rounded-[2rem] bg-gradient-to-br from-white/97 via-cyan-50/28 to-white/94 border border-cyan-100/80 shadow-[0_12px_36px_rgba(8,145,178,0.06)] ${showLocationOptions ? 'p-4 xs:p-5 sm:p-6 lg:p-8' : 'p-6 xs:p-8 sm:p-10 lg:p-14'}`}>
+                <div className={`relative rounded-2xl sm:rounded-3xl bg-white/92 border border-slate-200/80 shadow-[0_10px_24px_rgba(15,23,42,0.1)] ${showLocationOptions ? 'p-4 sm:p-6 lg:p-7' : 'p-6 xs:p-8 sm:p-10 lg:p-14'}`}>
                   {/* Header Section */}
                   <div className={`text-center relative ${showLocationOptions ? 'mb-2 xs:mb-3 lg:mb-4' : 'mb-8 xs:mb-10 lg:mb-14'}`}>
-                    <div className="w-24 h-1 mx-auto mb-6 opacity-45 rounded-full bg-gradient-to-r from-transparent via-teal-400 to-transparent" />
-                    <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mb-4 xs:mb-5 relative">
-                      <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-teal-900 via-cyan-700 to-blue-700">
-                        {t('locationOptions.chooseLocationMethod', 'Choose Location Method')}
+                    <div className="w-16 h-px mx-auto mb-4 opacity-60 bg-slate-300" />
+                    <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-[2rem] font-bold text-slate-900 mb-3 xs:mb-4 relative">
+                      <span className="relative z-10">
+                        {t('locationOptions.pickSearchMethod', 'Pick a Search Method')}
                       </span>
                     </h2>
-                    <p className="text-slate-700 text-sm xs:text-base sm:text-lg lg:text-xl max-w-2xl mx-auto px-4 leading-relaxed font-light">
+                    <p className="text-slate-700 text-sm xs:text-base sm:text-lg max-w-2xl mx-auto px-4 leading-relaxed font-normal">
                       {t('locationOptions.selectLocationFirst', 'Start by choosing how to search, then select a category.')}
                     </p>
                   </div>
 
                   {/* Options Grid */}
-                  <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto ${showLocationOptions ? 'gap-5 xs:gap-6 sm:gap-7 lg:gap-8 mb-5 xs:mb-6' : 'gap-5 xs:gap-6 sm:gap-8 lg:gap-10 mb-6 xs:mb-8'}`}>
+                  <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto ${showLocationOptions ? 'gap-4 sm:gap-6 lg:gap-7 mb-5 sm:mb-6' : 'gap-5 xs:gap-6 sm:gap-8 lg:gap-10 mb-6 xs:mb-8'}`}>
                     {/* Near You Option - Enhanced */}
                     <button
                       onClick={() => {
                         selectSearchMode('location');
                       }}
-                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] ring-1 ring-cyan-300/80 hover:ring-teal-500/80"
+                      className="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.99] ring-1 ring-slate-200 hover:ring-cyan-500/60"
                     >
-                      <div className="absolute inset-0 transition-all duration-500 bg-gradient-to-br from-cyan-50 via-white to-blue-50" />
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white via-cyan-50 to-blue-50" />
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent" />
-                      </div>
+                      <div className="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-white via-cyan-50/45 to-slate-50" />
 
-                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 xs:p-5 sm:p-6 lg:p-7' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
-                        <div className="flex justify-center mb-5">
+                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 sm:p-5 lg:p-6' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
+                        <div className="flex justify-center mb-4">
                           <div className="relative">
-                            <div className="absolute inset-0 rounded-full blur-2xl scale-[1.25] group-hover:scale-[1.55] transition-transform duration-500 bg-gradient-to-r from-cyan-200/20 to-teal-200/16" />
-                            <div className="relative rounded-full p-4 xs:p-5 sm:p-6 border-2 transition-all duration-300 group-hover:rotate-3 bg-white/92 border-cyan-150/90 shadow-sm">
-                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-105 transition-transform duration-300 drop-shadow-none">
+                            <div className="relative rounded-full p-3 xs:p-4 sm:p-5 border border-cyan-200/70 bg-white shadow-sm">
+                              <div className="text-4xl xs:text-5xl sm:text-6xl transition-transform duration-300">
                                 📍
                               </div>
                             </div>
-                            <div className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-20 bg-cyan-200/20" />
                           </div>
                         </div>
 
@@ -1472,7 +1459,7 @@ const MainHero = () => {
                           </span>
                         </div>
 
-                        <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal] mb-2 xs:mb-3 tracking-[-0.04em]">
+                        <h3 className="text-[clamp(1rem,3vw,1.75rem)] font-bold leading-tight mb-2 xs:mb-3 tracking-[-0.02em]">
                           {t('locationOptions.nearYou', 'Near You')}
                         </h3>
 
@@ -1481,7 +1468,7 @@ const MainHero = () => {
                         </p>
 
                         <div className="flex justify-center">
-                          <div className="flex items-center text-[clamp(0.8125rem,1.2vw,0.95rem)] font-medium group-hover:gap-4 transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-white/65 border border-cyan-100/80 shadow-none text-cyan-900">
+                          <div className="flex items-center min-h-[42px] text-[clamp(0.8125rem,1.2vw,0.95rem)] font-medium transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-white border border-cyan-100/80 text-cyan-900">
                             <span>{t('mainHero.useMyLocation', 'Use my location')}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -1496,24 +1483,18 @@ const MainHero = () => {
                       onClick={() => {
                         selectSearchMode('municipality');
                       }}
-                      className="group relative overflow-hidden rounded-2xl xs:rounded-3xl transition-all duration-500 hover:scale-[1.03] active:scale-[0.98] ring-1 ring-cyan-300/80 hover:ring-teal-500/80"
+                      className="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.99] ring-1 ring-slate-200 hover:ring-cyan-500/60"
                     >
-                      <div className="absolute inset-0 transition-all duration-500 bg-gradient-to-br from-cyan-50 via-white to-blue-50" />
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white via-cyan-50 to-blue-50" />
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent" />
-                      </div>
+                      <div className="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-white via-cyan-50/45 to-slate-50" />
 
-                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 xs:p-5 sm:p-6 lg:p-7' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
-                        <div className="flex justify-center mb-5">
+                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 sm:p-5 lg:p-6' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
+                        <div className="flex justify-center mb-4">
                           <div className="relative">
-                            <div className="absolute inset-0 rounded-full blur-2xl scale-[1.25] group-hover:scale-[1.55] transition-transform duration-500 bg-gradient-to-r from-cyan-200/20 to-teal-200/16" />
-                            <div className="relative rounded-full p-4 xs:p-5 sm:p-6 border-2 transition-all duration-300 group-hover:rotate-3 bg-white/92 border-cyan-150/90 shadow-sm">
-                              <div className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl group-hover:scale-105 transition-transform duration-300 drop-shadow-none">
+                            <div className="relative rounded-full p-3 xs:p-4 sm:p-5 border border-cyan-200/70 bg-white shadow-sm">
+                              <div className="text-4xl xs:text-5xl sm:text-6xl transition-transform duration-300">
                                 🗺️
                               </div>
                             </div>
-                            <div className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-20 bg-cyan-200/20" />
                           </div>
                         </div>
 
@@ -1523,7 +1504,7 @@ const MainHero = () => {
                           </span>
                         </div>
 
-                        <h3 className="text-[clamp(1rem,3vw,1.875rem)] font-black leading-tight whitespace-nowrap [word-break:normal] [overflow-wrap:normal] mb-2 xs:mb-3 tracking-[-0.04em]">
+                        <h3 className="text-[clamp(1rem,3vw,1.75rem)] font-bold leading-tight mb-2 xs:mb-3 tracking-[-0.02em]">
                           {t('locationOptions.byNeighborhood', 'Neighborhood')}
                         </h3>
 
@@ -1532,7 +1513,7 @@ const MainHero = () => {
                         </p>
 
                         <div className="flex justify-center">
-                          <div className="flex items-center text-[clamp(0.8125rem,1.2vw,0.95rem)] font-medium group-hover:gap-4 transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-white/65 border border-cyan-100/80 shadow-none text-cyan-900">
+                          <div className="flex items-center min-h-[42px] text-[clamp(0.8125rem,1.2vw,0.95rem)] font-medium transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-white border border-cyan-100/80 text-cyan-900">
                             <span>{t('mainHero.browseAreas', 'Browse areas')}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />

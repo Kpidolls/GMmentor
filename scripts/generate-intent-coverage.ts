@@ -161,7 +161,6 @@ function main(): void {
 
   const strongestCombinations: StrongCombinationEntry[] = [];
   const generatedCategoryAreaRoutes: Array<{ categorySlug: string; areaSlug: string }> = [];
-  const canonicalIntentKeys = new Set<string>();
   const categoryAreaValues: number[] = [];
   const categoryPerformance = new Map<string, {
     categoryId: string;
@@ -185,35 +184,9 @@ function main(): void {
       categoryBucket.candidates += 1;
       categoryPerformance.set(category.id, categoryBucket);
 
-      const resolution = engine.resolver.resolveIntent(category.urlSlug, area.urlSlug);
-      if (!resolution.categoryId) {
-        filteredCombinations.invalid_category += 1;
-        continue;
-      }
-
-      if (!resolution.areaId) {
-        filteredCombinations.invalid_area += 1;
-        continue;
-      }
-
-      const canonicalCategory = engine.categories.byId.get(resolution.categoryId);
-      const canonicalArea = engine.areas.byId.get(resolution.areaId);
-      if (!canonicalCategory) {
-        filteredCombinations.invalid_category += 1;
-        continue;
-      }
-
-      if (!canonicalArea) {
-        filteredCombinations.invalid_area += 1;
-        continue;
-      }
-
+      const canonicalCategory = category;
+      const canonicalArea = area;
       const canonicalKey = `${canonicalCategory.urlSlug}/${canonicalArea.urlSlug}`;
-      if (canonicalIntentKeys.has(canonicalKey)) {
-        filteredCombinations.duplicate_intent += 1;
-        continue;
-      }
-      canonicalIntentKeys.add(canonicalKey);
 
       const payload = engine.query.getIntentResults({
         areaId: canonicalArea.id,

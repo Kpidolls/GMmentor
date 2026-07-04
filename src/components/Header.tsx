@@ -63,14 +63,14 @@ const Header = () => {
   const bg = 'white'; // Default background color
   const textColor = 'gray.800'; // Default text color
   const navButtonStyles = {
-    bg: 'gray.50',
+    bg: 'white',
     border: '1px solid',
-    borderColor: 'gray.200',
-    borderRadius: 'xl',
+    borderColor: 'gray.300',
+    borderRadius: 'full',
     fontWeight: 'semibold',
     letterSpacing: '0.01em',
     fontSize: 'sm',
-    px: 4,
+    px: 3.5,
     h: 10,
     boxShadow: '0 1px 2px rgba(15, 23, 42, 0.06)',
     transition: 'background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
@@ -86,25 +86,29 @@ const Header = () => {
       color: 'gray.900'
     },
     _focusVisible: {
-      boxShadow: '0 0 0 3px rgba(59, 130, 246, 0.28)'
+      boxShadow: '0 0 0 3px rgba(27, 127, 149, 0.28)'
     },
     sx: {
       '.chakra-button__icon:first-of-type': {
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        w: '20px',
-        h: '20px',
+        w: '22px',
+        h: '22px',
         borderRadius: 'md',
         bg: 'gray.100',
         border: '1px solid',
         borderColor: 'gray.200',
         color: 'gray.600',
-        marginInlineEnd: '10px',
+        marginInlineStart: '0',
+        marginInlineEnd: '8px',
+        flexShrink: 0,
         transition: 'background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease'
       },
       '.chakra-button__icon:last-of-type': {
-        color: 'gray.500'
+        color: 'gray.500',
+        marginInlineStart: '6px',
+        marginInlineEnd: '0'
       },
       '&:hover .chakra-button__icon:first-of-type': {
         bg: 'white',
@@ -116,10 +120,10 @@ const Header = () => {
   const dropdownNavButtonStyles = {
     ...navButtonStyles,
     _expanded: {
-      bg: 'blue.600',
+      bg: 'teal.700',
       color: 'white',
-      borderColor: 'blue.600',
-      boxShadow: '0 8px 20px rgba(37, 99, 235, 0.24)'
+      borderColor: 'teal.700',
+      boxShadow: '0 8px 20px rgba(15, 95, 115, 0.26)'
     },
     sx: {
       ...navButtonStyles.sx,
@@ -144,21 +148,21 @@ const Header = () => {
     borderRadius: 'xl',
     bg: 'white',
     border: '1px solid',
-    borderColor: 'blue.100',
+    borderColor: 'teal.100',
     color: 'gray.800',
     boxShadow: 'sm',
     _hover: {
-      bg: 'blue.50',
-      borderColor: 'blue.200',
+      bg: 'teal.50',
+      borderColor: 'teal.200',
       transform: 'translateY(-1px)',
       boxShadow: 'md'
     },
     _active: {
-      bg: 'blue.100',
+      bg: 'teal.100',
       transform: 'translateY(0)'
     },
     _focusVisible: {
-      boxShadow: '0 0 0 3px rgba(59, 130, 246, 0.25)'
+      boxShadow: '0 0 0 3px rgba(27, 127, 149, 0.28)'
     }
   };
 
@@ -357,20 +361,20 @@ const Header = () => {
   };
 
   return (
-    <Box as="header" bg={bg} shadow="sm" position="sticky" top="0" zIndex="50" w="full">
+    <Box as="header" bg={bg} shadow="xs" position="sticky" top="0" zIndex="50" w="full">
       {/* Top Bar */}
       <Flex
         bg="gray.800"
         color="white"
-        px={{ base: 2, md: 8 }}
+        px={{ base: 3, md: 8 }}
         py={2}
         align="center"
         justify="space-between"
-        flexWrap="nowrap"
-        gap={{ base: 1, md: 3 }}
-        minH="44px"
+        flexWrap={{ base: 'wrap', md: 'nowrap' }}
+        gap={{ base: 2, md: 3 }}
+        minH={{ base: 'auto', md: '44px' }}
       >
-        <HStack spacing={{ base: 1, md: 3 }} flex="1" minW="0">
+        <HStack spacing={{ base: 1, md: 3 }} flex={{ base: '1 1 auto', md: '1' }} minW="0">
           <HStack
             spacing={0.5}
             bg="white"
@@ -515,6 +519,7 @@ const Header = () => {
               boxShadow="0 4px 12px rgba(16, 185, 129, 0.3)"
               minW="0"
               flexShrink={0}
+              display={{ base: 'none', sm: 'inline-flex' }}
             >
               <Box display={{ base: "none", sm: "block" }}>
                 {t('pwa.getApp', 'Get App')}
@@ -533,10 +538,10 @@ const Header = () => {
         <Button
           onClick={onOpen}
           variant="unstyled"
-          flex="1"
-          maxW={{ base: '132px', sm: '190px', md: '300px' }}
+          flex={{ base: '1 1 100%', lg: '1' }}
+          maxW={{ base: '100%', sm: '190px', md: '300px' }}
           minW="0"
-          h={{ base: '28px', md: '34px' }}
+          h={{ base: '32px', md: '34px' }}
           bg="whiteAlpha.200"
           border="1px solid"
           borderColor="whiteAlpha.300"
@@ -550,7 +555,9 @@ const Header = () => {
           boxShadow="inset 0 1px 0 rgba(255,255,255,0.12)"
           _hover={{ bg: 'whiteAlpha.300', borderColor: 'whiteAlpha.500' }}
           _active={{ bg: 'whiteAlpha.400' }}
-          _focusVisible={{ boxShadow: '0 0 0 3px rgba(147, 197, 253, 0.45)' }}
+          _focusVisible={{ boxShadow: '0 0 0 3px rgba(27, 127, 149, 0.3)' }}
+          order={{ base: 3, lg: 0 }}
+          mt={{ base: 1, md: 0 }}
           aria-label={t('search.openSearch', 'Open search')}
           id="header-search"
         >
@@ -570,7 +577,7 @@ const Header = () => {
       </Flex>
 
       {/* Main Header */}
-      <Box px={{ base: 4, md: 8 }} py={4}>
+      <Box px={{ base: 3, md: 8 }} py={4}>
         <Flex align="center" justify="space-between" wrap="wrap">
           {/* Logo and Company */}
           <HStack spacing={3} onClick={() => window.location.href = '/'} cursor="pointer">
@@ -583,11 +590,13 @@ const Header = () => {
               unoptimized={false} 
             />
             <Text
-              fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+              fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}
               fontWeight="bold"
               color={textColor}
               textShadow="0 2px 8px rgba(0,0,0,0.12)"
               letterSpacing="tight"
+              noOfLines={1}
+              maxW={{ base: '200px', sm: '260px', md: 'none' }}
               className="leading-tight tracking-tight"
             >
               {t('company.name')}
@@ -595,7 +604,7 @@ const Header = () => {
           </HStack>
 
           {/* Desktop Nav */}
-          <HStack spacing={6} display={{ base: 'none', md: 'flex' }}>
+          <HStack spacing={4} display={{ base: 'none', md: 'flex' }}>
             {visibleNavigation.map((item) =>
               !item.submenu ? (
                 <Button

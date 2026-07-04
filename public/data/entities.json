@@ -3856,22 +3856,6 @@
       ]
     },
     {
-      "id": "burgersRestaurants_e836c8590f61",
-      "slug": "one-burger-e836",
-      "kind": "restaurant",
-      "name": "ONE BURGER",
-      "lat": 37.97831689957045,
-      "lng": 23.72749322677574,
-      "url": "https://maps.app.goo.gl/ntrNb7xRjJ6JvZ9AA?g_st=ic",
-      "address": "One Burger, Agathonos 7, Greece 105 51",
-      "categoryIds": [
-        "burgers"
-      ],
-      "categories": [
-        "Burger Spots"
-      ]
-    },
-    {
       "id": "burgersRestaurants_ebadcc0c31a2",
       "slug": "po-boys-skg-ebad",
       "kind": "restaurant",

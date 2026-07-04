@@ -336,6 +336,7 @@
   },
   "locationOptions": {
     "chooseLocationMethod": "Pick a search method",
+    "pickSearchMethod": "Pick a Search Method",
     "selectLocationOption": "Select how you would like to search for {{experience}}",
     "selectLocationFirst": "Next, select a category.",
     "selectNeighborhoodFirst": "Choose your neighborhood first, then pick a category.",
@@ -1144,7 +1145,7 @@
     "facebook": "https://www.facebook.com/profile.php?id=61577374641336"
   },
   "ticker": {
-    "destinationLead": "Tap a destination to open its map.",
+    "destinationLead": "Tap a destination to view its map:",
     "destinationAriaLabel": "Open points of interest map for {{destination}}",
     "usefulApps": "USEFUL RESOURCES: GREECE",
     "accommodation": "Accommodation: Booking.com - Airbnb",

@@ -336,6 +336,7 @@
   },
   "locationOptions": {
     "chooseLocationMethod": "Επιλέξτε περιοχή για αναζήτηση",
+    "pickSearchMethod": "Επιλέξτε τρόπο αναζήτησης",
     "selectLocationOption": "Επιλέξτε πώς θέλετε να αναζητήσετε {{experience}}",
     "selectLocationFirst": "Ξεκινήστε επιλέγοντας τρόπο αναζήτησης και μετά κατηγορία.",
     "selectNeighborhoodFirst": "Επιλέξτε πρώτα γειτονιά και μετά κατηγορία.",
@@ -344,7 +345,7 @@
     "byRegion": "Ανά Περιοχή",
     "byRegionDesc": "Επιλέξτε συγκεκριμένη περιοχή",
     "byNeighborhood": "Ανά Γειτονιά",
-    "byNeighborhoodDesc": "Επιλέξτε συγκεκριμένη γειτονιά ή δήμο για να βρειτε μέρη",
+    "byNeighborhoodDesc": "Επιλέξτε συγκεκριμένη γειτονιά ή προορισμό για να βρείτε μέρη",
     "destinations": "Προορισμοί",
     "destinationsDesc": "Τα σημεία ενδιαφέροντος για δημοφιλείς προορισμούς"
   },
@@ -1144,7 +1145,7 @@
     "facebook": "https://www.facebook.com/profile.php?id=61577374641336"
   },
   "ticker": {
-    "destinationLead": "Πατήστε έναν προορισμό για να ανοίξει ο χάρτης του.",
+    "destinationLead": "Επιλέξτε προορισμό για να ανοίξει ο χάρτης του:",
     "destinationAriaLabel": "Άνοιγμα χάρτη σημείων ενδιαφέροντος για {{destination}}",
     "usefulApps": "ΧΡΗΣΙΜΕΣ ΕΦΑΡΜΟΓΕΣ: ΕΛΛΑΔΑ",
     "accommodation": "Διαμονή: Booking.com - Airbnb",

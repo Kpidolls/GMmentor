@@ -5,6 +5,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const { readFileSync } = require('fs');
 const { join } = require('path');
 const featureFlags = require('./src/config/featureFlags.json');
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 const withPWA = require('@ducanh2912/next-pwa').default({
   dest: 'public',
@@ -268,7 +269,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
   compiler: {
     styledComponents: true,
   },
-  output: 'export',
+  output: isDevelopment ? undefined : 'export',
   trailingSlash: false,
   images: {
     unoptimized: true,
@@ -279,6 +280,10 @@ const nextConfig = withPWA(withBundleAnalyzer({
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
   ) {
+    if (dev) {
+      return defaultPathMap;
+    }
+
     let placePaths = {};
     let areaPaths = {};
     let categoryAreaPaths = {};
@@ -329,7 +334,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
 
         acc[`/place/${entity.slug}`] = {
           page: '/place/[slug]',
-          params: { slug: entity.slug },
+          query: { slug: entity.slug },
         };
 
         return acc;
@@ -355,7 +360,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
           const areaSlug = ensureUniqueAreaSlug(preferredBase, item.region_en || item.region, used);
           acc[`/area/${areaSlug}`] = {
             page: '/area/[area]',
-            params: { area: areaSlug },
+            query: { area: areaSlug },
           };
 
           return acc;
@@ -380,7 +385,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
 
         acc[`/${categorySlug}/${areaSlug}`] = {
           page: '/[category]/[area]',
-          params: {
+          query: {
             category: categorySlug,
             area: areaSlug,
           },
@@ -404,7 +409,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
 
         acc[`/destination/${id}`] = {
           page: '/destination/[id]',
-          params: { id },
+          query: { id },
         };
 
         return acc;
@@ -425,7 +430,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
       '/blog': { page: '/blog' },
       '/blog/greek-bakeries-brunch-coffee-guide': {
         page: '/blog/[slug]',
-        params: { slug: 'greek-bakeries-brunch-coffee-guide' },
+        query: { slug: 'greek-bakeries-brunch-coffee-guide' },
       },
       ...destinationPaths,
       ...categoryAreaPaths,

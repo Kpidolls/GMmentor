@@ -5,6 +5,8 @@ const { rmSync } = require('fs');
 const { join } = require('path');
 
 const maxAttempts = Number(process.env.NEXT_BUILD_MAX_ATTEMPTS || 5);
+// Keep .next cache by default for faster local builds; retries still clean artifacts.
+const cleanFirstAttempt = process.env.NEXT_BUILD_CLEAN_FIRST_ATTEMPT === '1';
 
 const buildCommand = 'npx next build';
 
@@ -36,9 +38,9 @@ const runAttempt = (attempt) =>
 
 (async () => {
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
-    if (attempt === 1) {
+    if (attempt === 1 && cleanFirstAttempt) {
       cleanBuildArtifacts();
-    } else {
+    } else if (attempt > 1) {
       console.warn(`\nRetrying next build (attempt ${attempt}/${maxAttempts})...`);
       cleanBuildArtifacts();
     }

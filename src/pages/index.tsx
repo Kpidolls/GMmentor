@@ -165,30 +165,30 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
       {/* Short AI-friendly intro for the homepage */}
       <section className="bg-white py-8">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('home.intro.question', 'Looking for the best places to eat and explore in Greece?')}</h2>
-          <p className="text-gray-600 leading-relaxed">{t('home.intro.answer', 'These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike.')}</p>
+          <h2 className="text-[1.65rem] sm:text-3xl font-bold text-slate-800 mb-4">{t('home.intro.question', 'Looking for the best places to eat and explore in Greece?')}</h2>
+          <p className="text-slate-600 leading-relaxed">{t('home.intro.answer', 'These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike.')}</p>
         </div>
       </section>
 
-      <section className="bg-gray-50 py-10">
+      <section className="bg-slate-50/70 py-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+          <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-7 shadow-[0_2px_10px_rgba(15,23,42,0.08)]">
+            <h2 className="text-[1.65rem] sm:text-3xl font-bold text-slate-900 mb-2">
               {t('home.linkHub.title', 'Explore Greece with static guides and lists')}
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-slate-600 mb-6">
               {t('home.linkHub.subtitle', 'Browse top area pages, curated category lists, and practical travel guides.')}
             </p>
 
             <div className="grid gap-6 md:grid-cols-3">
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-3">
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-3">
                   {t('home.linkHub.areas', 'Top areas')}
                 </h3>
                 <ul className="space-y-2">
                   {topAreaLinks.map((link) => (
                     <li key={link.href}>
-                      <Link href={link.href} className="text-blue-700 hover:text-blue-900 hover:underline">
+                      <Link href={link.href} className="text-cyan-800 hover:text-amber-700 hover:underline focus-visible:rounded-sm">
                         {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
                       </Link>
                       {typeof link.count === 'number' ? (
@@ -200,13 +200,13 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
               </div>
 
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-3">
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-3">
                   {t('home.linkHub.lists', 'Top lists')}
                 </h3>
                 <ul className="space-y-2">
                   {topListLinks.map((link) => (
                     <li key={link.href}>
-                      <Link href={link.href} className="text-blue-700 hover:text-blue-900 hover:underline">
+                      <Link href={link.href} className="text-cyan-800 hover:text-amber-700 hover:underline focus-visible:rounded-sm">
                         {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
                       </Link>
                       {typeof link.count === 'number' ? (
@@ -218,13 +218,13 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
               </div>
 
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-3">
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-3">
                   {t('home.linkHub.guides', 'Top guides')}
                 </h3>
                 <ul className="space-y-2">
                   {topGuideLinks.map((link) => (
                     <li key={link.href}>
-                      <Link href={link.href} className="text-blue-700 hover:text-blue-900 hover:underline">
+                      <Link href={link.href} className="text-cyan-800 hover:text-amber-700 hover:underline focus-visible:rounded-sm">
                         {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
                       </Link>
                     </li>
@@ -242,21 +242,21 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5 leading-tight">
+              <span className="bg-gradient-to-r from-cyan-700 via-slate-700 to-amber-700 bg-clip-text text-transparent">
                 {t('navigation.getyourguide', 'Top Tours & Activities')}
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               {t('getyourguide.subtitle', 'Discover the best experiences Greece has to offer with our curated selection of tours and activities')}
             </p>
-            <div className="mt-6 mx-auto w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full" />
+            <div className="mt-6 mx-auto w-28 h-1 bg-gradient-to-r from-cyan-600 to-amber-500 rounded-full" />
           </div>
           
           {/* Widget Container */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-white to-slate-50 rounded-3xl transform rotate-1" />
-            <div className="relative bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-white to-slate-50 rounded-2xl transform rotate-1" />
+            <div className="relative bg-white rounded-2xl shadow-[0_12px_28px_rgba(15,23,42,0.12)] border border-slate-200 overflow-hidden">
               <GetYourGuideWidget />
             </div>
           </div>

@@ -1,6 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import NextLink from 'next/link';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 import {
   Box,
   Button,
@@ -19,6 +21,10 @@ import type { IntentResultsPayload } from '../../lib/intent';
 import { formatDistance } from '../../utils/locationUtils';
 
 const SITE_URL = 'https://googlementor.com';
+
+type IntentCoverage = {
+  generatedCategoryAreaRoutes?: Array<{ categorySlug: string; areaSlug: string }>;
+};
 
 type CategoryAreaPageProps = {
   payload: IntentResultsPayload;
@@ -102,6 +108,28 @@ function buildGuideItemListJsonLd(
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const coveragePath = join(process.cwd(), 'public', 'data', 'intent-coverage.json');
+  try {
+    const coverage = JSON.parse(readFileSync(coveragePath, 'utf8')) as IntentCoverage;
+    const routes = Array.isArray(coverage.generatedCategoryAreaRoutes)
+      ? coverage.generatedCategoryAreaRoutes
+      : [];
+
+    if (routes.length > 0) {
+      return {
+        paths: routes.map((route) => ({
+          params: {
+            category: route.categorySlug,
+            area: route.areaSlug,
+          },
+        })),
+        fallback: false,
+      };
+    }
+  } catch {
+    // Fall back to live engine generation when the artifact is unavailable.
+  }
+
   const index = loadEntitiesIndex();
   const engine = createIntentEngine({ entities: index.entities });
   const paths: Array<{ params: { category: string; area: string } }> = [];
@@ -164,7 +192,7 @@ export const getStaticProps: GetStaticProps<CategoryAreaPageProps> = async ({ pa
     limit: 1,
   });
 
-  if (!payload || !payload.category || !payload.passesThreshold || payload.entities.length === 0) {
+  if (!payload || !payload.category || payload.entities.length === 0) {
     return { notFound: true };
   }
 

@@ -1,6 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import NextLink from 'next/link';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 import {
   Box,
   Button,
@@ -19,6 +21,10 @@ import type { IntentResultsPayload } from '../../lib/intent';
 import { formatDistance } from '../../utils/locationUtils';
 
 const SITE_URL = 'https://googlementor.com';
+
+type IntentCoverage = {
+  generatedAreaRoutes?: string[];
+};
 
 type AreaPageProps = {
   payload: IntentResultsPayload;
@@ -98,6 +104,20 @@ function buildGuideItemListJsonLd(
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const coveragePath = join(process.cwd(), 'public', 'data', 'intent-coverage.json');
+  try {
+    const coverage = JSON.parse(readFileSync(coveragePath, 'utf8')) as IntentCoverage;
+    const areaRoutes = Array.isArray(coverage.generatedAreaRoutes) ? coverage.generatedAreaRoutes : [];
+    if (areaRoutes.length > 0) {
+      return {
+        paths: areaRoutes.map((area) => ({ params: { area } })),
+        fallback: false,
+      };
+    }
+  } catch {
+    // Fall back to live engine generation when the artifact is unavailable.
+  }
+
   const index = loadEntitiesIndex();
   const engine = createIntentEngine({ entities: index.entities });
 
@@ -128,7 +148,7 @@ export const getStaticProps: GetStaticProps<AreaPageProps> = async ({ params }) 
   }
 
   const payload = engine.query.getIntentResults({ areaId: area.id, limit: 30, relatedLimit: 10 });
-  if (!payload || !payload.passesThreshold) {
+  if (!payload || payload.entities.length === 0) {
     return { notFound: true };
   }
 
