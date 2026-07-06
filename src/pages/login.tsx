@@ -2,10 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
-import { metaDescriptions } from '../config/metaDescriptions';
+import { getStaticMetaDescription } from '../config/metaDescriptions';
 
 const Login: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language || i18n.resolvedLanguage || 'en').split('-')[0];
+  const metaDescription = getStaticMetaDescription('login', currentLang);
   
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -13,7 +15,7 @@ const Login: React.FC = () => {
         <title>{t('meta.loginTitle')}</title>
         <meta 
           name="description" 
-          content={metaDescriptions.login} 
+          content={metaDescription} 
         />
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href="https://googlementor.com/login" />

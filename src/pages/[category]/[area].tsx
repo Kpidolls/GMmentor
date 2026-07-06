@@ -19,6 +19,7 @@ import { createIntentEngine } from '../../lib/intent';
 import { loadEntitiesIndex } from '../../lib/entities';
 import type { IntentResultsPayload } from '../../lib/intent';
 import { formatDistance } from '../../utils/locationUtils';
+import { buildCategoryAreaMetaDescription } from '../../config/metaDescriptions';
 
 const SITE_URL = 'https://googlementor.com';
 
@@ -245,7 +246,12 @@ export default function CategoryAreaPage({ payload, hasAreaGuidePage, topGuides 
 
   const canonicalUrl = `${SITE_URL}/${payload.category.urlSlug}/${payload.area.urlSlug}`;
   const title = `Best ${payload.category.name} in ${payload.area.name} | Googlementor`;
-  const description = `Discover ${payload.counts.totalCategoryArea} curated ${payload.category.name.toLowerCase()} in ${payload.area.name}, with nearby alternatives.`;
+  const description = buildCategoryAreaMetaDescription({
+    categoryName: payload.category.name,
+    areaName: payload.area.nameEn || payload.area.name,
+    regionName: payload.area.regionEn || payload.area.region,
+    count: payload.counts.totalCategoryArea,
+  });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(
     payload.category.urlSlug,

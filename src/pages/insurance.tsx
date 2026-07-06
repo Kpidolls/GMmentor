@@ -2,25 +2,27 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Head from 'next/head';
 import Image from 'next/image';
-import { metaDescriptions } from '../config/metaDescriptions';
+import { getStaticMetaDescription } from '../config/metaDescriptions';
 
 const TravelInsurance = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language || i18n.resolvedLanguage || 'en').split('-')[0];
+  const metaDescription = getStaticMetaDescription('insurance', currentLang);
 
   return (
     <main className="bg-gray-50 min-h-screen">
       <Head>
         <title>{t('meta.insuranceTitle')}</title>
-  <meta name="description" content={metaDescriptions.insurance} />
+      <meta name="description" content={metaDescription} />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={t('meta.insuranceTitle')} />
-  <meta property="og:description" content={t('meta.insuranceDescriptionShort')} />
+      <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content="/assets/images/NI-info-2.webp" />
           <meta property="og:url" content="https://googlementor.com/insurance" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('meta.insuranceTitle')} />
-  <meta name="twitter:description" content={t('meta.insuranceDescriptionShort')} />
+      <meta name="twitter:description" content={metaDescription} />
         <link rel="canonical" href="https://googlementor.com/insurance" />
       </Head>
 

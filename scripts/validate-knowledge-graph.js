@@ -123,6 +123,15 @@ function getTerms(entity) {
   return Array.from(terms);
 }
 
+function buildEntitySeoSignature(entity) {
+  const normalizedName = String(entity?.name || '').trim().toLowerCase();
+  const normalizedLocation = String(entity?.address || entity?.region || `${Number(entity?.lat || 0).toFixed(5)},${Number(entity?.lng || 0).toFixed(5)}`)
+    .trim()
+    .toLowerCase();
+
+  return `${entity?.kind || 'place'}::${normalizedName}::${normalizedLocation}`;
+}
+
 function getGuideSeeds(post) {
   return GUIDE_ENTITY_SEEDS[post.originalSlug || post.slug] || [];
 }
@@ -246,6 +255,21 @@ function main() {
   const missingJsonLd = [];
   const linkedEntityIds = new Set();
   const priorityPosts = getPriorityGuidePosts();
+  const placePathSet = new Set(
+    entities
+      .filter((entity) => Boolean(entity?.slug))
+      .map((entity) => `/place/${entity.slug}`)
+  );
+  const canonicalSlugBySignature = new Map();
+
+  for (const entity of entities) {
+    if (!entity?.slug) continue;
+    const signature = buildEntitySeoSignature(entity);
+    const existingSlug = canonicalSlugBySignature.get(signature);
+    if (!existingSlug || entity.slug.localeCompare(existingSlug) < 0) {
+      canonicalSlugBySignature.set(signature, entity.slug);
+    }
+  }
 
   for (const post of priorityPosts) {
     for (const entity of entities) {
@@ -272,9 +296,12 @@ function main() {
     }
 
     const html = fs.readFileSync(htmlPath, 'utf8');
-    const canonicalSnippet = `<link rel="canonical" href="${SITE_URL}${expectedPath}"`;
+    const canonicalMatch = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i);
+    const canonicalHref = canonicalMatch ? canonicalMatch[1] : null;
+    const expectedCanonicalPath = `/place/${canonicalSlugBySignature.get(buildEntitySeoSignature(entity)) || entity.slug}`;
+    const expectedCanonicalUrl = `${SITE_URL}${expectedCanonicalPath}`;
 
-    if (!html.includes(canonicalSnippet)) {
+    if (!canonicalHref || canonicalHref !== expectedCanonicalUrl || !placePathSet.has(expectedCanonicalPath)) {
       invalidCanonical.push(expectedPath);
     }
 

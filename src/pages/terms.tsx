@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { useTranslation } from 'react-i18next';
-import { metaDescriptions } from '../config/metaDescriptions';
+import { getStaticMetaDescription } from '../config/metaDescriptions';
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
@@ -10,12 +10,14 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 const Terms = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language || i18n.resolvedLanguage || 'en').split('-')[0];
+  const metaDescription = getStaticMetaDescription('terms', currentLang);
   return (
     <div>
       <Head>
         <title>{t('meta.termsTitle', 'Terms and Conditions - Googlementor')}</title>
-  <meta name="description" content={metaDescriptions.terms} />
+  <meta name="description" content={metaDescription} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/terms" />
       </Head>

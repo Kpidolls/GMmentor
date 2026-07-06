@@ -3,11 +3,13 @@ import Head from 'next/head';
 import type { GetStaticProps } from 'next';
 import { useTranslation } from 'react-i18next';
 import productsData from '../data/products.json';
-import { metaDescriptions } from '../config/metaDescriptions';
+import { getStaticMetaDescription } from '../config/metaDescriptions';
 import featureFlags from '../config/featureFlags.json';
 
 const Store: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language || i18n.resolvedLanguage || 'en').split('-')[0];
+  const metaDescription = getStaticMetaDescription('store', currentLang);
   const [visibleProducts, setVisibleProducts] = useState(16);
   const [filter, setFilter] = useState<'all' | 'amazon' | 'temu'>('all');
   const [filteredProducts, setFilteredProducts] = useState(productsData);
@@ -27,7 +29,7 @@ const Store: React.FC = () => {
         <title>{t('meta.storeTitle')}</title>
         <meta 
           name="description" 
-          content={metaDescriptions.store} 
+          content={metaDescription} 
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/store" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Text, usePrefersReducedMotion } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import tickerItems from '../data/tickerItems.json';
@@ -25,6 +25,7 @@ const TICKER_SCROLL_DURATION_SECONDS = 90;
 
 function MyTicker() {
   const { t } = useTranslation();
+  const prefersReducedMotion = usePrefersReducedMotion();
   const destinationsById = new Map(
     (islandsData as DestinationEntry[]).map((destination) => [String(destination.id).trim(), destination])
   );
@@ -32,7 +33,9 @@ function MyTicker() {
     .map((item) => destinationsById.get(String(item.destinationId).trim()))
     .filter((destination): destination is DestinationEntry => Boolean(destination))
     .slice(0, DESTINATION_TICKER_LIMIT);
-  const loopedDestinations = [...tickerDestinations, ...tickerDestinations];
+  const renderedDestinations = prefersReducedMotion
+    ? tickerDestinations
+    : [...tickerDestinations, ...tickerDestinations];
   const destinationLead = t(
     'ticker.destinationLead',
     'Tap a destination to open its map.'
@@ -50,11 +53,6 @@ function MyTicker() {
       color="black"
       py={{ base: 1.5, sm: 2 }}
       style={{ '--ticker-duration': `${TICKER_SCROLL_DURATION_SECONDS}s` } as React.CSSProperties}
-      sx={{
-        '&:hover .animate-scroll-track': {
-          animationPlayState: 'paused',
-        },
-      }}
     >
       <Flex className="ticker-row" whiteSpace="nowrap">
         <Text
@@ -79,14 +77,14 @@ function MyTicker() {
         <Box className="ticker-track-viewport">
           <Box
             as="ul"
-            className="ticker-track animate-scroll-track"
+            className={prefersReducedMotion ? 'ticker-track ticker-track--static' : 'ticker-track animate-scroll-track'}
             whiteSpace="nowrap"
             gap="4"
             m="0"
             p="0"
             listStyleType="none"
           >
-            {loopedDestinations.map((destination, index) => {
+            {renderedDestinations.map((destination, index) => {
               const destinationLabel = t(destination.title, destination.id);
               return (
                 <Box
@@ -117,7 +115,7 @@ function MyTicker() {
                       mr="2"
                       border="1px solid"
                       borderColor="blue.200"
-                      loading="eager"
+                      loading="lazy"
                       decoding="async"
                     />
                     <Text as="span" color="blue.800" fontWeight="extrabold" fontSize={{ base: 'xs', md: 'sm' }} mr="1">

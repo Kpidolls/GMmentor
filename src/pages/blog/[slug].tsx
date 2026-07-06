@@ -220,7 +220,8 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
   const metaDescription = getBlogMetaDescriptionBySlug(post.slug) || generateBlogMetaDescription(
     post.title,
     post.summary,
-    post.content
+    post.content,
+    post.language
   )
 
   const jsonLd = {

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useTranslation } from 'react-i18next';
 import islandsData from '../../data/islands.json';
+import { buildDestinationMetaDescription } from '../../config/metaDescriptions';
 
 type DestinationEntry = {
   id: string;
@@ -54,12 +55,17 @@ export const getStaticProps: GetStaticProps<DestinationPageProps> = async ({ par
 };
 
 const DestinationPage = ({ destination }: DestinationPageProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const destinationName = t(destination.title, destination.id);
-  const destinationDescription = t(
+  const destinationSummary = t(
     destination.description,
     'Curated points of interest, local favorites, and practical map guidance for your destination in Greece.'
   );
+  const destinationDescription = buildDestinationMetaDescription({
+    destinationName,
+    summary: destinationSummary,
+    language: i18n.language,
+  });
   const canonicalUrl = `https://googlementor.com/destination/${encodeURIComponent(destination.id)}`;
 
   const destinationJsonLd = {
@@ -100,7 +106,7 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
               {t('destination.pageLabel', 'Destination Guide')}
             </p>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">{destinationName}</h1>
-            <p className="text-slate-600 leading-relaxed mb-8">{destinationDescription}</p>
+            <p className="text-slate-600 leading-relaxed mb-8">{destinationSummary}</p>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a

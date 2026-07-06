@@ -5,7 +5,7 @@ import MainHero from '../components/MainHero';
 import '../i18n';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
-import { metaDescriptions } from '../config/metaDescriptions';
+import { getStaticMetaDescription } from '../config/metaDescriptions';
 import dynamic from 'next/dynamic';
 import { GetStaticProps } from 'next';
 import { Post, getAllPosts } from '../lib/posts';
@@ -58,6 +58,7 @@ type HomePageProps = {
 const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePageProps) => {
   const { t, i18n } = useTranslation();
   const currentLang = (i18n.language || 'en').split('-')[0];
+  const homeMetaDescription = getStaticMetaDescription('home', currentLang);
   const toAbsoluteUrl = (href: string) =>
     href.startsWith('http') ? href : `https://googlementor.com${href.startsWith('/') ? '' : '/'}${href}`;
 
@@ -132,12 +133,12 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
         <title>{t('meta.homeTitle')}</title>
         <meta
           name="description"
-          content={metaDescriptions.home}
+          content={homeMetaDescription}
         />
         <link rel="canonical" href="https://googlementor.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content={t('meta.homeTitle')} />
-        <meta property="og:description" content={t('meta.homeDescriptionShort')} />
+        <meta property="og:description" content={homeMetaDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://googlementor.com" />
         <meta property="og:image" content="https://googlementor.com/assets/images/cover-627.webp" />
@@ -158,107 +159,33 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
         <MainHero />
       </section>
 
-      {/* Make Blog more prominent: place BlogHighlight higher on the page */}
-      {/* Blog highlight inserted here (minimal posts passed) */}
-      <BlogHighlight allPosts={allPosts} />
-
-      {/* Short AI-friendly intro for the homepage */}
-      <section className="bg-white py-8">
+      {/* Compact transition after hero to keep discovery flow as primary */}
+      <section className="bg-white py-6 sm:py-8">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-[1.65rem] sm:text-3xl font-bold text-slate-800 mb-4">{t('home.intro.question', 'Looking for the best places to eat and explore in Greece?')}</h2>
-          <p className="text-slate-600 leading-relaxed">{t('home.intro.answer', 'These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike.')}</p>
-        </div>
-      </section>
-
-      <section className="bg-slate-50/70 py-10">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-7 shadow-[0_2px_10px_rgba(15,23,42,0.08)]">
-            <h2 className="text-[1.65rem] sm:text-3xl font-bold text-slate-900 mb-2">
-              {t('home.linkHub.title', 'Explore Greece with static guides and lists')}
-            </h2>
-            <p className="text-slate-600 mb-6">
-              {t('home.linkHub.subtitle', 'Browse top area pages, curated category lists, and practical travel guides.')}
-            </p>
-
-            <div className="grid gap-6 md:grid-cols-3">
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-3">
-                  {t('home.linkHub.areas', 'Top areas')}
-                </h3>
-                <ul className="space-y-2">
-                  {topAreaLinks.map((link) => (
-                    <li key={link.href}>
-                      <Link href={link.href} className="text-cyan-800 hover:text-amber-700 hover:underline focus-visible:rounded-sm">
-                        {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
-                      </Link>
-                      {typeof link.count === 'number' ? (
-                        <span className="ml-2 text-sm text-gray-500">({link.count} {t('home.linkHub.locations', 'locations')})</span>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-3">
-                  {t('home.linkHub.lists', 'Top lists')}
-                </h3>
-                <ul className="space-y-2">
-                  {topListLinks.map((link) => (
-                    <li key={link.href}>
-                      <Link href={link.href} className="text-cyan-800 hover:text-amber-700 hover:underline focus-visible:rounded-sm">
-                        {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
-                      </Link>
-                      {typeof link.count === 'number' ? (
-                        <span className="ml-2 text-sm text-gray-500">({link.count} {t('home.linkHub.locations', 'locations')})</span>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-3">
-                  {t('home.linkHub.guides', 'Top guides')}
-                </h3>
-                <ul className="space-y-2">
-                  {topGuideLinks.map((link) => (
-                    <li key={link.href}>
-                      <Link href={link.href} className="text-cyan-800 hover:text-amber-700 hover:underline focus-visible:rounded-sm">
-                        {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+          <h2 className="gm-section-title mb-3">{t('home.intro.question', 'Looking for the best places to eat and explore in Greece?')}</h2>
+          <p className="gm-section-subtitle text-sm sm:text-base">{t('home.intro.answer', 'These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike.')}</p>
         </div>
       </section>
 
       {/* Tours & Activities Section */}
       <LazyShow rootMargin="250px">
-      <section className="py-16 lg:py-20 bg-white">
+      <section className="gm-section bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5 leading-tight">
-              <span className="bg-gradient-to-r from-cyan-700 via-slate-700 to-amber-700 bg-clip-text text-transparent">
+          <div className="text-center mb-10">
+            <h2 className="gm-section-title mb-4">
+              <span className="gm-heading-gradient">
                 {t('navigation.getyourguide', 'Top Tours & Activities')}
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="gm-section-subtitle max-w-3xl mx-auto">
               {t('getyourguide.subtitle', 'Discover the best experiences Greece has to offer with our curated selection of tours and activities')}
             </p>
-            <div className="mt-6 mx-auto w-28 h-1 bg-gradient-to-r from-cyan-600 to-amber-500 rounded-full" />
           </div>
           
           {/* Widget Container */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-white to-slate-50 rounded-2xl transform rotate-1" />
-            <div className="relative bg-white rounded-2xl shadow-[0_12px_28px_rgba(15,23,42,0.12)] border border-slate-200 overflow-hidden">
-              <GetYourGuideWidget />
-            </div>
+          <div className="gm-panel gm-panel-strong overflow-hidden">
+            <GetYourGuideWidget />
           </div>
         </div>
       </section>
@@ -266,19 +193,18 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
 
       {/* Islands/Destinations Section */}
       <LazyShow deferRender rootMargin="200px">
-      <section className="py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="gm-section gm-section-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 bg-clip-text text-transparent">
+          <div className="text-center mb-10">
+            <h2 className="gm-section-title mb-4">
+              <span className="gm-heading-gradient">
                 {t('islands.title', 'Greek Destinations')}
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="gm-section-subtitle max-w-3xl mx-auto">
               {t('islands.subtitle', 'Explore the most beautiful islands and destinations across Greece')}
             </p>
-            <div className="mt-6 mx-auto w-32 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full" />
           </div>
           
           <IslandList />
@@ -300,27 +226,23 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
 
       {featureFlags.storeEnabled && (
         <LazyShow deferRender rootMargin="200px">
-          <section className="py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
+          <section className="gm-section gm-section-alt">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* Section Header */}
-              <div className="text-center mb-12">
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                  <span className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
+              <div className="text-center mb-10">
+                <h2 className="gm-section-title mb-4">
+                  <span className="gm-heading-gradient">
                     {t('productShowcaseTitle', 'Travel Essentials')}
                   </span>
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                <p className="gm-section-subtitle max-w-3xl mx-auto">
                   {t('productShowcase.subtitle', 'Carefully selected travel gear and essentials to enhance your Greek adventure')}
                 </p>
-                <div className="mt-6 mx-auto w-32 h-1 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full" />
               </div>
 
               {/* Product Showcase Container */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-white to-slate-50 rounded-3xl transform -rotate-1" />
-                <div className="relative bg-white rounded-3xl shadow-xl border border-gray-100 p-8">
-                  <ProductShowcase />
-                </div>
+              <div className="gm-panel p-5 sm:p-7">
+                <ProductShowcase />
               </div>
             </div>
           </section>
@@ -336,19 +258,18 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
 
       {/* Maps & Lists Section */}
       <LazyShow deferRender rootMargin="200px">
-      <section className="py-16 lg:py-20 bg-white">
+      <section className="gm-section bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
+          <div className="text-center mb-10">
+            <h2 className="gm-section-title mb-4">
+              <span className="gm-heading-gradient">
                 {t('product.title', 'Curated Maps & Lists')}
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="gm-section-subtitle max-w-3xl mx-auto">
               {t('product.subtitle', 'Discover Greece through our expertly curated collection of maps and location lists')}
             </p>
-            <div className="mt-6 mx-auto w-32 h-1 bg-gradient-to-r from-green-500 to-teal-500 rounded-full" />
           </div>
           
           <Product />
@@ -363,6 +284,80 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
         </div>
       </LazyShow>
 
+      {/* Secondary discovery content: quieter visual priority while preserving SEO/internal links */}
+      <section className="gm-section bg-slate-50/60 border-y border-slate-200/70">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-9">
+          <div className="gm-panel p-4 sm:p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-slate-500 mb-2">
+              {t('navigation.blog', 'Blog')}
+            </p>
+            <BlogHighlight allPosts={allPosts} />
+          </div>
+
+          <div className="gm-panel p-4 sm:p-6">
+            <h2 className="text-lg sm:text-2xl font-semibold text-slate-800 mb-2 leading-snug">
+              {t('home.linkHub.title', 'Explore Greece with static guides and lists')}
+            </h2>
+            <p className="text-slate-600 mb-5 text-sm sm:text-base">
+              {t('home.linkHub.subtitle', 'Browse top area pages, curated category lists, and practical travel guides.')}
+            </p>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2.5">
+                  {t('home.linkHub.areas', 'Top areas')}
+                </h3>
+                <ul className="space-y-1.5">
+                  {topAreaLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-cyan-800/90 hover:text-cyan-900 hover:underline focus-visible:rounded-sm">
+                        {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
+                      </Link>
+                      {typeof link.count === 'number' ? (
+                        <span className="ml-2 text-xs text-gray-500">({link.count} {t('home.linkHub.locations', 'locations')})</span>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2.5">
+                  {t('home.linkHub.lists', 'Top lists')}
+                </h3>
+                <ul className="space-y-1.5">
+                  {topListLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-cyan-800/90 hover:text-cyan-900 hover:underline focus-visible:rounded-sm">
+                        {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
+                      </Link>
+                      {typeof link.count === 'number' ? (
+                        <span className="ml-2 text-xs text-gray-500">({link.count} {t('home.linkHub.locations', 'locations')})</span>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2.5">
+                  {t('home.linkHub.guides', 'Top guides')}
+                </h3>
+                <ul className="space-y-1.5">
+                  {topGuideLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-cyan-800/90 hover:text-cyan-900 hover:underline focus-visible:rounded-sm">
+                        {(currentLang === 'el' && link.labelEl) ? link.labelEl : link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Us Section */}
       <LazyShow deferRender rootMargin="200px">
       <AboutUs />
@@ -375,18 +370,18 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
 
       {/* Newsletter Section */}
       <LazyShow deferRender rootMargin="200px">
-      <section className="py-16 lg:py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="gm-section" style={{ background: 'linear-gradient(130deg, var(--gm-sea-700) 0%, var(--gm-sea-500) 65%, var(--gm-sun-500) 100%)' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="gm-section-title text-white mb-4">
               {t('newsletter.title', 'Stay Updated')}
             </h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+            <p className="gm-section-subtitle text-cyan-50 max-w-2xl mx-auto">
               {t('newsletter.subtitle', 'Get the latest travel tips, new destinations, and exclusive offers delivered to your inbox')}
             </p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+          <div className="rounded-[var(--gm-radius-lg)] bg-white/14 backdrop-blur-sm p-8 border border-white/30 shadow-[var(--gm-shadow-2)]">
             <BrevoForm />
           </div>
         </div>

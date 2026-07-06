@@ -2,16 +2,18 @@ import Head from "next/head";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import Image from 'next/image';
-import { metaDescriptions } from '../config/metaDescriptions';
+import { getStaticMetaDescription } from '../config/metaDescriptions';
 
 export default function MobileDataPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language || i18n.resolvedLanguage || 'en').split('-')[0];
+  const metaDescription = getStaticMetaDescription('airalo', currentLang);
 
   return (
     <main className="bg-gray-50 min-h-screen">
       <Head>
         <title>{`${t("airalo.title", "Mobile Travel Data with Airalo")} - Googlementor`}</title>
-        <meta name="description" content={metaDescriptions.airalo} />
+        <meta name="description" content={metaDescription} />
         <link rel="canonical" href="https://googlementor.com/airalo" />
       </Head>
 

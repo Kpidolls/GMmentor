@@ -66,19 +66,19 @@ const Header = () => {
     bg: 'white',
     border: '1px solid',
     borderColor: 'gray.300',
-    borderRadius: 'full',
+    borderRadius: 'lg',
     fontWeight: 'semibold',
     letterSpacing: '0.01em',
     fontSize: 'sm',
     px: 3.5,
     h: 10,
-    boxShadow: '0 1px 2px rgba(15, 23, 42, 0.06)',
+    boxShadow: 'var(--gm-shadow-1)',
     transition: 'background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
     _hover: {
       bg: 'white',
       borderColor: 'gray.300',
       color: 'gray.900',
-      boxShadow: '0 4px 12px rgba(15, 23, 42, 0.08)'
+      boxShadow: 'var(--gm-shadow-2)'
     },
     _active: {
       bg: 'gray.100',
@@ -86,7 +86,7 @@ const Header = () => {
       color: 'gray.900'
     },
     _focusVisible: {
-      boxShadow: '0 0 0 3px rgba(27, 127, 149, 0.28)'
+      boxShadow: 'var(--gm-focus-ring)'
     },
     sx: {
       '.chakra-button__icon:first-of-type': {
@@ -123,7 +123,7 @@ const Header = () => {
       bg: 'teal.700',
       color: 'white',
       borderColor: 'teal.700',
-      boxShadow: '0 8px 20px rgba(15, 95, 115, 0.26)'
+      boxShadow: 'var(--gm-shadow-3)'
     },
     sx: {
       ...navButtonStyles.sx,
@@ -162,7 +162,7 @@ const Header = () => {
       transform: 'translateY(0)'
     },
     _focusVisible: {
-      boxShadow: '0 0 0 3px rgba(27, 127, 149, 0.28)'
+      boxShadow: 'var(--gm-focus-ring)'
     }
   };
 
@@ -361,18 +361,18 @@ const Header = () => {
   };
 
   return (
-    <Box as="header" bg={bg} shadow="xs" position="sticky" top="0" zIndex="50" w="full">
+    <Box as="header" bg={bg} shadow="xs" position="sticky" top="0" zIndex="50" w="full" borderBottom="1px solid" borderColor="gray.200">
       {/* Top Bar */}
       <Flex
-        bg="gray.800"
+        bg="var(--gm-sea-700)"
         color="white"
         px={{ base: 3, md: 8 }}
-        py={2}
+        py={{ base: 1.5, md: 1.5 }}
         align="center"
         justify="space-between"
         flexWrap={{ base: 'wrap', md: 'nowrap' }}
         gap={{ base: 2, md: 3 }}
-        minH={{ base: 'auto', md: '44px' }}
+        minH={{ base: 'auto', md: '40px' }}
       >
         <HStack spacing={{ base: 1, md: 3 }} flex={{ base: '1 1 auto', md: '1' }} minW="0">
           <HStack
@@ -380,7 +380,7 @@ const Header = () => {
             bg="white"
             border="1px solid"
             borderColor="whiteAlpha.500"
-            borderRadius="full"
+            borderRadius="lg"
             p={0.5}
             boxShadow="sm"
             minH={{ base: '28px', md: '34px' }}
@@ -398,7 +398,7 @@ const Header = () => {
             <Button
               size="xs"
               onClick={() => setLanguage('en')}
-              bg={i18n.language === 'en' ? 'blue.600' : 'transparent'}
+              bg={i18n.language === 'en' ? 'var(--gm-sea-700)' : 'transparent'}
               color={i18n.language === 'en' ? 'white' : 'gray.700'}
               borderRadius="full"
               fontWeight="bold"
@@ -406,8 +406,8 @@ const Header = () => {
               px={{ base: 2, md: 3 }}
               h={{ base: '24px', md: '28px' }}
               minW={{ base: '36px', md: '40px' }}
-              _hover={{ bg: i18n.language === 'en' ? 'blue.500' : 'gray.100' }}
-              _active={{ bg: i18n.language === 'en' ? 'blue.500' : 'gray.200' }}
+              _hover={{ bg: i18n.language === 'en' ? 'var(--gm-sea-500)' : 'gray.100' }}
+              _active={{ bg: i18n.language === 'en' ? 'var(--gm-sea-500)' : 'gray.200' }}
               aria-label={t('language.english', 'English')}
             >
               <Box
@@ -434,7 +434,7 @@ const Header = () => {
             <Button
               size="xs"
               onClick={() => setLanguage('el')}
-              bg={i18n.language === 'el' ? 'blue.600' : 'transparent'}
+              bg={i18n.language === 'el' ? 'var(--gm-sea-700)' : 'transparent'}
               color={i18n.language === 'el' ? 'white' : 'gray.700'}
               borderRadius="full"
               fontWeight="bold"
@@ -442,8 +442,8 @@ const Header = () => {
               px={{ base: 2, md: 3 }}
               h={{ base: '24px', md: '28px' }}
               minW={{ base: '36px', md: '40px' }}
-              _hover={{ bg: i18n.language === 'el' ? 'blue.500' : 'gray.100' }}
-              _active={{ bg: i18n.language === 'el' ? 'blue.500' : 'gray.200' }}
+              _hover={{ bg: i18n.language === 'el' ? 'var(--gm-sea-500)' : 'gray.100' }}
+              _active={{ bg: i18n.language === 'el' ? 'var(--gm-sea-500)' : 'gray.200' }}
               aria-label={t('language.greek', 'Greek')}
             >
               <Box
@@ -478,10 +478,10 @@ const Header = () => {
             process.env.NODE_ENV === 'development') && isOnline && (
             <Button
               size={{ base: "xs", md: "sm" }}
-              bgGradient="linear(to-r, teal.500, green.500)"
+              bgGradient="linear(to-r, teal.700, cyan.700)"
               color="white"
               _hover={{ 
-                bgGradient: "linear(to-r, teal.400, green.400)",
+                bgGradient: "linear(to-r, teal.600, cyan.600)",
                 transform: "scale(1.05)"
               }}
               _active={{ transform: "scale(0.95)" }}
@@ -516,7 +516,7 @@ const Header = () => {
               position="relative"
               overflow="hidden"
               transition="all 0.2s"
-              boxShadow="0 4px 12px rgba(16, 185, 129, 0.3)"
+              boxShadow="var(--gm-shadow-1)"
               minW="0"
               flexShrink={0}
               display={{ base: 'none', sm: 'inline-flex' }}
@@ -541,35 +541,35 @@ const Header = () => {
           flex={{ base: '1 1 100%', lg: '1' }}
           maxW={{ base: '100%', sm: '190px', md: '300px' }}
           minW="0"
-          h={{ base: '32px', md: '34px' }}
-          bg="whiteAlpha.200"
+          h={{ base: '34px', md: '36px' }}
+          bg="white"
           border="1px solid"
-          borderColor="whiteAlpha.300"
-          color="whiteAlpha.900"
-          borderRadius="full"
-          px={{ base: 2.5, md: 3.5 }}
+          borderColor="whiteAlpha.800"
+          color="gray.800"
+          borderRadius="lg"
+          px={{ base: 3, md: 4 }}
           display="flex"
           alignItems="center"
           gap={{ base: 1.5, md: 2.5 }}
           textAlign="left"
-          boxShadow="inset 0 1px 0 rgba(255,255,255,0.12)"
-          _hover={{ bg: 'whiteAlpha.300', borderColor: 'whiteAlpha.500' }}
-          _active={{ bg: 'whiteAlpha.400' }}
-          _focusVisible={{ boxShadow: '0 0 0 3px rgba(27, 127, 149, 0.3)' }}
+          boxShadow="var(--gm-shadow-1)"
+          _hover={{ bg: 'gray.100', borderColor: 'white' }}
+          _active={{ bg: 'gray.200' }}
+          _focusVisible={{ boxShadow: 'var(--gm-focus-ring)' }}
           order={{ base: 3, lg: 0 }}
           mt={{ base: 1, md: 0 }}
           aria-label={t('search.openSearch', 'Open search')}
           id="header-search"
         >
-          <SearchIcon color="whiteAlpha.700" boxSize={{ base: '11px', md: '14px' }} flexShrink={0} />
+          <SearchIcon color="gray.500" boxSize={{ base: '12px', md: '14px' }} flexShrink={0} />
           <Text
-            fontSize={{ base: '11px', md: 'sm' }}
+            fontSize={{ base: '12px', md: 'sm' }}
             lineHeight="1"
             whiteSpace="nowrap"
             overflow="hidden"
             textOverflow="ellipsis"
-            color="whiteAlpha.900"
-            fontWeight="medium"
+            color="gray.700"
+            fontWeight="semibold"
           >
             {t('header.searchHint', 'Find places')}
           </Text>
@@ -577,7 +577,7 @@ const Header = () => {
       </Flex>
 
       {/* Main Header */}
-      <Box px={{ base: 3, md: 8 }} py={4}>
+      <Box px={{ base: 3, md: 8 }} py={{ base: 3, md: 3.5 }}>
         <Flex align="center" justify="space-between" wrap="wrap">
           {/* Logo and Company */}
           <HStack spacing={3} onClick={() => window.location.href = '/'} cursor="pointer">

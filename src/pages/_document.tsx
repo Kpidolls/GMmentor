@@ -37,11 +37,6 @@ class MyDocument extends Document {
           {/* Apple PWA Icons */}
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-          {/* Enhanced SEO meta */}
-          <meta
-            name="description"
-            content="Discover Greece like a local with Googlementor's curated travel maps, authentic restaurant guides, and expert recommendations for Athens, islands, and hidden gems across Greece."
-          />
           <meta
             name="keywords"
             content="Greece travel guide, Athens restaurants, Greek islands maps, travel insurance, mobile data eSIM, authentic tavernas, Greek destinations, travel planning tools"
@@ -51,16 +46,11 @@ class MyDocument extends Document {
 
           {/* Open Graph */}
           <meta property="og:title" content="Googlementor" />
-          <meta
-            property="og:description"
-            content="Googlementor – Travel lists for trip planning"
-          />
           <meta property="og:image" content="/assets/images/newlogo1.webp" />
 
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Googlementor - Travel better" />
-          <meta name="twitter:description" content="Travel lists for trip planning" />
           <meta name="twitter:image" content="/assets/images/newlogo1.webp" />
 
           {process.env.NODE_ENV === 'production' && (

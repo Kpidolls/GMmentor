@@ -19,6 +19,7 @@ import { createIntentEngine } from '../../lib/intent';
 import { loadEntitiesIndex } from '../../lib/entities';
 import type { IntentResultsPayload } from '../../lib/intent';
 import { formatDistance } from '../../utils/locationUtils';
+import { buildAreaMetaDescription } from '../../config/metaDescriptions';
 
 const SITE_URL = 'https://googlementor.com';
 
@@ -192,7 +193,11 @@ export const getStaticProps: GetStaticProps<AreaPageProps> = async ({ params }) 
 export default function AreaPage({ payload, topGuides }: AreaPageProps) {
   const canonicalUrl = `${SITE_URL}/area/${payload.area.urlSlug}`;
   const title = `Best places in ${payload.area.name} | Googlementor`;
-  const description = `Discover ${payload.counts.totalInArea} curated places in ${payload.area.name}, with nearby alternatives and top categories.`;
+  const description = buildAreaMetaDescription({
+    areaName: payload.area.nameEn || payload.area.name,
+    regionName: payload.area.regionEn || payload.area.region,
+    count: payload.counts.totalInArea,
+  });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(payload.area.urlSlug, payload.area.name);
   const collectionJsonLd = buildCollectionJsonLd(payload, canonicalUrl);

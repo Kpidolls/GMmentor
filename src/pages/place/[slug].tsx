@@ -5,6 +5,7 @@ import { Box, Button, Container, Divider, Heading, HStack, Link, ListItem, Simpl
 
 import { buildBreadcrumbJsonLd, buildEntityJsonLd } from '../../lib/entityStructuredData';
 import {
+  buildEntitySeoSignature,
   EntityRecord,
   findEntityBySlug,
   getSameCategoryEntities,
@@ -13,6 +14,7 @@ import {
 } from '../../lib/entities';
 import { getMentionedGuidesForEntity } from '../../lib/knowledgeGraph';
 import { calculateDistance, formatDistance } from '../../utils/locationUtils';
+import { buildPlaceMetaDescription } from '../../config/metaDescriptions';
 
 const SITE_URL = 'https://googlementor.com';
 
@@ -22,6 +24,8 @@ type EntityPageProps = {
   nearby: Array<EntityRecord & { distanceKm: number }>;
   sameRegion: EntityRecord[];
   mentionedGuides: Array<{ slug: string; title: string }>;
+  canonicalSlug: string;
+  isCanonicalEntity: boolean;
 };
 
 function displayContext(entity: EntityRecord): string {
@@ -58,6 +62,11 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
     return { notFound: true };
   }
 
+  const seoSignature = buildEntitySeoSignature(entity);
+  const canonicalEntity = index.entities
+    .filter((candidate) => buildEntitySeoSignature(candidate) === seoSignature)
+    .sort((left, right) => left.slug.localeCompare(right.slug))[0] || entity;
+
   const nearbyCandidates = index.entities.filter((candidate) => {
     if (candidate.id === entity.id) {
       return false;
@@ -90,13 +99,22 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
         slug: post.slug,
         title: post.title,
       })),
+      canonicalSlug: canonicalEntity.slug,
+      isCanonicalEntity: canonicalEntity.slug === entity.slug,
     },
   };
 };
 
-export default function PlacePage({ entity, sameCategory, nearby, sameRegion, mentionedGuides }: EntityPageProps) {
-  const canonicalUrl = `${SITE_URL}/place/${entity.slug}`;
+export default function PlacePage({ entity, sameCategory, nearby, sameRegion, mentionedGuides, canonicalSlug, isCanonicalEntity }: EntityPageProps) {
+  const canonicalUrl = `${SITE_URL}/place/${canonicalSlug}`;
   const context = displayContext(entity);
+  const primaryCategory = entity.categories?.find(Boolean);
+  const metaDescription = buildPlaceMetaDescription({
+    placeName: entity.name,
+    context,
+    typeLabel: kindLabel(entity),
+    categoryLabel: primaryCategory,
+  });
   const subjectOfUrls = mentionedGuides.map((guide) => `${SITE_URL}/blog/${guide.slug}`);
   const entityJsonLd = buildEntityJsonLd(entity, canonicalUrl, subjectOfUrls);
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(entity, canonicalUrl);
@@ -105,10 +123,8 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
     <Container maxW="5xl" py={10}>
       <Head>
         <title>{`${entity.name} | ${kindLabel(entity)} | Googlementor`}</title>
-        <meta
-          name="description"
-          content={`${entity.name} in ${context}. Discover details, nearby places, and a direct Google Maps link on Googlementor.`}
-        />
+        <meta name="description" content={metaDescription} />
+        <meta name="robots" content={isCanonicalEntity ? 'index, follow' : 'noindex, follow'} />
         <link rel="canonical" href={canonicalUrl} />
         <script
           type="application/ld+json"

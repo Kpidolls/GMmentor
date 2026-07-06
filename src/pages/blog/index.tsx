@@ -5,7 +5,7 @@ import Head from 'next/head'
 import { Box, Heading, Text, Container, HStack, Button, Grid, GridItem, Image, Badge, Flex, Tag, TagLabel } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { useMemo } from 'react'
-import { metaDescriptions } from '../../config/metaDescriptions'
+import { getStaticMetaDescription } from '../../config/metaDescriptions'
 import { formatPostDate } from '../../utils/dateUtils'
 
 type BlogListPost = Omit<Post, 'content'> & {
@@ -82,6 +82,7 @@ export default function Blog({ allPosts }: BlogProps) {
     const lang = i18n.language || i18n.resolvedLanguage || 'en'
     return lang.split('-')[0]
   }, [i18n.language, i18n.resolvedLanguage])
+  const metaDescription = useMemo(() => getStaticMetaDescription('blog', currentLanguage), [currentLanguage])
 
   const posts = useMemo(
     () => allPosts.filter((post) => post.language === currentLanguage),
@@ -94,7 +95,7 @@ export default function Blog({ allPosts }: BlogProps) {
         <title>{t('meta.blogTitle')}</title>
         <meta 
           name="description" 
-          content={metaDescriptions.blog} 
+          content={metaDescription} 
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/blog" />

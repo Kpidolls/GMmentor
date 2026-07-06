@@ -44,6 +44,15 @@ export function findEntityBySlug(entities: EntityRecord[], slug: string): Entity
   return entities.find((entity) => entity.slug === slug);
 }
 
+export function buildEntitySeoSignature(entity: EntityRecord): string {
+  const normalizedName = entity.name.trim().toLowerCase();
+  const normalizedLocation = (entity.address || entity.region || `${entity.lat.toFixed(5)},${entity.lng.toFixed(5)}`)
+    .trim()
+    .toLowerCase();
+
+  return `${entity.kind}::${normalizedName}::${normalizedLocation}`;
+}
+
 function intersectCount(left: string[], right: string[]): number {
   const set = new Set(left);
   return right.reduce((count, value) => (set.has(value) ? count + 1 : count), 0);
