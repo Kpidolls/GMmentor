@@ -1066,8 +1066,8 @@ const MainHero = () => {
   });
 
   const heroContentSpacing = showLocationOptions
-    ? 'pt-16 sm:pt-20 lg:pt-20 pb-3 sm:pb-5 lg:pb-6'
-    : 'py-7 sm:py-10 lg:py-11';
+    ? 'pt-12 sm:pt-16 lg:pt-16 pb-2 sm:pb-4 lg:pb-5'
+    : 'py-6 sm:py-8 lg:py-9';
 
   return (
     <>
@@ -1110,7 +1110,7 @@ const MainHero = () => {
       
 
 
-      <main className="relative min-h-screen w-full flex items-start justify-center md:items-center pt-2 sm:pt-3 md:pt-0">
+      <main className="relative min-h-[86vh] w-full flex items-start justify-center md:items-center pt-2 sm:pt-3 md:pt-0">
 
         {/* Professional Background with restrained layering */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-cyan-50/70 to-slate-100">
@@ -1176,7 +1176,7 @@ const MainHero = () => {
             <header className={`relative ${showLocationOptions ? 'space-y-2 xs:space-y-3 sm:space-y-4' : 'space-y-3 xs:space-y-4 sm:space-y-6'}`}>
               {/* Decorative elements */}
               {!showLocationOptions && (
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-24 h-1 rounded-full opacity-70 bg-gradient-to-r from-transparent via-slate-400 to-transparent" />
+                <div className="absolute -top-8 inset-x-0 mx-auto w-24 h-1 rounded-full opacity-70 bg-gradient-to-r from-transparent via-slate-400 to-transparent" />
               )}
               
               <div 
@@ -1259,7 +1259,7 @@ const MainHero = () => {
                         }}
                         className="group inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-all duration-200 font-semibold text-sm sm:text-base px-4 py-2.5 rounded-xl hover:bg-white/70 hover:scale-105"
                       >
-                        <svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                         </svg>
                         {t('categorySelection.backToLocationStep', 'Back to Search Method')}

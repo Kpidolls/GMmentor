@@ -20,7 +20,7 @@ type DestinationEntry = {
   rel?: string;
 };
 
-const DESTINATION_TICKER_LIMIT = 30;
+const DESTINATION_TICKER_LIMIT = 18;
 const TICKER_SCROLL_DURATION_SECONDS = 90;
 
 function MyTicker() {

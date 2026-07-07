@@ -90,8 +90,8 @@ const LazyShow = ({ children, deferRender = false, rootMargin = '0px' }: LazySho
       className="lazy-div"
       style={{
         opacity: hasShown ? 1 : 0,
-        transform: hasShown ? 'translateX(0) translateZ(0)' : 'translateX(-50px) translateZ(0)',
-        transition: 'opacity 0.5s ease-out, transform 0.5s ease-out',
+        transform: hasShown ? 'translateY(0) translateZ(0)' : 'translateY(14px) translateZ(0)',
+        transition: 'opacity 0.45s ease-out, transform 0.45s ease-out',
       }}
     >
       {children}

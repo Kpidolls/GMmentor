@@ -160,7 +160,7 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
       </section>
 
       {/* Compact transition after hero to keep discovery flow as primary */}
-      <section className="bg-white py-6 sm:py-8">
+      <section className="bg-white py-5 sm:py-6">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="gm-section-title mb-3">{t('home.intro.question', 'Looking for the best places to eat and explore in Greece?')}</h2>
           <p className="gm-section-subtitle text-sm sm:text-base">{t('home.intro.answer', 'These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike.')}</p>
@@ -172,7 +172,7 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
       <section className="gm-section bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <h2 className="gm-section-title mb-4">
               <span className="gm-heading-gradient">
                 {t('navigation.getyourguide', 'Top Tours & Activities')}
@@ -196,7 +196,7 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
       <section className="gm-section gm-section-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <h2 className="gm-section-title mb-4">
               <span className="gm-heading-gradient">
                 {t('islands.title', 'Greek Destinations')}
@@ -214,7 +214,7 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
 
       {/* Canvas Divider */}
       <LazyShow deferRender rootMargin="200px">
-        <div className="relative h-24">
+        <div className="relative h-14 sm:h-16">
           <Canvas />
         </div>
       </LazyShow>
@@ -229,7 +229,7 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
           <section className="gm-section gm-section-alt">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* Section Header */}
-              <div className="text-center mb-10">
+              <div className="text-center mb-8">
                 <h2 className="gm-section-title mb-4">
                   <span className="gm-heading-gradient">
                     {t('productShowcaseTitle', 'Travel Essentials')}
@@ -251,7 +251,7 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
 
       {/* Canvas Divider */}
       <LazyShow deferRender rootMargin="200px">
-        <div className="relative h-24">
+        <div className="relative h-14 sm:h-16">
           <Canvas />
         </div>
       </LazyShow>
@@ -261,7 +261,7 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
       <section className="gm-section bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <h2 className="gm-section-title mb-4">
               <span className="gm-heading-gradient">
                 {t('product.title', 'Curated Maps & Lists')}
@@ -279,14 +279,14 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
 
       {/* Canvas Divider */}
       <LazyShow deferRender rootMargin="200px">
-        <div className="relative h-24">
+        <div className="relative h-14 sm:h-16">
           <Canvas />
         </div>
       </LazyShow>
 
       {/* Secondary discovery content: quieter visual priority while preserving SEO/internal links */}
-      <section className="gm-section bg-slate-50/60 border-y border-slate-200/70">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-9">
+      <section className="gm-section bg-slate-50/55 border-y border-slate-200/70">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-7">
           <div className="gm-panel p-4 sm:p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.1em] text-slate-500 mb-2">
               {t('navigation.blog', 'Blog')}
