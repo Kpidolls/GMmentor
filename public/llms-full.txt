@@ -7,7 +7,7 @@ language_coverage: el,en
 # Googlementor — Greece Travel & Restaurant Guide
 Site: https://googlementor.com
 Entities index: https://googlementor.com/data/entities.json
-Generated: 2026-07-08T09:18:01.643Z
+Generated: 2026-07-08T12:42:21.219Z
 
 Googlementor is a curated directory of restaurants, cafes, attractions, and neighborhoods in Athens and the Greek islands. All locations are verified, geocoded, and linked to Google Maps. The site covers 3765 curated dining and attraction entries across 352 Athens neighborhoods and Greek regions.
 
@@ -4303,12 +4303,12 @@ Can you drink tap water in Greece? A practical guide for major cities and island
 URL: https://googlementor.com/blog/tap-water-safe-greece
 Published: 2026-03-04
 
-### Best Greek Souvenirs to Buy in Athens: Authentic Brands, Local Products and Where to Find Them
+### Best Greek Souvenirs in Athens: Shopping Guide
 A practical Athens souvenir guide with authentic Greek brands, local food products, fashion, beauty, and where to shop in central Athens.
 URL: https://googlementor.com/blog/best-greek-souvenirs-athens
 Published: 2026-02-25
 
-### Live Traditional Greek Music in Athens: Bouzoukia, Taverns, and What to Expect
+### Live Greek Music in Athens: Bouzoukia & Taverns Guide
 Practical local guide to live Greek music in Athens: bouzoukia vs tavernas, real costs, flower traditions, and how to plan a smart night out.
 URL: https://googlementor.com/blog/athens-live-greek-music-guide
 Published: 2026-02-20
@@ -4328,7 +4328,7 @@ Budget travel Greece guide with Athens tips, cheap eats, and island ferry planni
 URL: https://googlementor.com/blog/traveling-to-greece-on-a-budget
 Published: 2026-02-10
 
-### When to Visit Greece: Weather, Swimming Months & Essential Travel Timings
+### When to Visit Greece: Weather, Swimming & Ferries
 Greece's weather patterns, swimming seasons, business operations, and ferry schedules. Plan your trip around the best months for beaches, island hopping, and authentic experiences.
 URL: https://googlementor.com/blog/greece-weather-swimming-ferry-guide
 Published: 2026-01-18
@@ -4348,7 +4348,7 @@ Discover Athens at your own pace with hop-on-hop-off buses. Complete guide to ro
 URL: https://googlementor.com/blog/athens-hop-on-hop-off-guide
 Published: 2025-09-29
 
-### Plan an Unforgettable Weekend Adventure with Googlementor
+### Plan a Fun Weekend Adventure in Greece
 Discover how Googlementor can transform your weekend plans.
 URL: https://googlementor.com/blog/plan-something-fun
 Published: 2025-08-25
@@ -4378,7 +4378,7 @@ Complete month-by-month guide to Greek public holidays, national events, and cel
 URL: https://googlementor.com/blog/greece-2026-holidays-guide
 Published: 2025-01-20
 
-### Luxury Rooftop Restaurants and Bars in Athens with Stunning City Views
+### Luxury Rooftop Restaurants & Bars in Athens
 Discover Athens' most elegant rooftop dining experiences with breathtaking Acropolis views. From Michelin-level restaurants to stylish cocktail lounges - your guide to luxury dining above the city.
 URL: https://googlementor.com/blog/luxury-rooftop-restaurants-athens
 Published: 2025-01-15

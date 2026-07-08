@@ -313,7 +313,7 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
     <Container maxW="4xl" py={10}>
       <Head>
         <title>{`${post.title} | Googlementor`}</title>
-        <meta name="description" content={metaDescription} />
+        <meta key="description" name="description" content={metaDescription} />
         
         {/* Self-referencing canonical - each language version is its own canonical */}
         <link rel="canonical" href={`https://googlementor.com/blog/${post.slug}`} />

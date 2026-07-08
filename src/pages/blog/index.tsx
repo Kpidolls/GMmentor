@@ -93,9 +93,10 @@ export default function Blog({ allPosts }: BlogProps) {
     <>
       <Head>
         <title>{t('meta.blogTitle')}</title>
-        <meta 
-          name="description" 
-          content={metaDescription} 
+        <meta
+          key="description"
+          name="description"
+          content={metaDescription}
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://googlementor.com/blog" />
