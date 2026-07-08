@@ -4,6 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { useTranslation } from 'react-i18next';
 import islandsData from '../../data/islands.json';
 import { buildDestinationMetaDescription } from '../../config/metaDescriptions';
+import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
 
 type DestinationEntry = {
   id: string;
@@ -66,6 +67,10 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
     summary: destinationSummary,
     language: i18n.language,
   });
+  const mapListTitle = t('destination.itineraryMapTitle', {
+    destination: destinationName,
+    defaultValue: '{{destination}} Points of Interest Map',
+  });
   const canonicalUrl = `https://googlementor.com/destination/${encodeURIComponent(destination.id)}`;
 
   const destinationJsonLd = {
@@ -86,10 +91,10 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
   return (
     <>
       <Head>
-        <title>{`${destinationName} Points of Interest Map | GoogleMentor`}</title>
+        <title>{`${destinationName} ${t('destination.metaTitleSuffix', 'Points of Interest Map')} | Googlementor`}</title>
         <meta name="description" content={destinationDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content={`${destinationName} Points of Interest Map`} />
+        <meta property="og:title" content={`${destinationName} ${t('destination.metaTitleSuffix', 'Points of Interest Map')}`} />
         <meta property="og:description" content={destinationDescription} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonicalUrl} />
@@ -108,18 +113,40 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">{destinationName}</h1>
             <p className="text-slate-600 leading-relaxed mb-8">{destinationSummary}</p>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               <a
                 href={destination.link}
                 target={destination.target || '_blank'}
                 rel={destination.rel || 'noopener noreferrer'}
-                className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors"
+                className="inline-flex items-center justify-center min-h-12 px-5 py-3 rounded-xl bg-blue-700 text-white font-semibold text-center leading-tight whitespace-normal hover:bg-blue-800 transition-colors"
               >
                 {t('destination.openMap', 'Open Points of Interest Map')}
               </a>
+              <button
+                type="button"
+                className="inline-flex items-center justify-center min-h-12 sm:min-h-[52px] px-5 py-3 rounded-xl border border-teal-300 text-teal-800 font-semibold text-center leading-tight whitespace-normal hover:bg-teal-50 transition-colors"
+                onClick={() =>
+                  dispatchAddToItinerary({
+                    id: destination.id,
+                    name: mapListTitle,
+                    type: 'guide',
+                    url: destination.link,
+                    notes: t(
+                      'destination.itineraryMapNote',
+                      {
+                        destination: destinationName,
+                        defaultValue:
+                          'Map stop: this Google Maps list highlights the most important places in {{destination}}. Open it anytime to browse must-see spots and plan your route.'
+                      }
+                    ),
+                  })
+                }
+              >
+                {t('destination.addToItinerary', 'Add to itinerary')}
+              </button>
               <Link
                 href="/"
-                className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-300 text-slate-700 font-semibold hover:bg-slate-100 transition-colors"
+                className="inline-flex items-center justify-center min-h-12 px-5 py-3 rounded-xl border border-slate-300 text-slate-700 font-semibold text-center leading-tight whitespace-normal hover:bg-slate-100 transition-colors"
               >
                 {t('destination.backHome', 'Back to Home')}
               </Link>

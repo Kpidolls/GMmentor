@@ -35,9 +35,15 @@ interface EntitiesIndex {
 
 const ENTITIES_INDEX_PATH = join(process.cwd(), 'public', 'data', 'entities.json');
 
+let cachedEntitiesIndex: EntitiesIndex | null = null;
+
 export function loadEntitiesIndex(): EntitiesIndex {
-  const raw = readFileSync(ENTITIES_INDEX_PATH, 'utf8');
-  return JSON.parse(raw) as EntitiesIndex;
+  if (!cachedEntitiesIndex) {
+    const raw = readFileSync(ENTITIES_INDEX_PATH, 'utf8');
+    cachedEntitiesIndex = JSON.parse(raw) as EntitiesIndex;
+  }
+
+  return cachedEntitiesIndex;
 }
 
 export function findEntityBySlug(entities: EntityRecord[], slug: string): EntityRecord | undefined {

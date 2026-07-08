@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import islands from '../data/islands.json';
 import Image from 'next/image';
+import { dispatchAddToItinerary } from '../utils/itineraryEvents';
 
 const IslandList = () => {
   const { t } = useTranslation();
@@ -12,6 +13,11 @@ const IslandList = () => {
     isIsland(id)
       ? t('destinationSearch.destinationTypeIsland', 'Island')
       : t('destinationSearch.destinationTypeMainland', 'Mainland');
+  const getMapListTitle = (title: string) =>
+    t('destination.itineraryMapTitle', {
+      destination: title,
+      defaultValue: '{{destination}} Points of Interest Map',
+    });
 
   const handleViewMore = () => {
     setVisibleIslands(islands.length);
@@ -51,12 +57,12 @@ const IslandList = () => {
                 {t(island.description)}
               </p>
 
-              <div className="mt-auto pt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div className="mt-auto pt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                 <a
                   href={island.link}
                   target={island.target}
                   rel={island.rel}
-                  className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg text-white transition-colors duration-200 text-center whitespace-nowrap truncate bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
+                  className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg text-white text-center leading-tight whitespace-normal bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black transition-colors duration-200"
                   aria-label={t('islands.openMapAria', 'Open map for islands')}
                 >
                   <span className="sm:hidden">🗺️ {t('destinationSearch.openCuratedMapShort', 'Map')}</span>
@@ -75,11 +81,31 @@ const IslandList = () => {
                       alert(t('islands.shareNotSupported'));
                     }
                   }}
-                  className="px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 whitespace-nowrap truncate bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
+                  className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 text-center leading-tight whitespace-normal bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
                   aria-label={t('islands.shareIslandAria', 'Share this island')}
                 >
                   <span className="sm:hidden">🔗 {t('destinationSearch.shareMapShort', 'Share')}</span>
                   <span className="hidden sm:inline">🔗 {t('destinationSearch.shareMap', 'Share Map')}</span>
+                </button>
+                <button
+                  onClick={() =>
+                    dispatchAddToItinerary({
+                      id: island.id,
+                      name: getMapListTitle(t(island.title)),
+                      type: 'guide',
+                      url: island.link,
+                      notes: t('destination.itineraryMapNote', {
+                        destination: t(island.title),
+                        defaultValue:
+                          'Map stop: this Google Maps list highlights the most important places in {{destination}}. Open it anytime to browse must-see spots and plan your route.',
+                      }),
+                    })
+                  }
+                  className="inline-flex items-center justify-center min-h-11 sm:min-h-12 px-3 py-2.5 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 text-center leading-tight whitespace-normal bg-teal-50 border-teal-300 text-teal-800 hover:bg-teal-100"
+                  aria-label={t('place.addToItinerary', 'Add to itinerary')}
+                >
+                  <span className="sm:hidden">➕ {t('destinationSearch.addShort', 'Add')}</span>
+                  <span className="hidden sm:inline">➕ {t('place.addToItinerary', 'Add to itinerary')}</span>
                 </button>
               </div>
             </div>

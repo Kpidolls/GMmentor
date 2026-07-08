@@ -3,6 +3,7 @@
 import React, { useState, useRef, useMemo, useEffect } from 'react';
 import {
   Box,
+  Button,
   Input,
   InputGroup,
   InputRightElement,
@@ -20,6 +21,7 @@ import NextLink from 'next/link';
 import { useTranslation } from 'react-i18next';
 import debounce from 'lodash.debounce';
 import featureFlags from '../config/featureFlags.json';
+import { dispatchAddToItinerary } from '../utils/itineraryEvents';
 
 import islandsData from '../data/islands.json';
 import productData from '../data/mapOptions.json';
@@ -102,6 +104,12 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
   const visibleSections = featureFlags.storeEnabled
     ? ['islands', 'product', 'store']
     : ['islands', 'product'];
+
+  const getMapListTitle = (title: string) =>
+    t('destination.itineraryMapTitle', {
+      destination: title,
+      defaultValue: '{{destination}} Points of Interest Map',
+    });
 
   const debouncedSearch = useMemo(() =>
     debounce((query: string) => {
@@ -205,13 +213,13 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                     overflow="hidden"
                     _hover={{ shadow: 'lg' }}
                   >
-                    <NextLink href={item.link} passHref>
-                      <Link
-                        _hover={{ textDecoration: 'none' }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Box p={{ base: 2, sm: 3 }}>
+                    <Box p={{ base: 2, sm: 3 }}>
+                      <NextLink href={item.link} passHref>
+                        <Link
+                          _hover={{ textDecoration: 'none' }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image
                             src={item.image}
                             alt={item.title || t('search.resultImageAlt', 'Search result image')}
@@ -235,9 +243,55 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                           >
                             {item.description}
                           </Text>
-                        </Box>
-                      </Link>
-                    </NextLink>
+                        </Link>
+                      </NextLink>
+
+                      <Box mt={2} display="grid" gridTemplateColumns={{ base: '1fr', md: 'repeat(2, minmax(0, 1fr))' }} gap={2}>
+                        <Button
+                          as={Link}
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          size="xs"
+                          colorScheme="blue"
+                          variant="solid"
+                          minH="44px"
+                          whiteSpace="normal"
+                          lineHeight="short"
+                          textAlign="center"
+                        >
+                          {t('destinationSearch.openCuratedMapShort', 'Map')}
+                        </Button>
+                        <Button
+                          size="sm"
+                          colorScheme="teal"
+                          variant="outline"
+                          minH="44px"
+                          px={4}
+                          whiteSpace="normal"
+                          lineHeight="short"
+                          textAlign="center"
+                          onClick={() =>
+                            dispatchAddToItinerary({
+                              id: item.id,
+                              name: item.type === 'islands' ? getMapListTitle(item.title) : item.title,
+                              type: item.type === 'islands' ? 'guide' : item.type === 'product' ? 'guide' : 'custom',
+                              url: item.link,
+                              notes:
+                                item.type === 'islands'
+                                  ? t('destination.itineraryMapNote', {
+                                      destination: item.title,
+                                      defaultValue:
+                                        'Map stop: this Google Maps list highlights the most important places in {{destination}}. Open it anytime to browse must-see spots and plan your route.',
+                                    })
+                                  : undefined,
+                            })
+                          }
+                        >
+                          {t('place.addToItinerary', 'Add to itinerary')}
+                        </Button>
+                      </Box>
+                    </Box>
                   </GridItem>
                 ))}
               </Grid>

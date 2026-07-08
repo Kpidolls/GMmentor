@@ -12,10 +12,10 @@ import { toRestaurantList, toMunicipalityList } from '../utils/mappers';
 import { buildAreaRegistry, buildCategoryRegistry, createIntentResolver } from '../lib/intent';
 
 import { usePWA } from '../hooks/usePWA';
+import { dispatchAddToItinerary } from '../utils/itineraryEvents';
 
 // Region matching utilities no longer needed - using coordinate-based distance
 
-const MyTicker = dynamic(() => import('../components/Ticker'));
 const InstallBanner = dynamic(() => import('./InstallBanner'), { ssr: false });
 const OfflineNotice = dynamic(() => import('./OfflineNotice'), { ssr: false });
 
@@ -207,7 +207,7 @@ const MainHero = () => {
   const [showCategorySelection, setShowCategorySelection] = useState(false);
   const [showLocationOptions, setShowLocationOptions] = useState(true);
   const [municipalitySearchQuery, setMunicipalitySearchQuery] = useState('');
-  const [searchRadius, setSearchRadius] = useState(5);
+  const [searchRadius, setSearchRadius] = useState(20);
   const [maxResults, setMaxResults] = useState(50);
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
   const [initialSearchDone, setInitialSearchDone] = useState(false);
@@ -667,7 +667,7 @@ const MainHero = () => {
     setSelectedType(undefined);
     setMunicipalitySearchQuery(''); // Clear municipality search
     setSelectedRestaurants(new Set()); // Clear selection
-    setSearchRadius(2); // Reset to initial 2km
+    setSearchRadius(20);
     setInitialSearchDone(false); // Reset initial search flag
     
     // Optimal scroll to show all 4 main cards completely in viewport
@@ -698,7 +698,7 @@ const MainHero = () => {
     setSelectedType(undefined);
     setMunicipalitySearchQuery(''); // Clear municipality search
     setSelectedRestaurants(new Set()); // Clear selection
-    setSearchRadius(2); // Reset to initial 2km
+    setSearchRadius(20);
     setInitialSearchDone(false); // Reset initial search flag
     
     // Optimal scroll to show all 4 main cards completely in viewport
@@ -741,6 +741,32 @@ const MainHero = () => {
 
   const clearSelection = () => {
     setSelectedRestaurants(new Set());
+  };
+
+  const addSelectedToItinerary = () => {
+    if (!nearestRestaurants || selectedRestaurants.size === 0) {
+      return;
+    }
+
+    const selectedItems = Array.from(selectedRestaurants)
+      .sort((a, b) => a - b)
+      .map(index => nearestRestaurants[index])
+      .filter((item): item is { restaurant: Restaurant; distance: number } => item !== undefined);
+
+    if (selectedItems.length === 0) {
+      return;
+    }
+
+    selectedItems.forEach((item, index) => {
+      dispatchAddToItinerary({
+        id: `${item.restaurant.name}-${item.restaurant.address || item.restaurant.url || index}`,
+        name: item.restaurant.name,
+        type: 'place',
+        url: item.restaurant.url,
+      });
+    });
+
+    clearSelection();
   };
 
   const shareSinglePlace = async (item: { restaurant: Restaurant; distance: number }) => {
@@ -1156,15 +1182,6 @@ const MainHero = () => {
         </div>
         )}
         
-        {/* Ticker */}
-        {showDeferredUi && (
-          <div className="absolute top-0 left-0 z-30 w-full max-w-full overflow-hidden">
-            <MyTicker />
-          </div>
-        )}
-
-
-
         {/* Professional Hero Content */}
         <section role="main" aria-label={t('aria.homepage', 'Homepage')} className={`relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center ${heroContentSpacing}`}>
           {/* Lightweight content backdrop */}
@@ -1737,6 +1754,14 @@ const MainHero = () => {
                                 </button>
                                 
                                 <button
+                                  onClick={addSelectedToItinerary}
+                                  className="inline-flex items-center justify-center min-h-11 px-4 py-2 text-sm sm:text-base font-semibold rounded-lg border transition-colors duration-200 text-center leading-tight whitespace-normal bg-teal-50 border-teal-300 text-teal-800 hover:bg-teal-100"
+                                  title={t('restaurantFinder.addSelectedToItinerary', 'Add selected to itinerary')}
+                                >
+                                  ➕ {t('restaurantFinder.addSelectedToItinerary', 'Add selected to itinerary')}
+                                </button>
+
+                                <button
                                   onClick={async () => {
                                     const selectedItems = Array.from(selectedRestaurants)
                                       .sort((a, b) => a - b)
@@ -1798,7 +1823,7 @@ const MainHero = () => {
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                                     </svg>
-                                    🔗 {t('restaurantFinder.shareSelected', `Share (${selectedRestaurants.size})`)}
+                                     {t('restaurantFinder.shareSelected', `Share (${selectedRestaurants.size})`)}
                                   </span>
                                 </button>
                               </>
@@ -1809,19 +1834,50 @@ const MainHero = () => {
                         {/* Snackbar/Toast for share feedback */}
                         {shareSnackbar.open && (
                           <div
-                            className={`fixed z-50 top-6 right-6 min-w-[220px] max-w-xs px-4 py-3 rounded-lg shadow-lg flex items-center gap-3 text-white transition-all duration-300
-                              ${shareSnackbar.type === 'success' ? 'bg-green-600' : shareSnackbar.type === 'warning' ? 'bg-yellow-500' : shareSnackbar.type === 'error' ? 'bg-red-600' : 'bg-blue-600'}`}
+                            className="fixed z-50 top-6 left-1/2 -translate-x-1/2 w-[92vw] max-w-md rounded-xl border bg-white px-4 py-3 shadow-[0_14px_32px_rgba(15,23,42,0.18)] transition-all duration-300"
+                            style={{
+                              borderColor:
+                                shareSnackbar.type === 'success'
+                                  ? '#5eead4'
+                                  : shareSnackbar.type === 'warning'
+                                  ? '#fcd34d'
+                                  : shareSnackbar.type === 'error'
+                                  ? '#fca5a5'
+                                  : '#93c5fd',
+                            }}
                             role="status"
                             aria-live="polite"
                           >
-                            {shareSnackbar.type === 'success' && <span className="text-xl">✅</span>}
-                            {shareSnackbar.type === 'warning' && <span className="text-xl">⚠️</span>}
-                            {shareSnackbar.type === 'error' && <span className="text-xl">❌</span>}
-                            {shareSnackbar.type === 'info' && <span className="text-xl">ℹ️</span>}
-                            <span className="flex-1 text-sm font-medium">{shareSnackbar.message}</span>
+                            <div className="flex items-start gap-3">
+                              <span
+                                className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                                style={{
+                                  backgroundColor:
+                                    shareSnackbar.type === 'success'
+                                      ? '#14b8a6'
+                                      : shareSnackbar.type === 'warning'
+                                      ? '#f59e0b'
+                                      : shareSnackbar.type === 'error'
+                                      ? '#ef4444'
+                                      : '#3b82f6',
+                                }}
+                              />
+                              <div className="min-w-0 flex-1">
+                                <p className="text-sm font-bold text-slate-900 leading-5">
+                                  {shareSnackbar.type === 'success'
+                                    ? t('restaurantFinder.statusSuccess', 'Success')
+                                    : shareSnackbar.type === 'warning'
+                                    ? t('restaurantFinder.statusWarning', 'Attention')
+                                    : shareSnackbar.type === 'error'
+                                    ? t('restaurantFinder.statusError', 'Unable to complete')
+                                    : t('restaurantFinder.statusInfo', 'Update')}
+                                </p>
+                                <p className="mt-0.5 text-sm text-slate-700 leading-5">{shareSnackbar.message}</p>
+                              </div>
+                            </div>
                             <button
                               onClick={() => setShareSnackbar({ ...shareSnackbar, open: false })}
-                              className="ml-2 text-white/80 hover:text-white text-lg font-bold focus:outline-none"
+                              className="ml-2 text-slate-400 hover:text-slate-700 text-lg font-bold focus:outline-none"
                               aria-label={t('aria.closeNotification', 'Close notification')}
                             >
                               ×
@@ -1886,12 +1942,12 @@ const MainHero = () => {
                                 )}
                               </div>
 
-                              <div className="mt-auto px-3 pb-2.5 pt-2.5 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                              <div className="mt-auto px-3 pb-2.5 pt-2.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                                 <a
                                   href={restaurantData.restaurant.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="px-3 py-2 text-xs font-semibold rounded-lg text-white transition-colors duration-200 text-center whitespace-nowrap truncate bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
+                                  className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg text-white transition-colors duration-200 text-center leading-tight whitespace-normal bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
                                 >
                                   <span className="sm:hidden">🗺️ {t('destinationSearch.openCuratedMapShort', 'Map')}</span>
                                   <span className="hidden sm:inline">🗺️ {t('destinationSearch.openCuratedMap', 'Open Curated Map')}</span>
@@ -1901,10 +1957,25 @@ const MainHero = () => {
                                   onClick={() => {
                                     void shareSinglePlace(restaurantData);
                                   }}
-                                  className="px-3 py-2 text-xs font-semibold rounded-lg border transition-colors duration-200 whitespace-nowrap truncate bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
+                                  className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 text-center leading-tight whitespace-normal bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
                                 >
-                                  <span className="sm:hidden">🔗 {t('destinationSearch.shareMapShort', 'Share')}</span>
-                                  <span className="hidden sm:inline">🔗 {t('destinationSearch.shareMap', 'Share Map')}</span>
+                                  <span className="sm:hidden"> {t('destinationSearch.shareMapShort', 'Share')}</span>
+                                  <span className="hidden sm:inline"> {t('destinationSearch.shareMap', 'Share Map')}</span>
+                                </button>
+
+                                <button
+                                  onClick={() =>
+                                    dispatchAddToItinerary({
+                                      id: `${restaurantData.restaurant.name}-${restaurantData.restaurant.address}`,
+                                      name: restaurantData.restaurant.name,
+                                      type: 'place',
+                                      url: restaurantData.restaurant.url,
+                                    })
+                                  }
+                                  className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 text-center leading-tight whitespace-normal bg-teal-50 border-teal-300 text-teal-800 hover:bg-teal-100"
+                                >
+                                  <span className="sm:hidden">➕ {t('destinationSearch.addShort', 'Add')}</span>
+                                  <span className="hidden sm:inline">➕ {t('place.addToItinerary', 'Add to itinerary')}</span>
                                 </button>
                               </div>
                             </div>

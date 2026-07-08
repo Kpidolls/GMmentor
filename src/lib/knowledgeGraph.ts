@@ -50,6 +50,8 @@ const GREEK_TO_LATIN: Record<string, string> = {
 
 let cachedPosts: Post[] | null = null;
 let cachedEntities: EntityRecord[] | null = null;
+const entityTermsCache = new Map<string, string[]>();
+const mentionedGuidesCache = new Map<string, Post[]>();
 
 function getAllCachedPosts(): Post[] {
   if (!cachedPosts) {
@@ -92,6 +94,11 @@ function matchesTerm(haystack: string, needle: string): boolean {
 }
 
 function getTerms(entity: EntityRecord): string[] {
+  const cached = entityTermsCache.get(entity.id);
+  if (cached) {
+    return cached;
+  }
+
   const terms = new Set<string>();
 
   const add = (value?: string) => {
@@ -110,7 +117,9 @@ function getTerms(entity: EntityRecord): string[] {
     add(transliterateGreek(alias));
   }
 
-  return Array.from(terms);
+  const resolved = Array.from(terms);
+  entityTermsCache.set(entity.id, resolved);
+  return resolved;
 }
 
 function getGuideSeeds(post: Post): string[] {
@@ -265,7 +274,12 @@ export function getMentionedEntitiesForPost(post: Post, limit = 10): EntityRecor
 }
 
 export function getMentionedGuidesForEntity(entity: EntityRecord, limit = 8): Post[] {
-  return getAllCachedPosts()
+  const cached = mentionedGuidesCache.get(entity.id);
+  if (cached) {
+    return cached.slice(0, limit);
+  }
+
+  const ranked = getAllCachedPosts()
     .filter(isPriorityGuide)
     .map((post) => {
       const explicitTarget = getGuideTargetEntityIds(post).includes(entity.id);
@@ -277,8 +291,10 @@ export function getMentionedGuidesForEntity(entity: EntityRecord, limit = 8): Po
       if (right.score !== left.score) return right.score - left.score;
       return getGuideSlug(left.post).localeCompare(getGuideSlug(right.post));
     })
-    .slice(0, limit)
     .map((match) => match.post);
+
+  mentionedGuidesCache.set(entity.id, ranked);
+  return ranked.slice(0, limit);
 }
 
 export function getEntityCanonicalUrl(slug: string): string {

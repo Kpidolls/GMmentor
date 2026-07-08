@@ -14,6 +14,7 @@ import { generateBlogMetaDescription, getBlogMetaDescriptionBySlug } from '../..
 import { formatPostDate } from '../../utils/dateUtils'
 import { getMentionedEntitiesForPost } from '../../lib/knowledgeGraph'
 import type { EntityRecord } from '../../lib/entities'
+import { dispatchAddToItinerary } from '../../utils/itineraryEvents'
 
 const MarkdownComponents = {
   h1: (props: ComponentProps<'h1'>) => <Heading as="h2" size="lg" mt={6} mb={3} {...props} />,
@@ -419,9 +420,31 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
                   <Text fontSize="sm" color="gray.600" mt={1}>
                     {entity.address || entity.region || entity.region_en || t('common.greece', 'Greece')}
                   </Text>
-                  <Button as={NextLink} href={`/place/${entity.slug}`} size="sm" colorScheme="blue" mt={3}>
-                    {t('blog.viewPlace', 'View place')}
-                  </Button>
+                  <HStack mt={3} spacing={2} align="stretch" flexDirection={{ base: 'column', sm: 'row' }}>
+                    <Button as={NextLink} href={`/place/${entity.slug}`} size="sm" colorScheme="blue" minH="42px" w={{ base: '100%', sm: 'auto' }}>
+                      {t('blog.viewPlace', 'View place')}
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      colorScheme="teal"
+                      minH="42px"
+                      w={{ base: '100%', sm: 'auto' }}
+                      whiteSpace="normal"
+                      lineHeight="short"
+                      textAlign="center"
+                      onClick={() =>
+                        dispatchAddToItinerary({
+                          id: entity.id,
+                          name: entity.name,
+                          type: entity.kind === 'municipality' ? 'area' : 'place',
+                          url: entity.slug ? `https://googlementor.com/place/${entity.slug}` : entity.url || undefined,
+                        })
+                      }
+                    >
+                      {t('place.addToItinerary', 'Add to itinerary')}
+                    </Button>
+                  </HStack>
                 </Box>
               </Box>
             ))}

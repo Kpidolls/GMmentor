@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import restaurantsData from '../data/greekRestaurants.json';
 import type { RestaurantLocation } from '../types/location';
 import { toRestaurantList } from '../utils/mappers';
+import { dispatchAddToItinerary } from '../utils/itineraryEvents';
 
 const NearestGreekRestaurant: React.FC = () => {
   const { t } = useTranslation();
@@ -162,15 +163,28 @@ const NearestGreekRestaurant: React.FC = () => {
               </div>
             </div>
             
-            <div className="flex gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <a
                 href={currentRestaurant.restaurant.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 px-3 py-2 text-sm font-semibold rounded-lg text-white transition-colors duration-200 text-center bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
+                className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-sm font-semibold rounded-lg text-white transition-colors duration-200 text-center leading-tight bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black"
               >
                 {t('nearestGreekRestaurant.viewOnMaps', 'View on Maps')}
               </a>
+              <button
+                onClick={() =>
+                  dispatchAddToItinerary({
+                    id: `${currentRestaurant.restaurant.name}-${currentRestaurant.restaurant.address}`,
+                    name: currentRestaurant.restaurant.name,
+                    type: 'place',
+                    url: currentRestaurant.restaurant.url,
+                  })
+                }
+                className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-sm font-semibold rounded-lg border transition-colors duration-200 text-center leading-tight whitespace-normal bg-teal-50 border-teal-300 text-teal-800 hover:bg-teal-100"
+              >
+                {t('place.addToItinerary', 'Add to itinerary')}
+              </button>
             </div>
           </div>
 

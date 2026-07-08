@@ -69,9 +69,9 @@ const Header = () => {
     borderRadius: 'lg',
     fontWeight: 'semibold',
     letterSpacing: '0.01em',
-    fontSize: 'sm',
-    px: 3.5,
-    h: 10,
+    fontSize: { lg: 'xs', xl: 'sm' },
+    px: { lg: 2.5, xl: 3.5 },
+    h: { lg: 9, xl: 10 },
     boxShadow: 'var(--gm-shadow-1)',
     transition: 'background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
     _hover: {
@@ -93,21 +93,21 @@ const Header = () => {
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        w: '22px',
-        h: '22px',
+        w: { lg: '20px', xl: '22px' },
+        h: { lg: '20px', xl: '22px' },
         borderRadius: 'md',
         bg: 'gray.100',
         border: '1px solid',
         borderColor: 'gray.200',
         color: 'gray.600',
         marginInlineStart: '0',
-        marginInlineEnd: '8px',
+        marginInlineEnd: { lg: '6px', xl: '8px' },
         flexShrink: 0,
         transition: 'background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease'
       },
       '.chakra-button__icon:last-of-type': {
         color: 'gray.500',
-        marginInlineStart: '6px',
+        marginInlineStart: { lg: '4px', xl: '6px' },
         marginInlineEnd: '0'
       },
       '&:hover .chakra-button__icon:first-of-type': {
@@ -206,6 +206,13 @@ const Header = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
             />
+          </Icon>
+        );
+      case 'navigation.itinerary':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={{ base: 4, md: 3.5 }} color="currentColor">
+            <rect x="5" y="4" width="14" height="16" rx="2" ry="2" fill="none" stroke="currentColor" strokeWidth="1.75" />
+            <path d="M8 2v4M16 2v4M8 10h8M8 14h8" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
           </Icon>
         );
       default:
@@ -578,7 +585,7 @@ const Header = () => {
 
       {/* Main Header */}
       <Box px={{ base: 3, md: 8 }} py={{ base: 3, md: 3.5 }}>
-        <Flex align="center" justify="space-between" wrap="wrap">
+        <Flex align="center" justify="space-between" wrap="nowrap" gap={3}>
           {/* Logo and Company */}
           <HStack spacing={3} onClick={() => window.location.href = '/'} cursor="pointer">
             <Image
@@ -604,7 +611,7 @@ const Header = () => {
           </HStack>
 
           {/* Desktop Nav */}
-          <HStack spacing={4} display={{ base: 'none', md: 'flex' }}>
+          <HStack spacing={{ lg: 2, xl: 4 }} display={{ base: 'none', lg: 'flex' }} flexWrap="nowrap" overflowX="auto">
             {visibleNavigation.map((item) =>
               !item.submenu ? (
                 <Button
@@ -700,7 +707,7 @@ const Header = () => {
             icon={isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
             variant="ghost"
             aria-label={isMenuOpen ? t('aria.closeMenu') : t('aria.openMenu')}
-            display={{ base: 'flex', md: 'none' }}
+            display={{ base: 'flex', lg: 'none' }}
             borderRadius="full"
             border="1px solid"
             borderColor="gray.200"

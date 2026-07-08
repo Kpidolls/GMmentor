@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import NextLink from 'next/link';
 import { Box, Button, Container, Divider, Heading, HStack, Link, ListItem, SimpleGrid, Text, UnorderedList } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 import { buildBreadcrumbJsonLd, buildEntityJsonLd } from '../../lib/entityStructuredData';
 import {
@@ -15,6 +16,7 @@ import {
 import { getMentionedGuidesForEntity } from '../../lib/knowledgeGraph';
 import { calculateDistance, formatDistance } from '../../utils/locationUtils';
 import { buildPlaceMetaDescription } from '../../config/metaDescriptions';
+import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
 
 const SITE_URL = 'https://googlementor.com';
 
@@ -106,6 +108,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
 };
 
 export default function PlacePage({ entity, sameCategory, nearby, sameRegion, mentionedGuides, canonicalSlug, isCanonicalEntity }: EntityPageProps) {
+  const { t } = useTranslation();
   const canonicalUrl = `${SITE_URL}/place/${canonicalSlug}`;
   const context = displayContext(entity);
   const primaryCategory = entity.categories?.find(Boolean);
@@ -146,12 +149,38 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
         <Text color="gray.700" mb={4}>
           Coordinates: {entity.lat.toFixed(6)}, {entity.lng.toFixed(6)}
         </Text>
-        <HStack spacing={3} flexWrap="wrap">
-          <Button as={Link} href={entity.url || `https://www.google.com/maps/search/?api=1&query=${entity.lat},${entity.lng}`} isExternal colorScheme="blue">
-            View on Google Maps
+        <HStack spacing={3} flexWrap="wrap" align="stretch" w="full">
+          <Button
+            as={Link}
+            href={entity.url || `https://www.google.com/maps/search/?api=1&query=${entity.lat},${entity.lng}`}
+            isExternal
+            colorScheme="blue"
+            minH="44px"
+            w={{ base: '100%', sm: 'auto' }}
+          >
+            {t('place.viewOnMaps', 'View on Google Maps')}
           </Button>
-          <Button as={NextLink} href="/search" variant="outline">
-            Explore More Places
+          <Button
+            variant="outline"
+            colorScheme="teal"
+            minH="44px"
+            w={{ base: '100%', sm: 'auto' }}
+            whiteSpace="normal"
+            lineHeight="short"
+            textAlign="center"
+            onClick={() =>
+              dispatchAddToItinerary({
+                id: entity.id,
+                name: entity.name,
+                type: entity.kind === 'municipality' ? 'area' : 'place',
+                url: entity.url || `${SITE_URL}/place/${canonicalSlug}`,
+              })
+            }
+          >
+            {t('place.addToItinerary', 'Add to itinerary')}
+          </Button>
+          <Button as={NextLink} href="/search" variant="outline" minH="44px" w={{ base: '100%', sm: 'auto' }}>
+            {t('place.exploreMore', 'Explore More Places')}
           </Button>
         </HStack>
       </Box>

@@ -27,6 +27,10 @@
       ]
     },
     {
+      "name": "navigation.itinerary",
+      "href": "/itinerary"
+    },
+    {
       "name": "navigation.aboutUs",
       "href": "aboutus",
       "submenu": [

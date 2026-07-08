@@ -14,12 +14,14 @@ import {
   Text,
   UnorderedList,
 } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 import { createIntentEngine } from '../../lib/intent';
 import { loadEntitiesIndex } from '../../lib/entities';
 import type { IntentResultsPayload } from '../../lib/intent';
 import { formatDistance } from '../../utils/locationUtils';
 import { buildAreaMetaDescription } from '../../config/metaDescriptions';
+import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
 
 const SITE_URL = 'https://googlementor.com';
 
@@ -191,6 +193,7 @@ export const getStaticProps: GetStaticProps<AreaPageProps> = async ({ params }) 
 };
 
 export default function AreaPage({ payload, topGuides }: AreaPageProps) {
+  const { t } = useTranslation();
   const canonicalUrl = `${SITE_URL}/area/${payload.area.urlSlug}`;
   const title = `Best places in ${payload.area.name} | Googlementor`;
   const description = buildAreaMetaDescription({
@@ -269,6 +272,27 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
                     View {item.categoryName.toLowerCase()} in {payload.area.name}
                   </Text>
                 ) : null}
+                <Button
+                  size="sm"
+                  mt={2}
+                  variant="outline"
+                  colorScheme="teal"
+                  minH="42px"
+                  w={{ base: '100%', sm: 'auto' }}
+                  whiteSpace="normal"
+                  lineHeight="short"
+                  textAlign="center"
+                  onClick={() =>
+                    dispatchAddToItinerary({
+                      id: `${item.categoryId}-${payload.area.urlSlug}`,
+                      name: `${item.categoryName} in ${payload.area.name}`,
+                      type: 'guide',
+                      url: item.passesThreshold ? `${SITE_URL}/${item.categorySlug}/${payload.area.urlSlug}` : undefined,
+                    })
+                  }
+                >
+                  {t('place.addToItinerary', 'Add to itinerary')}
+                </Button>
               </Box>
             ))}
           </SimpleGrid>
@@ -281,14 +305,38 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
           <UnorderedList spacing={2} ml={5}>
             {topAttractions.map((item) => (
               <ListItem key={item.entity.id}>
-                {item.entity.slug ? (
-                  <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
-                    {item.entity.name}
-                  </Link>
-                ) : (
-                  <Text as="span">{item.entity.name}</Text>
-                )}{' '}
-                <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
+                <Box display="flex" flexWrap="wrap" alignItems="center" columnGap={2} rowGap={2}>
+                  {item.entity.slug ? (
+                    <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
+                      {item.entity.name}
+                    </Link>
+                  ) : (
+                    <Text as="span">{item.entity.name}</Text>
+                  )}
+                  <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  colorScheme="teal"
+                  minH="40px"
+                  w={{ base: '100%', sm: 'auto' }}
+                  justifyContent="center"
+                  px={3}
+                  whiteSpace="normal"
+                  lineHeight="short"
+                  textAlign="center"
+                  onClick={() =>
+                    dispatchAddToItinerary({
+                      id: item.entity.id,
+                      name: item.entity.name,
+                      type: item.entity.kind === 'municipality' ? 'area' : 'place',
+                      url: item.entity.slug ? `${SITE_URL}/place/${item.entity.slug}` : item.entity.url || undefined,
+                    })
+                  }
+                >
+                  {t('itinerary.addItem', 'Add point')}
+                </Button>
+                </Box>
               </ListItem>
             ))}
           </UnorderedList>
@@ -301,14 +349,38 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
           <UnorderedList spacing={2} ml={5}>
             {topRestaurants.map((item) => (
               <ListItem key={item.entity.id}>
-                {item.entity.slug ? (
-                  <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
-                    {item.entity.name}
-                  </Link>
-                ) : (
-                  <Text as="span">{item.entity.name}</Text>
-                )}{' '}
-                <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
+                <Box display="flex" flexWrap="wrap" alignItems="center" columnGap={2} rowGap={2}>
+                  {item.entity.slug ? (
+                    <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
+                      {item.entity.name}
+                    </Link>
+                  ) : (
+                    <Text as="span">{item.entity.name}</Text>
+                  )}
+                  <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  colorScheme="teal"
+                  minH="40px"
+                  w={{ base: '100%', sm: 'auto' }}
+                  justifyContent="center"
+                  px={3}
+                  whiteSpace="normal"
+                  lineHeight="short"
+                  textAlign="center"
+                  onClick={() =>
+                    dispatchAddToItinerary({
+                      id: item.entity.id,
+                      name: item.entity.name,
+                      type: item.entity.kind === 'municipality' ? 'area' : 'place',
+                      url: item.entity.slug ? `${SITE_URL}/place/${item.entity.slug}` : item.entity.url || undefined,
+                    })
+                  }
+                >
+                  {t('itinerary.addItem', 'Add point')}
+                </Button>
+                </Box>
               </ListItem>
             ))}
           </UnorderedList>
@@ -335,14 +407,38 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
         <UnorderedList spacing={2} ml={5}>
           {topPlaces.map((item) => (
             <ListItem key={item.entity.id}>
-              {item.entity.slug ? (
-                <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
-                  {item.entity.name}
-                </Link>
-              ) : (
-                <Text as="span">{item.entity.name}</Text>
-              )}{' '}
-              <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
+              <Box display="flex" flexWrap="wrap" alignItems="center" columnGap={2} rowGap={2}>
+                {item.entity.slug ? (
+                  <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
+                    {item.entity.name}
+                  </Link>
+                ) : (
+                  <Text as="span">{item.entity.name}</Text>
+                )}
+                <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
+              <Button
+                size="sm"
+                variant="ghost"
+                colorScheme="teal"
+                minH="40px"
+                w={{ base: '100%', sm: 'auto' }}
+                justifyContent="center"
+                px={3}
+                whiteSpace="normal"
+                lineHeight="short"
+                textAlign="center"
+                onClick={() =>
+                  dispatchAddToItinerary({
+                    id: item.entity.id,
+                    name: item.entity.name,
+                    type: item.entity.kind === 'municipality' ? 'area' : 'place',
+                    url: item.entity.slug ? `${SITE_URL}/place/${item.entity.slug}` : item.entity.url || undefined,
+                  })
+                }
+              >
+                {t('itinerary.addItem', 'Add point')}
+              </Button>
+              </Box>
             </ListItem>
           ))}
         </UnorderedList>
@@ -360,6 +456,27 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
                   {item.areaName}
                 </Link>
                 <Text color="gray.600" fontSize="sm">{item.count} places</Text>
+                <Button
+                  size="sm"
+                  mt={2}
+                  variant="outline"
+                  colorScheme="teal"
+                  minH="42px"
+                  w={{ base: '100%', sm: 'auto' }}
+                  whiteSpace="normal"
+                  lineHeight="short"
+                  textAlign="center"
+                  onClick={() =>
+                    dispatchAddToItinerary({
+                      id: item.areaId,
+                      name: item.areaName,
+                      type: 'area',
+                      url: `${SITE_URL}/area/${item.areaSlug}`,
+                    })
+                  }
+                >
+                  {t('place.addToItinerary', 'Add to itinerary')}
+                </Button>
               </Box>
             ))}
           </SimpleGrid>

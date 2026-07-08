@@ -11,6 +11,7 @@ import Layout from '../components/Layout';
 import { Roboto } from 'next/font/google';
 import Header from '../components/Header';
 import Analytics from '../components/Analytics';
+import AddToItineraryNotifier from '../components/itinerary/AddToItineraryNotifier';
 
 const BackToTop = dynamic(() => import('../components/BackToTop'), { ssr: false });
 
@@ -92,6 +93,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       {shouldEnableAnalytics && <Analytics />}
+      <AddToItineraryNotifier />
       <Header />
       <main className={roboto.className}>
         <Layout>

@@ -27,6 +27,7 @@
     "data:stabilize": "node scripts/add-stable-ids-and-slugs.js",
     "validate:knowledge-graph": "node scripts/validate-knowledge-graph.js",
     "build-types": "tsc --noEmit --pretty",
+    "test:itinerary-utils": "tsx scripts/test-itinerary-utils.ts",
     "indexnow:generate-key": "node scripts/generate-indexnow-key.js",
     "indexnow:submit": "node scripts/submit-to-indexnow.js",
     "predeploy": "npm run clean && npm run build",

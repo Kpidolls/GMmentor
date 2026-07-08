@@ -261,7 +261,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
   reactStrictMode: true,
   devIndicators: false,
   productionBrowserSourceMaps: false,
-  staticPageGenerationTimeout: 300,
+  staticPageGenerationTimeout: 600,
   experimental: {
     cpus: 1,
   },
@@ -425,6 +425,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
       '/login': { page: '/login' },
       '/airalo': { page: '/airalo' },
       '/insurance': { page: '/insurance' },
+      '/itinerary': { page: '/itinerary' },
       '/search': { page: '/search' },
       '/signup': { page: '/signup' },
       '/blog': { page: '/blog' },
