@@ -19,6 +19,32 @@ import type {
 
 type RawRecord = Record<string, unknown>;
 
+function normalizeIdentityPart(v?: string): string {
+  if (!v) return '';
+  return v
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9\u0370-\u03ff\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function restaurantIdentityKey(item: RestaurantLocation): string {
+  const name = normalizeIdentityPart(item.name);
+  const address = normalizeIdentityPart(item.address);
+  const fallback = `${item.lat.toFixed(5)},${item.lng.toFixed(5)}`;
+  return `restaurant::${name}::${address || fallback}`;
+}
+
+function restaurantCompletenessScore(item: RestaurantLocation): number {
+  let score = 0;
+  if (item.id) score += 3;
+  if (item.slug) score += 2;
+  if (item.url) score += 2;
+  if (item.address) score += 1;
+  return score;
+}
+
 /** Return a non-empty trimmed string or undefined. */
 function asStr(v: unknown): string | undefined {
   return typeof v === 'string' && v.trim() ? v.trim() : undefined;
@@ -115,14 +141,28 @@ export function toAttraction(raw: RawRecord): AttractionLocation | null {
 // ---------------------------------------------------------------------------
 
 export function toRestaurantList(raw: unknown[]): RestaurantLocation[] {
-  const out: RestaurantLocation[] = [];
+  const byIdentity = new Map<string, RestaurantLocation>();
   for (const item of raw) {
     if (item !== null && typeof item === 'object' && !Array.isArray(item)) {
       const mapped = toRestaurant(item as RawRecord);
-      if (mapped !== null) out.push(mapped);
+      if (mapped === null) continue;
+
+      const key = restaurantIdentityKey(mapped);
+      const existing = byIdentity.get(key);
+      if (!existing) {
+        byIdentity.set(key, mapped);
+        continue;
+      }
+
+      const existingScore = restaurantCompletenessScore(existing);
+      const currentScore = restaurantCompletenessScore(mapped);
+
+      if (currentScore > existingScore) {
+        byIdentity.set(key, mapped);
+      }
     }
   }
-  return out;
+  return Array.from(byIdentity.values());
 }
 
 export function toMunicipalityList(raw: unknown[]): MunicipalityLocation[] {

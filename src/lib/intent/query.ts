@@ -1,4 +1,4 @@
-import type { EntityRecord } from '../entities';
+import { buildEntityIdentityKey, type EntityRecord } from '../entities';
 import { calculateDistance } from '../../utils/locationUtils';
 import type {
   AreaAuthorityPayload,
@@ -40,13 +40,26 @@ function rankByDistance(
   area: { lat: number; lng: number },
   radiusKm: number
 ): RankedEntity[] {
-  return entities
-    .map((entity) => ({
+  const byIdentity = new Map<string, RankedEntity>();
+
+  for (const entity of entities) {
+    const ranked: RankedEntity = {
       entity,
       distanceKm: calculateDistance(area.lat, area.lng, entity.lat, entity.lng),
-    }))
-    .filter((item) => item.distanceKm <= radiusKm)
-    .sort((left, right) => left.distanceKm - right.distanceKm);
+    };
+
+    if (ranked.distanceKm > radiusKm) {
+      continue;
+    }
+
+    const key = buildEntityIdentityKey(entity);
+    const existing = byIdentity.get(key);
+    if (!existing || ranked.distanceKm < existing.distanceKm) {
+      byIdentity.set(key, ranked);
+    }
+  }
+
+  return Array.from(byIdentity.values()).sort((left, right) => left.distanceKm - right.distanceKm);
 }
 
 function isDiscoverableEntity(entity: EntityRecord): boolean {

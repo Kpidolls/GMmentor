@@ -115,6 +115,80 @@ interface EntityRecord {
   region_en?: string;
 }
 
+function normalizeIdentityPart(value?: string): string {
+  if (!value) return '';
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9\u0370-\u03ff\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function buildEntityIdentityKey(entity: EntityRecord): string {
+  const normalizedName = normalizeIdentityPart(entity.name);
+  const normalizedLocation = normalizeIdentityPart(entity.address || entity.region) || `${entity.lat.toFixed(5)},${entity.lng.toFixed(5)}`;
+  return `${entity.kind}::${normalizedName}::${normalizedLocation}`;
+}
+
+function entityCompletenessScore(entity: EntityRecord): number {
+  let score = 0;
+  if (entity.id) score += 4;
+  if (entity.slug) score += 3;
+  if (entity.url) score += 2;
+  if (entity.address) score += 2;
+  if (entity.region) score += 1;
+  if (entity.aliases?.length) score += 1;
+  if (entity.categoryIds?.length) score += 1;
+  if (entity.categories?.length) score += 1;
+  return score;
+}
+
+function mergeEntityRecords(preferred: EntityRecord, incoming: EntityRecord): EntityRecord {
+  const preferredCategories = preferred.categoryIds ?? [];
+  const incomingCategories = incoming.categoryIds ?? [];
+  const mergedCategoryIds = Array.from(new Set([...preferredCategories, ...incomingCategories]));
+
+  const preferredLabels = preferred.categories ?? [];
+  const incomingLabels = incoming.categories ?? [];
+  const mergedLabels = Array.from(new Set([...preferredLabels, ...incomingLabels]));
+
+  const preferredAliases = preferred.aliases ?? [];
+  const incomingAliases = incoming.aliases ?? [];
+  const mergedAliases = Array.from(new Set([...preferredAliases, ...incomingAliases]));
+
+  return {
+    ...preferred,
+    categoryIds: mergedCategoryIds.length ? mergedCategoryIds : undefined,
+    categories: mergedLabels.length ? mergedLabels : undefined,
+    aliases: mergedAliases.length ? mergedAliases : undefined,
+  };
+}
+
+function dedupeEntities(entities: EntityRecord[]): EntityRecord[] {
+  const byIdentity = new Map<string, EntityRecord>();
+
+  for (const entity of entities) {
+    const key = buildEntityIdentityKey(entity);
+    const existing = byIdentity.get(key);
+
+    if (!existing) {
+      byIdentity.set(key, entity);
+      continue;
+    }
+
+    const existingScore = entityCompletenessScore(existing);
+    const currentScore = entityCompletenessScore(entity);
+
+    const preferred = currentScore > existingScore ? entity : existing;
+    const incoming = preferred === entity ? existing : entity;
+
+    byIdentity.set(key, mergeEntityRecords(preferred, incoming));
+  }
+
+  return Array.from(byIdentity.values());
+}
+
 /**
  * Project a canonical location to the controlled entity schema.
  * Includes only fields relevant for AI discovery, omits internal fields.
@@ -194,20 +268,23 @@ async function generateEntities() {
       }
     }
 
-    // 2. Sort deterministically by id for stable output
-    entities.sort((a, b) => {
+    // 2. Deduplicate deterministically across all source datasets.
+    const dedupedEntities = dedupeEntities(entities);
+
+    // 3. Sort deterministically by id for stable output
+    dedupedEntities.sort((a, b) => {
       const aId = a.id || '';
       const bId = b.id || '';
       return aId.localeCompare(bId);
     });
 
-    // 3. Aggregate metadata by kind
+    // 4. Aggregate metadata by kind
     const byKind: Record<string, number> = {};
-    for (const entity of entities) {
+    for (const entity of dedupedEntities) {
       byKind[entity.kind] = (byKind[entity.kind] || 0) + 1;
     }
 
-    // 4. Build output with metadata header
+    // 5. Build output with metadata header
     const output = {
       meta: {
         generated_at: new Date().toISOString(),
@@ -215,16 +292,16 @@ async function generateEntities() {
         schema_version: ENTITY_SCHEMA_VERSION,
         canonical_url: ENTITIES_CANONICAL_URL,
         language_coverage: ['el', 'en'],
-        record_count: entities.length,
+        record_count: dedupedEntities.length,
         by_kind: byKind,
       },
-      entities,
+      entities: dedupedEntities,
     };
 
-    // 5. Write to output file
+    // 6. Write to output file
     writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
 
-    console.log(`\n✅  Generated ${entities.length} entities\n`);
+    console.log(`\n✅  Generated ${dedupedEntities.length} entities\n`);
     console.log(`  Output: ${OUTPUT_FILE}`);
     console.log(`  Breakdown by kind:`);
     for (const [kind, count] of Object.entries(byKind)) {

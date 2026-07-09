@@ -22,10 +22,12 @@ import { useTranslation } from 'react-i18next';
 import debounce from 'lodash.debounce';
 import featureFlags from '../config/featureFlags.json';
 import { dispatchAddToItinerary } from '../utils/itineraryEvents';
+import { detectCategoryMatches } from '../lib/intent/categoryMatcher';
 
 import islandsData from '../data/islands.json';
 import productData from '../data/mapOptions.json';
 import storeData from '../data/products.json';
+import categoriesData from '../data/restaurantCategories.json';
 
 interface SearchResult {
   id: string;
@@ -35,6 +37,13 @@ interface SearchResult {
   type: string;
   image?: string;
   keywords?: string[];
+}
+
+interface RestaurantCategory {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
 }
 
 const greekToLatinMap: Record<string, string[]> = {
@@ -54,6 +63,7 @@ const normalizeText = (text: string): string => {
 
 const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
   const { t } = useTranslation();
+  const restaurantCategories = categoriesData as RestaurantCategory[];
 
   const getSectionTitle = (type: string): string => {
     switch (type) {
@@ -68,6 +78,15 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredResults, setFilteredResults] = useState<SearchResult[]>([]);
   const searchInputRef = useRef<HTMLInputElement>(null);
+
+  const matchedCategories = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+
+    const matches = detectCategoryMatches(searchQuery, 4);
+    return matches
+      .map((match) => restaurantCategories.find((category) => category.id === match.categoryId))
+      .filter((category): category is RestaurantCategory => Boolean(category));
+  }, [searchQuery, restaurantCategories]);
 
   const searchableData = useMemo<SearchResult[]>(() => [
     ...islandsData.map((item) => ({
@@ -191,6 +210,53 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
       </InputGroup>
 
       <VStack spacing={6} align="stretch">
+        {matchedCategories.length > 0 && (
+          <Box>
+            <Heading as="h2" size="md" mb={2} color="teal.600" textAlign="center">
+              {t('search.categorySuggestions', 'Category suggestions')}
+            </Heading>
+            <Text textAlign="center" color="gray.600" fontSize="sm" mb={4}>
+              {t('search.categorySuggestionsHelp', 'Pick a category to find nearby curated places from your current location.')}
+            </Text>
+
+            <Grid
+              templateColumns={{ base: '1fr', sm: 'repeat(2, 1fr)' }}
+              gap={{ base: 3, sm: 4 }}
+              mb={2}
+            >
+              {matchedCategories.map((category) => (
+                <GridItem
+                  key={`intent-category-${category.id}`}
+                  bg="teal.50"
+                  border="1px solid"
+                  borderColor="teal.200"
+                  borderRadius="md"
+                  p={4}
+                >
+                  <VStack align="start" spacing={2}>
+                    <Text fontSize="2xl" lineHeight="1">{category.icon}</Text>
+                    <Text fontWeight="bold" color="gray.800">
+                      {t(`categories.${category.id}`, category.name)}
+                    </Text>
+                    <Text color="gray.600" fontSize="sm">
+                      {t(`categories.descriptions.${category.id}`, category.description)}
+                    </Text>
+                    <Button
+                      as={NextLink}
+                      href={`/?category=${encodeURIComponent(category.id)}`}
+                      colorScheme="teal"
+                      size="sm"
+                      width="full"
+                    >
+                      {t('search.openNearbyCategory', 'Search this category near me')}
+                    </Button>
+                  </VStack>
+                </GridItem>
+              ))}
+            </Grid>
+          </Box>
+        )}
+
         {visibleSections.map((type) => {
           const sectionResults = filteredResults.filter((item) => item.type === type);
           if (sectionResults.length === 0) return null;

@@ -9,7 +9,9 @@ import municipalitiesData from '../data/municipalities.json';
 import categoriesData from '../data/restaurantCategories.json';
 import type { MunicipalityLocation, RestaurantLocation } from '../types/location';
 import { toRestaurantList, toMunicipalityList } from '../utils/mappers';
-import { buildAreaRegistry, buildCategoryRegistry, createIntentResolver } from '../lib/intent';
+import { buildAreaRegistry, buildCategoryRegistry } from '../lib/intent/registry';
+import { createIntentResolver } from '../lib/intent/resolver';
+import { detectCategoryMatches } from '../lib/intent/categoryMatcher';
 
 import { usePWA } from '../hooks/usePWA';
 import { dispatchAddToItinerary } from '../utils/itineraryEvents';
@@ -80,6 +82,8 @@ const MainHero = () => {
   const intentDeepLinkHandledRef = useRef(false);
   const getMunicipalitiesDataRef = useRef<() => Municipality[]>(() => toMunicipalityList(municipalitiesData as unknown[]));
   const searchByMunicipalityRef = useRef<(municipality: Municipality, category?: RestaurantCategory) => Promise<void>>(async () => undefined);
+  const getUserLocationRef = useRef<(category?: RestaurantCategory) => void>(() => undefined);
+  const restaurantCategories = categoriesData as RestaurantCategory[];
   const intentResolver = useMemo(
     () => createIntentResolver({ categories: buildCategoryRegistry(), areas: buildAreaRegistry() }),
     []
@@ -207,11 +211,47 @@ const MainHero = () => {
   const [showCategorySelection, setShowCategorySelection] = useState(false);
   const [showLocationOptions, setShowLocationOptions] = useState(true);
   const [municipalitySearchQuery, setMunicipalitySearchQuery] = useState('');
+  const [categoryIntentQuery, setCategoryIntentQuery] = useState('');
   const [searchRadius, setSearchRadius] = useState(20);
   const [maxResults, setMaxResults] = useState(50);
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
   const [initialSearchDone, setInitialSearchDone] = useState(false);
   const [showDeferredUi, setShowDeferredUi] = useState(false);
+
+  const categoryMatches = useMemo(
+    () => detectCategoryMatches(categoryIntentQuery),
+    [categoryIntentQuery]
+  );
+
+  const categoryMatchById = useMemo(() => {
+    const matchMap = new Map<string, string[]>();
+    for (const match of categoryMatches) {
+      matchMap.set(match.categoryId, match.matchedKeywords);
+    }
+    return matchMap;
+  }, [categoryMatches]);
+
+  const suggestedCategories = useMemo(
+    () => categoryMatches
+      .map((match) => restaurantCategories.find((category) => category.id === match.categoryId))
+      .filter((category): category is RestaurantCategory => Boolean(category)),
+    [categoryMatches, restaurantCategories]
+  );
+
+  const suggestedCategoryIds = useMemo(
+    () => new Set(suggestedCategories.map((category) => category.id)),
+    [suggestedCategories]
+  );
+
+  const rankedCategories = useMemo(() => {
+    if (!categoryIntentQuery.trim() || suggestedCategories.length === 0) {
+      return restaurantCategories;
+    }
+
+    const suggestedIds = new Set(suggestedCategories.map((category) => category.id));
+    const remaining = restaurantCategories.filter((category) => !suggestedIds.has(category.id));
+    return [...suggestedCategories, ...remaining];
+  }, [categoryIntentQuery, suggestedCategories, restaurantCategories]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -628,6 +668,7 @@ const MainHero = () => {
     setSelectedDisplayCategory(category);
     setSelectedExperienceType(undefined);
     setSelectedType('category');
+    setCategoryIntentQuery('');
     setSearchMode(prev => ({ ...prev, selectedCategory: category }));
 
     if (searchMode.type === 'municipality' && searchMode.selectedMunicipality) {
@@ -649,6 +690,7 @@ const MainHero = () => {
     setShowMunicipalityList(false);
     setShowCategorySelection(false);
     setSearchMode({ type: 'location' });
+    setCategoryIntentQuery('');
     alignViewport();
   };
 
@@ -666,6 +708,7 @@ const MainHero = () => {
     setSelectedExperienceType(undefined);
     setSelectedType(undefined);
     setMunicipalitySearchQuery(''); // Clear municipality search
+    setCategoryIntentQuery('');
     setSelectedRestaurants(new Set()); // Clear selection
     setSearchRadius(20);
     setInitialSearchDone(false); // Reset initial search flag
@@ -697,6 +740,7 @@ const MainHero = () => {
     setSelectedExperienceType(undefined);
     setSelectedType(undefined);
     setMunicipalitySearchQuery(''); // Clear municipality search
+    setCategoryIntentQuery('');
     setSelectedRestaurants(new Set()); // Clear selection
     setSearchRadius(20);
     setInitialSearchDone(false); // Reset initial search flag
@@ -1023,6 +1067,7 @@ const MainHero = () => {
   useEffect(() => {
     getMunicipalitiesDataRef.current = getMunicipalitiesData;
     searchByMunicipalityRef.current = searchByMunicipality;
+    getUserLocationRef.current = getUserLocation;
   });
 
   useEffect(() => {
@@ -1039,13 +1084,26 @@ const MainHero = () => {
       return;
     }
 
+    if (categorySlug && !areaSlug) {
+      const categoryResolution = intentResolver.resolveCategory(categorySlug);
+      const category = categoryResolution
+        ? restaurantCategories.find((item) => item.id === categoryResolution.id)
+        : undefined;
+
+      if (category) {
+        intentDeepLinkHandledRef.current = true;
+        getUserLocationRef.current(category);
+        return;
+      }
+    }
+
     const resolution = intentResolver.resolveIntent(categorySlug, areaSlug);
     if (resolution.status !== 'resolved' || !resolution.categoryId || !resolution.areaId) {
       intentDeepLinkHandledRef.current = true;
       return;
     }
 
-    const category = categoriesData.find((item) => item.id === resolution.categoryId);
+    const category = restaurantCategories.find((item) => item.id === resolution.categoryId);
     const municipality = getMunicipalitiesDataRef.current().find((item) => item.id === resolution.areaId);
 
     if (!category || !municipality) {
@@ -1238,16 +1296,92 @@ const MainHero = () => {
                       <p className="text-slate-700 text-sm xs:text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed font-light mb-6">
                         {t('discovery.selectCategoryAfterLocation', 'Select a category to continue with your search.')}
                       </p>
+
+                      <div className="max-w-2xl mx-auto px-1 xs:px-2">
+                        <div className="relative">
+                          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg className="h-4 w-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                          </div>
+                          <input
+                            type="text"
+                            value={categoryIntentQuery}
+                            onChange={(event) => setCategoryIntentQuery(event.target.value)}
+                            className="block w-full pl-9 pr-10 py-2.5 border rounded-lg text-sm placeholder-slate-500 focus:outline-none transition-colors duration-200 border-slate-300 bg-white text-slate-800 focus:ring-2 focus:ring-slate-400 focus:border-slate-500"
+                            placeholder={t('categorySelection.intentPlaceholder', 'Try: italian restaurants near glyfada')}
+                            aria-label={t('categorySelection.intentPlaceholder', 'Try: italian restaurants near glyfada')}
+                          />
+                          {categoryIntentQuery && (
+                            <button
+                              onClick={() => setCategoryIntentQuery('')}
+                              className="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 transition-colors duration-200"
+                              title={t('municipalitySearch.clearSearch', 'Clear search')}
+                              aria-label={t('municipalitySearch.clearSearch', 'Clear search')}
+                            >
+                              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                              </svg>
+                            </button>
+                          )}
+                        </div>
+                      </div>
                     </div>
+
+                    {categoryIntentQuery.trim() && (
+                      <div className="mb-6 xs:mb-8">
+                        {suggestedCategories.length > 0 ? (
+                          <>
+                            <p className="text-center text-sm sm:text-base font-semibold text-slate-700 mb-3">
+                              {t('categorySelection.suggestionsTitle', 'Suggested categories for your search')}
+                            </p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                              {suggestedCategories.map((category) => {
+                                const matchedTerms = categoryMatchById.get(category.id) ?? [];
+                                return (
+                                  <button
+                                    key={`suggested-${category.id}`}
+                                    onClick={() => runSearchWithCategory(category)}
+                                    className="text-left rounded-xl border border-cyan-300 bg-cyan-50/80 p-3 sm:p-4 transition-all duration-200 hover:shadow-[var(--gm-shadow-2)] hover:bg-cyan-50 focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)]"
+                                  >
+                                    <div className="flex items-start gap-3">
+                                      <span className="text-2xl leading-none">{category.icon}</span>
+                                      <div className="min-w-0">
+                                        <p className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                                          {t(`categories.${category.id}`, category.name)}
+                                        </p>
+                                        <p className="text-xs sm:text-sm text-slate-600 leading-snug mt-1">
+                                          {t(`categories.descriptions.${category.id}`, category.description)}
+                                        </p>
+                                        {matchedTerms.length > 0 && (
+                                          <p className="text-[11px] sm:text-xs text-cyan-700 mt-2">
+                                            {t('categorySelection.matchedBy', 'Matched by')}: {matchedTerms.slice(0, 2).join(', ')}
+                                          </p>
+                                        )}
+                                      </div>
+                                    </div>
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          </>
+                        ) : (
+                          <p className="text-center text-sm text-slate-600">
+                            {t('categorySelection.noSuggestionFound', 'No strong category match yet. Try adding cuisine words like pasta, tacos, brunch, or seafood.')}
+                          </p>
+                        )}
+                      </div>
+                    )}
+
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 xs:gap-3 sm:gap-4 mb-4 xs:mb-6 sm:mb-8">
                       {/* Show all categories in a single grid */}
-                      {categoriesData.map((category) => (
+                      {rankedCategories.map((category) => (
                         <button
                           key={'category-' + category.id}
                           onClick={() => {
                             runSearchWithCategory(category);
                           }}
-                          className={`group relative overflow-hidden bg-white/88 backdrop-blur-sm border border-slate-200 rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-7 transition-all duration-300 hover:scale-[1.01] hover:shadow-[var(--gm-shadow-2)] focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)]${selectedDisplayCategory?.id === category.id && selectedType === 'category' ? ' border-cyan-400 bg-cyan-50' : ''}`}
+                          className={`group relative overflow-hidden bg-white/88 backdrop-blur-sm border border-slate-200 rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-7 transition-all duration-300 hover:scale-[1.01] hover:shadow-[var(--gm-shadow-2)] focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)]${selectedDisplayCategory?.id === category.id && selectedType === 'category' ? ' border-cyan-400 bg-cyan-50' : ''}${suggestedCategoryIds.has(category.id) ? ' ring-1 ring-cyan-300' : ''}`}
                         >
                           <div className="relative text-center space-y-2 xs:space-y-3 sm:space-y-4">
                             <div className="text-3xl xs:text-4xl sm:text-5xl group-hover:scale-110 transition-transform duration-300">

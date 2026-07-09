@@ -7,13 +7,13 @@ language_coverage: el,en
 # Googlementor — Greece Travel & Restaurant Guide
 Site: https://googlementor.com
 Entities index: https://googlementor.com/data/entities.json
-Generated: 2026-07-08T12:42:21.219Z
+Generated: 2026-07-09T11:02:33.965Z
 
-Googlementor is a curated directory of restaurants, cafes, attractions, and neighborhoods in Athens and the Greek islands. All locations are verified, geocoded, and linked to Google Maps. The site covers 3765 curated dining and attraction entries across 352 Athens neighborhoods and Greek regions.
+Googlementor is a curated directory of restaurants, cafes, attractions, and neighborhoods in Athens and the Greek islands. All locations are verified, geocoded, and linked to Google Maps. The site covers 3532 curated dining and attraction entries across 352 Athens neighborhoods and Greek regions.
 
 ## Curated Locations by Category
 
-### Greek Restaurants (779 locations)
+### Greek Restaurants (768 locations)
 Authentic traditional Greek cuisine
 
 - Manári Taverna — Πλ. Αγίων Θεοδώρων 3, Αθήνα 105 61
@@ -135,7 +135,7 @@ Authentic traditional Greek cuisine
 - Αυλή του Θοδωρή — Πλατύς Γιαλός 846 00
 - Romvi Restaurant — Τολό 210 56
 - Αρχοντικό Αγία Παρασκευή — Unnamed Road, Αγ. Παρασκευή 630 85
-- Basegrill — Ζησιμοπούλου 5, Γλυφάδα 166 74
+- Basegrill — Ζησιμοπούλου 5, Γλυφάδα 166 74 [also: Luxury Dining]
 - Onos Taverna — Δράκου 14, Αθήνα 117 42
 - Aspro Alogo (i.e. White Horse) Traditional Greek Food — Απόλλωνος, Αθήνα 105 57
 - Χάνι Πανέτσου - Tavern est. 1884 — 52 χλμ, ΕΟ Λαμίας Καρπενησίου, Μεσαία Καψή 350 17
@@ -185,7 +185,6 @@ Authentic traditional Greek cuisine
 - Εστιατόριο Πανελλήνιο — Πλατεία Δημαρχείου, Καλαμπάκα 422 00
 - Κάππαρη — Dorieon 36, Athina 118 51
 - Ο Λελουδας (απ'το 1928) — Σαλαμινίας 8-10, Αθήνα 118 55
-- Ανεμολόγιο εναλλακτικό καφέ — Πελοπίδα 106, Περιστέρι 121 35
 - Ταβέρνα ο Νίκος — Amorgos(Aegiali, Κατάπολα 840 08
 - Οικονόμου Εστιατόριο (απ'το 1930) — Κυδαντίδων 32, Αθήνα 118 51
 - Maria's Restaurant — Μπουμπουλίνας 48, Τολό 210 56
@@ -246,7 +245,6 @@ Authentic traditional Greek cuisine
 - Μασσαλία - Νέα Φώκαια — Πλατεια, Νέα Φώκαια 630 77
 - Το καρτερι — Προς Παρανταις, Μύκονος 846 00
 - Όμικρον — Οπλοποιού 3, Θεσσαλονίκη 546 25
-- Υπουργειο Γευσεων-Σουβλάκι,Ψητά — Φιλοθέης 67, Ηράκλειο 141 21
 - Giardino Segreto — Ευαγγελιστρίας 14, Σκιάθος 370 02
 - Μυλοτόπι — Κέφαλος 853 01
 - ΤΑΒΕΡΝΑ Ο ΜΑΜΟΥΚΑΣ — Ανδρωνιάνοι 340 03
@@ -291,7 +289,6 @@ Authentic traditional Greek cuisine
 - Γιουσουρούμ — Σουλτάνη 11, Αθήνα 106 82
 - Ο Λάιος Ταβέρνα — Λεωφ. Κωνσταντίνου Καραμανλή 6, Αχαρνές 136 72
 - Τα Κάστρα — Κανάλι Νέας Ποτίδαιας, Νέα Ποτίδαια 632 00
-- ΤΟ ΚΟΚΟΡΑΚΙ — Mark. Mpotsari 105, Thessaloniki 544 53
 - Ταβέρνα Κισσός - Στενή Ευβοίας — Δάσος Στενής, Στενή Δίρφυος 340 14
 - Το Ελληνικό — Στρ. Καλλάρη 9, Θεσσαλονίκη 546 22
 - ΜΠΟΚΟΣ ΟΥΖΕΡΙ — Μαιάνδρου 143, Νέα Ιωνία 384 45
@@ -368,7 +365,7 @@ Authentic traditional Greek cuisine
 - Ωρομέδων — Επαρ.Οδ. Ζιπάριου-Ασφενδιού, Λαγουδι Ζία 853 00
 - Ζάχος Καμίνια — 185 41, Κομοτηνής 37, Πειραιάς 185 41
 - Εστιατόριο Ταβέρνα Ο Μανώλης — Σάμου 1, Χαλάνδρι 152 33
-- Maestranza.skg — Ptolemeon 29Β, Thessaloniki 546 30
+- Maestranza.skg — Ptolemeon 29Β, Thessaloniki 546 30 [also: Luxury Dining]
 - Little Ginger — Αγγέλου Μεταξά 13, Πειραιάς 185 34
 - Musique Cafe - Restaurant — Αριάδνης, Νάξος 843 00
 - Mama Lena — Imerovigli 847 00
@@ -379,7 +376,6 @@ Authentic traditional Greek cuisine
 - Ο ΜΗΛΑΣ ΕΣΤΙΑΤΟΡΙΟ — ΑΓΙΟΣ ΔΗΜΗΤΡΙΟΣ, Αγ. Δημήτριος 840 06
 - Βόλτες — Γιάννη Ρίτσου, Μονεμβασιά 230 70
 - Tavernier — Ελπίδος 24, Κηφισιά 145 64
-- ο Πρόεδρος (Άλιμος) — Άλιμος, Λεωφ. Καλαμακίου 26, Αθήνα 174 55
 - Rakor — Πλαταιών 10, Αθήνα 104 35
 - Το Στέκι Του Ηλία — Επταχάλκου 5, Αθήνα 118 51
 - Ακροβάτης — Papafi 113, Thessaloniki 544 53
@@ -396,7 +392,6 @@ Authentic traditional Greek cuisine
 - Ελλάς — Παλαιά Ε.Ο. Κορίνθου Πατρών 16, Κάτω Διμηνιό, Κιάτο 202 00
 - Ο Μάνιτας στο Κύμα — Άγιος Βασίλης Περιβόλα, Αίγινα 180 10
 - Παγγαίον — Τομπάζη 31, Θεσσαλονίκη 546 44
-- 5Φ — Diocharous 31 &, Κλεισούρας, Αθήνα 161 21
 - Backξες — Καρατασου, Τσάμη - Καρατάσου 7, Θεσσαλονίκη 562 24
 - Extravaganza — Επισκοπου Αμβροσιου 8, Θεσσαλονίκη 546 30
 - Ναξιώτικη Κουζίνα Ο ΧΑΡΗΣ — Εγγαρές 843 00
@@ -434,7 +429,6 @@ Authentic traditional Greek cuisine
 - Gioma Meze — Διονυσίου Σολωμού 12, Αγ. Νικόλαος 721 00
 - Κιβωτός — Διός 32, Κηφισιά 145 64
 - Αγνάντιo — Βιγλες, Σκιάθος 370 02
-- Arch Beer House — Εθ. Αντιστάσεως 91, Περιστέρι 121 34
 - Ο Καλοφαγάς Steakhouse — Παλαιών Πατρών Γερμανού 1, Βριλήσσια 152 38
 - Ιζαμπέλα - Αρμένικες νοστιμιές — Αναπαύσεως 36, Δραπετσώνα 185 46
 - Ταβέρνα Το Κουτούκι — Λεωφ. Κηφισίας 308, Κηφισιά 145 63
@@ -449,7 +443,7 @@ Authentic traditional Greek cuisine
 - Το στέκι της Τόμπρα — Ηπείρου 5-7, Αγ. Παρασκευή 153 41
 - Η Ελένη — Παναγία 814 01
 - KORU INSPIRED CUISINE — Ολύμπου 15, Θεσσαλονίκη 546 30
-- Basegrill Athens — Λεωφ. Κωνσταντινουπόλεως 64, Περιστέρι 121 33
+- Basegrill Athens — Λεωφ. Κωνσταντινουπόλεως 64, Περιστέρι 121 33 [also: Luxury Dining]
 - Κουτούκι Καλυψώ — Πεντέλης 41-43, Παλαιό Φάληρο 175 64
 - Εστιατόριο Παράγκα — Επαρ.Οδ. Απόλλωνα 13, Απόλλωνα 851 06
 - ΜΑΡΟΥΣΩ — ΚΥΚΛΑΔΕΣ, Αρκεσίνη 840 08
@@ -484,7 +478,7 @@ Authentic traditional Greek cuisine
 - Ellovos Restaurant — Unnamed Road, Λευκός 857 00
 - 17 Χωριά — Δερβενακίων 12, Νεμέα 205 00
 - Αμμοθίνες — Πετροχώρι 240 01
-- Feedέλ Urban Gastronomy — Κτενά 1, Αθήνα 105 63
+- Feedέλ Urban Gastronomy — Κτενά 1, Αθήνα 105 63 [also: Luxury Dining]
 - Kira Pothiti — Chora, Schinoussa, Χώρα, Σχοινούσα, Chora, Σχοινούσσα 843 00
 - Τερέζα — Μυρσινη 842 00
 - Captain Nikolas family tavern — Greece, Παλική
@@ -536,14 +530,11 @@ Authentic traditional Greek cuisine
 - Ταβέρνα Όασις — Καλό Νερό, Περιβολάκια 720 59
 - Cinapos — Ηρακλειδών 10, Αθήνα 118 51
 - Εστιατόριο Λεμπέσης — Αρτεμώνας 840 03
-- TAVERN 'MOUSTAKAS' — Βασιλικά Θεσσαλονίκης, Θεσσαλονίκη 570 06
 - Παραδοσιακό Μεζεδοπωλείο Πατρικό, Patriko — Αλικαρνασσού 35, Κως 853 00
 - Antamoma Naxian Cuisine- Mylos 360 Café Sunset Bar — Ai Giannis, Απείραθος 843 00
 - Ταβέρνα Λεστόρι — Ι. Σακελλαρίου 59, Βίλια 190 12
 - + ΤροΦή | Sintrofi — 7, Doxis Street, Thessaloniki 546 25
 - Ταβέρνα «Τα Εξοχικά» — Char. Trikoupi 54, Sochos 570 02
-- Agora Select — Χατζηγιάννη Μέξη 8 και, Κων/νου Βεντήρη 9, Αθήνα 115 28
-- ORA baresto — Επαρχιακή Οδός Ερμούπολης-Φοίνικων,Φοίνικας 841 00, ΣΥΡΟΣ 841 00
 - Raya Restaurant — Akti Kampani, Mykonos,Kyklades, Greece, Mikonos
 - Loupino — Κατούνη 4, Θεσσαλονίκη 546 25
 - Ταβέρνα Αρχοντικό — Σοχός, 570 02
@@ -595,7 +586,7 @@ Authentic traditional Greek cuisine
 - Taverna Flomari — Gomati Beach, Λήμνος 814 01
 - Ταβέρνα Χαρούλα — Μάρπησσα 844 00
 - Λαουτάρι — Θερμοπυλών 18, Ερμούπολη 841 00
-- Γιάντες — Βαλτετσίου 44, Αθήνα 106 81
+- Γιάντες — Βαλτετσίου 44, Αθήνα 106 81 [also: Luxury Dining]
 - Βεργιώτικο — thomaidoy 2, Βέροια 591 32
 - Το Ζεμπερέκι - Κουτούκι | Μοσχάτο — Σολωμού 92, Μοσχάτο 183 45
 - Το Βιετνάμ — Agiou Konstantinou 18, Metamorfosi 144 52
@@ -626,7 +617,6 @@ Authentic traditional Greek cuisine
 - Mikelatos Restaurant — Central pedestrian road of Skala, Σκάλα 280 86
 - Κουβελος — Γενναίου Κολοκοτρώνη 66, Αθήνα 117 41
 - Κρυστάλλης — Πλ. Αγίας Τριάδας, Πεντέλη 152 36
-- Μπαρμπαλιάς — Λεωφ. Βασιλέως Γεωργίου B 6, Χαλάνδρι 152 33
 - ΜΑΤΙΝΑ - ΣΤΑΥΡΟΣ — Κόρωνος 843 02
 - Το Κάστρο - Μεζεδοπωλείο — Πολυτέκνων 80, Ίλιον 131 21
 - Το Τσιπουράδικο της Μυρσίνης — Ακτή Παπάγου 6, Ερμούπολη 841 00
@@ -636,7 +626,7 @@ Authentic traditional Greek cuisine
 - Γαβριλης Ταβερνα — Αγίου Δημητρίου, Κουβαράς 190 03
 - Καφέ Ουζερί Αλέκος — Kosma tou Εtolou 22, Thessaloniki 546 43
 - Λουιζίδης Εστιατόριο Βουλιαγμένη — Ερμού 2, Βουλιαγμένη 166 71
-- Cafe Avissinia — Κυνέτου 7, Αθήνα 105 55
+- Cafe Avissinia — Κυνέτου 7, Αθήνα 105 55 [also: Rooftop Lounges]
 - Τα Πεύκα — Χαϊμαντά Δημητρίου 34, Μαρούσι 151 22
 - Παραδοσιακή Ταβέρνα «Νιαβής» — Νεραϊδοχωρίου, Τρίκαλα 421 00
 - Βρεγμένη Γάτα — Απόλλωνος 4, Θεσσαλονίκη 544 54
@@ -668,7 +658,6 @@ Authentic traditional Greek cuisine
 - Lykos - Χασαποταβέρνα — Χαρ. Θέρμης, Thessaloniki 570 01
 - Nea Diagonios — Themistokli Sofouli 64Α, Thessaloniki 546 55
 - Κίτσουλας — Φιλικής Εταιρείας 25Γ, Χαλάνδρι 152 32
-- Γυραδικο Ο Χρήστος — Λεωφ. Σουνίου 6, Λαύριο 195 00
 - Ρηγάλος Ψησταριά - Πρόβατο στα κάρβουνα — Πάριδος 32, Ίλιον 131 22
 - Ta Vlachika — Leoforos Evelpidon, Πρεβέζης, Βάρη 166 72
 - Ταβέρνα Αγίας Παρασκευής — Χριστός 720 56
@@ -796,7 +785,7 @@ Authentic traditional Greek cuisine
 - Sunset Restaurant — Πόρος 280 86
 - Στάθης — Κηπούρια, Ληξούρι 282 00
 
-### Coffee & Brunch Spots (506 locations)
+### Coffee & Brunch Spots (502 locations)
 Specialty coffee and all-day brunch spots
 
 - Merenda Coffee Wine & More — Flogiton 2, Neapoli 567 28
@@ -805,9 +794,9 @@ Specialty coffee and all-day brunch spots
 - Flaked Croissanterie Nea Smyrni — 2ας Μαΐου 10, Νέα Σμύρνη 171 21
 - Cafe Kanoni — κανόνι, Kerkira 491 00
 - Terra Petra — Ανατολικής Ρωμυλίας 1, Πετρούπολη 132 31
-- Mamalouka Beach Bar — Unnamed Road, Kassandra 630 85
+- Mamalouka Beach Bar — Unnamed Road, Kassandra 630 85 [also: Fish Tavernas]
 - PAUL Γλυφάδα — Κύπρου 70, Γλυφάδα 166 74
-- Odori — Σκουλενίου 2, Αθήνα 105 61
+- Odori — Σκουλενίου 2, Αθήνα 105 61 [also: Italian Restaurants]
 - Usurum — Λεπενιώτου 19, Αθήνα 105 54
 - Moments cafe — Αγγέλου Σικελιανού 65, Ηλιούπολη 163 45
 - Big Spoon — Αγίου Ιωάννου 65, Αγ. Παρασκευή 153 42
@@ -825,12 +814,12 @@ Specialty coffee and all-day brunch spots
 - The Morning Table — Vrysi, Mikonos 846 00
 - Τράγος - Μοντέρνο καφενείο — Πλ. Αγίων Αναργύρων, Αθήνα 105 54
 - Καφετέρια "Qahwa" — Μαρκ. Μπότσαρη 1, Αιγάλεω 122 41
-- Saloon Park — 3ο χιλ Καρπενησίου Προυσσου, Karpenisi 361 00
-- Σαβοϊδάκης Bakery & Patisserie, Ρέθυμνο — Mark. Portaliou 57, Rethymno 741 50
+- Saloon Park — 3ο χιλ Καρπενησίου Προυσσου, Karpenisi 361 00 [also: Kid Friendly Locations]
+- Σαβοϊδάκης Bakery & Patisserie, Ρέθυμνο — Mark. Portaliou 57, Rethymno 741 50 [also: Dessert Shops]
 - Naif — Ευρυδάμαντος 15, Αθήνα 117 45
 - Canela Restaurant by Blue Carpet — Παραλία, Pefkochori 630 85
-- Attic Urban Rooftop — Ερμού 86, Αθήνα 105 54
-- KARMINIO - All Day Eatery — Βεΐκου 86, Αθήνα 117 41
+- Attic Urban Rooftop — Ερμού 86, Αθήνα 105 54 [also: Rooftop Lounges]
+- KARMINIO - All Day Eatery — Βεΐκου 86, Αθήνα 117 41 [also: Vegetarian Friendly Restaurants]
 - Fillo — 105 62, Βουλής 11, Αθήνα 105 62
 - Χειροποίητο Πεϊνιρλί - Άλιμος — Λεωφ. Καλαμακίου 65, Άλιμος 174 55
 - Macao beach naxos — Agios Prokopios 843 00
@@ -851,7 +840,7 @@ Specialty coffee and all-day brunch spots
 - Φίλιον — Σκουφά 34, Αθήνα 106 72
 - Achinos Tuti Beach Halkidiki — Nisos Beach, Chaniotis 630 85
 - Φαρίν Μουά (Farin Moua) — Ερυθραίας 2, Περιστέρι 121 34
-- JOIN Juice bars — Paleon Patron Germanou 10, Thessaloniki 546 22
+- JOIN Juice bars — Paleon Patron Germanou 10, Thessaloniki 546 22 [also: Vegetarian Friendly Restaurants]
 - NAKED — Filippou 62, Thessaloniki 546 35
 - Cavo Bianco — Dragon's Way, Ierapetra 720 59
 - Romantzo — Veroias 2, Thessaloniki 546 25
@@ -867,14 +856,14 @@ Specialty coffee and all-day brunch spots
 - Olivia’s Brother — Leof. Perikleous, Κεραμεικού 4, Χολαργός 155 61
 - Philia Thessaloniki — Pl. Navarinou 5, Thessaloniki 546 22
 - Bakalokafenio - Michalas Kostas — Lakones 490 83
-- Telescope Cafe Bar Restaurant — Φιλικής Εταιρείας, Χαϊδάρι 124 61
+- Telescope Cafe Bar Restaurant — Φιλικής Εταιρείας, Χαϊδάρι 124 61 [also: Rooftop Lounges]
 - Poco a poco — Loukianou 13, Athina 106 75
 - Surf Beach - Snack Bar Kouremenos — Ιτανίων, Kouremenos 723 00
 - Μουζίλο Χειροποίητες Πίτες — Δούσμανη 13, Γλυφάδα 166 75
 - Metoxi Cafe — Κως ζια, Lagoudi Zia 853 00
 - The Garden Bar — Ag. Mina 16, Thessaloniki 546 24
-- Mosaic Milos — Plaka 848 00
-- NATU — Λεβίδου 13, Κηφισιά 145 62
+- Mosaic Milos — Plaka 848 00 [also: Rooftop Lounges]
+- NATU — Λεβίδου 13, Κηφισιά 145 62 [also: Luxury Dining]
 - 10AM apotheke — Konstantinoupoleos Ave. 82, Athina 104 35
 - Seladi cafe bar — Epar.Od. Katapola-Thalarias, Lagada 840 08
 - Daluz Beach Bar Restaurant — Toroni 630 72
@@ -885,12 +874,12 @@ Specialty coffee and all-day brunch spots
 - Υδρονέτα — Επαρ.Οδ. Μανδρακίου-Μωλόυ, Ύδρα 180 40
 - Navagos beach bar Paliouri — Navagos Beach-Restaurant, Paliouri 630 85
 - όβεν — Λεωφ. Βασιλέως Παύλου 104, Βούλα 166 73
-- The Brunchers — Αγ. Θέκλας 5, Αθήνα 105 54
+- The Brunchers — Αγ. Θέκλας 5, Αθήνα 105 54 [also: Vegetarian Friendly Restaurants]
 - Lambrinos — Unnamed Road, Karpathos 857 00
 - Fred — Κων/νου Παλαιολόγου 24, Νέα Σμύρνη 171 21
 - Τόλης sweet's n' eats — Πλ. Δημοκρατίας, Νίκαια 184 51
 - Smak Ζυμερία — Ρόμβης 21, Αθήνα 105 60
-- Piu Verde — Στρατ, Αλ. Παπάγου, Παπάγου 156 69
+- Piu Verde — Στρατ, Αλ. Παπάγου, Παπάγου 156 69 [also: Kid Friendly Locations]
 - Lovly Bar — Mastihari
 - Βρυσάκι — Βρυσακίου 17, Αθήνα 105 55
 - Blends Mix & Match — Pl. Nimfon, Glifada 166 74
@@ -914,20 +903,20 @@ Specialty coffee and all-day brunch spots
 - kolor. — Εμμανουήλ Μπενάκη 7-9, Αθήνα 106 78
 - Oven Manufactory — Αρτέμιδος 9, Γλυφάδα 166 74
 - Λεωφ. Δημοκρατίας 51, Αίγινα 180 10 — Λεωφ. Δημοκρατίας 51, Αίγινα 180 10
-- Hyper Astro Bar — Ερμού 78, & Αθηνάς 2, Αθήνα 105 51
+- Hyper Astro Bar — Ερμού 78, & Αθηνάς 2, Αθήνα 105 51 [also: Rooftop Lounges]
 - Café Plateia — Mitropolitou Chrisanthou 0, Kalamaria 551 32
 - Alepou — Βαρβαρεσου, Πεύκη 151 21
 - Zampanó — Σαρρή 18, Αθήνα 105 53
 - Petite Fleur Chalandri — Πλατεία Ελευθερωτών 16, Platia Eleftheroton 16, Χαλάνδρι 152 32
-- Morrison • The Premium Rooftop — 17is Noemvriou 87, Pilea 555 35
-- ERGON Agora (East) — Leof. Georgikis Scholis 50, Pilea Chortiatis 555 35
+- Morrison • The Premium Rooftop — 17is Noemvriou 87, Pilea 555 35 [also: Rooftop Lounges]
+- ERGON Agora (East) — Leof. Georgikis Scholis 50, Pilea Chortiatis 555 35 [also: Kid Friendly Locations]
 - IT restaurant Kolonaki — 106 71 Voukourestiou 30 &, Αλ. Σούτσου, Αθήνα 106 71
 - Orange — Konstantinoupoleos 21, Thessaloniki 546 40
 - Lalos — Ευρυδάμαντος 19, Αθήνα 117 45
 - Tribeca — Leof. Nikis 21, Thessaloniki 546 23
 - Angelina Le Petit Paris- Depuis 2012 — Λεωφ. Δημάρχου Αγγέλου Μεταξά 38, Γλυφάδα 166 74
 - Hide & Seek - All day bar restaurant — Λεωφ. Κηφισίας 254, Χαλάνδρι 152 31
-- Anana Coffee|Food — Πραξιτέλους 33, Αθήνα 105 60
+- Anana Coffee|Food — Πραξιτέλους 33, Αθήνα 105 60 [also: Vegetarian Friendly Restaurants]
 - Cedar Naxos — Plaka beach island, Cyclades, Town 84300, 843 00
 - Τρομερό παιδί — Παπαδιαμαντοπούλου 30, Αθήνα 115 28
 - Makai Beach Bar — 7MQV+29, Eleonas 630 78
@@ -937,18 +926,18 @@ Specialty coffee and all-day brunch spots
 - Hidden Χολαργός — Πυθαγόρα, Χίου 6, Χολαργός 155 62
 - shed — Patriarchoi Dionisii E 11, Thessaloniki 546 35
 - Bueno — Λεωφ. Κωνσταντίνου Καραμανλή 53, Αχαρνές 136 72
-- Butterflies And Hurricanes — Pindarou 1, Thessaloniki 546 39
+- Butterflies And Hurricanes — Pindarou 1, Thessaloniki 546 39 [also: Vegetarian Friendly Restaurants]
 - Sklaris — Serron 17, Ag. Christoforos 640 01
 - Carte Postale — Michail Kalorizikou 2, Chania 731 33
-- Fasolas Gastrokafeneio — Filoti 843 02
+- Fasolas Gastrokafeneio — Filoti 843 02 [also: Dessert Shops]
 - ΛΟΚΑΛ ΑΘΕΝΣ — Λεωφ. Αγίου Δημητρίου 33, Αγ. Δημήτριος Αττικής 173 43
 - Proof Nanobakery — Αγίας Ειρήνης 8, Αθήνα 105 51
 - Okupa Kitchen & Listening Bar — Σαμουήλ Καλογήρου 3, Αθήνα 105 53
 - Kitchen Bar — Αποθήκη Β2 Α' Προβλήτα Λιμένα, Thessaloniki 541 10
 - Omsom koukaki — Βεΐκου 110, Αθήνα 117 41
 - oZé Athens — Παπάγου 56, Ζωγράφου 157 71
-- Theoria Tou House — Πλ. Δαβάκη 1, Αιγάλεω 122 44
-- JOIN juice bars — Leof. Nikis 73, Thessaloniki 546 22
+- Theoria Tou House — Πλ. Δαβάκη 1, Αιγάλεω 122 44 [also: Dessert Shops]
+- JOIN juice bars — Leof. Nikis 73, Thessaloniki 546 22 [also: Vegetarian Friendly Restaurants]
 - Peggy Sue — Σπαθαρη 2, Νέα Σμύρνη 171 21
 - ΜΟΝΤΑΚΙΟΥ — Σταδίου 30, Αθήνα 105 64
 - In House Project — Mitropoleos 96, Thessaloniki 546 22
@@ -957,9 +946,9 @@ Specialty coffee and all-day brunch spots
 - Jardin All Day Stories ALL DAY BAR RESTAURANT — Ναυάρχου Βότση 1, Καλλιθέα 176 74
 - Exo meria — Isternia 842 01
 - The Roosters Vrilissia — Θέτιδος 1 &, Ομήρου 2, Βριλήσσια 152 38
-- The Place Secret Yard — Τριπτολέμου 26, Αθήνα 118 54
+- The Place Secret Yard — Τριπτολέμου 26, Αθήνα 118 54 [also: Vegetarian Friendly Restaurants]
 - Armadillo coffee brewery — Emmanouil Roidi 9, Ermoupoli 841 00
-- Caffe Greco — Χαλκείο 843 02
+- Caffe Greco — Χαλκείο 843 02 [also: Dessert Shops]
 - Madisons Kitchen Bar — Lomvardou 36, Zakinthos 291 00
 - Το καφέ της Χαράς — Κλαυσί 361 00
 - Garçon Brasserie — Agias Sofias 2, Thessaloniki 546 22
@@ -969,16 +958,16 @@ Specialty coffee and all-day brunch spots
 - Monokeros Bakery — Φαίδρου 4, Αθήνα 116 35
 - NURU Casual Dine Bar — Coast Petrou Ralli, Ermoupoli 841 00
 - mimosa neighborhood bistrot — Efesou, Μουδανιών &, Νέα Φιλαδέλφεια Αττικής 143 41
-- Ciel Athens — ΜΝΗΣΙΚΛΕΟΥΣ, Μητροπόλεως 2, Αθήνα 105 56
+- Ciel Athens — ΜΝΗΣΙΚΛΕΟΥΣ, Μητροπόλεως 2, Αθήνα 105 56 [also: Luxury Dining]
 - Το Μικρό Cafe — Unnamed Road, Πέρδικα 180 10
 - ΤΙΤΑΝΙΑ — Tsimiski 139, Thessaloniki 546 21
-- Alexandros Cafe Restaurant Bar — Egialou 30, Nikiti 630 88
+- Alexandros Cafe Restaurant Bar — Egialou 30, Nikiti 630 88 [also: Italian Restaurants]
 - Πλατεία Θεάτρου, Καφέ / Μπαρ/Εστιατόριο — Eth. Aminis 4, Thessaloniki 546 21
 - Qahwa Roastery — Αγίου Σπυρίδωνος 48, Αιγάλεω 122 43
 - Lemonis Bakery — Epar.Od. Poligirou - Neas Potideas, Nea Propontida 632 00
 - 72H Artisanal Bakery — Paleon Patron Germanou 2, Thessaloniki 546 22
 - Μπάρκο — Λεωφ. Γ. Γρέγου 57, Πόρτο Ράφτη 190 23
-- Pink Dot Cafe — Leof. Georgikis Scholis 84, Pilea 570 01
+- Pink Dot Cafe — Leof. Georgikis Scholis 84, Pilea 570 01 [also: Dessert Shops]
 - Slow Athens — Αγίου Σπυρίδωνος 18, Γαλάτσι 111 46
 - Pantheon Bar — Proxenou Koromila 8, Thessaloniki 546 23
 - Braxton — Πόντου 20, Αγ. Δημήτριος Αττικής 173 42
@@ -995,7 +984,7 @@ Specialty coffee and all-day brunch spots
 - Qahwa Chaidari — Στρ. Καραϊσκάκη 12, Χαϊδάρι 124 61
 - Little Tree Books and Coffee — Καβαλλότι 2, Αθήνα 117 42
 - Έαρ Cafe Bar — Τρύφωνα Ζαχαρόπουλου, Vitina 220 10
-- Meltemi — Astypalaia 859 00
+- Meltemi — Astypalaia 859 00 [also: Dessert Shops]
 - Wynwood - Eat Sip & Gather the Miami Style — Φοίβης 15, Γλυφάδα 166 74
 - Anemos Beach Bar & Restaurant — Ouranoupoli 630 75
 - Αναψυκτήριο Καλοπούλα — Unnamed Road, Καισαριανή
@@ -1005,7 +994,7 @@ Specialty coffee and all-day brunch spots
 - Mour Athens — Κορυτσάς 15, Αθήνα 104 47
 - The Pirate Bar — Βότση, Ύδρα 180 40
 - LE PAIN - Du chef — Idomeneos, Nestoros 41, Ilion 131 22
-- Mind The Cup — Αιμιλίου Βεάκη 29, Περιστέρι 121 34
+- Mind The Cup — Αιμιλίου Βεάκη 29, Περιστέρι 121 34 [also: Vegetarian Friendly Restaurants]
 - ΔΗΜΗΤΡΗΣ ΚΑΣΙΜΗΣ Φούρνος — 44 Marathonos Ave, Enanti DEI, Nea Makri, 19005
 - Different Beast — Κασσαβέτη 19, Αθήνα 145 61
 - Nonnas Athens — Pl. Filomousou Eterias 3, Athina 105 58
@@ -1022,7 +1011,7 @@ Specialty coffee and all-day brunch spots
 - Pounta — Folegandros 840 11
 - MOTIV — Εμμανουήλ Μπενάκη 20, Αθήνα 106 78
 - Voulitsa Beach Bar — Nea Roda 630 75
-- Holy Llama — Nikis, Syntagma 23, Αθήνα 105 57
+- Holy Llama — Nikis, Syntagma 23, Αθήνα 105 57 [also: Vegetarian Friendly Restaurants]
 - PAUL Athens — Πανεπιστημίου 10, Αθήνα 106 71
 - PURA VIDA athens — Περικλέους 24-26, Αθήνα 105 62
 - Κροκ Μεσιέ | All day Bistrot {Πρωινό & Brunch στο χωριό} — Epar.Od. Tripotamou-Kallonis, Krokos 842 00
@@ -1044,7 +1033,7 @@ Specialty coffee and all-day brunch spots
 - Mi Me Lismonei Art Café — El. Venizelou 23, Thessaloniki 546 24
 - Cat Cafe Athens (7€/pers, Allowed Age 14+) — Νηλέως 54, Αθήνα 118 51
 - Dalu — Dalu, Mikonos 846 00
-- Gellissimo Biscoto | Brunch • Coffee | Thessaloniki — Proxenou Koromila 8, Thessaloniki 546 23
+- Gellissimo Biscoto | Brunch • Coffee | Thessaloniki — Proxenou Koromila 8, Thessaloniki 546 23 [also: Dessert Shops]
 - Botanical Garden Bistrot — Βοτανικός Κήπος, Ιερά Οδός 403, Χαϊδάρι 124 61
 - Αργιθέα — Λεωφ. Μαραθώνος 11, Μαραθώνας 190 07
 - Sinaloa Beach Club — Neos Marmaras 630 81
@@ -1062,17 +1051,17 @@ Specialty coffee and all-day brunch spots
 - Cornell — Αετιδέων 18 &, Βουτσινά, Χολαργός 155 61
 - Αλκυόνη Cafe — Μικκιάδων 6, Chios 821 31
 - La Luna — Παραλία Τρανή Αμμούδα, Ormos Panagias 630 78
-- This is Loco — Φαλήρου 47, Αθήνα 117 42
+- This is Loco — Φαλήρου 47, Αθήνα 117 42 [also: Vegetarian Friendly Restaurants]
 - Κούλ Άθενς (Koul Athens) — P. Tsaldari 129, Kallithea 176 76
 - Ίσαλος — Navarchou Kountourioti 44, Mirina 814 00
 - GAYA Athens — Καλαμιώτου 2, Αθήνα 105 63
-- Joshua Tree Cafe — Αναπαύσεως 13, Αθήνα 116 36
+- Joshua Tree Cafe — Αναπαύσεως 13, Αθήνα 116 36 [also: Vegetarian Friendly Restaurants]
 - Sovolos - Ζαχαροπλαστείο - Φούρνος — Συνταγματάρχου Δαβάκη 52, Καλλιθέα 176 72
 - Philos Athens — Σόλωνος 32, Αθήνα 106 73
 - Naked Athens — Πλ. Αγίας Ειρήνης 2, Αθήνα 105 60
 - Ola Mykonos - Breakfast, Tacos, Cocktails — Korfos Beach, Mikonos 846 00
 - Ο Βραζιλιάνος — Παπάγου 37, Ζωγράφου 157 73
-- Moorings — Μαρινα Βουλιαγμενης, Βουλιαγμένη 166 71
+- Moorings — Μαρινα Βουλιαγμενης, Βουλιαγμένη 166 71 [also: Luxury Dining]
 - Kalimeres — Τάκη 14, Αθήνα 105 54
 - Donkey Garden — Skra 3, Thessaloniki 546 22
 - Red Jαne Bakery — Kidonias 101, Chania 731 36
@@ -1081,12 +1070,12 @@ Specialty coffee and all-day brunch spots
 - Εφημερίδα ATH — Βησσαρίωνος 9, Αθήνα 106 72
 - Koukos — Βογατσικού 10, Thessaloniki 546 22
 - Alatiera — Epar.Od. Mesologgiou - Alikon Tourlidas 27, Missolonghi 302 00
-- JERRY’S — Εθ. Αμύνης 27, Παπάγου 156 69
-- Santo Belto — Αγίας Ζώνης 21, Αθήνα 113 61
+- JERRY’S — Εθ. Αμύνης 27, Παπάγου 156 69 [also: Vegetarian Friendly Restaurants]
+- Santo Belto — Αγίας Ζώνης 21, Αθήνα 113 61 [also: Dessert Shops]
 - Isalos Beach Club — Plastira 17b, Volos 382 22
 - Pantry coffee and brunch spot — Naxos 843 00
 - Espresso house — Devosetou 15, Argostoli 281 00
-- Fairytale – Το Παραμυθοπωλείο της Ν. Φιλαδέλφειας — Νικ. Τρυρια 48, Νέα Φιλαδέλφεια Αττικής 143 41
+- Fairytale – Το Παραμυθοπωλείο της Ν. Φιλαδέλφειας — Νικ. Τρυρια 48, Νέα Φιλαδέλφεια Αττικής 143 41 [also: Dessert Shops]
 - Hush - Coffee & Brunch — First pier, Thessaloniki 546 25
 - Canteen All day Bar Restaurant — Dim. Gounari 7, Thessaloniki 546 22
 - Historic lounge bar — Νεάπολη 811 00
@@ -1095,17 +1084,17 @@ Specialty coffee and all-day brunch spots
 - Hippy Hippo — Αναστασίου Ζίννη 37, Αθήνα 117 41
 - Theory Bar — Πλάτωνος 14, Χαλάνδρι 152 34
 - Almira beach bar — Kassandra 630 77
-- Αρτοποιείο Ζαχαροπλαστείο "Αρτο..ζυμιά" — Αγλαονίκης 22, Αθήνα 117 43
+- Αρτοποιείο Ζαχαροπλαστείο "Αρτο..ζυμιά" — Αγλαονίκης 22, Αθήνα 117 43 [also: Dessert Shops]
 - MAHARAJA SKG - Heaven of Shisha — Agnostou Stratiotou 36, Polichni 565 33
 - Beach Bar Pantelis — Λημνος, Thanos 814 00
 - The Underdog® Flagship Store Thissio — Ηρακλειδών 8, Αθήνα 118 51
 - COUNTRY BREADERY — Proxenou Koromila 13, Thessaloniki 546 23
-- LIYSTOR — Ερμού 92-94, Αθήνα 105 54
+- LIYSTOR — Ερμού 92-94, Αθήνα 105 54 [also: Rooftop Lounges]
 - Karavi Beach Bar — Nea Koutali 814 01
 - Paul — Andrea Papandreou 13, Chalandri 152 34
 - ΨΩΜΑΣ, Ν., "ΜΟΚΚΑ ΚΑΦΕΚΟΠΤΕΙΟ" Α.Ε.Ε. — Αθηνάς 44, Αθήνα 105 51
 - Amaya Beach Club — 2GG4+9J, Pallini 630 85
-- JOIN juice bars — Giannitson 61, Thessaloniki 546 27
+- JOIN juice bars — Giannitson 61, Thessaloniki 546 27 [also: Vegetarian Friendly Restaurants]
 - 72H Artisanal Bakery & Eatery Athens — 27 Mitropoleos &, Πατρώου 9, Αθήνα 105 57
 - Opus coffee and more — Αιγαίου Πελάγους, Γραβιάς και, Αγ. Παρασκευή 153 42
 - Kazba Bar Kouzina — Λεωφ. Γ. Γρέγου 27, Πόρτο Ράφτη 190 03
@@ -1121,7 +1110,7 @@ Specialty coffee and all-day brunch spots
 - Fluffy Brunch — Pl. Navarinou 10, Thessaloniki 546 22
 - Halki Cafe Bistro — Epar.Od. Naxou-Apiranthou, Chalkio 843 00
 - Bayard Cafe Bar — Ζωοδόχου Πηγής 134, Αθήνα 114 72
-- Kolokytha — Unnamed Rd, Astipalea 859 00
+- Kolokytha — Unnamed Rd, Astipalea 859 00 [also: Dessert Shops]
 - Tazza caffe — Πετράκη 5, Αθήνα 105 63
 - Petrino Beach Restaurant — Μαραγκας 843 00
 - SOPHIA seaview suites & restaurant — 1 Παραλιακη, 2η Παραλιακή 27, New Vrasna 570 21
@@ -1140,7 +1129,7 @@ Specialty coffee and all-day brunch spots
 - Dolce Café — Lakones 490 83
 - Lemonis Bakery — Polychrono 630 85
 - Muse Bistro — Aristidou 3, Athina 105 59
-- Batistas Bakery — Naousa 844 01
+- Batistas Bakery — Naousa 844 01 [also: Dessert Shops]
 - Bannie — Ionos Dragoumi 35, Thessaloniki 546 25
 - ERGON Agora — P. Mela 42, Thessaloniki 546 22
 - Samba Coffee Roasters | The Shop — Σόλωνος 36, Αθήνα 106 73
@@ -1150,9 +1139,8 @@ Specialty coffee and all-day brunch spots
 - The Zillers Pastry Bar — Παλαιολόγου Μπενιζέλου 6, Αθήνα 105 56
 - Cafe Prago — Apollonias, Artemona 840 03
 - 4m (Rule of 4m) — Αγίου Σπυρίδωνος 5, Αθήνα 116 35
-- JOIN juice bars — Marias Kallas 1, Thessaloniki 546 45
+- JOIN juice bars — Marias Kallas 1, Thessaloniki 546 45 [also: Vegetarian Friendly Restaurants]
 - Ρεμετζο καφέ — Metaxa, Kefalonia 280 82
-- Parco — D' Esperey 1, Thessaloniki 546 21
 - Margiora — Κύθνος 840 06
 - Bahamas Urban |Brunch| Bar — Thermis-Panoramatos Rd 7, Thermi 570 01
 - Moonkiz Café — Geor. Stavrou 8, Thessaloniki 546 23
@@ -1166,7 +1154,7 @@ Specialty coffee and all-day brunch spots
 - Patriko Pub-Cafe — Παραλία Στούπας, Stoupa 240 24
 - Fiki Beach Bar & Restaurant — Pefkochori 630 85
 - ΜΟΝΤΑΚΙΟΥ ΜΑΡΟΥΣΙ — Ρωμανού Μελωδού 1, Μαρούσι 151 25
-- KORA — Παναγιώτου Αναγνωστοπούλου 44, Αθήνα 106 73
+- KORA — Παναγιώτου Αναγνωστοπούλου 44, Αθήνα 106 73 [also: Dessert Shops]
 - Καταφύγιο Μπάφι — Πάρνηθος, Αθήνα 136 72
 - Chelsea Hotel — Αρχιμήδους, Πρόκλου και, Αθήνα 116 35
 - Candybar — Ag. Theodoras 4, Thessaloniki 546 23
@@ -1180,7 +1168,7 @@ Specialty coffee and all-day brunch spots
 - KOOL Food and Coffee — Leof. Dimarchou Aggelou Metaxa 22, Glifada 166 74
 - Teras Athens — Θεοδώρητου Βρεσθένης 45, Αθήνα 117 43
 - Hamsa Beach Bar - Restaurant — Μαρτινακια Κυθνος, 840 06
-- Το Βαζάκι Juice Bar — Αριστοτέλους 33, Χαλάνδρι 152 34
+- Το Βαζάκι Juice Bar — Αριστοτέλους 33, Χαλάνδρι 152 34 [also: Vegetarian Friendly Restaurants]
 - To Stavri bakery (Το Σταυρί) — Epar.Od. Limani Kamaron-Artemonas, Apollonia 840 03
 - UPON — Dimokratias 33, Paleo Faliro 175 64
 - Elephant Beach Bar — Peufkohori
@@ -1189,7 +1177,7 @@ Specialty coffee and all-day brunch spots
 - Batard — Pirronos 23, Athina 116 36
 - sempre coffee & cocktail bar — Σαρανταπόρου 51, Περιστέρι 121 34
 - Slow Kaffe and Wine — Ernestou Emprar 10, Thessaloniki 546 25
-- BREAD B.C. Bread Before Christ — Αγίας Παρασκευής 59, Χαλάνδρι 152 34
+- BREAD B.C. Bread Before Christ — Αγίας Παρασκευής 59, Χαλάνδρι 152 34 [also: Dessert Shops]
 - Lemonis Bakery — Epar.Od. Paliouriou-Afitou, Paliouri 630 85
 - Rafiki Outdoors — Tsimiski 33, Thessaloniki 546 34
 - Peach Boy — Ermou 44, Thessaloniki 546 23
@@ -1199,18 +1187,17 @@ Specialty coffee and all-day brunch spots
 - Plakaki Cafe — Pl. Filomousou Eterias 2, Athina 105 58
 - Kafepoleion — Κοκύλια, Kefalonia 281 00
 - come back — Beach, Agios Dimitrios, Naousa 844 01
-- JOIN juice bars — 11ο χλμ εθνικής οδού, A/D Thessalonikis Neon Moudanion, Thessaloniki 570 01
+- JOIN juice bars — 11ο χλμ εθνικής οδού, A/D Thessalonikis Neon Moudanion, Thessaloniki 570 01 [also: Vegetarian Friendly Restaurants]
 - The Caravan Cafe | Brunch — Βαμβακά 3, Thessaloniki 546 31
 - Mandarini_skg — Zefxidos 6, Thessaloniki 546 22
 - The Liberty Breakfast Room — the liberty breakfast room, Mikonos 846 00
 - Το Μαντάνι Ανθοχώρι — Ανθοχώρι 442 00
-- Hush - Coffee & Brunch — First pier, Thessaloniki 546 25
 - Indianos — Μιαούλη 12, Νέα Μάκρη 190 05
 - Fika coffee & croissant — Βούρβαχη 6, Αθήνα 117 43
 - KICK — Σποράδων 26, Αθήνα 113 61
 - CANELA KAMARA — Vasou 2, Thessaloniki 546 35
-- Du Pain - Boulangerie | Patisserie | Cafe - Χαϊδάρι — Λεωφ. Αθηνών 308, Χαϊδάρι 124 62
-- To Tsai — Αλ. Σούτσου 19, Αθήνα 106 71
+- Du Pain - Boulangerie | Patisserie | Cafe - Χαϊδάρι — Λεωφ. Αθηνών 308, Χαϊδάρι 124 62 [also: Dessert Shops]
+- To Tsai — Αλ. Σούτσου 19, Αθήνα 106 71 [also: Vegetarian Friendly Restaurants]
 - La Linda Bakery & Café — Κύπρου 13, Γλυφάδα 166 75
 - Mylos Beach Bar Kos — Akti Zouroudi, Kos 853 00
 - Anafiotika Cafe - Restaurant — Μνησικλέους 24β, Αθήνα 105 56
@@ -1218,7 +1205,7 @@ Specialty coffee and all-day brunch spots
 - Pangaia - The Food Project — Λ. Κωνσταντινουπόλεως 67, Αθήνα 118 55
 - Glarokavos BeachBar — Παραλία Γλαρόκαβος, Pefkochori 630 85
 - NuffSaid.Athens — Διδότου 31, Αθήνα 106 80
-- CandyCat — Περσεφόνης 23, Αθήνα 118 54
+- CandyCat — Περσεφόνης 23, Αθήνα 118 54 [also: Dessert Shops]
 - Le Petit Village — Φωκίωνος 2, Αθήνα 105 63
 - Valenio — Iktinou 6, Thessaloniki 546 22
 - Κλούκι (Klouki) — Φαλατάδος 842 00
@@ -1231,7 +1218,7 @@ Specialty coffee and all-day brunch spots
 - Bouka Bouka Mare — Παραλία, Messini 242 00
 - Temps Perdu — Καραΐσκου 114, Πειραιάς 185 35
 - Samba Coffee Roasters | Crossroads — Λασκαρίδου 7, Ampelokipi 115 24
-- AVATON 1739 - Coffee & Wine Roof — Kastro, Naxos 843 00
+- AVATON 1739 - Coffee & Wine Roof — Kastro, Naxos 843 00 [also: Rooftop Lounges]
 - Gaby — Λεωφ. Μεσογείων 33-37, Αθήνα 115 26
 - Koulouri Lab — Ανδρέα Παπανδρέου 36, Αθήνα 152 32
 - Decimo Coffee & Brunch — Σκόπελος 370 03
@@ -1241,7 +1228,6 @@ Specialty coffee and all-day brunch spots
 - Spoon — P. Mela 38, Thessaloniki 546 22
 - Aeriko cafe bar - Makrinitsa — 1o km PORTARIAS-MAKRINITSAS, PELION 370 11
 - bookAli — Λεωφ. Μεσογείων 236, Χολαργός 155 61
-- Salu Deli Bar — Manousagiannaki 20, Thessaloniki 546 21
 - NAVAL Cafe Bar Restaurant — Rhodes
 - Cantina Analogue Bohemian WIne Gallery Tinos — Καρολου, Vitali 5, Tinos 842 00
 - Sourloulou Kythnos — Θεολόγος, Kithnos 840 06
@@ -1255,7 +1241,7 @@ Specialty coffee and all-day brunch spots
 - Mangiare Gastro Pizza Pasta Bar — Mitropoleos 20, Thessaloniki 546 24
 - Ohayo Teahouse — Αγίας Βαρβάρας 79, Αθήνα 172 35
 - Ermou 18 Beyond the Horizon — Ερμού 18, Αθήνα 105 63
-- Ανεμολόγιο εναλλακτικό καφέ — Πελοπίδα 106, Περιστέρι 121 35
+- Ανεμολόγιο εναλλακτικό καφέ — Πελοπίδα 106, Περιστέρι 121 35 [also: Greek Restaurants]
 - Jenkins Lounge Eatery — Psaron 3, Zakinthos 291 00
 - Epta - Syros Island — Peloponnisou 7, Ermoupoli 841 00
 - Lago Seaside Experience — Unnamed Road, Kassandra 630 85
@@ -1266,17 +1252,16 @@ Specialty coffee and all-day brunch spots
 - Antilalos — Αφεντούλη, Paxamadi και, Tinos 842 00
 - Dope — Βύσσης 25, Αθήνα 105 51
 - Threefolds sifnos — Απολλωνία 840 03
-- Bungalow7 Athens — Λεωφ. Ποσειδώνος 110, Γλυφάδα 166 75
+- Bungalow7 Athens — Λεωφ. Ποσειδώνος 110, Γλυφάδα 166 75 [also: Luxury Dining]
 - Tabya — Kon/nou Melenikou 14, Thessaloniki 546 35
 - Piccadilly Cafe - Bar — Eleftherias, Αγίου Ιωάννου 63, Αγ. Παρασκευή 153 42
 - Amandine's Bagels — Νίκης 13, Αθήνα 105 57
 - Plegma Coffee & Living — Plegma Coffee & Living
 - Kanela | Homemade Delicacies — El. Venizelou, Skopelos 370 03
-- Fresko Yogurt Bar — Ιουλίου Σμιθ 2, Αθήνα 118 51
+- Fresko Yogurt Bar — Ιουλίου Σμιθ 2, Αθήνα 118 51 [also: Dessert Shops]
 - Green Park — Μαυρομματαίων 22, Αθήνα 104 34
-- Πράσινη Τέντα, Λυκαβηττός — Μονοπάτι Λυκαβηττού, Αθήνα 114 71
-- Because Bagel — Al. Svolou 41, Thessaloniki 546 21
-- Alsos Cholargou / Άλσος Χολαργού — Ευριπίδου 1, Χολαργός 155 62
+- Πράσινη Τέντα, Λυκαβηττός — Μονοπάτι Λυκαβηττού, Αθήνα 114 71 [also: Rooftop Lounges]
+- Alsos Cholargou / Άλσος Χολαργού — Ευριπίδου 1, Χολαργός 155 62 [also: Kid Friendly Locations]
 - Thokos Cafe Bar Bistro — Nea. Fokea, Halkidiki, Nea Fokea 630 77
 - Sahara Resort — Νέα Ηράκλεια 630 80
 - Old Dog — Σάρδεων 6, Νέα Φιλαδέλφεια Αττικής 143 41
@@ -1287,12 +1272,12 @@ Specialty coffee and all-day brunch spots
 - The Coffee Rawsters — Delfon 117, Thessaloniki 546 44
 - zeabakery — Korinthou 302, Patra 262 22
 - Eldoris Restaurant Beach Bar Possidi — Possidi 630 77
-- Les Zazous — Themistokli Sofouli 108, Kalamaria 551 31
+- Les Zazous — Themistokli Sofouli 108, Kalamaria 551 31 [also: Luxury Dining]
 - Zattero Seaside Bar — Σκάλα Φούρκας 630 77
 - El Burro Mykonos — 37°26'30.4"N 25°20'06.2"E, Mikonos 846 00
 - Pergalídi — Lagada 840 08
 - Louiza Athens — Sfiggos 13, Athina 117 45
-- Fairytale Athens Café & Suites — Λεωκορίου 16, Αθήνα 105 54
+- Fairytale Athens Café & Suites — Λεωκορίου 16, Αθήνα 105 54 [also: Dessert Shops]
 - Beetroot — Siggrou 8, Thessaloniki 546 25
 - Free Thinking Zone — 106 80, Skoufa 64 &, Γριβαίων 1, Αθήνα 106 80
 - Caretta Athens — Diadochou Pavlou 46, Glifada 166 75
@@ -1306,19 +1291,18 @@ Specialty coffee and all-day brunch spots
 - Manassu Beach Bar and Restaurant — 12ο χλμ. Βουρβουρού, Sarti 630 78
 - Koufonisia Bakery — Koufonisia 843 00
 
-### Gyros & Cheap Eats (440 locations)
+### Gyros & Cheap Eats (401 locations)
 Budget-friendly delicious meals
 
 - Πιάτσα Τυλιχτό — Λαρίσης 33, Αθήνα 115 23
 - ΚΟΥΤΡΟΥΛΗΣ — Βαρνακιώτη 4, Αθήνα 115 24
-- Feyrouz_Athens — Καρόρη 23 και, Αγάθωνος 1, Αθήνα 105 51
+- Feyrouz_Athens — Καρόρη 23 και, Αγάθωνος 1, Αθήνα 105 51 [also: Vegetarian Friendly Restaurants]
 - ΓΡΝ Θέρμη — Agiou Nikolaou 30, Thermi 570 01
 - Grill Junior — Thermopilon 31, Thessaloniki 542 48
 - Γευσηδρόμιο — Ασπασίας 63, Χολαργός 155 61
 - TsiknaBoom — Παλλάδος 2-4, Αθήνα 105 54
 - Το Καλαμάκι του Αγγέλου — Πόντου 16, Αργυρούπολη 164 52
 - Curry Express Indian Food — Κολοκοτρώνη 37, Αθήνα 105 62
-- Jacaranda — Στέλιου Καζαντζίδη 24, Pilea 555 35
 - Ο Σάλτσας — Σοφοκλή Βενιζέλου 50, Περιστέρι 121 34
 - ο Πολύβιος — Αγίου Δημητρίου 28, Πειραιάς 185 45
 - Ο Μήτσος — Στρ. Μακρυγιάννη 92, Μοσχάτο 183 45
@@ -1327,18 +1311,17 @@ Budget-friendly delicious meals
 - Potato King — Αγίου Φιλίππου 7, Αθήνα 105 55
 - Μπάρμπα Μήτσος Βύρωνας — Επταλόφου 88, Βύρωνας 162 33
 - Κρέπες Gorillas — Παρασκευοπούλου 14, Περιστέρι 121 32
-- Yum Tree — Dim. Gounari 5, Thessaloniki 546 22
+- Yum Tree — Dim. Gounari 5, Thessaloniki 546 22 [also: Dessert Shops]
 - Vlassis — Vasileos Georgiou, Soufli 684 00
 - Φυταμπανης Γ. Ψητοπωλειο - Σουβλατζιδικο — ΕΟ Ισθμού Αρχαίας Επιδαύρου 21, Ίσθμια 200 10
 - Έλβις Καλαμάκια — Ερμού 112, Αθήνα 105 63
 - Food Truck Park SKG — Kapetan Ntogra 31, Pilea 555 35
 - ΠΙΤΤΑ FAN grill — Λεωφ. Ευελπίδων 364, Κίτσι 194 00
-- Jacaranda — Στέλιου Καζαντζίδη 24, Pilea 555 35
 - Μητσος — Λεωφ. Δροσιάς Σταματάς 4, Δροσιά 145 75
 - ΠΑΝΑΓΙΩΤΗΣ από το 1970 — Γρ. Λαμπράκη 104, Κορυδαλλός 181 21
 - Jackaroo — Πανόρμου 109, Αθήνα 115 24
 - Guerilla Chef Burgers — 37.98671993993366, 23.731787435580728
-- The Doc's Burger Bar — Ανδρέα Μιαούλη 10, Αθήνα 105 54
+- The Doc's Burger Bar — Ανδρέα Μιαούλη 10, Αθήνα 105 54 [also: Vegetarian Friendly Restaurants]
 - Jackaroo — Καλλιρρόης 73, Αθήνα 117 45
 - Σωτήρης — ΑΘ.ΔΙΑΚΟΥ &, Σολωμού 6, Πέραμα 188 63
 - SUN DO EACH — Pl. Ippodromiou 12, Thessaloniki 546 21
@@ -1353,21 +1336,19 @@ Budget-friendly delicious meals
 - Κοτόπουλα Δέρας — Karaoli ke Dimitriou 154, Evosmos 562 24
 - Χοιροποίητο Σουβλακοποιείο — Riga Fereou 139, Patra 262 21
 - Kalotaritissa Beach canteen — Καλοταρίτισσα 840 08
-- Because Bagel — Al. Svolou 41, Thessaloniki 546 21
+- Because Bagel — Al. Svolou 41, Thessaloniki 546 21 [also: Coffee & Brunch Spots]
 - Dealers Real Street Food — Ταξιαρχών 18, Κορυδαλλός 181 20
 - Αριστοφάνης Γεύσεις | Εστιατόρια | Ψητοπωλεία Άνω Γλυφάδα — Δημ. Γούναρη 46, Ελληνικό 167 77
 - Makis — Dimitriados 126, Volos 382 21
-- Cocorico — Ιφιγένειας 31, Ίλιον 131 22
+- Cocorico — Ιφιγένειας 31, Ίλιον 131 22 [also: Mexican Restaurants]
 - Robin Belgian streetfood — Θεοδώρητου Βρεσθένης 31, Αθήνα 117 43
 - Smasheat'o — Meg. Alexandrou 2, Athina 172 35
 - Just Pita — Αθηνάς 18, Αθήνα 105 51
 - Ο Γιατρός της Πείνας — Ηλία Ηλιού 59, Αθήνα 117 44
 - Του... Σαββίδη — Λεωφ. Ελ. Βενιζέλου 158, Αγ. Βαρβάρα 123 51
 - Σουβλακοχωριό — 25ης Μαρτίου 33, Χαλάνδρι 152 32
-- Streetwok — Χαρ. Τρικούπη 144, Νέα Ερυθραία 146 71
 - Harry's Kitchen — Αθανασίου Αξαρλιάν 2, Αθήνα 105 63
 - ΕΥΛΟΓΗΣΟΝ-ΨΗΤΟΠΩΛΕΙΑ ΙΛΙΟΝ — Thivon 481, Ilion 131 21
-- Argophageío — Apellou 6, Thessaloniki 546 22
 - ZAHOULIS ARGYROUPOLI Σουβλάκι — Μαρίνου Γερουλάνου 54, Αργυρούπολη 164 52
 - Ωμέγα Grill — Αμφιπόλεως 34, Thessaloniki 544 54
 - Πίτα Παν Ψυχικό — Αγγέλου Σικελιανού 28, Νέο Ψυχικό 154 51
@@ -1381,7 +1362,6 @@ Budget-friendly delicious meals
 - Ο Μπάρμπας Χωριάτικη Καντίνα — Αγίου Νικολάου 2, Ίλιον 131 23
 - Petridis And Sons - Grill House — Grigoriou Lampraki 206, Thessaloniki 555 34
 - RINGO Kalamaki Pub — Πρωτογένους 8, Αθήνα 105 54
-- Koutsi Katsika Street Food Νέα Φιλαδέλφεια — Λεωφ. Δεκελείας 109, Νέα Φιλαδέλφεια Αττικής 143 41
 - Ψητοπωλείο Το Έμπειρο — Ηρακλέους 28, Αθήνα 117 43
 - Ελληνικό Σουβλάκι (απ'το1990) — Λεωφ. Ιασωνίδου 40, Ελληνικό 167 77
 - Δια Χειρός Αρέτου — Kon/nou Karamanli 37, Eleftherio Kordelio 563 34
@@ -1392,11 +1372,10 @@ Budget-friendly delicious meals
 - Ο Σοφράς Της Σμύρνης — Αγίου Αλεξάνδρου 60, Παλαιό Φάληρο 175 61
 - Jackaroo — Παρασκευοπούλου 45, Περιστέρι 121 35
 - Cocofino Η Νέα Γεύση Στο Κοτόπουλο — Φανερωμένης 1α, Χολαργός 155 61
-- The Last Slice — Proxenou Koromila 1, Thessaloniki 546 23
+- The Last Slice — Proxenou Koromila 1, Thessaloniki 546 23 [also: Italian Restaurants]
 - ΚΡΕΠΗΛΑΤΕΙΟΝ — Λεωφ. Κηφισίας 59, Μαρούσι 151 25
 - Karbouniáriko — Nik. Plastira 11, Ampelokipi 561 23
 - Ο ΝΤΕΛΛΟΣ — Ελ. Βενιζέλου 139, Νέα Ερυθραία 146 71
-- Pízza Poselli — Vilara 2, Thessaloniki 546 25
 - ΓΡΝ — Ermou 24, Thessaloniki 546 24
 - Οψάριον fish bar — Drakopoulou 2, Argostoli 281 00
 - Καντίνα Μαβίλη — Δημ. Σούτσου 3, Αθήνα 115 21
@@ -1405,25 +1384,21 @@ Budget-friendly delicious meals
 - Πίτα Λαγονήσι — Λεωφ. Καλυβίων 4, Σαρωνικός 190 10
 - Steakhouse "Stelios" — Agnostou Stratiotou 40, Polichni 565 33
 - Laikon — Politechniou 24, Thessaloniki 546 25
-- Hashtag#Burger — Γεωρ. Γεννηματά 26, Γλυφάδα 165 62
 - Καλοψημένο — Ιπποκράτους 37, Αθήνα 106 80
-- Cantina Manara — Στοά, Ermou 1, Thessaloniki 546 25
 - Jackaroo — Κολοκοτρώνη 126, Πειραιάς 185 35
 - Focacceria Napul’e — Πετράκη 30, Αθήνα 105 63
 - Dix Sept — 25ης Μαρτίου 17, Χολαργός 155 61
 - Εστιατόριο Ψησταριά Σωτήρης — Μυριννουντος 10, Μαρκόπουλο Μεσογαίας 190 03
 - Souvlaki Street — Geor. Drosini 14, Thessaloniki 546 44
 - Christos — Egnatia 150, Thessaloniki 546 21
-- Salu Deli Bar — Manousagiannaki 20, Thessaloniki 546 21
+- Salu Deli Bar — Manousagiannaki 20, Thessaloniki 546 21 [also: Coffee & Brunch Spots]
 - Ρίγανη θυμάρι — Αγίας Άννης 37, Αχαρνές 136 75
 - Καντίνα Χρήστος — Θεοδ. Δηλιγιάννη, Αθήνα 104 39
 - Οι Μερακλήδες — Αγίας Ζώνης 60, Αθήνα 112 56
 - ΓΙΑΝΝΙΩΤΙΚΟ ΣΟΥΒΛΑΚΙ — Agias Paraskevis 95, Chalandri 152 34
 - Οι Πίτες του Ντένη — Μαρίνου Γερουλάνου 81, Αργυρούπολη 164 52
-- Τρύφωνας Κεμπαπτζίδικoν - Hamburgerie — Παρασκευοπούλου 51, Περιστέρι 121 34
 - Thess...Gyro — Smirnis 14, Kalamaria 551 32
 - Pizza Chris — Armenopoulou 17, Thessaloniki 546 35
-- Street Wok — Ampelokipi Menemeni, Πανόρμου 115Ζ, Αθήνα 115 24
 - Argophageío — Apellou 6, Thessaloniki 546 22
 - Giotis — Mark. Mpotsari 150, Thessaloniki 544 53
 - Ο Θανάσης κεμπάπ Μοναστηράκι — Μητροπόλεως 69, Αθήνα 105 55
@@ -1439,14 +1414,13 @@ Budget-friendly delicious meals
 - Bloom Brothers canteen — Λιμάνι, Lagada 840 08
 - Bella Vista — Κωνσταντινουπόλεως 65, Κερατσίνι 187 56
 - ZAHOULIS GLYFADA — Γεωρ. Κονδύλη 7, Γλυφάδα 166 75
-- PRATINA Burger Project — Veroias 5, Thessaloniki 546 25
 - SOUZI TROS street food — Σπύρου Λέκκα 9, Μαρούσι 151 24
 - Delicious Pitta Queen — Πανόρμου 36, Αθήνα 115 23
 - Πλάτανος Κεμπάπ-Σουβλάκι — Βουτσινά 66, Χολαργός 155 61
 - FBI Food Truck — X9JQ+3J, Naxos 843 02
 - Ο ΦΩΤΗΣ — 17ης Νοεμβρίου 122, Χολαργός 155 62
 - Souvlakia o Tzimis — Mpenaki 1, Kalamata 241 00
-- Crats Mexican — Giannitson 61, Thessaloniki 546 27
+- Crats Mexican — Giannitson 61, Thessaloniki 546 27 [also: Mexican Restaurants]
 - ΠΕΙΡΑΣΜΟΣ — Βελβενδού 20, Αθήνα 113 63
 - King Food — Kilkis 12-14, Komotini 691 00
 - Σουβλακια καλαμάκια πανοστιμο — Δοϊράνης 35, Καλλιθέα 176 72
@@ -1470,7 +1444,7 @@ Budget-friendly delicious meals
 - Delish Food Streat Story — Tsouderon 69, Chania 731 32
 - Δραμινός — Σινώπης 62, Νέα Ιωνία 142 33
 - No mama's boy — Λεωφ. Δημοκρατίας 60, Άγιοι Ανάργυροι 135 61
-- Γυραδικο "Ο Χρήστος" — Λεωφ. Σουνίου 6, Λαύριο 195 00
+- Γυραδικο "Ο Χρήστος" — Λεωφ. Σουνίου 6, Λαύριο 195 00 [also: Greek Restaurants]
 - Ρώσικο παντοπωλείο «Αστάνα» — Δημοσθένους 207, Καλλιθέα 176 73
 - Gouda luck — Egnatia 144, Thessaloniki 546 22
 - Το Πρυτανείο — Alexandras Papadopoulou 72, Thessaloniki 546 33
@@ -1487,16 +1461,15 @@ Budget-friendly delicious meals
 - Το Στέκι του Μανώλη — Λεωφ. Ειρήνης 179, Πέραμα 188 63
 - Kalamaki Bar — Δημητρακοπούλου και, Δράκου 15, Αθήνα 117 42
 - Food Str — Καλαμιώτου 14, Αθήνα 105 60
-- ΥΠΟΥΡΓΕΙΟ ΓΕΥΣΕΩΝ-Σουβλάκι,Ψητά — Φιλοθέης 67, Ηράκλειο 141 21
+- ΥΠΟΥΡΓΕΙΟ ΓΕΥΣΕΩΝ-Σουβλάκι,Ψητά — Φιλοθέης 67, Ηράκλειο 141 21 [also: Greek Restaurants]
 - Hot Pot Pasteria — Mediterranean Cosmos, Thessaloniki
-- Maestro Cantina — EO Thessalonikis Poligirou 32, Thermi 570 01
 - Curry Express & Indian Chef — Γρ. Γυφτοπούλου 7, Χαλάνδρι 152 33
 - Beeftekopolis — Marasli 23, Athina 106 76
 - Oasis — Voloudaki 4, Chania 731 34
 - Theologos Fast Food — 18, Aidiniou 14, Kalamaria 551 32
 - ILIADA — Κυδαθηναίων 1 - 3, Αθήνα 105 57
 - PIRI PIRI — Π. Τσαλδάρη 13, Άλιμος 174 55
-- Falafel Al Sharq — Λιοσίων 1, Αθήνα 104 38
+- Falafel Al Sharq — Λιοσίων 1, Αθήνα 104 38 [also: Vegetarian Friendly Restaurants]
 - To souvlaki tis Alexandras — El. Venizelou 3, Volos 383 33
 - Μαύρο Αλάτι — Αιμιλίου Βεάκη 44, Περιστέρι 121 34
 - Ο Γύρος του Μιχάλη — Makedonias 105, Thessaloniki 542 48
@@ -1511,7 +1484,6 @@ Budget-friendly delicious meals
 - Κλασσικόν — Μητροπέτροβα 32, Αθήνα 114 76
 - Cook And Grill Παλλήνης — Λεωφ. Μαραθώνος 76, Παλλήνη 153 51
 - Lacantina streetfood — Ζωοδόχου Πηγής 24, Αθήνα 106 81
-- Ψυχιατρείο — Αγίου Κωνσταντίνου 16, Ηλιούπολη 163 46
 - Hot Pot Pasteria City Center — Paleon Patron Germanou 12, Thessaloniki 546 22
 - R The Original fast food — Iasonos 118, Volos 382 21
 - το σουβλάκι της σαρρή — Σαρρή 36, Αθήνα 105 53
@@ -1520,26 +1492,21 @@ Budget-friendly delicious meals
 - Ευριπίδης 1955 — Λεωφ. Δεκελείας 83, Νέα Φιλαδέλφεια Αττικής 143 41
 - Holy Pasta Chalandri — Ηρακλείου 3, Χαλάνδρι 152 32
 - Serafino — Metamorfoseos 11, Kalamaria 551 32
-- StreetWok — Αιόλου 21, Αθήνα 105 63
 - Mangal — Σολωμού 12, Αθήνα 106 83
 - Αλεξανδρινό Κεμπάπ - Παγκράτι — Υμηττού 90 &, Ιφικράτους, Αθήνα 116 34
 - Η Βόλβη — Ευριπίδου 24-26, Αθήνα 105 51
-- StreetWok — Λεωφ. Ελ. Βενιζέλου 37, Νέα Σμύρνη 171 23
 - Groovy Ham — Μιλτιάδου 22, Αθήνα 105 60
 - La Pizzetta — Αιόλου 56, Αθήνα 105 60
-- Pízza Poselli — Vilara 2, Thessaloniki 546 25
+- Pízza Poselli — Vilara 2, Thessaloniki 546 25 [also: Italian Restaurants]
 - Giok Balik — Eth. Aminis 34, Thessaloniki 546 21
 - Ο Γύρος της Νικήτης — Egialou, Nikiti 630 88
 - Καυτερός — Αγρινίου 5, Χαλάνδρι 152 32
-- MAVERICK Handmade Street Food — Eth. Antistaseos 179, Kalamaria 551 34
 - Piggy - Πόπουλο — Αρχελάου 16, Αθήνα 116 35
-- Godgilla umami street food — Γεωρ. Κοτζιά 2, Μαρούσι 151 26
-- Life And Chicken — Κέντρο, Θεσσαλονίκη, Patriarchou Ioakim 26, Thessaloniki 546 35
 - Steakhouse MAKIS — Aristotélous 35, Evosmos 562 24
 - ΨΗΤΟΠΩΛΕΙΟ ΠΕΛΟΠΟΝΝΗΣΟΣ (ΨΗΤΑ ΣΟΥΒΛΑΣ ΘΗΒΩΝ) — Θηβών 531, Αιγάλεω 122 43
 - Βάγγελης Το Γνήσιο 1965 — Λεωφ. Αγίου Δημητρίου 163, Αγ. Δημήτριος Αττικής 173 43
 - Σουβλάκι Η Λειβαδιά — Κάνιγγος 2-4, Αθήνα 106 77
-- LAST BITE — Kiriakou Manolaki 1, Thessaloniki 546 35
+- LAST BITE — Kiriakou Manolaki 1, Thessaloniki 546 35 [also: Dessert Shops]
 - Νίκος ο Καλαβρυτινός — Εκάβης 63, Γαλάτσι 111 46
 - Dirty Manh — Νικ. Δημητρακοπούλου 5, Αθήνα 117 42
 - O Giros Tis Ellados — Leof. Vasilissis Olgas 176, Thessaloniki 546 46
@@ -1549,7 +1516,6 @@ Budget-friendly delicious meals
 - subito — Delfon 145, Thessaloniki 542 48
 - DONER.TZORTZ — Βιζυηνού 2, Νέα Σμύρνη 171 21
 - FUDDY DUDDY — Λέκκα 32, Αθήνα 105 62
-- AXI - 阿锡早点 — Athens, Greece, Akadimou, 104 36
 - Devido — 25is Martiou 17, Thessaloniki 546 45
 - Virtuoso_enjoyment — Μαρίνου Γερουλάνου 126, Αργυρούπολη 164 52
 - umami — Λεωφ. Πεντέλης 7A, Βριλήσσια 152 35
@@ -1570,14 +1536,12 @@ Budget-friendly delicious meals
 - Το Ελληνικό Σουβλάκι — Διονύσου 19, Μαρούσι 151 24
 - Slum it — Βρυούλων 15, Νέα Φιλαδέλφεια Αττικής 143 41
 - «Ο Μερακλής» Χειροποίητος Γύρος — Πλάτωνος 50-52, Αθήνα 104 41
-- Funky's Thessaloniki — Grigoriou Lampraki 110, Thessaloniki 543 51
+- Funky's Thessaloniki — Grigoriou Lampraki 110, Thessaloniki 543 51 [also: Italian Restaurants]
 - Street Food Park — Παρ. Λεωφ. Βουλιαγμένης 153, Γλυφάδα 166 74
 - Shoreditch Burgers & Sandwiches — Dimitriados 186, Volos 382 21
 - Ο ΠΑΡΗΣ — Θουκυδίδου 38, Άλιμος 174 55
 - ΕΝΤΥ — Δημ. Καρακουλουξή 4, Νίκαια 184 54
 - Αγανάκτηση — Σερρών 44 &, Ταξιαρχών, Κορυδαλλός 181 20
-- Rookie.skg — P. Mela 28, Evosmos 562 24
-- Meat n Roses Kolonaki — Αμερικής 7, Αθήνα 106 72
 - Piccola — Keramikou 111, Athina 104 35
 - Η Βρωμιάρα - The Gourmet Street Food - Νεα Φιλαδέλφεια — Βρυούλων 5, Νέα Φιλαδέλφεια Αττικής 143 41
 - Σουβλάκια "ο ΜΠΙΛΗΣ" — Προύσης 22, Νίκαια 184 53
@@ -1596,7 +1560,7 @@ Budget-friendly delicious meals
 - Devido — Nik. Plastira 2, Thessaloniki 542 50
 - Δεκαπενταλεπτο — Πάριδος 90, Ίλιον 131 22
 - Plateia Bit pazar — Προσφυγική Αγορά 16 Β, Thessaloniki 546 31
-- ο Πρόεδρος (Άλιμος) — Άλιμος, Λεωφ. Καλαμακίου 26, Αθήνα 174 55
+- ο Πρόεδρος (Άλιμος) — Άλιμος, Λεωφ. Καλαμακίου 26, Αθήνα 174 55 [also: Greek Restaurants]
 - Prassas — Mark. Mpotsari 89, Thessaloniki 546 44
 - Γυριστρούλα — Square (across from "Thissio" ISAP station, Αγίων Ασωμάτων 9, Αθήνα 105 54
 - Το Τέλειον — Λεωφ. Πλαπούτα 20, Ηράκλειο 141 22
@@ -1604,8 +1568,6 @@ Budget-friendly delicious meals
 - Οι ρωσίδες Σουβλάκι-Πιροσκί — Αναγνωσταρά 16, Καλλιθέα 176 73
 - Η Βασιλική - Ψητοπωλείο Σουβλακοπωλείο — Μαρκορά 25, Αθήνα 111 41
 - Green Kebab — Ιουλιανού 81, Αθήνα 104 39
-- Raw Street Burger - Thessaloniki — Politechniou 53, Thessaloniki 546 25
-- Paul’s Burger — Geor. Papandreou 38, Thessaloniki 546 46
 - Ψητοπωλείο Ο Κώστας — Ηλιουπόλεως 157, Υμηττός 172 36
 - Wolfie’s Iera Odos — Ιερά Οδός 37, Αθήνα 118 54
 - Κεμπαπτζίδικον Αϊβαλί Νίκαια — Ελλησπόντου 43, Νίκαια 184 51
@@ -1618,49 +1580,39 @@ Budget-friendly delicious meals
 - Billy's sandwich Peristeri (Billy’s Kantina) — Π. Μελά 11, Περιστέρι 121 31
 - Street Souvlaki — Κολοκοτρώνη 30, Αθήνα 105 62
 - Guarantee — Βεΐκου 41, Αθήνα 117 42
-- Taco Mazama (Californian Style Mexican Street Food) — Paleon Patron Germanou 28, Thessaloniki 546 22
+- Taco Mazama (Californian Style Mexican Street Food) — Paleon Patron Germanou 28, Thessaloniki 546 22 [also: Mexican Restaurants]
 - Τα ψητά της παρέας — Ούλωφ Πάλμε 25, Ζωγράφου 157 71
-- Street wok — Βρυούλων 4, Νέα Φιλαδέλφεια Αττικής 143 41
 - Ψητοπωλείο "ο Λάμπρος" — Νέστορος 21, Παλαιό Φάληρο 175 61
 - Trendy Grill Λιμάνι Ναυπλίου — Μπουμπουλίνας 41, Ναύπλιο 211 00
-- ΑΜΑΜ - ΕΣΤΙΑΤΟΡΙΟ - ΓΛΥΦΑΔΑ — Γεωρ. Γεννηματά 11, Γλυφάδα 165 62
 - Κάπρους — Σπετσών 49, Αθήνα 113 62
 - Γύρος σουβλάκι Βικτώρια ΤΥΛΙΞΕ ΤΟ — Πλ. Βικτώριας 6, Αθήνα 104 34
 - Το Πέτρινο Του Σταμάτη (Καπράλος Σταμάτιος Θ.) — Βασ. Γεωργίου Β 10, Πεντέλη 152 36
-- Chicken Queen — Ευτυχίδου 47, Αθήνα 116 34
-- STIVOS BURGER & STEAK — Ευαγγελισμού της Θεοτόκου 43, Evosmos 562 24
 - ΤΡΙΓΩΝΟ ΜΕΛΙΣΣΙΩΝ — Π. Τσαλδάρη 21, Μελίσσια 151 27
 - Ζάχος — Βασ. Κωνσταντίνου 94, Βάρη 166 72
-- Ohmami - Street Food / Thessaloniki — Patriarchoi Dionisii E 1, Thessaloniki 546 31
-- Μπαρ Μπεε Κιου - Φρεαττύδα — Λεωφ. Φρεάττυδος 13, Πειραιάς 185 37
 - Mozzart Pizza Center — Chrisospiliotissis 1, Athina 105 60
 - Συστηματικό Σουβλατζίδικο Ο Καράμπελας — Πύλης 53, Πειραιάς 185 34
 - Αβραάμ Χολαργός — Αναστάσεως 111, Χολαργός 155 61
-- Holy Smoke BBQ Streetfood — Eth. Antistaseos 136, Alexandroupoli 681 00
 - Μαυροπίπερο — Στρατάρχου Αλεξάνδρου Παπάγου 41, Αγ. Δημήτριος Αττικής 173 43
 - Jackaroo — Ηρ. Πολυτεχνείου 8, Αγ. Παρασκευή 153 43
 - Πίτα Παν — Ιοφώντος 33, Αθήνα 116 34
 - Λευτέρης ο Πολίτης (Απ'το 1951) — Σατωβριάνδου 20, Αθήνα 104 32
 - Pitta pappou — ΑΓΙΩΝ ΠΑΝΤΩΝ 12, agion panton 12, Kerkira 491 00
 - Wolfie’s West Side — Kosta Varnali 6, Peristeri 121 32
-- Balboa Thessaloniki — P. Mela 42, Thessaloniki 546 22
 - Gyradiko — Grigoriou Lampraki 125, Thessaloniki 543 51
 - Ταβέρνα - Ψησταριά Μανδράκης — Λεωφ. Εθ. Αντιστάσεως 11, Καισαριανή 161 21
 - Pizza Romea — Ag. Dimitriou 135, Thessaloniki 546 35
 - Andoni's Gyros Feed — Καλλιθέα 630 77
 - Montagu — Παρ. Λεωφ. Βουλιαγμένης 66, Αργυρούπολη 164 52
-- 5Φ — Diocharous 31 &, Κλεισούρας, Αθήνα 161 21
+- 5Φ — Diocharous 31 &, Κλεισούρας, Αθήνα 161 21 [also: Greek Restaurants]
 - Hayat — Ιπποκράτους 78, Αθήνα 106 80
 - Cong | Vietasian Street Food — Proxenou Koromila 9, Thessaloniki 546 23
-- ΤΟ ΚΟΚΟΡΑΚΙ — Mark. Mpotsari 105, Thessaloniki 544 53
+- ΤΟ ΚΟΚΟΡΑΚΙ — Mark. Mpotsari 105, Thessaloniki 544 53 [also: Greek Restaurants]
 - Tost Spesial — Paraskevopoulou 12, Thessaloniki 546 40
-- STIVOS BURGER & STEAK — Ευαγγελισμού της Θεοτόκου 43, Evosmos 562 24
 - Κάψα — Σκουλενίου 4, Αθήνα 105 61
 - Φ.Γ.Κ. Φαγητό Για Κολλημένους — 25ης Μαρτίου 66, Πετρούπολη 132 31
 - Ψητοπωλείον Γιώργος - Μάνος — Θεμιστοκλέους 39, Αθήνα 106 77
-- Thanasis & Sons — Al. Papanastasiou 133, Thessaloniki 542 50
 - Λαμπρινάκι — Τράλλεων 67, Αθήνα 111 42
-- falafel bar ΤΟ ΡΕΒΙΘΙ — Παρθενώνος 1, Αθήνα 117 42
+- falafel bar ΤΟ ΡΕΒΙΘΙ — Παρθενώνος 1, Αθήνα 117 42 [also: Vegetarian Friendly Restaurants]
 - JACKAROO — Σωτήρος Διός 45, Πειραιάς 185 34
 - Λόρδα — Σπύρου Τρικούπη 3, Αθήνα 106 83
 - GYROVOLIES — Eleytherias 1, Perea 570 19
@@ -1669,12 +1621,12 @@ Budget-friendly delicious meals
 - Food Plaza — Skra 16, Kalamaria 551 32
 - Filia Giannari — kavpevtan Mavnoli Mpantouva 65, Iraklio 713 07
 - 22 Σουβλάκια — Aristotelous Sq 8, Thessaloniki 546 23
-- Señor Picante — Φαλήρου 40, Αθήνα 117 42
+- Señor Picante — Φαλήρου 40, Αθήνα 117 42 [also: Mexican Restaurants]
 - Ψητοπωλείο ο Σπύρος Σουβλάκια — Βικέλα 33, Αθήνα 111 45
 - "Ο Θωμάς" — Αχαρνών 33, Αθήνα 104 39
 - Prunas — Δημ. Γουλιάμου 58, Αθήνα 115 27
 - Crepa Holic Kallithea — Λεωφ. Ελ. Βενιζέλου 185, Καλλιθέα 176 73
-- Michelangelo.skg — Riga Feraiou 162, Sikies 566 26
+- Michelangelo.skg — Riga Feraiou 162, Sikies 566 26 [also: Italian Restaurants]
 - Delicious Souvlaki — Π. Τσαλδάρη 4, Αθήνα 104 31
 - ΓΡΝ Τούμπα — Michail Chourmouzi 41, Thessaloniki 544 53
 - Thess Bao — Kalapothaki 3, Thessaloniki 546 45
@@ -1683,26 +1635,22 @@ Budget-friendly delicious meals
 - ΣΟΥΒΛΑΚΙΑ "Ο ΠΙΝΗΣ" — Σαλαμίνος 39, Ασπρόπυργος 193 00
 - Κεμπάπ Παραδοσιακό — Αμμοχώστου 4, Ζωγράφου 157 71
 - Άρωμα Ελλάδας — Ευεργέτη Κωνσταντίνου Πρίφτη 57, Κερατέα 190 01
-- Μπαρμπαλιάς — Λεωφ. Βασιλέως Γεωργίου B 6, Χαλάνδρι 152 33
+- Μπαρμπαλιάς — Λεωφ. Βασιλέως Γεωργίου B 6, Χαλάνδρι 152 33 [also: Greek Restaurants]
 - Devido — Karaoli ke Dimitriou 89, Evosmos 562 24
 - Taliban Street Food — Λεωφ. Αμαρουσίου 29, Λυκόβρυση 141 23
-- Souvlaki Street — Geor. Drosini 14, Thessaloniki 546 44
 - Ψητοπωλείο Ο Μερακλής — Αγ. Μελετίου 183, Αθήνα 104 43
 - Pitogyros Traditional Grill House - Gyros, souvlaki, kebab. — Oia 847 02
 - Kyr Giorgis — Βενιζέλου 54, Thessaloniki 546 31
 - ΨΗΤΟΠΩΛΕΙΟ Ο ΥΜΗΤΤΟΣ — Λεωφ. Ειρήνης 12, Ηλιούπολη 163 45
-- SESOULA Street Food — Mitropoleos 6, Thessaloniki 546 25
 - KEBAB HUB — Εφέσου 49, Νίκαια 184 50
 - ΤΑ ΑΔΕΛΦΙΑ — Ολυμπίας 52, Αργυρούπολη 164 51
 - Chicktok — Papanastasiou 2, Chania 731 34
 - Αρμένικο Κεμπάπ Το Ρόδι - The pomegranate Armenian kebab — Κρέοντος 163, Αθήνα 104 43
 - Ο ΩΡΑΙΟΣ ΤΗΣ ΓΕΙΤΟΝΙΑΣ ΟΒΕΛΙΣΤΗΡΙΟ — Θηβών 119, Περιστέρι 121 36
-- GODGILLA ΚΕΡΑΤΣΙΝΙ — Θεόφραστου 54, Κερατσίνι 187 56
 - Krispy by Jackaroo — Evripidou 15, Athina 105 60
 - ΤΟ ΚΟΧΥΛΙ (Αφοί Ρέκκα) — Κορυδαλλός 181 20
 - Garry's — plateia, Chaniotis 630 85
-- Sinners Smash Burgers — Στέλιου Καζαντζίδη 31, Pilea 555 35
-- Salento Wood Fired Street Food — El. Venizelou 76, Thessaloniki 546 31
+- Salento Wood Fired Street Food — El. Venizelou 76, Thessaloniki 546 31 [also: Italian Restaurants]
 - Κεμπατζίδικο ο Νίκος — Πλ. Δαβάκη 2, Αιγάλεω 122 44
 - I Love Souvlaki — Λεωφ. Μαραθώνος 72, Παλλήνη 153 51
 - Η Βρωμιάρα - The Gourmet Street Food Περιστέρι — Λεωφ. Παναγή Τσαλδάρη 16, Περιστέρι 121 34
@@ -1731,9 +1679,7 @@ Budget-friendly delicious meals
 - Μπάμπης (Σουβλατζίδικο) — Γεωρ. Λύρα 5, Κηφισιά 145 64
 - Mikra Asia kebap Pagrati — Πλ. Μεσολογγίου 2-4, Αθήνα 116 34
 - Ψητοπωλείο ο Θανάσης — Αγ. Τριάδος 42, Παιανία 190 02
-- Πρiγκιπας — Χαρ. Τρικούπη 23, Αθήνα 106 81
-- Armando Pizzeria Cafeteria — Σαλαμίνος 43, Αθήνα 104 35
-- Chicktok — Papanastasiou 2, Chania 731 34
+- Armando Pizzeria Cafeteria — Σαλαμίνος 43, Αθήνα 104 35 [also: Italian Restaurants]
 - Ψητοπωλείο "ΝΙΚΟΣ" — Meg. Alexandrou 56, Evosmos 562 24
 - Η καντίνα της Καραγιώργη Σερβίας (Ο Κρητικός) — Καραγιώργη Σερβίας 2, Αθήνα 105 62
 - Rigas — Αγίου Ανδρέου κ, Zaimi, Patra 262 23
@@ -1750,11 +1696,10 @@ Budget-friendly delicious meals
 - Souvlaki Monastiraki — Mitropoleos 2, Athina 105 63
 - Gyros Psyrri — Agiou Filippou 19, Athina 105 55
 
-### Dessert Shops (379 locations)
+### Dessert Shops (349 locations)
 Sweet treats and traditional Greek desserts
 
 - L’arte del gelato — Πατριάρχου Ιωακείμ 48-50, Αθήνα 106 76
-- BREAD B.C. Bread Before Christ — Αγίας Παρασκευής 59, Χαλάνδρι 152 34
 - Cinnabon — Andrea Papandreou 35 Loc. 215, 2nd floor, The Mall Athens, Μαρούσι 151 22
 - Ζαχαροπλαστείο Fouad Γλυκά Ανατολής — 25ης Μαρτίου 18Α, Αιγάλεω 122 44
 - Luku-matters (stuffed lukumades & more) — Κολοκοτρώνη 5, Χαλάνδρι 152 33
@@ -1767,10 +1712,8 @@ Sweet treats and traditional Greek desserts
 - Sweet Smelling Kitchen — ΧΩΡΙΟ ΛΕΥΚΕΣ Τ.Θ. 50104, Paros 844 00
 - Μεσκλιές ζαχαροπλαστείο Τήνος — Επαρ.Οδ. Τήνου-Καλλονής 1876, Τήνος 842 00
 - Ζαχαροπλαστείο Ανδρεαδάκης Περιστέρι — Πελοπίδα 172, Περιστέρι 121 37
-- Ta Serbetia stou Psyrri — 105 54, Eschilou 3, Athina 105 54
 - Κατσιούλης αρτοποιείο — Τιτάνων 4, Ελληνικό 167 77
 - Tzeneral Ζαχαροπλαστείο — P. Mela 44, Thessaloniki 546 22
-- OSTEN — 4χλμ, Χαρ. Θέρμης, Thessaloniki 570 01
 - Galyfianakis — Kon/nou Paleologou 3, Thessaloniki 546 22
 - Γαλακτοπωλείο Στάμου — Θρακομακεδόνων 154, Αχαρνές 136 79
 - Gellissimo Biscoto Athens — Άστιγγος 11, Αθήνα 105 55
@@ -1793,9 +1736,7 @@ Sweet treats and traditional Greek desserts
 - Lartecono Davinci Gelato (Kifisia) — Κασσαβέτη 19, Κηφισιά 145 62
 - Τερκενλής Χαλάνδρι — Παπανικολή 100, Χαλάνδρι 152 32
 - Χαλβαδοποιία ΠαπαγιαννόπουλοςΠαπαγιαννόπουλος Ιωάννης — 4, Vassani 2, Volos 383 33
-- Santo Belto — Αγίας Ζώνης 21, Αθήνα 113 61
 - NICK ALEXOUDAS — Θέρμη 570 01
-- Despina Patisserie — Leof. Poseidonos 83, Glifada 166 75
 - Ζαχαροπλαστείο Ανδρεαδάκης Δάσος Χαϊδαρίου — Γεωρ. Παπανδρέου 33, Χαϊδάρι 124 63
 - Baklamania — Θεμιστοκλέους 49, Αθήνα 106 83
 - Lotsárēs — Gerokostopoulou 23, Patra 262 21
@@ -1831,7 +1772,6 @@ Sweet treats and traditional Greek desserts
 - Passarella - Χαλάνδρι — Λεωφ. Πεντέλης 42 &, Ευριπίδου, Χαλάνδρι 152 34
 - Trigona Elenidi — Dim. Gounari 13, Thessaloniki 546 22
 - GRANDE MYLONAS — Patron Klaous 54, Patra 263 34
-- Batistas Bakery — Naousa 844 01
 - Glykoplasteío — 1ο χιλιόμετρο Εθνικής Οδού Καρπενησίου Λαμίας, Καρπενήσι, Karpenisi 361 00
 - Django Gelato Athens — Βεΐκου 15, Αθήνα 117 42
 - Gelateria Giovanni — Μπουμπουλίνας 1, Μελίσσια 151 27
@@ -1844,7 +1784,6 @@ Sweet treats and traditional Greek desserts
 - Revani me Pagoto - Patisserie Anatoli — Nikiti 630 88
 - Routina Glyfada — Δούσμανη 8, Γλυφάδα 166 75
 - Rōxánē — P. Mela 5, Paleokastro 570 13
-- Kolokytha — Unnamed Rd, Astipalea 859 00
 - Little Kook — Καραϊσκάκη, Αθήνα 105 54
 - Terkenlis OSE — Monastiriou, Thessaloniki 546 27
 - Ανδριάς — Σεβαστουπόλεως 64, Αθήνα 115 26
@@ -1871,7 +1810,6 @@ Sweet treats and traditional Greek desserts
 - Αλχημιστής Cafe Patisserie — Χατζηχρήστου 8, Αθήνα 117 42
 - Poulette — Ellinoservikis Filias 64, Ag. Paraskevi 153 43
 - Marantidis Konstantinos — Sappeon 7, Kavala 652 01
-- Mourtzis Pistachio and Traditional Sweets — Leof. Dimokratias 6, Egina 180 10
 - Sweet Nolan — Απόλλωνος 6Β, Αθήνα 105 57
 - Γαλακτοπωλείο ΣΤΑΜΟΥ — Κωνσταντινουπόλεως 307, Αχαρνές 136 74
 - Γαλακτοπωλείο ΣΤΑΜΟΥ, Πειραιά — Λεωφ. Αφεντούλη 16 &, Πραξιτέλους 243, Πειραιάς 185 36
@@ -1886,14 +1824,12 @@ Sweet treats and traditional Greek desserts
 - Trigona Elenidi — Adrianoupoleos 19, Kalamaria 551 33
 - Μπόζας — Κερκύρας 39 &, Παξών, Αθήνα 113 62
 - Armenonville — Mitropoleos 102, Thessaloniki 546 21
-- CandyCat — Περσεφόνης 23, Αθήνα 118 54
 - Πορτατίφ - Factory — Μαυρομιχάλη 81, Αθήνα 114 72
 - Cosy — Αγ. Γεώργιος 490 80
 - CREMONA — 58, Δοϊράνης 56, Αθήνα 113 63
 - Loukoumania Koukaki — Δημητρακοπούλου 102, Αθήνα 117 41
 - Mama's Sweethouse — Amfias 20, Kalamata 241 00
-- Dimitris Economides Athens — Λεωφ. Κηφισίας 340, Νέο Ψυχικό 154 51
-- Meltemi — Astypalaia 859 00
+- Dimitris Economides Athens — Λεωφ. Κηφισίας 340, Νέο Ψυχικό 154 51 [also: Luxury Dining]
 - Το Πλέστι — Λεωφ. Μαραθώνος 31ο, Νέα Μάκρη 190 05
 - Smyrni Baklava — Μητροπόλεως 25, Αθήνα 105 57
 - Zuccherino — Μητροπόλεως 80, Αθήνα 105 60
@@ -1925,27 +1861,23 @@ Sweet treats and traditional Greek desserts
 - Γαλακτοπωλείο ΣΤΑΜΟΥ — Λεωφ. Δεκελείας 87, Δήμος Νέας Φιλαδέλφειας - Νέας Χαλκηδόνας 143 41
 - Μπισκοτόγλυκο — Καραμουρτζούνη 32, Χαλκίδα 341 00
 - Sol Bake & Coffee Project Tinos — Drosou, Tinos 842 00
-- Theoria Tou House — Πλ. Δαβάκη 1, Αιγάλεω 122 44
 - ΕΡΓΑΣΤΗΡΙΟ ΖΑΧΑΡΟΠΛΑΣΤΙΚΗΣ ΧΙΩΤΗΣ — VHW9+WM, Σκύρος 340 07
 - Το Κεντρικόν — Unnamed Road, Πύργος 842 01
 - ΖΑΧΑΡΟΠΛΑΣΤΕΙΟ ΗΛΙΟΣ ΚΛΕΑΝΘΟΥΣ /Hlios Pastry Shop Kleanthous — Kleanthous 60, Thessaloniki 544 53
 - Soufflér — Rogkoti 4, Thessaloniki 546 24
 - ΖΑΧΑΡΟΠΛΑΣΤΕΙΑ ΚΟΣΜΙΚΟΝ ΑΓ.ΜΑΡΙΝΑ ΙΕΡΑ ΟΔΟΣ 335 — Ιερά Οδός 335, Αγ. Βαρβάρα 123 51
 - Le Greche Agia Paraskevi — Λεωφ. Μεσογείων 456, Αγ. Παρασκευή 153 41
-- Patisserie Despina — Patriarchou Ioakim 56, Athina 106 76
 - Trigona Elenidis (Κέντρο) — Iktinou 1, Thessaloniki 546 22
 - Λουκουμάδες Μανάρας — ΑΡΧΕΡΜΟΥ 2, Chios 821 00
 - Loukoumother's Πειραιάς — Ακτή Μουτσοπούλου 12, Πειραιάς 185 35
 - Gelato di nonna athens — Ερμού 129, Αθήνα 105 55
-- Fresko Yogurt Bar — Ιουλίου Σμιθ 2, Αθήνα 118 51
 - Sweet garden — Ermou 69, Thessaloniki 546 23
 - Γαλακτοπωλείο ΣΤΑΜΟΥ — Λεωφ. Σοφοκλή Βενιζέλου 96, Ηλιούπολη 163 41
 - Ζαχαροπλαστεία Κωνσταντινίδης — Λεωφ. Μεσογείων 368, Αγ. Παρασκευή 153 41
 - Loukoumania Pagrati - Λουκουμάδες — Φρύνης 4, Αθήνα 116 34
-- Ice Queen Gelato — Μακρυγιάννη 9, Αθήνα 117 42
+- Ice Queen Gelato — Μακρυγιάννη 9, Αθήνα 117 42 [also: Vegetarian Friendly Restaurants]
 - Κρίνος — Αιόλου 87, Αθήνα 105 51
 - Κολέτσας — Μεταμορφώσεως 50, Χαλάνδρι 152 34
-- Patisserie Despina — Patriarchou Ioakim 56, Athina 106 76
 - Dafni's Sweets — Τέρμα Παπαδιαμάντη, Skiathos 370 02
 - Γαλακτοπωλείο ΣΤΑΜΟΥ — Λεωφ. Μαραθώνος, Παλλαδος Αθηνας &, Παλλήνη 153 51
 - Yfes — Απολλωνία 840 03
@@ -1978,7 +1910,6 @@ Sweet treats and traditional Greek desserts
 - Sweet Spoon by Dimitris Drakos — Μαρίνου Γερουλάνου 59, Αργυρούπολη 164 52
 - Τρίγωνα Πανοράματος Δροσσά (πρώην Γιάννης) — Tavaki 24, Thermi 570 01
 - ΖΑΧΑΡΟΠΛΑΣΤΕΙΑ ΚΩΝΣΤΑΝΤΙΝΙΔΗΣ — Εθνάρχου Μακαρίου 17, Περιστέρι 121 31
-- KORA — Παναγιώτου Αναγνωστοπούλου 44, Αθήνα 106 73
 - Gelateria Nonno Enzo — Vasileos Georgiou V' 7, Kos 853 00
 - Παγωτά 'Θέμης' — I. Passalidi 69, Kalamaria 551 32
 - Chunky Cookie Bar — Πέτρου Καλλιγά 6, Αθήνα 114 74
@@ -1989,28 +1920,25 @@ Sweet treats and traditional Greek desserts
 - Fystiki Shop Downtown — Ερμού &, Νίκης 4, Αθήνα 105 63
 - Καφεγλυκοπωλείο 1743 — Στενή Ευβοίας, Stení 340 14
 - Αγαπάμε το κατσικίσιο γάλα — P. Mela 28, Thessaloniki 546 22
-- Du Pain - Boulangerie | Patisserie | Cafe - Χαϊδάρι — Λεωφ. Αθηνών 308, Χαϊδάρι 124 62
 - Πορτατίφ — Σίνα 21, Αθήνα 106 72
-- Yum Tree — Dim. Gounari 5, Thessaloniki 546 22
 - Gelati e Amore — Al. Svolou 44, Thessaloniki 546 21
 - Hatzifotiou — P. Mela 37, Thessaloniki 546 22
 - ΝΑΝΑ ΓΙΩΤΗ - ΓΛΥΚΑ ΑΠΟ ΣΠΙΤΙ — Papanikoli 46, Chalandri 152 32
 - So in d cjdh — Γεωρ. Γεννηματά, Ερμούπολη 841 00
 - N'ice Cream Mykonos — Κλούβας 846 00
-- Ohh Boy — Αρχελάου 32, Αθήνα 116 35
+- Ohh Boy — Αρχελάου 32, Αθήνα 116 35 [also: Vegetarian Friendly Restaurants]
 - Il Panino — Leof. Kon/nou Karamanli 154, Thessaloniki 542 48
 - The Bakers Chalandri — Λεωφ. Πεντέλης 1, Χαλάνδρι 152 34
 - Dix Sept — 25is Martiou 17, Cholargos 155 61
 - Παγωτά - Γλυκά ALMA — 19o ΧΛΜ, Λεωφ. Μαραθώνος, Ήμερος Πεύκος 190 09
-- Exereton — Mitropoleos 69, Thessaloniki 546 23
+- Exereton — Mitropoleos 69, Thessaloniki 546 23 [also: Vegetarian Friendly Restaurants]
 - Γαλακτοπωλείο ΣΤΑΜΟΥ — Λεωφ. Ελ. Βενιζέλου 210, Καλλιθέα 176 75
 - NICK ALEXOUDAS — Agiou Nikolaou 2, Thermi 570 01
 - CAKE Kolonaki — Ηροδότου 15, Αθήνα 106 74
 - Terkenlis SA — EO Thessalonikis Poligirou, Thermi 570 01
-- Plan(e)t Ice Cream — Ερμού 86, Αθήνα 105 54
+- Plan(e)t Ice Cream — Ερμού 86, Αθήνα 105 54 [also: Vegetarian Friendly Restaurants]
 - Solo Gelato Λαύριο — Πλ. Ηρ. Πολυτεχνείου 28, Λαύριο 195 00
 - Senol — Paleon Patron Germanou 23, Thessaloniki 546 22
-- Αρτοποιείο Ζαχαροπλαστείο "Αρτο..ζυμιά" — Αγλαονίκης 22, Αθήνα 117 43
 - Ζαχαροπλαστείο Τα Γιούλια — Αναγεννήσεως 49-51, Νέα Ιωνία 142 33
 - SOLO GELATO ΚΥΨΕΛΗ — Ιθάκης 9, Αθήνα 112 57
 - Pap-Liber (Πατήσια) — Ιακωβίδου 10 &, Τσίλλερ, Αθήνα 111 44
@@ -2019,7 +1947,6 @@ Sweet treats and traditional Greek desserts
 - Dolce Far Niente ice cream — Τσάμη Καρατάσου 26, Αθήνα 117 42
 - Le Greche NEO Psychiko — Λυκούργου 2, Νέο Ψυχικό 154 51
 - Sovolos - Ζαχαροπλαστείο - Φούρνος — Σοφίας Βέμπο 29, Γλυφάδα 165 61
-- Σαβοϊδάκης Bakery & Patisserie, Ρέθυμνο — Mark. Portaliou 57, Rethymno 741 50
 - ΖΑΧΑΡΟΠΛΑΣΤΕΙΑ ΚΩΝΣΤΑΝΤΙΝΙΔΗΣ Κηφισιάς — Λεωφ. Κηφισίας 283, Κηφισιά 145 62
 - Vanilla Gelateria — Paroikias, Zoodochou Pigis 84400, Paros 844 00
 - Antica Gelateria di Roma — 3 Pharmakopoulou and Komninou, Ναύπλιο 211 00
@@ -2044,15 +1971,12 @@ Sweet treats and traditional Greek desserts
 - Fresco gelato artigianale — Ioannou Mela 69, Lefkada 311 00
 - Aktaion Pastry & Ice Cream | Downtown — Π. Πρωτοπαπαδάκη, Naxos 843 00
 - CHOUREAL - Choux & Profiterole — Ιφικράτους 2, Χαλάνδρι 152 32
-- ΑΡΙΣΤΟΝ ΛΟΜΠΟΤΕΣΗΣ — Βουλής 10, Αθήνα 105 62
-- carpo psychiko — Dim. Vasiliou 1, Neo Psichiko 154 51
+- ΑΡΙΣΤΟΝ ΛΟΜΠΟΤΕΣΗΣ — Βουλής 10, Αθήνα 105 62 [also: Vegetarian Friendly Restaurants]
 - Minerva — Argonafton 53, Volos 383 33
 - Papagiorgis Patiserie-Gelateria — Nikiforou Theotoki 32, Kerkira 491 00
 - katamaya Bakery — Λεωφόρος Μαραθώνος 113, Ηρώων Πολυτεχνείου 1, Γέρακας 153 44
 - carpo psychiko — Dim. Vasiliou 1, Neo Psichiko 154 51
 - Γαλακτοπωλείο ΣΤΑΜΟΥ, Αιγάλεω — Θηβών 359, Αιγάλεω 122 44
-- Caffe Greco — Χαλκείο 843 02
-- LAST BITE — Kiriakou Manolaki 1, Thessaloniki 546 35
 - NICK ALEXOUDAS — Profitou Ilia 77, Pilea 555 35
 - Hochliourou Traditional Revani — Agiou Antoniou, Kentrikis 134, Veria 591 32
 - CAKE Kifisia — Αργυροπούλου 3, Κηφισιά 145 62
@@ -2063,27 +1987,21 @@ Sweet treats and traditional Greek desserts
 - Το Σερμπετόσπιτο της Νάνσυς — Πλ. Ηρώων 1, Αθήνα 105 54
 - Melissa Define Pastry — Εθνάρχου Μακαρίου 43, Περιστέρι 121 31
 - Choureál | Choux & Profiterole — Paleon Patron Germanou 9, Thessaloniki 546 22
-- Dix Sept — 25is Martiou 17, Cholargos 155 61
 - Solo Gelato — Αδριανού 120, Αθήνα 105 58
 - Portatif - ippokratous — Ιπποκράτους 206, Αθήνα 114 72
-- Gellissimo Biscoto | Brunch • Coffee | Thessaloniki — Proxenou Koromila 8, Thessaloniki 546 23
 - Sugarela — Nikiforou Foka 12, Thessaloniki 546 21
 - Τερκενλής ΚΤΕΛ Μακεδονίας — Monastiriou, Menemeni 546 28
-- Fasolas Gastrokafeneio — Filoti 843 02
 - Kokkion Μοναστηράκι — Πρωτογένους 2, Αθήνα 105 54
 - Ζαχαροπλαστεία Κωνσταντινίδης — Παρ. Λεωφ. Βουλιαγμένης 534, Άλιμος 174 56
 - Arte Athens — Τριπόδων 16, Αθήνα 105 58
-- Fairytale – Το Παραμυθοπωλείο της Ν. Φιλαδέλφειας — Νικ. Τρυρια 48, Νέα Φιλαδέλφεια Αττικής 143 41
-- Choureal - Choux & Profiterole — Lazaraki 39, Glifada 166 75
 - PROFICHÉRIE — El. Venizelou 28, Thessaloniki 546 24
 - My Cookie Dough Athens — Petraki 7, Athina 105 63
 - Glyko Styllas — Iasonos 135, Volos 382 21
 - Fatto a mano — Κώστα Βάρναλη 21, Περιστέρι 121 34
 - Κρεπερί Μποεμ — Λεωφ. Στρατάρχου Αλεξάνδρου Παπάγου 126, Ζωγράφου 157 73
-- Fairytale Athens Café & Suites — Λεωκορίου 16, Αθήνα 105 54
 - Γουναρόπουλος Ζαχαροπλαστείο Χαλκίδα — Μαυρογένους 5, Χαλκίδα 341 00
 - Madame Fraise — Υμηττού 225, Αθήνα 116 32
-- Mario & Luigi — Ευφράνορος 35, Αθήνα 116 35
+- Mario & Luigi — Ευφράνορος 35, Αθήνα 116 35 [also: Italian Restaurants]
 - Artos Venetis — Sarri 13, Athina 105 54
 - Nikos Alexoudas — Makedonias 18, Thessaloniki 546 42
 - Παπαπαρασκευάς — 28is Oktovriou 186, Xanthi 671 00
@@ -2098,7 +2016,6 @@ Sweet treats and traditional Greek desserts
 - Hatzifotiou — Kanada 69, Rodos 851 32
 - Lolita's Gelato — Oia 847 02
 - Στάνη — Μαρίκας Κοτοπούλη 10, Αθήνα 104 32
-- Nagomi Jpn — Al. Svolou 41, Thessaloniki 546 22
 - Oggi - Officina Gelato Gusto Italiano, Athens — Βουλής 17, Αθήνα 105 63
 - Rook's Pastry Lab — Γαμβέτα, Dim. Lappa 12 - 16, Karditsa 431 00
 - Γαλακτοπωλείο ΣΤΑΜΟΥ — Λεωφ. Ηρακλείου 388, Ηράκλειο 141 22
@@ -2106,7 +2023,6 @@ Sweet treats and traditional Greek desserts
 - Μελόραμα — Λεωφ. Αγίου Δημητρίου 161, Αγ. Δημήτριος Αττικής 173 43
 - Γαλακτοπωλείο ΣΤΑΜΟΥ — Λεωφ. Μαραθώνος 88, Άνοιξη 145 69
 - Κανέλλος Λουκουμάδες — Dimogerontias 18, Chios 821 00
-- Pink Dot Cafe — Leof. Georgikis Scholis 84, Pilea 570 01
 - Χαρά — Πατησίων 339, Αθήνα 111 44
 - Smyrni Baklava — Βασ. Σοφίας 55, Μαρούσι 151 24
 - Ourse Athens — Μυστρά 39, Γλυφάδα 165 61
@@ -2133,7 +2049,7 @@ Sweet treats and traditional Greek desserts
 - Iceroll Peristeri — Αιμιλίου Βεάκη 46, Περιστέρι 121 34
 - BOMBOLO — Mitropoleos 88, Thessaloniki 546 22
 
-### Fish Tavernas (330 locations)
+### Fish Tavernas (329 locations)
 Fresh seafood and traditional tavernas
 
 - Alyelo Bar Restaurant — Φάρος 840 03
@@ -2143,7 +2059,7 @@ Fresh seafood and traditional tavernas
 - Fokos Taverna — Fokos Φωκός, Ano Mera 846 00
 - Ψαροταβέρνα Αιγινήτισσα — Αιγινίτισσας, Αίγινα 180 10
 - Taverna Flomari — Gomati Beach, Limnos 814 01
-- Thalassino Ageri — Vivilaki str 35 Tabakaria, Chania 731 33
+- Thalassino Ageri — Vivilaki str 35 Tabakaria, Chania 731 33 [also: Luxury Dining]
 - Nikolas Tavern Mykonos - Seafood Restaurant — Paraga Mykonos, Mikonos 846 00
 - Ο Ψαράς Restaurant — Παραλία Μαραθώνα, Λεωφ. Ποσειδώνος 3, Αγ. Παντελεήμων 190 07
 - Ουζερί "Ακρογιάλι" — λοχία Ρωμιόπουλου 13, Χαλκίδα Νέα Λάμψακος 341 00
@@ -2151,7 +2067,7 @@ Fresh seafood and traditional tavernas
 - Άργουρα — Αγησιλάου 49, Καλλιθέα 176 75
 - Ουζερί Λαγουδέρα — Λεωφ. Δημοκρατίας 33, Πέραμα 188 63
 - Tsaf — Πλατεία Ανω μερας, Ano Mera 846 00
-- Afropsaro Santorini — Imerovigli 847 00
+- Afropsaro Santorini — Imerovigli 847 00 [also: Luxury Dining]
 - ΑΛΜΥΡΙΚΙ — R2X3+G5, Epar.Od. Moni Taxiarchon - Kato Almiri, Kato Almiri 201 00
 - To Maereio — Ν, Kalogera 16, Mikonos 846 00
 - Astakos — Διαδόχου Παύλου 46, Γλυφάδα 166 75
@@ -2163,10 +2079,10 @@ Fresh seafood and traditional tavernas
 - Μεζεδοπωλείο «Η Χηρα» — Αγίου Κωνσταντίνου και Ελένης, Άρτεμις 190 16
 - Antamoma DeliCuisine — Ai Giannis, Apirathos 843 00
 - Το πλοκάμι — Λεωφ. Ποσειδώνος, Νέα Μάκρη 190 05
-- Maiami Seafood Restaurant — Thetidos 18, Kalamaria 551 32
+- Maiami Seafood Restaurant — Thetidos 18, Kalamaria 551 32 [also: Luxury Dining]
 - Ταβέρνα Πλυμάρι — Analipsi, Zagora 370 01
 - Το Νυδρί - Εστιατόριο θαλασσινών — Achilleos 34, Θεσσαλονίκη 562 24
-- Varoulko Seaside Restaurant — Ακτή Κουμουνδούρου 54, Πειραιάς 185 33
+- Varoulko Seaside Restaurant — Ακτή Κουμουνδούρου 54, Πειραιάς 185 33 [also: Luxury Dining]
 - Άγιος Χαράλαμπος Ταβέρνα — Λημνος, Plaka 814 01
 - Το Παλιό Ποδήλατο — Ανδρονίκου 11, Αθήνα 118 54
 - Ostria — Παλιός Σιδηροδρομικός Σταθμός Λιτοχώρου, Litochoro 600 63
@@ -2189,11 +2105,11 @@ Fresh seafood and traditional tavernas
 - Sunset Restaurant — Eparxiaki odos Hydra, 180 40
 - 5 steps in the sand — Unnamed Rd, Sithonia 630 72
 - Μαρίδα Σούνιο — 64,5 χλμ. παραλιακη Αθηνων-Σουνίου, Λεγραινα, Σούνιο 195 00
-- Spilia Mykonos Seaside Restaurant — Καλαφάτη 846 00
+- Spilia Mykonos Seaside Restaurant — Καλαφάτη 846 00 [also: Luxury Dining]
 - ΛΙΝΟΥ ΣΟΥΜΠΑΣΗΣ ΚΑΙ ΣΙΑ — Μελανθίου 2, Αθήνα 105 54 &, Καλαμίδα 9, Αθήνα 105 54
 - Jimmy's Fish — Ακτή Κουμουνδούρου 52, Πειραιάς 185 33
 - Captain's - Food for Sharing — Mykonos Waterfront, Mikonos 846 00
-- Κάβος — Ίσθμια 201 00
+- Κάβος — Ίσθμια 201 00 [also: Luxury Dining]
 - Γλυκάνισος — Fourka 630 77
 - Καπετάνισσα — Ομήρου 24, Χαλάνδρι 152 32
 - Ψάριστον — Καλαβρύτων 16, Ηράκλειο 141 21, 141 21
@@ -2204,7 +2120,7 @@ Fresh seafood and traditional tavernas
 - Sigi Ikthios — Limanaki Naousa, Naousa 844 01
 - Annie - Fine Cooking — Μεναίχμου 4, Αθήνα 117 43
 - Triana Tavern — 25is Martiou 405, Thira 847 00
-- Ανεφάνη — Μνησικλέους 24, Αθήνα 105 56
+- Ανεφάνη — Μνησικλέους 24, Αθήνα 105 56 [also: Rooftop Lounges]
 - ΤΕΣΚΟΣ — Αγίου Νικολάου 42, Νέα Αρτάκη 346 00
 - Kalyva tou Psara — Unnamed Rd, Zola 281 00
 - Bakalis — Pefkochori 630 85
@@ -2292,7 +2208,7 @@ Fresh seafood and traditional tavernas
 - Ψαροταβέρνα Το Σέσι — Λεωφ. Ποσειδώνος 53, Σέσι 190 07
 - To Kyma — Epar.Od. Paliouriou-Afitou, Afitos 630 77
 - Carnayo Restaurant Skiathos — Paraliakos, Skiathos 370 02
-- ORA baresto — Επαρχιακή Οδός Ερμούπολης-Φοίνικων,Φοίνικας 841 00 ΣΥΡΟΣ, 841 00
+- ORA baresto — Επαρχιακή Οδός Ερμούπολης-Φοίνικων,Φοίνικας 841 00 ΣΥΡΟΣ, 841 00 [also: Greek Restaurants]
 - Άγκυρα — Ψαραγορά Λαύριο 3, Ανδρέα Αλεξάνδρου, Λαύριο 195 00
 - Πρίγκιπας 2 — Οικονομίου και, Neapoleos 1, Ag. Triada 570 19
 - Tripia Sayionara Tavern — εισοδος απο παραλια, Elevtheriou Veniavelou 4, Tolo 210 56
@@ -2331,8 +2247,8 @@ Fresh seafood and traditional tavernas
 - Μαργαρώ — Λεωφ. Χατζηκυριάκου 126, Πειραιάς 185 38
 - Almyriki — Katapola, Xilokeratidi 840 08
 - Mezen Salonica — Rogkoti 3, Thessaloniki 546 24
-- Ψαροκόκκαλο — Ελ. Βενιζέλου 19, Μελίσσια 151 27
-- Grada nuevo — Kalapothaki 14, Thessaloniki 546 24
+- Ψαροκόκκαλο — Ελ. Βενιζέλου 19, Μελίσσια 151 27 [also: Luxury Dining]
+- Grada nuevo — Kalapothaki 14, Thessaloniki 546 24 [also: Luxury Dining]
 - PISCIS (Mikrolimano) — Ακτή Κουμουνδούρου 30, Πειραιάς 185 33
 - ΤΡΑΤΑ — Νικηταρά, Αθήνα 106 78
 - Τα Ψαράκια — Πλατεία Ελευθερίας 2, Νέστορος 4, Μελίσσια 151 27
@@ -2340,7 +2256,7 @@ Fresh seafood and traditional tavernas
 - Porto Marina / Πόρτο Μαρίνα — Porto Koufo 630 72
 - Almyra — Ανάληψη 859 00
 - Allou Yialou — Κίνι 841 00
-- Siparos Seaside Restaurant — Ξιφαρά 844 01
+- Siparos Seaside Restaurant — Ξιφαρά 844 01 [also: Luxury Dining]
 - Ο Τάκης — Ηπείρου 66, Πέραμα 188 63
 - Tzanis — Αμμουλιανή, Ammouliani 630 75
 - Η Στοά Αλλιώς — Γαμβέτα 14, Αθήνα 106 77
@@ -2350,9 +2266,9 @@ Fresh seafood and traditional tavernas
 - Ουζερί ο Σκοτάδης — Λεωφ. Δημοκρατίας 46, Αίγινα 180 10
 - Εστιατόριο Γιοβίτα — Περδικα, Αίγινα 180 10
 - Restaurant Sidera — Possidi 630 77
-- Kritikos Restaurant Port — Leof. Nikis 03, Thessaloniki 546 21
+- Kritikos Restaurant Port — Leof. Nikis 03, Thessaloniki 546 21 [also: Luxury Dining]
 - Ατλαντικός — Αυλητών 7, Αθήνα 105 54
-- Matsuhisa Athens — 40, Απόλλωνος street, Βουλιαγμένη 166 71
+- Matsuhisa Athens — 40, Απόλλωνος street, Βουλιαγμένη 166 71 [also: Luxury Dining]
 - Λιόγερμα της Αθήνας — Νέστορος 21, Παλαιό Φάληρο 175 61
 - ΚΕΜΠΑΠΤΖΙΔΙΚΟ ΜΑΧΑΛΑΣ — Π. Τσαλδάρη, 241-243, Νίκαια 184 50
 - Μπαρμπουνάκι Γλυφάδα — Λεωφ. Δημάρχου Αγγέλου Μεταξά 48, Γλυφάδα 166 74
@@ -2371,7 +2287,6 @@ Fresh seafood and traditional tavernas
 - Apanemi Town — Leof. Naxou Eggaron, Naxos 843 00
 - Ψαροταβέρνα Ο Γιάννης — Λεωφ. Χατζηκυριάκου 107, Πειραιάς 185 39
 - Arias restaurant Kythnos — Unnamed Road, Ag. Irini, Kithnos 840 06
-- Mamalouka Beach Bar — Unnamed Road, Kassandra 630 85
 - Aristos Fish Restaurant — Ormos Panagias 630 78
 - Korali Seafood Restaurant . Agnontas Skopelos — Epar.Od. Agnontas, Skopelos 370 03
 - Ouzeri The Mills — Kalouta 113, Chios 821 00
@@ -2385,8 +2300,8 @@ Fresh seafood and traditional tavernas
 - Nissos Seafood Tavern — Χριστοκοπίδου 1, Αθήνα 105 54
 - Panos Fish Tavern — 63081, Neos Marmaras 630 81
 - Ταβερνα Αντιγόνη — Μακροδημητραίων, Θυμάρι 190 13
-- Maiòlica Sifnos — Πλατύς Γιαλός 840 03
-- Papadakis Restaurant — Φωκυλίδου 15, Αθήνα 106 73
+- Maiòlica Sifnos — Πλατύς Γιαλός 840 03 [also: Luxury Dining]
+- Papadakis Restaurant — Φωκυλίδου 15, Αθήνα 106 73 [also: Luxury Dining]
 - Taverna Areti - Stamoulis — Αγ. Γεώργιος 370 06
 - Αύρα — Τέρμα, Λεωφ. Ποσειδώνος, Νέα Μάκρη 190 05
 - Aggelika Fish Taverna — Μαγνησία Πήλιο Τσαγκαράδα Μυλοπόταμος, Πήλιο Μυλοπόταμος 370 12
@@ -2399,7 +2314,7 @@ Fresh seafood and traditional tavernas
 - Thalassa — Unnamed Road, Karpathos 857 00
 - Bluefish Paros — Naoussa, Paros 844 01
 - Pelicanos — beach, Faros 840 03
-- 7 Thalasses — Kalapothaki 10, Thessaloniki 546 24
+- 7 Thalasses — Kalapothaki 10, Thessaloniki 546 24 [also: Luxury Dining]
 - Kritikos Gallery & Restaurants — Venizelou 5B, Panorama 552 36
 - Téchnē Restaurant & Social — Epar.Od. Mandrakiou-Molou, Idra 180 40
 - Mavromatis — Vasileos Georgiou V', Kos 853 00
@@ -2423,9 +2338,9 @@ Fresh seafood and traditional tavernas
 - Fratzeskos tavern — Perissa 847 03
 - Nissaki Restaurant est. 1971 — Agiou Georgiou, Naxos 843 00
 - TOM Psarotaverna — Παραλία Κακής Θαλάσσης 190 01
-- Arsanas Restaurant — Epar.Od. Nikitis-Sartis, Sithonia 630 88
+- Arsanas Restaurant — Epar.Od. Nikitis-Sartis, Sithonia 630 88 [also: Luxury Dining]
 - Panos Cafe — Alkamenous 5, Thessaloniki 542 50
-- Akti Ntovil sea taste — Themistokli Sofouli 86, Kalamaria 551 31
+- Akti Ntovil sea taste — Themistokli Sofouli 86, Kalamaria 551 31 [also: Luxury Dining]
 - Akrogiali Restaurant- Studios — Αγ. Αννα 843 00
 - Ψητός Μπακαλιάρος — Εθ. Αντιστάσεως 9, Χαλάνδρι 152 32
 - Agkyra Fish Restaurant in Kos Town — Dimokritou, Kos 853 00
@@ -2434,12 +2349,12 @@ Fresh seafood and traditional tavernas
 - Psarokokkalo — Limenas Litochorou 602 00
 - Akrogiali 2 — Neakitou 1, Nikiti 630 88
 - Τσιπουράδικο "Άνοιξη παρά Τέταρτο" — Αθηνών Χαλκίδος 17, Άνοιξη 145 69
-- Sea Satin Athens Riviera — Λεωφ. Κωνσταντίνου Καραμανλή 14, Βούλα 166 73
+- Sea Satin Athens Riviera — Λεωφ. Κωνσταντίνου Καραμανλή 14, Βούλα 166 73 [also: Luxury Dining]
 - Romeo Restaurant — Navarchou Kountourioti 4, Mirina 814 00
 - Ουζερί ο Γιάννης — Γεωρ. Λέκκα 3, Λουτράκι 203 00
 - Mourga — Christopoulou 12, Thessaloniki 546 35
 - Archipelagos — P. Kountouriotou 37, Perea 575 00
-- Χρώματα Βυθού — Εκάλης 40, Νέα Ερυθραία 146 71
+- Χρώματα Βυθού — Εκάλης 40, Νέα Ερυθραία 146 71 [also: Luxury Dining]
 - Παπαλίνα — Πραμάντων 20, Αθήνα 117 41
 - Όρμος Αφροδίτης — Ακτή Θεμιστοκλέους 288, Πειραιάς 185 39
 - Ουζερί Απάνεμο — Εθ. Συμφιλίωσης 78, Χαλκίδα 341 00
@@ -2447,7 +2362,7 @@ Fresh seafood and traditional tavernas
 - Kehria Tarsanas Taverna — Unnamed Road, Skiathos 370 02
 - Roza's — Vourvoulos Santorini Island, 847 00
 - Binelikia — Νειμποριό, Andros 845 00
-- Hippie Fish Mykonos — Agios Ioannis, Mikonos 846 00
+- Hippie Fish Mykonos — Agios Ioannis, Mikonos 846 00 [also: Luxury Dining]
 - Taverna Ta Tria Pitharia — Nikis, Nea Peramos 640 07
 - Paolo Nikos Restaurant — Ποσειδώνος, Λουτράκι 203 00
 - Ουζερί Η Λέσβος — Εμμανουήλ Μπενάκη 38, Αθήνα 106 78
@@ -2456,7 +2371,7 @@ Fresh seafood and traditional tavernas
 - Ψαροταβέρνα ο Μίλτος — Πέρδικα, Αίγινα 180 10
 - Koukida Fun-Seafood — Agrafon 13, Thessaloniki 546 34
 - ψαΡΑΚΙ — Ευαγγελίστριας, Καλύβια Θορικού 190 10
-- Mavri Thalassa — Nik. Plastira 3, Kalamaria 551 32
+- Mavri Thalassa — Nik. Plastira 3, Kalamaria 551 32 [also: Luxury Dining]
 - Θαλασσάκι Πειραϊκή — Ακτή Θεμιστοκλέους 310, Πειραιάς 185 39
 - Τhe Nets — Perivolos Beach, Santorini 847 00
 - Kounelas Fish Tavern — ODOS SVORONOU, Mikonos 846 00
@@ -2467,414 +2382,11 @@ Fresh seafood and traditional tavernas
 - Καπετάν Γιώργης «Ο Μυτιληνιός» — Κωνσταντινουπόλεως 9, Γλυφάδα 166 75
 - Gialos Fish & Seafood Tavern — Ν.Πλαστήρα - Μ. Εμβολο - Ν.Α.Ο.Κ, Thessaloniki 551 31
 
-### Luxury Dining (207 locations)
-Fine dining and upscale experiences
-
-- Siparos Seaside Restaurant — Ξιφαρά 844 01
-- GB Roof Garden Restaurant & Bar — Γεωρ. Α' 1, Αθήνα 105 64
-- Labros Restaurant — Λεωφ. Ποσειδώνος 20, Βουλιαγμένη 166 71
-- ΜΑΝΗΜΑΝΗ — Φαλήρου 10, Αθήνα 117 42
-- Olympos Naoussa — Leof. Nikis 5, Thessaloniki 546 24
-- Botrini's Restaurant Athens — Λεωφ. Βασιλέως Γεωργίου B 24, Χαλάνδρι 152 33
-- Ex Machina — Εμπεδοκλέους 34, Αθήνα 116 36
-- FEEDEL ASADOR — Ν Ζερβα 24 Και, Κύπρου, Γλυφάδα 166 75
-- Cookoovaya — Χατζηγιάννη Μέξη 2a, Αθήνα 115 28
-- BAOS Greek Restaurant — Myconian Korali Mykonos Town, Mikonos 846 00
-- Travolta Athens — Αγίου Παύλου 33, Περιστέρι 121 32
-- Zanó - Athens — Παναγιώτου Αναγνωστοπούλου 3, Αθήνα 106 73
-- YĒVO By Bill&Coo Mykonos — Μεγάλη Άμμος, Mikonos 846 00
-- Scorpios — Paraga, Mikonos 846 00
-- Mario Restaurant — Λιβάδια, Paros 844 00
-- ΑΝΕΤΟΝ — Ναυάρχου Νικοδήμου 3, Αθήνα 105 57
-- Forte Charitos Restaurant — Χάρητος 43, Αθήνα 106 76
-- Matsuhisa Paros — Avant Mar Hotel, Paros 844 01
-- Drakoulis Dry & Raw Kolonaki — Πλ. Φιλικής Εταιρείας 14, Αθήνα 106 74
-- The Squirrel (within THE DANAI) — 6JGH+XM, Sithonia 630 88
-- Basegrill Athens — Λεωφ. Κωνσταντινουπόλεως 64, Περιστέρι 121 33
-- Nakal State of Mind — Αυλακίου 100, Πόρτο Ράφτη 190 03
-- Clochard — Κομνηνών 10, Mitropoleos 23, Thessaloniki 546 24
-- MAPPEMONDE RESTAURANT BAR-LOUNGE — 4 Eleftheriou Venizelou Avenue and, Κριεζώτου 2, Αθήνα 106 71
-- O Ntinos — Όρμος Γιαννάκη, Kardiani 842 01
-- Κάβος — Ίσθμια 201 00
-- Elements Restaurant Bar — Oia 847 02
-- Botrini's Restaurant Mykonos — Agios Ioannis Mykonos, Cyclades, 846 00
-- Okra — Μητροπόλεως 82, Αθήνα 105 55
-- Maiami Seafood Restaurant — Thetidos 18, Kalamaria 551 32
-- Varoulko Santorini (within Grace Hotel) — Imerovigli Thira, Santorini 847 00
-- ΝΕΣΤ Rooftop - Monte Kastella — Λεωφ. Αλ. Παπαναστασίου 109, Πειραιάς 185 33
-- Valaora Resto Nafplio — Mpanieres, Boumpoulinas, Nafplio 211 00
-- Cinq Sens Athens — Πύρρου 38, Αθήνα 116 33
-- Fuga restaurant & Bar — Πέτρου Κόκκαλη 1, Αθήνα 115 21
-- Prosilio Restaurant — Ag. Panton 15, Zakinthos 291 00
-- The Zillers Rooftop Gastronomy — Μητροπόλεως 54, Αθήνα 105 63
-- The Secret Gorge - Restaurant & Wine Tasting Experience — 3rd Klm. National Road, Rethymno 741 50
-- UMA chefs home experience — Ελευθερίας, Πανόραμα - Θέρμη, Τ.Θ.Δ3026, Thessaloniki 570 01
-- Brutus Tavern — Λεβέντη 3, Αθήνα 106 73
-- Γιάντες — Βαλτετσίου 44, Αθήνα 106 81
-- St George Lycabettus Lifestyle Hotel — Κλεομένους 2, Αθήνα 106 75
-- BurntBone — Αγίου Κωνσταντίνου 50, Μαρούσι 151 24
-- Makris Athens Fine Dining Restaurant — Astiggos 10, Ερμού 119, Αθήνα 105 55
-- Athénée — Βουκουρεστίου 9, Αθήνα 106 71
-- Akti Ntovil sea taste — Themistokli Sofouli 86, Kalamaria 551 31
-- Onuki Restaurant — Costa Navarino Navarino Dunes, Pilos 240 01
-- Pharaoh — Solomou 54, Athina 106 82
-- Koumkan Athens — Χαρ. Τρικούπη 48, Κηφισιά 145 62
-- Esthio Athens — Δημητρακοπούλου 7, Αθήνα 117 42
-- Bungalow7 Athens — Λεωφ. Ποσειδώνος 110, Γλυφάδα 166 75
-- NYX Japanese Rooftop Gastrobar — Ομήρου 19, Αθήνα 106 19
-- Ronin — Ξανθίππου 2, Αθήνα 106 75
-- abraOvata — Εστιατόριο Λίμνης, Αθήνα 166 71
-- Orizontes Lycabettus — Αριστίππου 1, Αθήνα 106 76
-- Venetian Well — Πλατεια Λίλη Δεσύλλα 1, Kerkira 491 00
-- Gallina Athens — Μαρκ. Μπότσαρη 49, Αθήνα 117 42
-- Spianada Meats & Greens — Kapodistriou 32, Kerkira 491 00
-- Metropolis Roof Garden — Μητροπόλεως 15, Αθήνα 105 57
-- Botrini's Santorini — Main Street, Nik. Nomikou, Oía 847 02
-- Spondi Restaurant — Πύρρωνος 5, Αθήνα 116 36
-- Sushimou — Σκούφου 6, Αθήνα 105 57
-- Makris Restaurant — Miramare Beach, Moraitika 491 00
-- 10 Urban Roof — Λεωφ. Αλεξάνδρας 10, Αθήνα 106 82
-- Maestranza.skg — Ptolemeon 29Β, Thessaloniki 546 30
-- Ciel Athens — ΜΝΗΣΙΚΛΕΟΥΣ, Μητροπόλεως 2, Αθήνα 105 56
-- Innamorata — Likourgou 5Α, Chalandri 152 31
-- Napule Tinos Restaurant — Τριαντάρος 842 00
-- Tokyo Joe Mykonos — Ano Vrisi, My Mall, Mikonos 846 00
-- Teloneio — Limeni 230 62
-- Beefbar Athens — Athens Αστήρ Πάλας, Βουλιαγμένη 166 71
-- Maiòlica Sifnos — Πλατύς Γιαλός 840 03
-- Pelagos — Απόλλωνος 40, Βουλιαγμένη 166 71
-- Spilia Mykonos Seaside Restaurant — Καλαφάτη 846 00
-- Seeds Restaurant — Oumplianis 14, Diocharous 27, & 161 21
-- Principote Mykonos — Panormos Beach, Mikonos 846 00
-- Koukoumavlos Restaurant — Imerovigli 847 00
-- L'Albero — Filippou 17, Thessaloniki 546 31
-- Tudor Hall — Γεωρ. Α' 3, Αθήνα 105 64
-- Simul — Υψηλάντου 63, Αθήνα 115 21
-- Ακρα — Αμύντα 12, Αθήνα 116 35
-- Aleria Restaurant — Μεγ. Αλεξάνδρου 57, Αθήνα 104 35
-- Cabbanes Mykonos — Elia Beach, Mikonos 846 00
-- SHARK Bar | Restaurant - Thessaloniki — Argonafton 2, Kalamaria 551 31
-- Gorlomi — Πλουτάρχου 9, Αθήνα 106 75
-- SENSE Modern Greek Cuisine — Διονυσίου Αρεοπαγίτου 5, Αθήνα 117 42
-- Taverna 37 — Απόλλωνος 40, Βουλιαγμένη 166 71
-- Caretta Athens — Διαδόχου Παύλου 46, Γλυφάδα 166 75
-- ANTHES RESTAURANT — Σκούφου 3, Αθήνα 105 57
-- Alexander's Cigar Lounge - Hotel Grande Bretagne — Ξενοδοχείο Μεγάλη Βρεταννία, Αθήνα 105 64
-- BEASTALIS ,Food for proud meat eaters — Κύπρου 9, Γλυφάδα 166 75
-- Papaioannou Restaurant Kifissia — Κολοκοτρώνη 32, Κηφισιά 145 62
-- Monzu Kifisia — Λεωφ. Κηφισίας 317b, Κηφισιά 145 61
-- Trattoria Capanna — Πλουτάρχου 38, Αθήνα 106 75
-- Osteria Mamma — Σαλαμίνος 64, Αθήνα 104 35
-- Kozi's — Π. Τσαλδάρη 34, Μελίσσια 151 27
-- Wood Restaurant — Εμμανουήλ Μπενάκη 22, Κηφισιά 145 61
-- Ark — Γρ. Λαμπράκη 2, Γλυφάδα 166 74
-- Thalassino Ageri — Vivilaki str 35 Tabakaria, Chania 731 33
-- Restaurant Thymari — Πηνελόπης 19, Lefkada 311 00
-- Cantina — Seralia, Kastro 840 03
-- Ζάαταρ — Χειμάρρας 7, Νέα Ερυθραία 146 71
-- Arsanas Restaurant — Epar.Od. Nikitis-Sartis, Sithonia 630 88
-- DOLLI•S — Μητροπόλεως 49, Αθήνα 105 56
-- Delta Restaurant — Λεωφ. Ανδρέα Συγγρού 364, Αθήνα 176 74
-- Feedέλ Urban Gastronomy — Κτενά 1, Αθήνα 105 63
-- Lío Mykonos — Enoplon Dinameon 6, Mikonos 846 00
-- Anama Restaurant — Anama Restaurant, Gialova 240 01
-- Melia fine dining — Τραγάκι 291 00
-- Αφρόψαρο — Μαρίνου Αντύπα 62-66, Ηράκλειο 141 21
-- e&o Pan-Asian Restaurant Athens — Λεωφ. Ανδρέα Συγγρού 385, Παλαιό Φάληρο 175 64
-- Mastelo Restaurant & Bar — Mitropoleos 11, Lefkada 311 00
-- NATU — Λεβίδου 13, Κηφισιά 145 62
-- Alemagou — Greece, Mikonos
-- POINT A (Acropolis Point) — Ροβέρτου Γκάλι 4a, Αθήνα 117 42
-- Samano Radio Restaurant — Πλ. Φιλόμουσου Εταιρίας 3, Αθήνα 105 58
-- Lauda Restaurant — Oia 847 02
-- Rick's — Πεντέλης 1, Κηφισιά 145 62
-- Like salt — Ir. Politechniou, Tinos 842 00
-- Ψαροκόκκαλο — Ελ. Βενιζέλου 19, Μελίσσια 151 27
-- Hygge Ano Syros — Ano Syros 841 00
-- FAIDON'S Athens — Αγίου Ιωάννου 28, Βούλα 166 73
-- Χρώματα Βυθού — Εκάλης 40, Νέα Ερυθραία 146 71
-- Hytra Restaurant & Bar — 1, Πέτρου Κόκκαλη STR, Αθήνα 115 21
-- Makris Milos Fine Dining Restaurant — Mytakas, Island 848 00
-- CTC Urban Gastronomy — Πλαταιών 15, Αθήνα 104 35
-- Ora Day — Agoniston Politechniou, Kerkira 491 00
-- Selene Restaurant — Old catholic monastery, Thira 847 00
-- Opsopoion Maganeiai — Komotinis 6, Thessaloniki 546 55
-- Lycabettus Restaurant — Nik. Nomikou, Oía 847 02
-- Noema — Panachra, Mikonos 846 00
-- Hasapika Central Market — Αριστογείτονος 1, Αθήνα 105 51
-- Mercato — Apollonos 40, Vouliagmeni 166 71
-- Soil Restaurant — Φερεκύδου 5, Αθήνα 116 35
-- Herve Restaurant — Τριών Ιεραρχών 170, Αθήνα 118 52
-- Son — Leof. El. Venizelou 197, Ilioupoli 163 41
-- Vezené Athens — Βρασίδα 11, Αθήνα 115 28
-- Hunters Room & Grill Restaurant — Αριστοτέλους 23, & Παπάγου 17, Χαλάνδρι 152 34
-- Zurbaran Athens — Πατριάρχου Ιωακείμ 38, Αθήνα 106 75
-- Kritikos Restaurant Port — Leof. Nikis 03, Thessaloniki 546 21
-- Jerár — Αγίας Βαρβάρας 55, Δάφνη Αττικής 172 35
-- Duck — Chalkis 3, Pilea Chortiatis 570 01
-- Okio Restaurant Fine Dining Athens — Nikis 33 &, Ναυάρχου Νικοδήμου 3, Αθήνα 105 57
-- MOO CASA steak & lobster — Marinou Antipa 66, Iraklio 141 21
-- Bostani Bar & Restaurant — Poulati, Sifnos 840 03
-- The Winter Garden — Γεωρ. Α' 1, Αθήνα 105 64
-- Salonika Restaurant & Bar — Leof. Meg. Alexandrou 2, Thessaloniki 546 40
-- The Windmill Restaurant Skiathos — Pension Margarita, Kontroni Opposite, Skiathos 370 02
-- Perivoli Restaurant — Αρτεμώνας 840 03
-- Matsuhisa Athens — 40, Απόλλωνος street, Βουλιαγμένη 166 71
-- Στα Καλά Καθούμενα — Ιερά Οδός 25-27-29, Ιερά Οδός 29, Αθήνα 118 54
-- Drakoulis Dry & Raw - Butcheries Voula — Λεωφ. Βασιλέως Παύλου 103, Βούλα 166 73
-- Lolita's Athens — Λεωφ. Κηφισίας 340, Νέο Ψυχικό 154 51
-- Etrusco — Κάτω Κορακιάνα 490 83
-- Alali Restaurant — epar. od. akrotiriou, Akrotiri 847 00
-- Geco Athens — Λέκκα 14, Αθήνα 105 62
-- Grada nuevo — Kalapothaki 14, Thessaloniki 546 24
-- atole — Γριβαίων 3 &, Δελφών 5, Αθήνα 106 80
-- Kenko Japanese Restaurant — Λεωφ. Ελ. Βενιζέλου 22, Νέα Σμύρνη 171 21
-- Drakoulis Dry & Raw Mykonos — Mykonos 846 00
-- STOFFA Restaurant — Βασ. Αμαλίας 20, Κηφισιά 145 61
-- Τηλέμαχος Athens — Πανεπιστημίου 10, Αθήνα 106 71
-- Papadakis Restaurant — Φωκυλίδου 15, Αθήνα 106 73
-- Moldee Bar Restaurant — Proksenou Koromila &, Mitropolitou Iosif 8, Thessaloniki 546 22
-- Εστιατόριο Ιθάκη — Apollonos, Αθήνας 28, Βουλιαγμένη 166 71
-- Amente Restaurant & Cocktail bar — Varagas, Drimonas 311 00
-- Nolan — Βουλής 31 - 33, Αθήνα 105 57
-- Hippie Fish Mykonos — Agios Ioannis, Mikonos 846 00
-- Barbarossa Athens — Λεωφ. Αλκυονίδων 4, Βούλα 166 73
-- Rooftop Terrace on top of St. George Hotel — Αθήνα 106 75
-- Electra Roof Garden — Ναυάρχου Νικοδήμου 18-20, Αθήνα 105 57
-- Meat the Stars — Λεωφ. Μαραθώνος 63, Πικέρμι 190 09
-- Afropsaro Santorini — Imerovigli 847 00
-- Apospero — Χώρα 840 08
-- Interni Restaurant — Matogianni, Mikonos 846 00
-- Sea Satin Athens Riviera — Λεωφ. Κωνσταντίνου Καραμανλή 14, Βούλα 166 73
-- Barbarossa Restaurant — Παλιό Λιμάνι Νάουσας, Limanaki, Naousa 844 01
-- Garum Athens — Kelsou 10, Athina 116 36
-- Iodio — Λουκιανού 36, Αθήνα 106 75
-- Dionysos restaurant elounda — Unnamed Road, Ag. Nikolaos 720 53
-- Mavri Thalassa — Nik. Plastira 3, Kalamaria 551 32
-- Kuzina — Αδριανού 9, Αθήνα 105 55
-- Makris Elounda Fine Dining Restaurant by Domes — Domes of Elounda, Tsifliki, Schisma Elountas 720 53
-- NiDo Athens — Λεβέντη 5, Αθήνα 106 73
-- Dimitris Economides Athens — Λεωφ. Κηφισίας 340, Νέο Ψυχικό 154 51
-- Wild Duck — Boumpoulinas 67, Nafplio 211 00
-- Varoulko Seaside Restaurant — Ακτή Κουμουνδούρου 54, Πειραιάς 185 33
-- Ateno Cook & Deli — Αιόλου 52 &, Μιλτιάδου, Αθήνα 105 60
-- Basegrill — Ζησιμοπούλου 5, Γλυφάδα 166 74
-- Moorings — Μαρινα Βουλιαγμενης, Βουλιαγμένη 166 71
-- Hams & Clams — Λιμάνι, Μαρίνα Ζέας, Πειραιάς 185 37
-- Art Lounge Rooftop — Ναυάρχου Νικοδήμου 1, Αθήνα 105 57
-- WooWoo Athens — Πατριάρχου Ιωακείμ 43, Αθήνα 106 75
-- Matsuhisa Mykonos — Belvedere Hotel School of Fine Arts District, Agiou Ioannou 1, Mikonos 846 00
-- Amen Gastronomic — Ηρώνδα 8, Αθήνα 116 35
-- Mitsis N'U Piraeus Port — Αριστείδου 16-20, Πειραιάς 185 31
-- Il Salumaio d' Atene — Παναγίτσας 3, Κηφισιά 145 62
-- Bubo — 5RR3+FH, Sithonia 630 78 (within Ekies All Senses Resort)
-- Marrone Restaurant — Themistokli Sofouli 111, Kalamaria 551 31
-- Iberico — Νικ. Μάντζαρου 18 &, Kotta Roulia, Thessaloniki 546 27
-- Noble Gourmet Restaurant — Elysium Resort & Spa | 5 star hotel in Rhodes, Leoforos Rodou - Kallitheas, Ammoudes 851 00
-- 7 Thalasses — Kalapothaki 10, Thessaloniki 546 24
-- The Borzoi — Papadiamanti, Skiathos 370 02
-- Θανάσης 1948 — Κων/νου Καβάφη 48, Αθήνα 111 43
-- Elexis restaurant — Apollonos 11, Ermoupoli 841 00
-- Les Zazous — Themistokli Sofouli 108, Kalamaria 551 31
-- Ox Athens — Χατζηγιάννη Μέξη 9, Αθήνα 115 28
-
-### Italian Restaurants (187 locations)
-Authentic Italian flavors and pasta
-
-- Odori — Σκουλενίου 2, Αθήνα 105 61
-- Totonno Pizzeria — Καλογρέζης 1, Χαλάνδρι 152 32
-- Tre Sorelle Pizza — Αρχελάου 19, Αθήνα 116 35
-- La Cucina di Maria — Πλατεία Τριών Ιεραρχών, Skiathos 370 02
-- Alpino Cucina Italiana — Παπανικολή 66, Χαλάνδρι 152 32
-- Gorlomi — Πλουτάρχου 9, Αθήνα 106 75
-- Navona Restaurant Bar — Leof. Meg. Alexandrou 2, Thessaloniki 546 40
-- ITRIA Cucina Italiana Restaurant — Boumpoulinas 81, Nafplio 211 00
-- Pizzeria MamaRosa — Kanari 48, Kos 853 00
-- Napul'è Italian Comfort Food & Wine — Βασ. Κωνσταντίνου 43, Βάρη 166 72
-- Lolita's Athens — Λεωφ. Κηφισίας 340, Νέο Ψυχικό 154 51
-- Lost Athens — Αρχελάου 7, Αθήνα 116 35
-- Pizza Dough! — Δημητρακοπούλου 17, Αθήνα 117 42
-- Loulis Taste Project — Loulis Taste Project
-- Gloria Gati — Πλ. Αγίου Γεωργίου Καρύτση 6, Αθήνα 105 61
-- Incontro Via108 — Αγ. Ελευθερίου 108, Πειραιάς 185 41
-- Mamy Blue - Pizza Napoletana Glyfada — Ανδρέα Παπανδρέου 126, Γλυφάδα 165 61
-- Cicchetti Prosciutteria & Spritzeria — Fivis 11, Glifada 166 74
-- The italians_peristeri — Αιμιλίου Βεάκη 46, Περιστέρι 121 34
-- Forget About It — Θέτιδος 1, Βριλήσσια 152 38
-- Dei Fratelli - Ristorante Italiano — ΚΡΑΤΗΤΟΣ 10 &, Σπαθαρη, Νέα Σμύρνη 171 21
-- Lupo Trattoria — Βουδούρη 6, Χαλκίδα 341 00
-- Pizza Days - Αγίου Δημητρίου — Ανδρέα Παπανδρέου 2, Αγ. Δημήτριος Αττικής 173 41
-- The Last Slice — Proxenou Koromila 1, Thessaloniki 546 23
-- ΤΑΛΕ ΚΟΥΑΛΕ — Αδριανείου 20, Αθήνα 115 25
-- Italida Restaurant — Φιλελλήνων 9, Πειραιάς 185 36
-- Mamma Mia - Sifnos - Apollonia — Απολλωνία 840 03
-- Sistina Mykonos — Platis Gialos, Mikonos 846 00
-- Mercato — Apollonos 40, Vouliagmeni 166 71
-- Valtezziana 2.0 — Βαλτετσίου 41, Αθήνα 106 81
-- Raffaele Pizza & Pasta — Αμφιπόλεως 45, Thessaloniki 544 54
-- GOLOSO - ΑΧΑΡΝΕΣ — Agiou Eleftheriou 18, Acharnes 136 74
-- Pizza Plain — Nik. Plastira 2, Thessaloniki 542 50
-- La Bella Napoli — Ρουμπέση 64, Αθήνα 172 30
-- Toto's Little Italy — Νικ. Πλαστήρα 29, Νέα Μάκρη 190 05
-- agave athens — Ευφράνορος 40, Αθήνα 116 35
-- Tonino Esperienza Italiana — Χαρ. Θέρμης, Thermi 570 01
-- Luma — Φερεκύδου 2, Αθήνα 116 35
-- Trattoria Casa Bianca — Στρ. Καραϊσκάκη 43, Χαϊδάρι 124 61
-- Cardamomo — Unnamed Road, Ano Mera 846 00
-- Amante Athens — Παραμυθίας 13, Αθήνα 104 35
-- Caya Italian Cuisine Cocktail Bar — Πλάκα Ναξος Κυκλάδες, 843 00
-- Vissente - Italian comfort food — Πλ. Αθανασίου Καρύλλου 9, Νέα Σμύρνη 171 21
-- AGLIO, OLIO & PEPERONCINO — Πορίνου 13, Αθήνα 117 42
-- Salento Wood Fired Street Food — El. Venizelou 76, Thessaloniki 546 31
-- Trattoria Capanna — Πλουτάρχου 38, Αθήνα 106 75
-- Pizzeria MamaRosa — Κανάρη 48, Κως 853 00
-- Casa di Giorgio Mykonos — Mitropoleos 1, Hora 846 00
-- Nolio Restaurant — Π. Τσαλδάρη 32-34, Μελίσσια 151 27
-- SANTA PASTA Cucina Italiana — Γρ. Λαμπράκη 144, Πειραιάς 185 35
-- Aliola’s Ermou — Ερμού 18 &, Διομείας 2, Αθήνα 105 63
-- Ami Italian Bistrot — Βουλής, Απόλλωνος &, Αθήνα 105 57
-- da Bruno — Agiou Alexandrou 46, Paleo Faliro 175 61
-- Come A Casa — Καραολη Δημήτριου 17, Χαλάνδρι 152 32
-- Malconi's Italian Restaurant — Patriarhou Ioakim 43 &, Πλουτάρχου 23, Αθήνα 106 75
-- Vitello Trattoria Romana — Ζησιμοπούλου 41, Παλαιό Φάληρο 175 64
-- Da Michele — Λεωφ. Μαραθώνος 61, Άνοιξη 145 69
-- Arancini - Restaurant — Λεωφ. Μαραθώνος 56, Παλλήνη 153 51
-- Michelangelo.skg — Riga Feraiou 162, Sikies 566 26
-- Mitos ARTernative BAR — Χαλκείο 843 02
-- Portofino Pizza Xalandri — Γρ. Γυφτοπούλου 23, Χαλάνδρι 152 33
-- Farina Cucina Italiana Ornos Beach — Beach, Ornos 846 00
-- Portofino Cucina Italiana — Μαρίνα Ζέας, Πειραιάς 185 36
-- ALEX the fresh pasta bar — Μασσαλίας 16, Αθήνα 106 80
-- Armando Pizzeria Cafeteria — Σαλαμίνος 43, Αθήνα 104 35
-- The Eatalians - Mario & Luigi — Λεωφ. Ελ. Βενιζέλου 190, Ηλιούπολη 163 41
-- Trattoria Santa Rita — Malakopis 19, Thessaloniki 544 53
-- Pizza Tros — Μαρίνα Ζέας, Πειραιάς 185 36
-- Βουλκανιζατέρ — Οδυσσέα Ανδρούτσου 17, Αθήνα 117 41
-- Brunello — Λουκιανού 21b, Αθήνα 106 75
-- Raffaele Pizza & Pasta — P. Mela 8, Evosmos 562 24
-- Pízza Poselli — Vilara 2, Thessaloniki 546 25
-- Puff Daddy Pizzeria — Σκρα 16, Πεύκη 151 21
-- High School Pizza Bar — Leof. Nikis 9Α, Thessaloniki 546 24
-- La Gratella — Vasilissis Olgas, Nafplio 211 00
-- Cupola — Ευφοριωνος 13, Αθήνα 116 35
-- Lollo's Atene — Εθ. Αντιστάσεως 3α, Χαλάνδρι 152 32
-- Kentrina — Likourgou, Chalandri 152 31
-- Brothers in Law Smash 'n' Pasta Thermi — 5 χλμ, Χαρ. Θέρμης 1ο χλμ, Thermi 570 01
-- GOLOSO ristorante pizzeria — Grigoriou Lampraki 6, Ag. Stefanos 145 65
-- Capri Nuovo — Egialou, Nikiti 630 88
-- Caton L'anziano — Δωδεκανήσου 1, Αργυρούπολη 164 52
-- Amici Miei Cucina Italiana — στρατηγού πετρίτη 7, Δροσιά 145 72
-- Il Porto — Μπουμπουλίνας 43, Ναύπλιο 211 00
-- Raffaele Pizza & Pasta — 40.6655613219397, 22.94711932792721
-- Pizza Days - Άνω Λιοσίων — Πηνειού 38, Άνω Λιόσια 133 41
-- Funghi Pizza & Pasta — Iatrou Gogousi 25, κέντρο 564 30
-- Mario & Luigi — Ευφράνορος 35, Αθήνα 116 35
-- Pizzicato Osteria — Eth. Antistaseos 79, Eleftherio Kordelio 563 34
-- Apallou — Μητροπόλεως &, Karolou Ntil 10, Thessaloniki 546 23
-- Matapan — ΕΠΑΡΧΙΑΚΗ ΟΔΟΣ ΓΕΡΟΛΙΜΕΝΑ ΒΑΘΕΙΑΣ, Alika 230 71
-- Pizza Hood — Ernestou Emprar 2, Thessaloniki 546 25
-- Dal Professore Naxos — Sea front - Naxos town Naxos Town, 843 00
-- DE MICHELLE — Μητροπολίτου Ευθυβούλη 17, Νέα Σμύρνη 171 24
-- Dos Margaritas — Emiliou Riadi 5, Thessaloniki 546 40
-- ΣΤΗΒΣ Α.Ε. Κεραμεικός - ΧΑΜΠΟΥΡΓΚΕΡ & ΠΙΤΣΕΣ — Σαλαμίνος 42, Αθήνα 104 35
-- ETERE Ristorante•Spritzeria — Σχοινούσας, Kiprou &, Naxos 843 00
-- Barolo Athens — Davaki 1, Psichiko 154 52
-- Cosa Nostra Fresca Pasta Pagrati — Αρχιμήδους 8, Αθήνα 116 35
-- Freskia zymi,pizza ,pasta fresca — P. Tsaldari 29, Neapoli 567 27
-- OVIO — Απόλλωνος 4, Αθήνα 105 57
-- Pablo Pasta Corner — G9W3+63, Astipalea 859 00
-- Pracsitele — Πραξιτέλους 7, Αθήνα 105 62
-- Bella Vespa — Κύπρου 11, Γλυφάδα 166 75
-- KAMIKAZE — Ναρκίσσου 34-36, Γαλάτσι 111 46
-- La Pasteria — Κασσαβέτη 12, Κηφισιά 145 62
-- Nonna Edda — Λεωφ. Εθ. Αντιστάσεως 62, Καισαριανή 161 21
-- ALIO — Βασιλέως Γεωργίου 34, Χαλάνδρι 152 33
-- Innamorata — Likourgou 5Α, Chalandri 152 31
-- Goloso Cucina e Pizza Italiana — Petroupoleos 68-70, Petroupoli 131 23
-- Casareccio trattoria pizzeria — Ξανθίππου 84, Χολαργός 155 61
-- Filomila — Filomila
-- Frankie — Σκουφά 42, Αθήνα 106 72
-- Il Trovatore — Γοργοποτάμου 14, Παλαιό Φάληρο 175 64
-- Trattoria Italia D'onofrio — Βαρνουντος 6, Αθήνα 117 41
-- mamas pizza — Φυλής 197, Αθήνα 112 52
-- Brigante (Σύνταγμα) — Ξενοφώντος 6, Αθήνα 105 57
-- Napolitivo — Λεωφ. Ποσειδώνος 702, Παλαιό Φάληρο 175 61
-- D'Angelo — Axioti, Mikonos 846 00
-- pastabar — Λεωφ. Δεκελείας 136, Νέα Φιλαδέλφεια Αττικής 143 41
-- Impasto — Paros 844 00
-- Mikres Cyclades — Άνω, 843 00
-- Piadina Lumbro — Ομήρου 15, Αθήνα 106 72
-- Casa Giacomo Paros — Little Venice, Naousa 844 01
-- Μακαρούνες (exceptional cuisine) — Αιμιλίου Βεάκη 70, Περιστέρι 121 34
-- Nebbiolo — Leof. Thiseos 111, Ekali 145 78
-- Canarino — Ηλία Ηλιού 28, Αθήνα 117 43
-- ITALI.CO — Ανδρέα Παπανδρέου 3, Γλυφάδα 166 75
-- Pizzamore — Πρωτοπαπαδάκη 20, Γαλάτσι 111 47
-- Fratti Bistro — Φράττι 1, Αθήνα 117 42
-- Amvix — Akti Papagoi 26, Ermoupoli 841 00
-- Pasta La Vista KALA NERA — Kala Nera 370 10
-- The italians — Βασ. Σοφίας 47, Μαρούσι 151 24
-- ΠΙΤΣΑΡΙΑ ΑΧΙΛΛΕΙΟΝ — Λεωφ. Ακτή Καραϊσκάκη 24, Σαλαμίνα 189 00
-- PARCO PIZZA — Λεωφ. Δημοκρατίας 9, Καματερό 134 51
-- La Pasteria — Βαλαωρίτου 15, Αθήνα 106 71
-- Ο Ιταλός — Αλκυόνης 16, Παλαιό Φάληρο 175 61
-- La Tavola Calda — Giotopoulou 10-12, Kerkira 491 00
-- Signora Trattoria — P. Mela 38, Paleon Patron Germanou 19, Thessaloniki 546 22
-- MARGHERITA — Proxenou Koromila 11, Thessaloniki 546 23
-- Aperio cucina & vino — Μεσογείων 258, Χολαργός 155 61
-- Kasmir — Mesabelia, Korischades 361 00
-- Avli Pizzeria Italian Restaurant — Σκάλα 180 10
-- P3 • Pizza Pasta Piazza — Πλ. Υμηττού 15, Υμηττός 172 37
-- Osteria dai Fioi — Leonida Iasonidou 9, Thessaloniki 546 35
-- Rosticceria di Salonicco — Armenopoulou 27, Thessaloniki 546 35
-- Romatella - Pinsa Romana — Φαλήρου 4, Αθήνα 117 42
-- Piazza D'Amore — 28ης Οκτωβρίου 8, Ηράκλειο 141 21
-- Don Rosario Restaurant — Πλατάνι 732 00
-- Pizza Park — Ηρ. Πολυτεχνείου 24, Νέα Ερυθραία 146 71
-- IL POSTINO — Γριβαίων 3, Αθήνα 106 80
-- Cavaliere Ristorante Concettuale — Λεωφ. Ελ. Βενιζέλου 42, Νέα Σμύρνη 171 22
-- pizzaiolo — Ασπασίας 63, Χολαργός 155 61
-- Peccati Di Gola — Κύπρου 50, Γλυφάδα 166 75
-- La Greca Νίκαια — Ανακρέοντος 5, Νίκαια 184 53
-- Il Tinello Athens — Κνωσού 54, Άλιμος 174 55
-- Margherita Pizza Artigianale Νέα Ερυθραία — Χαριλάου τρικούπη 146 &, Strofiliou, Nea Erithrea 146 71
-- LE PIZZE DI SAN GENNARO — Ευξείνου Πόντου 172, Νέα Σμύρνη 171 23
-- Bellagio Pizza & Pasta Bar — Αγίου Ιωάννου 82, Αγ. Παρασκευή 153 42
-- La Greca Περιστέρι — Τζων Κέννεντυ 149, Περιστέρι 121 36
-- Granello - Pizza Italiana — Περικλέους 18, Αθήνα 105 62
-- Cena — Rogkoti 4, Thessaloniki 546 24
-- Portofino Pizza Kifisia — Levidou 16, Αργυροπούλου 1-3, Κηφισιά 145 62
-- COUPEPE — Ηρ. Πολυτεχνείου 43, Νέα Πεντέλη 152 39
-- Colibri — Εμπεδοκλέους 15, Αθήνα 116 35
-- Etien Pizza Bar — 25ης Μαρτίου 28, Νέο Ψυχικό 154 51
-- "+2H Restaurant" — Rooftop of ERGON Bakehouse, Μητροπόλεως 27, Αθήνα 105 57
-- Dilien — Stournari 43, Athina 106 82
-- Proveleggioς — Παραμυθίας 11, Αθήνα 104 35
-- Funky's Thessaloniki — Grigoriou Lampraki 110, Thessaloniki 543 51
-- Napule Tinos Restaurant — Τριαντάρος 842 00
-- V1935 Roof Garden — Βουλής 29, Αθήνα 105 57
-- Casa Giacomo Kifissia — Λεβίδου 11, Κηφισιά 145 62
-- la nonna — Αναπαύσεως 11, Αθήνα 116 36
-- Mystic Pizza & Pasta — Εμμανουήλ Μπενάκη 76, Αθήνα 106 81
-- Pizza Petrino — Χώρα 840 08
-- Μαρίκα — Αγίας Παρασκευής 109, Χαλάνδρι 152 34
-- Nonna Rossa — Skilosofou 9, Larisa 412 21
-- DR.8 — Δραγατσανίου 8, Αθήνα 105 59
-- Tonino Pizzeria Napoletana — Iereos Papanikola 13-15, Kalamaria 551 31
-- La Greca Ίλιον — Έκτορος 140, Ίλιον 131 23
-- Tartufo Cucina Italiana — Αγ. Θέκλας 9, Αθήνα 105 54
-- Deluxe Pizza — Ιωάννη Καρρά, Neos Marmaras 630 81
-- Ακάκιος μακαρονάδικο — Αγίας Τριάδος 1, Παλαιό Φάληρο 175 64
-- Parlo Restaurant — Αδριανείου 25Α, Αθήνα 115 25
-- Lisa Athens — Φωκίωνος Νέγρη 25, Αθήνα 113 61
-- Alexandros Cafe Restaurant Bar — Egialou 30, Nikiti 630 88
-
-### Kid Friendly Locations (184 locations)
+### Kid Friendly Locations (180 locations)
 Places welcoming families with kids
 
 - ΚΤΗΜΑ ΑΡΙΣΤΗ — Πλουτάρχου 10, Χαλάνδρι 152 34
 - ΕΠΑΥΛΗ ΠΟΛΥΧΩΡΟΣ — Askos 570 16
-- ERGON Agora (East) — Leof. Georgikis Scholis 50, Pilea Chortiatis 555 35
 - Leontario Entertainment Center — Αμαζονoσ 15, Παλληνη 15344
 - Northern Suburbs Riding Club — Tatoiou 137, Acharnes 136 72
 - Funbox — Famelis Spiros, Mikonos 846 00
@@ -2949,15 +2461,14 @@ Places welcoming families with kids
 - Πάρκο Αιξωνής — Δημ. Γούναρη, Γλυφάδα 166 74
 - Butterflies Valley — Επάνω Καλαμωνας 851 06
 - BikeIT — Leof. Meg. Alexandrou 2, Thessaloniki 546 40
-- TAVERN 'MOUSTAKAS' — Βασιλικά Θεσσαλονίκης, Θεσσαλονίκη 570 06
+- TAVERN 'MOUSTAKAS' — Βασιλικά Θεσσαλονίκης, Θεσσαλονίκη 570 06 [also: Greek Restaurants]
 - Πεδίον Άρεως — Λεωφ. Αλεξάνδρας, Αθήνα 114 74
 - K9 Arena — Χαλκίδος 15, Λυκόβρυση 141 23
 - Κεντρο Ελεύθερης Ιππασίας — Epar.Od. Xilokastrou - Trikalon - Mannas, Ξυλόκαστρο 204 00
 - καφέ Nuestro sueno — Καραολή και Δημητρίου, Χολαργός 153 41
 - The Ellinikon Experience Park — Ελληνικό 167 77
 - Γήπεδο Ποδοσφαίρου Πάγου — Πάγος 841 00
-- ΚΤΗΜΑ ΚΟΚΟΤΟΥ — Κτήμα Γ. Κοκοτού 1, Σταμάτα 145 75
-- Piu Verde — Στρατ, Αλ. Παπάγου, Παπάγου 156 69
+- ΚΤΗΜΑ ΚΟΚΟΤΟΥ — Κτήμα Γ. Κοκοτού 1, Σταμάτα 145 75 [also: Wineries & Vineyards]
 - Εθνικό Μουσείο Φυσικής Ιστορίας Γουλανδρή — Όθωνος 100, Κηφισιά 145 62
 - Παραποτάμιο Πάρκο Άρτας — Περιφερειακή Οδός και, Periferiaki odos Afxentiou 1, Arta 471 00
 - Γαϊδουροχώρα - Το Ελληνικό Κέντρο για το Γαϊδούρι — Ηπείρου 40, Κρωπία 194 00
@@ -2974,7 +2485,7 @@ Places welcoming families with kids
 - PLAYMOBIL FunPark — Αμαλιάδος 4, Κηφισιά 145 64
 - Πάρκο Τζένη Καρέζη — Polichni 565 32
 - Άλσος Βεΐκου — Λεωφόρος Βεΐκου, Αναγεννήσεως &, Γαλάτσι 111 46
-- Εθνικός Κήπος — Αθήνα 105 57
+- Εθνικός Κήπος — Αθήνα 105 57 [also: Must-See Attractions]
 - Lemures Family Lifestyle & Play Hub — Vasilikis Tavaki 6, Thermi 570 01
 - RΙVER WEST — Par. Leoforou Kifisou 98, Egaleo 122 41
 - ΠΑΙΔΙΚΕΣ ΕΚΔΗΛΩΣΕΙΣ-ΞΕΝΕΣ ΓΛΩΣΣΕΣ | PETIT PARIS — Κρίνων 2, Νέα Ερυθραία 146 71
@@ -2986,9 +2497,9 @@ Places welcoming families with kids
 - Πάρκο Ελαφιών Αγίου Παντελεήμονος,Άγιος Δημήτριος Κοζάνης — Agios Dimitrios 501 50
 - Block Games — Περικλέους 1, Μαρούσι 151 22
 - Δεντρόσπιτο — Λεωφ. Πεντέλης 102, Βριλήσσια 152 35
-- Κέντρο Πολιτισμού Ίδρυμα Σταύρος Νιάρχος — Λεωφ. Ανδρέα Συγγρού 364, Καλλιθέα 176 74
+- Κέντρο Πολιτισμού Ίδρυμα Σταύρος Νιάρχος — Λεωφ. Ανδρέα Συγγρού 364, Καλλιθέα 176 74 [also: Must-See Attractions]
 - The Mill of the Elves — Πάρκο Ματσόπουλου, Trikala 421 00
-- Εθνικό Αστεροσκοπείο Αθηνών - Κέντρο Επισκεπτών Θησείου — Λόφος Νυμφών Θησείο, ΤΘ 20048, Αθήνα 118 10
+- Εθνικό Αστεροσκοπείο Αθηνών - Κέντρο Επισκεπτών Θησείου — Λόφος Νυμφών Θησείο, ΤΘ 20048, Αθήνα 118 10 [also: Must-See Attractions]
 - Πάρκο ARKOPOLIS — Μαρίας Κιουρί, Ελευσίνα 192 00
 - Pedion Areos — Eth. Aminis 28, Thessaloniki 546 21
 - Λίμνη Μπελέτσι — Ιπποκράτειος Πολιτεία 190 14
@@ -2998,7 +2509,6 @@ Places welcoming families with kids
 - Replayce — OAKA Gate Z, Αμαρυσίας Αρτέμιδος, Μαρούσι 151 22
 - Vagonetto — 51 km National Road Lamia-Amfissa, Amfissa 331 00
 - Πρότυπο Οικογενειακό Πάρκο — Δραγατσανίου, Ελληνικό 167 77
-- Alsos Cholargou / Άλσος Χολαργού — Ευριπίδου 1, Χολαργός 155 62
 - Νέο Ψηφιακό Πλανητάριο Ιδρύματος Ευγενίδου — 387 Syggrou Ave. (entrance 11, Πεντέλης st, Αθήνα 175 64
 - GAME Project — 204, ELeftheriou Venizelou Str N, Αθήνα 141 22
 - Voula Park — Nireos, Voula, Athens 166 73
@@ -3011,7 +2521,7 @@ Places welcoming families with kids
 - Gouves Water Park Water Slides — 88J2+J7, Kato Gouves 700 14
 - Elaiorema — Pylaia 555 35
 - Κτήμα Βρύση - Πολυχώρος εκδηλώσεων — Τύρναβος 401 00
-- Bella Vespa — Κύπρου 11, Γλυφάδα 166 75
+- Bella Vespa — Κύπρου 11, Γλυφάδα 166 75 [also: Italian Restaurants]
 - Ενυδρείο XPLORE Oceans — Αγησιλάου, Μαρούσι 151 23
 - Pony park — 14χλμ ΠΕΟ, EO Thessalonikis Serron, Oreokastro 572 00
 - Adventure Paintball — A/D Thessalonikis Neon Moudanion, Thermi 570 01
@@ -3026,7 +2536,7 @@ Places welcoming families with kids
 - Καψάλας tennis club — Θέση Επτάρια, Nea Michaniona 570 04
 - The Park of Mushrooms — Taliadouri 77, Grevena 511 00
 - Freedom Interactive Playzone — Μακεδονικού Αγώνα, Zappa &, Oreokastro 570 13
-- Kerkini Lake National Park — Κερκίνη, 620 55
+- Kerkini Lake National Park — Κερκίνη, 620 55 [also: Must-See Attractions]
 - Maroussi Tennis Club — Sismanogliou 74, Marousi 151 26
 - HADO Περιστέρι — Ταντάλου 10, Περιστέρι 121 35
 - Πάρκο Φλοίσβος — Πάρκο Φλοίσβου Λεωφόρος Ποσειδονος παλαιο φαληρο, Αθήνα 175 61
@@ -3043,7 +2553,6 @@ Places welcoming families with kids
 - Little Kook — Karaiskaki 17, Athina 105 54
 - Calcetto — Ιωάννου Καλαϊτζάκη, Rethymno 741 00
 - Aqualand — Agios Ioannis 491 00
-- Saloon Park — 3ο χιλ Καρπενησίου Προυσσου, Karpenisi 361 00
 - Flisvos Playground — Palaio Faliro 175 61
 - Luna Park Aidonakia S.A. — Leof. Dimokratias, Agii Anargiri 131 22
 - Rafting No Limits GR — BOURAZANI Konitsa, BOURAZANi KONITSA 441 00
@@ -3057,20 +2566,365 @@ Places welcoming families with kids
 - Family Sports Club — Tositsa 18, Thessaloniki 570 10
 - Little Land - Kids Play — Λεωφ. Ελ. Βενιζέλου 235, Παλαιό Φάληρο 175 63
 
-### Burger Spots (148 locations)
+### Italian Restaurants (175 locations)
+Authentic Italian flavors and pasta
+
+- Totonno Pizzeria — Καλογρέζης 1, Χαλάνδρι 152 32
+- Tre Sorelle Pizza — Αρχελάου 19, Αθήνα 116 35
+- La Cucina di Maria — Πλατεία Τριών Ιεραρχών, Skiathos 370 02
+- Alpino Cucina Italiana — Παπανικολή 66, Χαλάνδρι 152 32
+- Gorlomi — Πλουτάρχου 9, Αθήνα 106 75 [also: Luxury Dining]
+- Navona Restaurant Bar — Leof. Meg. Alexandrou 2, Thessaloniki 546 40
+- ITRIA Cucina Italiana Restaurant — Boumpoulinas 81, Nafplio 211 00
+- Pizzeria MamaRosa — Kanari 48, Kos 853 00
+- Napul'è Italian Comfort Food & Wine — Βασ. Κωνσταντίνου 43, Βάρη 166 72
+- Lolita's Athens — Λεωφ. Κηφισίας 340, Νέο Ψυχικό 154 51 [also: Luxury Dining]
+- Lost Athens — Αρχελάου 7, Αθήνα 116 35
+- Pizza Dough! — Δημητρακοπούλου 17, Αθήνα 117 42
+- Loulis Taste Project — Loulis Taste Project
+- Gloria Gati — Πλ. Αγίου Γεωργίου Καρύτση 6, Αθήνα 105 61
+- Incontro Via108 — Αγ. Ελευθερίου 108, Πειραιάς 185 41
+- Mamy Blue - Pizza Napoletana Glyfada — Ανδρέα Παπανδρέου 126, Γλυφάδα 165 61
+- Cicchetti Prosciutteria & Spritzeria — Fivis 11, Glifada 166 74
+- The italians_peristeri — Αιμιλίου Βεάκη 46, Περιστέρι 121 34
+- Forget About It — Θέτιδος 1, Βριλήσσια 152 38
+- Dei Fratelli - Ristorante Italiano — ΚΡΑΤΗΤΟΣ 10 &, Σπαθαρη, Νέα Σμύρνη 171 21
+- Lupo Trattoria — Βουδούρη 6, Χαλκίδα 341 00
+- Pizza Days - Αγίου Δημητρίου — Ανδρέα Παπανδρέου 2, Αγ. Δημήτριος Αττικής 173 41
+- ΤΑΛΕ ΚΟΥΑΛΕ — Αδριανείου 20, Αθήνα 115 25
+- Italida Restaurant — Φιλελλήνων 9, Πειραιάς 185 36
+- Mamma Mia - Sifnos - Apollonia — Απολλωνία 840 03
+- Sistina Mykonos — Platis Gialos, Mikonos 846 00
+- Mercato — Apollonos 40, Vouliagmeni 166 71 [also: Luxury Dining]
+- Valtezziana 2.0 — Βαλτετσίου 41, Αθήνα 106 81
+- Raffaele Pizza & Pasta — Αμφιπόλεως 45, Thessaloniki 544 54
+- GOLOSO - ΑΧΑΡΝΕΣ — Agiou Eleftheriou 18, Acharnes 136 74
+- Pizza Plain — Nik. Plastira 2, Thessaloniki 542 50
+- La Bella Napoli — Ρουμπέση 64, Αθήνα 172 30
+- Toto's Little Italy — Νικ. Πλαστήρα 29, Νέα Μάκρη 190 05
+- agave athens — Ευφράνορος 40, Αθήνα 116 35
+- Tonino Esperienza Italiana — Χαρ. Θέρμης, Thermi 570 01
+- Luma — Φερεκύδου 2, Αθήνα 116 35
+- Trattoria Casa Bianca — Στρ. Καραϊσκάκη 43, Χαϊδάρι 124 61
+- Cardamomo — Unnamed Road, Ano Mera 846 00
+- Amante Athens — Παραμυθίας 13, Αθήνα 104 35
+- Caya Italian Cuisine Cocktail Bar — Πλάκα Ναξος Κυκλάδες, 843 00
+- Vissente - Italian comfort food — Πλ. Αθανασίου Καρύλλου 9, Νέα Σμύρνη 171 21
+- AGLIO, OLIO & PEPERONCINO — Πορίνου 13, Αθήνα 117 42
+- Trattoria Capanna — Πλουτάρχου 38, Αθήνα 106 75 [also: Luxury Dining]
+- Pizzeria MamaRosa — Κανάρη 48, Κως 853 00
+- Casa di Giorgio Mykonos — Mitropoleos 1, Hora 846 00
+- Nolio Restaurant — Π. Τσαλδάρη 32-34, Μελίσσια 151 27
+- SANTA PASTA Cucina Italiana — Γρ. Λαμπράκη 144, Πειραιάς 185 35
+- Aliola’s Ermou — Ερμού 18 &, Διομείας 2, Αθήνα 105 63
+- Ami Italian Bistrot — Βουλής, Απόλλωνος &, Αθήνα 105 57
+- da Bruno — Agiou Alexandrou 46, Paleo Faliro 175 61
+- Come A Casa — Καραολη Δημήτριου 17, Χαλάνδρι 152 32
+- Malconi's Italian Restaurant — Patriarhou Ioakim 43 &, Πλουτάρχου 23, Αθήνα 106 75
+- Vitello Trattoria Romana — Ζησιμοπούλου 41, Παλαιό Φάληρο 175 64
+- Da Michele — Λεωφ. Μαραθώνος 61, Άνοιξη 145 69
+- Arancini - Restaurant — Λεωφ. Μαραθώνος 56, Παλλήνη 153 51
+- Mitos ARTernative BAR — Χαλκείο 843 02
+- Portofino Pizza Xalandri — Γρ. Γυφτοπούλου 23, Χαλάνδρι 152 33
+- Farina Cucina Italiana Ornos Beach — Beach, Ornos 846 00
+- Portofino Cucina Italiana — Μαρίνα Ζέας, Πειραιάς 185 36
+- ALEX the fresh pasta bar — Μασσαλίας 16, Αθήνα 106 80
+- The Eatalians - Mario & Luigi — Λεωφ. Ελ. Βενιζέλου 190, Ηλιούπολη 163 41
+- Trattoria Santa Rita — Malakopis 19, Thessaloniki 544 53
+- Pizza Tros — Μαρίνα Ζέας, Πειραιάς 185 36
+- Βουλκανιζατέρ — Οδυσσέα Ανδρούτσου 17, Αθήνα 117 41
+- Brunello — Λουκιανού 21b, Αθήνα 106 75
+- Raffaele Pizza & Pasta — P. Mela 8, Evosmos 562 24
+- Puff Daddy Pizzeria — Σκρα 16, Πεύκη 151 21
+- High School Pizza Bar — Leof. Nikis 9Α, Thessaloniki 546 24
+- La Gratella — Vasilissis Olgas, Nafplio 211 00
+- Cupola — Ευφοριωνος 13, Αθήνα 116 35
+- Lollo's Atene — Εθ. Αντιστάσεως 3α, Χαλάνδρι 152 32
+- Kentrina — Likourgou, Chalandri 152 31
+- GOLOSO ristorante pizzeria — Grigoriou Lampraki 6, Ag. Stefanos 145 65
+- Capri Nuovo — Egialou, Nikiti 630 88
+- Caton L'anziano — Δωδεκανήσου 1, Αργυρούπολη 164 52
+- Amici Miei Cucina Italiana — στρατηγού πετρίτη 7, Δροσιά 145 72
+- Il Porto — Μπουμπουλίνας 43, Ναύπλιο 211 00
+- Raffaele Pizza & Pasta — 40.6655613219397, 22.94711932792721
+- Pizza Days - Άνω Λιοσίων — Πηνειού 38, Άνω Λιόσια 133 41
+- Funghi Pizza & Pasta — Iatrou Gogousi 25, κέντρο 564 30
+- Pizzicato Osteria — Eth. Antistaseos 79, Eleftherio Kordelio 563 34
+- Apallou — Μητροπόλεως &, Karolou Ntil 10, Thessaloniki 546 23
+- Matapan — ΕΠΑΡΧΙΑΚΗ ΟΔΟΣ ΓΕΡΟΛΙΜΕΝΑ ΒΑΘΕΙΑΣ, Alika 230 71
+- Pizza Hood — Ernestou Emprar 2, Thessaloniki 546 25
+- Dal Professore Naxos — Sea front - Naxos town Naxos Town, 843 00
+- DE MICHELLE — Μητροπολίτου Ευθυβούλη 17, Νέα Σμύρνη 171 24
+- Dos Margaritas — Emiliou Riadi 5, Thessaloniki 546 40
+- ETERE Ristorante•Spritzeria — Σχοινούσας, Kiprou &, Naxos 843 00
+- Barolo Athens — Davaki 1, Psichiko 154 52
+- Cosa Nostra Fresca Pasta Pagrati — Αρχιμήδους 8, Αθήνα 116 35 [also: Vegetarian Friendly Restaurants]
+- Freskia zymi,pizza ,pasta fresca — P. Tsaldari 29, Neapoli 567 27
+- OVIO — Απόλλωνος 4, Αθήνα 105 57
+- Pablo Pasta Corner — G9W3+63, Astipalea 859 00
+- Pracsitele — Πραξιτέλους 7, Αθήνα 105 62
+- KAMIKAZE — Ναρκίσσου 34-36, Γαλάτσι 111 46
+- La Pasteria — Κασσαβέτη 12, Κηφισιά 145 62
+- Nonna Edda — Λεωφ. Εθ. Αντιστάσεως 62, Καισαριανή 161 21
+- ALIO — Βασιλέως Γεωργίου 34, Χαλάνδρι 152 33
+- Innamorata — Likourgou 5Α, Chalandri 152 31 [also: Luxury Dining]
+- Goloso Cucina e Pizza Italiana — Petroupoleos 68-70, Petroupoli 131 23
+- Casareccio trattoria pizzeria — Ξανθίππου 84, Χολαργός 155 61
+- Filomila — Filomila
+- Frankie — Σκουφά 42, Αθήνα 106 72
+- Il Trovatore — Γοργοποτάμου 14, Παλαιό Φάληρο 175 64
+- Trattoria Italia D'onofrio — Βαρνουντος 6, Αθήνα 117 41
+- mamas pizza — Φυλής 197, Αθήνα 112 52
+- Brigante (Σύνταγμα) — Ξενοφώντος 6, Αθήνα 105 57
+- Napolitivo — Λεωφ. Ποσειδώνος 702, Παλαιό Φάληρο 175 61
+- D'Angelo — Axioti, Mikonos 846 00
+- pastabar — Λεωφ. Δεκελείας 136, Νέα Φιλαδέλφεια Αττικής 143 41
+- Impasto — Paros 844 00
+- Mikres Cyclades — Άνω, 843 00
+- Piadina Lumbro — Ομήρου 15, Αθήνα 106 72
+- Casa Giacomo Paros — Little Venice, Naousa 844 01
+- Μακαρούνες (exceptional cuisine) — Αιμιλίου Βεάκη 70, Περιστέρι 121 34
+- Nebbiolo — Leof. Thiseos 111, Ekali 145 78
+- Canarino — Ηλία Ηλιού 28, Αθήνα 117 43
+- ITALI.CO — Ανδρέα Παπανδρέου 3, Γλυφάδα 166 75
+- Pizzamore — Πρωτοπαπαδάκη 20, Γαλάτσι 111 47
+- Fratti Bistro — Φράττι 1, Αθήνα 117 42
+- Amvix — Akti Papagoi 26, Ermoupoli 841 00
+- Pasta La Vista KALA NERA — Kala Nera 370 10
+- The italians — Βασ. Σοφίας 47, Μαρούσι 151 24
+- ΠΙΤΣΑΡΙΑ ΑΧΙΛΛΕΙΟΝ — Λεωφ. Ακτή Καραϊσκάκη 24, Σαλαμίνα 189 00
+- PARCO PIZZA — Λεωφ. Δημοκρατίας 9, Καματερό 134 51
+- La Pasteria — Βαλαωρίτου 15, Αθήνα 106 71
+- Ο Ιταλός — Αλκυόνης 16, Παλαιό Φάληρο 175 61
+- La Tavola Calda — Giotopoulou 10-12, Kerkira 491 00
+- Signora Trattoria — P. Mela 38, Paleon Patron Germanou 19, Thessaloniki 546 22
+- MARGHERITA — Proxenou Koromila 11, Thessaloniki 546 23
+- Aperio cucina & vino — Μεσογείων 258, Χολαργός 155 61
+- Kasmir — Mesabelia, Korischades 361 00
+- Avli Pizzeria Italian Restaurant — Σκάλα 180 10
+- P3 • Pizza Pasta Piazza — Πλ. Υμηττού 15, Υμηττός 172 37
+- Osteria dai Fioi — Leonida Iasonidou 9, Thessaloniki 546 35
+- Rosticceria di Salonicco — Armenopoulou 27, Thessaloniki 546 35
+- Romatella - Pinsa Romana — Φαλήρου 4, Αθήνα 117 42
+- Piazza D'Amore — 28ης Οκτωβρίου 8, Ηράκλειο 141 21
+- Don Rosario Restaurant — Πλατάνι 732 00
+- Pizza Park — Ηρ. Πολυτεχνείου 24, Νέα Ερυθραία 146 71
+- IL POSTINO — Γριβαίων 3, Αθήνα 106 80
+- Cavaliere Ristorante Concettuale — Λεωφ. Ελ. Βενιζέλου 42, Νέα Σμύρνη 171 22
+- pizzaiolo — Ασπασίας 63, Χολαργός 155 61
+- Peccati Di Gola — Κύπρου 50, Γλυφάδα 166 75
+- La Greca Νίκαια — Ανακρέοντος 5, Νίκαια 184 53
+- Il Tinello Athens — Κνωσού 54, Άλιμος 174 55
+- Margherita Pizza Artigianale Νέα Ερυθραία — Χαριλάου τρικούπη 146 &, Strofiliou, Nea Erithrea 146 71
+- LE PIZZE DI SAN GENNARO — Ευξείνου Πόντου 172, Νέα Σμύρνη 171 23
+- Bellagio Pizza & Pasta Bar — Αγίου Ιωάννου 82, Αγ. Παρασκευή 153 42
+- La Greca Περιστέρι — Τζων Κέννεντυ 149, Περιστέρι 121 36
+- Granello - Pizza Italiana — Περικλέους 18, Αθήνα 105 62
+- Cena — Rogkoti 4, Thessaloniki 546 24
+- Portofino Pizza Kifisia — Levidou 16, Αργυροπούλου 1-3, Κηφισιά 145 62
+- COUPEPE — Ηρ. Πολυτεχνείου 43, Νέα Πεντέλη 152 39
+- Colibri — Εμπεδοκλέους 15, Αθήνα 116 35
+- Etien Pizza Bar — 25ης Μαρτίου 28, Νέο Ψυχικό 154 51
+- "+2H Restaurant" — Rooftop of ERGON Bakehouse, Μητροπόλεως 27, Αθήνα 105 57
+- Dilien — Stournari 43, Athina 106 82
+- Proveleggioς — Παραμυθίας 11, Αθήνα 104 35
+- Napule Tinos Restaurant — Τριαντάρος 842 00 [also: Luxury Dining]
+- V1935 Roof Garden — Βουλής 29, Αθήνα 105 57
+- Casa Giacomo Kifissia — Λεβίδου 11, Κηφισιά 145 62
+- la nonna — Αναπαύσεως 11, Αθήνα 116 36
+- Mystic Pizza & Pasta — Εμμανουήλ Μπενάκη 76, Αθήνα 106 81
+- Pizza Petrino — Χώρα 840 08
+- Μαρίκα — Αγίας Παρασκευής 109, Χαλάνδρι 152 34
+- Nonna Rossa — Skilosofou 9, Larisa 412 21
+- DR.8 — Δραγατσανίου 8, Αθήνα 105 59
+- Tonino Pizzeria Napoletana — Iereos Papanikola 13-15, Kalamaria 551 31
+- La Greca Ίλιον — Έκτορος 140, Ίλιον 131 23
+- Tartufo Cucina Italiana — Αγ. Θέκλας 9, Αθήνα 105 54
+- Deluxe Pizza — Ιωάννη Καρρά, Neos Marmaras 630 81
+- Ακάκιος μακαρονάδικο — Αγίας Τριάδος 1, Παλαιό Φάληρο 175 64
+- Parlo Restaurant — Αδριανείου 25Α, Αθήνα 115 25
+- Lisa Athens — Φωκίωνος Νέγρη 25, Αθήνα 113 61
+
+### Luxury Dining (164 locations)
+Fine dining and upscale experiences
+
+- GB Roof Garden Restaurant & Bar — Γεωρ. Α' 1, Αθήνα 105 64
+- Labros Restaurant — Λεωφ. Ποσειδώνος 20, Βουλιαγμένη 166 71
+- ΜΑΝΗΜΑΝΗ — Φαλήρου 10, Αθήνα 117 42
+- Olympos Naoussa — Leof. Nikis 5, Thessaloniki 546 24
+- Botrini's Restaurant Athens — Λεωφ. Βασιλέως Γεωργίου B 24, Χαλάνδρι 152 33
+- Ex Machina — Εμπεδοκλέους 34, Αθήνα 116 36
+- FEEDEL ASADOR — Ν Ζερβα 24 Και, Κύπρου, Γλυφάδα 166 75
+- Cookoovaya — Χατζηγιάννη Μέξη 2a, Αθήνα 115 28
+- BAOS Greek Restaurant — Myconian Korali Mykonos Town, Mikonos 846 00
+- Travolta Athens — Αγίου Παύλου 33, Περιστέρι 121 32
+- Zanó - Athens — Παναγιώτου Αναγνωστοπούλου 3, Αθήνα 106 73
+- YĒVO By Bill&Coo Mykonos — Μεγάλη Άμμος, Mikonos 846 00
+- Scorpios — Paraga, Mikonos 846 00
+- Mario Restaurant — Λιβάδια, Paros 844 00
+- ΑΝΕΤΟΝ — Ναυάρχου Νικοδήμου 3, Αθήνα 105 57
+- Forte Charitos Restaurant — Χάρητος 43, Αθήνα 106 76
+- Matsuhisa Paros — Avant Mar Hotel, Paros 844 01
+- Drakoulis Dry & Raw Kolonaki — Πλ. Φιλικής Εταιρείας 14, Αθήνα 106 74
+- The Squirrel (within THE DANAI) — 6JGH+XM, Sithonia 630 88
+- Nakal State of Mind — Αυλακίου 100, Πόρτο Ράφτη 190 03
+- Clochard — Κομνηνών 10, Mitropoleos 23, Thessaloniki 546 24
+- MAPPEMONDE RESTAURANT BAR-LOUNGE — 4 Eleftheriou Venizelou Avenue and, Κριεζώτου 2, Αθήνα 106 71 [also: Rooftop Lounges]
+- O Ntinos — Όρμος Γιαννάκη, Kardiani 842 01
+- Elements Restaurant Bar — Oia 847 02
+- Botrini's Restaurant Mykonos — Agios Ioannis Mykonos, Cyclades, 846 00
+- Okra — Μητροπόλεως 82, Αθήνα 105 55 [also: Rooftop Lounges]
+- Varoulko Santorini (within Grace Hotel) — Imerovigli Thira, Santorini 847 00
+- ΝΕΣΤ Rooftop - Monte Kastella — Λεωφ. Αλ. Παπαναστασίου 109, Πειραιάς 185 33 [also: Rooftop Lounges]
+- Valaora Resto Nafplio — Mpanieres, Boumpoulinas, Nafplio 211 00
+- Cinq Sens Athens — Πύρρου 38, Αθήνα 116 33
+- Fuga restaurant & Bar — Πέτρου Κόκκαλη 1, Αθήνα 115 21
+- Prosilio Restaurant — Ag. Panton 15, Zakinthos 291 00
+- The Zillers Rooftop Gastronomy — Μητροπόλεως 54, Αθήνα 105 63 [also: Rooftop Lounges]
+- The Secret Gorge - Restaurant & Wine Tasting Experience — 3rd Klm. National Road, Rethymno 741 50 [also: Wineries & Vineyards]
+- UMA chefs home experience — Ελευθερίας, Πανόραμα - Θέρμη, Τ.Θ.Δ3026, Thessaloniki 570 01
+- Brutus Tavern — Λεβέντη 3, Αθήνα 106 73
+- St George Lycabettus Lifestyle Hotel — Κλεομένους 2, Αθήνα 106 75
+- BurntBone — Αγίου Κωνσταντίνου 50, Μαρούσι 151 24
+- Makris Athens Fine Dining Restaurant — Astiggos 10, Ερμού 119, Αθήνα 105 55
+- Athénée — Βουκουρεστίου 9, Αθήνα 106 71
+- Onuki Restaurant — Costa Navarino Navarino Dunes, Pilos 240 01
+- Pharaoh — Solomou 54, Athina 106 82
+- Koumkan Athens — Χαρ. Τρικούπη 48, Κηφισιά 145 62
+- Esthio Athens — Δημητρακοπούλου 7, Αθήνα 117 42
+- Ronin — Ξανθίππου 2, Αθήνα 106 75
+- abraOvata — Εστιατόριο Λίμνης, Αθήνα 166 71
+- Orizontes Lycabettus — Αριστίππου 1, Αθήνα 106 76 [also: Rooftop Lounges]
+- Venetian Well — Πλατεια Λίλη Δεσύλλα 1, Kerkira 491 00
+- Gallina Athens — Μαρκ. Μπότσαρη 49, Αθήνα 117 42
+- Spianada Meats & Greens — Kapodistriou 32, Kerkira 491 00
+- Metropolis Roof Garden — Μητροπόλεως 15, Αθήνα 105 57 [also: Rooftop Lounges]
+- Botrini's Santorini — Main Street, Nik. Nomikou, Oía 847 02
+- Spondi Restaurant — Πύρρωνος 5, Αθήνα 116 36
+- Makris Restaurant — Miramare Beach, Moraitika 491 00
+- 10 Urban Roof — Λεωφ. Αλεξάνδρας 10, Αθήνα 106 82
+- Teloneio — Limeni 230 62
+- Beefbar Athens — Athens Αστήρ Πάλας, Βουλιαγμένη 166 71
+- Pelagos — Απόλλωνος 40, Βουλιαγμένη 166 71
+- Seeds Restaurant — Oumplianis 14, Diocharous 27, & 161 21
+- Principote Mykonos — Panormos Beach, Mikonos 846 00
+- Koukoumavlos Restaurant — Imerovigli 847 00
+- L'Albero — Filippou 17, Thessaloniki 546 31
+- Tudor Hall — Γεωρ. Α' 3, Αθήνα 105 64 [also: Rooftop Lounges]
+- Simul — Υψηλάντου 63, Αθήνα 115 21
+- Ακρα — Αμύντα 12, Αθήνα 116 35
+- Aleria Restaurant — Μεγ. Αλεξάνδρου 57, Αθήνα 104 35
+- Cabbanes Mykonos — Elia Beach, Mikonos 846 00
+- SHARK Bar | Restaurant - Thessaloniki — Argonafton 2, Kalamaria 551 31
+- SENSE Modern Greek Cuisine — Διονυσίου Αρεοπαγίτου 5, Αθήνα 117 42 [also: Rooftop Lounges]
+- Taverna 37 — Απόλλωνος 40, Βουλιαγμένη 166 71
+- Caretta Athens — Διαδόχου Παύλου 46, Γλυφάδα 166 75
+- ANTHES RESTAURANT — Σκούφου 3, Αθήνα 105 57
+- Alexander's Cigar Lounge - Hotel Grande Bretagne — Ξενοδοχείο Μεγάλη Βρεταννία, Αθήνα 105 64
+- BEASTALIS ,Food for proud meat eaters — Κύπρου 9, Γλυφάδα 166 75
+- Papaioannou Restaurant Kifissia — Κολοκοτρώνη 32, Κηφισιά 145 62
+- Monzu Kifisia — Λεωφ. Κηφισίας 317b, Κηφισιά 145 61
+- Osteria Mamma — Σαλαμίνος 64, Αθήνα 104 35
+- Kozi's — Π. Τσαλδάρη 34, Μελίσσια 151 27
+- Wood Restaurant — Εμμανουήλ Μπενάκη 22, Κηφισιά 145 61
+- Ark — Γρ. Λαμπράκη 2, Γλυφάδα 166 74
+- Restaurant Thymari — Πηνελόπης 19, Lefkada 311 00
+- Cantina — Seralia, Kastro 840 03
+- Ζάαταρ — Χειμάρρας 7, Νέα Ερυθραία 146 71
+- DOLLI•S — Μητροπόλεως 49, Αθήνα 105 56 [also: Rooftop Lounges]
+- Delta Restaurant — Λεωφ. Ανδρέα Συγγρού 364, Αθήνα 176 74
+- Lío Mykonos — Enoplon Dinameon 6, Mikonos 846 00
+- Anama Restaurant — Anama Restaurant, Gialova 240 01
+- Melia fine dining — Τραγάκι 291 00
+- Αφρόψαρο — Μαρίνου Αντύπα 62-66, Ηράκλειο 141 21
+- e&o Pan-Asian Restaurant Athens — Λεωφ. Ανδρέα Συγγρού 385, Παλαιό Φάληρο 175 64
+- Mastelo Restaurant & Bar — Mitropoleos 11, Lefkada 311 00
+- Alemagou — Greece, Mikonos
+- POINT A (Acropolis Point) — Ροβέρτου Γκάλι 4a, Αθήνα 117 42 [also: Rooftop Lounges]
+- Samano Radio Restaurant — Πλ. Φιλόμουσου Εταιρίας 3, Αθήνα 105 58
+- Lauda Restaurant — Oia 847 02
+- Rick's — Πεντέλης 1, Κηφισιά 145 62
+- Like salt — Ir. Politechniou, Tinos 842 00
+- Hygge Ano Syros — Ano Syros 841 00
+- FAIDON'S Athens — Αγίου Ιωάννου 28, Βούλα 166 73
+- Hytra Restaurant & Bar — 1, Πέτρου Κόκκαλη STR, Αθήνα 115 21 [also: Rooftop Lounges]
+- Makris Milos Fine Dining Restaurant — Mytakas, Island 848 00
+- CTC Urban Gastronomy — Πλαταιών 15, Αθήνα 104 35
+- Ora Day — Agoniston Politechniou, Kerkira 491 00
+- Selene Restaurant — Old catholic monastery, Thira 847 00
+- Opsopoion Maganeiai — Komotinis 6, Thessaloniki 546 55
+- Lycabettus Restaurant — Nik. Nomikou, Oía 847 02
+- Noema — Panachra, Mikonos 846 00
+- Hasapika Central Market — Αριστογείτονος 1, Αθήνα 105 51
+- Soil Restaurant — Φερεκύδου 5, Αθήνα 116 35
+- Herve Restaurant — Τριών Ιεραρχών 170, Αθήνα 118 52
+- Son — Leof. El. Venizelou 197, Ilioupoli 163 41
+- Vezené Athens — Βρασίδα 11, Αθήνα 115 28
+- Hunters Room & Grill Restaurant — Αριστοτέλους 23, & Παπάγου 17, Χαλάνδρι 152 34
+- Zurbaran Athens — Πατριάρχου Ιωακείμ 38, Αθήνα 106 75
+- Jerár — Αγίας Βαρβάρας 55, Δάφνη Αττικής 172 35
+- Duck — Chalkis 3, Pilea Chortiatis 570 01
+- Okio Restaurant Fine Dining Athens — Nikis 33 &, Ναυάρχου Νικοδήμου 3, Αθήνα 105 57
+- MOO CASA steak & lobster — Marinou Antipa 66, Iraklio 141 21
+- Bostani Bar & Restaurant — Poulati, Sifnos 840 03
+- The Winter Garden — Γεωρ. Α' 1, Αθήνα 105 64
+- Salonika Restaurant & Bar — Leof. Meg. Alexandrou 2, Thessaloniki 546 40
+- The Windmill Restaurant Skiathos — Pension Margarita, Kontroni Opposite, Skiathos 370 02
+- Perivoli Restaurant — Αρτεμώνας 840 03
+- Στα Καλά Καθούμενα — Ιερά Οδός 25-27-29, Ιερά Οδός 29, Αθήνα 118 54
+- Drakoulis Dry & Raw - Butcheries Voula — Λεωφ. Βασιλέως Παύλου 103, Βούλα 166 73
+- Etrusco — Κάτω Κορακιάνα 490 83
+- Alali Restaurant — epar. od. akrotiriou, Akrotiri 847 00
+- Geco Athens — Λέκκα 14, Αθήνα 105 62
+- atole — Γριβαίων 3 &, Δελφών 5, Αθήνα 106 80
+- Drakoulis Dry & Raw Mykonos — Mykonos 846 00
+- STOFFA Restaurant — Βασ. Αμαλίας 20, Κηφισιά 145 61
+- Τηλέμαχος Athens — Πανεπιστημίου 10, Αθήνα 106 71
+- Moldee Bar Restaurant — Proksenou Koromila &, Mitropolitou Iosif 8, Thessaloniki 546 22
+- Εστιατόριο Ιθάκη — Apollonos, Αθήνας 28, Βουλιαγμένη 166 71
+- Amente Restaurant & Cocktail bar — Varagas, Drimonas 311 00
+- Barbarossa Athens — Λεωφ. Αλκυονίδων 4, Βούλα 166 73
+- Rooftop Terrace on top of St. George Hotel — Αθήνα 106 75 [also: Rooftop Lounges]
+- Electra Roof Garden — Ναυάρχου Νικοδήμου 18-20, Αθήνα 105 57 [also: Rooftop Lounges]
+- Meat the Stars — Λεωφ. Μαραθώνος 63, Πικέρμι 190 09
+- Apospero — Χώρα 840 08
+- Interni Restaurant — Matogianni, Mikonos 846 00
+- Barbarossa Restaurant — Παλιό Λιμάνι Νάουσας, Limanaki, Naousa 844 01
+- Iodio — Λουκιανού 36, Αθήνα 106 75
+- Dionysos restaurant elounda — Unnamed Road, Ag. Nikolaos 720 53
+- Kuzina — Αδριανού 9, Αθήνα 105 55
+- Makris Elounda Fine Dining Restaurant by Domes — Domes of Elounda, Tsifliki, Schisma Elountas 720 53
+- NiDo Athens — Λεβέντη 5, Αθήνα 106 73
+- Wild Duck — Boumpoulinas 67, Nafplio 211 00
+- Ateno Cook & Deli — Αιόλου 52 &, Μιλτιάδου, Αθήνα 105 60
+- Hams & Clams — Λιμάνι, Μαρίνα Ζέας, Πειραιάς 185 37
+- Art Lounge Rooftop — Ναυάρχου Νικοδήμου 1, Αθήνα 105 57 [also: Rooftop Lounges]
+- WooWoo Athens — Πατριάρχου Ιωακείμ 43, Αθήνα 106 75
+- Matsuhisa Mykonos — Belvedere Hotel School of Fine Arts District, Agiou Ioannou 1, Mikonos 846 00
+- Amen Gastronomic — Ηρώνδα 8, Αθήνα 116 35
+- Mitsis N'U Piraeus Port — Αριστείδου 16-20, Πειραιάς 185 31
+- Il Salumaio d' Atene — Παναγίτσας 3, Κηφισιά 145 62
+- Bubo — 5RR3+FH, Sithonia 630 78 (within Ekies All Senses Resort)
+- Marrone Restaurant — Themistokli Sofouli 111, Kalamaria 551 31
+- Iberico — Νικ. Μάντζαρου 18 &, Kotta Roulia, Thessaloniki 546 27
+- Noble Gourmet Restaurant — Elysium Resort & Spa | 5 star hotel in Rhodes, Leoforos Rodou - Kallitheas, Ammoudes 851 00
+- The Borzoi — Papadiamanti, Skiathos 370 02
+- Θανάσης 1948 — Κων/νου Καβάφη 48, Αθήνα 111 43
+- Elexis restaurant — Apollonos 11, Ermoupoli 841 00
+- Ox Athens — Χατζηγιάννη Μέξη 9, Αθήνα 115 28
+
+### Burger Spots (128 locations)
 Gourmet burgers and casual dining
 
 - Queen Burger — Giannitsopoulou 3, Glifada 166 74
 - SmashTag — Michalakopoulou 68, Athina 115 28
 - Raw Street Burger - Chalandri — Αγίας Παρασκευής 2, Χαλάνδρι 152 32
 - HankyPanky — Δεινοχαρους 1, Αθήνα 118 52
-- Ryōtei118 — Dim. Gounari 118, Glifada 166 74
 - LAYERS — Αναξαγόρα 7, Νέα Ερυθραία 146 71
 - Shoreditch Burgers & Sandwiches — Δημητριάδος 186, Βόλος 382 21
-- Koutsi Katsika Street Food Νέα Φιλαδέλφεια — Λεωφ. Δεκελείας 109, Νέα Φιλαδέλφεια Αττικής 143 41
+- Koutsi Katsika Street Food Νέα Φιλαδέλφεια — Λεωφ. Δεκελείας 109, Νέα Φιλαδέλφεια Αττικής 143 41 [also: Gyros & Cheap Eats]
 - PO'BOYS BBQ — Agatharchou 12 &, Λεπενιώτου, Αθήνα 105 54
-- Balboa Thessaloniki — P. Mela 42, Thessaloniki 546 22
-- Jacaranda — Στέλιου Καζαντζίδη 24, Pilea 555 35
+- Balboa Thessaloniki — P. Mela 42, Thessaloniki 546 22 [also: Gyros & Cheap Eats]
 - Street Burger — Λεωφ. Αλίμου 56, Άλιμος 174 55
 - BBC Burger Barbeque Corner — Ἀναπαύσεως 90, Κερατσίνι 187 55
 - Melt Burgers — Λεωφ. Κηφισίας 59, Μαρούσι 151 24
@@ -3078,7 +2932,7 @@ Gourmet burgers and casual dining
 - Bulldogs & the Beast — Al. Svolou 1, Thessaloniki 546 23
 - Hippy Joe — Καραολή και Δημητρίου 5, Βύρωνας 162 31
 - Urban Burger Co. — Δημάρχου Κονταράτου 8, Βόλος 382 21
-- Brothers in Law Smash 'n' Pasta Thermi — 5 χλμ, Χαρ. Θέρμης 1ο χλμ, Thermi 570 01
+- Brothers in Law Smash 'n' Pasta Thermi — 5 χλμ, Χαρ. Θέρμης 1ο χλμ, Thermi 570 01 [also: Italian Restaurants]
 - Serial Grillers — Τράλλεων 130, Γαλάτσι 111 46
 - Jazz Burger Bar Νέο Ηρακλειο — Marinou Antipa 59, Iraklio 141 21
 - RAW Street Burger — Υμηττού 130, Αθήνα 116 34
@@ -3086,32 +2940,27 @@ Gourmet burgers and casual dining
 - Juicy Grill Athens — Λεωφ. Περικλέους 37, Χολαργός 155 61
 - Exberg — Θεμιστοκλέους 56, Αθήνα 106 81
 - Taz Smash Burger — Περικλή Σταύρου 3, Αθήνα 115 24
-- Holy Smoke BBQ Streetfood — Eth. Antistaseos 136, Alexandroupoli 681 00
+- Holy Smoke BBQ Streetfood — Eth. Antistaseos 136, Alexandroupoli 681 00 [also: Gyros & Cheap Eats]
 - Criminal Taste - Smash Burger — Πανόρμου 10, Αθήνα 115 23
 - ΜΠΙΦΤΕΚΑΔΙΚΟ "ΤΟ ΠΑΓΓΑΙΟ" — Mark. Mpotsari 49, Thessaloniki 546 44
-- Chicken Queen — Ευτυχίδου 47, Αθήνα 116 34
+- Chicken Queen — Ευτυχίδου 47, Αθήνα 116 34 [also: Gyros & Cheap Eats]
 - Smash'n Bun — Πατριάρχου Ιωακείμ 48, Αθήνα 106 76
 - PAX Burgers Chalandri — Kolokotroni 18, Chalandri 152 33
 - Burger House "Pangèo" — Mark. Mpotsari 49, Thessaloniki 546 44
-- Meat n Roses Kolonaki — Αμερικής 7, Αθήνα 106 72
+- Meat n Roses Kolonaki — Αμερικής 7, Αθήνα 106 72 [also: Gyros & Cheap Eats]
 - F* Smashing Marousi (Delivery & Take away Only!) — Π. Κυριακού 18, Μαρούσι 151 24
-- Maestro Cantina — EO Thessalonikis Poligirou 32, Thermi 570 01
+- Maestro Cantina — EO Thessalonikis Poligirou 32, Thermi 570 01 [also: Gyros & Cheap Eats]
 - Guilty Adam — Χαριλάου Τρικούπη, Στροφυλίου 146, Νέα Ερυθραία 146 71
-- GODGILLA ΚΕΡΑΤΣΙΝΙ — Θεόφραστου 54, Κερατσίνι 187 56
+- GODGILLA ΚΕΡΑΤΣΙΝΙ — Θεόφραστου 54, Κερατσίνι 187 56 [also: Gyros & Cheap Eats]
 - Birdman — Βουλής 35, Αθήνα 105 57
-- SmashTag — Michalakopoulou 68, Athina 115 28
-- Μπαρ Μπεε Κιου - Φρεαττύδα — Λεωφ. Φρεάττυδος 13, Πειραιάς 185 37
+- Μπαρ Μπεε Κιου - Φρεαττύδα — Λεωφ. Φρεάττυδος 13, Πειραιάς 185 37 [also: Gyros & Cheap Eats]
 - Broz.Skg burger house — Aristotélous 39, Evosmos 562 24
-- What They Said — Eth. Antistaseos 37, Drapetsona 186 48
-- Sinners Smash Burgers — Στέλιου Καζαντζίδη 31, Pilea 555 35
-- PO‘ BOYS skg — Ag. Mina 7, Thessaloniki 546 25
+- Sinners Smash Burgers — Στέλιου Καζαντζίδη 31, Pilea 555 35 [also: Gyros & Cheap Eats]
 - Austin smokehouse bbq — Katouni 25, Thessaloniki 546 25
 - The Smashers Athens — Καλαμιώτου 7, Αθήνα 105 63
-- Ryōtei 118 — Δημ. Γούναρη 118, Γλυφάδα 166 74
 - Dunk Smash Burgers — Peston 82, Thessaloniki 544 53
 - Jazz Burger Bar Νέο Ηρακλειο — Μαρίνου Αντύπα 59, Ηράκλειο 141 21
-- Cantina Manara — Στοά, Ermou 1, Thessaloniki 546 25
-- Arch Beer House — Εθ. Αντιστάσεως 91, Περιστέρι 121 34
+- Arch Beer House — Εθ. Αντιστάσεως 91, Περιστέρι 121 34 [also: Greek Restaurants]
 - Four Hands — Κεραμεικού 111, Αθήνα 104 35
 - Taz Smash Burger — Περικλέους 2, Μαρούσι 151 22
 - Brothers in Law — P. Mela 30, Thessaloniki 546 22
@@ -3119,36 +2968,32 @@ Gourmet burgers and casual dining
 - Cadillac Burgers — Μνησικλέους 6, Αθήνα 105 56
 - Meat n Roses Kolonaki — Omirou 13, Athina 106 72
 - Street Habit Burgers & Sandwiches — Λεωνίδου 41, Μαραθώνος 20, Αθήνα 104 36
-- Raw Street Burger - Thessaloniki — Politechniou 53, Thessaloniki 546 25
-- ΑΜΑΜ - ΕΣΤΙΑΤΟΡΙΟ - ΓΛΥΦΑΔΑ — Γεωρ. Γεννηματά 11, Γλυφάδα 165 62
+- Raw Street Burger - Thessaloniki — Politechniou 53, Thessaloniki 546 25 [also: Gyros & Cheap Eats]
+- ΑΜΑΜ - ΕΣΤΙΑΤΟΡΙΟ - ΓΛΥΦΑΔΑ — Γεωρ. Γεννηματά 11, Γλυφάδα 165 62 [also: Gyros & Cheap Eats]
 - nob.burger — Ερατοσθένους 3, Αθήνα 116 35
-- Τρύφωνας Κεμπαπτζίδικoν - Hamburgerie — Παρασκευοπούλου 51, Περιστέρι 121 34
+- Τρύφωνας Κεμπαπτζίδικoν - Hamburgerie — Παρασκευοπούλου 51, Περιστέρι 121 34 [also: Gyros & Cheap Eats]
 - Burgler — Metamorfoseos 5, Kalamaria 551 31
 - PAX Burgers Chalandri — Κολοκοτρώνη 18, Χαλάνδρι 152 33
 - The Smashers Athens — Kalamiotou 7, Athina 105 63
 - juicygrill_Athens (downtown) — Παλαιών Πατρών Γερμανού 7, Αθήνα 105 61
-- MAVERICK Handmade Street Food — Eth. Antistaseos 179, Kalamaria 551 34
-- Ekiben Kitchen Glyfada — Laodikis 41, Glifada 166 74
 - X11 Burgers — Αρχελάου 14, Αθήνα 116 35
 - Nom street food & smashed burgers — Sofokli Venizelou 30, Rodos 851 00
-- Big Nick — Λεωφόρος Βουλιαγμένης 145, Αθήνα 116 31
-- Parco — D' Esperey 1, Thessaloniki 546 21
+- Big Nick — Λεωφόρος Βουλιαγμένης 145, Αθήνα 116 31 [also: Vegetarian Friendly Restaurants]
+- Parco — D' Esperey 1, Thessaloniki 546 21 [also: Coffee & Brunch Spots]
 - JOKERMAN — Meg. Alexandrou 87, Evosmos 562 24
-- Paul’s Burger — Geor. Papandreou 38, Thessaloniki 546 46
-- MAVERICK Handmade Street Food — Eth. Antistaseos 179, Kalamaria 551 34
-- PRATINA Burger Project — Veroias 5, Thessaloniki 546 25
-- PRATINA Burger Project — Veroias 5, Thessaloniki 546 25
+- Paul’s Burger — Geor. Papandreou 38, Thessaloniki 546 46 [also: Gyros & Cheap Eats]
+- MAVERICK Handmade Street Food — Eth. Antistaseos 179, Kalamaria 551 34 [also: Gyros & Cheap Eats]
+- PRATINA Burger Project — Veroias 5, Thessaloniki 546 25 [also: Gyros & Cheap Eats]
 - Con Voi Brunch - Burgers & Cocktails — Λεωφ. Δροσιάς Σταματάς 2, Δροσιά 145 72
-- Queen Burger — Giannitsopoulou 3, Glifada 166 74
 - Epos Burgers Chalandri — Likourgou 2, Chalandri 152 31
-- ΣΤΗΒΣ Α.Ε. Κεραμεικός - ΧΑΜΠΟΥΡΓΚΕΡ & ΠΙΤΣΕΣ — Σαλαμίνος 42, Αθήνα 104 35
+- ΣΤΗΒΣ Α.Ε. Κεραμεικός - ΧΑΜΠΟΥΡΓΚΕΡ & ΠΙΤΣΕΣ — Σαλαμίνος 42, Αθήνα 104 35 [also: Italian Restaurants]
 - Brothers In Law — Grigoriou Lampraki 244, Pilea 543 52
 - F* Smashing Cholargos — Λεωφ. Μεσογείων 206, Χολαργός 155 61
 - Butcher's Burger Halandri & Steak House — Αγίας Παρασκευής 17, Χαλάνδρι 152 34
-- Hashtag#Burger — Γεωρ. Γεννηματά 26, Γλυφάδα 165 62
+- Hashtag#Burger — Γεωρ. Γεννηματά 26, Γλυφάδα 165 62 [also: Gyros & Cheap Eats]
 - Μπιφτεκάδικο Κυρ Γιώργης — Zefxidos 4, Thessaloniki 546 22
 - PANBURGER — Karpathos 857 00
-- MVP RESTAURANT — Χαρ. Τρικούπη 127, Νέα Ερυθραία 146 71
+- MVP RESTAURANT — Χαρ. Τρικούπη 127, Νέα Ερυθραία 146 71 [also: Mexican Restaurants]
 - Greasy Spoon Athens — Archelaou 14, Athina 116 35
 - Enkelt Eatery Drinkery — Ανδρέα Παπανδρέου 9, Χαλάνδρι 152 34
 - the burger joint — Πλ. Νυμφών 1, Γλυφάδα 166 74
@@ -3159,57 +3004,48 @@ Gourmet burgers and casual dining
 - Tarantino Sandwiches & Fries — Ernestou Emprar 5, Thessaloniki 546 25
 - Comet Street Gourmet Athens — Σωκράτους 3, Μελίσσια 151 27
 - Serial Grillers — Νεότητος 4, Ηράκλειο 141 22
-- Sinners Smash Burgers — Στέλιου Καζαντζίδη 31, Pilea 555 35
 - Ryōtei118 — Dim. Gounari 118, Glifada 166 74
 - Pax Burgers — ΘΕΣΣΑΛΟΝΙΚΗΣ-ΜΟΥΔΑΝΙΩΝ, Thermi 570 01
 - Tarantino Burgers Athens — Δημητρακοπούλου 17, Αθήνα 117 42
-- EKIBEN KITCHEN — Σκούφου 15, Αθήνα 105 57
-- Agora Select — Χατζηγιάννη Μέξη 8 και, Κων/νου Βεντήρη 9, Αθήνα 115 28
-- STIVOS BURGER & STEAK — Ευαγγελισμού της Θεοτόκου 43, Evosmos 562 24
-- Ψυχιατρείο — Αγίου Κωνσταντίνου 16, Ηλιούπολη 163 46
-- Jacaranda — Στέλιου Καζαντζίδη 24, Pilea 555 35
+- Agora Select — Χατζηγιάννη Μέξη 8 και, Κων/νου Βεντήρη 9, Αθήνα 115 28 [also: Greek Restaurants]
+- Ψυχιατρείο — Αγίου Κωνσταντίνου 16, Ηλιούπολη 163 46 [also: Gyros & Cheap Eats]
+- Jacaranda — Στέλιου Καζαντζίδη 24, Pilea 555 35 [also: Gyros & Cheap Eats]
 - Benjamin Burger House — Ανδρέα Γκίνη 8-12, Χαλάνδρι 152 33
-- Ohmami - Street Food / Thessaloniki — Patriarchoi Dionisii E 1, Thessaloniki 546 31
+- Ohmami - Street Food / Thessaloniki — Patriarchoi Dionisii E 1, Thessaloniki 546 31 [also: Gyros & Cheap Eats]
 - Ala Burger — Ταξιαρχών 14, Κορυδαλλός 181 20
-- Πρiγκιπας — Χαρ. Τρικούπη 23, Αθήνα 106 81
+- Πρiγκιπας — Χαρ. Τρικούπη 23, Αθήνα 106 81 [also: Gyros & Cheap Eats]
 - Pax burgers — Αιόλου 34, Αθήνα 105 63
 - ORTSAG - NextGen Street Resto — Κεραμεικού 93-95, Αθήνα 104 35
 - Burger lab — Chandakos 63, Iraklio 712 02
 - Guerilla Chef Burgers — Σολωμού 33, Αθήνα 106 82
 - The Burger Dudes — Θέτιδος 1, Βριλήσσια 152 35
-- Godgilla umami street food — Γεωρ. Κοτζιά 2, Μαρούσι 151 26
+- Godgilla umami street food — Γεωρ. Κοτζιά 2, Μαρούσι 151 26 [also: Gyros & Cheap Eats]
 - BURGERILLA.VOULAS — Λεωφ. Βασιλέως Παύλου 0, Βούλα 166 73
 - Evora Eatery — Diogenous 13, Thessaloniki 544 53
-- STIVOS BURGER & STEAK — Ευαγγελισμού της Θεοτόκου 43, Evosmos 562 24
-- Cantina Manara — Στοά, Ermou 1, Thessaloniki 546 25
+- STIVOS BURGER & STEAK — Ευαγγελισμού της Θεοτόκου 43, Evosmos 562 24 [also: Gyros & Cheap Eats]
+- Cantina Manara — Στοά, Ermou 1, Thessaloniki 546 25 [also: Gyros & Cheap Eats]
 - The Burger Joint — Σολωμού 4, Νέο Ψυχικό 154 51
 - What They Said — Eth. Antistaseos 37, Drapetsona 186 48
 - Butcher's Burger Peristeri & Steak House — Αιμιλίου Βεάκη 41, Περιστέρι 121 34
 - Pax — Eleftheriou Venizelou &, Kalapothaki 8, Thessaloniki 546 24
-- OSTEN — 4χλμ, Χαρ. Θέρμης, Thessaloniki 570 01
+- OSTEN — 4χλμ, Χαρ. Θέρμης, Thessaloniki 570 01 [also: Dessert Shops]
 - ONE BURGER — Αγάθωνος 7, Αθήνα 105 51
-- Sinners Smash Burgers — Στέλιου Καζαντζίδη 31, Pilea 555 35
 - Pass The Smashed — Episkopou Kitrous Nikolaou 2, Thessaloniki 546 35
-- Ekiben Kitchen Glyfada — Laodikis 41, Glifada 166 74
 - Just Burgers — Βασ. Γεωργίου Β 10, Γλυφάδα 166 74
 - Balboa Athens — Αρτέμιδος 1-3, Αθήνα 105 54
 - Tarantino Modiano — Vasileos Irakleiou 33, Thessaloniki 546 24
 - Raw Street Burger - Chalandri — Agias Paraskevis 2, Chalandri 152 32
 - Hanky Panky Palaio Faliro — Πλ. Νταβάρη 2, Παλαιό Φάληρο 175 64
-- Rookie.skg — P. Mela 28, Evosmos 562 24
-- MPEAR — Ευφράνορος 8, Athina 116 35
+- Rookie.skg — P. Mela 28, Evosmos 562 24 [also: Gyros & Cheap Eats]
 - PO‘ BOYS skg — Ag. Mina 7, Thessaloniki 546 25
 - NOB Burger — Κολοκοτρώνη 15 &, Gyftopoulou 10, Chalandri 152 33
 - Pommes — Isavron 5, Thessaloniki 546 22
 - Starlight Burgers — Πραξιτέλους 1, Αθήνα 105 62
-- PANBURGER — Karpathos 857 00
-- Μπιφτεκάδικο Κυρ Γιώργης — Zefxidos 4, Thessaloniki 546 22
 - Diner 72 — Παλαιά ΕΟ Αθηνών Κορίνθου, Δήμος Λουτρακίου - Αγίων Θεοδώρων 200 03
-- Pax Burgers — ΘΕΣΣΑΛΟΝΙΚΗΣ-ΜΟΥΔΑΝΙΩΝ, Thermi 570 01
 - BarBara Que — Εθ. Αντιστάσεως 27, Βριλήσσια 152 35
 - Lobby Athens — Βουλής 30, Αθήνα 105 57
 
-### Must-See Attractions (130 locations)
+### Must-See Attractions (124 locations)
 Explore iconic landmarks and cultural sites
 
 - Archaeological Site of Mystras — Lower Town 231 00
@@ -3227,16 +3063,13 @@ Explore iconic landmarks and cultural sites
 - Ψυρρή — Αθήνα 105 54
 - Το Ρολόι του Πειραιά — Ακτή Μουτσοπούλου 6, Πειραιάς 185 35
 - Blue Caves Zakynthos — Porthmos Zakinthou
-- Ιερά Μονή Δαφνίου — Ιερά Οδός, Χαϊδάρι 124 61
 - Πλατεία Μοναστηρακίου — Απόλλωνος 21, Αθήνα 105 57
-- Εθνικό Αστεροσκοπείο Αθηνών - Κέντρο Επισκεπτών Θησείου — Λόφος Νυμφών Θησείο, ΤΘ 20048, Αθήνα 118 10
 - Τίρυνθα — Tirintha 211 00
 - Ναός Βραυρωνίας Αρτέμιδος — Βραυρώνα 190 03
 - Αέρηδες — Αθήνα 105 55
 - Palace of Aigai (Aegae) — Vergina 590 31
 - Kerameikos Archaeological Site — Ermou 148, Athina 105 53
 - Knossos Palace — Knossos 714 09
-- Ιερός Ναός Αγίων Ισιδώρων Λυκαβηττού — Μονοπατι Λυκαβηττου, Αθήνα 114 71
 - Holy Monastery of the Virgin Mary Chozoviotissa — Amorgos 840 08
 - Νότια Κλιτύς Ακρόπολης Αθηνών — Διονυσίου Αρεοπαγίτου, Αθήνα 105 58
 - Dion — Epar.Od. Katerinis - Limena Litochoriou 910, Dion 601 00
@@ -3265,7 +3098,6 @@ Explore iconic landmarks and cultural sites
 - Syntagma Square — Pl. Sintagmatos, Athina 105 63
 - Porto Katsiki — JH32+48, Apollonioi 310 82
 - Nicopolis — Nicopolis 481 00
-- Kerkini Lake National Park — Κερκίνη, 620 55
 - Βοτανικό Μουσείο Εθνικού Κήπου — Λεωφ. Βασιλίσσης Σοφίας, Αθήνα 105 57
 - Temple of Apollo Epicurius at Bassae of Phigaleia — Figaleia 270 61
 - Arch of Galerius — Egnatia 144, Thessaloniki 546 22
@@ -3292,7 +3124,6 @@ Explore iconic landmarks and cultural sites
 - Archaeological Site of Olympia — Archaia Olympia 270 65
 - Αρχαιολογικός Χώρος Ελευσίνας — Σωτηρίου Γκιόκα 1, Ελευσίνα 192 00
 - Ακρόπολη Αθηνών — Αθήνα 105 58
-- Εθνικός Κήπος — Αθήνα 105 57
 - Bibliothēkē — Athens 106 79
 - Colossus of Rhodes — Pl. Neoriou, Rodos 851 00
 - Caves of Diros — Pyrgos Dirou 230 63
@@ -3321,7 +3152,6 @@ Explore iconic landmarks and cultural sites
 - Αρχαιολογικός Χώρος Σουνίου — Λαυρεωτική 195 00
 - Aggitis River cave — Πηγές, Aggitis 662 00
 - Arkadi Monastery — Arkadi 741 50
-- Κέντρο Πολιτισμού Ίδρυμα Σταύρος Νιάρχος — Λεωφ. Ανδρέα Συγγρού 364, Καλλιθέα 176 74
 - Holy Monastery of Saint John the Theologian — Patmos 855 00
 - Αρχαιολογικός Χώρος Ασκληπιείου Επιδαύρου — Επίδαυρος 210 52
 - Ναός της Αφαίας — Αίγινα 180 10
@@ -3343,125 +3173,6 @@ Explore iconic landmarks and cultural sites
 - Αρχαιολογικού Χώρου Μυκηνών — Μυκήνες 212 00
 - Ancient Stadium of Delphi — Delphi 330 54
 
-### Vegetarian Friendly Restaurants (115 locations)
-Plant-based and vegetarian options
-
-- Mind The Cup — Αιμιλίου Βεάκη 29, Περιστέρι 121 34
-- SEMINARIO — Kiparissou 7, Ermoupoli 841 00
-- Falafeleria — 25is Martiou 14, Thessaloniki 546 46
-- The Heavy Melon - To vari peponi — Apellou 4, Thessaloniki 546 22
-- Mother Vegan Bistro — Δημητρακοπούλου, Αγίου Νικολάου 95, Αθήνα 117 41
-- The Place Secret Yard — Τριπτολέμου 26, Αθήνα 118 54
-- The Doc's Burger Bar — Ανδρέα Μιαούλη 10, Αθήνα 105 54
-- Veganaki — Αθανασίου Διάκου 38 (38, Αθήνα 117 43
-- This is Loco — Φαλήρου 47, Αθήνα 117 42
-- Ohh Boy — Αρχελάου 32, Αθήνα 116 35
-- JOIN juice bars — Marias Kallas 1, Thessaloniki 546 45
-- Naya Lebanese Kitchen — Kolokotroni 10, Chalandri 152 33
-- VIETNAM STREET FOOD — Περικλέους 56, Αθήνα 105 60
-- Τhe Sweet Lab — Λεωφ. Δημοκρατίας 81, Kapodistriou 1, Athina 154 51
-- ThirdEye — Griechenland, Epar.Od. Strovlon-Paleochoras 28, Paleochora 730 01
-- nice n easy — Ομήρου 60, Αθήνα 106 72
-- HANOI ATHENS - AUTHENTIC VIETNAMESE FOOD — Πετράκη 12, Αθήνα 105 63
-- HANDWICH — Egnatia 112, Thessaloniki 546 22
-- Early bites — Γεωρ. Σταύρου 6, Αθήνα 105 59
-- Vicky’s saj — Αραχώβης 29, Αθήνα 106 80
-- The Brunchers — Αγ. Θέκλας 5, Αθήνα 105 54
-- To Tsai — Αλ. Σούτσου 19, Αθήνα 106 71
-- rOOTS — Mpalanou 4, Thessaloniki 546 23
-- Fresh Patisserie — Ευτυχίδου 48, Αθήνα 116 34
-- Groceristas — Σπύρου Μερκούρη 50, Αθήνα 116 34
-- Rubik's — Patreos 92, Patra 262 25
-- Baba Ghanoush — Εμπεδοκλέους 25 - 27, Αθήνα 116 35
-- The Vegan Vandal — Αμύντα 15, Αθήνα 116 35
-- Pernera Vegan Restaurant & Fairtrade Coffee Shop & Market — Σκάλα 855 00
-- Falafel Taste Middle East — Agora Modiano, Vasileos Irakleiou 33, Thessaloniki 546 24
-- λέικ καφέ — Αιγίνης 1, Αθήνα 113 62
-- Butterflies And Hurricanes — Pindarou 1, Thessaloniki 546 39
-- JOIN juice bars — Giannitson 61, Thessaloniki 546 27
-- Mimi's Cafe Vegan — Πλ. Αργεντινής Δημοκρατίας 4, Αθήνα 114 72
-- JERRY’S — Εθ. Αμύνης 27, Παπάγου 156 69
-- Falafel Taste Middle East — Mitropoleos 106 &, Romanou, Thessaloniki 546 21
-- Winners Vegan — Νίκης 27, Αθήνα 105 57
-- OMG in SKG — Episkopou Kitrous Nikolaou 1, Thessaloniki 546 35
-- KARMINIO - All Day Eatery — Βεΐκου 86, Αθήνα 117 41
-- Γη — Γρ. Λαμπράκη 69, Γλυφάδα 166 75
-- Falafel Al Sharq — Λιοσίων 1, Αθήνα 104 38
-- Falafelo Street Food — Σουλτάνη 2-4, Αθήνα 106 83
-- PURE Juice Bar | Kolonaki — Σίνα 21, Αθήνα 106 80
-- Basilikos — 5F7Q+65W, Skiathos 370 02
-- Holy Llama — Nikis, Syntagma 23, Αθήνα 105 57
-- Peas Vegan — Φαλήρου 40, Αθήνα 117 42
-- Filomila Vegeterian Food — Ανδρέα Μεταξά 13, Αθήνα 106 81
-- Los V - Vegan & Vegetarian Restaurant — Πλαταιών 37, Αθήνα 104 35
-- AV IT — Καλαμιώτου 8, Αθήνα 105 60
-- Cosa Nostra Fresca Pasta Pagrati — Αρχιμήδους 8, Αθήνα 116 35
-- COCONUTS Nuts & Specialties — Λεωφ. Βασιλέως Παύλου 67, Βούλα 166 73
-- Vegan tour Athens — Πλ. Μοναστηρακίου, Αθήνα 105 55
-- City Bliss — Κύπρου 14, Ταύρος Αττικής 177 78
-- Noa Poke Koukaki — Φαλήρου 84, Αθήνα 117 41
-- InLoveAgain. Specialty coffee — Κλειτίου 3, Αθήνα 105 60
-- THE ROOM METS — Μαρκ. Μουσούρου 22, Αθήνα 116 36
-- JOIN Juice bars — Paleon Patron Germanou 10, Thessaloniki 546 22
-- Ντάο Βιετναμέζικη Κουζίνα — Λεπενιώτου 14, Αθήνα 105 54
-- Enjoy Just Falafel — Greece, Αριστοτέλους 98, Αθήνα 104 34
-- Dinette Dafni — Μιχαήλ Καραολή 1-3, Αθήνα 172 35
-- Magic Kitchen Χορτοφαγία Θεμιστοκλέους Κέντρο — Θεμιστοκλέους 45, Αθήνα 106 82
-- JOIN juice bars — 11ο χλμ εθνικής οδού, A/D Thessalonikis Neon Moudanion, Thessaloniki 570 01
-- Sugar Killer — Περικλέους 33, Αθήνα 105 63
-- Fontana — Αιόλου 17, Αθήνα 105 51
-- Ροζαλία — Βαλτετσίου 59, Αθήνα 106 81
-- ΓΚΝΟΥ — Επτανήσου 13, Αθήνα 112 57
-- Amigos — Μεγ. Αλεξάνδρου 70, Νέα Σμύρνη 171 22
-- Tarantoúla — Olympou 127, Thessaloniki 546 35
-- Little Bear Piraeus - Vegan Patisserie & Bistro — Little Bear Piraeus - Vegan Patisserie & Bistro
-- NaanStop Indian Cuisine — Λεωφ. Αλεξάνδρας 223, Αθήνα 115 23
-- Avocado — Νίκης 30, Αθήνα 105 57
-- 4 Seasons Bio - Organic Food Market — Νίκης 30, Αθήνα 105 57
-- UP - Κυτταρική Θρέψη — Ακαδημίας 91 &, Themistokleous, Athina 106 77
-- Veganistan — Κεραμεικού 101, Αθήνα 104 35
-- V For Vita — Eligmon 3, Nea Moudania 632 00
-- Indian Haveli — Λεωφ. Ανδρέα Συγγρού 12, Αθήνα 117 42
-- Royal Curry House — Βούλγαρη 7, Αθήνα 104 37
-- Pink Elephant — Sokratous 4Α, Chalandri 152 32
-- Anana Coffee|Food — Πραξιτέλους 33, Αθήνα 105 60
-- Γεύσεις της Δαμασκού — Φωκίωνος Νέγρη 19, Αθήνα 112 57
-- Cookoomela Grill Vegan — Θεμιστοκλέους 43, Αθήνα 106 83
-- mushroom skg — Zefxidos 10, Thessaloniki 546 22
-- Falaifel — Geor. Drosini 12, Thessaloniki 546 44
-- Mama Tierra Acropolis - Vegan street food — Χατζηχρήστου 29, Αθήνα 117 42
-- Wild Souls Athens Voulis — Βουλής 36, Αθήνα 105 57
-- Vegan Beat Athens — Περικλέους 56, Αθήνα 105 60
-- Merry Berry Health Bar — Dim. Gounari 5, Thessaloniki 546 22
-- Amorgos Organic — Epar.Od. Katapolon-Mavris Mitis, Rachidi 840 08
-- Plan(e)t Ice Cream — Ερμού 86, Αθήνα 105 54
-- Shedia Home - Cafe, Restaurant & Giftshop — Κολοκοτρώνη 56, Αθήνα 105 60
-- CALIBRA - Votanikos — CALIBRA - Votanikos
-- JOIN juice bars — Leof. Nikis 73, Thessaloniki 546 22
-- Big Nick — Λεωφόρος Βουλιαγμένης 145, Αθήνα 116 31
-- The Vegan Fairies — Νικ. Πλαστήρα 29, Νέα Ερυθραία 146 71
-- Bamboo Vegan — Ζωοδόχου Πηγής 36, Αθήνα 106 81
-- Ευριπίδης — Λεωφ. Καποδιστρίου 78, Φιλοθέη 142 35
-- DOSA HOUSE — Θεάτρου 3, Αθήνα 105 52
-- VEGAN CAROUSEL — Σοφίας Σλήμαν 6, Αθήνα 115 26
-- ΑΡΙΣΤΟΝ ΛΟΜΠΟΤΕΣΗΣ — Βουλής 10, Αθήνα 105 62
-- Not Just Falafel | Vegeterian food Athens | Vegan Friendly — Ρόμβης 16, Αθήνα 105 62
-- Φakafel — Φakafel
-- Nudie Foodie Psiri only gluten free — Eschilou 42, Athina 105 54
-- falafel bar ΤΟ ΡΕΒΙΘΙ — Παρθενώνος 1, Αθήνα 117 42
-- Fairytale Athens Café & Suites — Leokoriou 16, Athina 105 54
-- Jaipur Palace Plaka — Mnisikleous 7B, Athina 105 56
-- Feyrouz_Athens — Καρόρη 23 και, Αγάθωνος 1, Αθήνα 105 51
-- Melitini — Oia 847 02
-- Exereton — Mitropoleos 69, Thessaloniki 546 23
-- Ice Queen Gelato — Μακρυγιάννη 9, Αθήνα 117 42
-- Joshua Tree Cafe — Αναπαύσεως 13, Αθήνα 116 36
-- Handwich Athens — Τζώρτζ 3, Αθήνα 106 82
-- HAPPY BLENDER — Ηφαίστου 39, Αθήνα 105 55
-- Association of Greeks from Egypt — 3ης Σεπτεμβρίου 56, Αθήνα 104 33
-- Falafel — Ormos Egialis 840 08
-- Το Βαζάκι Juice Bar — Αριστοτέλους 33, Χαλάνδρι 152 34
-
 ### Asian Restaurants (102 locations)
 Diverse Asian flavors and dishes
 
@@ -3472,10 +3183,10 @@ Diverse Asian flavors and dishes
 - GAKU Sushi Izakaya @ Chalandri — Likourgou 4, Chalandri 152 31
 - Shisan Sushi Bar — Μεσογείων 204, Χολαργός 155 61
 - Asian House — Koromila 3, Thessaloniki 546 45
-- Sushimou — Σκούφου 6, Αθήνα 105 57
+- Sushimou — Σκούφου 6, Αθήνα 105 57 [also: Luxury Dining]
 - Ταϊλάνδη — Σωκράτους 7, Μελίσσια 151 27
 - Shisan Sushi Bar — Αιμιλίου Βεάκη 36, Περιστέρι 121 34
-- AXI - 阿锡早点 — Athens, Greece, Akadimou, 104 36
+- AXI - 阿锡早点 — Athens, Greece, Akadimou, 104 36 [also: Gyros & Cheap Eats]
 - Bulacan Halo-Halo — Μιχαλακοπούλου 105, Αθήνα 115 27
 - Akira Sushi Bar | Athens Japanese Restaurant — Σταδίου 30 &, Κοραή 4, Αθήνα 105 64
 - Sushi City — Kalapothaki 7, Thessaloniki 546 45
@@ -3486,8 +3197,8 @@ Diverse Asian flavors and dishes
 - wagamama kifisia — Κασσαβέτη 3, Αθήνα 145 62
 - Sakura Sushi and Steak House — Doukissis Plakentias 73, Athina 115 23
 - Oma Sushi Bar — Ανδρέα Παπανδρέου 22, Ηλιούπολη 163 45
-- Garum Athens — Kelsou 10, Athina 116 36
-- StreetWok — Αιόλου 21, Αθήνα 105 63
+- Garum Athens — Kelsou 10, Athina 116 36 [also: Luxury Dining]
+- StreetWok — Αιόλου 21, Αθήνα 105 63 [also: Gyros & Cheap Eats]
 - Wen Zhou Specialties — Grigoriou Palama 16, Thessaloniki 546 22
 - Shisan Sushi Bar — Ρόμβης 24Α, Αθήνα 105 62
 - Dosirak — Βουλής 33, Αθήνα 105 57
@@ -3499,7 +3210,7 @@ Diverse Asian flavors and dishes
 - GAKU — Απόλλωνος 2, Αθήνα 105 57
 - Kitschen — Κανάρη 5, Πειραιάς 185 37
 - The Sushi Bar — Geor. Vlachou 38, Athina 115 25
-- Street Wok — Ampelokipi Menemeni, Πανόρμου 115Ζ, Αθήνα 115 24
+- Street Wok — Ampelokipi Menemeni, Πανόρμου 115Ζ, Αθήνα 115 24 [also: Gyros & Cheap Eats]
 - Sushaki | Greek Sushi Experience — Eptapirgiou 75, Sikies 566 26
 - Huang — Geor. Theotoka 1, Thessaloniki 546 21
 - Rouan Thai — Νοταρά 131, Πειραιάς 185 36
@@ -3510,16 +3221,16 @@ Diverse Asian flavors and dishes
 - KoYaSan In Voula — KoYaSan In Voula
 - Koi Sushi Bar | Peristeri — Πελασγίας 6, Περιστέρι 121 36
 - Shisan Sushi Bar — Καλαμιώτου 25, Αθήνα 106 81
-- Streetwok — Χαρ. Τρικούπη 144, Νέα Ερυθραία 146 71
+- Streetwok — Χαρ. Τρικούπη 144, Νέα Ερυθραία 146 71 [also: Gyros & Cheap Eats]
 - Zuzuto Ramen — Χαλκηδόνος 66, Αθήνα 115 27
 - Ramen Tales — Al. Svolou 16, Thessaloniki 546 22
-- Tokyo Joe Mykonos — Ano Vrisi, My Mall, Mikonos 846 00
+- Tokyo Joe Mykonos — Ano Vrisi, My Mall, Mikonos 846 00 [also: Luxury Dining]
 - Seoul House Restaurant — Ζησιμοπούλου 40, Παλαιό Φάληρο 175 64
 - Ceci Hong Kong Hot Pot Restaurant — Λεωφ. Ελ. Βενιζέλου 14, Αθήνα 176 76
 - Asian House — Καποδιστρίου 7 &, Paikou, Thessaloniki 546 25
 - RawBata — Lakonias 33, Athina 115 23
-- Ekiben Kitchen Glyfada — Laodikis 41, Glifada 166 74
-- Kenko Japanese Restaurant — Λεωφ. Ελ. Βενιζέλου 22, Νέα Σμύρνη 171 21
+- Ekiben Kitchen Glyfada — Laodikis 41, Glifada 166 74 [also: Burger Spots]
+- Kenko Japanese Restaurant — Λεωφ. Ελ. Βενιζέλου 22, Νέα Σμύρνη 171 21 [also: Luxury Dining]
 - Ten Modern Asian — Μαρίνα Ζέας, Πειραιάς 185 36
 - Tao's Asian Restaurant — Ambelas 844 01
 - Sushaki | Greek Sushi Experience — Komninon 3, Thessaloniki 546 24
@@ -3530,7 +3241,7 @@ Diverse Asian flavors and dishes
 - Mongo Asian Food — John Kouskoura 6, Thessaloniki 546 22
 - TUK TUK THAI STREET FOOD — Βεΐκου 40, Αθήνα 117 42
 - Ikigai - The Dumpling Experience — Veroias 5, Thessaloniki 546 25
-- Ryōtei 118 — Δημ. Γούναρη 118, Γλυφάδα 166 74
+- Ryōtei 118 — Δημ. Γούναρη 118, Γλυφάδα 166 74 [also: Burger Spots]
 - Saipan Κινέζικο Εστιατόριο — Κώστα Βάρναλη 9, Χαλάνδρι 152 33
 - Black Lotus Vietnamese Restaurant — Ικονίου 11, Νέα Σμύρνη 171 23
 - Koi Sushi Bar — Νίκης 15, Αθήνα 105 57
@@ -3538,13 +3249,13 @@ Diverse Asian flavors and dishes
 - KoYaSan in Philadelphia — Λεωφ. Δεκελείας 122, Νέα Φιλαδέλφεια Αττικής 143 41
 - Salamat | Asian Food Store — Δουκίσσης Πλακεντίας 68, Χαλάνδρι 152 34
 - Koyasan in koukaki — 17 & Ο, Ζαν Μωρεάς, Γεωρ. Ανδρούτσου, Αθήνα 117 41
-- Nagomi Jpn — Al. Svolou 41, Thessaloniki 546 22
+- Nagomi Jpn — Al. Svolou 41, Thessaloniki 546 22 [also: Dessert Shops]
 - Noodle Bar Πειραιάς — Ακτή Κουμουνδούρου 60, Πειραιάς 185 34
 - Shisan Sushi Bar — Αλ. Ζαΐμη 1, Μελίσσια 151 27
-- Street wok — Βρυούλων 4, Νέα Φιλαδέλφεια Αττικής 143 41
+- Street wok — Βρυούλων 4, Νέα Φιλαδέλφεια Αττικής 143 41 [also: Gyros & Cheap Eats]
 - Kuchisabishii Sakaba — Falirou 36, Athina 117 42
-- Bebop — Paros 844 00
-- HANOI ATHENS - AUTHENTIC VIETNAMESE FOOD — Πετράκη 12, Αθήνα 105 63
+- Bebop — Paros 844 00 [also: Rooftop Lounges]
+- HANOI ATHENS - AUTHENTIC VIETNAMESE FOOD — Πετράκη 12, Αθήνα 105 63 [also: Vegetarian Friendly Restaurants]
 - Noodle Bar — Απόλλωνος 11, Αθήνα 105 57
 - Toukta Thai food — Ιωνίας 3, Νίκαια 184 50
 - East Pearl Chinese restaurant — Απόλλωνος 2, Αθήνα 105 57
@@ -3553,13 +3264,13 @@ Diverse Asian flavors and dishes
 - Kaii sushi bar — Βρισηίδος 47, Δαναών 44, Ίλιον 131 22
 - Cho Cho San Drosiá — Πεύκων 17, Δροσιά 145 72
 - Bambao Mykonos — Fabrika, Mikonos 846 00
-- EKIBEN KITCHEN — Σκούφου 15, Αθήνα 105 57
+- EKIBEN KITCHEN — Σκούφου 15, Αθήνα 105 57 [also: Burger Spots]
 - SUSHI J — Υμηττού 101, Αθήνα 116 33
 - Kikko Sushi & Fish — Αμφιτρίτης 8, Παλαιό Φάληρο 175 61
-- Nolan — Βουλής 31 - 33, Αθήνα 105 57
-- NYX Japanese Rooftop Gastrobar — Ομήρου 19, Αθήνα 106 19
+- Nolan — Βουλής 31 - 33, Αθήνα 105 57 [also: Luxury Dining]
+- NYX Japanese Rooftop Gastrobar — Ομήρου 19, Αθήνα 106 19 [also: Luxury Dining, Rooftop Lounges]
 - Sushaki | Greek Sushi Experience — Petrou Sindika 11, Thessaloniki 546 43
-- StreetWok — Λεωφ. Ελ. Βενιζέλου 37, Νέα Σμύρνη 171 23
+- StreetWok — Λεωφ. Ελ. Βενιζέλου 37, Νέα Σμύρνη 171 23 [also: Gyros & Cheap Eats]
 - Nakama Sushi Bar — Μασσαλίας 5, Αθήνα 106 80
 - Zafran Indian Kitchen — Περσεφόνης 25, Αθήνα 118 54
 - 168 Bar — Διπύλου 6, Αθήνα 105 53
@@ -3568,7 +3279,96 @@ Diverse Asian flavors and dishes
 - Asian House — Kleanthous 49, Thessaloniki 544 53
 - Mayman — Dodekanisou 1, Peristeri 121 36
 
-### Wineries & Vineyards (85 locations)
+### Vegetarian Friendly Restaurants (85 locations)
+Plant-based and vegetarian options
+
+- SEMINARIO — Kiparissou 7, Ermoupoli 841 00
+- Falafeleria — 25is Martiou 14, Thessaloniki 546 46
+- The Heavy Melon - To vari peponi — Apellou 4, Thessaloniki 546 22
+- Mother Vegan Bistro — Δημητρακοπούλου, Αγίου Νικολάου 95, Αθήνα 117 41
+- Veganaki — Αθανασίου Διάκου 38 (38, Αθήνα 117 43
+- Naya Lebanese Kitchen — Kolokotroni 10, Chalandri 152 33
+- VIETNAM STREET FOOD — Περικλέους 56, Αθήνα 105 60
+- Τhe Sweet Lab — Λεωφ. Δημοκρατίας 81, Kapodistriou 1, Athina 154 51
+- ThirdEye — Griechenland, Epar.Od. Strovlon-Paleochoras 28, Paleochora 730 01
+- nice n easy — Ομήρου 60, Αθήνα 106 72
+- HANDWICH — Egnatia 112, Thessaloniki 546 22
+- Early bites — Γεωρ. Σταύρου 6, Αθήνα 105 59
+- Vicky’s saj — Αραχώβης 29, Αθήνα 106 80
+- rOOTS — Mpalanou 4, Thessaloniki 546 23
+- Fresh Patisserie — Ευτυχίδου 48, Αθήνα 116 34
+- Groceristas — Σπύρου Μερκούρη 50, Αθήνα 116 34
+- Rubik's — Patreos 92, Patra 262 25
+- Baba Ghanoush — Εμπεδοκλέους 25 - 27, Αθήνα 116 35
+- The Vegan Vandal — Αμύντα 15, Αθήνα 116 35
+- Pernera Vegan Restaurant & Fairtrade Coffee Shop & Market — Σκάλα 855 00
+- Falafel Taste Middle East — Agora Modiano, Vasileos Irakleiou 33, Thessaloniki 546 24
+- λέικ καφέ — Αιγίνης 1, Αθήνα 113 62
+- Mimi's Cafe Vegan — Πλ. Αργεντινής Δημοκρατίας 4, Αθήνα 114 72
+- Falafel Taste Middle East — Mitropoleos 106 &, Romanou, Thessaloniki 546 21
+- Winners Vegan — Νίκης 27, Αθήνα 105 57
+- OMG in SKG — Episkopou Kitrous Nikolaou 1, Thessaloniki 546 35
+- Γη — Γρ. Λαμπράκη 69, Γλυφάδα 166 75
+- Falafelo Street Food — Σουλτάνη 2-4, Αθήνα 106 83
+- PURE Juice Bar | Kolonaki — Σίνα 21, Αθήνα 106 80
+- Basilikos — 5F7Q+65W, Skiathos 370 02
+- Peas Vegan — Φαλήρου 40, Αθήνα 117 42
+- Filomila Vegeterian Food — Ανδρέα Μεταξά 13, Αθήνα 106 81
+- Los V - Vegan & Vegetarian Restaurant — Πλαταιών 37, Αθήνα 104 35
+- AV IT — Καλαμιώτου 8, Αθήνα 105 60
+- COCONUTS Nuts & Specialties — Λεωφ. Βασιλέως Παύλου 67, Βούλα 166 73
+- Vegan tour Athens — Πλ. Μοναστηρακίου, Αθήνα 105 55
+- City Bliss — Κύπρου 14, Ταύρος Αττικής 177 78
+- Noa Poke Koukaki — Φαλήρου 84, Αθήνα 117 41
+- InLoveAgain. Specialty coffee — Κλειτίου 3, Αθήνα 105 60
+- THE ROOM METS — Μαρκ. Μουσούρου 22, Αθήνα 116 36
+- Ντάο Βιετναμέζικη Κουζίνα — Λεπενιώτου 14, Αθήνα 105 54
+- Enjoy Just Falafel — Greece, Αριστοτέλους 98, Αθήνα 104 34
+- Dinette Dafni — Μιχαήλ Καραολή 1-3, Αθήνα 172 35
+- Magic Kitchen Χορτοφαγία Θεμιστοκλέους Κέντρο — Θεμιστοκλέους 45, Αθήνα 106 82
+- Sugar Killer — Περικλέους 33, Αθήνα 105 63
+- Fontana — Αιόλου 17, Αθήνα 105 51
+- Ροζαλία — Βαλτετσίου 59, Αθήνα 106 81
+- ΓΚΝΟΥ — Επτανήσου 13, Αθήνα 112 57
+- Tarantoúla — Olympou 127, Thessaloniki 546 35
+- Little Bear Piraeus - Vegan Patisserie & Bistro — Little Bear Piraeus - Vegan Patisserie & Bistro
+- NaanStop Indian Cuisine — Λεωφ. Αλεξάνδρας 223, Αθήνα 115 23
+- Avocado — Νίκης 30, Αθήνα 105 57
+- 4 Seasons Bio - Organic Food Market — Νίκης 30, Αθήνα 105 57
+- UP - Κυτταρική Θρέψη — Ακαδημίας 91 &, Themistokleous, Athina 106 77
+- Veganistan — Κεραμεικού 101, Αθήνα 104 35
+- V For Vita — Eligmon 3, Nea Moudania 632 00
+- Indian Haveli — Λεωφ. Ανδρέα Συγγρού 12, Αθήνα 117 42
+- Royal Curry House — Βούλγαρη 7, Αθήνα 104 37
+- Pink Elephant — Sokratous 4Α, Chalandri 152 32
+- Γεύσεις της Δαμασκού — Φωκίωνος Νέγρη 19, Αθήνα 112 57
+- Cookoomela Grill Vegan — Θεμιστοκλέους 43, Αθήνα 106 83
+- mushroom skg — Zefxidos 10, Thessaloniki 546 22
+- Falaifel — Geor. Drosini 12, Thessaloniki 546 44
+- Mama Tierra Acropolis - Vegan street food — Χατζηχρήστου 29, Αθήνα 117 42
+- Wild Souls Athens Voulis — Βουλής 36, Αθήνα 105 57
+- Vegan Beat Athens — Περικλέους 56, Αθήνα 105 60
+- Merry Berry Health Bar — Dim. Gounari 5, Thessaloniki 546 22
+- Amorgos Organic — Epar.Od. Katapolon-Mavris Mitis, Rachidi 840 08
+- Shedia Home - Cafe, Restaurant & Giftshop — Κολοκοτρώνη 56, Αθήνα 105 60
+- CALIBRA - Votanikos — CALIBRA - Votanikos
+- The Vegan Fairies — Νικ. Πλαστήρα 29, Νέα Ερυθραία 146 71
+- Bamboo Vegan — Ζωοδόχου Πηγής 36, Αθήνα 106 81
+- Ευριπίδης — Λεωφ. Καποδιστρίου 78, Φιλοθέη 142 35
+- DOSA HOUSE — Θεάτρου 3, Αθήνα 105 52
+- VEGAN CAROUSEL — Σοφίας Σλήμαν 6, Αθήνα 115 26
+- Not Just Falafel | Vegeterian food Athens | Vegan Friendly — Ρόμβης 16, Αθήνα 105 62
+- Φakafel — Φakafel
+- Nudie Foodie Psiri only gluten free — Eschilou 42, Athina 105 54
+- Fairytale Athens Café & Suites — Leokoriou 16, Athina 105 54
+- Jaipur Palace Plaka — Mnisikleous 7B, Athina 105 56
+- Melitini — Oia 847 02
+- Handwich Athens — Τζώρτζ 3, Αθήνα 106 82
+- HAPPY BLENDER — Ηφαίστου 39, Αθήνα 105 55
+- Association of Greeks from Egypt — 3ης Σεπτεμβρίου 56, Αθήνα 104 33
+- Falafel — Ormos Egialis 840 08
+
+### Wineries & Vineyards (83 locations)
 Taste exceptional Greek wines and visit vineyards
 
 - DOMAINE SKOURAS / ΚΤΗΜΑ ΣΚΟΥΡΑ Ο.Α.Ε. — Argous - Sternas Rd (10th Km), Malandreni, Άργος 212 00
@@ -3600,7 +3400,6 @@ Taste exceptional Greek wines and visit vineyards
 - Estates Costa Lazaridi - Oenotria Land — 2nd km Kapandriti Kalamos road, Kapandriti, 19014, 190 14
 - Amargiotakis Winery — Dafnes 700 11
 - Gaia Winery Nemea — Κούτσι 205 00
-- The Secret Gorge - Restaurant & Wine Tasting Experience — 3rd Klm. National Road, Rethymno 741 50
 - Οινοποιεία Βεγορίτις — Αγ. Παντελεήμονας, Ag. Panteleimon 532 00
 - Κτήμα Παπαργυρίου — Lalioti Corinthias, Κιάτο 202 00
 - OENOGENESIS S.A. — Επί επαρχιακής οδού Δοξάτο-Αδριανή, Adriani 661 00
@@ -3629,7 +3428,6 @@ Taste exceptional Greek wines and visit vineyards
 - Οινοποιείο Χατζάκης — Αη Μιχάλης 841 00
 - Venetsanos Winery — Caldera Megalochori, Santorini Island 847 00
 - Κτήμα Μερκούρη — M8G5+FM, Κορακοχώρι 271 00
-- ΚΤΗΜΑ ΚΟΚΟΤΟΥ — Κτήμα Γ. Κοκοτού 1, Σταμάτα 145 75
 - Estates Costa Lazaridi Drama — Epar.Od. Platamona - Adrianis 47, Adriani 661 00
 - Lacovino Winery — Έλος 230 55
 - Semeli Estate | Κτήμα Σεμέλη — Επαρ.Οδ. Κιάτου - Νεμέας, Κούτσι 205 00
@@ -3657,51 +3455,34 @@ Taste exceptional Greek wines and visit vineyards
 - Οινοποιείο Πρίφτη — Μαρκάτι 190 01
 - Κτήμα Γράμψα ( Grampsas Winery & Restaurant) — Lagopodo 290 92
 
-### Rooftop Lounges (76 locations)
+### Rooftop Lounges (50 locations)
 Sky-high dining with stunning views
 
 - 180º West Rooftop Lounge Restaurant — Φαλήρου 37-39, Αθήνα 117 42
 - Avocado Cocktail Bar — 23ης Φεβρουαρίου, Parga 480 60
-- Telescope Cafe Bar Restaurant — Φιλικής Εταιρείας, Χαϊδάρι 124 61
 - Allegro — 25 Martiou & Coastal Road, Thessaloniki 546 46
 - A for Athens — Μιαούλη 2-4, Αθήνα 105 54
 - stork rooftop bar restaurant — Λεωφόρος Συγγρού 21, Βούρβαχη 2, Αθήνα 117 43
-- Bebop — Paros 844 00
 - MS — Athinas 1 &, Ερμού, Αθήνα 105 54
 - Bey Hamam — Εγνατία, Mitropolitou Gennadiou 34, Thessaloniki 546 25
-- Morrison • The Premium Rooftop — 17is Noemvriou 87, Pilea 555 35
-- Hyper Astro Bar — Ερμού 78, & Αθηνάς 2, Αθήνα 105 51
-- Πράσινη Τέντα, Λυκαβηττός — Μονοπάτι Λυκαβηττού, Αθήνα 114 71
 - Ennea Rooftop Bar — MonAsty Thessaloniki Autograph Collection, Vasileos Irakleiou 45, Thessaloniki 546 23
 - Liberty View Of Nafplio — Σιδηράς Μεραρχίας 39, Ναύπλιο 211 00
 - Asteria Rooftop — Αστέρας, Λεωφ. Ποσειδώνος 110, Γλυφάδα 166 75
 - La Luna See The View — Παύλου, Κουντουριώτου 73, Δραπετσώνα 186 48
-- LIYSTOR — Ερμού 92-94, Αθήνα 105 54
-- Mosaic Milos — Plaka 848 00
-- Tudor Hall — Γεωρ. Α' 3, Αθήνα 105 64
 - MoMix Bar Athens — Αγ. Αναργύρων 21, Αθήνα 105 54
 - Theathine — Ερμού 46, Αθήνα 105 63
-- DOLLI•S — Μητροπόλεως 49, Αθήνα 105 56
 - Οδος Λυσιου — Mnisikleous 22 and, Lisiou corner, Athina 105 56
 - BG's Roof Garden Terrace — Menaimahou 1 & Theofilopoulou, Καλλιρρόης Avenue, 18, 117 43
 - Horizon Rooftop Of Senses — Ακτή Κουμουνδούρου 24, Πειραιάς 185 33
-- Attic Urban Rooftop — Ερμού 86, Αθήνα 105 54
-- AVATON 1739 - Coffee & Wine Roof — Kastro, Naxos 843 00
 - Margarita At the Top of Sense — Pl. Morichovou 11, Thessaloniki 546 25
-- Orizontes Lycabettus — Αριστίππου 1, Αθήνα 106 76
 - Buena Vista Social Bar — Αγίου Φιλίππου 7, Αθήνα 105 55
 - Sky Bar 360 — Λεωφ. Ποσειδώνος 72, Παλαιό Φάληρο 175 62
-- Hytra Restaurant & Bar — 1, Πέτρου Κόκκαλη STR, Αθήνα 115 21
-- Okra — Μητροπόλεως 82, Αθήνα 105 55
 - 360 Cocktail Bar — Ηφαίστου 2, Αθήνα 105 55
-- Rooftop Terrace on top of St. George Hotel — Αθήνα 106 75
 - Ermou 18 Beyond the Horizon — Ermou 18 Beyond the Horizon
 - Great bear rooftop — Πλ. Θεάτρου 18, Αθήνα 105 52
 - Neoma — Μουσών 13, Αθήνα 117 41
 - ERGON House Athens — 23, Μητροπόλεως Street, Αθήνα 105 57
 - Mira Me Athens — Ερμού 118, Αθήνα 105 54
-- MAPPEMONDE RESTAURANT BAR-LOUNGE — 4 Eleftheriou Venizelou Avenue and, Κριεζώτου 2, Αθήνα 106 71
-- Cafe Avissinia — Κυνέτου 7, Αθήνα 105 55
 - Galaxy Bar — Σταδίου 10, Αθήνα 105 62
 - Swing Cocktail Bar Naxos — Protopapadaki, Naxos 843 00
 - Oceanis Rooftop Garden Cocktails — Πόρος 180 20
@@ -3711,17 +3492,10 @@ Sky-high dining with stunning views
 - GB Roof Garden Restaurant & Bar — GB Roof Garden Restaurant & Bar
 - BOO! Athens — BOO! Athens
 - LUV N ROLL HOUSE Tattoo & Piercing Studio | Athens — Καραϊσκάκη 14, Αθήνα 105 54
-- ΝΕΣΤ Rooftop - Monte Kastella — Λεωφ. Αλ. Παπαναστασίου 109, Πειραιάς 185 33
-- Ανεφάνη — Μνησικλέους 24, Αθήνα 105 56
 - Taratsa Athens — Μητροπόλεως 60, Αθήνα 105 63
-- The Zillers Rooftop Gastronomy — Μητροπόλεως 54, Αθήνα 105 63
 - Horostasio — Σκουλενίου 2B, Αθήνα 105 61
-- Electra Roof Garden — Ναυάρχου Νικοδήμου 18-20, Αθήνα 105 57
 - Premiere Restaurant — Λεωφ. Ανδρέα Συγγρού 89-93, Αθήνα 117 45
-- NYX Japanese Rooftop Gastrobar — Ομήρου 19, Αθήνα 106 19
-- Art Lounge Rooftop — Ναυάρχου Νικοδήμου 1, Αθήνα 105 57
 - THISSIO VIEW - Rooftop Εστιατόριο & Μπάρ — Αποστόλου Παύλου 25, Αθήνα 118 51
-- Metropolis Roof Garden — Μητροπόλεως 15, Αθήνα 105 57
 - Musique Cafe - Restaurant — Ariadnis, Naxos 843 00
 - City ZEN All Day Bar Restaurant — Αιόλου 11, Αθήνα 105 55
 - Hill Athens Rooftop Restaurant — Αποστόλου Παύλου 27, Αθήνα 118 51
@@ -3731,13 +3505,11 @@ Sky-high dining with stunning views
 - Sensimilia Cafe Bar — Δουκίσσης Πλακεντίας 129, Αθήνα 115 23
 - Elysium Athens Rooftop | Dining & Cocktails — 15-17, Ερμού 105 63, Αθήνα
 - Taratsa Open — EO Amfilochias Lefkadas, Lefkada 311 00
-- POINT A (Acropolis Point) — Ροβέρτου Γκάλι 4a, Αθήνα 117 42
 - Couleur Locale — Νορμανού 3, Αθήνα 105 55
 - Anglais Athens — Κηρυκείου 6, Αθήνα 105 55
-- SENSE Modern Greek Cuisine — Διονυσίου Αρεοπαγίτου 5, Αθήνα 117 42
 - Thea Terrace Bar — Απόλλωνος 21, Αθήνα 105 57
 
-### Mexican Restaurants (52 locations)
+### Mexican Restaurants (47 locations)
 Authentic Mexican flavors and spices
 
 - Picante Mexican - Cocktail Bar — Benitses 490 84
@@ -3750,11 +3522,9 @@ Authentic Mexican flavors and spices
 - Casa Mexicana — Δημ. Βασιλείου 16, Νέο Ψυχικό 154 51
 - El Taco Bueno — Αγίας Παρασκευής 110, Χαλάνδρι 152 32
 - Mamacita - Taquería y Coctelería — Απόλλωνος 9Β, Αθήνα 105 57
-- Cocorico — Ιφιγένειας 31, Ίλιον 131 22
 - Juan's Cantina (Βριλήσσια) — Αναπαύσεως 40, Βριλήσσια 152 38
 - Ancho — Attiki Odos, Spata Artemida 190 04
 - El Catrin — Φοίβης 15, Γλυφάδα 166 74
-- MVP RESTAURANT — Χαρ. Τρικούπη 127, Νέα Ερυθραία 146 71
 - Ancho Mexican Grill — Γιαννιτσοπούλου 3, Γλυφάδα 166 74
 - Chicos Tequileria Mexicana — Στρ. Καραϊσκάκη 49, Χαϊδάρι 124 61
 - Poncho TACOS — Θεμιστοκλέους 63, Αθήνα 106 83
@@ -3763,7 +3533,6 @@ Authentic Mexican flavors and spices
 - Foinikas Cocina Y Cocteleria Mexicana — Ηρ. Πολυτεχνείου 76, Χαϊδάρι 124 62
 - Morenita All Day Bar Restaurant — Τάκη 13, Αθήνα 105 54
 - Picasso Athens — Καραολη Δημήτριου 22, Χαλάνδρι 152 32
-- Taco Mazama (Californian Style Mexican Street Food) — Paleon Patron Germanou 28, Thessaloniki 546 22
 - Dos Gardenias — Ήβης 21 &, Ναυάρχου Αποστόλη 17, Αθήνα 105 54
 - Ο Μεξικανός — 157 73, Γεωρ. Παπανδρέου 47, Ζωγράφου 157 73
 - Juan's Cantina — Ευεργέτου Γιαβάση 13Α, Αγ. Παρασκευή 153 42
@@ -3782,16 +3551,14 @@ Authentic Mexican flavors and spices
 - Agavita Cantina Mexicana — Λεωφ. Δεκελείας 86, Νέα Φιλαδέλφεια Αττικής 143 41
 - La Casa Azul — Thivon 143, Peristeri 121 34
 - Taco Loco Athens — Κολοκοτρώνη 39, Αθήνα 105 62
-- Crats Mexican — Giannitson 61, Thessaloniki 546 27
 - La Sirena — Fasianou 1, Thessaloniki 546 25
 - Ancho Mexican Grill — Κολοκοτρώνη και, Γρ. Γυφτοπούλου 9, Χαλάνδρι 152 33
-- Amigos — Μεγ. Αλεξάνδρου 70, Νέα Σμύρνη 171 22
+- Amigos — Μεγ. Αλεξάνδρου 70, Νέα Σμύρνη 171 22 [also: Vegetarian Friendly Restaurants]
 - Ancho Mexican Grill — Ανδρέα Παπανδρέου 35, Μαρούσι 151 22
 - Pueblo Chido, Nea Smyrni — Pueblo Chido, Nea Smyrni
 - Dos Banditos — Δημοσθένους 31, Καλλιθέα 176 71
 - Appaloosa Bar Restaurant — Άνω Μερά 846 00
 - Balero — Χαρ. Τρικούπη 162, Νέα Ερυθραία 145 62
-- Señor Picante — Φαλήρου 40, Αθήνα 117 42
 
 ### Monasteries & Spiritual Sites (45 locations)
 Visit sacred places and spiritual retreats
@@ -3826,14 +3593,14 @@ Visit sacred places and spiritual retreats
 - Ιερά Μονή Κοιμήσεως της Θεοτόκου Αγνούντος — Επίδαυρος 210 54
 - Ιερός Ναός Μεταμόρφωσης του Σωτήρος — Κολοκοτρώνη, Κηφισιά 145 62
 - Ιερά Μονή Αγίου Παντελεήμονος Κοκκιναρά Πεντέλης — 3VP8+Q2, Κηφισιά 145 63
-- Ιερά Μονή Δαφνίου — Ιερά Οδός, Χαϊδάρι 124 61
+- Ιερά Μονή Δαφνίου — Ιερά Οδός, Χαϊδάρι 124 61 [also: Must-See Attractions]
 - Ιερά Μονή Γενεθλίου της Θεοτόκου (Πελαγίας) — Ιερά Μονή Γενεθλίου της Θεοτόκου - Πελαγίας, Κόκκινο 320 01
 - Ιερά Μονή Παναγίας Γοργοεπηκόου — Μακεδονομάχων, Μάνδρα-Ειδύλλια 196 00
 - Ιερά Μονή Καισαριανής — Καισαριανή 161 22
 - Παρεκκλήσι Αγίου Γεωργίου — Βουλιαγμένη 166 71
 - Ιερός Ναός Αγίου Νεκταρίου Αιγίνης — Κοντός 180 10
 - Οσίου Ἐφραίμ — Αγίου Εφραίμ, Νέα Μάκρη 190 05
-- Ιερός Ναός Αγίων Ισιδώρων Λυκαβηττού — Μονοπατι Λυκαβηττου, Αθήνα 114 71
+- Ιερός Ναός Αγίων Ισιδώρων Λυκαβηττού — Μονοπατι Λυκαβηττου, Αθήνα 114 71 [also: Must-See Attractions]
 - Ιερά Μονή Μεταμόρφωσης του Σωτήρος Σαγματά — Ύπατο 322 00
 - Ιερόν Ησυχαστήριον Αγίας Τριάδος - Αγίου Νεκταρίου Αιγίνης — 37°44'54.9"N 23°29, 03 6"E, Κοντός 180 10
 - Ιερός Ναός Αγίας Ειρήνης — Αιόλου 36, Αθήνα 105 60
