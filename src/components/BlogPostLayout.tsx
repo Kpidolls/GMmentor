@@ -22,10 +22,10 @@ export default function BlogPostLayout({ titleKey, paragraphs }: Props) {
   const { t } = useTranslation();
 
   return (
-    <Container maxW="4xl" py={10}>
-      <Heading as="h1" mb={6}>{t(titleKey)}</Heading>
+    <Container maxW="5xl" py={{ base: 8, md: 14 }} px={{ base: 4, md: 0 }}>
+      <Heading as="h1" mb={8}>{t(titleKey)}</Heading>
       {paragraphs.map((pKey) => (
-        <Text key={pKey} mb={4} lineHeight="1.8">
+        <Text key={pKey} mb={5} lineHeight="1.85">
           {t(pKey)}
         </Text>
       ))}

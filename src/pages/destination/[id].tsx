@@ -102,11 +102,11 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(destinationJsonLd) }} />
       </Head>
 
-      <main className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+      <main className="min-h-screen bg-slate-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
           <img src={destination.img} alt={destinationName} className="w-full h-56 sm:h-72 object-cover" loading="eager" />
 
-          <div className="p-6 sm:p-8">
+          <div className="p-6 sm:p-8 lg:p-10">
             <p className="text-xs uppercase tracking-[0.2em] text-slate-500 mb-3">
               {t('destination.pageLabel', 'Destination Guide')}
             </p>

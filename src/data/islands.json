@@ -38,7 +38,13 @@
       "ακροπολη",
       "αθήνα",
       "athena",
-      "athína"
+      "athína",
+      "athina greece",
+      "athens greece",
+      "athinaa",
+      "athenss",
+      "αθήνας",
+      "αθηνας"
     ],
     "slug": "islands-athens-title-cab4"
   },
@@ -84,7 +90,15 @@
       "χανιά",
       "ρεθυμνο",
       "ρέθυμνο",
-      "irakleio"
+      "irakleio",
+      "kriti",
+      "kriti island",
+      "cretee",
+      "kritii",
+      "krhth",
+      "kritis",
+      "κριτη",
+      "κρήτης"
     ],
     "slug": "islands-crete-title-436b"
   },
@@ -126,7 +140,15 @@
       "θεσσαλονίκη",
       "σαλονικα",
       "σαλονίκη",
-      "thessaloníki"
+      "thessaloníki",
+      "thessalonica",
+      "thesalonika",
+      "thesalonica",
+      "thessalonikii",
+      "thesalonikii",
+      "thesalonik",
+      "θεσαλονικη",
+      "θεσσαλονικης"
     ],
     "slug": "islands-thessaloniki-title-1711"
   },
@@ -165,7 +187,13 @@
       "νησι",
       "μυκονος",
       "μύκονος",
-      "χώρα μυκόνου"
+      "χώρα μυκόνου",
+      "myconos",
+      "mikonos",
+      "mykonos greece",
+      "mykonoss",
+      "mikonoss",
+      "μυκόνου"
     ],
     "slug": "islands-mykonos-title-2211"
   },
@@ -205,7 +233,16 @@
       "θηρα",
       "θήρα",
       "fira",
-      "oía"
+      "oía",
+      "santorine",
+      "santoriny",
+      "santorini greece",
+      "thera",
+      "santorinii",
+      "santoroni",
+      "santorni",
+      "σαντορίνι",
+      "σαντορινι"
     ],
     "slug": "islands-santorini-title-ab12"
   },
@@ -240,7 +277,14 @@
       "ροδος",
       "ρόδος",
       "rhodos",
-      "rodos island"
+      "rodos island",
+      "rodhes",
+      "rhodes greece",
+      "rodhos",
+      "rhodess",
+      "rodoss",
+      "ροδοσ",
+      "ρόδου"
     ],
     "slug": "islands-rhodes-title-c282"
   },
@@ -274,7 +318,13 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "egina",
+      "aigina",
+      "eginna",
+      "aiginaa",
+      "αιγινα",
+      "αίγινα"
     ],
     "slug": "islands-aegina-title-236d"
   },
@@ -310,7 +360,11 @@
       "νησι",
       "κερκυρα",
       "κέρκυρα",
-      "corfu town"
+      "corfu town",
+      "korfu",
+      "corfou",
+      "kerkyraa",
+      "kerkura"
     ],
     "slug": "islands-corfu-title-063c"
   },
@@ -353,12 +407,18 @@
       "πάρος",
       "παροικια",
       "παροικιά",
-      "naousa paros"
+      "naousa paros",
+      "paros greece",
+      "paross",
+      "paroos",
+      "parros",
+      "παροσ",
+      "πάρου"
     ],
     "slug": "islands-paros-title-f417"
   },
   {
-    "id": " island-zakynthos",
+    "id": "island-zakynthos",
     "title": "islands.zakynthos.title",
     "img": "/assets/images/zakynthos.webp",
     "description": "islands.zakynthos.description",
@@ -392,7 +452,16 @@
       "zakynthos town",
       "laganas",
       "τσιλιβι",
-      "τσιλίβι"
+      "τσιλίβι",
+      "zakintos",
+      "zakinthos",
+      "zacynthos",
+      "zakynthos greece",
+      "zakynthoss",
+      "zakinthoss",
+      "zakyntho",
+      "ζακυνθοσ",
+      "ζακύνθου"
     ],
     "slug": "islands-zakynthos-title-83c5"
   },
@@ -433,7 +502,11 @@
       "παραλιες",
       "νησι",
       "λευκαδα",
-      "λευκάδα"
+      "λευκάδα",
+      "lefkatha",
+      "lefkadaa",
+      "lefkadda",
+      "λευκάδας"
     ],
     "slug": "islands-leukada-title-851c"
   },
@@ -465,7 +538,14 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "skiatos",
+      "skiathos greece",
+      "skiathoss",
+      "skiatoss",
+      "skiatho",
+      "σκιαθοσ",
+      "σκιάθου"
     ],
     "slug": "islands-skiathos-title-05c5"
   },
@@ -502,7 +582,13 @@
       "ναξος",
       "νάξος",
       "chora naxos",
-      "χώρα νάξου"
+      "χώρα νάξου",
+      "naksos",
+      "naxo",
+      "naxoss",
+      "naxoos",
+      "ναξοσ",
+      "νάξου"
     ],
     "slug": "islands-naxos-title-6ec5"
   },
@@ -535,7 +621,14 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "karpatos",
+      "karpathos greece",
+      "karpathoss",
+      "karpatthos",
+      "karpatho",
+      "καρπαθοσ",
+      "κάρπαθος"
     ],
     "slug": "islands-karpathos-title-5dcb"
   },
@@ -569,7 +662,14 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "siros",
+      "syra",
+      "syross",
+      "siross",
+      "syro",
+      "συροσ",
+      "σύρου"
     ],
     "slug": "islands-syros-title-cb94"
   },
@@ -602,7 +702,13 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "koss",
+      "kos greece",
+      "kosss",
+      "koos",
+      "κωσ",
+      "κω"
     ],
     "slug": "islands-kos-title-008b"
   },
@@ -639,7 +745,13 @@
       "κεφαλονιά",
       "argostoli",
       "αργοστολι",
-      "αργοστόλι"
+      "αργοστόλι",
+      "kefallonia",
+      "cephalonia",
+      "kefalonnia",
+      "kefallonnia",
+      "kefalonya",
+      "κεφαλονιάς"
     ],
     "slug": "islands-kefalonia-title-1d8c"
   },
@@ -672,7 +784,14 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "kitnos",
+      "kithnos",
+      "kythnoss",
+      "kithnoss",
+      "kythno",
+      "κυθνοσ",
+      "κύθνου"
     ],
     "slug": "islands-kythnos-title-2da7"
   },
@@ -704,7 +823,13 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "skiros",
+      "skyro",
+      "skyross",
+      "skiross",
+      "σκυροσ",
+      "σκύρου"
     ],
     "slug": "islands-skyros-title-0372"
   },
@@ -737,7 +862,15 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "limnos",
+      "lymnos",
+      "leimnos",
+      "limnos island",
+      "limnoss",
+      "leimnoss",
+      "λημνος",
+      "λήμνος"
     ],
     "slug": "islands-lemnos-title-fe37"
   },
@@ -770,7 +903,12 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "sifno",
+      "sifnoss",
+      "sifnoos",
+      "σιφνοσ",
+      "σίφνου"
     ],
     "slug": "islands-sifnos-title-9234"
   },
@@ -842,7 +980,12 @@
       "σιθωνια",
       "χαλκιδική",
       "κασσάνδρα",
-      "σιθωνία"
+      "σιθωνία",
+      "halkidhiki",
+      "chalcidice",
+      "halkidikii",
+      "chalkidikii",
+      "χαλκιδικης"
     ],
     "slug": "islands-halkidiki-title-b021"
   },
@@ -883,7 +1026,15 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "euboea",
+      "euboia",
+      "evvoia island",
+      "eviaa",
+      "evoiyaa",
+      "evvoiaa",
+      "ευβοια",
+      "εύβοια"
     ],
     "slug": "islands-evia-title-afcf"
   },
@@ -922,7 +1073,13 @@
       "χίος",
       "chora chios",
       "χωρα χιου",
-      "χώρα χίου"
+      "χώρα χίου",
+      "khios",
+      "hios island",
+      "chioss",
+      "chio",
+      "χιοσ",
+      "χίου"
     ],
     "slug": "islands-chios-title-37ee"
   },
@@ -962,7 +1119,12 @@
       "τήνος",
       "panagia tinos",
       "παναγια τηνου",
-      "παναγία τήνου"
+      "παναγία τήνου",
+      "tino",
+      "tinoss",
+      "tinoos",
+      "τηνοσ",
+      "τήνου"
     ],
     "slug": "islands-tinos-title-6acb"
   },
@@ -1004,7 +1166,12 @@
       "ναύπλιο",
       "bourtzi",
       "μπουρτζι",
-      "μπουρτζί"
+      "μπουρτζί",
+      "nafplio greece",
+      "nafplioo",
+      "nafleio",
+      "naflio",
+      "ναύπλιου"
     ],
     "slug": "islands-nafplio-title-8ae6"
   },
@@ -1038,7 +1205,12 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "astypalaia",
+      "astipalea",
+      "astypalaea",
+      "αστυπαλαια",
+      "αστυπάλαια"
     ],
     "slug": "islands-astypalea-title-e319"
   },
@@ -1073,7 +1245,13 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "ydra island",
+      "hydraa",
+      "idraa",
+      "ydraa",
+      "υδρα",
+      "ύδρας"
     ],
     "slug": "islands-hydra-title-895c"
   },
@@ -1106,7 +1284,13 @@
       "προορισμος",
       "διακοπες",
       "παραλιες",
-      "νησι"
+      "νησι",
+      "amorgo",
+      "amorgos greece",
+      "amorgoss",
+      "amorgoos",
+      "αμοργοσ",
+      "αμόργου"
     ],
     "slug": "islands-amorgos-title-7e79"
   },
@@ -1159,7 +1343,12 @@
       "pelio",
       "volos pelion",
       "βολος",
-      "βόλος"
+      "βόλος",
+      "pilio",
+      "pilioo",
+      "pelioo",
+      "pelionn",
+      "πήλιου"
     ],
     "slug": "islands-pelion-title-b1bf"
   }

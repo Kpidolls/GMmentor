@@ -26,9 +26,9 @@ const TravelInsurance = () => {
         <link rel="canonical" href="https://googlementor.com/insurance" />
       </Head>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
         {/* Title Section */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-14 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
             {t('travelInsurance.title', 'Protect Your Travels with Insurance')}
           </h1>
@@ -55,7 +55,7 @@ const TravelInsurance = () => {
         </div>
 
         {/* Call-to-Action Section */}
-        <div className="bg-white p-6 sm:p-8 lg:p-12 rounded-xl shadow-lg border border-gray-200 mb-12">
+        <div className="bg-white p-6 sm:p-8 lg:p-12 rounded-xl shadow-lg border border-gray-200 mb-14 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-800 text-center mb-6">
             {t('travelInsurance.ctaTitle', 'Get Covered Today!')}
           </h2>

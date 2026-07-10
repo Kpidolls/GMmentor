@@ -310,7 +310,7 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
   }
 
   return (
-    <Container maxW="4xl" py={10}>
+    <Container maxW="5xl" py={{ base: 8, md: 14 }} px={{ base: 4, md: 0 }}>
       <Head>
         <title>{`${post.title} | Googlementor`}</title>
         <meta key="description" name="description" content={metaDescription} />
@@ -349,7 +349,7 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
       </Head>
       
       {/* Navigation and Language Switcher */}
-          <HStack justify="space-between" align="center" mb={6}>
+          <HStack justify="space-between" align="center" mb={8}>
             <NextLink href="/blog" passHref>
               <Button variant="ghost" size="sm">
                 ← {t('blog.backToBlog', 'Back to Blog')}
@@ -391,18 +391,18 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
         </Alert>
       )}
       
-      <Heading as="h1" size="xl" mb={4}>{post.title}</Heading>
-      <Text fontSize="sm" color="gray.500" mb={2}>
+      <Heading as="h1" size="xl" mb={5}>{post.title}</Heading>
+      <Text fontSize="sm" color="gray.500" mb={3}>
         {formatPostDate(post.date, post.language, { year: 'numeric', month: 'long', day: 'numeric' })}
       </Text>
-      <Text fontSize="md" color="gray.700" mb={4}>{post.summary}</Text>
+      <Text fontSize="md" color="gray.700" mb={6} lineHeight="1.8">{post.summary}</Text>
 
       <Box className="blog-content">
         <MDXRemote {...mdxSource} components={MarkdownComponents} />
       </Box>
 
       {mentionedEntities.length > 0 ? (
-        <Box mt={10} mb={2}>
+        <Box mt={12} mb={2}>
           <Heading as="h2" size="md" mb={3}>
             {t('blog.placesMentioned', 'Featured Places In This Guide')}
           </Heading>

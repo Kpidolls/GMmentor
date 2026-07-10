@@ -32,16 +32,16 @@ const About = () => {
   ];
 
   return (
-    <footer id="footer" className="mt-12 border-t border-slate-700/70 bg-slate-950 text-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-9 sm:py-12">
-        <div className="mb-6 pb-4 sm:mb-8 sm:pb-6 border-b border-slate-800">
+    <footer id="footer" className="mt-16 border-t border-slate-700/70 bg-slate-950 text-slate-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14 lg:py-16">
+        <div className="mb-8 pb-5 sm:mb-10 sm:pb-7 border-b border-slate-800">
           <h2 className="text-lg sm:text-xl font-primary font-bold tracking-tight text-white">Googlementor</h2>
           <p className="mt-1.5 sm:mt-2 text-[13px] sm:text-sm leading-snug sm:leading-normal font-secondary text-slate-300 max-w-xl sm:max-w-2xl">
             Curated places, practical travel tools, and trusted guides for exploring Greece with confidence.
           </p>
         </div>
 
-        <div className={`grid grid-cols-1 ${featureFlags.buyMeCoffeeEnabled ? 'md:grid-cols-4' : 'md:grid-cols-3'} gap-6 sm:gap-8`}>
+        <div className={`grid grid-cols-1 ${featureFlags.buyMeCoffeeEnabled ? 'md:grid-cols-4' : 'md:grid-cols-3'} gap-8 sm:gap-10`}>
           {/* Links Section */}
           <section className="space-y-3 sm:space-y-4">
             <h3 className="text-xs font-bold font-primary uppercase tracking-[0.14em] text-slate-400">{t('about.linksTitle', 'Quick Links')}</h3>
@@ -124,7 +124,7 @@ const About = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="mt-7 sm:mt-10 pt-4 sm:pt-5 border-t border-slate-800 flex flex-col md:flex-row md:items-center md:justify-between gap-2 sm:gap-3 text-slate-400">
+        <div className="mt-9 sm:mt-12 pt-5 sm:pt-6 border-t border-slate-800 flex flex-col md:flex-row md:items-center md:justify-between gap-2 sm:gap-3 text-slate-400">
           <p className="text-xs font-secondary">
             &copy; {new Date().getFullYear()} {t('about.copyright')}
           </p>

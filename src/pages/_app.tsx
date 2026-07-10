@@ -95,7 +95,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       {shouldEnableAnalytics && <Analytics />}
       <AddToItineraryNotifier />
       <Header />
-      <main className={roboto.className}>
+      <main className={`${roboto.className} gm-page-shell`}>
         <Layout>
           <Component {...pageProps} />
           <BackToTop />

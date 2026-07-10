@@ -35,15 +35,15 @@ const Store: React.FC = () => {
         <link rel="canonical" href="https://googlementor.com/store" />
       </Head>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="text-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="text-center mb-8 sm:mb-10">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
             {t('store.title', { defaultValue: 'Travel Gear' })}
           </h1>
         </div>
 
         {/* Filter Buttons */}
-        <div className="mt-1 flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
             {['all', 'amazon', 'temu'].map((key) => (
             <button
               type="button"
@@ -65,7 +65,7 @@ const Store: React.FC = () => {
         </div>
 
         {/* Product Grid */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-10">
           {filteredProducts.slice(0, visibleProducts).map((product) => (
             <div
               key={product.id || product.name}
@@ -127,7 +127,7 @@ const Store: React.FC = () => {
 
         {/* View More Button */}
         {visibleProducts < filteredProducts.length && (
-          <div className="mt-8 text-center">
+          <div className="mt-10 text-center">
             <button
               onClick={() => setVisibleProducts((prev) => prev + 16)}
               className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
@@ -138,7 +138,7 @@ const Store: React.FC = () => {
         )}
 
         {/* Footer Note */}
-        <p className="mt-8 text-sm text-gray-500 text-center">
+        <p className="mt-10 text-sm text-gray-500 text-center">
           {t('store.products.footerNote', {
             defaultValue: 'Discover the best products for your travel needs.',
           })}

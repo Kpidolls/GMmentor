@@ -17,9 +17,9 @@ export default function MobileDataPage() {
         <link rel="canonical" href="https://googlementor.com/airalo" />
       </Head>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
         {/* Title Section */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-8 sm:mb-10">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
             {t("airalo.title", "Mobile Travel Data with Airalo")}
           </h1>
@@ -32,8 +32,8 @@ export default function MobileDataPage() {
         </div>
 
         {/* Content Section */}
-        <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-200">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-xl shadow-lg border border-gray-200">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
             {/* Image */}
             <div className="flex justify-center">
               <Link

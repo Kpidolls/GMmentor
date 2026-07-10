@@ -50,8 +50,11 @@ const GREEK_TO_LATIN: Record<string, string> = {
 
 let cachedPosts: Post[] | null = null;
 let cachedEntities: EntityRecord[] | null = null;
+let cachedPriorityPosts: Post[] | null = null;
 const entityTermsCache = new Map<string, string[]>();
 const mentionedGuidesCache = new Map<string, Post[]>();
+const normalizedPostCache = new Map<string, { title: string; summary: string; combined: string }>();
+const guideTargetIdSetCache = new Map<string, Set<string>>();
 
 function getAllCachedPosts(): Post[] {
   if (!cachedPosts) {
@@ -65,6 +68,13 @@ function getAllCachedEntities(): EntityRecord[] {
     cachedEntities = loadEntitiesIndex().entities;
   }
   return cachedEntities;
+}
+
+function getPriorityCachedPosts(): Post[] {
+  if (!cachedPriorityPosts) {
+    cachedPriorityPosts = getAllCachedPosts().filter(isPriorityGuide);
+  }
+  return cachedPriorityPosts;
 }
 
 function escapeRegExp(value: string): string {
@@ -130,6 +140,34 @@ function getGuideTargetEntityIds(post: Post): string[] {
   return Array.isArray(post.entity_targets) ? post.entity_targets : [];
 }
 
+function getGuideTargetEntityIdSet(post: Post): Set<string> {
+  const cacheKey = post.slug;
+  const cached = guideTargetIdSetCache.get(cacheKey);
+  if (cached) return cached;
+
+  const idSet = new Set(getGuideTargetEntityIds(post));
+  guideTargetIdSetCache.set(cacheKey, idSet);
+  return idSet;
+}
+
+function getNormalizedPostParts(post: Post): { title: string; summary: string; combined: string } {
+  const cacheKey = post.slug;
+  const cached = normalizedPostCache.get(cacheKey);
+  if (cached) return cached;
+
+  const title = normalizeForMatching(post.title);
+  const summary = normalizeForMatching(post.summary);
+  const content = normalizeForMatching(post.content);
+  const resolved = {
+    title,
+    summary,
+    combined: `${title} ${summary} ${content}`,
+  };
+
+  normalizedPostCache.set(cacheKey, resolved);
+  return resolved;
+}
+
 function getTargetedEntitiesForGuide(post: Post, entities: EntityRecord[], limit: number): EntityRecord[] {
   const ids = getGuideTargetEntityIds(post);
   if (!ids.length) {
@@ -190,10 +228,7 @@ function getSeededEntitiesForGuide(post: Post, entities: EntityRecord[], limit: 
 }
 
 function scoreEntityMention(post: Post, entity: EntityRecord): number {
-  const title = normalizeForMatching(post.title);
-  const summary = normalizeForMatching(post.summary);
-  const content = normalizeForMatching(post.content);
-  const combined = `${title} ${summary} ${content}`;
+  const { title, summary, combined } = getNormalizedPostParts(post);
 
   let score = 0;
 
@@ -279,10 +314,9 @@ export function getMentionedGuidesForEntity(entity: EntityRecord, limit = 8): Po
     return cached.slice(0, limit);
   }
 
-  const ranked = getAllCachedPosts()
-    .filter(isPriorityGuide)
+  const ranked = getPriorityCachedPosts()
     .map((post) => {
-      const explicitTarget = getGuideTargetEntityIds(post).includes(entity.id);
+      const explicitTarget = getGuideTargetEntityIdSet(post).has(entity.id);
       const score = scoreEntityMention(post, entity) + (explicitTarget ? 10000 : 0);
       return { post, score };
     })
