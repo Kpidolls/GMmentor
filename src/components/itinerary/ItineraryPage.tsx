@@ -229,7 +229,15 @@ const ItineraryPage = () => {
           </Button>
         </HStack>
 
-        <Input ref={importInputRef} type="file" accept="application/json,.json" display="none" onChange={handleImportFile} />
+        <Input
+          ref={importInputRef}
+          id="itinerary-import-file"
+          name="importFile"
+          type="file"
+          accept="application/json,.json"
+          display="none"
+          onChange={handleImportFile}
+        />
 
         {importError ? (
           <Text color="red.600" fontWeight="semibold">

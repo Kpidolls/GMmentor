@@ -91,12 +91,10 @@ const writeStoredItinerary = (nextItinerary: Record<string, unknown>): void => {
 };
 
 const appendItemToDayOne = (payload: AddToItineraryPayload): void => {
-  const current = readStoredItinerary();
-  if (!current || !Array.isArray(current.days)) {
-    return;
-  }
-
   const timestamp = new Date().toISOString();
+  const current = readStoredItinerary();
+  const days = Array.isArray(current?.days) ? (current.days as Array<Record<string, unknown>>) : [];
+
   const nextItem = {
     id: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
     name: payload.name.trim(),
@@ -106,7 +104,6 @@ const appendItemToDayOne = (payload: AddToItineraryPayload): void => {
     notes: payload.notes,
   };
 
-  const days = current.days as Array<Record<string, unknown>>;
   const nextDays = days.length > 0
     ? days.map((day, index) => {
         if (index !== 0) {
@@ -122,8 +119,9 @@ const appendItemToDayOne = (payload: AddToItineraryPayload): void => {
     : [{ date: null, title: '', notes: '', items: [nextItem] }];
 
   writeStoredItinerary({
-    ...current,
+    ...(current || {}),
     version: 1,
+    createdAt: typeof current?.createdAt === 'string' ? current.createdAt : timestamp,
     updatedAt: timestamp,
     days: nextDays,
   });

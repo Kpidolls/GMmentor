@@ -75,8 +75,10 @@ const AddItemModal = ({ isOpen, onClose, onAdd }: AddItemModalProps) => {
         <ModalCloseButton />
         <ModalBody display="grid" gap={3}>
           <FormControl isRequired>
-            <FormLabel>{t('itinerary.name', 'Name')}</FormLabel>
+            <FormLabel htmlFor="itinerary-add-item-name">{t('itinerary.name', 'Name')}</FormLabel>
             <Input
+              id="itinerary-add-item-name"
+              name="name"
               value={name}
               onChange={(event) => setName(event.target.value)}
               placeholder={t('itinerary.itemNamePlaceholder', 'e.g. Acropolis')}
@@ -84,8 +86,13 @@ const AddItemModal = ({ isOpen, onClose, onAdd }: AddItemModalProps) => {
           </FormControl>
 
           <FormControl>
-            <FormLabel>{t('itinerary.itemType', 'Type')}</FormLabel>
-            <Select value={type} onChange={(event) => setType(event.target.value as ItineraryItemType)}>
+            <FormLabel htmlFor="itinerary-add-item-type">{t('itinerary.itemType', 'Type')}</FormLabel>
+            <Select
+              id="itinerary-add-item-type"
+              name="type"
+              value={type}
+              onChange={(event) => setType(event.target.value as ItineraryItemType)}
+            >
               <option value="place">place</option>
               <option value="area">area</option>
               <option value="guide">guide</option>
@@ -94,23 +101,23 @@ const AddItemModal = ({ isOpen, onClose, onAdd }: AddItemModalProps) => {
           </FormControl>
 
           <FormControl>
-            <FormLabel>{t('itinerary.itemTime', 'Time')}</FormLabel>
-            <Input value={time} onChange={(event) => setTime(event.target.value)} placeholder="09:30" />
+            <FormLabel htmlFor="itinerary-add-item-time">{t('itinerary.itemTime', 'Time')}</FormLabel>
+            <Input id="itinerary-add-item-time" name="time" value={time} onChange={(event) => setTime(event.target.value)} placeholder="09:30" />
           </FormControl>
 
           <FormControl>
-            <FormLabel>URL</FormLabel>
-            <Input value={url} onChange={(event) => setUrl(event.target.value)} placeholder="https://..." />
+            <FormLabel htmlFor="itinerary-add-item-url">URL</FormLabel>
+            <Input id="itinerary-add-item-url" name="url" value={url} onChange={(event) => setUrl(event.target.value)} placeholder="https://..." />
           </FormControl>
 
           <FormControl>
-            <FormLabel>GM ID</FormLabel>
-            <Input value={gmId} onChange={(event) => setGmId(event.target.value)} placeholder="gm_..." />
+            <FormLabel htmlFor="itinerary-add-item-gm-id">GM ID</FormLabel>
+            <Input id="itinerary-add-item-gm-id" name="gmId" value={gmId} onChange={(event) => setGmId(event.target.value)} placeholder="gm_..." />
           </FormControl>
 
           <FormControl>
-            <FormLabel>{t('itinerary.notes', 'Notes')}</FormLabel>
-            <Textarea value={notes} onChange={(event) => setNotes(event.target.value)} rows={3} />
+            <FormLabel htmlFor="itinerary-add-item-notes">{t('itinerary.notes', 'Notes')}</FormLabel>
+            <Textarea id="itinerary-add-item-notes" name="notes" value={notes} onChange={(event) => setNotes(event.target.value)} rows={3} />
           </FormControl>
         </ModalBody>
 

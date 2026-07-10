@@ -1305,6 +1305,8 @@ const MainHero = () => {
                             </svg>
                           </div>
                           <input
+                            id="category-intent-query"
+                            name="categoryIntentQuery"
                             type="text"
                             value={categoryIntentQuery}
                             onChange={(event) => setCategoryIntentQuery(event.target.value)}
@@ -1442,6 +1444,8 @@ const MainHero = () => {
                       </svg>
                     </div>
                     <input
+                      id="municipality-search-query"
+                      name="municipalitySearchQuery"
                       type="text"
                       value={municipalitySearchQuery}
                       onChange={(e) => setMunicipalitySearchQuery(e.target.value)}
@@ -1719,6 +1723,8 @@ const MainHero = () => {
                                   {t('restaurantFinder.expandRadius', 'Expand Search Radius')}: <span className="text-blue-600">{searchRadius}km</span>
                                 </label>
                                 <input
+                                  id="restaurant-search-radius"
+                                  name="searchRadius"
                                   type="range"
                                   min="2"
                                   max="50"
@@ -1744,6 +1750,8 @@ const MainHero = () => {
                                   {t('restaurantFinder.showMore', 'Show More Results')}: <span className="text-blue-600">{maxResults}</span>
                                 </label>
                                 <input
+                                  id="restaurant-max-results"
+                                  name="maxResults"
                                   type="range"
                                   min="5"
                                   max="30"
@@ -2046,6 +2054,8 @@ const MainHero = () => {
                                 </h4>
                                 <label className="flex items-center gap-1.5 cursor-pointer shrink-0">
                                   <input
+                                    id={`restaurant-select-${index}`}
+                                    name={`restaurant-select-${index}`}
                                     type="checkbox"
                                     checked={isSelected}
                                     onChange={() => toggleRestaurantSelection(index)}
@@ -2158,6 +2168,8 @@ const MainHero = () => {
                             <span className="text-sm font-bold text-sky-700">{searchRadius}km</span>
                           </div>
                           <input
+                            id="restaurant-search-radius-settings"
+                            name="searchRadiusSettings"
                             type="range"
                             min="2"
                             max="50"

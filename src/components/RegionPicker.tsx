@@ -145,6 +145,8 @@ const RegionPicker: React.FC<Props> = ({ onSelect }) => {
           </div>
 
           <input
+            id="region-picker-search"
+            name="regionPickerSearch"
             type="text"
             placeholder={t('regionPicker.searchPlaceholder', 'Search municipalities...')}
             value={searchQuery}

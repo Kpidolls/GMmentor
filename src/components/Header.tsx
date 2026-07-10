@@ -23,7 +23,7 @@ import {
   Icon,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, SearchIcon, ChevronDownIcon } from '@chakra-ui/icons';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import config from '../config/index.json';
@@ -358,9 +358,32 @@ const Header = () => {
     localStorage.setItem('language', lang);
   };
 
-  const handleNavigation = (href?: string) => {
-    if (href) {
-      router.push(href.startsWith('/') ? href : `/#${href}`);
+  const resolveNavigationTarget = (href: string) => {
+    if (href.startsWith('/')) {
+      return href;
+    }
+
+    if (href.startsWith('#')) {
+      return `/${href}`;
+    }
+
+    return `/#${href}`;
+  };
+
+  const handleNavigation = async (href?: string) => {
+    if (!href) {
+      return;
+    }
+
+    const target = resolveNavigationTarget(href);
+
+    try {
+      await router.push(target);
+    } catch {
+      if (typeof window !== 'undefined') {
+        window.location.href = target;
+      }
+    } finally {
       onClose();
       setMenuOpen(false);
       setOpenMobileSection(null);

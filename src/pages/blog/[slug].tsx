@@ -206,12 +206,19 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
 
   // Handle language mismatch
   useEffect(() => {
+    if (!router.isReady) {
+      return
+    }
+
     const currentLang = i18n.language || 'en'
     if (post.language !== currentLang && alternatePost) {
-      // Redirect to the correct language version
-      router.replace(`/blog/${alternatePost.slug}`)
+      const nextPath = `/blog/${alternatePost.slug}`
+      if (router.asPath !== nextPath) {
+        // Redirect to the correct language version, ignoring cancelled transitions.
+        void router.replace(nextPath).catch(() => undefined)
+      }
     }
-  }, [i18n.language, post.language, alternatePost, router])
+  }, [router.isReady, router.asPath, i18n.language, post.language, alternatePost, router])
 
   useEffect(() => {
     setCanNativeShare(typeof navigator !== 'undefined' && typeof navigator.share === 'function')

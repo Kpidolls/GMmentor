@@ -52,20 +52,24 @@ const DayBlock = ({
 
       <HStack align="start" spacing={3} flexWrap="wrap">
         <FormControl>
-          <FormLabel mb={1} fontSize="sm">
+          <FormLabel mb={1} fontSize="sm" htmlFor={`itinerary-day-${dayIndex}-title`}>
             {t('itinerary.dayTitle', 'Title')}
           </FormLabel>
           <Input
+            id={`itinerary-day-${dayIndex}-title`}
+            name={`day-${dayIndex}-title`}
             value={day.title}
             onChange={(event) => onUpdateDay({ title: event.target.value })}
             placeholder={t('itinerary.dayTitlePlaceholder', 'Day title')}
           />
         </FormControl>
         <FormControl maxW={{ base: '100%', md: '220px' }}>
-          <FormLabel mb={1} fontSize="sm">
+          <FormLabel mb={1} fontSize="sm" htmlFor={`itinerary-day-${dayIndex}-date`}>
             {t('itinerary.dayDate', 'Date')}
           </FormLabel>
           <Input
+            id={`itinerary-day-${dayIndex}-date`}
+            name={`day-${dayIndex}-date`}
             type="date"
             value={day.date || ''}
             onChange={(event) => onUpdateDay({ date: event.target.value || null })}
@@ -74,10 +78,16 @@ const DayBlock = ({
       </HStack>
 
       <FormControl mt={2}>
-        <FormLabel mb={1} fontSize="sm">
+        <FormLabel mb={1} fontSize="sm" htmlFor={`itinerary-day-${dayIndex}-notes`}>
           {t('itinerary.dayNotes', 'Day notes')}
         </FormLabel>
-        <Textarea value={day.notes} onChange={(event) => onUpdateDay({ notes: event.target.value })} rows={3} />
+        <Textarea
+          id={`itinerary-day-${dayIndex}-notes`}
+          name={`day-${dayIndex}-notes`}
+          value={day.notes}
+          onChange={(event) => onUpdateDay({ notes: event.target.value })}
+          rows={3}
+        />
       </FormControl>
 
       <HStack justify="space-between" mt={3} mb={2}>
