@@ -8,6 +8,7 @@ const OUT_PLACE_DIR = path.join(ROOT, 'out', 'place');
 const SITEMAP_FILE = path.join(ROOT, 'out', 'sitemap.xml');
 const SITEMAP_DIR = path.join(ROOT, 'out');
 const BLOG_DIR = path.join(ROOT, 'src', 'blog');
+const MAX_TITLE_LENGTH = 70;
 const PRIORITY_GUIDE_SLUGS = new Set([
   'acropolis-complete-guide',
   'american-college-of-greece-agia-paraskevi-guide',
@@ -123,15 +124,6 @@ function getTerms(entity) {
   return Array.from(terms);
 }
 
-function buildEntitySeoSignature(entity) {
-  const normalizedName = String(entity?.name || '').trim().toLowerCase();
-  const normalizedLocation = String(entity?.address || entity?.region || `${Number(entity?.lat || 0).toFixed(5)},${Number(entity?.lng || 0).toFixed(5)}`)
-    .trim()
-    .toLowerCase();
-
-  return `${entity?.kind || 'place'}::${normalizedName}::${normalizedLocation}`;
-}
-
 function getGuideSeeds(post) {
   return GUIDE_ENTITY_SEEDS[post.originalSlug || post.slug] || [];
 }
@@ -235,7 +227,23 @@ function main() {
 
   const entitiesIndex = readJson(ENTITIES_FILE);
   const entities = Array.isArray(entitiesIndex?.entities) ? entitiesIndex.entities : [];
-  const expectedCount = entities.length;
+  const slugToCanonical = new Map();
+  const expectedPaths = new Set();
+
+  for (const entity of entities) {
+    if (!entity?.slug) continue;
+
+    expectedPaths.add(`/place/${entity.slug}`);
+    slugToCanonical.set(entity.slug, entity.slug);
+
+    for (const legacySlug of entity.legacySlugs || []) {
+      if (!legacySlug) continue;
+      expectedPaths.add(`/place/${legacySlug}`);
+      slugToCanonical.set(legacySlug, entity.slug);
+    }
+  }
+
+  const expectedCount = expectedPaths.size;
   const actualFiles = fs.readdirSync(OUT_PLACE_DIR).filter((file) => file.endsWith('.html'));
 
   if (actualFiles.length !== expectedCount) {
@@ -253,23 +261,11 @@ function main() {
   const missingFiles = [];
   const invalidCanonical = [];
   const missingJsonLd = [];
+  const longTitlePages = [];
+  const aliasPagesIndexed = [];
   const linkedEntityIds = new Set();
   const priorityPosts = getPriorityGuidePosts();
-  const placePathSet = new Set(
-    entities
-      .filter((entity) => Boolean(entity?.slug))
-      .map((entity) => `/place/${entity.slug}`)
-  );
-  const canonicalSlugBySignature = new Map();
-
-  for (const entity of entities) {
-    if (!entity?.slug) continue;
-    const signature = buildEntitySeoSignature(entity);
-    const existingSlug = canonicalSlugBySignature.get(signature);
-    if (!existingSlug || entity.slug.localeCompare(existingSlug) < 0) {
-      canonicalSlugBySignature.set(signature, entity.slug);
-    }
-  }
+  const placePathSet = new Set(expectedPaths);
 
   for (const post of priorityPosts) {
     for (const entity of entities) {
@@ -280,11 +276,9 @@ function main() {
     }
   }
 
-  for (const entity of entities) {
-    if (!entity?.slug) continue;
-
-    const expectedPath = `/place/${entity.slug}`;
-    const htmlPath = getPlaceHtmlPath(entity.slug);
+  for (const expectedPath of Array.from(expectedPaths).sort((a, b) => a.localeCompare(b))) {
+    const requestedSlug = expectedPath.replace('/place/', '');
+    const htmlPath = getPlaceHtmlPath(requestedSlug);
 
     if (!fs.existsSync(htmlPath)) {
       missingFiles.push(expectedPath);
@@ -298,11 +292,25 @@ function main() {
     const html = fs.readFileSync(htmlPath, 'utf8');
     const canonicalMatch = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i);
     const canonicalHref = canonicalMatch ? canonicalMatch[1] : null;
-    const expectedCanonicalPath = `/place/${canonicalSlugBySignature.get(buildEntitySeoSignature(entity)) || entity.slug}`;
+    const canonicalSlug = slugToCanonical.get(requestedSlug) || requestedSlug;
+    const expectedCanonicalPath = `/place/${canonicalSlug}`;
     const expectedCanonicalUrl = `${SITE_URL}${expectedCanonicalPath}`;
 
     if (!canonicalHref || canonicalHref !== expectedCanonicalUrl || !placePathSet.has(expectedCanonicalPath)) {
       invalidCanonical.push(expectedPath);
+    }
+
+    const titleMatch = html.match(/<title[^>]*>([^<]*)<\/title>/i);
+    const titleText = titleMatch ? titleMatch[1].trim() : '';
+    if (!titleText || titleText.length > MAX_TITLE_LENGTH) {
+      longTitlePages.push(expectedPath);
+    }
+
+    if (requestedSlug !== canonicalSlug) {
+      const robotsNoindex = /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html);
+      if (!robotsNoindex) {
+        aliasPagesIndexed.push(expectedPath);
+      }
     }
 
     if (!html.includes('application/ld+json')) {
@@ -326,8 +334,17 @@ function main() {
     fail(`Missing JSON-LD on place pages: ${missingJsonLd.slice(0, 10).join(', ')}${missingJsonLd.length > 10 ? ' ...' : ''}`);
   }
 
+  if (longTitlePages.length) {
+    fail(`Place pages with missing or too-long titles (> ${MAX_TITLE_LENGTH} chars): ${longTitlePages.slice(0, 10).join(', ')}${longTitlePages.length > 10 ? ' ...' : ''}`);
+  }
+
+  if (aliasPagesIndexed.length) {
+    fail(`Legacy alias place pages must be noindex: ${aliasPagesIndexed.slice(0, 10).join(', ')}${aliasPagesIndexed.length > 10 ? ' ...' : ''}`);
+  }
+
   const orphanCount = entities.filter((entity) => !linkedEntityIds.has(entity.id)).length;
-  const orphanRate = expectedCount > 0 ? (orphanCount / expectedCount) * 100 : 0;
+  const canonicalCount = entities.filter((entity) => Boolean(entity?.slug)).length;
+  const orphanRate = canonicalCount > 0 ? (orphanCount / canonicalCount) * 100 : 0;
 
   console.log(`✅  Knowledge graph checks passed for ${expectedCount} place pages.`);
   console.log(`ℹ️  Graph KPI: ${linkedEntityIds.size} entities linked from priority guides, ${orphanCount} orphans (${orphanRate.toFixed(1)}%).`);

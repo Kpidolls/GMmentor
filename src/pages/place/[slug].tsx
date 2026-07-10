@@ -22,7 +22,6 @@ import { useTranslation } from 'react-i18next';
 
 import { buildBreadcrumbJsonLd, buildEntityJsonLd } from '../../lib/entityStructuredData';
 import {
-  buildEntitySeoSignature,
   EntityRecord,
   findEntityBySlug,
   getSameCategoryEntities,
@@ -47,6 +46,69 @@ type EntityPageProps = {
   isCanonicalEntity: boolean;
   enrichment: PlaceEnrichment['effective'] | null;
 };
+
+const MAX_PLACE_TITLE_LENGTH = 70;
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
+}
+
+function escapedLength(value: string): number {
+  return escapeHtml(value).length;
+}
+
+function buildTitleWithSuffix(base: string, suffix: string, maxLength: number): string {
+  const full = `${base}${suffix}`;
+  if (escapedLength(full) <= maxLength) {
+    return full;
+  }
+
+  if (!base) {
+    return '';
+  }
+
+  const ellipsisSuffix = `...${suffix}`;
+  let low = 0;
+  let high = base.length;
+  let best = '';
+
+  while (low <= high) {
+    const middle = Math.floor((low + high) / 2);
+    const candidateBase = base.slice(0, middle).trimEnd();
+    const candidate = `${candidateBase}${ellipsisSuffix}`;
+
+    if (escapedLength(candidate) <= maxLength) {
+      best = candidateBase;
+      low = middle + 1;
+    } else {
+      high = middle - 1;
+    }
+  }
+
+  return best ? `${best}${ellipsisSuffix}` : '';
+}
+
+function buildPlaceSeoTitle(name: string, kind: string): string {
+  const withKindSuffix = ` | ${kind} | Googlementor`;
+  const plainSuffix = ' | Googlementor';
+
+  const kindTitle = buildTitleWithSuffix(name, withKindSuffix, MAX_PLACE_TITLE_LENGTH);
+  if (kindTitle) {
+    return kindTitle;
+  }
+
+  const plainTitle = buildTitleWithSuffix(name, plainSuffix, MAX_PLACE_TITLE_LENGTH);
+  if (plainTitle) {
+    return plainTitle;
+  }
+
+  return 'Googlementor';
+}
 
 function displayContext(entity: EntityRecord): string {
   if (entity.address) return entity.address;
@@ -100,9 +162,23 @@ function wrapCanvasText(ctx: CanvasRenderingContext2D, text: string, x: number, 
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const index = loadEntitiesIndex();
-  const paths = index.entities
-    .filter((entity) => Boolean(entity.slug))
-    .map((entity) => ({ params: { slug: entity.slug } }));
+  const slugSet = new Set<string>();
+
+  index.entities.forEach((entity) => {
+    if (entity.slug) {
+      slugSet.add(entity.slug);
+    }
+
+    entity.legacySlugs?.forEach((legacySlug) => {
+      if (legacySlug) {
+        slugSet.add(legacySlug);
+      }
+    });
+  });
+
+  const paths = Array.from(slugSet).sort((a, b) => a.localeCompare(b)).map((slug) => ({
+    params: { slug },
+  }));
 
   return { paths, fallback: false };
 };
@@ -118,10 +194,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
     return { notFound: true };
   }
 
-  const seoSignature = buildEntitySeoSignature(entity);
-  const canonicalEntity = index.entities
-    .filter((candidate) => buildEntitySeoSignature(candidate) === seoSignature)
-    .sort((left, right) => left.slug.localeCompare(right.slug))[0] || entity;
+  const canonicalEntity = entity;
 
   const nearbyCandidates = index.entities.filter((candidate) => {
     if (candidate.id === entity.id) {
@@ -156,7 +229,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
         title: post.title,
       })),
       canonicalSlug: canonicalEntity.slug,
-      isCanonicalEntity: canonicalEntity.slug === entity.slug,
+      isCanonicalEntity: slug === canonicalEntity.slug,
       enrichment: getPlaceEnrichmentByEntityId(entity.id)?.effective || null,
     },
   };
@@ -221,6 +294,8 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
   const entityJsonLd = buildEntityJsonLd(entity, canonicalUrl, subjectOfUrls);
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(entity, canonicalUrl);
   const shareTitle = `${entity.name} | ${localizedKind} | Googlementor`;
+  const pageTitle = buildPlaceSeoTitle(entity.name, localizedKind);
+  const socialTitle = buildPlaceSeoTitle(entity.name, localizedKind);
   const shareText = `${entity.name} - ${summary}`;
   const featuredVibeRaw = effectiveEnrichment.vibe_tags[0] || 'curated';
   const featuredVibe = t(`place.dynamicTags.${featuredVibeRaw}`, featuredVibeRaw);
@@ -505,17 +580,17 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
   return (
     <Container maxW="5xl" py={10}>
       <Head>
-        <title>{`${entity.name} | ${localizedKind} | Googlementor`}</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="robots" content={isCanonicalEntity ? 'index, follow' : 'noindex, follow'} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content={shareTitle} />
+        <meta property="og:title" content={socialTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content="https://googlementor.com/assets/images/cover-627.webp" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={shareTitle} />
+        <meta name="twitter:title" content={socialTitle} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content="https://googlementor.com/assets/images/cover-627.webp" />
         <script

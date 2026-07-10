@@ -99,6 +99,7 @@ REGISTRY['municipalities.json'] = {
 interface EntityRecord {
   id?: string;
   slug?: string;
+  legacySlugs?: string[];
   kind: string;
   name: string;
   lat: number;
@@ -157,11 +158,32 @@ function mergeEntityRecords(preferred: EntityRecord, incoming: EntityRecord): En
   const incomingAliases = incoming.aliases ?? [];
   const mergedAliases = Array.from(new Set([...preferredAliases, ...incomingAliases]));
 
+  const legacySlugSet = new Set<string>();
+  if (preferred.legacySlugs?.length) {
+    preferred.legacySlugs.forEach((slug) => {
+      if (slug) legacySlugSet.add(slug);
+    });
+  }
+  if (incoming.legacySlugs?.length) {
+    incoming.legacySlugs.forEach((slug) => {
+      if (slug) legacySlugSet.add(slug);
+    });
+  }
+
+  if (preferred.slug && incoming.slug && preferred.slug !== incoming.slug) {
+    legacySlugSet.add(incoming.slug);
+  }
+
+  if (preferred.slug) {
+    legacySlugSet.delete(preferred.slug);
+  }
+
   return {
     ...preferred,
     categoryIds: mergedCategoryIds.length ? mergedCategoryIds : undefined,
     categories: mergedLabels.length ? mergedLabels : undefined,
     aliases: mergedAliases.length ? mergedAliases : undefined,
+    legacySlugs: legacySlugSet.size > 0 ? Array.from(legacySlugSet).sort((a, b) => a.localeCompare(b)) : undefined,
   };
 }
 

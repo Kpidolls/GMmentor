@@ -6,6 +6,7 @@ import { calculateDistance } from '../utils/locationUtils';
 export interface EntityRecord {
   id: string;
   slug: string;
+  legacySlugs?: string[];
   kind: 'restaurant' | 'municipality' | 'attraction' | 'poi';
   name: string;
   lat: number;
@@ -124,7 +125,7 @@ export function loadEntitiesIndex(): EntitiesIndex {
 }
 
 export function findEntityBySlug(entities: EntityRecord[], slug: string): EntityRecord | undefined {
-  return entities.find((entity) => entity.slug === slug);
+  return entities.find((entity) => entity.slug === slug || entity.legacySlugs?.includes(slug));
 }
 
 export function buildEntitySeoSignature(entity: EntityRecord): string {
