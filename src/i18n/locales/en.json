@@ -151,9 +151,148 @@
     "itineraryMapNote": "Map stop: this Google Maps list highlights the most important places in {{destination}}. Open it anytime to browse must-see spots and plan your route."
   },
   "place": {
+    "kind": {
+      "restaurant": "Restaurant",
+      "municipality": "Municipality",
+      "attraction": "Tourist Attraction",
+      "localPlace": "Local Place"
+    },
+    "categoryNames": {
+      "asian": "Asian Restaurants",
+      "burgers": "Burgers",
+      "cheap-eats": "Cheap Eats",
+      "coffee-brunch": "Coffee and Brunch",
+      "desserts": "Dessert Shops",
+      "family-friendly": "Family Friendly",
+      "fish-tavernas": "Fish Tavernas",
+      "greek-restaurants": "Greek Restaurants",
+      "italian": "Italian Restaurants",
+      "luxury-dining": "Luxury Dining",
+      "mexican": "Mexican Restaurants",
+      "monasteries-churches": "Monasteries and Churches",
+      "attractions": "Must-See Attractions",
+      "rooftop-lounges": "Rooftop Lounges",
+      "vegetarian": "Vegetarian Restaurants",
+      "wineries-vineyards": "Wineries and Vineyards"
+    },
+    "dynamicTags": {
+      "curated": "Curated",
+      "budget-friendly": "Budget Friendly",
+      "premium-dining": "Premium Dining",
+      "sweet-stop": "Sweet Stop",
+      "daytime-favorite": "Daytime Favorite",
+      "city-views": "City Views",
+      "seafood-local": "Seafood Local",
+      "family-ready": "Family Ready",
+      "wine-moment": "Wine Moment",
+      "local-neighborhood": "Local Neighborhood",
+      "base-for-exploring": "Base for Exploring",
+      "sightseeing-core": "Sightseeing Core",
+      "photo-worthy": "Photo Worthy",
+      "discoverable": "Discoverable",
+      "first-time visitors": "First-Time Visitors",
+      "food lovers": "Food Lovers",
+      "families": "Families",
+      "budget travelers": "Budget Travelers",
+      "special occasions": "Special Occasions",
+      "walk-and-explore days": "Walk and Explore Days",
+      "return visitors": "Return Visitors",
+      "culture seekers": "Culture Seekers",
+      "photography lovers": "Photography Lovers",
+      "route planners": "Route Planners",
+      "lunch stop": "Lunch Stop",
+      "dinner stop": "Dinner Stop",
+      "early morning": "Early Morning",
+      "late brunch": "Late Brunch",
+      "afternoon break": "Afternoon Break",
+      "after dinner": "After Dinner",
+      "golden hour": "Golden Hour",
+      "night out": "Night Out",
+      "daytime visit": "Daytime Visit",
+      "sunset stop": "Sunset Stop",
+      "late morning walks": "Late Morning Walks",
+      "sunset exploration": "Sunset Exploration"
+    },
     "viewOnMaps": "View on Google Maps",
+    "openDirections": "Open directions in Google Maps",
     "exploreMore": "Explore More Places",
-    "addToItinerary": "Add to itinerary"
+    "addToItinerary": "Add to itinerary",
+    "vibe": {
+      "title": "Googlementor vibe"
+    },
+    "bestFor": {
+      "title": "Best for"
+    },
+    "visitMoments": {
+      "title": "Great timing"
+    },
+    "plan": {
+      "title": "Plan this stop",
+      "coordinates": "Coordinates",
+      "bestTime": "Best times to visit"
+    },
+    "utility": {
+      "title": "Navigate this place",
+      "subtitle": "Get the key information first: directions, best timing, and category-based nearby options."
+    },
+    "sameCategory": {
+      "title": "Try next in the same category",
+      "subtitle": "If you liked this pick, these are strong alternatives nearby."
+    },
+    "nearby": {
+      "title": "Closest useful stops"
+    },
+    "aliases": {
+      "title": "Alternative names"
+    },
+    "sameRegion": {
+      "title": "Explore more in this area"
+    },
+    "guides": {
+      "title": "Trusted guide mentions"
+    },
+    "stats": {
+      "walkable": "Walkable nearby picks",
+      "nearby2km": "Nearby within 2km",
+      "curationConfidence": "Curation confidence"
+    },
+    "share": {
+      "title": "This place deserves to be shared",
+      "subtitle": "Create a promo card and post it anywhere: Instagram, TikTok, WhatsApp, or Facebook.",
+      "reason": "{{name}} stands out for its {{vibe}} vibe and its connection to {{nearby}} walkable discoveries nearby. This is exactly the type of place worth sharing with friends before your trip.",
+      "singleCaption": "Proud to see {{name}} featured on Googlementor. A local favorite in {{context}} worth discovering.",
+      "posterLine": "Loved by locals. Worth sharing.",
+      "copyLink": "Copy link",
+      "copied": "Link copied",
+      "copiedShort": "Copied",
+      "copyFailed": "Could not copy link",
+      "copyCaption": "Copy caption",
+      "captionCopied": "Caption copied",
+      "native": "Share",
+      "facebook": "Facebook",
+      "whatsapp": "WhatsApp",
+      "x": "X",
+      "similarTitle": "Similar places you can also share",
+      "similarFallback": "More similar places will appear as this category grows.",
+      "captionsTitle": "Ready-to-share caption"
+    },
+    "promo": {
+      "downloadPoster": "Download social poster",
+      "posterTitle": "Social poster preview",
+      "previewAlt": "Promo card preview for {{name}}",
+      "generating": "Generating preview...",
+      "downloaded": "Promo card downloaded",
+      "readyToPost": "Ready for Instagram, TikTok, WhatsApp, and Facebook."
+    },
+    "celebration": {
+      "title": "Added to your route",
+      "description": "{{name}} is now part of your trip plan.",
+      "sectionTitle": "A Googlementor featured pick",
+      "sectionBody": "{{name}} was selected by Googlementor for its {{vibe}} character and strong route value. It connects naturally to {{nearby}} walkable discoveries.",
+      "badgeCurated": "Curated Pick",
+      "badgeRoute": "Route Ready",
+      "badgeShare": "Share Worthy"
+    }
   },
   "itinerary": {
     "title": "My Greece Itinerary",

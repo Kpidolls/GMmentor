@@ -1113,7 +1113,7 @@ const MainHero = () => {
 
     intentDeepLinkHandledRef.current = true;
     void searchByMunicipalityRef.current(municipality, category as RestaurantCategory);
-  }, [intentResolver]);
+  }, [intentResolver, restaurantCategories]);
 
   // Filter municipalities based on enhanced search query
   const filteredMunicipalities = getMunicipalitiesData().filter((municipality: Municipality) => {

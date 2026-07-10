@@ -151,9 +151,148 @@
     "itineraryMapNote": "Σημείο χάρτη: αυτή η λίστα Google Maps δείχνει τα πιο σημαντικά σημεία στην {{destination}}. Άνοιξέ τη οποιαδήποτε στιγμή για να δεις τα must-see και να οργανώσεις εύκολα τη διαδρομή σου."
   },
   "place": {
+    "kind": {
+      "restaurant": "Εστιατόριο",
+      "municipality": "Δήμος",
+      "attraction": "Αξιοθέατο",
+      "localPlace": "Τοπικό Σημείο"
+    },
+    "categoryNames": {
+      "asian": "Ασιατικά Εστιατόρια",
+      "burgers": "Μπεργκεράδικα",
+      "cheap-eats": "Οικονομικό Φαγητό",
+      "coffee-brunch": "Καφές και Brunch",
+      "desserts": "Ζαχαροπλαστεία",
+      "family-friendly": "Οικογενειακές Επιλογές",
+      "fish-tavernas": "Ψαροταβέρνες",
+      "greek-restaurants": "Ελληνικά Εστιατόρια",
+      "italian": "Ιταλικά Εστιατόρια",
+      "luxury-dining": "Πολυτελές Dining",
+      "mexican": "Μεξικάνικα Εστιατόρια",
+      "monasteries-churches": "Μοναστήρια και Εκκλησίες",
+      "attractions": "Αξιοθέατα",
+      "rooftop-lounges": "Rooftop Lounges",
+      "vegetarian": "Χορτοφαγικά Εστιατόρια",
+      "wineries-vineyards": "Οινοποιεία και Αμπελώνες"
+    },
+    "dynamicTags": {
+      "curated": "Επιλεγμένο",
+      "budget-friendly": "Οικονομική Επιλογή",
+      "premium-dining": "Premium Dining",
+      "sweet-stop": "Γλυκιά Στάση",
+      "daytime-favorite": "Αγαπημένο Ημέρας",
+      "city-views": "Θέα Πόλης",
+      "seafood-local": "Τοπικά Θαλασσινά",
+      "family-ready": "Κατάλληλο για Οικογένειες",
+      "wine-moment": "Wine Moment",
+      "local-neighborhood": "Τοπική Γειτονιά",
+      "base-for-exploring": "Βάση για Εξερεύνηση",
+      "sightseeing-core": "Κεντρικό Αξιοθέατο",
+      "photo-worthy": "Ιδανικό για Φωτογραφίες",
+      "discoverable": "Ανακαλύψιμο",
+      "first-time visitors": "Πρώτη Επίσκεψη",
+      "food lovers": "Λάτρεις του Φαγητού",
+      "families": "Οικογένειες",
+      "budget travelers": "Ταξιδιώτες με Budget",
+      "special occasions": "Ειδικές Περιστάσεις",
+      "walk-and-explore days": "Ημέρες Περιπάτου και Εξερεύνησης",
+      "return visitors": "Επισκέπτες που Επιστρέφουν",
+      "culture seekers": "Λάτρεις του Πολιτισμού",
+      "photography lovers": "Λάτρεις της Φωτογραφίας",
+      "route planners": "Οργανωτές Διαδρομής",
+      "lunch stop": "Στάση για Μεσημεριανό",
+      "dinner stop": "Στάση για Δείπνο",
+      "early morning": "Νωρίς το Πρωί",
+      "late brunch": "Αργό Brunch",
+      "afternoon break": "Απογευματινό Διάλειμμα",
+      "after dinner": "Μετά το Δείπνο",
+      "golden hour": "Χρυσή Ώρα",
+      "night out": "Βραδινή Έξοδος",
+      "daytime visit": "Επίσκεψη Ημέρας",
+      "sunset stop": "Στάση στο Ηλιοβασίλεμα",
+      "late morning walks": "Περίπατοι αργά το πρωί",
+      "sunset exploration": "Εξερεύνηση στο ηλιοβασίλεμα"
+    },
     "viewOnMaps": "Προβολή στο Google Maps",
+    "openDirections": "Άνοιγμα οδηγιών στο Google Maps",
     "exploreMore": "Εξερεύνησε περισσότερα μέρη",
-    "addToItinerary": "Προσθήκη στο πρόγραμμα"
+    "addToItinerary": "Προσθήκη στο πρόγραμμα",
+    "vibe": {
+      "title": "Χαρακτήρας Googlementor"
+    },
+    "bestFor": {
+      "title": "Ιδανικό για"
+    },
+    "visitMoments": {
+      "title": "Ιδανική ώρα"
+    },
+    "plan": {
+      "title": "Οργάνωσε αυτή τη στάση",
+      "coordinates": "Συντεταγμένες",
+      "bestTime": "Καλύτερες ώρες επίσκεψης"
+    },
+    "utility": {
+      "title": "Πλοηγήσου σε αυτό το μέρος",
+      "subtitle": "Δες πρώτα τα πιο χρήσιμα: κατεύθυνση, καλύτερη ώρα και κοντινές επιλογές της ίδιας κατηγορίας."
+    },
+    "sameCategory": {
+      "title": "Δοκίμασε επόμενο στην ίδια κατηγορία",
+      "subtitle": "Αν σου άρεσε αυτή η επιλογή, εδώ είναι δυνατές εναλλακτικές κοντά σου."
+    },
+    "nearby": {
+      "title": "Κοντινές χρήσιμες στάσεις"
+    },
+    "aliases": {
+      "title": "Εναλλακτικές ονομασίες"
+    },
+    "sameRegion": {
+      "title": "Εξερεύνησε περισσότερα σε αυτή την περιοχή"
+    },
+    "guides": {
+      "title": "Αξιόπιστες αναφορές σε οδηγούς"
+    },
+    "stats": {
+      "walkable": "Κοντινές επιλογές με τα πόδια",
+      "nearby2km": "Κοντά σε 2χλμ",
+      "curationConfidence": "Βεβαιότητα επιμέλειας"
+    },
+    "share": {
+      "title": "Αυτό το μέρος αξίζει να το μοιραστείς",
+      "subtitle": "Δημιούργησε promo card και ανέβασέ το παντού: Instagram, TikTok, WhatsApp ή Facebook.",
+      "reason": "Το {{name}} ξεχωρίζει για το {{vibe}} ύφος του και τη σύνδεσή του με {{nearby}} κοντινές στάσεις με τα πόδια. Είναι ακριβώς το είδος μέρους που αξίζει να μοιραστείς πριν το ταξίδι.",
+      "singleCaption": "Περήφανοι που το {{name}} προβάλλεται στο Googlementor. Ένα τοπικό αγαπημένο στην περιοχή {{context}} που αξίζει να ανακαλύψεις.",
+      "posterLine": "Αγαπημένο των ντόπιων. Αξίζει κοινοποίηση.",
+      "copyLink": "Αντιγραφή συνδέσμου",
+      "copied": "Ο σύνδεσμος αντιγράφηκε",
+      "copiedShort": "Αντιγράφηκε",
+      "copyFailed": "Αποτυχία αντιγραφής συνδέσμου",
+      "copyCaption": "Αντιγραφή λεζάντας",
+      "captionCopied": "Η λεζάντα αντιγράφηκε",
+      "native": "Κοινοποίηση",
+      "facebook": "Facebook",
+      "whatsapp": "WhatsApp",
+      "x": "X",
+      "similarTitle": "Παρόμοια μέρη που μπορείς επίσης να μοιραστείς",
+      "similarFallback": "Θα εμφανιστούν περισσότερα παρόμοια μέρη όσο μεγαλώνει η κατηγορία.",
+      "captionsTitle": "Έτοιμη λεζάντα για κοινοποίηση"
+    },
+    "promo": {
+      "downloadPoster": "Λήψη social poster",
+      "posterTitle": "Προεπισκόπηση social poster",
+      "previewAlt": "Προεπισκόπηση promo κάρτας για το {{name}}",
+      "generating": "Δημιουργία προεπισκόπησης...",
+      "downloaded": "Το promo card αποθηκεύτηκε",
+      "readyToPost": "Έτοιμο για Instagram, TikTok, WhatsApp και Facebook."
+    },
+    "celebration": {
+      "title": "Προστέθηκε στη διαδρομή σου",
+      "description": "Το {{name}} προστέθηκε στο πρόγραμμά σου.",
+      "sectionTitle": "Μια επιλεγμένη πρόταση του Googlementor",
+      "sectionBody": "Το {{name}} επιλέχθηκε από το Googlementor για τον {{vibe}} χαρακτήρα του και την υψηλή αξία διαδρομής. Συνδέεται φυσικά με {{nearby}} κοντινές στάσεις με τα πόδια.",
+      "badgeCurated": "Επιλεγμένη Πρόταση",
+      "badgeRoute": "Έτοιμο για Διαδρομή",
+      "badgeShare": "Αξίζει Κοινοποίηση"
+    }
   },
   "itinerary": {
     "title": "Το Πρόγραμμά μου στην Ελλάδα",
