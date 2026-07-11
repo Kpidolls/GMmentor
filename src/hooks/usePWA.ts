@@ -117,15 +117,20 @@ export const usePWA = (): PWAHook => {
         return;
       }
 
+      const dismissed = sessionStorage.getItem('installBannerDismissed');
+      const alreadyInstalled = checkStandalone();
+
+      // Only capture/defer the native prompt when we plan to surface a custom
+      // install affordance. If not, let the browser handle the event naturally.
+      if (dismissed || alreadyInstalled) {
+        setDeferredPrompt(null);
+        setIsInstallable(false);
+        return;
+      }
+
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setIsInstallable(true);
-      
-      // Don't show install prompt if already dismissed in this session
-      const dismissed = sessionStorage.getItem('installBannerDismissed');
-      if (dismissed) {
-        setIsInstallable(false);
-      }
     };
 
     // Listen for app installed
@@ -217,7 +222,7 @@ export const usePWA = (): PWAHook => {
 
     try {
       // Show the install prompt
-      deferredPrompt.prompt();
+      await deferredPrompt.prompt();
       
       // Wait for user's choice
       const choiceResult = await deferredPrompt.userChoice;
