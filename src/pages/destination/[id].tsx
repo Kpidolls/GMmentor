@@ -10,6 +10,7 @@ type DestinationEntry = {
   id: string;
   title: string;
   img: string;
+  locationImg?: string;
   description: string;
   link: string;
   target?: string;
@@ -78,7 +79,10 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
     '@type': 'TouristDestination',
     name: destinationName,
     description: destinationDescription,
-    image: `https://googlementor.com${destination.img}`,
+    image: [
+      `https://googlementor.com${destination.img}`,
+      `https://googlementor.com${destination.locationImg || destination.img}`,
+    ],
     url: canonicalUrl,
     touristType: ['Travelers', 'Families', 'Food lovers'],
     subjectOf: {
@@ -104,27 +108,54 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
 
       <main className="min-h-screen bg-slate-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
-          <img src={destination.img} alt={destinationName} className="w-full h-56 sm:h-72 object-cover" loading="eager" />
+          <div className="bg-slate-50">
+            <img src={destination.img} alt={destinationName} className="w-full h-64 sm:h-80 lg:h-96 object-cover" loading="eager" />
+            <div className="px-3 py-3 sm:px-6 sm:py-4">
+              <div className="max-w-4xl mx-auto rounded-xl overflow-hidden border border-slate-200 bg-white shadow-sm">
+                <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-slate-500 px-3 py-2 border-b border-slate-200">
+                  {t('destination.mapPreview', 'Map preview')}
+                </p>
+                <div className="relative w-full h-40 sm:h-48 lg:h-52 overflow-hidden bg-slate-200">
+                  <img
+                    src={destination.locationImg || destination.img}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover blur-md scale-105 opacity-40"
+                    loading="eager"
+                  />
+                  <img
+                    src={destination.locationImg || destination.img}
+                    alt={t('islands.locationScreenshotAlt', {
+                      title: destinationName,
+                      defaultValue: '{{title}} locations screenshot',
+                    })}
+                    className="relative z-10 w-full h-full object-contain p-1"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="p-6 sm:p-8 lg:p-10">
-            <p className="text-xs uppercase tracking-[0.2em] text-slate-500 mb-3">
+            <p className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-slate-500 mb-3">
               {t('destination.pageLabel', 'Destination Guide')}
             </p>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">{destinationName}</h1>
-            <p className="text-slate-600 leading-relaxed mb-8">{destinationSummary}</p>
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">{destinationName}</h1>
+            <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed mb-8">{destinationSummary}</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               <a
                 href={destination.link}
                 target={destination.target || '_blank'}
                 rel={destination.rel || 'noopener noreferrer'}
-                className="inline-flex items-center justify-center min-h-12 px-5 py-3 rounded-xl bg-blue-700 text-white font-semibold text-center leading-tight whitespace-normal hover:bg-blue-800 transition-colors"
+                className="inline-flex items-center justify-center min-h-12 px-5 py-3 rounded-xl bg-blue-700 text-white text-sm sm:text-[15px] font-semibold tracking-tight text-center leading-snug whitespace-normal hover:bg-blue-800 transition-colors"
               >
                 {t('destination.openMap', 'Open Points of Interest Map')}
               </a>
               <button
                 type="button"
-                className="inline-flex items-center justify-center min-h-12 sm:min-h-[52px] px-5 py-3 rounded-xl border border-teal-300 text-teal-800 font-semibold text-center leading-tight whitespace-normal hover:bg-teal-50 transition-colors"
+                className="inline-flex items-center justify-center min-h-12 sm:min-h-[52px] px-5 py-3 rounded-xl border border-teal-300 text-teal-800 text-sm sm:text-[15px] font-semibold tracking-tight text-center leading-snug whitespace-normal hover:bg-teal-50 transition-colors"
                 onClick={() =>
                   dispatchAddToItinerary({
                     id: destination.id,
@@ -146,7 +177,7 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
               </button>
               <Link
                 href="/"
-                className="inline-flex items-center justify-center min-h-12 px-5 py-3 rounded-xl border border-slate-300 text-slate-700 font-semibold text-center leading-tight whitespace-normal hover:bg-slate-100 transition-colors"
+                className="inline-flex items-center justify-center min-h-12 px-5 py-3 rounded-xl border border-slate-300 text-slate-700 text-sm sm:text-[15px] font-semibold tracking-tight text-center leading-snug whitespace-normal hover:bg-slate-100 transition-colors"
               >
                 {t('destination.backHome', 'Back to Home')}
               </Link>

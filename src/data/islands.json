@@ -46,7 +46,8 @@
       "αθήνας",
       "αθηνας"
     ],
-    "slug": "islands-athens-title-cab4"
+    "slug": "islands-athens-title-cab4",
+    "locationImg": "/assets/images/athens-screenshot.webp"
   },
   {
     "id": "island-crete",
@@ -100,7 +101,8 @@
       "κριτη",
       "κρήτης"
     ],
-    "slug": "islands-crete-title-436b"
+    "slug": "islands-crete-title-436b",
+    "locationImg": "/assets/images/crete-screenshot.webp"
   },
   {
     "id": "thessaloniki",
@@ -150,7 +152,8 @@
       "θεσαλονικη",
       "θεσσαλονικης"
     ],
-    "slug": "islands-thessaloniki-title-1711"
+    "slug": "islands-thessaloniki-title-1711",
+    "locationImg": "/assets/images/thessaloniki-screenshot.webp"
   },
   {
     "id": "island-mykonos",
@@ -195,7 +198,8 @@
       "mikonoss",
       "μυκόνου"
     ],
-    "slug": "islands-mykonos-title-2211"
+    "slug": "islands-mykonos-title-2211",
+    "locationImg": "/assets/images/mykonos-screenshot.webp"
   },
   {
     "id": "island-santorini",
@@ -244,7 +248,8 @@
       "σαντορίνι",
       "σαντορινι"
     ],
-    "slug": "islands-santorini-title-ab12"
+    "slug": "islands-santorini-title-ab12",
+    "locationImg": "/assets/images/santorini-screenshot.webp"
   },
   {
     "id": "island-rhodes",
@@ -286,7 +291,8 @@
       "ροδοσ",
       "ρόδου"
     ],
-    "slug": "islands-rhodes-title-c282"
+    "slug": "islands-rhodes-title-c282",
+    "locationImg": "/assets/images/rodos-screenshot.webp"
   },
   {
     "id": "island-aegina",
@@ -326,7 +332,8 @@
       "αιγινα",
       "αίγινα"
     ],
-    "slug": "islands-aegina-title-236d"
+    "slug": "islands-aegina-title-236d",
+    "locationImg": "/assets/images/aigina-screenshot.webp"
   },
   {
     "id": "island-corfu",
@@ -366,7 +373,8 @@
       "kerkyraa",
       "kerkura"
     ],
-    "slug": "islands-corfu-title-063c"
+    "slug": "islands-corfu-title-063c",
+    "locationImg": "/assets/images/corfu-screenshot.webp"
   },
   {
     "id": "island-paros",
@@ -415,7 +423,8 @@
       "παροσ",
       "πάρου"
     ],
-    "slug": "islands-paros-title-f417"
+    "slug": "islands-paros-title-f417",
+    "locationImg": "/assets/images/paros-screenshot.webp"
   },
   {
     "id": "island-zakynthos",
@@ -463,7 +472,8 @@
       "ζακυνθοσ",
       "ζακύνθου"
     ],
-    "slug": "islands-zakynthos-title-83c5"
+    "slug": "islands-zakynthos-title-83c5",
+    "locationImg": "/assets/images/zakynthos-screenshot.webp"
   },
   {
     "id": "island-leukada",
@@ -508,7 +518,8 @@
       "lefkadda",
       "λευκάδας"
     ],
-    "slug": "islands-leukada-title-851c"
+    "slug": "islands-leukada-title-851c",
+    "locationImg": "/assets/images/leukada-screenshot.webp"
   },
   {
     "id": "island-skiathos",
@@ -547,7 +558,8 @@
       "σκιαθοσ",
       "σκιάθου"
     ],
-    "slug": "islands-skiathos-title-05c5"
+    "slug": "islands-skiathos-title-05c5",
+    "locationImg": "/assets/images/skiathos-screenshot.webp"
   },
   {
     "id": "island-naxos",
@@ -590,7 +602,8 @@
       "ναξοσ",
       "νάξου"
     ],
-    "slug": "islands-naxos-title-6ec5"
+    "slug": "islands-naxos-title-6ec5",
+    "locationImg": "/assets/images/naxos-screenshot.webp"
   },
   {
     "id": "island-karpathos",
@@ -630,7 +643,8 @@
       "καρπαθοσ",
       "κάρπαθος"
     ],
-    "slug": "islands-karpathos-title-5dcb"
+    "slug": "islands-karpathos-title-5dcb",
+    "locationImg": "/assets/images/karpathos-screenshot.webp"
   },
   {
     "id": "island-syros",
@@ -671,7 +685,8 @@
       "συροσ",
       "σύρου"
     ],
-    "slug": "islands-syros-title-cb94"
+    "slug": "islands-syros-title-cb94",
+    "locationImg": "/assets/images/syros-screenshot.webp"
   },
   {
     "id": "island-kos",
@@ -710,7 +725,8 @@
       "κωσ",
       "κω"
     ],
-    "slug": "islands-kos-title-008b"
+    "slug": "islands-kos-title-008b",
+    "locationImg": "/assets/images/kos-screenshot.webp"
   },
   {
     "id": "island-kefalonia",
@@ -753,7 +769,8 @@
       "kefalonya",
       "κεφαλονιάς"
     ],
-    "slug": "islands-kefalonia-title-1d8c"
+    "slug": "islands-kefalonia-title-1d8c",
+    "locationImg": "/assets/images/kefalonia-screenshot.webp"
   },
   {
     "id": "island-kythnos",
@@ -793,7 +810,8 @@
       "κυθνοσ",
       "κύθνου"
     ],
-    "slug": "islands-kythnos-title-2da7"
+    "slug": "islands-kythnos-title-2da7",
+    "locationImg": "/assets/images/kythnos-screenshot.webp"
   },
   {
     "id": "island-skyros",
@@ -831,7 +849,8 @@
       "σκυροσ",
       "σκύρου"
     ],
-    "slug": "islands-skyros-title-0372"
+    "slug": "islands-skyros-title-0372",
+    "locationImg": "/assets/images/skyros-screenshot.webp"
   },
   {
     "id": "island-lemnos",
@@ -872,7 +891,8 @@
       "λημνος",
       "λήμνος"
     ],
-    "slug": "islands-lemnos-title-fe37"
+    "slug": "islands-lemnos-title-fe37",
+    "locationImg": "/assets/images/lemnos-screenshot.webp"
   },
   {
     "id": "island-sifnos",
@@ -910,7 +930,8 @@
       "σιφνοσ",
       "σίφνου"
     ],
-    "slug": "islands-sifnos-title-9234"
+    "slug": "islands-sifnos-title-9234",
+    "locationImg": "/assets/images/sifnos-screenshot.webp"
   },
   {
     "id": "halkidiki",
@@ -987,7 +1008,8 @@
       "chalkidikii",
       "χαλκιδικης"
     ],
-    "slug": "islands-halkidiki-title-b021"
+    "slug": "islands-halkidiki-title-b021",
+    "locationImg": "/assets/images/halkidiki-screenshot.webp"
   },
   {
     "id": "island-evia",
@@ -1036,7 +1058,8 @@
       "ευβοια",
       "εύβοια"
     ],
-    "slug": "islands-evia-title-afcf"
+    "slug": "islands-evia-title-afcf",
+    "locationImg": "/assets/images/evia-screenshot.webp"
   },
   {
     "id": "island-chios",
@@ -1081,7 +1104,8 @@
       "χιοσ",
       "χίου"
     ],
-    "slug": "islands-chios-title-37ee"
+    "slug": "islands-chios-title-37ee",
+    "locationImg": "/assets/images/chios-screenshot.webp"
   },
   {
     "id": "island-tinos",
@@ -1126,7 +1150,8 @@
       "τηνοσ",
       "τήνου"
     ],
-    "slug": "islands-tinos-title-6acb"
+    "slug": "islands-tinos-title-6acb",
+    "locationImg": "/assets/images/tinos-screenshot.webp"
   },
   {
     "id": "nafplio",
@@ -1173,7 +1198,8 @@
       "naflio",
       "ναύπλιου"
     ],
-    "slug": "islands-nafplio-title-8ae6"
+    "slug": "islands-nafplio-title-8ae6",
+    "locationImg": "/assets/images/nafplio-screenshot.webp"
   },
   {
     "id": "island-astypalea",
@@ -1212,7 +1238,8 @@
       "αστυπαλαια",
       "αστυπάλαια"
     ],
-    "slug": "islands-astypalea-title-e319"
+    "slug": "islands-astypalea-title-e319",
+    "locationImg": "/assets/images/astypalea-screenshot.webp"
   },
   {
     "id": "island-hydra",
@@ -1253,7 +1280,8 @@
       "υδρα",
       "ύδρας"
     ],
-    "slug": "islands-hydra-title-895c"
+    "slug": "islands-hydra-title-895c",
+    "locationImg": "/assets/images/hydra-screenshot.webp"
   },
   {
     "id": "island-amorgos",
@@ -1292,7 +1320,8 @@
       "αμοργοσ",
       "αμόργου"
     ],
-    "slug": "islands-amorgos-title-7e79"
+    "slug": "islands-amorgos-title-7e79",
+    "locationImg": "/assets/images/amorgos-screenshot.webp"
   },
   {
     "id": "pelion",
@@ -1350,6 +1379,7 @@
       "pelionn",
       "πήλιου"
     ],
-    "slug": "islands-pelion-title-b1bf"
+    "slug": "islands-pelion-title-b1bf",
+    "locationImg": "/assets/images/pelion-screenshot.webp"
   }
 ]

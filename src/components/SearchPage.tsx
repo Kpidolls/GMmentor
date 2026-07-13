@@ -36,6 +36,7 @@ interface SearchResult {
   link: string;
   type: string;
   image?: string;
+  locationImage?: string;
   keywords?: string[];
 }
 
@@ -96,6 +97,7 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
       link: item.link,
       type: 'islands',
       image: item.img || '/placeholder.png',
+      locationImage: item.locationImg || item.img || '/placeholder.png',
       keywords: item.keywords || [],
     })),
     ...productData.map((item) => ({
@@ -286,25 +288,99 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <Image
-                            src={item.image}
-                            alt={item.title || t('search.resultImageAlt', 'Search result image')}
-                            boxSize={{ base: '60px', sm: '75px', md: '100px' }}
-                            objectFit="cover"
-                            borderRadius="md"
-                            mb={2}
-                          />
+                          {item.type === 'islands' ? (
+                            <Box
+                              display="grid"
+                              gridTemplateColumns="1fr"
+                              gridTemplateRows="minmax(0, 3fr) minmax(0, 2fr)"
+                              gap={1.5}
+                              mb={2}
+                              bg="gray.50"
+                              borderRadius="md"
+                              p={1.5}
+                              border="1px solid"
+                              borderColor="gray.200"
+                            >
+                              <Image
+                                src={item.image}
+                                alt={item.title || t('search.resultImageAlt', 'Search result image')}
+                                w="100%"
+                                h={{ base: '92px', sm: '104px', md: '116px' }}
+                                objectFit="cover"
+                                borderRadius="md"
+                              />
+                              <Box position="relative" bg="gray.200" borderRadius="md" overflow="hidden">
+                                <Image
+                                  position="absolute"
+                                  inset={0}
+                                  src={item.locationImage || item.image}
+                                  alt=""
+                                  aria-hidden="true"
+                                  w="100%"
+                                  h={{ base: '64px', sm: '70px', md: '76px' }}
+                                  objectFit="cover"
+                                  filter="blur(6px)"
+                                  transform="scale(1.04)"
+                                  opacity={0.38}
+                                />
+                                <Image
+                                  src={item.locationImage || item.image}
+                                  alt={t('islands.locationScreenshotAlt', {
+                                    title: item.title,
+                                    defaultValue: '{{title}} locations screenshot',
+                                  })}
+                                  position="relative"
+                                  zIndex={1}
+                                  w="100%"
+                                  h={{ base: '64px', sm: '70px', md: '76px' }}
+                                  objectFit="contain"
+                                  p={1}
+                                  borderRadius="md"
+                                  border="1px solid"
+                                  borderColor="gray.200"
+                                />
+                                <Text
+                                  position="absolute"
+                                  top="6px"
+                                  left="6px"
+                                  fontSize="10px"
+                                  fontWeight="semibold"
+                                  px="1.5"
+                                  py="0.5"
+                                  bg="gray.800"
+                                  color="white"
+                                  borderRadius="sm"
+                                  letterSpacing="wide"
+                                  lineHeight="1.1"
+                                >
+                                  {t('destination.mapPreview', 'Map preview')}
+                                </Text>
+                              </Box>
+                            </Box>
+                          ) : (
+                            <Image
+                              src={item.image}
+                              alt={item.title || t('search.resultImageAlt', 'Search result image')}
+                              boxSize={{ base: '60px', sm: '75px', md: '100px' }}
+                              objectFit="cover"
+                              borderRadius="md"
+                              mb={2}
+                            />
+                          )}
                           <Text
-                            fontWeight="bold"
-                            mb={1}
+                            fontWeight="semibold"
+                            mb={1.5}
                             noOfLines={1}
-                            fontSize={{ base: 'xs', sm: 'sm', md: 'md' }}
+                            letterSpacing="tight"
+                            lineHeight="short"
+                            fontSize={{ base: 'sm', sm: 'sm', md: 'md' }}
                           >
                             {item.title}
                           </Text>
                           <Text
                             color="gray.600"
                             noOfLines={2}
+                            lineHeight="1.45"
                             fontSize={{ base: 'xs', sm: 'sm', md: 'sm' }}
                           >
                             {item.description}
@@ -322,6 +398,9 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                           colorScheme="blue"
                           variant="solid"
                           minH="44px"
+                          fontSize={{ base: 'xs', sm: 'sm' }}
+                          fontWeight="semibold"
+                          letterSpacing="tight"
                           whiteSpace="normal"
                           lineHeight="short"
                           textAlign="center"
@@ -334,6 +413,9 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                           variant="outline"
                           minH="44px"
                           px={4}
+                          fontSize={{ base: 'xs', sm: 'sm' }}
+                          fontWeight="semibold"
+                          letterSpacing="tight"
                           whiteSpace="normal"
                           lineHeight="short"
                           textAlign="center"

@@ -279,20 +279,22 @@ function main() {
   for (const expectedPath of Array.from(expectedPaths).sort((a, b) => a.localeCompare(b))) {
     const requestedSlug = expectedPath.replace('/place/', '');
     const htmlPath = getPlaceHtmlPath(requestedSlug);
+    const canonicalSlug = slugToCanonical.get(requestedSlug) || requestedSlug;
+    const isCanonicalPath = requestedSlug === canonicalSlug;
 
     if (!fs.existsSync(htmlPath)) {
       missingFiles.push(expectedPath);
       continue;
     }
 
-    if (!sitemapPaths.has(expectedPath)) {
+    // Legacy alias pages are intentionally removed from sitemap entries.
+    if (isCanonicalPath && !sitemapPaths.has(expectedPath)) {
       missingFromSitemap.push(expectedPath);
     }
 
     const html = fs.readFileSync(htmlPath, 'utf8');
     const canonicalMatch = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i);
     const canonicalHref = canonicalMatch ? canonicalMatch[1] : null;
-    const canonicalSlug = slugToCanonical.get(requestedSlug) || requestedSlug;
     const expectedCanonicalPath = `/place/${canonicalSlug}`;
     const expectedCanonicalUrl = `${SITE_URL}${expectedCanonicalPath}`;
 

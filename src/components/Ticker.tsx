@@ -15,6 +15,7 @@ type DestinationEntry = {
   id: string;
   title: string;
   img: string;
+  locationImg?: string;
   link: string;
   target?: string;
   rel?: string;
@@ -103,22 +104,55 @@ function MyTicker() {
                       destination: destinationLabel,
                     })}
                   >
-                    <Box
-                      as="img"
-                      src={destination.img}
-                      alt={destinationLabel}
-                      width={{ base: '24px', md: '28px' }}
-                      height={{ base: '24px', md: '28px' }}
-                      minWidth={{ base: '24px', md: '28px' }}
-                      borderRadius="full"
-                      objectFit="cover"
-                      mr="2"
-                      border="1px solid"
-                      borderColor="blue.200"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <Text as="span" color="blue.800" fontWeight="extrabold" fontSize={{ base: 'xs', md: 'sm' }} mr="1">
+                    <Box display="inline-flex" alignItems="center" mr="2" position="relative" minW={{ base: '24px', md: '26px' }} h={{ base: '24px', md: '26px' }}>
+                      <Box
+                        as="img"
+                        src={destination.img}
+                        alt={destinationLabel}
+                        width={{ base: '22px', md: '24px' }}
+                        height={{ base: '22px', md: '24px' }}
+                        minWidth={{ base: '22px', md: '24px' }}
+                        borderRadius="full"
+                        objectFit="cover"
+                        border="1px solid"
+                        borderColor="blue.300"
+                        bg="white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <Box
+                        as="img"
+                        src={destination.locationImg || destination.img}
+                        alt={t('islands.locationScreenshotAlt', {
+                          title: destinationLabel,
+                          defaultValue: '{{title}} locations screenshot',
+                        })}
+                        width={{ base: '12px', md: '13px' }}
+                        height={{ base: '12px', md: '13px' }}
+                        minWidth={{ base: '12px', md: '13px' }}
+                        borderRadius="sm"
+                        objectFit="contain"
+                        border="1px solid"
+                        borderColor="white"
+                        position="absolute"
+                        right="-1px"
+                        bottom="-1px"
+                        zIndex={3}
+                        boxShadow="0 0 0 1px rgba(148, 163, 184, 0.85)"
+                        bg="white"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </Box>
+                    <Text
+                      as="span"
+                      color="blue.800"
+                      fontWeight="bold"
+                      letterSpacing="tight"
+                      lineHeight="short"
+                      fontSize={{ base: 'xs', md: 'sm' }}
+                      mr="1"
+                    >
                       {destinationLabel}
                     </Text>
                   </Link>

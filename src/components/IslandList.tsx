@@ -4,6 +4,17 @@ import islands from '../data/islands.json';
 import Image from 'next/image';
 import { dispatchAddToItinerary } from '../utils/itineraryEvents';
 
+type IslandEntry = {
+  id: string;
+  title: string;
+  img: string;
+  locationImg?: string;
+  description: string;
+  link: string;
+  target?: string;
+  rel?: string;
+};
+
 const IslandList = () => {
   const { t } = useTranslation();
   const [visibleIslands, setVisibleIslands] = useState(9);
@@ -29,40 +40,68 @@ const IslandList = () => {
         {t('islands.title')}
       </h1> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {islands.slice(0, visibleIslands).map((island, index) => (
+        {(islands as IslandEntry[]).slice(0, visibleIslands).map((island, index) => (
           <div
             key={index}
             id={island.id}
-            className="group text-left rounded-xl border overflow-hidden transition-all duration-300 h-[360px] sm:h-[382px] lg:h-[400px] flex flex-col border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50 hover:shadow-md"
+            className="group text-left rounded-xl border overflow-hidden transition-all duration-300 h-[380px] sm:h-[402px] lg:h-[420px] flex flex-col border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50 hover:shadow-md"
           >
-            <div className="relative h-40 sm:h-44 w-full overflow-hidden">
-              <Image
-                src={island.img}
-                alt={t(island.title)}
-                fill
-                className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-100">
+              <div className="grid h-full grid-rows-[7fr_4fr]">
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={island.img}
+                    alt={t(island.title)}
+                    fill
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/35 via-transparent to-transparent" />
+                </div>
+                <div className="relative border-t border-white/50 p-2 sm:p-2.5 bg-slate-100">
+                  <div className="relative h-full w-full overflow-hidden rounded-md ring-1 ring-slate-300/70 bg-slate-200">
+                    <Image
+                      src={island.locationImg || island.img}
+                      alt=""
+                      aria-hidden="true"
+                      fill
+                      className="h-full w-full object-cover blur-sm scale-105 opacity-40"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <Image
+                      src={island.locationImg || island.img}
+                      alt={t('islands.locationScreenshotAlt', {
+                        title: t(island.title),
+                        defaultValue: '{{title}} locations screenshot',
+                      })}
+                      fill
+                      className="relative z-10 h-full w-full object-contain p-1 transition-transform duration-500 ease-out group-hover:scale-[1.01]"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <span className="absolute left-2 top-2 text-[10px] sm:text-[11px] px-1.5 py-0.5 rounded bg-slate-900/70 text-white tracking-wide">
+                      {t('destination.mapPreview', 'Map preview')}
+                    </span>
+                  </div>
+                </div>
+              </div>
               <span className="absolute top-2 right-2 text-[11px] px-2 py-1 rounded-full bg-white/90 border border-white text-gray-700 whitespace-nowrap">
                 {getDestinationTypeLabel(island.id)}
               </span>
-              <h3 className="absolute bottom-2 left-3 right-3 text-base sm:text-lg font-bold text-white leading-tight drop-shadow">
+            </div>
+            <div className="p-4 sm:p-4.5 flex flex-col flex-1">
+              <h3 className="text-[15px] sm:text-[18px] font-semibold tracking-tight text-slate-900 leading-snug mb-1.5">
                 {t(island.title)}
               </h3>
-            </div>
-            <div className="p-4 flex flex-col flex-1">
-              <p className="text-xs sm:text-sm text-gray-600 line-clamp-3 min-h-[60px] sm:min-h-[64px]">
+              <p className="text-[12px] sm:text-[13px] text-slate-600 leading-relaxed line-clamp-3 min-h-[60px] sm:min-h-[64px]">
                 {t(island.description)}
               </p>
 
-              <div className="mt-auto pt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              <div className="mt-auto pt-3.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                 <a
                   href={island.link}
                   target={island.target}
                   rel={island.rel}
-                  className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg text-white text-center leading-tight whitespace-normal bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black transition-colors duration-200"
+                  className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-[11px] sm:text-[13px] font-semibold tracking-tight rounded-lg text-white text-center leading-snug whitespace-normal bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black transition-colors duration-200"
                   aria-label={t('islands.openMapAria', 'Open map for islands')}
                 >
                   <span className="sm:hidden">🗺️ {t('destinationSearch.openCuratedMapShort', 'Map')}</span>
@@ -81,7 +120,7 @@ const IslandList = () => {
                       alert(t('islands.shareNotSupported'));
                     }
                   }}
-                  className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 text-center leading-tight whitespace-normal bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
+                  className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-[11px] sm:text-[13px] font-semibold tracking-tight rounded-lg border transition-colors duration-200 text-center leading-snug whitespace-normal bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
                   aria-label={t('islands.shareIslandAria', 'Share this island')}
                 >
                   <span className="sm:hidden">🔗 {t('destinationSearch.shareMapShort', 'Share')}</span>
@@ -101,7 +140,7 @@ const IslandList = () => {
                       }),
                     })
                   }
-                  className="inline-flex items-center justify-center min-h-11 sm:min-h-12 px-3 py-2.5 text-xs sm:text-sm font-semibold rounded-lg border transition-colors duration-200 text-center leading-tight whitespace-normal bg-teal-50 border-teal-300 text-teal-800 hover:bg-teal-100"
+                  className="inline-flex items-center justify-center min-h-11 sm:min-h-12 px-3 py-2.5 text-[11px] sm:text-[13px] font-semibold tracking-tight rounded-lg border transition-colors duration-200 text-center leading-snug whitespace-normal bg-teal-50 border-teal-300 text-teal-800 hover:bg-teal-100"
                   aria-label={t('place.addToItinerary', 'Add to itinerary')}
                 >
                   <span className="sm:hidden">➕ {t('destinationSearch.addShort', 'Add')}</span>
@@ -116,7 +155,7 @@ const IslandList = () => {
         <div className="mt-8 text-center">
           <button
             onClick={handleViewMore}
-            className="px-6 py-3 bg-blue-600 font-primary text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+            className="px-6 py-3 bg-blue-600 font-primary text-white text-sm font-semibold tracking-tight rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
             aria-label={t('islands.viewMoreAria', 'View more')}
           >
             {t('islands.viewMoreButton')}
