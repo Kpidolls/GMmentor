@@ -19,7 +19,7 @@
     "build": "npm run validate:llms && npm run validate:intent-registry && npm run report:intent-coverage && npm run validate:intent-pages && npm run validate:homepage-links && npm run validate:guide-entity-targets && npm run validate:meta-descriptions && node scripts/run-next-build-with-retry.js",
     "build:fast": "npm run build",
     "build:clean-first": "cross-env NEXT_BUILD_CLEAN_FIRST_ATTEMPT=1 npm run build",
-    "postbuild": "next-sitemap --config next-sitemap.config.js && node scripts/sanitize-sitemap.js && node scripts/generate-llms-full.js && node scripts/validate-knowledge-graph.js && node scripts/submit-to-indexnow.js",
+    "postbuild": "node scripts/generate-trailing-slash-aliases.js && next-sitemap --config next-sitemap.config.js && node scripts/sanitize-sitemap.js && node scripts/generate-llms-full.js && node scripts/validate-knowledge-graph.js && node scripts/submit-to-indexnow.js",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "build-prod": "run-s clean build",

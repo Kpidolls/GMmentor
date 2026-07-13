@@ -11,10 +11,8 @@ import {
   HStack,
   Image,
   Link,
-  ListItem,
   SimpleGrid,
   Text,
-  UnorderedList,
   VStack,
   useToast,
 } from '@chakra-ui/react';
@@ -35,6 +33,78 @@ import { buildPlaceMetaDescription } from '../../config/metaDescriptions';
 import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
 
 const SITE_URL = 'https://googlementor.com';
+
+type CategoryNarrativeProfile = {
+  typeLabelKey: string;
+  bestForDefaults: string[];
+  visitMomentDefaults: string[];
+};
+
+const GENERIC_BEST_FOR_TAGS = new Set(['first-time visitors', 'food lovers', 'route planners']);
+const GENERIC_VISIT_MOMENT_TAGS = new Set(['lunch stop', 'dinner stop', 'daytime visit']);
+
+const CATEGORY_NARRATIVE_PROFILES: Record<string, CategoryNarrativeProfile> = {
+  'family-friendly': {
+    typeLabelKey: 'familyFriendlySpot',
+    bestForDefaults: ['families with kids', 'parents with children'],
+    visitMomentDefaults: ['quick family lunch', 'relaxed family dinner'],
+  },
+  'coffee-brunch': {
+    typeLabelKey: 'cafe',
+    bestForDefaults: ['coffee lovers', 'remote workers'],
+    visitMomentDefaults: ['late brunch', 'afternoon break'],
+  },
+  desserts: {
+    typeLabelKey: 'dessertShop',
+    bestForDefaults: ['dessert lovers', 'families with kids'],
+    visitMomentDefaults: ['afternoon break', 'after dinner'],
+  },
+  'cheap-eats': {
+    typeLabelKey: 'streetFoodSpot',
+    bestForDefaults: ['budget travelers', 'food lovers'],
+    visitMomentDefaults: ['lunch stop', 'late-night bites'],
+  },
+  'gyros-souvlaki': {
+    typeLabelKey: 'streetFoodSpot',
+    bestForDefaults: ['budget travelers', 'food lovers'],
+    visitMomentDefaults: ['lunch stop', 'late-night bites'],
+  },
+  attractions: {
+    typeLabelKey: 'attractionSpot',
+    bestForDefaults: ['culture seekers', 'photography lovers'],
+    visitMomentDefaults: ['early morning', 'daytime visit'],
+  },
+  'wineries-vineyards': {
+    typeLabelKey: 'wineEstate',
+    bestForDefaults: ['wine lovers', 'special occasions'],
+    visitMomentDefaults: ['golden hour', 'sunset exploration'],
+  },
+  'monasteries-churches': {
+    typeLabelKey: 'monasteryChurchSite',
+    bestForDefaults: ['culture seekers', 'quiet reflection'],
+    visitMomentDefaults: ['early morning', 'late morning walks'],
+  },
+  'rooftop-lounges': {
+    typeLabelKey: 'rooftopLounge',
+    bestForDefaults: ['special occasions', 'photography lovers'],
+    visitMomentDefaults: ['golden hour', 'night out'],
+  },
+  vegetarian: {
+    typeLabelKey: 'vegetarianSpot',
+    bestForDefaults: ['food lovers', 'health-conscious travelers'],
+    visitMomentDefaults: ['lunch stop', 'afternoon break'],
+  },
+  'fish-tavernas': {
+    typeLabelKey: 'fishTaverna',
+    bestForDefaults: ['food lovers', 'return visitors'],
+    visitMomentDefaults: ['lunch stop', 'dinner stop'],
+  },
+  'luxury-dining': {
+    typeLabelKey: 'fineDiningSpot',
+    bestForDefaults: ['special occasions', 'food lovers'],
+    visitMomentDefaults: ['dinner stop', 'night out'],
+  },
+};
 
 type EntityPageProps = {
   entity: EntityRecord;
@@ -114,6 +184,21 @@ function displayContext(entity: EntityRecord): string {
   if (entity.address) return entity.address;
   if (entity.region) return entity.region;
   if (entity.kind === 'municipality' && entity.region_en) return entity.region_en;
+  return 'Greece';
+}
+
+function displayNeighborhood(entity: EntityRecord): string {
+  if (entity.address) {
+    const [firstSegment] = entity.address.split(',').map((part) => part.trim()).filter(Boolean);
+    if (firstSegment) {
+      return firstSegment;
+    }
+  }
+
+  if (entity.region) {
+    return entity.region;
+  }
+
   return 'Greece';
 }
 
@@ -216,14 +301,14 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
       distanceKm: calculateDistance(entity.lat, entity.lng, candidate.lat, candidate.lng),
     }))
     .sort((a, b) => a.distanceKm - b.distanceKm)
-    .slice(0, 8);
+    .slice(0, 24);
 
   return {
     props: {
       entity,
-      sameCategory: getSameCategoryEntities(entity, index.entities, 8),
+      sameCategory: getSameCategoryEntities(entity, index.entities, 12),
       nearby: nearbyWithDistance,
-      sameRegion: getSameRegionEntities(entity, index.entities, 8),
+      sameRegion: getSameRegionEntities(entity, index.entities, 16),
       mentionedGuides: getMentionedGuidesForEntity(entity, 8).map((post) => ({
         slug: post.slug,
         title: post.title,
@@ -245,6 +330,7 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
   const canonicalUrl = `${SITE_URL}/place/${canonicalSlug}`;
   const isSanZachariFeatured = canonicalSlug === 'san-zachari-4ba5';
   const context = displayContext(entity);
+  const neighborhood = displayNeighborhood(entity);
   const isGreek = i18n.language?.startsWith('el');
   const fallback = fallbackSummary(entity, context);
   const effectiveEnrichment = enrichment || {
@@ -283,6 +369,27 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
       ? `${entity.name} είναι επιλεγμένο ζαχαροπλαστείο στη ${context}. Αγαπημένο των ντόπιων, με κοντινές προτάσεις Googlementor για εύκολη διαδρομή.`
       : `${entity.name} is a featured dessert shop in ${context}. A local favorite with nearby Googlementor picks to help you build an easy route.`)
     : defaultSummary;
+  const categoryNarrativeProfile = primaryCategoryId ? CATEGORY_NARRATIVE_PROFILES[primaryCategoryId] : undefined;
+  const typeLabelKey = categoryNarrativeProfile?.typeLabelKey || (entity.kind === 'restaurant' ? 'restaurant' : 'localSpot');
+  const placeTypeLabel = t(`place.typeLabels.${typeLabelKey}`, localizedKind.toLowerCase());
+
+  const bestForRaw = (effectiveEnrichment.best_for || []).slice(0, 2);
+  const visitMomentsRaw = (effectiveEnrichment.visit_moments || []).slice(0, 2);
+
+  const shouldFallbackBestFor = Boolean(
+    categoryNarrativeProfile && (bestForRaw.length === 0 || bestForRaw.every((tag) => GENERIC_BEST_FOR_TAGS.has(tag)))
+  );
+  const shouldFallbackVisitMoments = Boolean(
+    categoryNarrativeProfile && (visitMomentsRaw.length === 0 || visitMomentsRaw.every((tag) => GENERIC_VISIT_MOMENT_TAGS.has(tag)))
+  );
+
+  const resolvedBestForRaw = shouldFallbackBestFor
+    ? (categoryNarrativeProfile?.bestForDefaults || bestForRaw)
+    : bestForRaw;
+  const resolvedVisitMomentsRaw = shouldFallbackVisitMoments
+    ? (categoryNarrativeProfile?.visitMomentDefaults || visitMomentsRaw)
+    : visitMomentsRaw;
+
   const showKindBadge = !(entity.kind === 'restaurant' && categoryBadgeLabels.length > 0);
   const metaDescription = buildPlaceMetaDescription({
     placeName: entity.name,
@@ -290,66 +397,129 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
     typeLabel: localizedKind,
     categoryLabel: primaryCategory,
   });
+  const bestForLabels = resolvedBestForRaw
+    .map((tag) => t(`place.dynamicTags.${tag}`, tag));
+  const visitMomentLabels = resolvedVisitMomentsRaw
+    .map((tag) => t(`place.dynamicTags.${tag}`, tag));
+  const heroAudience = bestForLabels.join(isGreek ? ' και ' : ' and ');
   const subjectOfUrls = mentionedGuides.map((guide) => `${SITE_URL}/blog/${guide.slug}`);
   const entityJsonLd = buildEntityJsonLd(entity, canonicalUrl, subjectOfUrls);
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(entity, canonicalUrl);
   const shareTitle = `${entity.name} | ${localizedKind} | Googlementor`;
   const pageTitle = buildPlaceSeoTitle(entity.name, localizedKind);
   const socialTitle = buildPlaceSeoTitle(entity.name, localizedKind);
-  const shareText = `${entity.name} - ${summary}`;
   const featuredVibeRaw = effectiveEnrichment.vibe_tags[0] || 'curated';
   const featuredVibe = t(`place.dynamicTags.${featuredVibeRaw}`, featuredVibeRaw);
-  const similarPlaces = sameCategory.slice(0, 3);
+  const favoriteBadgeLabel = t('place.badges.favorite', "People's Favorite");
+  const curatedBadgeLabel = t('place.badges.curated', 'Googlementor Pick');
+  const tagline = heroAudience
+    ? t('place.tagline.withAudience', {
+      type: placeTypeLabel,
+      neighborhood,
+      audience: heroAudience,
+      defaultValue: `A people's favorite ${placeTypeLabel} in ${neighborhood}, especially good for ${heroAudience}.`,
+    })
+    : t('place.tagline.base', {
+      type: placeTypeLabel,
+      neighborhood,
+      defaultValue: `A people's favorite ${placeTypeLabel} in ${neighborhood}.`,
+    });
+  const shareText = `${entity.name} - ${tagline}`;
+  const sameCategoryWithDistance = useMemo(
+    () => sameCategory
+      .map((candidate) => ({
+        ...candidate,
+        distanceKm: calculateDistance(entity.lat, entity.lng, candidate.lat, candidate.lng),
+      }))
+      .slice(0, 6),
+    [entity.lat, entity.lng, sameCategory]
+  );
+  const sameRegionWithDistance = useMemo(
+    () => sameRegion
+      .map((candidate) => ({
+        ...candidate,
+        distanceKm: calculateDistance(entity.lat, entity.lng, candidate.lat, candidate.lng),
+      }))
+      .sort((left, right) => left.distanceKm - right.distanceKm),
+    [entity.lat, entity.lng, sameRegion]
+  );
+  const usefulStopCandidates = useMemo(() => {
+    const primaryIds = new Set(entity.categoryIds || []);
+    const complementary = nearby.filter((candidate) => !(candidate.categoryIds || []).some((categoryId) => primaryIds.has(categoryId)));
+
+    return complementary.length >= 3 ? complementary : nearby;
+  }, [entity.categoryIds, nearby]);
   const nearbyGroupedByCategory = useMemo(() => {
     const grouped = new Map<string, { label: string; items: Array<EntityRecord & { distanceKm: number }> }>();
 
-    nearby.forEach((candidate) => {
-      const ids = candidate.categoryIds?.length ? candidate.categoryIds : ['uncategorized'];
+    usefulStopCandidates.forEach((candidate) => {
+      const categoryId = candidate.categoryIds?.[0] || 'uncategorized';
+      const fallbackCategoryName = candidate.categories?.[0] || categoryId;
+      const label = categoryId === 'uncategorized'
+        ? t('place.nearby.uncategorized', 'Other')
+        : t(`place.categoryNames.${categoryId}`, fallbackCategoryName);
 
-      ids.forEach((categoryId, index) => {
-        const fallbackCategoryName = candidate.categories?.[index] || categoryId;
-        const label = categoryId === 'uncategorized'
-          ? t('place.nearby.uncategorized', 'Other')
-          : t(`place.categoryNames.${categoryId}`, fallbackCategoryName);
+      if (!grouped.has(label)) {
+        grouped.set(label, { label, items: [] });
+      }
 
-        if (!grouped.has(label)) {
-          grouped.set(label, { label, items: [] });
-        }
-
-        grouped.get(label)?.items.push(candidate);
-      });
+      grouped.get(label)?.items.push(candidate);
     });
 
-    return Array.from(grouped.values());
-  }, [nearby, t]);
-  const shareReason = t('place.share.reason', {
-    name: entity.name,
-    vibe: featuredVibe,
-    nearby: effectiveEnrichment.nearby_walkable_count,
-    defaultValue:
-      '{{name}} stands out for its {{vibe}} vibe and its connection to {{nearby}} walkable discoveries nearby. This is exactly the type of place worth sharing with friends before your trip.',
-  });
-  const shareCaption = t('place.share.singleCaption', {
-    name: entity.name,
-    context,
-    defaultValue: `Proud to see ${entity.name} featured on Googlementor. A local favorite in ${context} worth discovering.`,
-  });
-  const promoBadgeText = 'GOOGLEMENTOR FEATURED';
+    return Array.from(grouped.values())
+      .map((group) => ({
+        ...group,
+        items: group.items.sort((left, right) => left.distanceKm - right.distanceKm).slice(0, 2),
+      }))
+      .slice(0, 4);
+  }, [t, usefulStopCandidates]);
+  const usefulStopIds = nearbyGroupedByCategory.flatMap((group) => group.items.map((candidate) => candidate.id));
+  const walkableNearby = useMemo(() => {
+    const excludedIds = new Set([
+      ...sameCategoryWithDistance.map((candidate) => candidate.id),
+      ...usefulStopIds,
+    ]);
+    const filtered = nearby.filter((candidate) => !excludedIds.has(candidate.id));
+    const walkable = filtered.filter((candidate) => candidate.distanceKm <= 0.8);
+
+    return (walkable.length > 0 ? walkable : filtered).slice(0, 4);
+  }, [nearby, sameCategoryWithDistance, usefulStopIds]);
+  const moreNearbyOptions = useMemo(() => {
+    const excluded = new Set<string>([
+      ...sameCategoryWithDistance.map((candidate) => candidate.id),
+      ...walkableNearby.map((candidate) => candidate.id),
+      ...usefulStopIds,
+    ]);
+
+    const merged = [...nearby, ...sameRegionWithDistance];
+    const deduped = new Map<string, (EntityRecord & { distanceKm: number })>();
+
+    merged.forEach((candidate) => {
+      if (!excluded.has(candidate.id) && !deduped.has(candidate.id)) {
+        deduped.set(candidate.id, candidate);
+      }
+    });
+
+    return Array.from(deduped.values()).slice(0, 6);
+  }, [nearby, sameCategoryWithDistance, sameRegionWithDistance, usefulStopIds, walkableNearby]);
+  const shareCaption = t('place.share.autoCaption', 'Discovered via Googlementor curated picks across Greece.');
+  const nearbyGroupAccentSchemes = ['blue', 'teal', 'orange', 'purple'] as const;
+  const promoBadgeText = favoriteBadgeLabel.toUpperCase();
   const promoPlaceName = isSanZachariFeatured ? 'Σαν Ζάχαρη' : entity.name;
   const promoCategoryAddress = isSanZachariFeatured
     ? 'Dessert Shops · Ελ. Βενιζέλου 119, Νέα Ιωνία'
-    : `${entity.kind === 'restaurant' && categoryBadgeLabels.length > 0 ? categoryBadgeLabels[0] : localizedKind} · ${context}`;
+    : `${entity.kind === 'restaurant' && categoryBadgeLabels.length > 0 ? categoryBadgeLabels[0] : localizedKind} · ${neighborhood}`;
   const promoHighlight = isSanZachariFeatured
     ? 'Αγαπημένο των ντόπιων. Αξίζει κοινοποίηση.'
-    : t('place.share.posterLine', 'Loved by locals. Worth sharing.');
+    : tagline;
   const promoLink = isSanZachariFeatured
     ? 'googlementor.com/place/san-zachari-4ba5'
     : canonicalUrl.replace(/^https?:\/\//, '');
   const promoTags = useMemo(
     () => (isSanZachariFeatured
       ? ['Ζαχαροπλαστεία', 'Επιλεγμένο']
-      : [primaryCategoryLabel, featuredVibe].filter(Boolean)),
-    [featuredVibe, isSanZachariFeatured, primaryCategoryLabel]
+      : [primaryCategoryLabel, featuredVibe, neighborhood].filter(Boolean)),
+    [featuredVibe, isSanZachariFeatured, neighborhood, primaryCategoryLabel]
   );
 
   useEffect(() => {
@@ -511,20 +681,21 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
     }
   };
 
-  const handleNativeShare = async () => {
-    if (!canNativeShare || typeof navigator === 'undefined') {
-      return;
+  const handleSharePlace = async () => {
+    if (canNativeShare && typeof navigator !== 'undefined') {
+      try {
+        await navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: canonicalUrl,
+        });
+        return;
+      } catch {
+        // Ignore cancellation and transient errors.
+      }
     }
 
-    try {
-      await navigator.share({
-        title: shareTitle,
-        text: shareText,
-        url: canonicalUrl,
-      });
-    } catch {
-      // Ignore cancellation and transient errors.
-    }
+    await handleCopyLink();
   };
 
   const handleDownloadPromo = () => {
@@ -550,6 +721,23 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
       duration: 3200,
       isClosable: true,
     });
+  };
+
+  const handleShareCard = async () => {
+    if (canNativeShare && typeof navigator !== 'undefined') {
+      try {
+        await navigator.share({
+          title: t('place.share.cardShareTitle', { name: entity.name, defaultValue: 'Celebrate {{name}} on Googlementor' }),
+          text: shareCaption,
+          url: canonicalUrl,
+        });
+        return;
+      } catch {
+        // Ignore cancellation and transient errors.
+      }
+    }
+
+    handleDownloadPromo();
   };
 
   const handleCopyCaption = async () => {
@@ -584,9 +772,13 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
         <meta name="description" content={metaDescription} />
         <meta name="robots" content={isCanonicalEntity ? 'index, follow' : 'noindex, follow'} />
         <link rel="canonical" href={canonicalUrl} />
+        {!isCanonicalEntity ? <meta httpEquiv="refresh" content={`0;url=${canonicalUrl}`} /> : null}
+        <link rel="alternate" hrefLang="en" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="el" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         <meta property="og:title" content={socialTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content="https://googlementor.com/assets/images/cover-627.webp" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -603,36 +795,88 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
         />
       </Head>
 
-      <Box mb={8} borderWidth="1px" borderRadius="2xl" p={{ base: 5, md: 8 }} bg="white" boxShadow="sm">
-        <HStack spacing={2} mb={3} flexWrap="wrap">
-          {showKindBadge ? <Badge colorScheme="blue" textTransform="none">{localizedKind}</Badge> : null}
-          {categoryBadgeLabels.length > 0
-            ? categoryBadgeLabels.map((categoryLabel) => (
-              <Badge key={categoryLabel} colorScheme="teal" textTransform="none">{categoryLabel}</Badge>
-            ))
-            : primaryCategory
-              ? <Badge colorScheme="teal" textTransform="none">{primaryCategoryLabel}</Badge>
-              : null}
-          <Badge colorScheme="gray" textTransform="none">{context}</Badge>
-        </HStack>
-        <Heading as="h1" size="2xl" mb={3}>
-          {entity.name}
-        </Heading>
-        <Text color="gray.700" mb={4} lineHeight="1.8">
-          {summary}
-        </Text>
+      <Box
+        mb={8}
+        borderWidth="1px"
+        borderColor="orange.100"
+        borderRadius="2xl"
+        p={{ base: 5, md: 8 }}
+        bg="white"
+        boxShadow="sm"
+      >
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={5}>
+          <VStack align="stretch" spacing={4}>
+            <HStack spacing={2} flexWrap="wrap">
+              <Badge colorScheme="orange" textTransform="none">{favoriteBadgeLabel}</Badge>
+              <Badge colorScheme="gray" textTransform="none">{curatedBadgeLabel}</Badge>
+              {showKindBadge ? <Badge colorScheme="blue" textTransform="none">{localizedKind}</Badge> : null}
+            </HStack>
 
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3} mb={5}>
-          <Box borderWidth="1px" borderRadius="lg" p={3} bg="gray.50">
-            <Text fontSize="xs" color="gray.600">{t('place.stats.walkable', 'Walkable nearby picks')}</Text>
-            <Text fontWeight="bold" fontSize="xl">{effectiveEnrichment.nearby_walkable_count}</Text>
-          </Box>
-          <Box borderWidth="1px" borderRadius="lg" p={3} bg="gray.50">
-            <Text fontSize="xs" color="gray.600">{t('place.stats.nearby2km', 'Nearby within 2km')}</Text>
-            <Text fontWeight="bold" fontSize="xl">{effectiveEnrichment.nearby_count_2km}</Text>
-          </Box>
+            <Text fontSize="sm" fontWeight="semibold" color="gray.600">
+              {primaryCategoryLabel} · {neighborhood}
+            </Text>
+            <Heading as="h1" size="2xl">
+              {entity.name}
+            </Heading>
+            <Text color="gray.700" lineHeight="1.7" noOfLines={2}>
+              {tagline}
+            </Text>
+
+            {bestForLabels.length > 0 || visitMomentLabels.length > 0 ? (
+              <HStack spacing={2} flexWrap="wrap">
+                {bestForLabels.map((label) => (
+                  <Badge key={`hero-best-${label}`} colorScheme="teal" textTransform="none">{label}</Badge>
+                ))}
+                {visitMomentLabels.map((label) => (
+                  <Badge key={`hero-time-${label}`} colorScheme="orange" textTransform="none">{label}</Badge>
+                ))}
+              </HStack>
+            ) : null}
+
+            <Box borderWidth="1px" borderRadius="xl" p={3} bg="gray.50">
+              <Text fontSize="sm" color="gray.700" mb={2}>{shareCaption}</Text>
+              <HStack spacing={2} flexWrap="wrap">
+                <Button size="sm" colorScheme="blue" onClick={handleShareCard}>
+                  {t('place.share.cardButton', 'Share this card')}
+                </Button>
+                <Button size="sm" variant="outline" onClick={handleCopyCaption}>
+                  {copiedCaption ? t('place.share.copiedShort', 'Copied') : t('place.share.copyCaption', 'Copy caption')}
+                </Button>
+                <Button size="sm" variant="outline" onClick={handleCopyLink}>
+                  {copied ? t('place.share.copiedShort', 'Copied') : t('place.share.copyLink', 'Copy link')}
+                </Button>
+              </HStack>
+            </Box>
+          </VStack>
+
+          <VStack align="stretch" spacing={3}>
+            <Box borderWidth="1px" borderRadius="2xl" p={4} bg="white" boxShadow="sm">
+              <Heading as="h2" size="sm" mb={3}>{t('place.promo.posterTitle', 'Social poster preview')}</Heading>
+              {socialPosterPreview ? (
+                <Image
+                  src={socialPosterPreview}
+                  alt={t('place.promo.previewAlt', { name: entity.name, defaultValue: 'Promo card preview for {{name}}' })}
+                  w="full"
+                  h={{ base: '320px', md: '360px' }}
+                  objectFit="cover"
+                  borderRadius="xl"
+                  borderWidth="1px"
+                />
+              ) : (
+                <Box h="260px" borderWidth="1px" borderRadius="xl" bg="gray.50" display="flex" alignItems="center" justifyContent="center">
+                  <Text fontSize="sm" color="gray.500">{t('place.promo.generating', 'Generating preview...')}</Text>
+                </Box>
+              )}
+            </Box>
+
+            <Button colorScheme="blue" minH="44px" w={{ base: '100%', md: 'auto' }} onClick={handleSharePlace}>
+              {t('place.share.heroButton', 'Share this place')}
+            </Button>
+          </VStack>
         </SimpleGrid>
+      </Box>
 
+      <Box mb={8} borderWidth="1px" borderRadius="xl" p={{ base: 4, md: 5 }} bg="gray.50">
         <HStack spacing={3} flexWrap="wrap" align="stretch" w="full">
           <Button
             as={Link}
@@ -642,7 +886,7 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
             minH="44px"
             w={{ base: '100%', sm: 'auto' }}
           >
-            {t('place.openDirections', 'Open directions in Google Maps')}
+            {t('place.openDirections', 'Navigate')}
           </Button>
           <Button
             variant="outline"
@@ -662,88 +906,96 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
         </HStack>
       </Box>
 
-      <Box mb={8} borderWidth="1px" borderColor="blue.100" borderRadius="xl" p={5} bg="white" boxShadow="sm">
-        <Heading as="h2" size="md" mb={3}>{t('place.share.title', 'This place deserves to be shared')}</Heading>
-        <Text color="gray.700" mb={4}>{shareReason}</Text>
+      {nearby.length > 0 ? (
+        <Box mb={8} borderWidth="1px" borderColor="blue.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="blue.50">
+          <Heading as="h2" size="md" mb={2}>
+            {t('place.nearby.title', 'Closest useful stops')}
+          </Heading>
+          <Text color="gray.700" mb={4}>{t('place.nearby.subtitle', 'A quick travel-assistant view of the closest useful stops to walk to next.')}</Text>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
+            {nearbyGroupedByCategory.map((group, groupIndex) => {
+              const accentScheme = nearbyGroupAccentSchemes[groupIndex % nearbyGroupAccentSchemes.length];
 
-        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={4}>
-          <Box borderWidth="1px" borderRadius="lg" p={3} bg="white">
-            <Heading as="h3" size="sm" mb={3}>{t('place.promo.posterTitle', 'Social poster preview')}</Heading>
-            {socialPosterPreview ? (
-              <Image
-                src={socialPosterPreview}
-                alt={t('place.promo.previewAlt', { name: entity.name, defaultValue: 'Promo card preview for {{name}}' })}
-                w="full"
-                h={{ base: '360px', md: '420px' }}
-                objectFit="cover"
-                borderRadius="md"
-                borderWidth="1px"
-              />
-            ) : (
-              <Box h="260px" borderWidth="1px" borderRadius="md" bg="gray.50" display="flex" alignItems="center" justifyContent="center">
-                <Text fontSize="sm" color="gray.500">{t('place.promo.generating', 'Generating preview...')}</Text>
-              </Box>
-            )}
-          </Box>
-
-          <VStack align="stretch" spacing={3}>
-            <Box borderWidth="1px" borderRadius="lg" p={3} bg="white">
-              <Heading as="h3" size="sm" mb={3}>{t('place.share.captionsTitle', 'Ready-to-share caption')}</Heading>
-              <Box borderWidth="1px" borderRadius="md" p={3}>
-                <Text fontSize="sm" color="gray.700" mb={2}>{shareCaption}</Text>
-                <Button size="xs" variant="outline" onClick={handleCopyCaption}>
-                  {copiedCaption ? t('place.share.copiedShort', 'Copied') : t('place.share.copyCaption', 'Copy caption')}
-                </Button>
-              </Box>
-            </Box>
-
-            <HStack spacing={2} flexWrap="wrap">
-              <Button size="sm" colorScheme="blue" onClick={handleDownloadPromo}>
-                {t('place.promo.downloadPoster', 'Download social poster')}
-              </Button>
-              <Button size="sm" variant="outline" onClick={handleCopyLink}>
-                {copied ? t('place.share.copiedShort', 'Copied') : t('place.share.copyLink', 'Copy link')}
-              </Button>
-              {canNativeShare ? (
-                <Button size="sm" variant="outline" colorScheme="teal" onClick={handleNativeShare}>
-                  {t('place.share.native', 'Share')}
-                </Button>
-              ) : null}
-            </HStack>
-
-            <Box borderWidth="1px" borderRadius="lg" p={4} bg="white">
-              <Heading as="h3" size="sm" mb={2}>{t('place.share.similarTitle', 'Similar places you can also share')}</Heading>
-              {similarPlaces.length > 0 ? (
+              return (
+              <Box key={group.label} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                <Box
+                  mb={3}
+                  px={3}
+                  py={2}
+                  borderRadius="md"
+                  borderWidth="1px"
+                  borderColor={`${accentScheme}.200`}
+                  bg={`${accentScheme}.50`}
+                >
+                  <Text
+                    fontSize="xs"
+                    fontWeight="bold"
+                    letterSpacing="0.08em"
+                    textTransform="uppercase"
+                    color={`${accentScheme}.800`}
+                  >
+                    {group.label}
+                  </Text>
+                </Box>
                 <VStack align="stretch" spacing={2}>
-                  {similarPlaces.map((candidate) => (
-                    <Box key={candidate.id} borderWidth="1px" borderRadius="md" p={3}>
-                      <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.700" fontWeight="semibold">
-                        {candidate.name}
-                      </Link>
-                      <Text fontSize="sm" color="gray.600" mt={1}>{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
+                  {group.items.map((candidate) => (
+                    <Box key={`${group.label}-${candidate.id}`}>
+                      <HStack justify="space-between" align="baseline" spacing={3}>
+                        <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.700" fontWeight="semibold">
+                          {candidate.name}
+                        </Link>
+                        <Text as="span" fontSize="sm" color="gray.600">{formatDistance(candidate.distanceKm)}</Text>
+                      </HStack>
+                      <Text fontSize="sm" color="gray.600" mt={1}>
+                        {candidate.address || candidate.region || t('common.greece', 'Greece')}
+                      </Text>
                     </Box>
                   ))}
                 </VStack>
-              ) : (
-                <Text fontSize="sm" color="gray.600">{t('place.share.similarFallback', 'More similar places will appear as this category grows.')}</Text>
-              )}
-            </Box>
-          </VStack>
-        </SimpleGrid>
-      </Box>
+              </Box>
+              );
+            })}
+          </SimpleGrid>
+        </Box>
+      ) : null}
 
-      {sameCategory.length > 0 ? (
-        <Box mb={8}>
+      {sameCategoryWithDistance.length > 0 ? (
+        <Box mb={8} borderWidth="1px" borderColor="teal.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="teal.50">
           <Heading as="h2" size="md" mb={3}>
             {t('place.sameCategory.title', 'Try next in the same category')}
           </Heading>
-          <Text color="gray.600" mb={3}>{t('place.sameCategory.subtitle', 'If you liked this pick, these are strong alternatives nearby.')}</Text>
+          <Text color="gray.600" mb={4}>{t('place.sameCategory.subtitle', 'If you liked this pick, these are strong alternatives nearby.')}</Text>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
-            {sameCategory.slice(0, 6).map((candidate) => (
-              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4}>
-                <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
-                  {candidate.name}
-                </Link>
+            {sameCategoryWithDistance.map((candidate) => (
+              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                <HStack justify="space-between" align="baseline" spacing={3} mb={1}>
+                  <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
+                    {candidate.name}
+                  </Link>
+                  <Text as="span" fontSize="sm" color="gray.600">{formatDistance(candidate.distanceKm)}</Text>
+                </HStack>
+                <Text color="gray.600" fontSize="sm">{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      ) : null}
+
+      {walkableNearby.length > 0 ? (
+        <Box mb={8}>
+          <Heading as="h2" size="md" mb={3}>
+            {t('place.walkable.title', 'Best Walkable Picks Nearby')}
+          </Heading>
+          <Text color="gray.600" mb={4}>{t('place.walkable.subtitle', 'Great options within a short walk.')}</Text>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
+            {walkableNearby.map((candidate) => (
+              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                <HStack justify="space-between" align="flex-start" spacing={3} mb={2}>
+                  <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
+                    {candidate.name}
+                  </Link>
+                  <Badge colorScheme="blue" textTransform="none">{formatDistance(candidate.distanceKm)}</Badge>
+                </HStack>
                 <Text color="gray.600" fontSize="sm" mt={1}>{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
               </Box>
             ))}
@@ -751,30 +1003,25 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
         </Box>
       ) : null}
 
-      {nearby.length > 0 ? (
+      {moreNearbyOptions.length > 0 ? (
         <Box mb={8}>
           <Heading as="h2" size="md" mb={3}>
-            {t('place.nearby.title', 'Closest useful stops')}
+            {t('place.moreNearby.title', 'More Nearby Options')}
           </Heading>
-          <VStack align="stretch" spacing={3}>
-            {nearbyGroupedByCategory.map((group) => (
-              <Box key={group.label} borderWidth="1px" borderRadius="lg" p={3} bg="white">
-                <Text fontSize="sm" fontWeight="semibold" color="gray.800" mb={2}>
-                  {group.label}
-                </Text>
-                <UnorderedList spacing={1} ml={5}>
-                  {group.items.map((candidate) => (
-                    <ListItem key={`${group.label}-${candidate.id}`}>
-                      <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600">
-                        {candidate.name}
-                      </Link>{' '}
-                      <Text as="span" color="gray.600">({formatDistance(candidate.distanceKm)})</Text>
-                    </ListItem>
-                  ))}
-                </UnorderedList>
+          <Text color="gray.600" mb={4}>{t('place.moreNearby.subtitle', 'A lighter set of extra nearby options if you want to keep exploring.')}</Text>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
+            {moreNearbyOptions.map((candidate) => (
+              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="gray.50">
+                <HStack justify="space-between" align="flex-start" spacing={3} mb={2}>
+                  <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
+                    {candidate.name}
+                  </Link>
+                  <Badge colorScheme="gray" textTransform="none">{formatDistance(candidate.distanceKm)}</Badge>
+                </HStack>
+                <Text color="gray.600" fontSize="sm" mt={1}>{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
               </Box>
             ))}
-          </VStack>
+          </SimpleGrid>
         </Box>
       ) : null}
 
@@ -784,24 +1031,6 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
             {t('place.aliases.title', 'Alternative names')}
           </Heading>
           <Text color="gray.700">{entity.aliases.join(', ')}</Text>
-        </Box>
-      ) : null}
-
-      {sameRegion.length > 0 ? (
-        <Box>
-          <Heading as="h2" size="md" mb={3}>
-            {t('place.sameRegion.title', 'Explore more in this area')}
-          </Heading>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
-            {sameRegion.map((candidate) => (
-              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4}>
-                <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
-                  {candidate.name}
-                </Link>
-                {candidate.region ? <Text color="gray.600" fontSize="sm" mt={1}>{candidate.region}</Text> : null}
-              </Box>
-            ))}
-          </SimpleGrid>
         </Box>
       ) : null}
 

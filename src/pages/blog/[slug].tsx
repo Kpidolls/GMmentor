@@ -204,22 +204,6 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
     [encodedShareUrl, encodedSocialText, shareUrl, socialText, t]
   )
 
-  // Handle language mismatch
-  useEffect(() => {
-    if (!router.isReady) {
-      return
-    }
-
-    const currentLang = i18n.language || 'en'
-    if (post.language !== currentLang && alternatePost) {
-      const nextPath = `/blog/${alternatePost.slug}`
-      if (router.asPath !== nextPath) {
-        // Redirect to the correct language version, ignoring cancelled transitions.
-        void router.replace(nextPath).catch(() => undefined)
-      }
-    }
-  }, [router.isReady, router.asPath, i18n.language, post.language, alternatePost, router])
-
   useEffect(() => {
     setCanNativeShare(typeof navigator !== 'undefined' && typeof navigator.share === 'function')
   }, [])
@@ -321,6 +305,7 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
       <Head>
         <title>{`${post.title} | Googlementor`}</title>
         <meta key="description" name="description" content={metaDescription} />
+        <meta name="robots" content="index, follow" />
         
         {/* Self-referencing canonical - each language version is its own canonical */}
         <link rel="canonical" href={`https://googlementor.com/blog/${post.slug}`} />

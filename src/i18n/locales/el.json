@@ -211,12 +211,46 @@
       "daytime visit": "Επίσκεψη Ημέρας",
       "sunset stop": "Στάση στο Ηλιοβασίλεμα",
       "late morning walks": "Περίπατοι αργά το πρωί",
-      "sunset exploration": "Εξερεύνηση στο ηλιοβασίλεμα"
+      "sunset exploration": "Εξερεύνηση στο ηλιοβασίλεμα",
+      "families with kids": "Οικογένειες με παιδιά",
+      "parents with children": "Γονείς με παιδιά",
+      "quick family lunch": "Γρήγορο οικογενειακό μεσημεριανό",
+      "relaxed family dinner": "Χαλαρό οικογενειακό δείπνο",
+      "coffee lovers": "Λάτρεις του καφέ",
+      "remote workers": "Εργαζόμενοι εξ αποστάσεως",
+      "dessert lovers": "Λάτρεις των γλυκών",
+      "late-night bites": "Βραδινό snack",
+      "wine lovers": "Λάτρεις του κρασιού",
+      "quiet reflection": "Ήσυχη περισυλλογή",
+      "health-conscious travelers": "Ταξιδιώτες με έμφαση στην υγιεινή διατροφή"
     },
     "viewOnMaps": "Προβολή στο Google Maps",
-    "openDirections": "Άνοιγμα οδηγιών στο Google Maps",
+    "openDirections": "Πλοήγηση",
     "exploreMore": "Εξερεύνησε περισσότερα μέρη",
     "addToItinerary": "Προσθήκη στο πρόγραμμα",
+    "badges": {
+      "favorite": "Αγαπημένο των ντόπιων",
+      "curated": "Επιλογή Googlementor"
+    },
+    "typeLabels": {
+      "restaurant": "εστιατόριο",
+      "localSpot": "τοπική στάση",
+      "familyFriendlySpot": "οικογενειακή στάση",
+      "cafe": "καφέ",
+      "dessertShop": "ζαχαροπλαστείο",
+      "streetFoodSpot": "street-food στάση",
+      "attractionSpot": "αξιοθέατο",
+      "wineEstate": "οινοποιείο",
+      "monasteryChurchSite": "μοναστήρι ή εκκλησία",
+      "rooftopLounge": "rooftop lounge",
+      "vegetarianSpot": "χορτοφαγική επιλογή",
+      "fishTaverna": "ψαροταβέρνα",
+      "fineDiningSpot": "fine-dining επιλογή"
+    },
+    "tagline": {
+      "withAudience": "Αγαπημένη στάση {{type}} στο {{neighborhood}}, ιδανική για {{audience}}.",
+      "base": "Αγαπημένη στάση {{type}} στο {{neighborhood}}."
+    },
     "vibe": {
       "title": "Χαρακτήρας Googlementor"
     },
@@ -232,15 +266,25 @@
       "bestTime": "Καλύτερες ώρες επίσκεψης"
     },
     "utility": {
-      "title": "Πλοηγήσου σε αυτό το μέρος",
-      "subtitle": "Δες πρώτα τα πιο χρήσιμα: κατεύθυνση, καλύτερη ώρα και κοντινές επιλογές της ίδιας κατηγορίας."
+      "title": "Πρακτικές πληροφορίες",
+      "subtitle": "Δες πρώτα τις βασικές ενέργειες: πλοήγηση, αποθήκευση της στάσης και συνέχεια της εξερεύνησης κοντά σου."
     },
     "sameCategory": {
       "title": "Δοκίμασε επόμενο στην ίδια κατηγορία",
       "subtitle": "Αν σου άρεσε αυτή η επιλογή, εδώ είναι δυνατές εναλλακτικές κοντά σου."
     },
     "nearby": {
-      "title": "Κοντινές χρήσιμες στάσεις"
+      "title": "Κοντινές χρήσιμες στάσεις",
+      "subtitle": "Μια γρήγορη travel-assistant ματιά στις πιο χρήσιμες στάσεις που μπορείς να φτάσεις με τα πόδια.",
+      "uncategorized": "Άλλο"
+    },
+    "walkable": {
+      "title": "Καλύτερες επιλογές κοντά με τα πόδια",
+      "subtitle": "Δυνατές επιλογές σε πολύ μικρή απόσταση."
+    },
+    "moreNearby": {
+      "title": "Περισσότερες κοντινές επιλογές",
+      "subtitle": "Μια πιο ελαφριά λίστα με επιπλέον κοντινές στάσεις αν θέλεις να συνεχίσεις την εξερεύνηση."
     },
     "aliases": {
       "title": "Εναλλακτικές ονομασίες"
@@ -257,11 +301,15 @@
       "curationConfidence": "Βεβαιότητα επιμέλειας"
     },
     "share": {
-      "title": "Αυτό το μέρος αξίζει να το μοιραστείς",
-      "subtitle": "Δημιούργησε promo card και ανέβασέ το παντού: Instagram, TikTok, WhatsApp ή Facebook.",
+      "title": "Γιόρτασε αυτό το μέρος που ξεχωρίζει στο Googlementor 🎉",
+      "subtitle": "Προβάλλεται περήφανα ως μία από τις αγαπημένες επιλογές της κοινότητας.",
       "reason": "Το {{name}} ξεχωρίζει για το {{vibe}} ύφος του και τη σύνδεσή του με {{nearby}} κοντινές στάσεις με τα πόδια. Είναι ακριβώς το είδος μέρους που αξίζει να μοιραστείς πριν το ταξίδι.",
       "singleCaption": "Περήφανοι που το {{name}} προβάλλεται στο Googlementor. Ένα τοπικό αγαπημένο στην περιοχή {{context}} που αξίζει να ανακαλύψεις.",
       "posterLine": "Αγαπημένο των ντόπιων. Αξίζει κοινοποίηση.",
+      "heroButton": "Κοινοποίησε αυτό το μέρος",
+      "cardButton": "Κοινοποίησε αυτή την κάρτα",
+      "cardShareTitle": "Γιόρτασε το {{name}} στο Googlementor",
+      "autoCaption": "Ανακαλύφθηκε μέσα από τις επιλεγμένες προτάσεις του Googlementor σε όλη την Ελλάδα.",
       "copyLink": "Αντιγραφή συνδέσμου",
       "copied": "Ο σύνδεσμος αντιγράφηκε",
       "copiedShort": "Αντιγράφηκε",
@@ -274,7 +322,7 @@
       "x": "X",
       "similarTitle": "Παρόμοια μέρη που μπορείς επίσης να μοιραστείς",
       "similarFallback": "Θα εμφανιστούν περισσότερα παρόμοια μέρη όσο μεγαλώνει η κατηγορία.",
-      "captionsTitle": "Έτοιμη λεζάντα για κοινοποίηση"
+      "captionsTitle": "Αυτόματη λεζάντα"
     },
     "promo": {
       "downloadPoster": "Λήψη social poster",

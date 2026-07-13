@@ -10,6 +10,7 @@ const Store: React.FC = () => {
   const { t, i18n } = useTranslation();
   const currentLang = (i18n.language || i18n.resolvedLanguage || 'en').split('-')[0];
   const metaDescription = getStaticMetaDescription('store', currentLang);
+  const isStoreEnabled = featureFlags.storeEnabled;
   const [visibleProducts, setVisibleProducts] = useState(16);
   const [filter, setFilter] = useState<'all' | 'amazon' | 'temu'>('all');
   const [filteredProducts, setFilteredProducts] = useState(productsData);
@@ -31,9 +32,19 @@ const Store: React.FC = () => {
           name="description" 
           content={metaDescription} 
         />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content={isStoreEnabled ? 'index, follow' : 'noindex, follow'} />
         <link rel="canonical" href="https://googlementor.com/store" />
       </Head>
+
+      {!isStoreEnabled && (
+        <div className="max-w-3xl mx-auto px-4 pt-12 text-center">
+          <p className="text-base sm:text-lg text-gray-700">
+            {t('store.disabledMessage', { defaultValue: 'The store is currently unavailable. Please check back soon.' })}
+          </p>
+        </div>
+      )}
+
+      {isStoreEnabled && (
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className="text-center mb-8 sm:mb-10">
@@ -144,15 +155,12 @@ const Store: React.FC = () => {
           })}
         </p>
       </div>
+      )}
     </main>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  if (!featureFlags.storeEnabled) {
-    return { notFound: true };
-  }
-
   return {
     props: {},
   };

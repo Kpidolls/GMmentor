@@ -211,12 +211,46 @@
       "daytime visit": "Daytime Visit",
       "sunset stop": "Sunset Stop",
       "late morning walks": "Late Morning Walks",
-      "sunset exploration": "Sunset Exploration"
+      "sunset exploration": "Sunset Exploration",
+      "families with kids": "Families with Kids",
+      "parents with children": "Parents with Children",
+      "quick family lunch": "Quick Family Lunch",
+      "relaxed family dinner": "Relaxed Family Dinner",
+      "coffee lovers": "Coffee Lovers",
+      "remote workers": "Remote Workers",
+      "dessert lovers": "Dessert Lovers",
+      "late-night bites": "Late-Night Bites",
+      "wine lovers": "Wine Lovers",
+      "quiet reflection": "Quiet Reflection",
+      "health-conscious travelers": "Health-Conscious Travelers"
     },
     "viewOnMaps": "View on Google Maps",
-    "openDirections": "Open directions in Google Maps",
+    "openDirections": "Navigate",
     "exploreMore": "Explore More Places",
     "addToItinerary": "Add to itinerary",
+    "badges": {
+      "favorite": "People's Favorite",
+      "curated": "Googlementor Pick"
+    },
+    "typeLabels": {
+      "restaurant": "restaurant",
+      "localSpot": "local spot",
+      "familyFriendlySpot": "family-friendly spot",
+      "cafe": "cafe",
+      "dessertShop": "dessert shop",
+      "streetFoodSpot": "street-food spot",
+      "attractionSpot": "attraction",
+      "wineEstate": "wine estate",
+      "monasteryChurchSite": "monastery or church site",
+      "rooftopLounge": "rooftop lounge",
+      "vegetarianSpot": "vegetarian spot",
+      "fishTaverna": "fish taverna",
+      "fineDiningSpot": "fine-dining spot"
+    },
+    "tagline": {
+      "withAudience": "A people's favorite {{type}} in {{neighborhood}}, especially good for {{audience}}.",
+      "base": "A people's favorite {{type}} in {{neighborhood}}."
+    },
     "vibe": {
       "title": "Googlementor vibe"
     },
@@ -232,15 +266,25 @@
       "bestTime": "Best times to visit"
     },
     "utility": {
-      "title": "Navigate this place",
-      "subtitle": "Get the key information first: directions, best timing, and category-based nearby options."
+      "title": "Practical info",
+      "subtitle": "Get the key actions first: navigate, save this stop, and keep exploring nearby."
     },
     "sameCategory": {
       "title": "Try next in the same category",
       "subtitle": "If you liked this pick, these are strong alternatives nearby."
     },
     "nearby": {
-      "title": "Closest useful stops"
+      "title": "Closest useful stops",
+      "subtitle": "A quick travel-assistant view of the closest useful stops to walk to next.",
+      "uncategorized": "Other"
+    },
+    "walkable": {
+      "title": "Best Walkable Picks Nearby",
+      "subtitle": "Great options within a short walk."
+    },
+    "moreNearby": {
+      "title": "More Nearby Options",
+      "subtitle": "A lighter set of extra nearby options if you want to keep exploring."
     },
     "aliases": {
       "title": "Alternative names"
@@ -257,11 +301,15 @@
       "curationConfidence": "Curation confidence"
     },
     "share": {
-      "title": "This place deserves to be shared",
-      "subtitle": "Create a promo card and post it anywhere: Instagram, TikTok, WhatsApp, or Facebook.",
+      "title": "Celebrate this place featured on Googlementor 🎉",
+      "subtitle": "Proudly featured as one of the community's favorite picks.",
       "reason": "{{name}} stands out for its {{vibe}} vibe and its connection to {{nearby}} walkable discoveries nearby. This is exactly the type of place worth sharing with friends before your trip.",
       "singleCaption": "Proud to see {{name}} featured on Googlementor. A local favorite in {{context}} worth discovering.",
       "posterLine": "Loved by locals. Worth sharing.",
+      "heroButton": "Share this place",
+      "cardButton": "Share this card",
+      "cardShareTitle": "Celebrate {{name}} on Googlementor",
+      "autoCaption": "Discovered via Googlementor curated picks across Greece.",
       "copyLink": "Copy link",
       "copied": "Link copied",
       "copiedShort": "Copied",
@@ -274,7 +322,7 @@
       "x": "X",
       "similarTitle": "Similar places you can also share",
       "similarFallback": "More similar places will appear as this category grows.",
-      "captionsTitle": "Ready-to-share caption"
+      "captionsTitle": "Auto-generated caption"
     },
     "promo": {
       "downloadPoster": "Download social poster",

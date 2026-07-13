@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import NextLink from 'next/link';
 import config from '../config/index.json';
 import featureFlags from '../config/featureFlags.json';
 import dynamic from 'next/dynamic';
@@ -2039,6 +2040,8 @@ const MainHero = () => {
                           const isVegan = vegetarianData.some((v) => v.name === restaurantData.restaurant.name && v.address === restaurantData.restaurant.address);
                           const isLuxury = luxuryDiningData.some((l) => l.name === restaurantData.restaurant.name && l.address === restaurantData.restaurant.address);
                           const isSelected = selectedRestaurants.has(index);
+                          const placeHref = restaurantData.restaurant.slug ? `/place/${restaurantData.restaurant.slug}` : null;
+                          const mapHref = restaurantData.restaurant.url || null;
                           return (
                             <div
                               key={index}
@@ -2049,9 +2052,27 @@ const MainHero = () => {
                               }`}
                             >
                               <div className="px-3 pt-2.5 flex items-start justify-between gap-2">
-                                <h4 className="font-bold text-slate-900 text-base sm:text-lg line-clamp-2 leading-tight">
-                                  {restaurantData.restaurant.name}
-                                </h4>
+                                {placeHref ? (
+                                  <NextLink
+                                    href={placeHref}
+                                    className="font-bold text-slate-900 text-base sm:text-lg line-clamp-2 leading-tight hover:text-sky-700 hover:underline"
+                                  >
+                                    {restaurantData.restaurant.name}
+                                  </NextLink>
+                                ) : mapHref ? (
+                                  <a
+                                    href={mapHref}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-bold text-slate-900 text-base sm:text-lg line-clamp-2 leading-tight hover:text-sky-700 hover:underline"
+                                  >
+                                    {restaurantData.restaurant.name}
+                                  </a>
+                                ) : (
+                                  <h4 className="font-bold text-slate-900 text-base sm:text-lg line-clamp-2 leading-tight">
+                                    {restaurantData.restaurant.name}
+                                  </h4>
+                                )}
                                 <label className="flex items-center gap-1.5 cursor-pointer shrink-0">
                                   <input
                                     id={`restaurant-select-${index}`}
@@ -2069,9 +2090,27 @@ const MainHero = () => {
                               </div>
 
                               <div className="px-3 mt-1">
-                                <p className="text-slate-600 text-xs sm:text-sm line-clamp-2 leading-snug">
-                                  📍 {restaurantData.restaurant.address}
-                                </p>
+                                {placeHref ? (
+                                  <NextLink
+                                    href={placeHref}
+                                    className="text-slate-600 text-xs sm:text-sm line-clamp-2 leading-snug block hover:text-sky-700"
+                                  >
+                                    📍 {restaurantData.restaurant.address}
+                                  </NextLink>
+                                ) : mapHref ? (
+                                  <a
+                                    href={mapHref}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-slate-600 text-xs sm:text-sm line-clamp-2 leading-snug block hover:text-sky-700"
+                                  >
+                                    📍 {restaurantData.restaurant.address}
+                                  </a>
+                                ) : (
+                                  <p className="text-slate-600 text-xs sm:text-sm line-clamp-2 leading-snug">
+                                    📍 {restaurantData.restaurant.address}
+                                  </p>
+                                )}
                               </div>
 
                               <div className="px-3 mt-1.5 flex flex-wrap items-center gap-1.5">
