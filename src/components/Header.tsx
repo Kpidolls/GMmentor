@@ -58,6 +58,19 @@ const Header = () => {
     setIsLanguageReady(true); // Ensure language is ready before rendering
   }, []);
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      onClose();
+      setMenuOpen(false);
+      setOpenMobileSection(null);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [onClose, router.events]);
+
   if (!isLanguageReady) return null; // Avoid rendering until language is ready
 
   const bg = 'white'; // Default background color
@@ -846,11 +859,11 @@ const Header = () => {
       {/* Search Modal */}
       <Modal isOpen={isOpen} onClose={onClose} size="xl" motionPreset="slideInBottom">
         <ModalOverlay />
-        <ModalContent maxW="95vw">
+        <ModalContent maxW="95vw" my={{ base: 2, md: 6 }} maxH={{ base: '96vh', md: '90vh' }}>
           <ModalHeader>{t('header.searchTitle', 'Search')}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody p={0}>
-            <Box maxH="75vh" overflowY="auto" p={4}>
+          <ModalCloseButton zIndex={2} bg="white" borderRadius="full" boxShadow="sm" />
+          <ModalBody p={0} overflowY="auto">
+            <Box p={4}>
               <SearchPage focusOnMount={isOpen} />
             </Box>
           </ModalBody>

@@ -6,6 +6,7 @@ import NextLink from 'next/link';
 import config from '../config/index.json';
 import featureFlags from '../config/featureFlags.json';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 import municipalitiesData from '../data/municipalities.json';
 import categoriesData from '../data/restaurantCategories.json';
 import type { MunicipalityLocation, RestaurantLocation } from '../types/location';
@@ -80,10 +81,11 @@ const MainHero = () => {
   const { isOnline, isStandalone, dataPreloadStatus, isInstallable, isInstalled, installApp } = usePWA();
 
   const categoryDataCacheRef = useRef<Record<string, Restaurant[]>>({});
-  const intentDeepLinkHandledRef = useRef(false);
+  const lastHandledIntentKeyRef = useRef<string | null>(null);
   const getMunicipalitiesDataRef = useRef<() => Municipality[]>(() => toMunicipalityList(municipalitiesData as unknown[]));
   const searchByMunicipalityRef = useRef<(municipality: Municipality, category?: RestaurantCategory) => Promise<void>>(async () => undefined);
   const getUserLocationRef = useRef<(category?: RestaurantCategory) => void>(() => undefined);
+  const router = useRouter();
   const restaurantCategories = categoriesData as RestaurantCategory[];
   const intentResolver = useMemo(
     () => createIntentResolver({ categories: buildCategoryRegistry(), areas: buildAreaRegistry() }),
@@ -300,11 +302,12 @@ const MainHero = () => {
     userLng: number,
     count: number = 10,
     category?: RestaurantCategory,
-    maxRadiusKm: number = LOCATION_RESULTS_RADIUS_KM
+    maxRadiusKm: number = LOCATION_RESULTS_RADIUS_KM,
+    sourceDataOverride?: Restaurant[]
   ) => {
-    const sourceData = category
+    const sourceData = sourceDataOverride ?? (category
       ? await loadRestaurantDataByCategory(category)
-      : await loadCurrentSourceData();
+      : await loadCurrentSourceData());
     const placesWithDistance = sourceData.map((place) => ({
       restaurant: place,
       distance: calculateDistance(userLat, userLng, place.lat, place.lng)
@@ -331,6 +334,11 @@ const MainHero = () => {
     setShowRestaurantFinder(true);
     setSearchMode({ type: 'location', selectedCategory: effectiveCategory, selectedMunicipality: undefined });
 
+    // Start loading data immediately so geolocation and data fetch run in parallel.
+    const sourceDataPromise = effectiveCategory
+      ? loadRestaurantDataByCategory(effectiveCategory)
+      : loadCurrentSourceData();
+
     // PWA Enhancement: Check if offline and use cached data if available
     if (!isOnline) {
       const cachedLocation = localStorage.getItem('lastKnownLocation');
@@ -338,7 +346,9 @@ const MainHero = () => {
         try {
           const { lat, lng } = JSON.parse(cachedLocation);
           setUserLocation({ lat, lng });
-          findNearestPlaces(lat, lng, 50, effectiveCategory).then((nearest) => {
+          sourceDataPromise.then((sourceData) =>
+            findNearestPlaces(lat, lng, 50, effectiveCategory, LOCATION_RESULTS_RADIUS_KM, sourceData)
+          ).then((nearest) => {
             setNearestRestaurants(nearest);
             setCurrentIndex(0);
             setLoading(false);
@@ -372,13 +382,21 @@ const MainHero = () => {
     }, 100);
 
     if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(
+      const requestCurrentPosition = () => navigator.geolocation.getCurrentPosition(
         async (position) => {
           const { latitude, longitude } = position.coords;
           setUserLocation({ lat: latitude, lng: longitude });
           
           // Use the currently selected experience type for location search
-          const nearest = await findNearestPlaces(latitude, longitude, 50, effectiveCategory);
+          const sourceData = await sourceDataPromise;
+          const nearest = await findNearestPlaces(
+            latitude,
+            longitude,
+            50,
+            effectiveCategory,
+            LOCATION_RESULTS_RADIUS_KM,
+            sourceData
+          );
           setNearestRestaurants(nearest);
           setCurrentIndex(0);
           setLoading(false);
@@ -413,7 +431,15 @@ const MainHero = () => {
               try {
                 const { lat, lng } = JSON.parse(cachedLocation);
                 setUserLocation({ lat, lng });
-                const nearest = await findNearestPlaces(lat, lng, 50, effectiveCategory);
+                const sourceData = await sourceDataPromise;
+                const nearest = await findNearestPlaces(
+                  lat,
+                  lng,
+                  50,
+                  effectiveCategory,
+                  LOCATION_RESULTS_RADIUS_KM,
+                  sourceData
+                );
                 setNearestRestaurants(nearest);
                 setCurrentIndex(0);
                 setLoading(false);
@@ -444,11 +470,37 @@ const MainHero = () => {
           }, 200);
         },
         {
-          enableHighAccuracy: true,
-          timeout: 10000,
-          maximumAge: 300000
+          enableHighAccuracy: false,
+          timeout: 7000,
+          maximumAge: 600000
         }
       );
+
+      const permissionsApi = (navigator as Navigator & {
+        permissions?: {
+          query: (permissionDesc: PermissionDescriptor) => Promise<PermissionStatus>;
+        };
+      }).permissions;
+
+      if (permissionsApi?.query) {
+        permissionsApi
+          .query({ name: 'geolocation' })
+          .then((status) => {
+            if (status.state === 'denied') {
+              setError(t('restaurantFinder.locationError', 'Unable to get your location. Please enable location services.'));
+              setLoading(false);
+              return;
+            }
+
+            // 'prompt' will trigger native permission request automatically.
+            requestCurrentPosition();
+          })
+          .catch(() => {
+            requestCurrentPosition();
+          });
+      } else {
+        requestCurrentPosition();
+      }
     } else {
       setError(t('restaurantFinder.geolocationNotSupported', 'Geolocation is not supported by this browser.'));
       setLoading(false);
@@ -1072,16 +1124,22 @@ const MainHero = () => {
   });
 
   useEffect(() => {
-    if (intentDeepLinkHandledRef.current || typeof window === 'undefined') {
+    if (!router.isReady) {
       return;
     }
 
-    const params = new URLSearchParams(window.location.search);
-    const categorySlug = params.get('category') ?? undefined;
-    const areaSlug = params.get('area') ?? undefined;
+    const categoryRaw = router.query.category;
+    const areaRaw = router.query.area;
+    const categorySlug = Array.isArray(categoryRaw) ? categoryRaw[0] : categoryRaw;
+    const areaSlug = Array.isArray(areaRaw) ? areaRaw[0] : areaRaw;
+    const intentKey = `${categorySlug ?? ''}|${areaSlug ?? ''}`;
+
+    if (lastHandledIntentKeyRef.current === intentKey) {
+      return;
+    }
 
     if (!categorySlug && !areaSlug) {
-      intentDeepLinkHandledRef.current = true;
+      lastHandledIntentKeyRef.current = intentKey;
       return;
     }
 
@@ -1092,7 +1150,7 @@ const MainHero = () => {
         : undefined;
 
       if (category) {
-        intentDeepLinkHandledRef.current = true;
+        lastHandledIntentKeyRef.current = intentKey;
         getUserLocationRef.current(category);
         return;
       }
@@ -1100,7 +1158,7 @@ const MainHero = () => {
 
     const resolution = intentResolver.resolveIntent(categorySlug, areaSlug);
     if (resolution.status !== 'resolved' || !resolution.categoryId || !resolution.areaId) {
-      intentDeepLinkHandledRef.current = true;
+      lastHandledIntentKeyRef.current = intentKey;
       return;
     }
 
@@ -1108,13 +1166,13 @@ const MainHero = () => {
     const municipality = getMunicipalitiesDataRef.current().find((item) => item.id === resolution.areaId);
 
     if (!category || !municipality) {
-      intentDeepLinkHandledRef.current = true;
+      lastHandledIntentKeyRef.current = intentKey;
       return;
     }
 
-    intentDeepLinkHandledRef.current = true;
+    lastHandledIntentKeyRef.current = intentKey;
     void searchByMunicipalityRef.current(municipality, category as RestaurantCategory);
-  }, [intentResolver, restaurantCategories]);
+  }, [router.isReady, router.query.category, router.query.area, intentResolver, restaurantCategories]);
 
   // Filter municipalities based on enhanced search query
   const filteredMunicipalities = getMunicipalitiesData().filter((municipality: Municipality) => {

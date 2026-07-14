@@ -44,10 +44,10 @@ const IslandList = () => {
           <div
             key={index}
             id={island.id}
-            className="group text-left rounded-xl border overflow-hidden transition-all duration-300 h-[380px] sm:h-[402px] lg:h-[420px] flex flex-col border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50 hover:shadow-md"
+            className="group text-left rounded-xl border overflow-hidden transition-all duration-300 h-[404px] sm:h-[402px] lg:h-[420px] flex flex-col border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50 hover:shadow-md"
           >
-            <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-100">
-              <div className="grid h-full grid-rows-[7fr_4fr]">
+            <div className="relative h-60 sm:h-56 w-full overflow-hidden bg-slate-100">
+              <div className="grid h-full grid-rows-[6fr_5fr] sm:grid-rows-[7fr_4fr]">
                 <div className="relative overflow-hidden">
                   <Image
                     src={island.img}
@@ -58,7 +58,7 @@ const IslandList = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/35 via-transparent to-transparent" />
                 </div>
-                <div className="relative border-t border-white/50 p-2 sm:p-2.5 bg-slate-100">
+                <div className="relative border-t border-white/50 p-1.5 sm:p-2.5 bg-slate-100">
                   <div className="relative h-full w-full overflow-hidden rounded-md ring-1 ring-slate-300/70 bg-slate-200">
                     <Image
                       src={island.locationImg || island.img}
@@ -75,7 +75,7 @@ const IslandList = () => {
                         defaultValue: '{{title}} locations screenshot',
                       })}
                       fill
-                      className="relative z-10 h-full w-full object-contain p-1 transition-transform duration-500 ease-out group-hover:scale-[1.01]"
+                      className="relative z-10 h-full w-full object-contain p-0.5 sm:p-1 transition-transform duration-500 ease-out group-hover:scale-[1.01]"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                     <span className="absolute left-2 top-2 text-[10px] sm:text-[11px] px-1.5 py-0.5 rounded bg-slate-900/70 text-white tracking-wide">

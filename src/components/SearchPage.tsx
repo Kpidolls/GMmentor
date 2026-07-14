@@ -17,7 +17,7 @@ import {
   Heading,
 } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
-import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
 import debounce from 'lodash.debounce';
 import featureFlags from '../config/featureFlags.json';
@@ -64,7 +64,20 @@ const normalizeText = (text: string): string => {
 
 const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
   const { t } = useTranslation();
+  const router = useRouter();
   const restaurantCategories = categoriesData as RestaurantCategory[];
+
+  const openNearbyCategory = async (categoryId: string) => {
+    const target = `/?category=${encodeURIComponent(categoryId)}`;
+
+    try {
+      await router.push(target);
+    } catch {
+      if (typeof window !== 'undefined') {
+        window.location.href = target;
+      }
+    }
+  };
 
   const getSectionTitle = (type: string): string => {
     switch (type) {
@@ -244,8 +257,9 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                       {t(`categories.descriptions.${category.id}`, category.description)}
                     </Text>
                     <Button
-                      as={NextLink}
-                      href={`/?category=${encodeURIComponent(category.id)}`}
+                      onClick={() => {
+                        void openNearbyCategory(category.id);
+                      }}
                       colorScheme="teal"
                       size="sm"
                       width="full"
@@ -272,7 +286,9 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                 templateColumns={{ base: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }}
                 gap={{ base: 3, sm: 4, md: 6 }}
               >
-                {sectionResults.map((item) => (
+                {sectionResults.map((item) => {
+                  const isExternal = /^https?:\/\//i.test(item.link);
+                  return (
                   <GridItem
                     key={item.id}
                     bg="white"
@@ -282,12 +298,12 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                     _hover={{ shadow: 'lg' }}
                   >
                     <Box p={{ base: 2, sm: 3 }}>
-                      <NextLink href={item.link} passHref>
-                        <Link
-                          _hover={{ textDecoration: 'none' }}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                      <Link
+                        href={item.link}
+                        _hover={{ textDecoration: 'none' }}
+                        target={isExternal ? '_blank' : undefined}
+                        rel={isExternal ? 'noopener noreferrer' : undefined}
+                      >
                           {item.type === 'islands' ? (
                             <Box
                               display="grid"
@@ -385,8 +401,7 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                           >
                             {item.description}
                           </Text>
-                        </Link>
-                      </NextLink>
+                      </Link>
 
                       <Box mt={2} display="grid" gridTemplateColumns={{ base: '1fr', md: 'repeat(2, minmax(0, 1fr))' }} gap={2}>
                         <Button
@@ -441,7 +456,8 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                       </Box>
                     </Box>
                   </GridItem>
-                ))}
+                  );
+                })}
               </Grid>
             </Box>
           );

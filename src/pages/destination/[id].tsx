@@ -109,13 +109,13 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
       <main className="min-h-screen bg-slate-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
           <div className="bg-slate-50">
-            <img src={destination.img} alt={destinationName} className="w-full h-64 sm:h-80 lg:h-96 object-cover" loading="eager" />
-            <div className="px-3 py-3 sm:px-6 sm:py-4">
+            <img src={destination.img} alt={destinationName} className="w-full h-56 sm:h-80 lg:h-96 object-cover" loading="eager" />
+            <div className="px-2 py-2 sm:px-6 sm:py-4">
               <div className="max-w-4xl mx-auto rounded-xl overflow-hidden border border-slate-200 bg-white shadow-sm">
-                <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-slate-500 px-3 py-2 border-b border-slate-200">
+                <p className="text-[10px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.18em] text-slate-500 px-3 py-2 border-b border-slate-200">
                   {t('destination.mapPreview', 'Map preview')}
                 </p>
-                <div className="relative w-full h-40 sm:h-48 lg:h-52 overflow-hidden bg-slate-200">
+                <div className="relative w-full h-48 sm:h-48 lg:h-52 overflow-hidden bg-slate-200">
                   <img
                     src={destination.locationImg || destination.img}
                     alt=""
