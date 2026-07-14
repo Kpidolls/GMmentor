@@ -19,6 +19,7 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { buildBreadcrumbJsonLd, buildEntityJsonLd } from '../../lib/entityStructuredData';
+import { createIntentEngine } from '../../lib/intent';
 import {
   EntityRecord,
   findEntityBySlug,
@@ -115,7 +116,29 @@ type EntityPageProps = {
   canonicalSlug: string;
   isCanonicalEntity: boolean;
   enrichment: PlaceEnrichment['effective'] | null;
+  areaContext: {
+    slug: string;
+    name: string;
+  } | null;
+  intentContexts: Array<{
+    href: string;
+    label: string;
+    categorySlug: string;
+    categoryName: string;
+    areaSlug: string;
+    areaName: string;
+  }>;
 };
+
+let cachedIntentEngine: ReturnType<typeof createIntentEngine> | null = null;
+
+function getIntentEngine(entities: EntityRecord[]) {
+  if (!cachedIntentEngine) {
+    cachedIntentEngine = createIntentEngine({ entities });
+  }
+
+  return cachedIntentEngine;
+}
 
 const MAX_PLACE_TITLE_LENGTH = 70;
 
@@ -303,6 +326,58 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
     .sort((a, b) => a.distanceKm - b.distanceKm)
     .slice(0, 24);
 
+  const intentEngine = getIntentEngine(index.entities);
+  const nearestArea = intentEngine.areas.records
+    .map((area) => ({
+      area,
+      distanceKm: calculateDistance(entity.lat, entity.lng, area.lat, area.lng),
+    }))
+    .sort((left, right) => left.distanceKm - right.distanceKm)[0];
+
+  let areaContext: EntityPageProps['areaContext'] = null;
+  const intentContexts: EntityPageProps['intentContexts'] = [];
+
+  if (nearestArea && nearestArea.distanceKm <= 8) {
+    const areaPayload = intentEngine.query.getIntentResults({
+      areaId: nearestArea.area.id,
+      limit: 1,
+    });
+
+    if (areaPayload?.passesThreshold) {
+      areaContext = {
+        slug: nearestArea.area.urlSlug,
+        name: nearestArea.area.nameEn || nearestArea.area.name,
+      };
+
+      const primaryCategoryIds = (entity.categoryIds || []).slice(0, 3);
+
+      for (const categoryId of primaryCategoryIds) {
+        const categoryAreaPayload = intentEngine.query.getIntentResults({
+          areaId: nearestArea.area.id,
+          categoryId,
+          limit: 1,
+        });
+
+        if (!categoryAreaPayload?.passesThreshold || !categoryAreaPayload.category) {
+          continue;
+        }
+
+        intentContexts.push({
+          href: `/${categoryAreaPayload.category.urlSlug}/${nearestArea.area.urlSlug}`,
+          label: `${categoryAreaPayload.category.name} in ${nearestArea.area.nameEn || nearestArea.area.name}`,
+          categorySlug: categoryAreaPayload.category.urlSlug,
+          categoryName: categoryAreaPayload.category.name,
+          areaSlug: nearestArea.area.urlSlug,
+          areaName: nearestArea.area.nameEn || nearestArea.area.name,
+        });
+
+        if (intentContexts.length >= 3) {
+          break;
+        }
+      }
+    }
+  }
+
   return {
     props: {
       entity,
@@ -316,11 +391,13 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
       canonicalSlug: canonicalEntity.slug,
       isCanonicalEntity: slug === canonicalEntity.slug,
       enrichment: getPlaceEnrichmentByEntityId(entity.id)?.effective || null,
+      areaContext,
+      intentContexts,
     },
   };
 };
 
-export default function PlacePage({ entity, sameCategory, nearby, sameRegion, mentionedGuides, canonicalSlug, isCanonicalEntity, enrichment }: EntityPageProps) {
+export default function PlacePage({ entity, sameCategory, nearby, sameRegion, mentionedGuides, canonicalSlug, isCanonicalEntity, enrichment, areaContext, intentContexts }: EntityPageProps) {
   const { t, i18n } = useTranslation();
   const toast = useToast();
   const [copied, setCopied] = useState(false);
@@ -404,7 +481,12 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
   const heroAudience = bestForLabels.join(isGreek ? ' και ' : ' and ');
   const subjectOfUrls = mentionedGuides.map((guide) => `${SITE_URL}/blog/${guide.slug}`);
   const entityJsonLd = buildEntityJsonLd(entity, canonicalUrl, subjectOfUrls);
-  const breadcrumbJsonLd = buildBreadcrumbJsonLd(entity, canonicalUrl);
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(entity, canonicalUrl, {
+    areaSlug: areaContext?.slug,
+    areaName: areaContext?.name,
+    categorySlug: intentContexts[0]?.categorySlug,
+    categoryName: intentContexts[0]?.categoryName,
+  });
   const shareTitle = `${entity.name} | ${localizedKind} | Googlementor`;
   const pageTitle = buildPlaceSeoTitle(entity.name, localizedKind);
   const socialTitle = buildPlaceSeoTitle(entity.name, localizedKind);
@@ -771,6 +853,10 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
         <title>{pageTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="robots" content={isCanonicalEntity ? 'index, follow' : 'noindex, follow'} />
+        <meta
+          name="googlebot"
+          content={isCanonicalEntity ? 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' : 'noindex, follow'}
+        />
         <link rel="canonical" href={canonicalUrl} />
         {!isCanonicalEntity ? <meta httpEquiv="refresh" content={`0;url=${canonicalUrl}`} /> : null}
         <link rel="alternate" hrefLang="en" href={canonicalUrl} />
@@ -905,6 +991,39 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
           </Button>
         </HStack>
       </Box>
+
+      {areaContext || intentContexts.length > 0 ? (
+        <Box mb={8} borderWidth="1px" borderColor="orange.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="orange.50">
+          <Heading as="h2" size="md" mb={3}>
+            {t('place.discovery.title', 'Explore this area')}
+          </Heading>
+          <Text color="gray.700" mb={4}>
+            {t('place.discovery.subtitle', 'Continue to indexable area and category guides connected to this place.')}
+          </Text>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
+            {areaContext ? (
+              <Box borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                <Link as={NextLink} href={`/area/${areaContext.slug}`} color="blue.700" fontWeight="semibold">
+                  {t('place.discovery.areaGuide', { area: areaContext.name, defaultValue: 'Best places in {{area}}' })}
+                </Link>
+                <Text color="gray.600" fontSize="sm" mt={1}>
+                  {t('place.discovery.areaGuideHint', 'See top attractions, restaurants, and related lists.')}
+                </Text>
+              </Box>
+            ) : null}
+            {intentContexts.map((intent) => (
+              <Box key={intent.href} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                <Link as={NextLink} href={intent.href} color="blue.700" fontWeight="semibold">
+                  {intent.label}
+                </Link>
+                <Text color="gray.600" fontSize="sm" mt={1}>
+                  {t('place.discovery.intentHint', 'Compare nearby options for this intent in the same area.')}
+                </Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      ) : null}
 
       {nearby.length > 0 ? (
         <Box mb={8} borderWidth="1px" borderColor="blue.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="blue.50">

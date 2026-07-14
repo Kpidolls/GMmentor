@@ -420,6 +420,8 @@ const nextConfig = withPWA(withBundleAnalyzer({
 
     const pathMap = {
       '/': { page: '/' },
+      '/areas': { page: '/areas' },
+      '/collections': { page: '/collections' },
       '/terms': { page: '/terms' },
       '/privacy-policy': { page: '/privacy-policy' },
       '/login': { page: '/login' },

@@ -4,15 +4,18 @@ import NextLink from 'next/link';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import {
+  Badge,
   Box,
   Button,
   Container,
   Heading,
+  HStack,
   Link,
   ListItem,
   SimpleGrid,
   Text,
   UnorderedList,
+  VStack,
 } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 
@@ -314,14 +317,37 @@ export default function CategoryAreaPage({ payload, hasAreaGuidePage, topGuides 
       </Head>
 
       <Box mb={8}>
-        <Text fontSize="sm" color="gray.500" mb={2}>Intent Collection</Text>
-        <Heading as="h1" size="2xl" mb={3}>
-          Best {payload.category.name} in {payload.area.name}
-        </Heading>
-        <Text color="gray.700" mb={2}>
-          {payload.counts.totalCategoryArea} results found in this category and area.
-        </Text>
-        <Text color="gray.600">Explore curated options and nearby related areas.</Text>
+        <Box
+          borderWidth="1px"
+          borderColor="orange.100"
+          borderRadius="2xl"
+          p={{ base: 5, md: 8 }}
+          bg="white"
+          boxShadow="sm"
+        >
+          <VStack align="stretch" spacing={4}>
+            <HStack spacing={2} flexWrap="wrap">
+              <Badge colorScheme="orange" textTransform="none">Intent Collection</Badge>
+              <Badge colorScheme="gray" textTransform="none">Curated picks</Badge>
+              <Badge colorScheme="blue" textTransform="none">{payload.category.name}</Badge>
+            </HStack>
+
+            <Heading as="h1" size="2xl">
+              Best {payload.category.name} in {payload.area.name}
+            </Heading>
+
+            <Text color="gray.700" lineHeight="1.7">
+              {payload.counts.totalCategoryArea} results found for {payload.category.name.toLowerCase()} in {payload.area.name}.
+              {' '}Use this page to compare top options, then branch into nearby areas or related collections.
+            </Text>
+
+            <HStack spacing={2} flexWrap="wrap">
+              <Badge colorScheme="teal" textTransform="none">{payload.entities.length} featured picks</Badge>
+              <Badge colorScheme="teal" textTransform="none">{topRestaurants.length} restaurants</Badge>
+              <Badge colorScheme="teal" textTransform="none">{topAttractions.length} attractions</Badge>
+            </HStack>
+          </VStack>
+        </Box>
       </Box>
 
       {payload.entities.length > 0 ? (

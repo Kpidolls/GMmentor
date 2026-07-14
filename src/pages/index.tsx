@@ -302,6 +302,15 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
               {t('home.linkHub.subtitle', 'Browse top area pages, curated category lists, and practical travel guides.')}
             </p>
 
+            <div className="mb-5 flex flex-wrap gap-3">
+              <Link href="/areas" className="inline-flex items-center rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-sm font-semibold text-cyan-900 hover:bg-cyan-100">
+                {t('navigation.areasHub', 'All Area Guides')}
+              </Link>
+              <Link href="/collections" className="inline-flex items-center rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-sm font-semibold text-cyan-900 hover:bg-cyan-100">
+                {t('navigation.collectionsHub', 'All Collections')}
+              </Link>
+            </div>
+
             <div className="grid gap-5 md:grid-cols-3">
               <div>
                 <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2.5">

@@ -4,15 +4,18 @@ import NextLink from 'next/link';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import {
+  Badge,
   Box,
   Button,
   Container,
   Heading,
+  HStack,
   Link,
   ListItem,
   SimpleGrid,
   Text,
   UnorderedList,
+  VStack,
 } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 
@@ -217,7 +220,20 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="en" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="el" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content="https://googlementor.com/assets/images/cover-627.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="https://googlementor.com/assets/images/cover-627.webp" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -234,18 +250,41 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
         ) : null}
       </Head>
 
-      <Box mb={8}>
-        <Text fontSize="sm" color="gray.500" mb={2}>Area Guide</Text>
-        <Heading as="h1" size="2xl" mb={3}>
-          Best places in {payload.area.name}
-        </Heading>
-        <Text color="gray.700" mb={2}>
-          {payload.counts.totalInArea} places found near {payload.area.name}
-          {payload.area.regionEn ? ` (${payload.area.regionEn})` : payload.area.region ? ` (${payload.area.region})` : ''}.
-        </Text>
-        <Text color="gray.600">
-          Explore curated local picks and jump to maps or related areas.
-        </Text>
+      <Box
+        mb={8}
+        borderWidth="1px"
+        borderColor="orange.100"
+        borderRadius="2xl"
+        p={{ base: 5, md: 8 }}
+        bg="white"
+        boxShadow="sm"
+      >
+        <VStack align="stretch" spacing={4}>
+          <HStack spacing={2} flexWrap="wrap">
+            <Badge colorScheme="orange" textTransform="none">Area Guide</Badge>
+            <Badge colorScheme="gray" textTransform="none">Curated picks</Badge>
+            {payload.area.regionEn || payload.area.region ? (
+              <Badge colorScheme="blue" textTransform="none">
+                {payload.area.regionEn || payload.area.region}
+              </Badge>
+            ) : null}
+          </HStack>
+
+          <Heading as="h1" size="2xl">
+            Best places in {payload.area.name}
+          </Heading>
+
+          <Text color="gray.700" lineHeight="1.7">
+            {payload.counts.totalInArea} places found near {payload.area.name}.
+            {' '}This guide highlights high-signal options with map-ready links, plus related categories and nearby areas.
+          </Text>
+
+          <HStack spacing={2} flexWrap="wrap">
+            <Badge colorScheme="teal" textTransform="none">{topPlaces.length} featured places</Badge>
+            <Badge colorScheme="teal" textTransform="none">{topAttractions.length} attractions</Badge>
+            <Badge colorScheme="teal" textTransform="none">{topRestaurants.length} restaurants</Badge>
+          </HStack>
+        </VStack>
       </Box>
 
       {payload.relatedCategories.length > 0 ? (

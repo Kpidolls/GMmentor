@@ -44,6 +44,11 @@ module.exports = {
       priority = 0.8;
       changefreq = 'monthly';
     }
+    // Canonical place pages - important landing pages
+    else if (path.startsWith('/place/')) {
+      priority = 0.85;
+      changefreq = 'weekly';
+    }
     // Main navigation pages - high priority
     else if (
       ['/search', '/airalo', '/insurance', ...(featureFlags.storeEnabled ? ['/store'] : [])].includes(path)

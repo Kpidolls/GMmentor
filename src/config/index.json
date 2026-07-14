@@ -15,7 +15,9 @@
       "submenu": [
         { "name": "navigation.mustSee", "href": "maps" },
         { "name": "navigation.islands", "href": "destinations" },
-        { "name": "navigation.activities", "href": "categories" }
+        { "name": "navigation.activities", "href": "categories" },
+        { "name": "navigation.areasHub", "href": "/areas" },
+        { "name": "navigation.collectionsHub", "href": "/collections" }
       ]
     },
     {

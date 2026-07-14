@@ -47,7 +47,16 @@ export function buildEntityJsonLd(
   };
 }
 
-export function buildBreadcrumbJsonLd(entity: EntityRecord, canonicalUrl: string): Record<string, unknown> {
+export function buildBreadcrumbJsonLd(
+  entity: EntityRecord,
+  canonicalUrl: string,
+  options?: {
+    areaSlug?: string;
+    areaName?: string;
+    categorySlug?: string;
+    categoryName?: string;
+  }
+): Record<string, unknown> {
   const items: Array<Record<string, unknown>> = [
     {
       '@type': 'ListItem',
@@ -63,22 +72,40 @@ export function buildBreadcrumbJsonLd(entity: EntityRecord, canonicalUrl: string
     },
   ];
 
-  if (entity.kind === 'restaurant' && entity.categories?.length) {
+  if (options?.areaSlug && options?.areaName) {
     items.push({
       '@type': 'ListItem',
       position: items.length + 1,
-      name: entity.categories[0],
-      item: `${SITE_URL}/search?category=${encodeURIComponent(entity.categoryIds?.[0] || '')}`,
+      name: options.areaName,
+      item: `${SITE_URL}/area/${options.areaSlug}`,
     });
-  }
 
-  if (entity.region) {
-    items.push({
-      '@type': 'ListItem',
-      position: items.length + 1,
-      name: entity.region,
-      item: `${SITE_URL}/search?region=${encodeURIComponent(entity.region)}`,
-    });
+    if (options.categorySlug && options.categoryName) {
+      items.push({
+        '@type': 'ListItem',
+        position: items.length + 1,
+        name: options.categoryName,
+        item: `${SITE_URL}/${options.categorySlug}/${options.areaSlug}`,
+      });
+    }
+  } else {
+    if (entity.kind === 'restaurant' && entity.categories?.length) {
+      items.push({
+        '@type': 'ListItem',
+        position: items.length + 1,
+        name: entity.categories[0],
+        item: `${SITE_URL}/search?category=${encodeURIComponent(entity.categoryIds?.[0] || '')}`,
+      });
+    }
+
+    if (entity.region) {
+      items.push({
+        '@type': 'ListItem',
+        position: items.length + 1,
+        name: entity.region,
+        item: `${SITE_URL}/search?region=${encodeURIComponent(entity.region)}`,
+      });
+    }
   }
 
   items.push({
