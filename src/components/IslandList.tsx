@@ -59,7 +59,7 @@ const IslandList = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/35 via-transparent to-transparent" />
                 </div>
                 <div className="relative border-t border-white/50 p-1.5 sm:p-2.5 bg-slate-100">
-                  <div className="relative h-full w-full overflow-hidden rounded-md ring-1 ring-slate-300/70 bg-slate-200">
+                  <div className="relative h-full w-full overflow-hidden rounded-md ring-1 ring-slate-300/70 bg-sky-100/80">
                     <Image
                       src={island.locationImg || island.img}
                       alt=""
