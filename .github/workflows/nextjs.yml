@@ -20,10 +20,10 @@ jobs:
       NEXT_PUBLIC_GOOGLE_ANALYTICS: G-7KYV8QK51B
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4.4.0
+        uses: actions/setup-node@v5
         with:
           node-version: '22'
           cache: 'npm'
