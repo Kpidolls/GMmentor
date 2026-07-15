@@ -15,6 +15,7 @@ import {
   VStack,
   Image,
   Heading,
+  useToast,
 } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { useRouter } from 'next/router';
@@ -65,6 +66,7 @@ const normalizeText = (text: string): string => {
 const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
   const { t } = useTranslation();
   const router = useRouter();
+  const toast = useToast();
   const restaurantCategories = categoriesData as RestaurantCategory[];
 
   const openNearbyCategory = async (categoryId: string) => {
@@ -144,6 +146,59 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
       destination: title,
       defaultValue: '{{destination}} Points of Interest Map',
     });
+
+  const handleShareMap = async (item: SearchResult) => {
+    if (typeof window === 'undefined') return;
+
+    const shareUrl = (() => {
+      try {
+        return new URL(item.link, window.location.origin).toString();
+      } catch {
+        return item.link;
+      }
+    })();
+
+    const shareTitle = item.type === 'islands' ? getMapListTitle(item.title) : item.title;
+    const shareText = t('destinationSearch.shareText', 'Check this curated destination map:');
+
+    if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+      try {
+        await navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: shareUrl,
+        });
+        return;
+      } catch (error) {
+        if (error instanceof DOMException && error.name === 'AbortError') {
+          return;
+        }
+      }
+    }
+
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareUrl);
+        toast({
+          title: t('restaurantFinder.statusSuccess', 'Success'),
+          description: t('destinationSearch.copiedDestinationLink', 'Destination map link copied to clipboard.'),
+          status: 'success',
+          duration: 2500,
+          isClosable: true,
+        });
+        return;
+      }
+      throw new Error('Clipboard API unavailable');
+    } catch {
+      toast({
+        title: t('restaurantFinder.statusError', 'Unable to complete'),
+        description: t('destinationSearch.shareFailed', 'Unable to share this destination right now.'),
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
 
   const debouncedSearch = useMemo(() =>
     debounce((query: string) => {
@@ -403,7 +458,7 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                           </Text>
                       </Link>
 
-                      <Box mt={2} display="grid" gridTemplateColumns={{ base: '1fr', md: 'repeat(2, minmax(0, 1fr))' }} gap={2}>
+                      <Box mt={2} display="grid" gridTemplateColumns={{ base: '1fr', sm: 'repeat(3, minmax(0, 1fr))' }} gap={2}>
                         <Button
                           as={Link}
                           href={item.link}
@@ -421,6 +476,24 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                           textAlign="center"
                         >
                           {t('destinationSearch.openCuratedMapShort', 'Map')}
+                        </Button>
+                        <Button
+                          size="sm"
+                          colorScheme="gray"
+                          variant="outline"
+                          minH="44px"
+                          px={4}
+                          fontSize={{ base: 'xs', sm: 'sm' }}
+                          fontWeight="semibold"
+                          letterSpacing="tight"
+                          whiteSpace="normal"
+                          lineHeight="short"
+                          textAlign="center"
+                          onClick={() => {
+                            void handleShareMap(item);
+                          }}
+                        >
+                          {t('destinationSearch.shareMapShort', 'Share')}
                         </Button>
                         <Button
                           size="sm"
