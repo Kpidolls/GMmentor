@@ -43,6 +43,21 @@ type CategoryNarrativeProfile = {
 
 const GENERIC_BEST_FOR_TAGS = new Set(['first-time visitors', 'food lovers', 'route planners']);
 const GENERIC_VISIT_MOMENT_TAGS = new Set(['lunch stop', 'dinner stop', 'daytime visit']);
+const GREEK_POSTER_ADJECTIVES: Record<string, string> = {
+  restaurant: 'Αγαπημένο',
+  localSpot: 'Αγαπημένη',
+  familyFriendlySpot: 'Αγαπημένη',
+  cafe: 'Αγαπημένο',
+  dessertShop: 'Αγαπημένο',
+  streetFoodSpot: 'Αγαπημένη',
+  attractionSpot: 'Αγαπημένο',
+  wineEstate: 'Αγαπημένο',
+  monasteryChurchSite: 'Αγαπημένο',
+  rooftopLounge: 'Αγαπημένο',
+  vegetarianSpot: 'Αγαπημένη',
+  fishTaverna: 'Αγαπημένη',
+  fineDiningSpot: 'Αγαπημένη',
+};
 
 const CATEGORY_NARRATIVE_PROFILES: Record<string, CategoryNarrativeProfile> = {
   'family-friendly': {
@@ -118,6 +133,7 @@ type EntityPageProps = {
   areaContext: {
     slug: string;
     name: string;
+    nameEl: string;
   } | null;
   intentContexts: Array<{
     href: string;
@@ -126,6 +142,7 @@ type EntityPageProps = {
     categoryName: string;
     areaSlug: string;
     areaName: string;
+    areaNameEl: string;
   }>;
 };
 
@@ -238,6 +255,105 @@ function fallbackSummary(entity: EntityRecord, context: string): { en: string; e
   };
 }
 
+function stripGreekDiacritics(value: string): string {
+  return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function normalizeGreekPosterArea(value: string): string {
+  return stripGreekDiacritics(value)
+    .toLowerCase()
+    .replace(/[^\p{L}\s]/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function getGreekPosterAdjective(typeLabelKey: string): string {
+  return GREEK_POSTER_ADJECTIVES[typeLabelKey] || 'ΑΓΑΠΗΜΕΝΟ';
+}
+
+function getGreekPosterPreposition(areaLabel: string): string {
+  const normalized = normalizeGreekPosterArea(areaLabel);
+  const compact = normalized.replace(/\s/g, '');
+  const pluralAreas = new Set([
+    'λαδαδικα',
+    'εξαρχεια',
+    'πατησια',
+    'πετραλωνα',
+    'αμπελοκηποι',
+    'χανια',
+    'γιαννενα',
+    'τρικαλα',
+  ]);
+
+  // Common plural toponyms (mostly neuter plural) -> στα
+  if (pluralAreas.has(compact) || compact.endsWith('δικα') || compact.endsWith('ικα') || compact.endsWith('εια')) {
+    return 'στα';
+  }
+
+  // Feminine plural -> στις
+  if (compact.endsWith('ες')) {
+    return 'στις';
+  }
+
+  // Masculine plural -> στους
+  if (compact.endsWith('οι')) {
+    return 'στους';
+  }
+
+  // Masculine singular -> στον + accusative form
+  if (compact.endsWith('ος') || compact.endsWith('ας') || compact.endsWith('ης')) {
+    return 'στον';
+  }
+
+  // Neuter singular -> στο
+  if (compact.endsWith('ο') || compact.endsWith('ι') || compact.endsWith('μα')) {
+    return 'στο';
+  }
+
+  // Default feminine singular -> στην
+  return 'στην';
+}
+
+function inflectGreekAreaLabel(areaLabel: string): string {
+  const normalized = normalizeGreekPosterArea(areaLabel);
+
+  // Masculine singular accusative inflection for common endings.
+  if (normalized.endsWith('ος')) {
+    return areaLabel.replace(/ος$/u, 'ο').replace(/ός$/u, 'ό');
+  }
+
+  if (normalized.endsWith('ας')) {
+    return areaLabel.replace(/ας$/u, 'α').replace(/άς$/u, 'ά');
+  }
+
+  if (normalized.endsWith('ης')) {
+    return areaLabel.replace(/ης$/u, 'η').replace(/ής$/u, 'ή');
+  }
+
+  return areaLabel;
+}
+
+function selectGreekAreaLabel(
+  entity: EntityRecord,
+  areaContext: EntityPageProps['areaContext'],
+  intentContexts: EntityPageProps['intentContexts']
+): string {
+  const fallback = entity.region || areaContext?.nameEl || areaContext?.name || entity.region_en || 'Ελλάδα';
+
+  if (areaContext?.nameEl) {
+    return areaContext.nameEl;
+  }
+
+  if (intentContexts.length > 0) {
+    const firstIntent = intentContexts[0];
+    if (firstIntent) {
+      return firstIntent.areaNameEl || firstIntent.areaName || fallback;
+    }
+  }
+
+  return fallback;
+}
+
 function wrapCanvasText(ctx: CanvasRenderingContext2D, text: string, x: number, y: number, maxWidth: number, lineHeight: number, maxLines: number): void {
   const words = text.split(/\s+/).filter(Boolean);
   let line = '';
@@ -346,6 +462,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
       areaContext = {
         slug: nearestArea.area.urlSlug,
         name: nearestArea.area.nameEn || nearestArea.area.name,
+        nameEl: nearestArea.area.name,
       };
 
       const primaryCategoryIds = (entity.categoryIds || []).slice(0, 3);
@@ -368,6 +485,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
           categoryName: categoryAreaPayload.category.name,
           areaSlug: nearestArea.area.urlSlug,
           areaName: nearestArea.area.nameEn || nearestArea.area.name,
+          areaNameEl: nearestArea.area.name,
         });
 
         if (intentContexts.length >= 3) {
@@ -491,19 +609,25 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
   const featuredVibeRaw = effectiveEnrichment.vibe_tags[0] || 'curated';
   const featuredVibe = t(`place.dynamicTags.${featuredVibeRaw}`, featuredVibeRaw);
   const favoriteBadgeLabel = t('place.badges.favorite', "People's Favorite");
-  const curatedBadgeLabel = t('place.badges.curated', 'Googlementor Pick');
-  const tagline = heroAudience
-    ? t('place.tagline.withAudience', {
-      type: placeTypeLabel,
-      neighborhood,
-      audience: heroAudience,
-      defaultValue: `A people's favorite ${placeTypeLabel} in ${neighborhood}, especially good for ${heroAudience}.`,
-    })
-    : t('place.tagline.base', {
-      type: placeTypeLabel,
-      neighborhood,
-      defaultValue: `A people's favorite ${placeTypeLabel} in ${neighborhood}.`,
-    });
+  const curatedBadgeLabel = t('place.badges.favorite', 'Favorite');
+  const greekTaglineAreaLabel = selectGreekAreaLabel(entity, areaContext, intentContexts);
+  const greekTaglineLocationPhrase = `${getGreekPosterPreposition(greekTaglineAreaLabel)} ${inflectGreekAreaLabel(greekTaglineAreaLabel).toLowerCase()}`;
+  const tagline = isGreek
+    ? (heroAudience
+      ? `Αγαπημένη στάση ${placeTypeLabel} ${greekTaglineLocationPhrase}, ιδανική για ${heroAudience}.`
+      : `Αγαπημένη στάση ${placeTypeLabel} ${greekTaglineLocationPhrase}.`)
+    : (heroAudience
+      ? t('place.tagline.withAudience', {
+        type: placeTypeLabel,
+        neighborhood,
+        audience: heroAudience,
+        defaultValue: `A people's favorite ${placeTypeLabel} in ${neighborhood}, especially good for ${heroAudience}.`,
+      })
+      : t('place.tagline.base', {
+        type: placeTypeLabel,
+        neighborhood,
+        defaultValue: `A people's favorite ${placeTypeLabel} in ${neighborhood}.`,
+      }));
   const shareText = `${entity.name} - ${tagline}`;
   const sameCategoryWithDistance = useMemo(
     () => sameCategory
@@ -584,23 +708,19 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
   }, [nearby, sameCategoryWithDistance, sameRegionWithDistance, usefulStopIds, walkableNearby]);
   const shareCaption = t('place.share.autoCaption', 'Discovered via Googlementor curated picks across Greece.');
   const nearbyGroupAccentSchemes = ['blue', 'teal', 'orange', 'purple'] as const;
-  const promoBadgeText = favoriteBadgeLabel.toUpperCase();
+  const promoBadgeText = isGreek
+    ? stripGreekDiacritics(favoriteBadgeLabel.toLocaleUpperCase('el-GR'))
+    : favoriteBadgeLabel.toUpperCase();
   const promoPlaceName = isSanZachariFeatured ? 'Σαν Ζάχαρη' : entity.name;
-  const promoCategoryAddress = isSanZachariFeatured
-    ? 'Dessert Shops · Ελ. Βενιζέλου 119, Νέα Ιωνία'
-    : `${entity.kind === 'restaurant' && categoryBadgeLabels.length > 0 ? categoryBadgeLabels[0] : localizedKind} · ${neighborhood}`;
+  const greekPosterAreaLabel = selectGreekAreaLabel(entity, areaContext, intentContexts);
+  const englishPosterAreaLabel = areaContext?.name || intentContexts[0]?.areaName || entity.region_en || entity.region || 'Greece';
+  const posterAreaLabel = isGreek ? greekPosterAreaLabel : englishPosterAreaLabel;
+  const posterDescriptor = isGreek
+    ? `${getGreekPosterAdjective(typeLabelKey)} ${placeTypeLabel.toLowerCase()} ${getGreekPosterPreposition(greekPosterAreaLabel)} ${inflectGreekAreaLabel(greekPosterAreaLabel).toLowerCase()}`
+    : `A people's favorite ${placeTypeLabel.toLowerCase()} in ${posterAreaLabel}`;
   const promoHighlight = isSanZachariFeatured
-    ? 'Αγαπημένο των ντόπιων. Αξίζει κοινοποίηση.'
-    : tagline;
-  const promoLink = isSanZachariFeatured
-    ? 'googlementor.com/place/san-zachari-4ba5'
-    : canonicalUrl.replace(/^https?:\/\//, '');
-  const promoTags = useMemo(
-    () => (isSanZachariFeatured
-      ? ['Ζαχαροπλαστεία', 'Επιλεγμένο']
-      : [primaryCategoryLabel, featuredVibe, neighborhood].filter(Boolean)),
-    [featuredVibe, isSanZachariFeatured, neighborhood, primaryCategoryLabel]
-  );
+    ? (isGreek ? 'Τοπικό αγαπημένο για εύκολο share.' : 'Local favorite for easy sharing.')
+    : posterDescriptor;
 
   useEffect(() => {
     setCanNativeShare(typeof navigator !== 'undefined' && typeof navigator.share === 'function');
@@ -645,18 +765,135 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
     };
 
     const drawTag = (label: string, x: number, y: number) => {
-      ctx.font = '600 28px Roboto, Arial, sans-serif';
-      const horizontalPadding = 26;
+      ctx.save();
+      ctx.font = '600 22px Roboto, Arial, sans-serif';
+      ctx.textAlign = 'left';
+      const horizontalPadding = 18;
       const tagWidth = ctx.measureText(label).width + horizontalPadding * 2;
-      const tagHeight = 52;
+      const tagHeight = 42;
 
-      drawRoundedRect(ctx, x, y, tagWidth, tagHeight, 26);
+      drawRoundedRect(ctx, x, y, tagWidth, tagHeight, 21);
       ctx.fillStyle = '#f1f5f9';
       ctx.fill();
 
       ctx.fillStyle = '#0f172a';
-      ctx.fillText(label, x + horizontalPadding, y + 35);
+      ctx.fillText(label, x + horizontalPadding, y + 28);
+      ctx.restore();
       return tagWidth;
+    };
+
+    const drawTrophy = (x: number, y: number, scale: number) => {
+      const cupWidth = 216 * scale;
+      const cupHeight = 170 * scale;
+      const cupX = x - cupWidth / 2;
+      const cupY = y;
+      const stemWidth = 30 * scale;
+      const stemHeight = 40 * scale;
+      const baseWidth = 144 * scale;
+      const baseHeight = 24 * scale;
+
+      const cupGradient = ctx.createLinearGradient(cupX, cupY, cupX + cupWidth, cupY + cupHeight);
+      cupGradient.addColorStop(0, '#fff9c9');
+      cupGradient.addColorStop(0.28, '#f8d54f');
+      cupGradient.addColorStop(0.56, '#d9a800');
+      cupGradient.addColorStop(1, '#8d6200');
+
+      const rimGradient = ctx.createLinearGradient(cupX, cupY, cupX + cupWidth, cupY);
+      rimGradient.addColorStop(0, '#ffe890');
+      rimGradient.addColorStop(0.5, '#f2c83f');
+      rimGradient.addColorStop(1, '#ba8300');
+
+      const drawSparkle = (sx: number, sy: number, size: number) => {
+        ctx.save();
+        ctx.fillStyle = 'rgba(255, 246, 200, 0.85)';
+        ctx.beginPath();
+        ctx.moveTo(sx, sy - size);
+        ctx.lineTo(sx + size * 0.35, sy - size * 0.35);
+        ctx.lineTo(sx + size, sy);
+        ctx.lineTo(sx + size * 0.35, sy + size * 0.35);
+        ctx.lineTo(sx, sy + size);
+        ctx.lineTo(sx - size * 0.35, sy + size * 0.35);
+        ctx.lineTo(sx - size, sy);
+        ctx.lineTo(sx - size * 0.35, sy - size * 0.35);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      };
+
+      ctx.save();
+      ctx.shadowColor = 'rgba(255, 215, 0, 0.16)';
+      ctx.shadowBlur = 7 * scale;
+      ctx.shadowOffsetY = 3 * scale;
+
+      ctx.strokeStyle = '#ce9800';
+      ctx.lineWidth = 8 * scale;
+      ctx.lineCap = 'round';
+
+      // Left handle
+      ctx.beginPath();
+      ctx.moveTo(cupX + 28 * scale, cupY + 46 * scale);
+      ctx.bezierCurveTo(cupX - 22 * scale, cupY + 36 * scale, cupX - 28 * scale, cupY + 110 * scale, cupX + 20 * scale, cupY + 122 * scale);
+      ctx.stroke();
+
+      // Right handle
+      ctx.beginPath();
+      ctx.moveTo(cupX + cupWidth - 28 * scale, cupY + 46 * scale);
+      ctx.bezierCurveTo(cupX + cupWidth + 22 * scale, cupY + 36 * scale, cupX + cupWidth + 28 * scale, cupY + 110 * scale, cupX + cupWidth - 20 * scale, cupY + 122 * scale);
+      ctx.stroke();
+
+      // Rim
+      ctx.fillStyle = rimGradient;
+      drawRoundedRect(ctx, cupX + 14 * scale, cupY + 18 * scale, cupWidth - 28 * scale, 24 * scale, 11 * scale);
+      ctx.fill();
+
+      // Body (classic tapered cup)
+      ctx.beginPath();
+      ctx.moveTo(cupX + 30 * scale, cupY + 36 * scale);
+      ctx.lineTo(cupX + cupWidth - 30 * scale, cupY + 36 * scale);
+      ctx.bezierCurveTo(cupX + cupWidth - 42 * scale, cupY + 92 * scale, cupX + cupWidth - 66 * scale, cupY + 130 * scale, cupX + cupWidth - 88 * scale, cupY + 138 * scale);
+      ctx.lineTo(cupX + 88 * scale, cupY + 138 * scale);
+      ctx.bezierCurveTo(cupX + 66 * scale, cupY + 130 * scale, cupX + 42 * scale, cupY + 92 * scale, cupX + 30 * scale, cupY + 36 * scale);
+      ctx.closePath();
+      ctx.fillStyle = cupGradient;
+      ctx.fill();
+
+      // Center sheen
+      const sheen = ctx.createLinearGradient(x - 22 * scale, cupY + 40 * scale, x + 22 * scale, cupY + 140 * scale);
+      sheen.addColorStop(0, 'rgba(255, 248, 197, 0.7)');
+      sheen.addColorStop(1, 'rgba(255, 248, 197, 0)');
+      ctx.fillStyle = sheen;
+      drawRoundedRect(ctx, x - 18 * scale, cupY + 44 * scale, 36 * scale, 88 * scale, 14 * scale);
+      ctx.fill();
+
+      // Neck + stem + base
+      ctx.fillStyle = '#e6b300';
+      drawRoundedRect(ctx, x - 36 * scale, cupY + 134 * scale, 72 * scale, 18 * scale, 8 * scale);
+      ctx.fill();
+
+      ctx.fillStyle = '#ffd26a';
+      drawRoundedRect(ctx, x - stemWidth / 2, cupY + 150 * scale, stemWidth, stemHeight, 10 * scale);
+      ctx.fill();
+
+      ctx.fillStyle = '#c78a00';
+      drawRoundedRect(ctx, x - baseWidth / 2, cupY + 184 * scale, baseWidth, baseHeight, 12 * scale);
+      ctx.fill();
+
+      drawSparkle(cupX + 38 * scale, cupY + 14 * scale, 10 * scale);
+      drawSparkle(cupX + cupWidth - 34 * scale, cupY + 20 * scale, 8 * scale);
+
+      ctx.restore();
+    };
+
+    const drawHalo = (centerX: number, centerY: number, radius: number) => {
+      const halo = ctx.createRadialGradient(centerX, centerY, radius * 0.1, centerX, centerY, radius);
+      halo.addColorStop(0, 'rgba(255, 219, 107, 0.36)');
+      halo.addColorStop(0.45, 'rgba(255, 198, 30, 0.14)');
+      halo.addColorStop(1, 'rgba(255, 198, 30, 0)');
+
+      ctx.fillStyle = halo;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+      ctx.fill();
     };
 
     ctx.fillStyle = '#f5f1e8';
@@ -670,53 +907,53 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
     ctx.lineWidth = 3;
     ctx.stroke();
 
-    drawRoundedRect(ctx, 120, 150, 430, 58, 29);
+    drawRoundedRect(ctx, 340, 172, 400, 52, 26);
     ctx.fillStyle = '#e7c87e';
     ctx.fill();
     ctx.fillStyle = '#1f2937';
-    ctx.font = '700 30px Roboto, Arial, sans-serif';
-    ctx.fillText(promoBadgeText, 145, 189);
+    ctx.font = '700 23px Roboto, Arial, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(promoBadgeText, width / 2, 205);
+
+    drawHalo(width / 2, 392, 230);
+    drawTrophy(width / 2, 214, 1.0);
 
     ctx.fillStyle = '#f8fafc';
-    ctx.font = '700 108px Roboto, Arial, sans-serif';
-    wrapCanvasText(ctx, promoPlaceName, 120, 360, width - 240, 114, 3);
+    ctx.font = '700 72px Roboto, Arial, sans-serif';
+    wrapCanvasText(ctx, promoPlaceName, width / 2, 500, 760, 76, 2);
 
-    ctx.fillStyle = '#cbd5e1';
-    ctx.font = '500 34px Roboto, Arial, sans-serif';
-    wrapCanvasText(ctx, promoCategoryAddress, 120, 680, width - 240, 48, 2);
-
-    ctx.fillStyle = '#fef3c7';
-    ctx.font = '600 42px Roboto, Arial, sans-serif';
-    wrapCanvasText(ctx, promoHighlight, 120, 790, width - 240, 56, 2);
+    ctx.fillStyle = '#d8dee9';
+    ctx.font = '500 30px Roboto, Arial, sans-serif';
+    wrapCanvasText(ctx, promoHighlight, width / 2, 648, 760, 40, 2);
 
     ctx.strokeStyle = '#475569';
     ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.moveTo(120, 900);
-    ctx.lineTo(width - 120, 900);
+    ctx.moveTo(210, 726);
+    ctx.lineTo(870, 726);
     ctx.stroke();
 
-    ctx.fillStyle = '#cbd5e1';
-    ctx.font = '500 30px Roboto, Arial, sans-serif';
-    wrapCanvasText(ctx, promoLink, 120, 968, width - 240, 42, 2);
-
-    let tagX = 120;
-    const tagY = 1044;
-    const tagSpacing = 18;
-    for (const tag of promoTags.slice(0, 3)) {
-      if (!tag) {
-        continue;
-      }
-
+    const posterTags = [primaryCategoryLabel, (featuredVibeRaw === 'curated' ? favoriteBadgeLabel : featuredVibe)].filter(Boolean).slice(0, 2);
+    const tagWidths = posterTags.map((tag) => {
+      ctx.font = '600 22px Roboto, Arial, sans-serif';
+      const horizontalPadding = 18;
+      return ctx.measureText(tag).width + horizontalPadding * 2;
+    });
+    const tagSpacing = posterTags.length > 1 ? 16 : 0;
+    const totalTagWidth = tagWidths.reduce((sum, value) => sum + value, 0) + tagSpacing * Math.max(0, posterTags.length - 1);
+    let tagX = (width - totalTagWidth) / 2;
+    const tagY = 780;
+    posterTags.forEach((tag) => {
       const tagWidth = drawTag(tag, tagX, tagY);
       tagX += tagWidth + tagSpacing;
-      if (tagX > width - 180) {
-        break;
-      }
-    }
+    });
+
+    ctx.fillStyle = '#cbd5e1';
+    ctx.font = '500 20px Roboto, Arial, sans-serif';
+    ctx.fillText('Googlementor', width / 2, 896);
 
     setSocialPosterPreview(canvas.toDataURL('image/png'));
-  }, [canonicalUrl, context, entity.name, featuredVibe, isSanZachariFeatured, localizedKind, primaryCategoryLabel, promoBadgeText, promoCategoryAddress, promoHighlight, promoLink, promoPlaceName, promoTags, t]);
+  }, [areaContext?.name, areaContext?.nameEl, entity.name, entity.region, entity.region_en, featuredVibe, featuredVibeRaw, favoriteBadgeLabel, greekPosterAreaLabel, isGreek, isSanZachariFeatured, posterAreaLabel, promoBadgeText, promoHighlight, promoPlaceName, t, primaryCategoryLabel, typeLabelKey, intentContexts]);
 
   const handleAddToItinerary = () => {
     dispatchAddToItinerary({
@@ -937,10 +1174,13 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
                   src={socialPosterPreview}
                   alt={t('place.promo.previewAlt', { name: entity.name, defaultValue: 'Promo card preview for {{name}}' })}
                   w="full"
-                  h={{ base: '320px', md: '360px' }}
-                  objectFit="cover"
+                  h="auto"
+                  maxH={{ base: '420px', md: '520px' }}
+                  objectFit="contain"
+                  objectPosition="center"
                   borderRadius="xl"
                   borderWidth="1px"
+                  bg="gray.100"
                 />
               ) : (
                 <Box h="260px" borderWidth="1px" borderRadius="xl" bg="gray.50" display="flex" alignItems="center" justifyContent="center">
@@ -986,6 +1226,103 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
         </HStack>
       </Box>
 
+      {sameCategoryWithDistance.length > 0 ? (
+        <Box mb={8} borderWidth="1px" borderColor="teal.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="teal.50">
+          <Heading as="h2" size="md" mb={3}>
+            {t('place.sameCategory.title', 'Similar places nearby')}
+          </Heading>
+          <Text color="gray.600" mb={4}>{t('place.sameCategory.subtitle', 'If you liked this pick, these are strong alternatives nearby.')}</Text>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
+            {sameCategoryWithDistance.map((candidate) => (
+              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                <HStack justify="space-between" align="baseline" spacing={3} mb={1}>
+                  <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
+                    {candidate.name}
+                  </Link>
+                  <Text as="span" fontSize="sm" color="gray.600">{formatDistance(candidate.distanceKm)}</Text>
+                </HStack>
+                <Text color="gray.600" fontSize="sm">{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      ) : null}
+
+      {nearby.length > 0 ? (
+        <Box mb={8} borderWidth="1px" borderColor="blue.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="blue.50">
+          <Heading as="h2" size="md" mb={2}>
+            {t('place.nearby.title', 'Closest useful stops')}
+          </Heading>
+          <Text color="gray.700" mb={4}>{t('place.nearby.subtitle', 'A quick travel-assistant view of the closest useful stops to walk to next.')}</Text>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
+            {nearbyGroupedByCategory.map((group, groupIndex) => {
+              const accentScheme = nearbyGroupAccentSchemes[groupIndex % nearbyGroupAccentSchemes.length];
+
+              return (
+                <Box key={group.label} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                  <Box
+                    mb={3}
+                    px={3}
+                    py={2}
+                    borderRadius="md"
+                    borderWidth="1px"
+                    borderColor={`${accentScheme}.200`}
+                    bg={`${accentScheme}.50`}
+                  >
+                    <Text
+                      fontSize="xs"
+                      fontWeight="bold"
+                      letterSpacing="0.08em"
+                      textTransform="uppercase"
+                      color={`${accentScheme}.800`}
+                    >
+                      {group.label}
+                    </Text>
+                  </Box>
+                  <VStack align="stretch" spacing={2}>
+                    {group.items.map((candidate) => (
+                      <Box key={`${group.label}-${candidate.id}`}>
+                        <HStack justify="space-between" align="baseline" spacing={3}>
+                          <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.700" fontWeight="semibold">
+                            {candidate.name}
+                          </Link>
+                          <Text as="span" fontSize="sm" color="gray.600">{formatDistance(candidate.distanceKm)}</Text>
+                        </HStack>
+                        <Text fontSize="sm" color="gray.600" mt={1}>
+                          {candidate.address || candidate.region || t('common.greece', 'Greece')}
+                        </Text>
+                      </Box>
+                    ))}
+                  </VStack>
+                </Box>
+              );
+            })}
+          </SimpleGrid>
+        </Box>
+      ) : null}
+
+      {walkableNearby.length > 0 ? (
+        <Box mb={8}>
+          <Heading as="h2" size="md" mb={3}>
+            {t('place.walkable.title', 'Best Walkable Picks Nearby')}
+          </Heading>
+          <Text color="gray.600" mb={4}>{t('place.walkable.subtitle', 'Great options within a short walk.')}</Text>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
+            {walkableNearby.map((candidate) => (
+              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                <HStack justify="space-between" align="flex-start" spacing={3} mb={2}>
+                  <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
+                    {candidate.name}
+                  </Link>
+                  <Badge colorScheme="blue" textTransform="none">{formatDistance(candidate.distanceKm)}</Badge>
+                </HStack>
+                <Text color="gray.600" fontSize="sm" mt={1}>{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      ) : null}
+
       {areaContext || intentContexts.length > 0 ? (
         <Box mb={8} borderWidth="1px" borderColor="orange.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="orange.50">
           <Heading as="h2" size="md" mb={3}>
@@ -1013,103 +1350,6 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
                 <Text color="gray.600" fontSize="sm" mt={1}>
                   {t('place.discovery.intentHint', 'Compare nearby options for this intent in the same area.')}
                 </Text>
-              </Box>
-            ))}
-          </SimpleGrid>
-        </Box>
-      ) : null}
-
-      {nearby.length > 0 ? (
-        <Box mb={8} borderWidth="1px" borderColor="blue.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="blue.50">
-          <Heading as="h2" size="md" mb={2}>
-            {t('place.nearby.title', 'Closest useful stops')}
-          </Heading>
-          <Text color="gray.700" mb={4}>{t('place.nearby.subtitle', 'A quick travel-assistant view of the closest useful stops to walk to next.')}</Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
-            {nearbyGroupedByCategory.map((group, groupIndex) => {
-              const accentScheme = nearbyGroupAccentSchemes[groupIndex % nearbyGroupAccentSchemes.length];
-
-              return (
-              <Box key={group.label} borderWidth="1px" borderRadius="lg" p={4} bg="white">
-                <Box
-                  mb={3}
-                  px={3}
-                  py={2}
-                  borderRadius="md"
-                  borderWidth="1px"
-                  borderColor={`${accentScheme}.200`}
-                  bg={`${accentScheme}.50`}
-                >
-                  <Text
-                    fontSize="xs"
-                    fontWeight="bold"
-                    letterSpacing="0.08em"
-                    textTransform="uppercase"
-                    color={`${accentScheme}.800`}
-                  >
-                    {group.label}
-                  </Text>
-                </Box>
-                <VStack align="stretch" spacing={2}>
-                  {group.items.map((candidate) => (
-                    <Box key={`${group.label}-${candidate.id}`}>
-                      <HStack justify="space-between" align="baseline" spacing={3}>
-                        <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.700" fontWeight="semibold">
-                          {candidate.name}
-                        </Link>
-                        <Text as="span" fontSize="sm" color="gray.600">{formatDistance(candidate.distanceKm)}</Text>
-                      </HStack>
-                      <Text fontSize="sm" color="gray.600" mt={1}>
-                        {candidate.address || candidate.region || t('common.greece', 'Greece')}
-                      </Text>
-                    </Box>
-                  ))}
-                </VStack>
-              </Box>
-              );
-            })}
-          </SimpleGrid>
-        </Box>
-      ) : null}
-
-      {sameCategoryWithDistance.length > 0 ? (
-        <Box mb={8} borderWidth="1px" borderColor="teal.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="teal.50">
-          <Heading as="h2" size="md" mb={3}>
-            {t('place.sameCategory.title', 'Try next in the same category')}
-          </Heading>
-          <Text color="gray.600" mb={4}>{t('place.sameCategory.subtitle', 'If you liked this pick, these are strong alternatives nearby.')}</Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
-            {sameCategoryWithDistance.map((candidate) => (
-              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
-                <HStack justify="space-between" align="baseline" spacing={3} mb={1}>
-                  <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
-                    {candidate.name}
-                  </Link>
-                  <Text as="span" fontSize="sm" color="gray.600">{formatDistance(candidate.distanceKm)}</Text>
-                </HStack>
-                <Text color="gray.600" fontSize="sm">{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
-              </Box>
-            ))}
-          </SimpleGrid>
-        </Box>
-      ) : null}
-
-      {walkableNearby.length > 0 ? (
-        <Box mb={8}>
-          <Heading as="h2" size="md" mb={3}>
-            {t('place.walkable.title', 'Best Walkable Picks Nearby')}
-          </Heading>
-          <Text color="gray.600" mb={4}>{t('place.walkable.subtitle', 'Great options within a short walk.')}</Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
-            {walkableNearby.map((candidate) => (
-              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
-                <HStack justify="space-between" align="flex-start" spacing={3} mb={2}>
-                  <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
-                    {candidate.name}
-                  </Link>
-                  <Badge colorScheme="blue" textTransform="none">{formatDistance(candidate.distanceKm)}</Badge>
-                </HStack>
-                <Text color="gray.600" fontSize="sm" mt={1}>{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
               </Box>
             ))}
           </SimpleGrid>

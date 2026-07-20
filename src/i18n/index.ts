@@ -9,8 +9,8 @@ i18n
     en: { translation: en },
     el: { translation: el },
   },
-  lng: 'en',
-  fallbackLng: 'en',
+  lng: 'el',
+  fallbackLng: 'el',
   interpolation: {
     escapeValue: false, // React already escapes values
   },

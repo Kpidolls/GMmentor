@@ -12,8 +12,7 @@ const usePersistedLanguage = () => {
     // Only run once after i18n is ready
     if (!isInitialized && i18n.isInitialized) {
       const savedLanguage = localStorage.getItem('language');
-      const browserLanguage = navigator.language?.split('-')[0] || 'en';
-      const defaultLanguage = savedLanguage || (browserLanguage === 'el' ? 'el' : 'en');
+      const defaultLanguage = savedLanguage || 'el';
 
       if (i18n.language !== defaultLanguage) {
         i18n.changeLanguage(defaultLanguage);
