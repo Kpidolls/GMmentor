@@ -171,6 +171,28 @@ function escapedLength(value: string): number {
   return escapeHtml(value).length;
 }
 
+function toSentenceCaseLabel(value: string, language?: string): string {
+  if (!value || language?.startsWith('el')) {
+    return value;
+  }
+
+  const normalized = value.trim();
+  if (!normalized) {
+    return normalized;
+  }
+
+  return normalized.charAt(0).toLocaleUpperCase('en-US') + normalized.slice(1).toLocaleLowerCase('en-US');
+}
+
+function toInlineLabel(value: string, language?: string): string {
+  if (!value || language?.startsWith('el')) {
+    return value;
+  }
+
+  const sentenceCase = toSentenceCaseLabel(value, language);
+  return sentenceCase.charAt(0).toLocaleLowerCase('en-US') + sentenceCase.slice(1);
+}
+
 function buildTitleWithSuffix(base: string, suffix: string, maxLength: number): string {
   const full = `${base}${suffix}`;
   if (escapedLength(full) <= maxLength) {
@@ -591,10 +613,12 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
     categoryLabel: primaryCategory,
   });
   const bestForLabels = resolvedBestForRaw
-    .map((tag) => t(`place.dynamicTags.${tag}`, tag));
+    .map((tag) => toSentenceCaseLabel(t(`place.dynamicTags.${tag}`, tag), i18n.language));
   const visitMomentLabels = resolvedVisitMomentsRaw
-    .map((tag) => t(`place.dynamicTags.${tag}`, tag));
-  const heroAudience = bestForLabels.join(isGreek ? ' και ' : ' and ');
+    .map((tag) => toSentenceCaseLabel(t(`place.dynamicTags.${tag}`, tag), i18n.language));
+  const heroAudience = resolvedBestForRaw
+    .map((tag) => toInlineLabel(t(`place.dynamicTags.${tag}`, tag), i18n.language))
+    .join(isGreek ? ' και ' : ' and ');
   const subjectOfUrls = mentionedGuides.map((guide) => `${SITE_URL}/blog/${guide.slug}`);
   const entityJsonLd = buildEntityJsonLd(entity, canonicalUrl, subjectOfUrls);
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(entity, canonicalUrl, {
@@ -607,9 +631,9 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
   const pageTitle = buildPlaceSeoTitle(entity.name, localizedKind);
   const socialTitle = buildPlaceSeoTitle(entity.name, localizedKind);
   const featuredVibeRaw = effectiveEnrichment.vibe_tags[0] || 'curated';
-  const featuredVibe = t(`place.dynamicTags.${featuredVibeRaw}`, featuredVibeRaw);
+  const featuredVibe = toSentenceCaseLabel(t(`place.dynamicTags.${featuredVibeRaw}`, featuredVibeRaw), i18n.language);
   const favoriteBadgeLabel = t('place.badges.favorite', "People's Favorite");
-  const curatedBadgeLabel = t('place.badges.favorite', 'Favorite');
+  const curatedBadgeLabel = t('place.badges.curated', 'Googlementor Pick');
   const greekTaglineAreaLabel = selectGreekAreaLabel(entity, areaContext, intentContexts);
   const greekTaglineLocationPhrase = `${getGreekPosterPreposition(greekTaglineAreaLabel)} ${inflectGreekAreaLabel(greekTaglineAreaLabel).toLowerCase()}`;
   const tagline = isGreek
