@@ -7,7 +7,7 @@ language_coverage: el,en
 # Googlementor — Greece Travel & Restaurant Guide
 Site: https://googlementor.com
 Entities index: https://googlementor.com/data/entities.json
-Generated: 2026-07-20T12:23:38.974Z
+Generated: 2026-07-20T15:56:21.879Z
 
 Googlementor is a curated directory of restaurants, cafes, attractions, and neighborhoods in Athens and the Greek islands. All locations are verified, geocoded, and linked to Google Maps. The site covers 3532 curated dining and attraction entries across 352 Athens neighborhoods and Greek regions.
 
@@ -4075,7 +4075,7 @@ A practical Athens souvenir guide with authentic Greek brands, local food produc
 URL: https://googlementor.com/blog/best-greek-souvenirs-athens
 Published: 2026-02-25
 
-### Live Greek Music in Athens: Bouzoukia & Taverns Guide
+### Athens Live Greek Music: Bouzoukia and Tavernas
 Practical local guide to live Greek music in Athens: bouzoukia vs tavernas, real costs, flower traditions, and how to plan a smart night out.
 URL: https://googlementor.com/blog/athens-live-greek-music-guide
 Published: 2026-02-20
