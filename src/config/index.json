@@ -10,35 +10,27 @@
   },
   "navigation": [
     {
-      "name": "navigation.maps",
-      "href": "maps",
+      "name": "navigation.explore",
       "submenu": [
-        { "name": "navigation.mustSee", "href": "maps" },
-        { "name": "navigation.islands", "href": "destinations" },
-        { "name": "navigation.activities", "href": "categories" },
+        { "name": "navigation.searchAllPlaces", "href": "/search" },
+        { "name": "navigation.blog", "href": "/blog" },
         { "name": "navigation.areasHub", "href": "/areas" },
         { "name": "navigation.collectionsHub", "href": "/collections" }
       ]
     },
     {
-      "name": "navigation.travelTools",
-      "href": "/airalo",
+      "name": "navigation.plan",
       "submenu": [
+        { "name": "navigation.itinerary", "href": "/itinerary" },
         { "name": "navigation.mobileTravelData", "href": "/airalo" },
         { "name": "navigation.travelInsurance", "href": "/insurance" }
       ]
     },
     {
-      "name": "navigation.itinerary",
-      "href": "/itinerary"
-    },
-    {
       "name": "navigation.aboutUs",
-      "href": "aboutus",
       "submenu": [
         { "name": "navigation.ourStory", "href": "aboutus" },
         { "name": "navigation.faq", "href": "qa-section" },
-        { "name": "navigation.blog", "href": "/blog" },
         { "name": "navigation.contact", "href": "footer" }
       ]
     }

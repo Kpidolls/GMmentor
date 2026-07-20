@@ -182,6 +182,7 @@ const Header = () => {
   const renderNavIcon = (name: string) => {
     switch (name) {
       case 'navigation.maps':
+      case 'navigation.explore':
         return (
           <Icon viewBox="0 0 24 24" boxSize={{ base: 4, md: 3.5 }} color="currentColor">
             <path
@@ -196,6 +197,7 @@ const Header = () => {
         );
       case 'navigation.store':
       case 'navigation.travelTools':
+      case 'navigation.plan':
         return (
           <Icon viewBox="0 0 24 24" boxSize={{ base: 4, md: 3.5 }} color="currentColor">
             <path
@@ -273,6 +275,42 @@ const Header = () => {
               strokeLinejoin="round"
             />
             <circle cx="17" cy="8" r="2" fill="currentColor" />
+          </Icon>
+        );
+      case 'navigation.searchAllPlaces':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M16 16l4 4" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          </Icon>
+        );
+      case 'navigation.areasHub':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <path
+              d="M12 21s6-5.3 6-10a6 6 0 1 0-12 0c0 4.7 6 10 6 10Z"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <circle cx="12" cy="11" r="2" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          </Icon>
+        );
+      case 'navigation.collectionsHub':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <rect x="4" y="5" width="16" height="4" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5" />
+            <rect x="4" y="10" width="16" height="4" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5" />
+            <rect x="4" y="15" width="16" height="4" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          </Icon>
+        );
+      case 'navigation.itinerary':
+        return (
+          <Icon viewBox="0 0 24 24" boxSize={3} color="blue.400">
+            <rect x="5" y="4" width="14" height="16" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M8 2v4M16 2v4M8 11h8M8 15h5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </Icon>
         );
       case 'navigation.travelItems':
@@ -413,11 +451,11 @@ const Header = () => {
         py={{ base: 1.5, md: 1.5 }}
         align="center"
         justify="space-between"
-        flexWrap={{ base: 'wrap', md: 'nowrap' }}
+        flexWrap="nowrap"
         gap={{ base: 2, md: 3 }}
-        minH={{ base: 'auto', md: '40px' }}
+        minH={{ base: '40px', md: '40px' }}
       >
-        <HStack spacing={{ base: 1, md: 3 }} flex={{ base: '1 1 auto', md: '1' }} minW="0">
+        <HStack spacing={{ base: 1, md: 3 }} flex="0 0 auto" minW="0">
           <HStack
             spacing={0.5}
             bg="white"
@@ -581,8 +619,8 @@ const Header = () => {
         <Button
           onClick={onOpen}
           variant="unstyled"
-          flex={{ base: '1 1 100%', lg: '1' }}
-          maxW={{ base: '100%', sm: '190px', md: '300px' }}
+          flex={{ base: '1 1 auto', lg: '1' }}
+          maxW={{ base: 'none', sm: '190px', md: '300px' }}
           minW="0"
           h={{ base: '34px', md: '36px' }}
           bg="white"
@@ -599,8 +637,8 @@ const Header = () => {
           _hover={{ bg: 'gray.100', borderColor: 'white' }}
           _active={{ bg: 'gray.200' }}
           _focusVisible={{ boxShadow: 'var(--gm-focus-ring)' }}
-          order={{ base: 3, lg: 0 }}
-          mt={{ base: 1, md: 0 }}
+          order={{ base: 0, lg: 0 }}
+          mt={{ base: 0, md: 0 }}
           aria-label={t('search.openSearch', 'Open search')}
           id="header-search"
         >
@@ -772,7 +810,7 @@ const Header = () => {
           >
             <Flex align="center" justify="space-between" px={2} py={1} mb={2}>
               <Text fontSize="xs" fontWeight="bold" color="gray.500" letterSpacing="0.08em" textTransform="uppercase">
-                {t('navigation.maps', 'Lists')}
+                {t('navigation.explore', 'Explore')}
               </Text>
               <Button
                 size="xs"

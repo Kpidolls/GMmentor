@@ -31,6 +31,8 @@ import productData from '../data/mapOptions.json';
 import storeData from '../data/products.json';
 import categoriesData from '../data/restaurantCategories.json';
 
+const FALLBACK_RESULT_IMAGE = '/assets/images/cover-480.webp';
+
 interface SearchResult {
   id: string;
   title: string;
@@ -48,6 +50,12 @@ interface RestaurantCategory {
   name: string;
   description: string;
   icon: string;
+}
+
+const EMPTY_PLACE_ENTITIES: EntityRecord[] = [];
+
+interface EntitiesPayload {
+  entities?: EntityRecord[];
 }
 
 const greekToLatinMap: Record<string, string[]> = {
@@ -85,11 +93,12 @@ type SearchPageProps = {
   placeEntities?: EntityRecord[];
 };
 
-const SearchPage = ({ focusOnMount = false, placeEntities = [] }: SearchPageProps) => {
+const SearchPage = ({ focusOnMount = false, placeEntities }: SearchPageProps) => {
   const { t } = useTranslation();
   const router = useRouter();
   const toast = useToast();
   const restaurantCategories = categoriesData as RestaurantCategory[];
+  const initialPlaceEntities = placeEntities ?? EMPTY_PLACE_ENTITIES;
 
   const openNearbyCategory = async (categoryId: string) => {
     const target = `/?category=${encodeURIComponent(categoryId)}`;
@@ -117,7 +126,40 @@ const SearchPage = ({ focusOnMount = false, placeEntities = [] }: SearchPageProp
   };
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredResults, setFilteredResults] = useState<SearchResult[]>([]);
+  const [searchablePlaceEntities, setSearchablePlaceEntities] = useState<EntityRecord[]>(initialPlaceEntities);
   const searchInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    setSearchablePlaceEntities(initialPlaceEntities);
+  }, [initialPlaceEntities]);
+
+  useEffect(() => {
+    if (searchablePlaceEntities.length > 0) return;
+
+    let isMounted = true;
+
+    const loadEntitiesFallback = async () => {
+      try {
+        const response = await fetch('/data/entities.json', { cache: 'no-store' });
+        if (!response.ok) return;
+
+        const payload = (await response.json()) as EntitiesPayload;
+        const entities = Array.isArray(payload.entities) ? payload.entities : [];
+
+        if (isMounted && entities.length > 0) {
+          setSearchablePlaceEntities(entities.filter((entity) => Boolean(entity.slug)));
+        }
+      } catch {
+        // Keep the page functional even if fallback data fails to load.
+      }
+    };
+
+    void loadEntitiesFallback();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [searchablePlaceEntities.length]);
 
   const matchedCategories = useMemo(() => {
     if (!searchQuery.trim()) return [];
@@ -129,7 +171,7 @@ const SearchPage = ({ focusOnMount = false, placeEntities = [] }: SearchPageProp
   }, [searchQuery, restaurantCategories]);
 
   const searchableData = useMemo<SearchResult[]>(() => [
-    ...placeEntities.map((entity) => ({
+    ...searchablePlaceEntities.map((entity) => ({
       id: entity.id,
       title: entity.name,
       description: [entity.address, entity.region].filter(Boolean).join(' • ') || t('search.placeResultFallback', 'View place details'),
@@ -155,8 +197,8 @@ const SearchPage = ({ focusOnMount = false, placeEntities = [] }: SearchPageProp
       description: t(item.description) || item.description,
       link: item.link,
       type: 'islands',
-      image: item.img || '/placeholder.png',
-      locationImage: item.locationImg || item.img || '/placeholder.png',
+      image: item.img || FALLBACK_RESULT_IMAGE,
+      locationImage: item.locationImg || item.img || FALLBACK_RESULT_IMAGE,
       keywords: item.keywords || [],
     })),
     ...productData.map((item) => ({
@@ -165,7 +207,7 @@ const SearchPage = ({ focusOnMount = false, placeEntities = [] }: SearchPageProp
       description: t(item.description) || item.description,
       link: item.link,
       type: 'product',
-      image: item.img || '/placeholder.png',
+      image: item.img || FALLBACK_RESULT_IMAGE,
       keywords: item.keywords || [],
     })),
     ...(featureFlags.storeEnabled
@@ -175,11 +217,11 @@ const SearchPage = ({ focusOnMount = false, placeEntities = [] }: SearchPageProp
           description: t(item.description) || item.description,
           link: item.link,
           type: 'store',
-          image: item.image || '/placeholder.png',
+          image: item.image || FALLBACK_RESULT_IMAGE,
           keywords: item.keywords || [],
         }))
       : []),
-  ], [t, placeEntities]);
+  ], [t, searchablePlaceEntities]);
 
   const visibleSections = featureFlags.storeEnabled
     ? ['places', 'islands', 'product', 'store']
@@ -317,6 +359,11 @@ const SearchPage = ({ focusOnMount = false, placeEntities = [] }: SearchPageProp
   useEffect(() => {
     return () => debouncedSearch.cancel();
   }, [debouncedSearch]);
+
+  useEffect(() => {
+    if (!searchQuery.trim()) return;
+    debouncedSearch(searchQuery);
+  }, [searchQuery, searchableData, debouncedSearch]);
 
   useEffect(() => {
     if (focusOnMount && searchInputRef.current) {
