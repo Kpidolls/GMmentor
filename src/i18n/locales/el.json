@@ -148,7 +148,7 @@
     "openMap": "Άνοιγμα χάρτη σημείων ενδιαφέροντος",
     "backHome": "Επιστροφή στην αρχική",
     "metaTitleSuffix": "Χάρτης Σημείων Ενδιαφέροντος",
-    "addToItinerary": "Προσθήκη στο πρόγραμμα",
+    "addToItinerary": "Προσθήκη",
     "itineraryMapTitle": "{{destination}} Χάρτης Σημείων Ενδιαφέροντος",
     "itineraryMapNote": "Σημείο χάρτη: αυτή η λίστα Google Maps δείχνει τα πιο σημαντικά σημεία στην {{destination}}. Άνοιξέ τη οποιαδήποτε στιγμή για να δεις τα must-see και να οργανώσεις εύκολα τη διαδρομή σου."
   },
@@ -229,7 +229,7 @@
     "viewOnMaps": "Προβολή στο Google Maps",
     "openDirections": "Πλοήγηση",
     "exploreMore": "Εξερεύνησε περισσότερα μέρη",
-    "addToItinerary": "Προσθήκη στο πρόγραμμα",
+    "addToItinerary": "Προσθήκη",
     "badges": {
       "favorite": "Αγαπημένο των ντόπιων",
       "curated": "Επιλογή Googlementor"

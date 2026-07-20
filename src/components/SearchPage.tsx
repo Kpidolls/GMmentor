@@ -24,6 +24,7 @@ import debounce from 'lodash.debounce';
 import featureFlags from '../config/featureFlags.json';
 import { dispatchAddToItinerary } from '../utils/itineraryEvents';
 import { detectCategoryMatches } from '../lib/intent/categoryMatcher';
+import type { EntityRecord } from '../lib/entities';
 
 import islandsData from '../data/islands.json';
 import productData from '../data/mapOptions.json';
@@ -36,6 +37,7 @@ interface SearchResult {
   description: string;
   link: string;
   type: string;
+  kind?: EntityRecord['kind'];
   image?: string;
   locationImage?: string;
   keywords?: string[];
@@ -63,7 +65,27 @@ const normalizeText = (text: string): string => {
   }).join('');
 };
 
-const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
+const getPlaceInitials = (title: string): string => {
+  const parts = title
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+
+  if (parts.length === 0) return '?';
+  const firstPart = parts[0] || '';
+  const secondPart = parts[1] || '';
+
+  if (parts.length === 1) return firstPart.slice(0, 2).toUpperCase();
+
+  return `${firstPart.slice(0, 1)}${secondPart.slice(0, 1)}`.toUpperCase();
+};
+
+type SearchPageProps = {
+  focusOnMount?: boolean;
+  placeEntities?: EntityRecord[];
+};
+
+const SearchPage = ({ focusOnMount = false, placeEntities = [] }: SearchPageProps) => {
   const { t } = useTranslation();
   const router = useRouter();
   const toast = useToast();
@@ -83,6 +105,8 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
 
   const getSectionTitle = (type: string): string => {
     switch (type) {
+      case 'places':
+        return t('search.sectionTitles.places', 'Places');
       case 'islands':
         return t('search.sectionTitles.destinations', 'Destinations');
       case 'product':
@@ -105,6 +129,26 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
   }, [searchQuery, restaurantCategories]);
 
   const searchableData = useMemo<SearchResult[]>(() => [
+    ...placeEntities.map((entity) => ({
+      id: entity.id,
+      title: entity.name,
+      description: [entity.address, entity.region].filter(Boolean).join(' • ') || t('search.placeResultFallback', 'View place details'),
+      link: `/place/${entity.slug}`,
+      type: 'places',
+      kind: entity.kind,
+      keywords: [
+        entity.name,
+        entity.slug,
+        entity.name_en,
+        entity.address,
+        entity.region,
+        entity.region_en,
+        entity.kind,
+        ...(entity.aliases || []),
+        ...(entity.categories || []),
+        ...(entity.categoryIds || []),
+      ].filter((keyword): keyword is string => Boolean(keyword)),
+    })),
     ...islandsData.map((item) => ({
       id: item.id,
       title: t(item.title) || item.title,
@@ -135,11 +179,41 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
           keywords: item.keywords || [],
         }))
       : []),
-  ], [t]);
+  ], [t, placeEntities]);
 
   const visibleSections = featureFlags.storeEnabled
-    ? ['islands', 'product', 'store']
-    : ['islands', 'product'];
+    ? ['places', 'islands', 'product', 'store']
+    : ['places', 'islands', 'product'];
+
+  const getPlaceKindLabel = (kind?: EntityRecord['kind']): string | undefined => {
+    switch (kind) {
+      case 'restaurant':
+        return t('search.placeKinds.restaurant', 'Restaurant');
+      case 'municipality':
+        return t('search.placeKinds.municipality', 'Area');
+      case 'attraction':
+        return t('search.placeKinds.attraction', 'Attraction');
+      case 'poi':
+        return t('search.placeKinds.poi', 'Place');
+      default:
+        return undefined;
+    }
+  };
+
+  const getPlaceAccent = (kind?: EntityRecord['kind']) => {
+    switch (kind) {
+      case 'restaurant':
+        return { bg: 'blue.50', border: 'blue.100', badge: 'blue.600', badgeBg: 'blue.100' };
+      case 'municipality':
+        return { bg: 'slate.50', border: 'slate.200', badge: 'slate.700', badgeBg: 'slate.100' };
+      case 'attraction':
+        return { bg: 'green.50', border: 'green.100', badge: 'green.700', badgeBg: 'green.100' };
+      case 'poi':
+        return { bg: 'amber.50', border: 'amber.100', badge: 'amber.700', badgeBg: 'amber.100' };
+      default:
+        return { bg: 'gray.50', border: 'gray.200', badge: 'gray.700', badgeBg: 'gray.100' };
+    }
+  };
 
   const getMapListTitle = (title: string) =>
     t('destination.itineraryMapTitle', {
@@ -159,7 +233,9 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
     })();
 
     const shareTitle = item.type === 'islands' ? getMapListTitle(item.title) : item.title;
-    const shareText = t('destinationSearch.shareText', 'Check this curated destination map:');
+    const shareText = item.type === 'places'
+      ? t('search.sharePlaceText', 'Check this place:')
+      : t('destinationSearch.shareText', 'Check this curated destination map:');
 
     if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
       try {
@@ -181,7 +257,9 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
         await navigator.clipboard.writeText(shareUrl);
         toast({
           title: t('restaurantFinder.statusSuccess', 'Success'),
-          description: t('destinationSearch.copiedDestinationLink', 'Destination map link copied to clipboard.'),
+          description: item.type === 'places'
+            ? t('search.copiedPlaceLink', 'Place link copied to clipboard.')
+            : t('destinationSearch.copiedDestinationLink', 'Destination map link copied to clipboard.'),
           status: 'success',
           duration: 2500,
           isClosable: true,
@@ -256,7 +334,7 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
         <Input
           ref={searchInputRef}
           placeholder={t('search.placeholder', 'Search...')}
-          aria-label={t('search.inputAriaNoStore', 'Search input for destinations and map lists')}
+          aria-label={t('search.inputAriaNoStore', 'Search input for destinations, places, and map lists')}
           value={searchQuery}
           onChange={(e) => handleSearch(e.target.value)}
           onClick={handleFocus}
@@ -343,6 +421,10 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
               >
                 {sectionResults.map((item) => {
                   const isExternal = /^https?:\/\//i.test(item.link);
+                  const placeAccent = item.type === 'places' ? getPlaceAccent(item.kind) : undefined;
+                  const openLabel = item.type === 'places'
+                    ? t('search.openPlace', 'Open place')
+                    : t('destinationSearch.openCuratedMapShort', 'Map');
                   return (
                   <GridItem
                     key={item.id}
@@ -359,7 +441,62 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                         target={isExternal ? '_blank' : undefined}
                         rel={isExternal ? 'noopener noreferrer' : undefined}
                       >
-                          {item.type === 'islands' ? (
+                          {item.type === 'places' ? (
+                            <Box
+                              mb={2}
+                              borderRadius="xl"
+                              border="1px solid"
+                              borderColor={placeAccent?.border}
+                              bg={placeAccent?.bg}
+                              overflow="hidden"
+                            >
+                              <Box
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="space-between"
+                                gap={3}
+                                px={3}
+                                py={3}
+                                bgGradient="linear(to-br, white, transparent)"
+                              >
+                                <Box
+                                  flexShrink={0}
+                                  w={{ base: '52px', sm: '60px', md: '68px' }}
+                                  h={{ base: '52px', sm: '60px', md: '68px' }}
+                                  borderRadius="xl"
+                                  border="1px solid"
+                                  borderColor={placeAccent?.border}
+                                  bg="white"
+                                  display="flex"
+                                  alignItems="center"
+                                  justifyContent="center"
+                                  boxShadow="sm"
+                                >
+                                  <Text
+                                    fontSize={{ base: 'md', sm: 'lg', md: 'xl' }}
+                                    fontWeight="bold"
+                                    letterSpacing="tight"
+                                    color={placeAccent?.badge}
+                                  >
+                                    {getPlaceInitials(item.title)}
+                                  </Text>
+                                </Box>
+
+                                <Box flex="1" minW={0}>
+                                  <Text fontSize="xs" fontWeight="semibold" letterSpacing="wide" textTransform="uppercase" color="gray.500" mb={1}>
+                                    {t('search.placeCardLabel', 'Place')}
+                                  </Text>
+                                  <Text fontSize={{ base: 'sm', sm: 'sm', md: 'md' }} fontWeight="semibold" color="gray.800" noOfLines={1} lineHeight="short">
+                                    {item.title}
+                                  </Text>
+                                  <Text fontSize="xs" color="gray.600" noOfLines={1} mt={0.5}>
+                                    {item.type === 'places' && item.kind ? getPlaceKindLabel(item.kind) : null}
+                                  </Text>
+                                </Box>
+
+                              </Box>
+                            </Box>
+                          ) : item.type === 'islands' ? (
                             <Box
                               display="grid"
                               gridTemplateColumns="1fr"
@@ -448,6 +585,21 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                           >
                             {item.title}
                           </Text>
+                          {item.type === 'places' && item.kind && (
+                            <Text
+                              display="inline-block"
+                              mb={1.5}
+                              px={2}
+                              py={0.5}
+                              fontSize="xs"
+                              fontWeight="semibold"
+                              color="gray.700"
+                              bg="gray.100"
+                              borderRadius="full"
+                            >
+                              {getPlaceKindLabel(item.kind)}
+                            </Text>
+                          )}
                           <Text
                             color="gray.600"
                             noOfLines={2}
@@ -462,10 +614,10 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                         <Button
                           as={Link}
                           href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          target={isExternal ? '_blank' : undefined}
+                          rel={isExternal ? 'noopener noreferrer' : undefined}
                           size="xs"
-                          colorScheme="blue"
+                          colorScheme={item.type === 'places' ? 'teal' : 'blue'}
                           variant="solid"
                           minH="44px"
                           fontSize={{ base: 'xs', sm: 'sm' }}
@@ -475,7 +627,7 @@ const SearchPage = ({ focusOnMount = false }: { focusOnMount?: boolean }) => {
                           lineHeight="short"
                           textAlign="center"
                         >
-                          {t('destinationSearch.openCuratedMapShort', 'Map')}
+                          {openLabel}
                         </Button>
                         <Button
                           size="sm"
