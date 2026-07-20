@@ -32,6 +32,13 @@ import SearchPage from './SearchPage';
 import { usePWA } from '../hooks/usePWA';
 
 const Header = () => {
+  const hasStringHref = (item: unknown): item is { href: string } => {
+    if (!item || typeof item !== 'object' || !('href' in item)) {
+      return false;
+    }
+    return typeof (item as { href?: unknown }).href === 'string';
+  };
+
   const logDevWarning = (...args: unknown[]) => {
     if (process.env.NODE_ENV === 'development') {
       console.warn(...args);
@@ -42,7 +49,7 @@ const Header = () => {
   const { logo } = company;
   const visibleNavigation = featureFlags.storeEnabled
     ? navigation
-    : navigation.filter((item) => item.name !== 'navigation.store' && item.href !== '/store');
+    : navigation.filter((item) => item.name !== 'navigation.store' && (!hasStringHref(item) || item.href !== '/store'));
 
   const router = useRouter();
   const { t, i18n } = useTranslation();
@@ -691,7 +698,7 @@ const Header = () => {
                 <Button
                   key={item.name}
                   variant="ghost"
-                  onClick={() => handleNavigation(item.href)}
+                  onClick={() => handleNavigation(hasStringHref(item) ? item.href : undefined)}
                   leftIcon={renderNavIcon(item.name) || undefined}
                   {...navButtonStyles}
                   color="gray.700"
@@ -836,7 +843,7 @@ const Header = () => {
                         setOpenMobileSection((current) => (current === item.name ? null : item.name));
                         return;
                       }
-                      handleNavigation(item.href);
+                      handleNavigation(hasStringHref(item) ? item.href : undefined);
                     }}
                     leftIcon={renderNavIcon(item.name) || undefined}
                     rightIcon={item.submenu ? <ChevronDownIcon transform={openMobileSection === item.name ? 'rotate(180deg)' : 'none'} transition="transform 0.2s ease" /> : undefined}
