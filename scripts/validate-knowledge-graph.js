@@ -262,7 +262,6 @@ function main() {
   const invalidCanonical = [];
   const missingJsonLd = [];
   const longTitlePages = [];
-  const aliasPagesIndexed = [];
   const linkedEntityIds = new Set();
   const priorityPosts = getPriorityGuidePosts();
   const placePathSet = new Set(expectedPaths);
@@ -308,13 +307,6 @@ function main() {
       longTitlePages.push(expectedPath);
     }
 
-    if (requestedSlug !== canonicalSlug) {
-      const robotsNoindex = /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html);
-      if (!robotsNoindex) {
-        aliasPagesIndexed.push(expectedPath);
-      }
-    }
-
     if (!html.includes('application/ld+json')) {
       missingJsonLd.push(expectedPath);
     }
@@ -340,9 +332,6 @@ function main() {
     fail(`Place pages with missing or too-long titles (> ${MAX_TITLE_LENGTH} chars): ${longTitlePages.slice(0, 10).join(', ')}${longTitlePages.length > 10 ? ' ...' : ''}`);
   }
 
-  if (aliasPagesIndexed.length) {
-    fail(`Legacy alias place pages must be noindex: ${aliasPagesIndexed.slice(0, 10).join(', ')}${aliasPagesIndexed.length > 10 ? ' ...' : ''}`);
-  }
 
   const orphanCount = entities.filter((entity) => !linkedEntityIds.has(entity.id)).length;
   const canonicalCount = entities.filter((entity) => Boolean(entity?.slug)).length;

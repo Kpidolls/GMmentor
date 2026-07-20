@@ -114,7 +114,6 @@ type EntityPageProps = {
   sameRegion: EntityRecord[];
   mentionedGuides: Array<{ slug: string; title: string }>;
   canonicalSlug: string;
-  isCanonicalEntity: boolean;
   enrichment: PlaceEnrichment['effective'] | null;
   areaContext: {
     slug: string;
@@ -389,7 +388,6 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
         title: post.title,
       })),
       canonicalSlug: canonicalEntity.slug,
-      isCanonicalEntity: slug === canonicalEntity.slug,
       enrichment: getPlaceEnrichmentByEntityId(entity.id)?.effective || null,
       areaContext,
       intentContexts,
@@ -397,7 +395,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
   };
 };
 
-export default function PlacePage({ entity, sameCategory, nearby, sameRegion, mentionedGuides, canonicalSlug, isCanonicalEntity, enrichment, areaContext, intentContexts }: EntityPageProps) {
+export default function PlacePage({ entity, sameCategory, nearby, sameRegion, mentionedGuides, canonicalSlug, enrichment, areaContext, intentContexts }: EntityPageProps) {
   const { t, i18n } = useTranslation();
   const toast = useToast();
   const [copied, setCopied] = useState(false);
@@ -852,13 +850,9 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={metaDescription} />
-        <meta name="robots" content={isCanonicalEntity ? 'index, follow' : 'noindex, follow'} />
-        <meta
-          name="googlebot"
-          content={isCanonicalEntity ? 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' : 'noindex, follow'}
-        />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <link rel="canonical" href={canonicalUrl} />
-        {!isCanonicalEntity ? <meta httpEquiv="refresh" content={`0;url=${canonicalUrl}`} /> : null}
         <link rel="alternate" hrefLang="en" href={canonicalUrl} />
         <link rel="alternate" hrefLang="el" href={canonicalUrl} />
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
