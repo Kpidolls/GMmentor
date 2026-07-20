@@ -489,8 +489,9 @@ const SearchPage = ({ focusOnMount = false, placeEntities = [] }: SearchPageProp
                                   <Text fontSize={{ base: 'sm', sm: 'sm', md: 'md' }} fontWeight="semibold" color="gray.800" noOfLines={1} lineHeight="short">
                                     {item.title}
                                   </Text>
-                                  <Text fontSize="xs" color="gray.600" noOfLines={1} mt={0.5}>
-                                    {item.type === 'places' && item.kind ? getPlaceKindLabel(item.kind) : null}
+                                  <Text fontSize="xs" color="gray.600" noOfLines={2} mt={0.5} lineHeight="short">
+                                    {item.type === 'places' && item.kind ? `${getPlaceKindLabel(item.kind)} • ` : ''}
+                                    {item.description}
                                   </Text>
                                 </Box>
 
@@ -575,16 +576,6 @@ const SearchPage = ({ focusOnMount = false, placeEntities = [] }: SearchPageProp
                               mb={2}
                             />
                           )}
-                          <Text
-                            fontWeight="semibold"
-                            mb={1.5}
-                            noOfLines={1}
-                            letterSpacing="tight"
-                            lineHeight="short"
-                            fontSize={{ base: 'sm', sm: 'sm', md: 'md' }}
-                          >
-                            {item.title}
-                          </Text>
                           {item.type === 'places' && item.kind && (
                             <Text
                               display="inline-block"
