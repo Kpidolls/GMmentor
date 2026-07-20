@@ -156,10 +156,10 @@ export function getSameCategoryEntities(current: EntityRecord, entities: EntityR
     }))
     .filter((item) => item.overlap > 0)
     .sort((a, b) => {
-      if (b.overlap !== a.overlap) {
-        return b.overlap - a.overlap;
+      if (a.distance !== b.distance) {
+        return a.distance - b.distance;
       }
-      return a.distance - b.distance;
+      return b.overlap - a.overlap;
     })
     .slice(0, limit)
     .map((item) => item.entity);
