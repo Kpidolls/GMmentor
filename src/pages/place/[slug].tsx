@@ -1151,7 +1151,7 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
             <Heading as="h1" size="2xl">
               {entity.name}
             </Heading>
-            <Text color="gray.700" lineHeight="1.7" noOfLines={2}>
+            <Text color="gray.700" lineHeight="1.7">
               {tagline}
             </Text>
 
