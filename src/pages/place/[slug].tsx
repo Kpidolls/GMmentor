@@ -43,22 +43,6 @@ type CategoryNarrativeProfile = {
 
 const GENERIC_BEST_FOR_TAGS = new Set(['first-time visitors', 'food lovers', 'route planners']);
 const GENERIC_VISIT_MOMENT_TAGS = new Set(['lunch stop', 'dinner stop', 'daytime visit']);
-const GREEK_POSTER_ADJECTIVES: Record<string, string> = {
-  restaurant: 'Αγαπημένο',
-  localSpot: 'Αγαπημένη',
-  familyFriendlySpot: 'Αγαπημένη',
-  cafe: 'Αγαπημένο',
-  dessertShop: 'Αγαπημένο',
-  streetFoodSpot: 'Αγαπημένη',
-  attractionSpot: 'Αγαπημένο',
-  wineEstate: 'Αγαπημένο',
-  monasteryChurchSite: 'Αγαπημένο',
-  rooftopLounge: 'Αγαπημένο',
-  vegetarianSpot: 'Αγαπημένη',
-  fishTaverna: 'Αγαπημένη',
-  fineDiningSpot: 'Αγαπημένη',
-};
-
 const CATEGORY_NARRATIVE_PROFILES: Record<string, CategoryNarrativeProfile> = {
   'family-friendly': {
     typeLabelKey: 'familyFriendlySpot',
@@ -287,10 +271,6 @@ function normalizeGreekPosterArea(value: string): string {
     .replace(/[^\p{L}\s]/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim();
-}
-
-function getGreekPosterAdjective(typeLabelKey: string): string {
-  return GREEK_POSTER_ADJECTIVES[typeLabelKey] || 'ΑΓΑΠΗΜΕΝΟ';
 }
 
 function getGreekPosterPreposition(areaLabel: string): string {
@@ -630,8 +610,6 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
   const shareTitle = `${entity.name} | ${localizedKind} | Googlementor`;
   const pageTitle = buildPlaceSeoTitle(entity.name, localizedKind);
   const socialTitle = buildPlaceSeoTitle(entity.name, localizedKind);
-  const featuredVibeRaw = effectiveEnrichment.vibe_tags[0] || 'curated';
-  const featuredVibe = toSentenceCaseLabel(t(`place.dynamicTags.${featuredVibeRaw}`, featuredVibeRaw), i18n.language);
   const favoriteBadgeLabel = t('place.badges.favorite', "People's Favorite");
   const curatedBadgeLabel = t('place.badges.curated', 'Googlementor Pick');
   const greekTaglineAreaLabel = selectGreekAreaLabel(entity, areaContext, intentContexts);
@@ -732,19 +710,21 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
   }, [nearby, sameCategoryWithDistance, sameRegionWithDistance, usefulStopIds, walkableNearby]);
   const shareCaption = t('place.share.autoCaption', 'Discovered via Googlementor curated picks across Greece.');
   const nearbyGroupAccentSchemes = ['blue', 'teal', 'orange', 'purple'] as const;
-  const promoBadgeText = isGreek
-    ? stripGreekDiacritics(favoriteBadgeLabel.toLocaleUpperCase('el-GR'))
-    : favoriteBadgeLabel.toUpperCase();
+  const promoBadgeText = isGreek ? 'ΑΓΑΠΗΜΕΝΟ ΤΩΝ ΝΤΟΠΙΩΝ' : "PEOPLE'S FAVORITE";
   const promoPlaceName = isSanZachariFeatured ? 'Σαν Ζάχαρη' : entity.name;
   const greekPosterAreaLabel = selectGreekAreaLabel(entity, areaContext, intentContexts);
   const englishPosterAreaLabel = areaContext?.name || intentContexts[0]?.areaName || entity.region_en || entity.region || 'Greece';
   const posterAreaLabel = isGreek ? greekPosterAreaLabel : englishPosterAreaLabel;
   const posterDescriptor = isGreek
-    ? `${getGreekPosterAdjective(typeLabelKey)} ${placeTypeLabel.toLowerCase()} ${getGreekPosterPreposition(greekPosterAreaLabel)} ${inflectGreekAreaLabel(greekPosterAreaLabel).toLowerCase()}`
-    : `A people's favorite ${placeTypeLabel.toLowerCase()} in ${posterAreaLabel}`;
-  const promoHighlight = isSanZachariFeatured
-    ? (isGreek ? 'Τοπικό αγαπημένο για εύκολο share.' : 'Local favorite for easy sharing.')
-    : posterDescriptor;
+    ? `Κορυφαία επιλογή για ${primaryCategoryLabel.toLowerCase()} ${getGreekPosterPreposition(greekPosterAreaLabel)} ${inflectGreekAreaLabel(greekPosterAreaLabel).toLowerCase()}, δημοφιλής και αγαπημένη από τους ντόπιους.`
+    : `A top choice ${primaryCategoryLabel.toLowerCase()} in ${posterAreaLabel}, popular and loved by locals.`;
+  const promoHighlight = isGreek ? 'Τοπικό αγαπημένο. Αξίζει να το μοιραστείς.' : 'A local favorite. Worth sharing.';
+  const promoAddress = entity.address || (isGreek ? `${posterAreaLabel}, Ελλάδα` : `${posterAreaLabel}, Greece`);
+  const promoTags = [
+    primaryCategoryLabel,
+    posterAreaLabel,
+    isGreek ? 'Αγαπημένο των ντόπιων' : 'Local favorite',
+  ].filter(Boolean).slice(0, 3);
 
   useEffect(() => {
     setCanNativeShare(typeof navigator !== 'undefined' && typeof navigator.share === 'function');
@@ -790,18 +770,21 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
 
     const drawTag = (label: string, x: number, y: number) => {
       ctx.save();
-      ctx.font = '600 22px Roboto, Arial, sans-serif';
+      ctx.font = '600 19px Roboto, Arial, sans-serif';
       ctx.textAlign = 'left';
-      const horizontalPadding = 18;
+      const horizontalPadding = 16;
       const tagWidth = ctx.measureText(label).width + horizontalPadding * 2;
-      const tagHeight = 42;
+      const tagHeight = 38;
 
-      drawRoundedRect(ctx, x, y, tagWidth, tagHeight, 21);
-      ctx.fillStyle = '#f1f5f9';
+      drawRoundedRect(ctx, x, y, tagWidth, tagHeight, 19);
+      ctx.fillStyle = '#fbf5e7';
       ctx.fill();
+      ctx.strokeStyle = '#e2d5b6';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
 
-      ctx.fillStyle = '#0f172a';
-      ctx.fillText(label, x + horizontalPadding, y + 28);
+      ctx.fillStyle = '#5b4530';
+      ctx.fillText(label, x + horizontalPadding, y + 25);
       ctx.restore();
       return tagWidth;
     };
@@ -920,64 +903,73 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
       ctx.fill();
     };
 
-    ctx.fillStyle = '#f5f1e8';
+    const pageGradient = ctx.createLinearGradient(0, 0, 0, height);
+    pageGradient.addColorStop(0, '#f9f3e7');
+    pageGradient.addColorStop(1, '#efe1c7');
+    ctx.fillStyle = pageGradient;
     ctx.fillRect(0, 0, width, height);
 
-    drawRoundedRect(ctx, 70, 90, width - 140, height - 180, 44);
-    ctx.fillStyle = '#0f1720';
+    drawRoundedRect(ctx, 68, 84, width - 136, height - 168, 46);
+    ctx.fillStyle = '#fffaf0';
     ctx.fill();
-
-    ctx.strokeStyle = '#d4b883';
+    ctx.strokeStyle = '#d9c6a4';
     ctx.lineWidth = 3;
     ctx.stroke();
 
-    drawRoundedRect(ctx, 340, 172, 400, 52, 26);
-    ctx.fillStyle = '#e7c87e';
+    drawRoundedRect(ctx, 322, 126, 436, 58, 29);
+    ctx.fillStyle = '#e9c878';
     ctx.fill();
-    ctx.fillStyle = '#1f2937';
-    ctx.font = '700 23px Roboto, Arial, sans-serif';
+    ctx.fillStyle = '#3f2e1b';
+    ctx.font = '700 22px Roboto, Arial, sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(promoBadgeText, width / 2, 205);
+    ctx.fillText(promoBadgeText, width / 2, 164);
 
-    drawHalo(width / 2, 392, 230);
-    drawTrophy(width / 2, 214, 1.0);
+    drawHalo(width / 2, 354, 220);
+    drawTrophy(width / 2, 194, 0.95);
 
-    ctx.fillStyle = '#f8fafc';
-    ctx.font = '700 72px Roboto, Arial, sans-serif';
-    wrapCanvasText(ctx, promoPlaceName, width / 2, 500, 760, 76, 2);
+    ctx.fillStyle = '#2a1b11';
+    ctx.font = '700 74px Roboto, Arial, sans-serif';
+    wrapCanvasText(ctx, promoPlaceName, width / 2, 494, 820, 78, 2);
 
-    ctx.fillStyle = '#d8dee9';
+    ctx.fillStyle = '#7a6149';
     ctx.font = '500 30px Roboto, Arial, sans-serif';
-    wrapCanvasText(ctx, promoHighlight, width / 2, 648, 760, 40, 2);
+    wrapCanvasText(ctx, promoAddress, width / 2, 650, 860, 38, 2);
 
-    ctx.strokeStyle = '#475569';
+    ctx.fillStyle = '#5c412d';
+    ctx.font = '500 34px Roboto, Arial, sans-serif';
+    wrapCanvasText(ctx, posterDescriptor, width / 2, 752, 860, 44, 3);
+
+    ctx.strokeStyle = '#d8c4a0';
     ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.moveTo(210, 726);
-    ctx.lineTo(870, 726);
+    ctx.moveTo(200, 916);
+    ctx.lineTo(880, 916);
     ctx.stroke();
 
-    const posterTags = [primaryCategoryLabel, (featuredVibeRaw === 'curated' ? favoriteBadgeLabel : featuredVibe)].filter(Boolean).slice(0, 2);
-    const tagWidths = posterTags.map((tag) => {
-      ctx.font = '600 22px Roboto, Arial, sans-serif';
-      const horizontalPadding = 18;
+    ctx.fillStyle = '#3f2e1b';
+    ctx.font = '600 36px Roboto, Arial, sans-serif';
+    wrapCanvasText(ctx, promoHighlight, width / 2, 978, 840, 44, 2);
+
+    const tagWidths = promoTags.map((tag) => {
+      ctx.font = '600 19px Roboto, Arial, sans-serif';
+      const horizontalPadding = 16;
       return ctx.measureText(tag).width + horizontalPadding * 2;
     });
-    const tagSpacing = posterTags.length > 1 ? 16 : 0;
-    const totalTagWidth = tagWidths.reduce((sum, value) => sum + value, 0) + tagSpacing * Math.max(0, posterTags.length - 1);
+    const tagSpacing = promoTags.length > 1 ? 14 : 0;
+    const totalTagWidth = tagWidths.reduce((sum, value) => sum + value, 0) + tagSpacing * Math.max(0, promoTags.length - 1);
     let tagX = (width - totalTagWidth) / 2;
-    const tagY = 780;
-    posterTags.forEach((tag) => {
+    const tagY = 1062;
+    promoTags.forEach((tag) => {
       const tagWidth = drawTag(tag, tagX, tagY);
       tagX += tagWidth + tagSpacing;
     });
 
-    ctx.fillStyle = '#cbd5e1';
-    ctx.font = '500 20px Roboto, Arial, sans-serif';
-    ctx.fillText('Googlementor', width / 2, 896);
+    ctx.fillStyle = '#7d6248';
+    ctx.font = '600 24px Roboto, Arial, sans-serif';
+    ctx.fillText('Googlementor', width / 2, 1178);
 
     setSocialPosterPreview(canvas.toDataURL('image/png'));
-  }, [areaContext?.name, areaContext?.nameEl, entity.name, entity.region, entity.region_en, featuredVibe, featuredVibeRaw, favoriteBadgeLabel, greekPosterAreaLabel, isGreek, isSanZachariFeatured, posterAreaLabel, promoBadgeText, promoHighlight, promoPlaceName, t, primaryCategoryLabel, typeLabelKey, intentContexts]);
+  }, [areaContext?.name, areaContext?.nameEl, entity.address, entity.name, entity.region, entity.region_en, greekPosterAreaLabel, isGreek, posterAreaLabel, posterDescriptor, promoAddress, promoBadgeText, promoHighlight, promoPlaceName, promoTags, primaryCategoryLabel, intentContexts]);
 
   const handleAddToItinerary = () => {
     dispatchAddToItinerary({
@@ -1174,19 +1166,36 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
               </HStack>
             ) : null}
 
-            <Box borderWidth="1px" borderRadius="xl" p={3} bg="gray.50">
-              <Text fontSize="sm" color="gray.700" mb={2}>{shareCaption}</Text>
-              <HStack spacing={2} flexWrap="wrap">
-                <Button size="sm" colorScheme="blue" onClick={handleShareCard}>
-                  {t('place.share.cardButton', 'Share this card')}
+            <Box borderWidth="1px" borderRadius="xl" p={4} bg="gray.50">
+              <Heading as="h2" size="sm" mb={3}>{t('place.utility.title', 'Practical info')}</Heading>
+              <Text fontSize="sm" color="gray.700" mb={3}>{t('place.utility.subtitle', 'Get the key actions first: navigate, save this stop, and keep exploring nearby.')}</Text>
+              <SimpleGrid columns={{ base: 1, sm: 2, xl: 3 }} spacing={2}>
+                <Button
+                  as={Link}
+                  href={entity.url || `https://www.google.com/maps/search/?api=1&query=${entity.lat},${entity.lng}`}
+                  isExternal
+                  colorScheme="blue"
+                  minH="44px"
+                  w="full"
+                >
+                  {t('place.openDirections', 'Navigate')}
                 </Button>
-                <Button size="sm" variant="outline" onClick={handleCopyCaption}>
-                  {copiedCaption ? t('place.share.copiedShort', 'Copied') : t('place.share.copyCaption', 'Copy caption')}
+                <Button
+                  variant="outline"
+                  colorScheme="teal"
+                  minH="44px"
+                  w="full"
+                  whiteSpace="normal"
+                  lineHeight="short"
+                  textAlign="center"
+                  onClick={handleAddToItinerary}
+                >
+                  {t('place.addToItinerary', 'Add to itinerary')}
                 </Button>
-                <Button size="sm" variant="outline" onClick={handleCopyLink}>
-                  {copied ? t('place.share.copiedShort', 'Copied') : t('place.share.copyLink', 'Copy link')}
+                <Button as={NextLink} href="/search" variant="outline" minH="44px" w="full">
+                  {t('place.exploreMore', 'Explore More Places')}
                 </Button>
-              </HStack>
+              </SimpleGrid>
             </Box>
           </VStack>
 
@@ -1213,41 +1222,59 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
               )}
             </Box>
 
-            <Button colorScheme="blue" minH="44px" w={{ base: '100%', md: 'auto' }} onClick={handleSharePlace}>
-              {t('place.share.heroButton', 'Share this place')}
-            </Button>
+            <Box borderWidth="1px" borderRadius="xl" p={4} bg="gray.50">
+              <Heading as="h2" size="sm" mb={2}>{t('place.share.title', 'Celebrate this place on Googlementor')}</Heading>
+              <Text fontSize="sm" color="gray.700" mb={3}>{shareCaption}</Text>
+              <Button colorScheme="blue" minH="44px" w="full" mb={3} onClick={handleSharePlace}>
+                {t('place.share.heroButton', 'Share this place')}
+              </Button>
+              <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={3}>
+                <Button
+                  size="sm"
+                  w="full"
+                  minH="46px"
+                  px={4}
+                  py={3}
+                  whiteSpace="normal"
+                  lineHeight="short"
+                  textAlign="center"
+                  variant="outline"
+                  onClick={handleShareCard}
+                >
+                  {t('place.share.cardButton', 'Share this card')}
+                </Button>
+                <Button
+                  size="sm"
+                  w="full"
+                  minH="46px"
+                  px={4}
+                  py={3}
+                  whiteSpace="normal"
+                  lineHeight="short"
+                  textAlign="center"
+                  variant="outline"
+                  onClick={handleCopyCaption}
+                >
+                  {copiedCaption ? t('place.share.copiedShort', 'Copied') : t('place.share.copyCaption', 'Copy caption')}
+                </Button>
+                <Button
+                  size="sm"
+                  w="full"
+                  minH="46px"
+                  px={4}
+                  py={3}
+                  whiteSpace="normal"
+                  lineHeight="short"
+                  textAlign="center"
+                  variant="outline"
+                  onClick={handleCopyLink}
+                >
+                  {copied ? t('place.share.copiedShort', 'Copied') : t('place.share.copyLink', 'Copy link')}
+                </Button>
+              </SimpleGrid>
+            </Box>
           </VStack>
         </SimpleGrid>
-      </Box>
-
-      <Box mb={8} borderWidth="1px" borderRadius="xl" p={{ base: 4, md: 5 }} bg="gray.50">
-        <HStack spacing={3} flexWrap="wrap" align="stretch" w="full">
-          <Button
-            as={Link}
-            href={entity.url || `https://www.google.com/maps/search/?api=1&query=${entity.lat},${entity.lng}`}
-            isExternal
-            colorScheme="blue"
-            minH="44px"
-            w={{ base: '100%', sm: 'auto' }}
-          >
-            {t('place.openDirections', 'Navigate')}
-          </Button>
-          <Button
-            variant="outline"
-            colorScheme="teal"
-            minH="44px"
-            w={{ base: '100%', sm: 'auto' }}
-            whiteSpace="normal"
-            lineHeight="short"
-            textAlign="center"
-            onClick={handleAddToItinerary}
-          >
-            {t('place.addToItinerary', 'Add to itinerary')}
-          </Button>
-          <Button as={NextLink} href="/search" variant="outline" minH="44px" w={{ base: '100%', sm: 'auto' }}>
-            {t('place.exploreMore', 'Explore More Places')}
-          </Button>
-        </HStack>
       </Box>
 
       {sameCategoryWithDistance.length > 0 ? (
