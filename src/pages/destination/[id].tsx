@@ -59,6 +59,7 @@ export const getStaticProps: GetStaticProps<DestinationPageProps> = async ({ par
 const DestinationPage = ({ destination }: DestinationPageProps) => {
   const { t, i18n } = useTranslation();
   const destinationName = t(destination.title, destination.id);
+  const destinationHeadingName = destinationName.replace(/^(\s*📍\s*)+/u, '').trim();
   const destinationSummary = t(
     destination.description,
     'Curated points of interest, local favorites, and practical map guidance for your destination in Greece.'
@@ -73,6 +74,7 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
     defaultValue: '{{destination}} Points of Interest Map',
   });
   const canonicalUrl = `https://googlementor.com/destination/${encodeURIComponent(destination.id)}`;
+  const mapPreviewImage = destination.locationImg || destination.img;
 
   const destinationJsonLd = {
     '@context': 'https://schema.org',
@@ -108,6 +110,14 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
 
       <main className="min-h-screen bg-slate-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+          <div className="p-6 sm:p-8 lg:p-10 pb-2">
+            <p className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-slate-500 mb-3">
+              {t('destination.pageLabel', 'Destination Guide')}
+            </p>
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">📍 {destinationHeadingName || destinationName}</h1>
+            <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed">{destinationSummary}</p>
+          </div>
+
           <div className="bg-slate-50">
             <img src={destination.img} alt={destinationName} className="w-full h-56 sm:h-80 lg:h-96 object-cover" loading="eager" />
             <div className="px-2 py-2 sm:px-6 sm:py-4">
@@ -115,35 +125,33 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
                 <p className="text-[10px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.18em] text-slate-500 px-3 py-2 border-b border-slate-200">
                   {t('destination.mapPreview', 'Map preview')}
                 </p>
-                <div className="relative w-full h-48 sm:h-48 lg:h-52 overflow-hidden bg-slate-200">
-                  <img
-                    src={destination.locationImg || destination.img}
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 w-full h-full object-cover blur-md scale-105 opacity-40"
-                    loading="eager"
-                  />
-                  <img
-                    src={destination.locationImg || destination.img}
-                    alt={t('islands.locationScreenshotAlt', {
-                      title: destinationName,
-                      defaultValue: '{{title}} locations screenshot',
-                    })}
-                    className="relative z-10 w-full h-full object-contain p-1"
-                    loading="eager"
-                  />
-                </div>
+                <a
+                  href={mapPreviewImage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                  aria-label={t('destination.openMapImageAria', 'Open full-size map image in a new tab')}
+                >
+                  <div className="relative w-full h-56 sm:h-72 lg:h-[26rem] overflow-hidden bg-slate-200">
+                    <img
+                      src={mapPreviewImage}
+                      alt={t('islands.locationScreenshotAlt', {
+                        title: destinationName,
+                        defaultValue: '{{title}} locations screenshot',
+                      })}
+                      className="relative z-10 w-full h-full object-contain p-1"
+                      loading="eager"
+                    />
+                    <span className="absolute top-2 right-2 text-[11px] px-2 py-1 rounded-md bg-slate-900/75 text-white">
+                      {t('destination.openMapImage', 'Open image in new tab')}
+                    </span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
 
           <div className="p-6 sm:p-8 lg:p-10">
-            <p className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-slate-500 mb-3">
-              {t('destination.pageLabel', 'Destination Guide')}
-            </p>
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">{destinationName}</h1>
-            <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed mb-8">{destinationSummary}</p>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               <a
                 href={destination.link}

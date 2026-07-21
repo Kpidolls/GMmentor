@@ -152,6 +152,11 @@
     "backHome": "Back to Home",
     "metaTitleSuffix": "Points of Interest Map",
     "addToItinerary": "Add to itinerary",
+    "viewFullList": "View Full List Details",
+    "viewFullListShort": "Details",
+    "viewFullListAria": "View full list details for this destination",
+    "openMapImage": "Open image in new tab",
+    "openMapImageAria": "Open full-size map image in a new tab",
     "itineraryMapTitle": "{{destination}} Points of Interest Map",
     "itineraryMapNote": "Map stop: this Google Maps list highlights the most important places in {{destination}}. Open it anytime to browse must-see spots and plan your route."
   },

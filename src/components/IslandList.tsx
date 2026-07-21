@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import islands from '../data/islands.json';
 import Image from 'next/image';
+import Link from 'next/link';
 import { dispatchAddToItinerary } from '../utils/itineraryEvents';
 
 type IslandEntry = {
@@ -29,6 +30,7 @@ const IslandList = () => {
       destination: title,
       defaultValue: '{{destination}} Points of Interest Map',
     });
+  const getDestinationDetailsPath = (id: string) => `/destination/${encodeURIComponent(String(id || '').trim())}`;
 
   const handleViewMore = () => {
     setVisibleIslands(islands.length);
@@ -97,16 +99,14 @@ const IslandList = () => {
               </p>
 
               <div className="mt-auto pt-3.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-                <a
-                  href={island.link}
-                  target={island.target}
-                  rel={island.rel}
+                <Link
+                  href={getDestinationDetailsPath(island.id)}
                   className="inline-flex items-center justify-center min-h-11 px-3 py-2 text-[11px] sm:text-[13px] font-semibold tracking-tight rounded-lg text-white text-center leading-snug whitespace-normal bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black transition-colors duration-200"
-                  aria-label={t('islands.openMapAria', 'Open map for islands')}
+                  aria-label={t('destination.viewFullListAria', 'View full list details for this destination')}
                 >
-                  <span className="sm:hidden">🗺️ {t('destinationSearch.openCuratedMapShort', 'Map')}</span>
-                  <span className="hidden sm:inline">🗺️ {t('destinationSearch.openCuratedMap', 'Open Curated Map')}</span>
-                </a>
+                  <span className="sm:hidden">📋 {t('destination.viewFullListShort', 'Details')}</span>
+                  <span className="hidden sm:inline">📋 {t('destination.viewFullList', 'View Full List Details')}</span>
+                </Link>
                 <button
                   onClick={() => {
                     const shareText = t('islands.shareText', { title: t(island.title) });
@@ -114,7 +114,7 @@ const IslandList = () => {
                       navigator.share({
                         title: t(island.title),
                         text: shareText,
-                        url: island.link,
+                        url: getDestinationDetailsPath(island.id),
                       });
                     } else {
                       alert(t('islands.shareNotSupported'));
