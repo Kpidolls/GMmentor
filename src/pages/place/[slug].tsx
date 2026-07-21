@@ -1168,7 +1168,7 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
 
             <Box borderWidth="1px" borderRadius="xl" p={4} bg="gray.50">
               <Heading as="h2" size="sm" mb={3}>{t('place.utility.title', 'Practical info')}</Heading>
-              <Text fontSize="sm" color="gray.700" mb={3}>{t('place.utility.subtitle', 'Get the key actions first: navigate, save this stop, and keep exploring nearby.')}</Text>
+              <Text fontSize="sm" color="gray.700" mb={3}>{t('place.utility.subtitle', 'You can open directions, save this location to your itinerary and discover what’s close.')}</Text>
               <SimpleGrid columns={{ base: 1, sm: 2, xl: 3 }} spacing={2}>
                 <Button
                   as={Link}

@@ -231,7 +231,7 @@
     },
     "viewOnMaps": "View on Google Maps",
     "openDirections": "Navigate",
-    "exploreMore": "Explore More Places",
+    "exploreMore": "Explore Places",
     "addToItinerary": "Add to itinerary",
     "badges": {
       "favorite": "People's Favorite",
@@ -272,7 +272,7 @@
     },
     "utility": {
       "title": "Practical info",
-      "subtitle": "Get the key actions first: navigate, save this stop, and keep exploring nearby."
+      "subtitle": "You can open directions, save this location to your itinerary and discover what’s close."
     },
     "sameCategory": {
       "title": "Try next in the same category",
@@ -306,7 +306,7 @@
       "curationConfidence": "Curation confidence"
     },
     "share": {
-      "title": "Celebrate this place featured on Googlementor 🎉",
+      "title": "Celebrate this place featured on Googlementor!",
       "subtitle": "Proudly featured as one of the community's favorite picks.",
       "reason": "{{name}} stands out for its {{vibe}} vibe and its connection to {{nearby}} walkable discoveries nearby. This is exactly the type of place worth sharing with friends before your trip.",
       "singleCaption": "Proud to see {{name}} featured on Googlementor. A local favorite in {{context}} worth discovering.",
