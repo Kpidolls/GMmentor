@@ -14,3 +14,4 @@ Host: https://googlementor.com
 # Sitemaps
 Sitemap: https://googlementor.com/sitemap.xml
 Sitemap: https://googlementor.com/sitemap-1.xml
+Sitemap: https://googlementor.com/sitemap-recent.xml
