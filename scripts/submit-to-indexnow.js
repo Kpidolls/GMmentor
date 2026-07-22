@@ -24,9 +24,11 @@ const HASH_STATE_FILE = path.join(INDEXNOW_STATE_DIR, 'url-hashes.json');
 const QUEUE_STATE_FILE = path.join(INDEXNOW_STATE_DIR, 'pending-queue.json');
 const RECENT_STATE_FILE = path.join(INDEXNOW_STATE_DIR, 'recent-updates.json');
 const OUT_DIR = path.join(process.cwd(), 'out');
-const MAX_URLS_PER_RUN = Number(process.env.INDEXNOW_MAX_URLS_PER_RUN || 200);
+const MAX_URLS_PER_RUN = Number(process.env.INDEXNOW_MAX_URLS_PER_RUN || 1000);
 const CHUNK_SIZE = Number(process.env.INDEXNOW_CHUNK_SIZE || 10);
 const CHUNK_DELAY_MS = Number(process.env.INDEXNOW_CHUNK_DELAY_MS || 400);
+const AUTO_DRAIN_ENABLED = process.env.INDEXNOW_AUTO_DRAIN !== '0';
+const AUTO_DRAIN_MAX_PASSES = Number(process.env.INDEXNOW_AUTO_DRAIN_MAX_PASSES || 20);
 const RECENT_SITEMAP_LIMIT = Number(process.env.RECENT_SITEMAP_LIMIT || 500);
 const RECENT_SITEMAP_RETENTION_DAYS = Number(process.env.RECENT_SITEMAP_RETENTION_DAYS || 14);
 
@@ -443,18 +445,48 @@ async function main() {
   console.log(`\nStreaming to IndexNow API (${INDEXNOW_ENDPOINT})...`);
   
   try {
-    const streamResult = await streamSubmitQueue(queue, INDEXNOW_KEY);
-    writeJsonFile(QUEUE_STATE_FILE, streamResult.remainingQueue);
+    let pendingQueue = queue;
+    let totalSubmitted = 0;
+    let blockedByAuthorization = false;
+    let pass = 0;
+    const maxPasses = Math.max(1, AUTO_DRAIN_MAX_PASSES);
 
-    console.log(`\n✅ Streamed ${streamResult.submitted} URL(s) this run.`);
-    if (streamResult.remainingQueue.length > 0) {
-      console.log(`⏳ ${streamResult.remainingQueue.length} URL(s) remain queued for future runs.`);
-      console.log('   Run npm run indexnow:submit again after deployment to continue draining the queue.');
+    while (pendingQueue.length > 0 && pass < maxPasses) {
+      pass += 1;
+      if (pass > 1) {
+        console.log(`\n↻ Auto-drain pass ${pass}/${maxPasses}...`);
+      }
+
+      const beforeCount = pendingQueue.length;
+      const streamResult = await streamSubmitQueue(pendingQueue, INDEXNOW_KEY);
+
+      totalSubmitted += streamResult.submitted;
+      pendingQueue = streamResult.remainingQueue;
+      blockedByAuthorization = blockedByAuthorization || streamResult.blockedByAuthorization;
+
+      const madeProgress = pendingQueue.length < beforeCount;
+      if (blockedByAuthorization || !AUTO_DRAIN_ENABLED || !madeProgress) {
+        break;
+      }
+    }
+
+    writeJsonFile(QUEUE_STATE_FILE, pendingQueue);
+
+    console.log(`\n✅ Streamed ${totalSubmitted} URL(s) this run.`);
+    if (pendingQueue.length > 0) {
+      console.log(`⏳ ${pendingQueue.length} URL(s) remain queued.`);
+      if (!AUTO_DRAIN_ENABLED) {
+        console.log('   Auto-drain is disabled (set INDEXNOW_AUTO_DRAIN=1 to enable).');
+      } else if (pass >= maxPasses) {
+        console.log(`   Reached auto-drain pass cap (${maxPasses}).`);
+      } else {
+        console.log('   Stopped auto-drain because no additional queue progress was detected.');
+      }
     } else {
       console.log('✓ Queue fully drained.');
     }
 
-    if (streamResult.blockedByAuthorization) {
+    if (blockedByAuthorization) {
       console.log('ℹ️  Queue retained because IndexNow authorization is not fully active yet.');
     }
 

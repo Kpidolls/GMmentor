@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import NextLink from 'next/link';
+import { GlobeAltIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import config from '../config/index.json';
 import featureFlags from '../config/featureFlags.json';
 import dynamic from 'next/dynamic';
@@ -213,6 +214,7 @@ const MainHero = () => {
   const [showMunicipalityList, setShowMunicipalityList] = useState(false);
   const [showCategorySelection, setShowCategorySelection] = useState(false);
   const [showLocationOptions, setShowLocationOptions] = useState(true);
+  const [activeLocationOption, setActiveLocationOption] = useState<'location' | 'municipality'>('location');
   const [municipalitySearchQuery, setMunicipalitySearchQuery] = useState('');
   const [categoryIntentQuery, setCategoryIntentQuery] = useState('');
   const [searchRadius, setSearchRadius] = useState(20);
@@ -220,6 +222,7 @@ const MainHero = () => {
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
   const [initialSearchDone, setInitialSearchDone] = useState(false);
   const [showDeferredUi, setShowDeferredUi] = useState(false);
+  const locationOptionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const categoryMatches = useMemo(
     () => detectCategoryMatches(categoryIntentQuery),
@@ -684,6 +687,20 @@ const MainHero = () => {
 
   // Removed unused handleLocationOptions
 
+  const handleLocationOptionSelect = (type: 'location' | 'municipality') => {
+    setActiveLocationOption(type);
+
+    if (locationOptionTimerRef.current) {
+      clearTimeout(locationOptionTimerRef.current);
+      locationOptionTimerRef.current = null;
+    }
+
+    locationOptionTimerRef.current = setTimeout(() => {
+      selectSearchMode(type);
+      locationOptionTimerRef.current = null;
+    }, 140);
+  };
+
   const selectSearchMode = (type: 'location' | 'municipality') => {
     setError(null);
     setNearestRestaurants(null);
@@ -1122,6 +1139,14 @@ const MainHero = () => {
     searchByMunicipalityRef.current = searchByMunicipality;
     getUserLocationRef.current = getUserLocation;
   });
+
+  useEffect(() => {
+    return () => {
+      if (locationOptionTimerRef.current) {
+        clearTimeout(locationOptionTimerRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (!router.isReady) {
@@ -1645,25 +1670,29 @@ const MainHero = () => {
                     {/* Near You Option - Enhanced */}
                     <button
                       onClick={() => {
-                        selectSearchMode('location');
+                        handleLocationOptionSelect('location');
                       }}
-                      className="group relative overflow-hidden rounded-[var(--gm-radius-md)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.99] ring-1 ring-slate-300/80 hover:ring-[var(--gm-sea-500)] focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)] shadow-[var(--gm-shadow-1)] hover:shadow-[var(--gm-shadow-2)] min-h-[238px] sm:min-h-[250px] cursor-pointer touch-manipulation"
+                      className={`group relative overflow-hidden rounded-[var(--gm-radius-md)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.99] ring-1 focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)] shadow-[var(--gm-shadow-1)] hover:shadow-[var(--gm-shadow-2)] min-h-[238px] sm:min-h-[250px] cursor-pointer touch-manipulation ${activeLocationOption === 'location' ? 'ring-[var(--gm-sea-500)] bg-slate-50/85 scale-[1.02]' : 'ring-slate-300/80 hover:ring-[var(--gm-sea-500)]'}`}
                     >
-                      <div className="absolute inset-0 transition-all duration-300 bg-gradient-to-b from-white to-slate-50 group-hover:from-cyan-50/60 group-hover:to-slate-100/85" />
+                      <div className="absolute inset-0 transition-all duration-300 bg-gradient-to-b from-white to-slate-50 group-hover:from-sky-50/70 group-hover:to-slate-100/90" />
+
+                      <div className="absolute top-4 right-4 z-20">
+                        <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full border transition-all duration-300 ${activeLocationOption === 'location' ? 'bg-cyan-500 border-cyan-500 shadow-[0_0_0_4px_rgba(6,182,212,0.18)]' : 'bg-cyan-200/70 border-cyan-300'}`}>
+                          <span className={`h-2 w-2 rounded-full bg-white transition-opacity duration-300 ${activeLocationOption === 'location' ? 'opacity-100' : 'opacity-70'}`} />
+                        </span>
+                      </div>
 
                       <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 sm:p-5 lg:p-5.5' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
                         <div className="flex justify-center mb-3.5">
                           <div className="relative">
                             <div className="relative rounded-full p-3 xs:p-4 sm:p-5 border border-slate-200 bg-white shadow-[var(--gm-shadow-1)]">
-                              <div className="text-4xl xs:text-5xl sm:text-6xl transition-transform duration-300">
-                                📍
-                              </div>
+                              <MapPinIcon className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 text-[var(--gm-sea-500)] transition-transform duration-300" aria-hidden="true" />
                             </div>
                           </div>
                         </div>
 
                         <div className="flex justify-center mb-2.5">
-                          <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-cyan-50/80 text-slate-700 border-slate-200 shadow-none">
+                          <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-sky-50/80 text-slate-700 border-slate-200 shadow-none">
                             {t('mainHero.fastestBadge', 'Quick')}
                           </span>
                         </div>
@@ -1677,7 +1706,7 @@ const MainHero = () => {
                         </p>
 
                         <div className="flex justify-center">
-                          <div className="flex items-center min-h-[42px] text-[clamp(0.8125rem,1.2vw,0.95rem)] font-semibold transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-cyan-50/70 border border-slate-200 text-slate-700 group-hover:bg-cyan-100/70">
+                          <div className="flex items-center min-h-[42px] text-[clamp(0.8125rem,1.2vw,0.95rem)] font-semibold transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-sky-50/70 border border-slate-200 text-slate-700 group-hover:bg-sky-100/70">
                             <span>{t('mainHero.useMyLocation', 'Use my location')}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -1690,25 +1719,29 @@ const MainHero = () => {
                     {/* By Region Option - Enhanced */}
                     <button
                       onClick={() => {
-                        selectSearchMode('municipality');
+                        handleLocationOptionSelect('municipality');
                       }}
-                      className="group relative overflow-hidden rounded-[var(--gm-radius-md)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.99] ring-1 ring-slate-300/80 hover:ring-[var(--gm-sea-500)] focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)] shadow-[var(--gm-shadow-1)] hover:shadow-[var(--gm-shadow-2)] min-h-[238px] sm:min-h-[250px] cursor-pointer touch-manipulation"
+                      className={`group relative overflow-hidden rounded-[var(--gm-radius-md)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.99] ring-1 focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)] shadow-[var(--gm-shadow-1)] hover:shadow-[var(--gm-shadow-2)] min-h-[238px] sm:min-h-[250px] cursor-pointer touch-manipulation ${activeLocationOption === 'municipality' ? 'ring-[var(--gm-sea-500)] bg-slate-50/85 scale-[1.02]' : 'ring-slate-300/80 hover:ring-[var(--gm-sea-500)]'}`}
                     >
-                      <div className="absolute inset-0 transition-all duration-300 bg-gradient-to-b from-white to-slate-50 group-hover:from-cyan-50/50 group-hover:to-slate-100/80" />
+                      <div className="absolute inset-0 transition-all duration-300 bg-gradient-to-b from-white to-slate-50 group-hover:from-sky-50/70 group-hover:to-slate-100/90" />
+
+                      <div className="absolute top-4 right-4 z-20">
+                        <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full border transition-all duration-300 ${activeLocationOption === 'municipality' ? 'bg-cyan-500 border-cyan-500 shadow-[0_0_0_4px_rgba(6,182,212,0.18)]' : 'bg-cyan-200/70 border-cyan-300'}`}>
+                          <span className={`h-2 w-2 rounded-full bg-white transition-opacity duration-300 ${activeLocationOption === 'municipality' ? 'opacity-100' : 'opacity-70'}`} />
+                        </span>
+                      </div>
 
                       <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 sm:p-5 lg:p-5.5' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
                         <div className="flex justify-center mb-3.5">
                           <div className="relative">
                             <div className="relative rounded-full p-3 xs:p-4 sm:p-5 border border-slate-200 bg-white shadow-[var(--gm-shadow-1)]">
-                              <div className="text-4xl xs:text-5xl sm:text-6xl transition-transform duration-300">
-                                🗺️
-                              </div>
+                              <GlobeAltIcon className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 text-[var(--gm-sea-500)] transition-transform duration-300" aria-hidden="true" />
                             </div>
                           </div>
                         </div>
 
                         <div className="flex justify-center mb-2.5">
-                          <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-cyan-50/80 text-slate-700 border-slate-200 shadow-none">
+                          <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-sky-50/80 text-slate-700 border-slate-200 shadow-none">
                             {t('mainHero.mostAccurateBadge', 'Most Accurate')}
                           </span>
                         </div>
@@ -1722,7 +1755,7 @@ const MainHero = () => {
                         </p>
 
                         <div className="flex justify-center">
-                          <div className="flex items-center min-h-[42px] text-[clamp(0.8125rem,1.2vw,0.95rem)] font-semibold transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-cyan-50/70 border border-slate-200 text-slate-700 group-hover:bg-cyan-100/70">
+                          <div className="flex items-center min-h-[42px] text-[clamp(0.8125rem,1.2vw,0.95rem)] font-semibold transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-sky-50/70 border border-slate-200 text-slate-700 group-hover:bg-sky-100/70">
                             <span>{t('mainHero.browseAreas', 'Browse areas')}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
