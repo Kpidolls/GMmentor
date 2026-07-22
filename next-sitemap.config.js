@@ -12,6 +12,7 @@ module.exports = {
   siteUrl: 'https://googlementor.com',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
+  autoLastmod: false,
   trailingSlash: false,
   changefreq: 'weekly',
   priority: 0.7,
@@ -27,6 +28,7 @@ module.exports = {
     ],
     additionalSitemaps: [
       'https://googlementor.com/sitemap.xml',
+      'https://googlementor.com/sitemap-recent.xml',
     ],
   },
   transform: async (config, path) => {
@@ -66,7 +68,6 @@ module.exports = {
       loc: path,
       changefreq,
       priority,
-      lastmod: new Date().toISOString(),
     };
   },
   additionalPaths: async (config) => {
@@ -95,14 +96,12 @@ module.exports = {
           loc: `/place/${entity.slug}`,
           changefreq: 'weekly',
           priority: 0.7,
-          lastmod: new Date().toISOString(),
         }));
 
       const areaPaths = generatedAreaRoutes.map((areaSlug) => ({
         loc: `/area/${areaSlug}`,
         changefreq: 'weekly',
         priority: 0.78,
-        lastmod: new Date().toISOString(),
       }));
 
       const categoryAreaPaths = generatedCategoryAreaRoutes
@@ -111,7 +110,6 @@ module.exports = {
           loc: `/${route.categorySlug}/${route.areaSlug}`,
           changefreq: 'weekly',
           priority: 0.82,
-          lastmod: new Date().toISOString(),
         }));
 
       return [...placePaths, ...areaPaths, ...categoryAreaPaths];

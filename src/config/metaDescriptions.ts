@@ -84,8 +84,78 @@ const blogMetaDescriptionBySlug: Record<string, string> = {
   'tap-water-safe-greece-el': 'Είναι ασφαλές το νερό βρύσης στην Ελλάδα; Πρακτικός οδηγός για πόλεις και νησιά, τιμές εμφιαλωμένου και χρήσιμες καθημερινές συμβουλές.',
 };
 
-function trimTrailingPunctuation(text: string): string {
-  return text.replace(/[\s,;:.-]+$/g, '').trim();
+function trimTrailingNoise(text: string): string {
+  return text.replace(/[\s,;:-]+$/g, '').trim();
+}
+
+function ensureTerminalPunctuation(text: string): string {
+  if (!text) {
+    return text;
+  }
+
+  if (/[.!?…]$/.test(text)) {
+    return text;
+  }
+
+  return `${text}.`;
+}
+
+function trimDanglingTail(text: string): string {
+  const danglingTokens = new Set([
+    'and',
+    'or',
+    'to',
+    'for',
+    'with',
+    'in',
+    'of',
+    'the',
+    'a',
+    'an',
+    'your',
+    'our',
+    'και',
+    'ο',
+    'η',
+    'το',
+    'στο',
+    'στη',
+    'στην',
+    'στον',
+    'στις',
+    'στους',
+    'για',
+    'με',
+    'σε',
+    'από',
+    'των',
+  ]);
+
+  let value = text.trim();
+  value = value.replace(/[\s]*[-–—][\s]*$/g, '').trim();
+
+  while (value) {
+    const match = value.match(/([A-Za-z\u0370-\u03ff]+)$/u);
+    if (!match) {
+      break;
+    }
+
+    const tokenMatch = match[1];
+    if (!tokenMatch) {
+      break;
+    }
+
+    const token = tokenMatch.toLowerCase();
+    if (!danglingTokens.has(token)) {
+      break;
+    }
+
+    const matchIndex = match.index ?? value.length - tokenMatch.length;
+    value = value.slice(0, matchIndex).trim();
+    value = value.replace(/[\s]*[-–—][\s]*$/g, '').trim();
+  }
+
+  return value;
 }
 
 function truncateAtWordBoundary(text: string, maxLength: number): string {
@@ -94,12 +164,24 @@ function truncateAtWordBoundary(text: string, maxLength: number): string {
   }
 
   const sliced = text.slice(0, maxLength + 1);
-  const lastSpace = sliced.lastIndexOf(' ');
-  if (lastSpace >= Math.floor(maxLength * 0.7)) {
-    return trimTrailingPunctuation(sliced.slice(0, lastSpace));
+
+  // Prefer finishing on a full sentence when truncation is required.
+  const sentenceBoundary = Math.max(
+    sliced.lastIndexOf('.'),
+    sliced.lastIndexOf('!'),
+    sliced.lastIndexOf('?'),
+    sliced.lastIndexOf('…')
+  );
+  if (sentenceBoundary >= Math.floor(maxLength * 0.8)) {
+    return trimTrailingNoise(sliced.slice(0, sentenceBoundary + 1));
   }
 
-  return trimTrailingPunctuation(text.slice(0, maxLength));
+  const lastSpace = sliced.lastIndexOf(' ');
+  if (lastSpace >= Math.floor(maxLength * 0.7)) {
+    return trimTrailingNoise(sliced.slice(0, lastSpace));
+  }
+
+  return trimTrailingNoise(text.slice(0, maxLength));
 }
 
 function cleanMetaText(text: string): string {
@@ -131,10 +213,10 @@ function compactSummary(summary: string | undefined, maxLength: number): string 
 
 function appendDetailIfShort(text: string, detail: string): string {
   if (text.length >= BLOG_MIN_DETAIL_LENGTH) {
-    return text;
+    return ensureTerminalPunctuation(text);
   }
 
-  return normalizeMetaDescription(`${trimTrailingPunctuation(text)} ${detail}`);
+  return normalizeMetaDescription(`${trimTrailingNoise(text)} ${detail}`);
 }
 
 export function resolveMetaDescriptionLanguage(language?: string): MetaDescriptionLanguage {
@@ -152,7 +234,9 @@ export function normalizeMetaDescription(
   }
 
   const normalized = truncateAtWordBoundary(cleaned, maxLength);
-  return trimTrailingPunctuation(normalized).replace(/\s+/g, ' ').trim();
+  const compacted = trimTrailingNoise(normalized).replace(/\s+/g, ' ').trim();
+  const polished = trimDanglingTail(compacted);
+  return ensureTerminalPunctuation(polished);
 }
 
 export function getStaticMetaDescription(key: StaticMetaDescriptionKey, language?: string): string {
