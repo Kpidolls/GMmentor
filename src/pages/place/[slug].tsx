@@ -24,12 +24,11 @@ import {
   EntityRecord,
   findEntityBySlug,
   getSameCategoryEntities,
-  getSameRegionEntities,
   loadEntitiesIndex,
 } from '../../lib/entities';
 import { getMentionedGuidesForEntity } from '../../lib/knowledgeGraph';
 import { getPlaceEnrichmentByEntityId, PlaceEnrichment } from '../../lib/placeEnrichment';
-import { calculateDistance, formatDistance } from '../../utils/locationUtils';
+import { calculateDistance } from '../../utils/locationUtils';
 import { buildPlaceMetaDescription } from '../../config/metaDescriptions';
 import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
 
@@ -110,7 +109,6 @@ type EntityPageProps = {
   entity: EntityRecord;
   sameCategory: EntityRecord[];
   nearby: Array<EntityRecord & { distanceKm: number }>;
-  sameRegion: EntityRecord[];
   mentionedGuides: Array<{ slug: string; title: string }>;
   canonicalSlug: string;
   enrichment: PlaceEnrichment['effective'] | null;
@@ -247,6 +245,24 @@ function displayNeighborhood(entity: EntityRecord): string {
   return 'Greece';
 }
 
+function formatWalkingTime(distanceKm: number): string {
+  const walkingSpeedKmPerHour = 4.8;
+  const totalMinutes = Math.max(1, Math.round((distanceKm / walkingSpeedKmPerHour) * 60));
+
+  if (totalMinutes < 60) {
+    return `${totalMinutes} min walk`;
+  }
+
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+
+  if (minutes === 0) {
+    return `${hours} hr walk`;
+  }
+
+  return `${hours} hr ${minutes} min walk`;
+}
+
 function kindLabel(entity: EntityRecord): string {
   if (entity.kind === 'restaurant') return 'Restaurant';
   if (entity.kind === 'municipality') return 'Municipality';
@@ -356,33 +372,100 @@ function selectGreekAreaLabel(
   return fallback;
 }
 
-function wrapCanvasText(ctx: CanvasRenderingContext2D, text: string, x: number, y: number, maxWidth: number, lineHeight: number, maxLines: number): void {
+function wrapCanvasText(ctx: CanvasRenderingContext2D, text: string, x: number, y: number, maxWidth: number, lineHeight: number): number {
   const words = text.split(/\s+/).filter(Boolean);
+  if (words.length === 0) {
+    return 0;
+  }
+
+  const lines: string[] = [];
   let line = '';
-  let lineIndex = 0;
 
   for (const word of words) {
     const testLine = line ? `${line} ${word}` : word;
     const width = ctx.measureText(testLine).width;
 
     if (width > maxWidth && line) {
-      ctx.fillText(line, x, y + lineIndex * lineHeight);
-      lineIndex += 1;
+      lines.push(line);
       line = word;
-      if (lineIndex >= maxLines - 1) {
-        break;
-      }
     } else {
       line = testLine;
     }
   }
 
-  if (lineIndex < maxLines && line) {
-    const finalText = lineIndex === maxLines - 1 && ctx.measureText(line).width > maxWidth
-      ? `${line.slice(0, Math.max(0, line.length - 3))}...`
-      : line;
-    ctx.fillText(finalText, x, y + lineIndex * lineHeight);
+  if (line) {
+    lines.push(line);
   }
+
+  lines.forEach((value, index) => {
+    ctx.fillText(value, x, y + index * lineHeight);
+  });
+
+  return lines.length * lineHeight;
+}
+
+type FittedCanvasTextConfig = {
+  text: string;
+  x: number;
+  y: number;
+  maxWidth: number;
+  maxHeight: number;
+  maxFontSize: number;
+  minFontSize: number;
+  fontWeight: number;
+  color: string;
+  lineHeightRatio?: number;
+  fontFamily?: string;
+};
+
+function drawFittedCanvasText(ctx: CanvasRenderingContext2D, config: FittedCanvasTextConfig): number {
+  const {
+    text,
+    x,
+    y,
+    maxWidth,
+    maxHeight,
+    maxFontSize,
+    minFontSize,
+    fontWeight,
+    color,
+    lineHeightRatio = 1.2,
+    fontFamily = 'Roboto, Arial, sans-serif',
+  } = config;
+
+  const normalizedText = text.trim();
+  if (!normalizedText) {
+    return y;
+  }
+
+  let selectedFontSize = minFontSize;
+  let selectedHeight = 0;
+
+  for (let fontSize = maxFontSize; fontSize >= minFontSize; fontSize -= 1) {
+    ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
+    const lineHeight = Math.round(fontSize * lineHeightRatio);
+    const textHeight = wrapCanvasText(ctx, normalizedText, x, -10000, maxWidth, lineHeight);
+
+    if (textHeight <= maxHeight) {
+      selectedFontSize = fontSize;
+      selectedHeight = textHeight;
+      break;
+    }
+  }
+
+  ctx.fillStyle = color;
+  ctx.font = `${fontWeight} ${selectedFontSize}px ${fontFamily}`;
+  ctx.textAlign = 'center';
+
+  if (selectedHeight === 0) {
+    const lineHeight = Math.round(selectedFontSize * lineHeightRatio);
+    selectedHeight = wrapCanvasText(ctx, normalizedText, x, y, maxWidth, lineHeight);
+    return y + selectedHeight;
+  }
+
+  const lineHeight = Math.round(selectedFontSize * lineHeightRatio);
+  const renderedHeight = wrapCanvasText(ctx, normalizedText, x, y, maxWidth, lineHeight);
+  return y + renderedHeight;
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -502,7 +585,6 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
       entity,
       sameCategory: getSameCategoryEntities(entity, index.entities, 12),
       nearby: nearbyWithDistance,
-      sameRegion: getSameRegionEntities(entity, index.entities, 16),
       mentionedGuides: getMentionedGuidesForEntity(entity, 8).map((post) => ({
         slug: post.slug,
         title: post.title,
@@ -515,7 +597,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
   };
 };
 
-export default function PlacePage({ entity, sameCategory, nearby, sameRegion, mentionedGuides, canonicalSlug, enrichment, areaContext, intentContexts }: EntityPageProps) {
+export default function PlacePage({ entity, sameCategory, nearby, mentionedGuides, canonicalSlug, enrichment, areaContext, intentContexts }: EntityPageProps) {
   const { t, i18n } = useTranslation();
   const toast = useToast();
   const [copied, setCopied] = useState(false);
@@ -640,15 +722,6 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
       .slice(0, 6),
     [entity.lat, entity.lng, sameCategory]
   );
-  const sameRegionWithDistance = useMemo(
-    () => sameRegion
-      .map((candidate) => ({
-        ...candidate,
-        distanceKm: calculateDistance(entity.lat, entity.lng, candidate.lat, candidate.lng),
-      }))
-      .sort((left, right) => left.distanceKm - right.distanceKm),
-    [entity.lat, entity.lng, sameRegion]
-  );
   const usefulStopCandidates = useMemo(() => {
     const primaryIds = new Set(entity.categoryIds || []);
     const complementary = nearby.filter((candidate) => !(candidate.categoryIds || []).some((categoryId) => primaryIds.has(categoryId)));
@@ -690,24 +763,6 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
 
     return (walkable.length > 0 ? walkable : filtered).slice(0, 4);
   }, [nearby, sameCategoryWithDistance, usefulStopIds]);
-  const moreNearbyOptions = useMemo(() => {
-    const excluded = new Set<string>([
-      ...sameCategoryWithDistance.map((candidate) => candidate.id),
-      ...walkableNearby.map((candidate) => candidate.id),
-      ...usefulStopIds,
-    ]);
-
-    const merged = [...nearby, ...sameRegionWithDistance];
-    const deduped = new Map<string, (EntityRecord & { distanceKm: number })>();
-
-    merged.forEach((candidate) => {
-      if (!excluded.has(candidate.id) && !deduped.has(candidate.id)) {
-        deduped.set(candidate.id, candidate);
-      }
-    });
-
-    return Array.from(deduped.values()).slice(0, 6);
-  }, [nearby, sameCategoryWithDistance, sameRegionWithDistance, usefulStopIds, walkableNearby]);
   const shareCaption = t('place.share.autoCaption', 'Discovered via Googlementor curated picks across Greece.');
   const nearbyGroupAccentSchemes = ['blue', 'teal', 'orange', 'purple'] as const;
   const promoBadgeText = isGreek ? 'ΑΓΑΠΗΜΕΝΟ ΤΩΝ ΝΤΟΠΙΩΝ' : "PEOPLE'S FAVORITE";
@@ -927,17 +982,49 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
     drawHalo(width / 2, 354, 220);
     drawTrophy(width / 2, 194, 0.95);
 
-    ctx.fillStyle = '#2a1b11';
-    ctx.font = '700 74px Roboto, Arial, sans-serif';
-    wrapCanvasText(ctx, promoPlaceName, width / 2, 494, 820, 78, 2);
+    const textAreaTop = 494;
+    const dividerY = 916;
+    let cursorY = textAreaTop;
 
-    ctx.fillStyle = '#7a6149';
-    ctx.font = '500 30px Roboto, Arial, sans-serif';
-    wrapCanvasText(ctx, promoAddress, width / 2, 650, 860, 38, 2);
+    cursorY = drawFittedCanvasText(ctx, {
+      text: promoPlaceName,
+      x: width / 2,
+      y: cursorY,
+      maxWidth: 820,
+      maxHeight: 180,
+      maxFontSize: 74,
+      minFontSize: 26,
+      fontWeight: 700,
+      color: '#2a1b11',
+      lineHeightRatio: 1.08,
+    }) + 20;
 
-    ctx.fillStyle = '#5c412d';
-    ctx.font = '500 34px Roboto, Arial, sans-serif';
-    wrapCanvasText(ctx, posterDescriptor, width / 2, 752, 860, 44, 3);
+    cursorY = drawFittedCanvasText(ctx, {
+      text: promoAddress,
+      x: width / 2,
+      y: cursorY,
+      maxWidth: 860,
+      maxHeight: 96,
+      maxFontSize: 30,
+      minFontSize: 18,
+      fontWeight: 500,
+      color: '#7a6149',
+      lineHeightRatio: 1.22,
+    }) + 18;
+
+    const descriptorMaxHeight = Math.max(80, dividerY - 8 - cursorY);
+    drawFittedCanvasText(ctx, {
+      text: posterDescriptor,
+      x: width / 2,
+      y: cursorY,
+      maxWidth: 860,
+      maxHeight: descriptorMaxHeight,
+      maxFontSize: 34,
+      minFontSize: 14,
+      fontWeight: 500,
+      color: '#5c412d',
+      lineHeightRatio: 1.25,
+    });
 
     ctx.strokeStyle = '#d8c4a0';
     ctx.lineWidth = 2;
@@ -946,9 +1033,18 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
     ctx.lineTo(880, 916);
     ctx.stroke();
 
-    ctx.fillStyle = '#3f2e1b';
-    ctx.font = '600 36px Roboto, Arial, sans-serif';
-    wrapCanvasText(ctx, promoHighlight, width / 2, 978, 840, 44, 2);
+    drawFittedCanvasText(ctx, {
+      text: promoHighlight,
+      x: width / 2,
+      y: 978,
+      maxWidth: 840,
+      maxHeight: 96,
+      maxFontSize: 36,
+      minFontSize: 24,
+      fontWeight: 600,
+      color: '#3f2e1b',
+      lineHeightRatio: 1.2,
+    });
 
     const tagWidths = promoTags.map((tag) => {
       ctx.font = '600 19px Roboto, Arial, sans-serif';
@@ -1128,332 +1224,238 @@ export default function PlacePage({ entity, sameCategory, nearby, sameRegion, me
         />
       </Head>
 
-      <Box
-        mb={8}
-        borderWidth="1px"
-        borderColor="orange.100"
-        borderRadius="2xl"
-        p={{ base: 5, md: 8 }}
-        bg="white"
-        boxShadow="sm"
-      >
-        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={5}>
-          <VStack align="stretch" spacing={4}>
+      <Box mb={8} className="gm-surface-card" p={{ base: 5, md: 7 }}>
+        <VStack align="stretch" spacing={4}>
+          <HStack spacing={2} flexWrap="wrap">
+            <Badge colorScheme="orange" textTransform="none">{favoriteBadgeLabel}</Badge>
+            <Badge colorScheme="gray" textTransform="none">{curatedBadgeLabel}</Badge>
+            {showKindBadge ? <Badge colorScheme="blue" textTransform="none">{localizedKind}</Badge> : null}
+          </HStack>
+
+          <Text fontSize="sm" fontWeight="semibold" color="gray.600">
+            {primaryCategoryLabel} · {neighborhood}
+          </Text>
+          <Heading as="h1" size="2xl">
+            {entity.name}
+          </Heading>
+          <Text color="gray.700" lineHeight="1.7">
+            {tagline}
+          </Text>
+
+          {bestForLabels.length > 0 || visitMomentLabels.length > 0 ? (
             <HStack spacing={2} flexWrap="wrap">
-              <Badge colorScheme="orange" textTransform="none">{favoriteBadgeLabel}</Badge>
-              <Badge colorScheme="gray" textTransform="none">{curatedBadgeLabel}</Badge>
-              {showKindBadge ? <Badge colorScheme="blue" textTransform="none">{localizedKind}</Badge> : null}
+              {bestForLabels.map((label) => (
+                <Badge key={`hero-best-${label}`} colorScheme="teal" textTransform="none">{label}</Badge>
+              ))}
+              {visitMomentLabels.map((label) => (
+                <Badge key={`hero-time-${label}`} colorScheme="orange" textTransform="none">{label}</Badge>
+              ))}
             </HStack>
-
-            <Text fontSize="sm" fontWeight="semibold" color="gray.600">
-              {primaryCategoryLabel} · {neighborhood}
-            </Text>
-            <Heading as="h1" size="2xl">
-              {entity.name}
-            </Heading>
-            <Text color="gray.700" lineHeight="1.7">
-              {tagline}
-            </Text>
-
-            {bestForLabels.length > 0 || visitMomentLabels.length > 0 ? (
-              <HStack spacing={2} flexWrap="wrap">
-                {bestForLabels.map((label) => (
-                  <Badge key={`hero-best-${label}`} colorScheme="teal" textTransform="none">{label}</Badge>
-                ))}
-                {visitMomentLabels.map((label) => (
-                  <Badge key={`hero-time-${label}`} colorScheme="orange" textTransform="none">{label}</Badge>
-                ))}
-              </HStack>
-            ) : null}
-
-            <Box borderWidth="1px" borderRadius="xl" p={4} bg="gray.50">
-              <Heading as="h2" size="sm" mb={3}>{t('place.utility.title', 'Practical info')}</Heading>
-              <Text fontSize="sm" color="gray.700" mb={3}>{t('place.utility.subtitle', 'You can open directions, save this location to your itinerary and discover what’s close.')}</Text>
-              <SimpleGrid columns={{ base: 1, sm: 2, xl: 3 }} spacing={2}>
-                <Button
-                  as={Link}
-                  href={entity.url || `https://www.google.com/maps/search/?api=1&query=${entity.lat},${entity.lng}`}
-                  isExternal
-                  colorScheme="blue"
-                  minH="44px"
-                  w="full"
-                >
-                  {t('place.openDirections', 'Navigate')}
-                </Button>
-                <Button
-                  variant="outline"
-                  colorScheme="teal"
-                  minH="44px"
-                  w="full"
-                  whiteSpace="normal"
-                  lineHeight="short"
-                  textAlign="center"
-                  onClick={handleAddToItinerary}
-                >
-                  {t('place.addToItinerary', 'Add to itinerary')}
-                </Button>
-                <Button as={NextLink} href="/search" variant="outline" minH="44px" w="full">
-                  {t('place.exploreMore', 'Explore More Places')}
-                </Button>
-              </SimpleGrid>
-            </Box>
-          </VStack>
-
-          <VStack align="stretch" spacing={3}>
-            <Box borderWidth="1px" borderRadius="2xl" p={4} bg="white" boxShadow="sm">
-              <Heading as="h2" size="sm" mb={3}>{t('place.promo.posterTitle', 'Social poster preview')}</Heading>
-              {socialPosterPreview ? (
-                <Image
-                  src={socialPosterPreview}
-                  alt={t('place.promo.previewAlt', { name: entity.name, defaultValue: 'Promo card preview for {{name}}' })}
-                  w="full"
-                  h="auto"
-                  maxH={{ base: '420px', md: '520px' }}
-                  objectFit="contain"
-                  objectPosition="center"
-                  borderRadius="xl"
-                  borderWidth="1px"
-                  bg="gray.100"
-                />
-              ) : (
-                <Box h="260px" borderWidth="1px" borderRadius="xl" bg="gray.50" display="flex" alignItems="center" justifyContent="center">
-                  <Text fontSize="sm" color="gray.500">{t('place.promo.generating', 'Generating preview...')}</Text>
-                </Box>
-              )}
-            </Box>
-
-            <Box borderWidth="1px" borderRadius="xl" p={4} bg="gray.50">
-              <Heading as="h2" size="sm" mb={2}>{t('place.share.title', 'Celebrate this place on Googlementor')}</Heading>
-              <Text fontSize="sm" color="gray.700" mb={3}>{shareCaption}</Text>
-              <Button colorScheme="blue" minH="44px" w="full" mb={3} onClick={handleSharePlace}>
-                {t('place.share.heroButton', 'Share this place')}
-              </Button>
-              <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={3}>
-                <Button
-                  size="sm"
-                  w="full"
-                  minH="46px"
-                  px={4}
-                  py={3}
-                  whiteSpace="normal"
-                  lineHeight="short"
-                  textAlign="center"
-                  variant="outline"
-                  onClick={handleShareCard}
-                >
-                  {t('place.share.cardButton', 'Share this card')}
-                </Button>
-                <Button
-                  size="sm"
-                  w="full"
-                  minH="46px"
-                  px={4}
-                  py={3}
-                  whiteSpace="normal"
-                  lineHeight="short"
-                  textAlign="center"
-                  variant="outline"
-                  onClick={handleCopyCaption}
-                >
-                  {copiedCaption ? t('place.share.copiedShort', 'Copied') : t('place.share.copyCaption', 'Copy caption')}
-                </Button>
-                <Button
-                  size="sm"
-                  w="full"
-                  minH="46px"
-                  px={4}
-                  py={3}
-                  whiteSpace="normal"
-                  lineHeight="short"
-                  textAlign="center"
-                  variant="outline"
-                  onClick={handleCopyLink}
-                >
-                  {copied ? t('place.share.copiedShort', 'Copied') : t('place.share.copyLink', 'Copy link')}
-                </Button>
-              </SimpleGrid>
-            </Box>
-          </VStack>
-        </SimpleGrid>
+          ) : null}
+        </VStack>
       </Box>
 
-      {sameCategoryWithDistance.length > 0 ? (
-        <Box mb={8} borderWidth="1px" borderColor="teal.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="teal.50">
-          <Heading as="h2" size="md" mb={3}>
-            {t('place.sameCategory.title', 'Similar places nearby')}
-          </Heading>
-          <Text color="gray.600" mb={4}>{t('place.sameCategory.subtitle', 'If you liked this pick, these are strong alternatives nearby.')}</Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
-            {sameCategoryWithDistance.map((candidate) => (
-              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
-                <HStack justify="space-between" align="baseline" spacing={3} mb={1}>
-                  <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
-                    {candidate.name}
-                  </Link>
-                  <Text as="span" fontSize="sm" color="gray.600">{formatDistance(candidate.distanceKm)}</Text>
-                </HStack>
-                <Text color="gray.600" fontSize="sm">{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
-              </Box>
-            ))}
-          </SimpleGrid>
-        </Box>
-      ) : null}
+      <SimpleGrid columns={{ base: 1, xl: 12 }} spacing={6} alignItems="start">
+        <VStack gridColumn={{ xl: 'span 8' }} align="stretch" spacing={6}>
+          <Box className="gm-surface-card" p={4}>
+            <Heading as="h2" size="sm" mb={3}>{t('place.utility.title', 'Practical info')}</Heading>
+            <Text fontSize="sm" color="gray.700" mb={3}>{t('place.utility.subtitle', 'You can open directions, save this location to your itinerary and discover what’s close.')}</Text>
+            <SimpleGrid columns={{ base: 1, sm: 2, xl: 3 }} spacing={2}>
+              <Button
+                as={Link}
+                href={entity.url || `https://www.google.com/maps/search/?api=1&query=${entity.lat},${entity.lng}`}
+                isExternal
+                colorScheme="blue"
+                minH="44px"
+                w="full"
+              >
+                {t('place.openDirections', 'Navigate')}
+              </Button>
+              <Button
+                variant="outline"
+                colorScheme="teal"
+                minH="44px"
+                w="full"
+                whiteSpace="normal"
+                lineHeight="short"
+                textAlign="center"
+                onClick={handleAddToItinerary}
+              >
+                {t('place.addToItinerary', 'Add to itinerary')}
+              </Button>
+              <Button as={NextLink} href="/search" variant="outline" minH="44px" w="full">
+                {t('place.exploreMore', 'Explore More Places')}
+              </Button>
+            </SimpleGrid>
+          </Box>
 
-      {nearby.length > 0 ? (
-        <Box mb={8} borderWidth="1px" borderColor="blue.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="blue.50">
-          <Heading as="h2" size="md" mb={2}>
-            {t('place.nearby.title', 'Closest useful stops')}
-          </Heading>
-          <Text color="gray.700" mb={4}>{t('place.nearby.subtitle', 'A quick travel-assistant view of the closest useful stops to walk to next.')}</Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
-            {nearbyGroupedByCategory.map((group, groupIndex) => {
-              const accentScheme = nearbyGroupAccentSchemes[groupIndex % nearbyGroupAccentSchemes.length];
-
-              return (
-                <Box key={group.label} borderWidth="1px" borderRadius="lg" p={4} bg="white">
-                  <Box
-                    mb={3}
-                    px={3}
-                    py={2}
-                    borderRadius="md"
-                    borderWidth="1px"
-                    borderColor={`${accentScheme}.200`}
-                    bg={`${accentScheme}.50`}
-                  >
-                    <Text
-                      fontSize="xs"
-                      fontWeight="bold"
-                      letterSpacing="0.08em"
-                      textTransform="uppercase"
-                      color={`${accentScheme}.800`}
-                    >
-                      {group.label}
-                    </Text>
+          {sameCategoryWithDistance.length > 0 ? (
+            <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>
+              <Heading as="h2" size="md" mb={3}>
+                {t('place.sameCategory.title', 'Similar places nearby')}
+              </Heading>
+              <Text color="gray.600" mb={4}>{t('place.sameCategory.subtitle', 'If you liked this pick, these are strong alternatives nearby.')}</Text>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
+                {sameCategoryWithDistance.map((candidate) => (
+                  <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                    <HStack justify="space-between" align="baseline" spacing={3} mb={1}>
+                      <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
+                        {candidate.name}
+                      </Link>
+                      <Text as="span" fontSize="sm" color="gray.600">{formatWalkingTime(candidate.distanceKm)}</Text>
+                    </HStack>
+                    <Text color="gray.600" fontSize="sm">{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
                   </Box>
-                  <VStack align="stretch" spacing={2}>
-                    {group.items.map((candidate) => (
-                      <Box key={`${group.label}-${candidate.id}`}>
-                        <HStack justify="space-between" align="baseline" spacing={3}>
-                          <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.700" fontWeight="semibold">
-                            {candidate.name}
-                          </Link>
-                          <Text as="span" fontSize="sm" color="gray.600">{formatDistance(candidate.distanceKm)}</Text>
-                        </HStack>
-                        <Text fontSize="sm" color="gray.600" mt={1}>
-                          {candidate.address || candidate.region || t('common.greece', 'Greece')}
+                ))}
+              </SimpleGrid>
+            </Box>
+          ) : null}
+
+          {nearby.length > 0 ? (
+            <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>
+              <Heading as="h2" size="md" mb={2}>
+                {t('place.nearby.title', 'Closest useful stops')}
+              </Heading>
+              <Text color="gray.700" mb={4}>{t('place.nearby.subtitle', 'A quick travel-assistant view of the closest useful stops to walk to next.')}</Text>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
+                {nearbyGroupedByCategory.map((group, groupIndex) => {
+                  const accentScheme = nearbyGroupAccentSchemes[groupIndex % nearbyGroupAccentSchemes.length];
+
+                  return (
+                    <Box key={group.label} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                      <Box
+                        mb={3}
+                        px={3}
+                        py={2}
+                        borderRadius="md"
+                        borderWidth="1px"
+                        borderColor={`${accentScheme}.200`}
+                        bg={`${accentScheme}.50`}
+                      >
+                        <Text
+                          fontSize="xs"
+                          fontWeight="bold"
+                          letterSpacing="0.08em"
+                          textTransform="uppercase"
+                          color={`${accentScheme}.800`}
+                        >
+                          {group.label}
                         </Text>
                       </Box>
-                    ))}
-                  </VStack>
-                </Box>
-              );
-            })}
-          </SimpleGrid>
-        </Box>
-      ) : null}
+                      <VStack align="stretch" spacing={2}>
+                        {group.items.map((candidate) => (
+                          <Box key={`${group.label}-${candidate.id}`}>
+                            <HStack justify="space-between" align="baseline" spacing={3}>
+                              <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.700" fontWeight="semibold">
+                                {candidate.name}
+                              </Link>
+                              <Text as="span" fontSize="sm" color="gray.600">{formatWalkingTime(candidate.distanceKm)}</Text>
+                            </HStack>
+                            <Text fontSize="sm" color="gray.600" mt={1}>
+                              {candidate.address || candidate.region || t('common.greece', 'Greece')}
+                            </Text>
+                          </Box>
+                        ))}
+                      </VStack>
+                    </Box>
+                  );
+                })}
+              </SimpleGrid>
+            </Box>
+          ) : null}
 
-      {walkableNearby.length > 0 ? (
-        <Box mb={8}>
-          <Heading as="h2" size="md" mb={3}>
-            {t('place.walkable.title', 'Best Walkable Picks Nearby')}
-          </Heading>
-          <Text color="gray.600" mb={4}>{t('place.walkable.subtitle', 'Great options within a short walk.')}</Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
-            {walkableNearby.map((candidate) => (
-              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
-                <HStack justify="space-between" align="flex-start" spacing={3} mb={2}>
-                  <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
-                    {candidate.name}
-                  </Link>
-                  <Badge colorScheme="blue" textTransform="none">{formatDistance(candidate.distanceKm)}</Badge>
-                </HStack>
-                <Text color="gray.600" fontSize="sm" mt={1}>{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
-              </Box>
-            ))}
-          </SimpleGrid>
-        </Box>
-      ) : null}
+          {walkableNearby.length > 0 ? (
+            <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>
+              <Heading as="h2" size="md" mb={3}>
+                {t('place.walkable.title', 'Best Walkable Picks Nearby')}
+              </Heading>
+              <Text color="gray.600" mb={4}>{t('place.walkable.subtitle', 'Great options within a short walk.')}</Text>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
+                {walkableNearby.map((candidate) => (
+                  <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                    <HStack justify="space-between" align="flex-start" spacing={3} mb={2}>
+                      <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
+                        {candidate.name}
+                      </Link>
+                      <Badge colorScheme="blue" textTransform="none">{formatWalkingTime(candidate.distanceKm)}</Badge>
+                    </HStack>
+                    <Text color="gray.600" fontSize="sm" mt={1}>{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
+                  </Box>
+                ))}
+              </SimpleGrid>
+            </Box>
+          ) : null}
+        </VStack>
 
-      {areaContext || intentContexts.length > 0 ? (
-        <Box mb={8} borderWidth="1px" borderColor="orange.100" borderRadius="2xl" p={{ base: 5, md: 6 }} bg="orange.50">
-          <Heading as="h2" size="md" mb={3}>
-            {t('place.discovery.title', 'Explore this area')}
-          </Heading>
-          <Text color="gray.700" mb={4}>
-            {t('place.discovery.subtitle', 'Continue to indexable area and category guides connected to this place.')}
-          </Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
-            {areaContext ? (
-              <Box borderWidth="1px" borderRadius="lg" p={4} bg="white">
-                <Link as={NextLink} href={`/area/${areaContext.slug}`} color="blue.700" fontWeight="semibold">
-                  {t('place.discovery.areaGuide', { area: areaContext.name, defaultValue: 'Best places in {{area}}' })}
-                </Link>
-                <Text color="gray.600" fontSize="sm" mt={1}>
-                  {t('place.discovery.areaGuideHint', 'See top attractions, restaurants, and related lists.')}
-                </Text>
+        <VStack gridColumn={{ xl: 'span 4' }} align="stretch" spacing={6}>
+          <Box className="gm-surface-card" p={4}>
+            <Heading as="h2" size="sm" mb={3}>{t('place.promo.posterTitle', 'Social poster preview')}</Heading>
+            {socialPosterPreview ? (
+              <Image
+                src={socialPosterPreview}
+                alt={t('place.promo.previewAlt', { name: entity.name, defaultValue: 'Promo card preview for {{name}}' })}
+                w="full"
+                h="auto"
+                maxH={{ base: '420px', md: '520px' }}
+                objectFit="contain"
+                objectPosition="center"
+                borderRadius="xl"
+                borderWidth="1px"
+                bg="gray.100"
+              />
+            ) : (
+              <Box h="260px" borderWidth="1px" borderRadius="xl" bg="gray.50" display="flex" alignItems="center" justifyContent="center">
+                <Text fontSize="sm" color="gray.500">{t('place.promo.generating', 'Generating preview...')}</Text>
               </Box>
-            ) : null}
-            {intentContexts.map((intent) => (
-              <Box key={intent.href} borderWidth="1px" borderRadius="lg" p={4} bg="white">
-                <Link as={NextLink} href={intent.href} color="blue.700" fontWeight="semibold">
-                  {intent.label}
-                </Link>
-                <Text color="gray.600" fontSize="sm" mt={1}>
-                  {t('place.discovery.intentHint', 'Compare nearby options for this intent in the same area.')}
-                </Text>
-              </Box>
-            ))}
-          </SimpleGrid>
-        </Box>
-      ) : null}
+            )}
+          </Box>
 
-      {moreNearbyOptions.length > 0 ? (
-        <Box mb={8}>
-          <Heading as="h2" size="md" mb={3}>
-            {t('place.moreNearby.title', 'More Nearby Options')}
-          </Heading>
-          <Text color="gray.600" mb={4}>{t('place.moreNearby.subtitle', 'A lighter set of extra nearby options if you want to keep exploring.')}</Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
-            {moreNearbyOptions.map((candidate) => (
-              <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="gray.50">
-                <HStack justify="space-between" align="flex-start" spacing={3} mb={2}>
-                  <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
-                    {candidate.name}
-                  </Link>
-                  <Badge colorScheme="gray" textTransform="none">{formatDistance(candidate.distanceKm)}</Badge>
-                </HStack>
-                <Text color="gray.600" fontSize="sm" mt={1}>{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
-              </Box>
-            ))}
-          </SimpleGrid>
-        </Box>
-      ) : null}
+          <Box className="gm-surface-card" p={4}>
+            <Heading as="h2" size="sm" mb={2}>{t('place.share.title', 'Celebrate this place on Googlementor')}</Heading>
+            <Text fontSize="sm" color="gray.700" mb={3}>{shareCaption}</Text>
+            <Button colorScheme="blue" minH="44px" w="full" mb={3} onClick={handleSharePlace}>
+              {t('place.share.heroButton', 'Share this place')}
+            </Button>
+            <SimpleGrid columns={{ base: 1, md: 2, xl: 1 }} spacing={2}>
+              <Button size="sm" minH="44px" variant="outline" onClick={handleShareCard}>
+                {t('place.share.cardButton', 'Share this card')}
+              </Button>
+              <Button size="sm" minH="44px" variant="outline" onClick={handleCopyCaption}>
+                {copiedCaption ? t('place.share.copiedShort', 'Copied') : t('place.share.copyCaption', 'Copy caption')}
+              </Button>
+              <Button size="sm" minH="44px" variant="outline" onClick={handleCopyLink}>
+                {copied ? t('place.share.copiedShort', 'Copied') : t('place.share.copyLink', 'Copy link')}
+              </Button>
+            </SimpleGrid>
+          </Box>
 
-      {entity.aliases?.length ? (
-        <Box mb={8}>
-          <Heading as="h2" size="md" mb={3}>
-            {t('place.aliases.title', 'Alternative names')}
-          </Heading>
-          <Text color="gray.700">{entity.aliases.join(', ')}</Text>
-        </Box>
-      ) : null}
+          {entity.aliases?.length ? (
+            <Box className="gm-surface-card" p={4}>
+              <Heading as="h2" size="sm" mb={3}>
+                {t('place.aliases.title', 'Alternative names')}
+              </Heading>
+              <Text color="gray.700" fontSize="sm" lineHeight="1.7">{entity.aliases.join(', ')}</Text>
+            </Box>
+          ) : null}
 
-      {mentionedGuides.length > 0 ? (
-        <Box mt={8}>
-          <Heading as="h2" size="md" mb={3}>
-            {t('place.guides.title', 'Trusted guide mentions')}
-          </Heading>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
-            {mentionedGuides.map((guide) => (
-              <Box key={guide.slug} borderWidth="1px" borderRadius="lg" p={4}>
-                <Link as={NextLink} href={`/blog/${guide.slug}`} color="blue.600" fontWeight="semibold">
-                  {guide.title}
-                </Link>
-              </Box>
-            ))}
-          </SimpleGrid>
-        </Box>
-      ) : null}
+          {mentionedGuides.length > 0 ? (
+            <Box className="gm-surface-card" p={4}>
+              <Heading as="h2" size="sm" mb={3}>
+                {t('place.guides.title', 'Trusted guide mentions')}
+              </Heading>
+              <VStack align="stretch" spacing={2}>
+                {mentionedGuides.map((guide) => (
+                  <Box key={guide.slug} borderWidth="1px" borderRadius="lg" p={3} bg="white">
+                    <Link as={NextLink} href={`/blog/${guide.slug}`} color="blue.600" fontWeight="semibold">
+                      {guide.title}
+                    </Link>
+                  </Box>
+                ))}
+              </VStack>
+            </Box>
+          ) : null}
+        </VStack>
+      </SimpleGrid>
     </Container>
   );
 }
