@@ -163,10 +163,10 @@ function main(): void {
     }
   }
 
-  for (const entity of entities.filter((record) => Boolean(record.slug))) {
+  for (const entity of entities.filter((record) => Boolean(record.slug) && record.kind !== 'municipality')) {
     const seoSignature = buildEntitySeoSignature(entity);
     const canonicalEntity = entities
-      .filter((candidate) => buildEntitySeoSignature(candidate) === seoSignature)
+      .filter((candidate) => candidate.kind !== 'municipality' && buildEntitySeoSignature(candidate) === seoSignature)
       .sort((left, right) => left.slug.localeCompare(right.slug))[0] || entity;
 
     addRoute(

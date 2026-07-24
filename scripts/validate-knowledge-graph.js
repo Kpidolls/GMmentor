@@ -231,6 +231,7 @@ function main() {
   const expectedPaths = new Set();
 
   for (const entity of entities) {
+    if (entity?.kind === 'municipality') continue;
     if (!entity?.slug) continue;
 
     expectedPaths.add(`/place/${entity.slug}`);
@@ -268,6 +269,7 @@ function main() {
 
   for (const post of priorityPosts) {
     for (const entity of entities) {
+      if (entity?.kind === 'municipality') continue;
       if (!entity?.id) continue;
       if (scoreEntityMention(post, entity) > 0) {
         linkedEntityIds.add(entity.id);
