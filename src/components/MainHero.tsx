@@ -1764,6 +1764,7 @@ const MainHero = () => {
                         </div>
                       </div>
                     </button>
+
                   </div>
 
                   <p className="text-slate-700 text-sm sm:text-base md:text-[1.02rem] max-w-2xl mx-auto text-center font-medium">

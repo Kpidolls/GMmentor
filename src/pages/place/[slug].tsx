@@ -472,7 +472,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const index = loadEntitiesIndex();
   const slugSet = new Set<string>();
 
-  index.entities.forEach((entity) => {
+  index.entities
+    .filter((entity) => entity.kind !== 'municipality')
+    .forEach((entity) => {
     if (entity.slug) {
       slugSet.add(entity.slug);
     }
@@ -482,7 +484,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slugSet.add(legacySlug);
       }
     });
-  });
+    });
 
   const paths = Array.from(slugSet).sort((a, b) => a.localeCompare(b)).map((slug) => ({
     params: { slug },
@@ -496,7 +498,8 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
   if (!slug) return { notFound: true };
 
   const index = loadEntitiesIndex();
-  const entity = findEntityBySlug(index.entities, slug);
+  const discoverableEntities = index.entities.filter((candidate) => candidate.kind !== 'municipality');
+  const entity = findEntityBySlug(discoverableEntities, slug);
 
   if (!entity) {
     return { notFound: true };
@@ -504,7 +507,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
 
   const canonicalEntity = entity;
 
-  const nearbyCandidates = index.entities.filter((candidate) => {
+  const nearbyCandidates = discoverableEntities.filter((candidate) => {
     if (candidate.id === entity.id) {
       return false;
     }
@@ -583,7 +586,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
   return {
     props: {
       entity,
-      sameCategory: getSameCategoryEntities(entity, index.entities, 12),
+      sameCategory: getSameCategoryEntities(entity, discoverableEntities, 12),
       nearby: nearbyWithDistance,
       mentionedGuides: getMentionedGuidesForEntity(entity, 8).map((post) => ({
         slug: post.slug,
@@ -723,20 +726,23 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
     [entity.lat, entity.lng, sameCategory]
   );
   const usefulStopCandidates = useMemo(() => {
+    const categorizedNearby = nearby.filter((candidate) => (candidate.categoryIds?.length ?? 0) > 0);
     const primaryIds = new Set(entity.categoryIds || []);
-    const complementary = nearby.filter((candidate) => !(candidate.categoryIds || []).some((categoryId) => primaryIds.has(categoryId)));
+    const complementary = categorizedNearby.filter((candidate) => !(candidate.categoryIds || []).some((categoryId) => primaryIds.has(categoryId)));
 
-    return complementary.length >= 3 ? complementary : nearby;
+    return complementary.length >= 3 ? complementary : categorizedNearby;
   }, [entity.categoryIds, nearby]);
   const nearbyGroupedByCategory = useMemo(() => {
     const grouped = new Map<string, { label: string; items: Array<EntityRecord & { distanceKm: number }> }>();
 
     usefulStopCandidates.forEach((candidate) => {
-      const categoryId = candidate.categoryIds?.[0] || 'uncategorized';
+      const categoryId = candidate.categoryIds?.[0];
+      if (!categoryId) {
+        return;
+      }
+
       const fallbackCategoryName = candidate.categories?.[0] || categoryId;
-      const label = categoryId === 'uncategorized'
-        ? t('place.nearby.uncategorized', 'Other')
-        : t(`place.categoryNames.${categoryId}`, fallbackCategoryName);
+      const label = t(`place.categoryNames.${categoryId}`, fallbackCategoryName);
 
       if (!grouped.has(label)) {
         grouped.set(label, { label, items: [] });
@@ -1257,10 +1263,72 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
 
       <SimpleGrid columns={{ base: 1, xl: 12 }} spacing={6} alignItems="start">
         <VStack gridColumn={{ xl: 'span 8' }} align="stretch" spacing={6}>
-          <Box className="gm-surface-card" p={4}>
-            <Heading as="h2" size="sm" mb={3}>{t('place.utility.title', 'Practical info')}</Heading>
-            <Text fontSize="sm" color="gray.700" mb={3}>{t('place.utility.subtitle', 'You can open directions, save this location to your itinerary and discover what’s close.')}</Text>
-            <SimpleGrid columns={{ base: 1, sm: 2, xl: 3 }} spacing={2}>
+          <Box className="gm-surface-card" p={{ base: 4, md: 5 }}>
+            <Heading as="h2" size="sm" mb={1}>{t('place.promo.posterTitle', 'Social poster preview')}</Heading>
+            <Text fontSize="sm" color="gray.600" mb={3}>{shareCaption}</Text>
+
+            {socialPosterPreview ? (
+              <Image
+                src={socialPosterPreview}
+                alt={t('place.promo.previewAlt', { name: entity.name, defaultValue: 'Promo card preview for {{name}}' })}
+                w="full"
+                h="auto"
+                maxH={{ base: '420px', md: '520px' }}
+                objectFit="contain"
+                objectPosition="center"
+                borderRadius="xl"
+                borderWidth="1px"
+                bg="gray.100"
+                mb={3}
+              />
+            ) : (
+              <Box h="260px" borderWidth="1px" borderRadius="xl" bg="gray.50" display="flex" alignItems="center" justifyContent="center" mb={3}>
+                <Text fontSize="sm" color="gray.500">{t('place.promo.generating', 'Generating preview...')}</Text>
+              </Box>
+            )}
+
+            <Box h="1px" bg="gray.200" mb={3} />
+            <Text fontSize="xs" textTransform="uppercase" letterSpacing="0.08em" color="gray.500" mb={1}>
+              {t('place.share.title', 'Celebrate this place on Googlementor')}
+            </Text>
+            <Button colorScheme="blue" size="md" minH="44px" w="full" mb={2} onClick={handleSharePlace}>
+              {t('place.share.heroButton', 'Share this place')}
+            </Button>
+            <SimpleGrid columns={{ base: 1, sm: 3 }} spacing={2}>
+              <Button size="sm" minH="40px" variant="outline" onClick={handleShareCard}>
+                {t('place.share.cardButton', 'Share this card')}
+              </Button>
+              <Button size="sm" minH="40px" variant="outline" onClick={handleCopyCaption}>
+                {copiedCaption ? t('place.share.copiedShort', 'Copied') : t('place.share.copyCaption', 'Copy caption')}
+              </Button>
+              <Button size="sm" minH="40px" variant="outline" onClick={handleCopyLink}>
+                {copied ? t('place.share.copiedShort', 'Copied') : t('place.share.copyLink', 'Copy link')}
+              </Button>
+            </SimpleGrid>
+          </Box>
+
+          <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>
+            <HStack justify="space-between" align="flex-start" spacing={4} mb={4}>
+              <VStack align="start" spacing={1}>
+                <Text
+                  fontSize="xs"
+                  textTransform="uppercase"
+                  letterSpacing="0.08em"
+                  color="gray.500"
+                  fontWeight="semibold"
+                >
+                  {t('place.utility.eyebrow', 'Tools')}
+                </Text>
+                <Heading as="h2" size="md">{t('place.utility.title', 'Practical info')}</Heading>
+              </VStack>
+              <Badge colorScheme="gray" textTransform="none">{t('place.utility.quickActions', 'Quick actions')}</Badge>
+            </HStack>
+
+            <Text fontSize="sm" color="gray.600" mb={4}>
+              {t('place.utility.subtitle', 'You can open directions, save this location to your itinerary and discover what’s close.')}
+            </Text>
+
+            <SimpleGrid columns={{ base: 1, sm: 2, xl: 3 }} spacing={3}>
               <Button
                 as={Link}
                 href={entity.url || `https://www.google.com/maps/search/?api=1&query=${entity.lat},${entity.lng}`}
@@ -1283,7 +1351,7 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
               >
                 {t('place.addToItinerary', 'Add to itinerary')}
               </Button>
-              <Button as={NextLink} href="/search" variant="outline" minH="44px" w="full">
+              <Button as={NextLink} href="/search" variant="outline" colorScheme="gray" minH="44px" w="full">
                 {t('place.exploreMore', 'Explore More Places')}
               </Button>
             </SimpleGrid>
@@ -1311,7 +1379,7 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
             </Box>
           ) : null}
 
-          {nearby.length > 0 ? (
+          {nearbyGroupedByCategory.length > 0 ? (
             <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>
               <Heading as="h2" size="md" mb={2}>
                 {t('place.nearby.title', 'Closest useful stops')}
@@ -1388,47 +1456,6 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
         </VStack>
 
         <VStack gridColumn={{ xl: 'span 4' }} align="stretch" spacing={6}>
-          <Box className="gm-surface-card" p={4}>
-            <Heading as="h2" size="sm" mb={3}>{t('place.promo.posterTitle', 'Social poster preview')}</Heading>
-            {socialPosterPreview ? (
-              <Image
-                src={socialPosterPreview}
-                alt={t('place.promo.previewAlt', { name: entity.name, defaultValue: 'Promo card preview for {{name}}' })}
-                w="full"
-                h="auto"
-                maxH={{ base: '420px', md: '520px' }}
-                objectFit="contain"
-                objectPosition="center"
-                borderRadius="xl"
-                borderWidth="1px"
-                bg="gray.100"
-              />
-            ) : (
-              <Box h="260px" borderWidth="1px" borderRadius="xl" bg="gray.50" display="flex" alignItems="center" justifyContent="center">
-                <Text fontSize="sm" color="gray.500">{t('place.promo.generating', 'Generating preview...')}</Text>
-              </Box>
-            )}
-          </Box>
-
-          <Box className="gm-surface-card" p={4}>
-            <Heading as="h2" size="sm" mb={2}>{t('place.share.title', 'Celebrate this place on Googlementor')}</Heading>
-            <Text fontSize="sm" color="gray.700" mb={3}>{shareCaption}</Text>
-            <Button colorScheme="blue" minH="44px" w="full" mb={3} onClick={handleSharePlace}>
-              {t('place.share.heroButton', 'Share this place')}
-            </Button>
-            <SimpleGrid columns={{ base: 1, md: 2, xl: 1 }} spacing={2}>
-              <Button size="sm" minH="44px" variant="outline" onClick={handleShareCard}>
-                {t('place.share.cardButton', 'Share this card')}
-              </Button>
-              <Button size="sm" minH="44px" variant="outline" onClick={handleCopyCaption}>
-                {copiedCaption ? t('place.share.copiedShort', 'Copied') : t('place.share.copyCaption', 'Copy caption')}
-              </Button>
-              <Button size="sm" minH="44px" variant="outline" onClick={handleCopyLink}>
-                {copied ? t('place.share.copiedShort', 'Copied') : t('place.share.copyLink', 'Copy link')}
-              </Button>
-            </SimpleGrid>
-          </Box>
-
           {entity.aliases?.length ? (
             <Box className="gm-surface-card" p={4}>
               <Heading as="h2" size="sm" mb={3}>

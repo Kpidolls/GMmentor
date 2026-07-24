@@ -336,7 +336,7 @@
     },
     "promo": {
       "downloadPoster": "Download social poster",
-      "posterTitle": "Social poster preview",
+      "posterTitle": "Congratulations!",
       "previewAlt": "Promo card preview for {{name}}",
       "generating": "Generating preview...",
       "downloaded": "Promo card downloaded",

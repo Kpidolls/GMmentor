@@ -137,29 +137,32 @@ export function buildEntitySeoSignature(entity: EntityRecord): string {
   return `${entity.kind}::${normalizedName}::${normalizedLocation}`;
 }
 
-function intersectCount(left: string[], right: string[]): number {
-  const set = new Set(left);
-  return right.reduce((count, value) => (set.has(value) ? count + 1 : count), 0);
-}
-
 export function getSameCategoryEntities(current: EntityRecord, entities: EntityRecord[], limit = 8): EntityRecord[] {
-  if (current.kind !== 'restaurant' || !current.categoryIds?.length) {
+  const primaryCategoryId = current.categoryIds?.find(Boolean);
+  if (!primaryCategoryId) {
     return [];
   }
 
   return dedupeEntitiesByIdentity(entities)
-    .filter((entity) => entity.id !== current.id && entity.kind === 'restaurant' && (entity.categoryIds?.length ?? 0) > 0)
+    .filter((entity) =>
+      entity.id !== current.id &&
+      entity.kind !== 'municipality' &&
+      Array.isArray(entity.categoryIds) &&
+      entity.categoryIds.includes(primaryCategoryId)
+    )
     .map((entity) => ({
       entity,
-      overlap: intersectCount(current.categoryIds || [], entity.categoryIds || []),
       distance: calculateDistance(current.lat, current.lng, entity.lat, entity.lng),
     }))
-    .filter((item) => item.overlap > 0)
     .sort((a, b) => {
-      if (a.distance !== b.distance) {
-        return a.distance - b.distance;
+      const kindScoreA = a.entity.kind === current.kind ? 1 : 0;
+      const kindScoreB = b.entity.kind === current.kind ? 1 : 0;
+
+      if (kindScoreA !== kindScoreB) {
+        return kindScoreB - kindScoreA;
       }
-      return b.overlap - a.overlap;
+
+      return a.distance - b.distance;
     })
     .slice(0, limit)
     .map((item) => item.entity);
