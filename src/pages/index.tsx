@@ -23,6 +23,7 @@ const Canvas = dynamic(() => import('../components/Canvas'));
 const Product = dynamic(() => import('../components/Product'));
 const QASection = dynamic(() => import('../components/QASection'));
 const IslandList = dynamic(() => import('../components/IslandList'));
+const DestinationMapCarousel = dynamic(() => import('../components/DestinationMapCarousel'));
 const ProductShowcase = dynamic(() => import('../components/ProductShowcase'));
 const Reviews = dynamic(() => import('../components/Reviews'));
 const BrevoForm = dynamic(() => import('../components/BrevoForm'), { ssr: false });
@@ -166,6 +167,8 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
           <p className="gm-section-subtitle text-sm sm:text-base">{t('home.intro.answer', 'These curated maps and local picks highlight authentic tavernas, family-friendly spots and hidden gems, perfect for travelers and locals alike.')}</p>
         </div>
       </section>
+
+      <DestinationMapCarousel />
 
       {/* Tours & Activities Section */}
       <LazyShow rootMargin="250px">
