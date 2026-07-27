@@ -330,7 +330,8 @@
     "lat": "37.97831953861062",
     "lng": "23.727493287060057",
     "id": "burgersRestaurants_d55e3b1fc4f6",
-    "slug": "one-burger-d55e"
+    "slug": "one-burger-d55e",
+    "legacySlugs": ["one-burger-e836"]
   },
   {
     "url": "https://maps.app.goo.gl/tbzr2ePrf29seJBFA?g_st=ipc",

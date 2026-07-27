@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-27T09:32:40.750Z",
+    "generated_at": "2026-07-27T14:10:14.922Z",
     "generator_version": "1.0",
     "schema_version": 1,
     "canonical_url": "https://googlementor.com/data/entities.json",
@@ -130,6 +130,9 @@
     {
       "id": "asianRestaurants_0d95e4345c8a",
       "slug": "sushimou-0d95",
+      "legacySlugs": [
+        "sushimou-47da"
+      ],
       "kind": "restaurant",
       "name": "Sushimou",
       "lat": 37.97442757213257,
@@ -143,9 +146,6 @@
       "categories": [
         "Asian Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "sushimou-47da"
       ]
     },
     {
@@ -183,6 +183,9 @@
     {
       "id": "asianRestaurants_11df834afa0a",
       "slug": "axi-11df",
+      "legacySlugs": [
+        "axi-8113"
+      ],
       "kind": "restaurant",
       "name": "AXI - 阿锡早点",
       "lat": 37.98134764148285,
@@ -196,9 +199,6 @@
       "categories": [
         "Asian Restaurants",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "axi-8113"
       ]
     },
     {
@@ -364,6 +364,9 @@
     {
       "id": "asianRestaurants_38b8b7a5de82",
       "slug": "garum-athens-38b8",
+      "legacySlugs": [
+        "garum-athens-dc2b"
+      ],
       "kind": "restaurant",
       "name": "Garum Athens",
       "lat": 37.96322815000365,
@@ -377,14 +380,14 @@
       "categories": [
         "Asian Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "garum-athens-dc2b"
       ]
     },
     {
       "id": "asianRestaurants_3e39975f70d5",
       "slug": "streetwok-3e39",
+      "legacySlugs": [
+        "streetwok-7239"
+      ],
       "kind": "restaurant",
       "name": "StreetWok",
       "lat": 37.97689230907057,
@@ -398,9 +401,6 @@
       "categories": [
         "Asian Restaurants",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "streetwok-7239"
       ]
     },
     {
@@ -582,6 +582,9 @@
     {
       "id": "asianRestaurants_4bddf7fbcbe7",
       "slug": "street-wok-4bdd",
+      "legacySlugs": [
+        "street-wok-3ae9"
+      ],
       "kind": "restaurant",
       "name": "Street Wok",
       "lat": 37.99333429542986,
@@ -595,9 +598,6 @@
       "categories": [
         "Asian Restaurants",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "street-wok-3ae9"
       ]
     },
     {
@@ -763,6 +763,9 @@
     {
       "id": "asianRestaurants_594b8ad5ccca",
       "slug": "streetwok-594b",
+      "legacySlugs": [
+        "streetwok-1a58"
+      ],
       "kind": "restaurant",
       "name": "Streetwok",
       "lat": 38.08826144126291,
@@ -776,9 +779,6 @@
       "categories": [
         "Asian Restaurants",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "streetwok-1a58"
       ]
     },
     {
@@ -816,6 +816,9 @@
     {
       "id": "asianRestaurants_5d69fac12c7f",
       "slug": "tokyo-joe-mykonos-5d69",
+      "legacySlugs": [
+        "tokyo-joe-mykonos-5522"
+      ],
       "kind": "restaurant",
       "name": "Tokyo Joe Mykonos",
       "lat": 37.43430209897853,
@@ -829,9 +832,6 @@
       "categories": [
         "Asian Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "tokyo-joe-mykonos-5522"
       ]
     },
     {
@@ -901,6 +901,10 @@
     {
       "id": "asianRestaurants_6985f147fd97",
       "slug": "ekiben-kitchen-glyfada-6985",
+      "legacySlugs": [
+        "ekiben-kitchen-glyfada-7ec8",
+        "ekiben-kitchen-glyfada-da84"
+      ],
       "kind": "restaurant",
       "name": "Ekiben Kitchen Glyfada",
       "lat": 37.861176848381916,
@@ -914,14 +918,14 @@
       "categories": [
         "Asian Restaurants",
         "Burger Spots"
-      ],
-      "legacySlugs": [
-        "ekiben-kitchen-glyfada-7ec8"
       ]
     },
     {
       "id": "asianRestaurants_6ef4181fa78e",
       "slug": "kenko-japanese-restaurant-6ef4",
+      "legacySlugs": [
+        "kenko-japanese-restaurant-c964"
+      ],
       "kind": "restaurant",
       "name": "Kenko Japanese Restaurant",
       "lat": 37.94729381865282,
@@ -935,9 +939,6 @@
       "categories": [
         "Asian Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "kenko-japanese-restaurant-c964"
       ]
     },
     {
@@ -1103,6 +1104,9 @@
     {
       "id": "asianRestaurants_84fbfd57e68e",
       "slug": "ryotei-118-84fb",
+      "legacySlugs": [
+        "ryotei-118-5acf"
+      ],
       "kind": "restaurant",
       "name": "Ryōtei 118",
       "lat": 37.879367097165485,
@@ -1116,9 +1120,6 @@
       "categories": [
         "Asian Restaurants",
         "Burger Spots"
-      ],
-      "legacySlugs": [
-        "ryotei-118-5acf"
       ]
     },
     {
@@ -1236,6 +1237,9 @@
     {
       "id": "asianRestaurants_aa56878cf133",
       "slug": "nagomi-jpn-aa56",
+      "legacySlugs": [
+        "nagomi-jpn-eccd"
+      ],
       "kind": "restaurant",
       "name": "Nagomi Jpn",
       "lat": 40.63061239454344,
@@ -1249,9 +1253,6 @@
       "categories": [
         "Asian Restaurants",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "nagomi-jpn-eccd"
       ]
     },
     {
@@ -1289,6 +1290,9 @@
     {
       "id": "asianRestaurants_b60f010973e9",
       "slug": "street-wok-b60f",
+      "legacySlugs": [
+        "street-wok-ae06"
+      ],
       "kind": "restaurant",
       "name": "Street wok",
       "lat": 38.03415849667832,
@@ -1302,9 +1306,6 @@
       "categories": [
         "Asian Restaurants",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "street-wok-ae06"
       ]
     },
     {
@@ -1326,6 +1327,9 @@
     {
       "id": "asianRestaurants_c5266398dba0",
       "slug": "bebop-c526",
+      "legacySlugs": [
+        "bebop-2446"
+      ],
       "kind": "restaurant",
       "name": "Bebop",
       "lat": 37.08435266337157,
@@ -1339,14 +1343,14 @@
       "categories": [
         "Asian Restaurants",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "bebop-2446"
       ]
     },
     {
       "id": "asianRestaurants_c5be8384da5c",
       "slug": "hanoi-athens-authentic-vietnamese-food-c5be",
+      "legacySlugs": [
+        "hanoi-athens-authentic-vietnamese-food-1e56"
+      ],
       "kind": "restaurant",
       "name": "HANOI ATHENS - AUTHENTIC VIETNAMESE FOOD",
       "lat": 37.97561643327209,
@@ -1360,9 +1364,6 @@
       "categories": [
         "Asian Restaurants",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "hanoi-athens-authentic-vietnamese-food-1e56"
       ]
     },
     {
@@ -1496,6 +1497,9 @@
     {
       "id": "asianRestaurants_ddcb57380116",
       "slug": "ekiben-kitchen-ddcb",
+      "legacySlugs": [
+        "ekiben-kitchen-bf81"
+      ],
       "kind": "restaurant",
       "name": "EKIBEN KITCHEN",
       "lat": 37.97373780649657,
@@ -1509,9 +1513,6 @@
       "categories": [
         "Asian Restaurants",
         "Burger Spots"
-      ],
-      "legacySlugs": [
-        "ekiben-kitchen-bf81"
       ]
     },
     {
@@ -1549,6 +1550,9 @@
     {
       "id": "asianRestaurants_e28b11d8898b",
       "slug": "nolan-e28b",
+      "legacySlugs": [
+        "nolan-d22b"
+      ],
       "kind": "restaurant",
       "name": "Nolan",
       "lat": 37.97479795746223,
@@ -1562,14 +1566,15 @@
       "categories": [
         "Asian Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "nolan-d22b"
       ]
     },
     {
       "id": "asianRestaurants_e45a00190680",
       "slug": "nyx-japanese-rooftop-gastrobar-e45a",
+      "legacySlugs": [
+        "nyx-japanese-rooftop-gastrobar-3e6e",
+        "nyx-japanese-rooftop-gastrobar-f14e"
+      ],
       "kind": "restaurant",
       "name": "NYX Japanese Rooftop Gastrobar",
       "lat": 37.979692107976724,
@@ -1585,10 +1590,6 @@
         "Asian Restaurants",
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "nyx-japanese-rooftop-gastrobar-3e6e",
-        "nyx-japanese-rooftop-gastrobar-f14e"
       ]
     },
     {
@@ -1610,6 +1611,9 @@
     {
       "id": "asianRestaurants_ea18f7423739",
       "slug": "streetwok-ea18",
+      "legacySlugs": [
+        "streetwok-7394"
+      ],
       "kind": "restaurant",
       "name": "StreetWok",
       "lat": 37.94661589274436,
@@ -1623,9 +1627,6 @@
       "categories": [
         "Asian Restaurants",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "streetwok-7394"
       ]
     },
     {
@@ -1743,6 +1744,9 @@
     {
       "id": "burgersRestaurants_01217d39d9c7",
       "slug": "queen-burger-0121",
+      "legacySlugs": [
+        "queen-burger-95ea"
+      ],
       "kind": "restaurant",
       "name": "Queen Burger",
       "lat": 37.8629143636926,
@@ -1759,6 +1763,9 @@
     {
       "id": "burgersRestaurants_01b4e6c2697b",
       "slug": "smashtag-01b4",
+      "legacySlugs": [
+        "smashtag-4f7b"
+      ],
       "kind": "restaurant",
       "name": "SmashTag",
       "lat": 37.97799517923772,
@@ -1839,6 +1846,9 @@
     {
       "id": "burgersRestaurants_08ca7d0bda51",
       "slug": "koutsi-katsika-street-food-nea-filadelfeia-08ca",
+      "legacySlugs": [
+        "koutsi-katsika-street-food-nea-filadelfeia-2553"
+      ],
       "kind": "restaurant",
       "name": "Koutsi Katsika Street Food Νέα Φιλαδέλφεια",
       "lat": 38.03629712914596,
@@ -1852,9 +1862,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "koutsi-katsika-street-food-nea-filadelfeia-2553"
       ]
     },
     {
@@ -1876,6 +1883,9 @@
     {
       "id": "burgersRestaurants_0c007445e9cc",
       "slug": "balboa-thessaloniki-0c00",
+      "legacySlugs": [
+        "balboa-thessaloniki-bd4c"
+      ],
       "kind": "restaurant",
       "name": "Balboa Thessaloniki",
       "lat": 40.631911246314864,
@@ -1889,9 +1899,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "balboa-thessaloniki-bd4c"
       ]
     },
     {
@@ -1945,6 +1952,9 @@
     {
       "id": "burgersRestaurants_15242c3b8b89",
       "slug": "mpear-1524",
+      "legacySlugs": [
+        "mpear-e6f6"
+      ],
       "kind": "restaurant",
       "name": "MPEAR",
       "lat": 37.96750105563297,
@@ -2009,6 +2019,9 @@
     {
       "id": "burgersRestaurants_21be773739d0",
       "slug": "brothers-in-law-smash-n-pasta-thermi-21be",
+      "legacySlugs": [
+        "brothers-in-law-smash-n-pasta-thermi-6cb6"
+      ],
       "kind": "restaurant",
       "name": "Brothers in Law Smash 'n' Pasta Thermi",
       "lat": 40.5561230976469,
@@ -2022,9 +2035,6 @@
       "categories": [
         "Burger Spots",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "brothers-in-law-smash-n-pasta-thermi-6cb6"
       ]
     },
     {
@@ -2142,6 +2152,9 @@
     {
       "id": "burgersRestaurants_2c0faaef9d53",
       "slug": "holy-smoke-bbq-streetfood-2c0f",
+      "legacySlugs": [
+        "holy-smoke-bbq-streetfood-b910"
+      ],
       "kind": "restaurant",
       "name": "Holy Smoke BBQ Streetfood",
       "lat": 40.846110747356505,
@@ -2155,9 +2168,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "holy-smoke-bbq-streetfood-b910"
       ]
     },
     {
@@ -2195,6 +2205,9 @@
     {
       "id": "burgersRestaurants_333f3b6e6592",
       "slug": "chicken-queen-333f",
+      "legacySlugs": [
+        "chicken-queen-b3b7"
+      ],
       "kind": "restaurant",
       "name": "Chicken Queen",
       "lat": 37.96764787341708,
@@ -2208,9 +2221,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "chicken-queen-b3b7"
       ]
     },
     {
@@ -2264,6 +2274,9 @@
     {
       "id": "burgersRestaurants_3c1c73d21fec",
       "slug": "meat-n-roses-kolonaki-3c1c",
+      "legacySlugs": [
+        "meat-n-roses-kolonaki-9219"
+      ],
       "kind": "restaurant",
       "name": "Meat n Roses Kolonaki",
       "lat": 37.97828442263524,
@@ -2277,9 +2290,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "meat-n-roses-kolonaki-9219"
       ]
     },
     {
@@ -2301,6 +2311,9 @@
     {
       "id": "burgersRestaurants_4060fc5be247",
       "slug": "maestro-cantina-4060",
+      "legacySlugs": [
+        "maestro-cantina-5ff9"
+      ],
       "kind": "restaurant",
       "name": "Maestro Cantina",
       "lat": 40.539870288194706,
@@ -2314,9 +2327,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "maestro-cantina-5ff9"
       ]
     },
     {
@@ -2338,6 +2348,9 @@
     {
       "id": "burgersRestaurants_4906276397a1",
       "slug": "godgilla-keratsini-4906",
+      "legacySlugs": [
+        "godgilla-keratsini-e67b"
+      ],
       "kind": "restaurant",
       "name": "GODGILLA ΚΕΡΑΤΣΙΝΙ",
       "lat": 37.95895954039208,
@@ -2351,9 +2364,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "godgilla-keratsini-e67b"
       ]
     },
     {
@@ -2375,6 +2385,9 @@
     {
       "id": "burgersRestaurants_51cd3df73f20",
       "slug": "mpar-mpee-kioy-freattyda-51cd",
+      "legacySlugs": [
+        "mpar-mpee-kioy-freattyda-b711"
+      ],
       "kind": "restaurant",
       "name": "Μπαρ Μπεε Κιου - Φρεαττύδα",
       "lat": 37.93450645446817,
@@ -2388,9 +2401,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "mpar-mpee-kioy-freattyda-b711"
       ]
     },
     {
@@ -2412,6 +2422,11 @@
     {
       "id": "burgersRestaurants_54aa085a6ef8",
       "slug": "sinners-smash-burgers-54aa",
+      "legacySlugs": [
+        "sinners-smash-burgers-b864",
+        "sinners-smash-burgers-d89b",
+        "sinners-smash-burgers-e79f"
+      ],
       "kind": "restaurant",
       "name": "Sinners Smash Burgers",
       "lat": 40.57608642412674,
@@ -2425,9 +2440,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "sinners-smash-burgers-e79f"
       ]
     },
     {
@@ -2497,6 +2509,9 @@
     {
       "id": "burgersRestaurants_61f30a1a8896",
       "slug": "arch-beer-house-61f3",
+      "legacySlugs": [
+        "arch-beer-house-8940"
+      ],
       "kind": "restaurant",
       "name": "Arch Beer House",
       "lat": 38.013998175642,
@@ -2510,9 +2525,6 @@
       "categories": [
         "Burger Spots",
         "Greek Restaurants"
-      ],
-      "legacySlugs": [
-        "arch-beer-house-8940"
       ]
     },
     {
@@ -2630,6 +2642,9 @@
     {
       "id": "burgersRestaurants_7709ed422386",
       "slug": "raw-street-burger-thessaloniki-7709",
+      "legacySlugs": [
+        "raw-street-burger-thessaloniki-a3ea"
+      ],
       "kind": "restaurant",
       "name": "Raw Street Burger - Thessaloniki",
       "lat": 40.6360216575253,
@@ -2643,14 +2658,14 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "raw-street-burger-thessaloniki-a3ea"
       ]
     },
     {
       "id": "burgersRestaurants_797126963f1f",
       "slug": "amam-estiatorio-glyfada-7971",
+      "legacySlugs": [
+        "amam-estiatorio-glyfada-af98"
+      ],
       "kind": "restaurant",
       "name": "ΑΜΑΜ - ΕΣΤΙΑΤΟΡΙΟ - ΓΛΥΦΑΔΑ",
       "lat": 37.895880681449796,
@@ -2664,9 +2679,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "amam-estiatorio-glyfada-af98"
       ]
     },
     {
@@ -2688,6 +2700,9 @@
     {
       "id": "burgersRestaurants_7bcb47e330c5",
       "slug": "tryfonas-kempaptzidikon-hamburgerie-7bcb",
+      "legacySlugs": [
+        "tryfonas-kempaptzidikon-hamburgerie-390d"
+      ],
       "kind": "restaurant",
       "name": "Τρύφωνας Κεμπαπτζίδικoν - Hamburgerie",
       "lat": 38.0125506362582,
@@ -2701,9 +2716,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "tryfonas-kempaptzidikon-hamburgerie-390d"
       ]
     },
     {
@@ -2805,6 +2817,9 @@
     {
       "id": "burgersRestaurants_82d2f41d9265",
       "slug": "big-nick-82d2",
+      "legacySlugs": [
+        "big-nick-ce09"
+      ],
       "kind": "restaurant",
       "name": "Big Nick",
       "lat": 37.956445331565305,
@@ -2818,14 +2833,14 @@
       "categories": [
         "Burger Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "big-nick-ce09"
       ]
     },
     {
       "id": "burgersRestaurants_83b3a5ac6b77",
       "slug": "parco-83b3",
+      "legacySlugs": [
+        "parco-b30e"
+      ],
       "kind": "restaurant",
       "name": "Parco",
       "lat": 40.62746957872299,
@@ -2839,9 +2854,6 @@
       "categories": [
         "Burger Spots",
         "Coffee & Brunch Spots"
-      ],
-      "legacySlugs": [
-        "parco-b30e"
       ]
     },
     {
@@ -2863,6 +2875,9 @@
     {
       "id": "burgersRestaurants_8a735b95eb4f",
       "slug": "paul-s-burger-8a73",
+      "legacySlugs": [
+        "paul-s-burger-a56a"
+      ],
       "kind": "restaurant",
       "name": "Paul’s Burger",
       "lat": 40.59788362738132,
@@ -2876,14 +2891,15 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "paul-s-burger-a56a"
       ]
     },
     {
       "id": "burgersRestaurants_8f11f76e2e42",
       "slug": "maverick-handmade-street-food-8f11",
+      "legacySlugs": [
+        "maverick-handmade-street-food-77c2",
+        "maverick-handmade-street-food-7eb0"
+      ],
       "kind": "restaurant",
       "name": "MAVERICK Handmade Street Food",
       "lat": 40.5733294711661,
@@ -2897,14 +2913,15 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "maverick-handmade-street-food-77c2"
       ]
     },
     {
       "id": "burgersRestaurants_90d16bd5f050",
       "slug": "pratina-burger-project-90d1",
+      "legacySlugs": [
+        "pratina-burger-project-47ac",
+        "pratina-burger-project-939d"
+      ],
       "kind": "restaurant",
       "name": "PRATINA Burger Project",
       "lat": 40.63713764523389,
@@ -2918,9 +2935,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "pratina-burger-project-47ac"
       ]
     },
     {
@@ -2958,6 +2972,9 @@
     {
       "id": "burgersRestaurants_96fe4c6a69f2",
       "slug": "stivs-a-e-kerameikos-champoyrgker-pitses-96fe",
+      "legacySlugs": [
+        "stivs-a-e-kerameikos-champoyrgker-pitses-7e62"
+      ],
       "kind": "restaurant",
       "name": "ΣΤΗΒΣ Α.Ε. Κεραμεικός - ΧΑΜΠΟΥΡΓΚΕΡ & ΠΙΤΣΕΣ",
       "lat": 37.981862507718745,
@@ -2971,9 +2988,6 @@
       "categories": [
         "Burger Spots",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "stivs-a-e-kerameikos-champoyrgker-pitses-7e62"
       ]
     },
     {
@@ -3027,6 +3041,9 @@
     {
       "id": "burgersRestaurants_9c2f22b0606b",
       "slug": "hashtag-burger-9c2f",
+      "legacySlugs": [
+        "hashtag-burger-30dc"
+      ],
       "kind": "restaurant",
       "name": "Hashtag#Burger",
       "lat": 37.89371001882756,
@@ -3040,14 +3057,14 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "hashtag-burger-30dc"
       ]
     },
     {
       "id": "burgersRestaurants_9cd59af7183c",
       "slug": "mpiftekadiko-kyr-giorgis-9cd5",
+      "legacySlugs": [
+        "mpiftekadiko-kyr-giorgis-f682"
+      ],
       "kind": "restaurant",
       "name": "Μπιφτεκάδικο Κυρ Γιώργης",
       "lat": 40.63182341170209,
@@ -3064,6 +3081,9 @@
     {
       "id": "burgersRestaurants_a09dc77f6aff",
       "slug": "panburger-a09d",
+      "legacySlugs": [
+        "panburger-f679"
+      ],
       "kind": "restaurant",
       "name": "PANBURGER",
       "lat": 35.50835121764677,
@@ -3080,6 +3100,9 @@
     {
       "id": "burgersRestaurants_a0d6a061aa9e",
       "slug": "mvp-restaurant-a0d6",
+      "legacySlugs": [
+        "mvp-restaurant-4dab"
+      ],
       "kind": "restaurant",
       "name": "MVP RESTAURANT",
       "lat": 38.08823770971798,
@@ -3093,9 +3116,6 @@
       "categories": [
         "Burger Spots",
         "Mexican Restaurants"
-      ],
-      "legacySlugs": [
-        "mvp-restaurant-4dab"
       ]
     },
     {
@@ -3261,6 +3281,9 @@
     {
       "id": "burgersRestaurants_ba4a0b5f3045",
       "slug": "ryotei118-ba4a",
+      "legacySlugs": [
+        "ryotei118-04aa"
+      ],
       "kind": "restaurant",
       "name": "Ryōtei118",
       "lat": 37.87936856839685,
@@ -3277,6 +3300,9 @@
     {
       "id": "burgersRestaurants_bb792caf2487",
       "slug": "pax-burgers-bb79",
+      "legacySlugs": [
+        "pax-burgers-fce9"
+      ],
       "kind": "restaurant",
       "name": "Pax Burgers",
       "lat": 40.55495597120905,
@@ -3309,6 +3335,9 @@
     {
       "id": "burgersRestaurants_bfe01035e2db",
       "slug": "agora-select-bfe0",
+      "legacySlugs": [
+        "agora-select-aecd"
+      ],
       "kind": "restaurant",
       "name": "Agora Select",
       "lat": 37.97626574663726,
@@ -3322,14 +3351,14 @@
       "categories": [
         "Burger Spots",
         "Greek Restaurants"
-      ],
-      "legacySlugs": [
-        "agora-select-aecd"
       ]
     },
     {
       "id": "burgersRestaurants_c05eb7f13ddf",
       "slug": "psychiatreio-c05e",
+      "legacySlugs": [
+        "psychiatreio-6c0c"
+      ],
       "kind": "restaurant",
       "name": "Ψυχιατρείο",
       "lat": 37.941454787946455,
@@ -3343,14 +3372,16 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "psychiatreio-6c0c"
       ]
     },
     {
       "id": "burgersRestaurants_c2797cbf1cc8",
       "slug": "jacaranda-c279",
+      "legacySlugs": [
+        "jacaranda-05fa",
+        "jacaranda-0cc9",
+        "jacaranda-0e84"
+      ],
       "kind": "restaurant",
       "name": "Jacaranda",
       "lat": 40.583007556132294,
@@ -3364,9 +3395,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "jacaranda-05fa"
       ]
     },
     {
@@ -3388,6 +3416,9 @@
     {
       "id": "burgersRestaurants_c3d0c3efec16",
       "slug": "ohmami-street-food-thessaloniki-c3d0",
+      "legacySlugs": [
+        "ohmami-street-food-thessaloniki-b6d7"
+      ],
       "kind": "restaurant",
       "name": "Ohmami - Street Food / Thessaloniki",
       "lat": 40.63556199320903,
@@ -3401,9 +3432,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "ohmami-street-food-thessaloniki-b6d7"
       ]
     },
     {
@@ -3425,6 +3453,9 @@
     {
       "id": "burgersRestaurants_c839a7ca9229",
       "slug": "prigkipas-c839",
+      "legacySlugs": [
+        "prigkipas-f678"
+      ],
       "kind": "restaurant",
       "name": "Πρiγκιπας",
       "lat": 37.983677017107105,
@@ -3438,9 +3469,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "prigkipas-f678"
       ]
     },
     {
@@ -3526,6 +3554,9 @@
     {
       "id": "burgersRestaurants_ceb67d2517dd",
       "slug": "godgilla-umami-street-food-ceb6",
+      "legacySlugs": [
+        "godgilla-umami-street-food-784d"
+      ],
       "kind": "restaurant",
       "name": "Godgilla umami street food",
       "lat": 38.056565975998105,
@@ -3539,9 +3570,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "godgilla-umami-street-food-784d"
       ]
     },
     {
@@ -3579,6 +3607,11 @@
     {
       "id": "burgersRestaurants_d1dcd32d4d8e",
       "slug": "stivos-burger-steak-d1dc",
+      "legacySlugs": [
+        "stivos-burger-steak-b4bd",
+        "stivos-burger-steak-c034",
+        "stivos-burger-steak-c884"
+      ],
       "kind": "restaurant",
       "name": "STIVOS BURGER & STEAK",
       "lat": 40.669593987579994,
@@ -3592,14 +3625,15 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "stivos-burger-steak-c884"
       ]
     },
     {
       "id": "burgersRestaurants_d27855febf5e",
       "slug": "cantina-manara-d278",
+      "legacySlugs": [
+        "cantina-manara-3308",
+        "cantina-manara-5f60"
+      ],
       "kind": "restaurant",
       "name": "Cantina Manara",
       "lat": 40.6371113197463,
@@ -3613,9 +3647,6 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "cantina-manara-3308"
       ]
     },
     {
@@ -3637,6 +3668,9 @@
     {
       "id": "burgersRestaurants_d46a3e1807bd",
       "slug": "what-they-said-d46a",
+      "legacySlugs": [
+        "what-they-said-5482"
+      ],
       "kind": "restaurant",
       "name": "What They Said",
       "lat": 37.94935179980419,
@@ -3685,6 +3719,9 @@
     {
       "id": "burgersRestaurants_d5586ce24d0b",
       "slug": "osten-d558",
+      "legacySlugs": [
+        "osten-07fc"
+      ],
       "kind": "restaurant",
       "name": "OSTEN",
       "lat": 40.55792173583846,
@@ -3698,14 +3735,14 @@
       "categories": [
         "Burger Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "osten-07fc"
       ]
     },
     {
       "id": "burgersRestaurants_d55e3b1fc4f6",
       "slug": "one-burger-d55e",
+      "legacySlugs": [
+        "one-burger-e836"
+      ],
       "kind": "restaurant",
       "name": "ONE BURGER",
       "lat": 37.97831953861062,
@@ -3818,6 +3855,9 @@
     {
       "id": "burgersRestaurants_e6cca423021b",
       "slug": "rookie-skg-e6cc",
+      "legacySlugs": [
+        "rookie-skg-91f7"
+      ],
       "kind": "restaurant",
       "name": "Rookie.skg",
       "lat": 40.66725084444489,
@@ -3831,14 +3871,14 @@
       "categories": [
         "Burger Spots",
         "Gyros & Cheap Eats"
-      ],
-      "legacySlugs": [
-        "rookie-skg-91f7"
       ]
     },
     {
       "id": "burgersRestaurants_ebadcc0c31a2",
       "slug": "po-boys-skg-ebad",
+      "legacySlugs": [
+        "po-boys-skg-5562"
+      ],
       "kind": "restaurant",
       "name": "PO‘ BOYS skg",
       "lat": 40.63567624458847,
@@ -3983,6 +4023,9 @@
     {
       "id": "cheapEatsRestaurants_0155944d18e6",
       "slug": "feyrouz-athens-0155",
+      "legacySlugs": [
+        "feyrouz-athens-e417"
+      ],
       "kind": "restaurant",
       "name": "Feyrouz_Athens",
       "lat": 37.97815189918129,
@@ -3996,9 +4039,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "feyrouz-athens-e417"
       ]
     },
     {
@@ -4228,6 +4268,9 @@
     {
       "id": "cheapEatsRestaurants_09ba201c7611",
       "slug": "yum-tree-09ba",
+      "legacySlugs": [
+        "yum-tree-9cb3"
+      ],
       "kind": "restaurant",
       "name": "Yum Tree",
       "lat": 40.62786595411914,
@@ -4241,9 +4284,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "yum-tree-9cb3"
       ]
     },
     {
@@ -4393,6 +4433,9 @@
     {
       "id": "cheapEatsRestaurants_0f0b8dd68736",
       "slug": "the-doc-s-burger-bar-0f0b",
+      "legacySlugs": [
+        "the-doc-s-burger-bar-089d"
+      ],
       "kind": "restaurant",
       "name": "The Doc's Burger Bar",
       "lat": 37.97742334199844,
@@ -4406,9 +4449,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "the-doc-s-burger-bar-089d"
       ]
     },
     {
@@ -4638,6 +4678,9 @@
     {
       "id": "cheapEatsRestaurants_14153fc76d40",
       "slug": "because-bagel-1415",
+      "legacySlugs": [
+        "because-bagel-f384"
+      ],
       "kind": "restaurant",
       "name": "Because Bagel",
       "lat": 40.63057520882739,
@@ -4651,9 +4694,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Coffee & Brunch Spots"
-      ],
-      "legacySlugs": [
-        "because-bagel-f384"
       ]
     },
     {
@@ -4707,6 +4747,9 @@
     {
       "id": "cheapEatsRestaurants_158ee5dd1d4f",
       "slug": "cocorico-158e",
+      "legacySlugs": [
+        "cocorico-35c4"
+      ],
       "kind": "restaurant",
       "name": "Cocorico",
       "lat": 38.03523380190847,
@@ -4720,9 +4763,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Mexican Restaurants"
-      ],
-      "legacySlugs": [
-        "cocorico-35c4"
       ]
     },
     {
@@ -4904,6 +4944,9 @@
     {
       "id": "cheapEatsRestaurants_1eaaf4657a81",
       "slug": "thanasis-sons-1eaa",
+      "legacySlugs": [
+        "thanasis-sons-cbbe"
+      ],
       "kind": "restaurant",
       "name": "Thanasis & Sons",
       "lat": 40.60379888554604,
@@ -5224,6 +5267,9 @@
     {
       "id": "cheapEatsRestaurants_284a6ef1dfeb",
       "slug": "the-last-slice-284a",
+      "legacySlugs": [
+        "the-last-slice-2302"
+      ],
       "kind": "restaurant",
       "name": "The Last Slice",
       "lat": 40.63188753569458,
@@ -5237,9 +5283,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "the-last-slice-2302"
       ]
     },
     {
@@ -5501,6 +5544,9 @@
     {
       "id": "cheapEatsRestaurants_35033892194c",
       "slug": "souvlaki-street-3503",
+      "legacySlugs": [
+        "souvlaki-street-db8e"
+      ],
       "kind": "restaurant",
       "name": "Souvlaki Street",
       "lat": 40.60499215993171,
@@ -5533,6 +5579,9 @@
     {
       "id": "cheapEatsRestaurants_360afa6ead29",
       "slug": "salu-deli-bar-360a",
+      "legacySlugs": [
+        "salu-deli-bar-e516"
+      ],
       "kind": "restaurant",
       "name": "Salu Deli Bar",
       "lat": 40.62815289802217,
@@ -5546,9 +5595,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Coffee & Brunch Spots"
-      ],
-      "legacySlugs": [
-        "salu-deli-bar-e516"
       ]
     },
     {
@@ -5666,6 +5712,9 @@
     {
       "id": "cheapEatsRestaurants_3bf8a692d929",
       "slug": "argophageio-3bf8",
+      "legacySlugs": [
+        "argophageio-1c3c"
+      ],
       "kind": "restaurant",
       "name": "Argophageío",
       "lat": 40.631121382402085,
@@ -5762,6 +5811,9 @@
     {
       "id": "cheapEatsRestaurants_3f9006febdb5",
       "slug": "life-and-chicken-3f90",
+      "legacySlugs": [
+        "life-and-chicken-7865"
+      ],
       "kind": "restaurant",
       "name": "Life And Chicken",
       "lat": 40.63311964993022,
@@ -6002,6 +6054,9 @@
     {
       "id": "cheapEatsRestaurants_4ad6c8183391",
       "slug": "crats-mexican-4ad6",
+      "legacySlugs": [
+        "crats-mexican-d628"
+      ],
       "kind": "restaurant",
       "name": "Crats Mexican",
       "lat": 40.646440943227944,
@@ -6015,9 +6070,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Mexican Restaurants"
-      ],
-      "legacySlugs": [
-        "crats-mexican-d628"
       ]
     },
     {
@@ -6391,6 +6443,9 @@
     {
       "id": "cheapEatsRestaurants_598437c8481b",
       "slug": "gyradiko-o-christos-5984",
+      "legacySlugs": [
+        "gyradiko-o-christos-d71e"
+      ],
       "kind": "restaurant",
       "name": "Γυραδικο \"Ο Χρήστος\"",
       "lat": 37.7173396733135,
@@ -6404,9 +6459,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Greek Restaurants"
-      ],
-      "legacySlugs": [
-        "gyradiko-o-christos-d71e"
       ]
     },
     {
@@ -6668,6 +6720,9 @@
     {
       "id": "cheapEatsRestaurants_5f9d5dd343a6",
       "slug": "ypoyrgeio-geyseon-soyvlaki-psita-5f9d",
+      "legacySlugs": [
+        "ypoyrgeio-geyseon-soyvlaki-psita-5023"
+      ],
       "kind": "restaurant",
       "name": "ΥΠΟΥΡΓΕΙΟ ΓΕΥΣΕΩΝ-Σουβλάκι,Ψητά",
       "lat": 38.04303394507047,
@@ -6681,9 +6736,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Greek Restaurants"
-      ],
-      "legacySlugs": [
-        "ypoyrgeio-geyseon-soyvlaki-psita-5023"
       ]
     },
     {
@@ -6801,6 +6853,9 @@
     {
       "id": "cheapEatsRestaurants_63f6617fb3ad",
       "slug": "falafel-al-sharq-63f6",
+      "legacySlugs": [
+        "falafel-al-sharq-46b7"
+      ],
       "kind": "restaurant",
       "name": "Falafel Al Sharq",
       "lat": 37.98752255014304,
@@ -6814,9 +6869,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "falafel-al-sharq-46b7"
       ]
     },
     {
@@ -7254,6 +7306,10 @@
     {
       "id": "cheapEatsRestaurants_763f0b4ef33d",
       "slug": "pizza-poselli-763f",
+      "legacySlugs": [
+        "pizza-poselli-2a2e",
+        "pizza-poselli-5cd4"
+      ],
       "kind": "restaurant",
       "name": "Pízza Poselli",
       "lat": 40.63738632422352,
@@ -7267,9 +7323,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "pizza-poselli-5cd4"
       ]
     },
     {
@@ -7403,6 +7456,9 @@
     {
       "id": "cheapEatsRestaurants_7ae963e72327",
       "slug": "last-bite-7ae9",
+      "legacySlugs": [
+        "last-bite-cc54"
+      ],
       "kind": "restaurant",
       "name": "LAST BITE",
       "lat": 40.63432876296427,
@@ -7416,9 +7472,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "last-bite-cc54"
       ]
     },
     {
@@ -7472,6 +7525,9 @@
     {
       "id": "cheapEatsRestaurants_7d5766fbf936",
       "slug": "sesoula-street-food-7d57",
+      "legacySlugs": [
+        "sesoula-street-food-e169"
+      ],
       "kind": "restaurant",
       "name": "SESOULA Street Food",
       "lat": 40.63477422793839,
@@ -7888,6 +7944,9 @@
     {
       "id": "cheapEatsRestaurants_8f3b208739c0",
       "slug": "funky-s-thessaloniki-8f3b",
+      "legacySlugs": [
+        "funky-s-thessaloniki-ef2b"
+      ],
       "kind": "restaurant",
       "name": "Funky's Thessaloniki",
       "lat": 40.615543107651526,
@@ -7901,9 +7960,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "funky-s-thessaloniki-ef2b"
       ]
     },
     {
@@ -8277,6 +8333,9 @@
     {
       "id": "cheapEatsRestaurants_9e38740e23c2",
       "slug": "o-proedros-alimos-9e38",
+      "legacySlugs": [
+        "o-proedros-alimos-797f"
+      ],
       "kind": "restaurant",
       "name": "ο Πρόεδρος (Άλιμος)",
       "lat": 37.912881112573395,
@@ -8290,9 +8349,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Greek Restaurants"
-      ],
-      "legacySlugs": [
-        "o-proedros-alimos-797f"
       ]
     },
     {
@@ -8602,6 +8658,9 @@
     {
       "id": "cheapEatsRestaurants_abf9ebdbbc06",
       "slug": "taco-mazama-californian-style-mexican-street-food-abf9",
+      "legacySlugs": [
+        "taco-mazama-californian-style-mexican-street-food-77e6"
+      ],
       "kind": "restaurant",
       "name": "Taco Mazama (Californian Style Mexican Street Food)",
       "lat": 40.63149354851285,
@@ -8615,9 +8674,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Mexican Restaurants"
-      ],
-      "legacySlugs": [
-        "taco-mazama-californian-style-mexican-street-food-77e6"
       ]
     },
     {
@@ -8975,6 +9031,9 @@
     {
       "id": "cheapEatsRestaurants_c3e978d4eac2",
       "slug": "5f-c3e9",
+      "legacySlugs": [
+        "5f-7edc"
+      ],
       "kind": "restaurant",
       "name": "5Φ",
       "lat": 37.97277642269308,
@@ -8988,9 +9047,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Greek Restaurants"
-      ],
-      "legacySlugs": [
-        "5f-7edc"
       ]
     },
     {
@@ -9028,6 +9084,9 @@
     {
       "id": "cheapEatsRestaurants_c619a7c97409",
       "slug": "to-kokoraki-c619",
+      "legacySlugs": [
+        "to-kokoraki-5da1"
+      ],
       "kind": "restaurant",
       "name": "ΤΟ ΚΟΚΟΡΑΚΙ",
       "lat": 40.6088349903696,
@@ -9041,9 +9100,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Greek Restaurants"
-      ],
-      "legacySlugs": [
-        "to-kokoraki-5da1"
       ]
     },
     {
@@ -9129,6 +9185,9 @@
     {
       "id": "cheapEatsRestaurants_ccda7a47a1b9",
       "slug": "falafel-bar-to-revithi-ccda",
+      "legacySlugs": [
+        "falafel-bar-to-revithi-dec0"
+      ],
       "kind": "restaurant",
       "name": "falafel bar ΤΟ ΡΕΒΙΘΙ",
       "lat": 37.96631483519238,
@@ -9142,9 +9201,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "falafel-bar-to-revithi-dec0"
       ]
     },
     {
@@ -9278,6 +9334,9 @@
     {
       "id": "cheapEatsRestaurants_d094097525b6",
       "slug": "senor-picante-d094",
+      "legacySlugs": [
+        "senor-picante-fbd3"
+      ],
       "kind": "restaurant",
       "name": "Señor Picante",
       "lat": 37.965308606012925,
@@ -9291,9 +9350,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Mexican Restaurants"
-      ],
-      "legacySlugs": [
-        "senor-picante-fbd3"
       ]
     },
     {
@@ -9363,6 +9419,9 @@
     {
       "id": "cheapEatsRestaurants_d40ad575edd7",
       "slug": "michelangelo-skg-d40a",
+      "legacySlugs": [
+        "michelangelo-skg-4e92"
+      ],
       "kind": "restaurant",
       "name": "Michelangelo.skg",
       "lat": 40.65053808833563,
@@ -9376,9 +9435,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "michelangelo-skg-4e92"
       ]
     },
     {
@@ -9512,6 +9568,9 @@
     {
       "id": "cheapEatsRestaurants_d9e484914294",
       "slug": "mparmpalias-d9e4",
+      "legacySlugs": [
+        "mparmpalias-c76d"
+      ],
       "kind": "restaurant",
       "name": "Μπαρμπαλιάς",
       "lat": 38.022224299572,
@@ -9525,9 +9584,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Greek Restaurants"
-      ],
-      "legacySlugs": [
-        "mparmpalias-c76d"
       ]
     },
     {
@@ -9661,6 +9717,9 @@
     {
       "id": "cheapEatsRestaurants_e3e8b9399916",
       "slug": "chicktok-e3e8",
+      "legacySlugs": [
+        "chicktok-f847"
+      ],
       "kind": "restaurant",
       "name": "Chicktok",
       "lat": 35.509944678509925,
@@ -9757,6 +9816,9 @@
     {
       "id": "cheapEatsRestaurants_e80e8a708de9",
       "slug": "salento-wood-fired-street-food-e80e",
+      "legacySlugs": [
+        "salento-wood-fired-street-food-39b7"
+      ],
       "kind": "restaurant",
       "name": "Salento Wood Fired Street Food",
       "lat": 40.639269734572295,
@@ -9770,9 +9832,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "salento-wood-fired-street-food-39b7"
       ]
     },
     {
@@ -10226,6 +10285,9 @@
     {
       "id": "cheapEatsRestaurants_f6e9355765da",
       "slug": "armando-pizzeria-cafeteria-f6e9",
+      "legacySlugs": [
+        "armando-pizzeria-cafeteria-53d4"
+      ],
       "kind": "restaurant",
       "name": "Armando Pizzeria Cafeteria",
       "lat": 37.98213236236815,
@@ -10239,9 +10301,6 @@
       "categories": [
         "Gyros & Cheap Eats",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "armando-pizzeria-cafeteria-53d4"
       ]
     },
     {
@@ -10535,6 +10594,9 @@
     {
       "id": "coffeeBrunchRestaurants_03429eb3012a",
       "slug": "mamalouka-beach-bar-0342",
+      "legacySlugs": [
+        "mamalouka-beach-bar-b8de"
+      ],
       "kind": "restaurant",
       "name": "Mamalouka Beach Bar",
       "lat": 39.99397355305258,
@@ -10548,9 +10610,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Fish Tavernas"
-      ],
-      "legacySlugs": [
-        "mamalouka-beach-bar-b8de"
       ]
     },
     {
@@ -10572,6 +10631,9 @@
     {
       "id": "coffeeBrunchRestaurants_03891d56076e",
       "slug": "odori-0389",
+      "legacySlugs": [
+        "odori-0301"
+      ],
       "kind": "restaurant",
       "name": "Odori",
       "lat": 37.97922436265169,
@@ -10585,9 +10647,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "odori-0301"
       ]
     },
     {
@@ -10865,6 +10924,9 @@
     {
       "id": "coffeeBrunchRestaurants_0e2616bd7fc7",
       "slug": "saloon-park-0e26",
+      "legacySlugs": [
+        "saloon-park-ea50"
+      ],
       "kind": "restaurant",
       "name": "Saloon Park",
       "lat": 38.90092398449493,
@@ -10878,14 +10940,14 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Kid Friendly Locations"
-      ],
-      "legacySlugs": [
-        "saloon-park-ea50"
       ]
     },
     {
       "id": "coffeeBrunchRestaurants_0e2f635e730f",
       "slug": "savoidakis-bakery-patisserie-rethymno-0e2f",
+      "legacySlugs": [
+        "savoidakis-bakery-patisserie-rethymno-b443"
+      ],
       "kind": "restaurant",
       "name": "Σαβοϊδάκης Bakery & Patisserie, Ρέθυμνο",
       "lat": 35.364498475258735,
@@ -10899,9 +10961,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "savoidakis-bakery-patisserie-rethymno-b443"
       ]
     },
     {
@@ -10939,6 +10998,9 @@
     {
       "id": "coffeeBrunchRestaurants_10001909d6f1",
       "slug": "attic-urban-rooftop-1000",
+      "legacySlugs": [
+        "attic-urban-rooftop-7332"
+      ],
       "kind": "restaurant",
       "name": "Attic Urban Rooftop",
       "lat": 37.97687145726863,
@@ -10952,14 +11014,14 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "attic-urban-rooftop-7332"
       ]
     },
     {
       "id": "coffeeBrunchRestaurants_10b5704edcd7",
       "slug": "karminio-all-day-eatery-10b5",
+      "legacySlugs": [
+        "karminio-all-day-eatery-44c1"
+      ],
       "kind": "restaurant",
       "name": "KARMINIO - All Day Eatery",
       "lat": 37.963365261808825,
@@ -10973,9 +11035,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "karminio-all-day-eatery-44c1"
       ]
     },
     {
@@ -11301,6 +11360,9 @@
     {
       "id": "coffeeBrunchRestaurants_1b425a72f2b5",
       "slug": "join-juice-bars-1b42",
+      "legacySlugs": [
+        "join-juice-bars-6dea"
+      ],
       "kind": "restaurant",
       "name": "JOIN Juice bars",
       "lat": 40.63111893989398,
@@ -11314,9 +11376,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "join-juice-bars-6dea"
       ]
     },
     {
@@ -11562,6 +11621,9 @@
     {
       "id": "coffeeBrunchRestaurants_21280d2fc2ee",
       "slug": "telescope-cafe-bar-restaurant-2128",
+      "legacySlugs": [
+        "telescope-cafe-bar-restaurant-0981"
+      ],
       "kind": "restaurant",
       "name": "Telescope Cafe Bar Restaurant",
       "lat": 38.00692418431941,
@@ -11575,9 +11637,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "telescope-cafe-bar-restaurant-0981"
       ]
     },
     {
@@ -11663,6 +11722,9 @@
     {
       "id": "coffeeBrunchRestaurants_22ed699a380f",
       "slug": "mosaic-milos-22ed",
+      "legacySlugs": [
+        "mosaic-milos-55f4"
+      ],
       "kind": "restaurant",
       "name": "Mosaic Milos",
       "lat": 36.74431276131015,
@@ -11676,14 +11738,14 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "mosaic-milos-55f4"
       ]
     },
     {
       "id": "coffeeBrunchRestaurants_2322e1e847ee",
       "slug": "natu-2322",
+      "legacySlugs": [
+        "natu-8d64"
+      ],
       "kind": "restaurant",
       "name": "NATU",
       "lat": 38.07417552050554,
@@ -11697,9 +11759,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "natu-8d64"
       ]
     },
     {
@@ -11865,6 +11924,9 @@
     {
       "id": "coffeeBrunchRestaurants_26528fa68af9",
       "slug": "the-brunchers-2652",
+      "legacySlugs": [
+        "the-brunchers-2110"
+      ],
       "kind": "restaurant",
       "name": "The Brunchers",
       "lat": 37.97723167635048,
@@ -11878,9 +11940,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "the-brunchers-2110"
       ]
     },
     {
@@ -11950,6 +12009,9 @@
     {
       "id": "coffeeBrunchRestaurants_273a7e7d2a9d",
       "slug": "piu-verde-273a",
+      "legacySlugs": [
+        "piu-verde-840f"
+      ],
       "kind": "restaurant",
       "name": "Piu Verde",
       "lat": 37.993592134048,
@@ -11963,9 +12025,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Kid Friendly Locations"
-      ],
-      "legacySlugs": [
-        "piu-verde-840f"
       ]
     },
     {
@@ -12339,6 +12398,9 @@
     {
       "id": "coffeeBrunchRestaurants_377e5b2b94af",
       "slug": "hyper-astro-bar-377e",
+      "legacySlugs": [
+        "hyper-astro-bar-304d"
+      ],
       "kind": "restaurant",
       "name": "Hyper Astro Bar",
       "lat": 37.976752074692875,
@@ -12352,9 +12414,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "hyper-astro-bar-304d"
       ]
     },
     {
@@ -12424,6 +12483,9 @@
     {
       "id": "coffeeBrunchRestaurants_38190cc1f3e8",
       "slug": "morrison-the-premium-rooftop-3819",
+      "legacySlugs": [
+        "morrison-the-premium-rooftop-2f03"
+      ],
       "kind": "restaurant",
       "name": "Morrison • The Premium Rooftop",
       "lat": 40.60821540217915,
@@ -12437,14 +12499,14 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "morrison-the-premium-rooftop-2f03"
       ]
     },
     {
       "id": "coffeeBrunchRestaurants_3849ba172973",
       "slug": "ergon-agora-east-3849",
+      "legacySlugs": [
+        "ergon-agora-east-02cb"
+      ],
       "kind": "restaurant",
       "name": "ERGON Agora (East)",
       "lat": 40.55876847950934,
@@ -12458,9 +12520,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Kid Friendly Locations"
-      ],
-      "legacySlugs": [
-        "ergon-agora-east-02cb"
       ]
     },
     {
@@ -12562,6 +12621,9 @@
     {
       "id": "coffeeBrunchRestaurants_3bd143dc0b3c",
       "slug": "anana-coffee-food-3bd1",
+      "legacySlugs": [
+        "anana-coffee-food-aa80"
+      ],
       "kind": "restaurant",
       "name": "Anana Coffee|Food",
       "lat": 37.9790791623964,
@@ -12575,9 +12637,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "anana-coffee-food-aa80"
       ]
     },
     {
@@ -12727,6 +12786,9 @@
     {
       "id": "coffeeBrunchRestaurants_3f47d83b09c0",
       "slug": "butterflies-and-hurricanes-3f47",
+      "legacySlugs": [
+        "butterflies-and-hurricanes-37b6"
+      ],
       "kind": "restaurant",
       "name": "Butterflies And Hurricanes",
       "lat": 40.61464844201882,
@@ -12740,9 +12802,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "butterflies-and-hurricanes-37b6"
       ]
     },
     {
@@ -12780,6 +12839,9 @@
     {
       "id": "coffeeBrunchRestaurants_409a1c00e009",
       "slug": "fasolas-gastrokafeneio-409a",
+      "legacySlugs": [
+        "fasolas-gastrokafeneio-d95b"
+      ],
       "kind": "restaurant",
       "name": "Fasolas Gastrokafeneio",
       "lat": 37.05047829842748,
@@ -12793,9 +12855,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "fasolas-gastrokafeneio-d95b"
       ]
     },
     {
@@ -12897,6 +12956,9 @@
     {
       "id": "coffeeBrunchRestaurants_44bd3c6a7140",
       "slug": "theoria-tou-house-44bd",
+      "legacySlugs": [
+        "theoria-tou-house-74b7"
+      ],
       "kind": "restaurant",
       "name": "Theoria Tou House",
       "lat": 37.99483558716702,
@@ -12910,14 +12972,14 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "theoria-tou-house-74b7"
       ]
     },
     {
       "id": "coffeeBrunchRestaurants_459993a6b6f4",
       "slug": "join-juice-bars-4599",
+      "legacySlugs": [
+        "join-juice-bars-c6f3"
+      ],
       "kind": "restaurant",
       "name": "JOIN juice bars",
       "lat": 40.62769069211422,
@@ -12931,9 +12993,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "join-juice-bars-c6f3"
       ]
     },
     {
@@ -13067,6 +13126,9 @@
     {
       "id": "coffeeBrunchRestaurants_4c997e8e7df4",
       "slug": "the-place-secret-yard-4c99",
+      "legacySlugs": [
+        "the-place-secret-yard-0734"
+      ],
       "kind": "restaurant",
       "name": "The Place Secret Yard",
       "lat": 37.979297007842895,
@@ -13080,9 +13142,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "the-place-secret-yard-0734"
       ]
     },
     {
@@ -13104,6 +13163,9 @@
     {
       "id": "coffeeBrunchRestaurants_4d900c72bc80",
       "slug": "caffe-greco-4d90",
+      "legacySlugs": [
+        "caffe-greco-cc34"
+      ],
       "kind": "restaurant",
       "name": "Caffe Greco",
       "lat": 37.06283829210554,
@@ -13117,9 +13179,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "caffe-greco-cc34"
       ]
     },
     {
@@ -13269,6 +13328,9 @@
     {
       "id": "coffeeBrunchRestaurants_52c7c7c59252",
       "slug": "ciel-athens-52c7",
+      "legacySlugs": [
+        "ciel-athens-4c25"
+      ],
       "kind": "restaurant",
       "name": "Ciel Athens",
       "lat": 37.975701684177345,
@@ -13282,9 +13344,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "ciel-athens-4c25"
       ]
     },
     {
@@ -13322,6 +13381,9 @@
     {
       "id": "coffeeBrunchRestaurants_546a0710ab1d",
       "slug": "alexandros-cafe-restaurant-bar-546a",
+      "legacySlugs": [
+        "alexandros-cafe-restaurant-bar-ffaa"
+      ],
       "kind": "restaurant",
       "name": "Alexandros Cafe Restaurant Bar",
       "lat": 40.21526877453814,
@@ -13335,9 +13397,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "alexandros-cafe-restaurant-bar-ffaa"
       ]
     },
     {
@@ -13423,6 +13482,9 @@
     {
       "id": "coffeeBrunchRestaurants_5b87d322c2b5",
       "slug": "pink-dot-cafe-5b87",
+      "legacySlugs": [
+        "pink-dot-cafe-f1a3"
+      ],
       "kind": "restaurant",
       "name": "Pink Dot Cafe",
       "lat": 40.548406580479465,
@@ -13436,9 +13498,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "pink-dot-cafe-f1a3"
       ]
     },
     {
@@ -13700,6 +13759,9 @@
     {
       "id": "coffeeBrunchRestaurants_64018e74309c",
       "slug": "meltemi-6401",
+      "legacySlugs": [
+        "meltemi-57c8"
+      ],
       "kind": "restaurant",
       "name": "Meltemi",
       "lat": 36.545359250189506,
@@ -13713,9 +13775,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "meltemi-57c8"
       ]
     },
     {
@@ -13865,6 +13924,9 @@
     {
       "id": "coffeeBrunchRestaurants_6a62e770d50a",
       "slug": "mind-the-cup-6a62",
+      "legacySlugs": [
+        "mind-the-cup-0167"
+      ],
       "kind": "restaurant",
       "name": "Mind The Cup",
       "lat": 38.01157944836187,
@@ -13878,9 +13940,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "mind-the-cup-0167"
       ]
     },
     {
@@ -14142,6 +14201,9 @@
     {
       "id": "coffeeBrunchRestaurants_72ee5296056d",
       "slug": "holy-llama-72ee",
+      "legacySlugs": [
+        "holy-llama-4c1a"
+      ],
       "kind": "restaurant",
       "name": "Holy Llama",
       "lat": 37.97397500358649,
@@ -14155,9 +14217,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "holy-llama-4c1a"
       ]
     },
     {
@@ -14499,6 +14558,9 @@
     {
       "id": "coffeeBrunchRestaurants_7d9521648c08",
       "slug": "gellissimo-biscoto-brunch-coffee-thessaloniki-7d95",
+      "legacySlugs": [
+        "gellissimo-biscoto-brunch-coffee-thessaloniki-d34c"
+      ],
       "kind": "restaurant",
       "name": "Gellissimo Biscoto | Brunch • Coffee | Thessaloniki",
       "lat": 40.63140115464137,
@@ -14512,9 +14574,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "gellissimo-biscoto-brunch-coffee-thessaloniki-d34c"
       ]
     },
     {
@@ -14792,6 +14851,9 @@
     {
       "id": "coffeeBrunchRestaurants_85c9b3242244",
       "slug": "this-is-loco-85c9",
+      "legacySlugs": [
+        "this-is-loco-0b77"
+      ],
       "kind": "restaurant",
       "name": "This is Loco",
       "lat": 37.96542578565319,
@@ -14805,9 +14867,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "this-is-loco-0b77"
       ]
     },
     {
@@ -14861,6 +14920,9 @@
     {
       "id": "coffeeBrunchRestaurants_88ec9d6dfbbc",
       "slug": "joshua-tree-cafe-88ec",
+      "legacySlugs": [
+        "joshua-tree-cafe-e75c"
+      ],
       "kind": "restaurant",
       "name": "Joshua Tree Cafe",
       "lat": 37.96618895456632,
@@ -14874,9 +14936,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "joshua-tree-cafe-e75c"
       ]
     },
     {
@@ -14962,6 +15021,9 @@
     {
       "id": "coffeeBrunchRestaurants_8b66a0a4f338",
       "slug": "moorings-8b66",
+      "legacySlugs": [
+        "moorings-e85b"
+      ],
       "kind": "restaurant",
       "name": "Moorings",
       "lat": 37.80205351483022,
@@ -14975,9 +15037,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "moorings-e85b"
       ]
     },
     {
@@ -15111,6 +15170,9 @@
     {
       "id": "coffeeBrunchRestaurants_8ebbeeadfb00",
       "slug": "jerry-s-8ebb",
+      "legacySlugs": [
+        "jerry-s-4010"
+      ],
       "kind": "restaurant",
       "name": "JERRY’S",
       "lat": 37.99081436071943,
@@ -15124,14 +15186,14 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "jerry-s-4010"
       ]
     },
     {
       "id": "coffeeBrunchRestaurants_8eea389a06d0",
       "slug": "santo-belto-8eea",
+      "legacySlugs": [
+        "santo-belto-1567"
+      ],
       "kind": "restaurant",
       "name": "Santo Belto",
       "lat": 38.00295539657206,
@@ -15145,9 +15207,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "santo-belto-1567"
       ]
     },
     {
@@ -15201,6 +15260,9 @@
     {
       "id": "coffeeBrunchRestaurants_9257bf81b3ff",
       "slug": "fairytale-to-paramythopoleio-tis-n-filadelfeias-9257",
+      "legacySlugs": [
+        "fairytale-to-paramythopoleio-tis-n-filadelfeias-db46"
+      ],
       "kind": "restaurant",
       "name": "Fairytale – Το Παραμυθοπωλείο της Ν. Φιλαδέλφειας",
       "lat": 38.03555224332492,
@@ -15214,14 +15276,14 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "fairytale-to-paramythopoleio-tis-n-filadelfeias-db46"
       ]
     },
     {
       "id": "coffeeBrunchRestaurants_92ee7041cad1",
       "slug": "hush-coffee-brunch-92ee",
+      "legacySlugs": [
+        "hush-coffee-brunch-cd9a"
+      ],
       "kind": "restaurant",
       "name": "Hush - Coffee & Brunch",
       "lat": 40.63288453550874,
@@ -15350,6 +15412,9 @@
     {
       "id": "coffeeBrunchRestaurants_95dcd35af657",
       "slug": "artopoieio-zacharoplasteio-arto-zymia-95dc",
+      "legacySlugs": [
+        "artopoieio-zacharoplasteio-arto-zymia-afb8"
+      ],
       "kind": "restaurant",
       "name": "Αρτοποιείο Ζαχαροπλαστείο \"Αρτο..ζυμιά\"",
       "lat": 37.96420038301339,
@@ -15363,9 +15428,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "artopoieio-zacharoplasteio-arto-zymia-afb8"
       ]
     },
     {
@@ -15435,6 +15497,9 @@
     {
       "id": "coffeeBrunchRestaurants_988f2cbbbd9c",
       "slug": "liystor-988f",
+      "legacySlugs": [
+        "liystor-484f"
+      ],
       "kind": "restaurant",
       "name": "LIYSTOR",
       "lat": 37.97700032542266,
@@ -15448,9 +15513,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "liystor-484f"
       ]
     },
     {
@@ -15520,6 +15582,9 @@
     {
       "id": "coffeeBrunchRestaurants_9b9341bfba14",
       "slug": "join-juice-bars-9b93",
+      "legacySlugs": [
+        "join-juice-bars-3c92"
+      ],
       "kind": "restaurant",
       "name": "JOIN juice bars",
       "lat": 40.646571727400875,
@@ -15533,9 +15598,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "join-juice-bars-3c92"
       ]
     },
     {
@@ -15781,6 +15843,9 @@
     {
       "id": "coffeeBrunchRestaurants_a3547d8efbea",
       "slug": "kolokytha-a354",
+      "legacySlugs": [
+        "kolokytha-3090"
+      ],
       "kind": "restaurant",
       "name": "Kolokytha",
       "lat": 36.54726990012019,
@@ -15794,9 +15859,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "kolokytha-3090"
       ]
     },
     {
@@ -16090,6 +16152,9 @@
     {
       "id": "coffeeBrunchRestaurants_aba1a76a9734",
       "slug": "batistas-bakery-aba1",
+      "legacySlugs": [
+        "batistas-bakery-29b6"
+      ],
       "kind": "restaurant",
       "name": "Batistas Bakery",
       "lat": 37.120044252975426,
@@ -16103,9 +16168,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "batistas-bakery-29b6"
       ]
     },
     {
@@ -16255,6 +16317,9 @@
     {
       "id": "coffeeBrunchRestaurants_b086083463ae",
       "slug": "join-juice-bars-b086",
+      "legacySlugs": [
+        "join-juice-bars-124c"
+      ],
       "kind": "restaurant",
       "name": "JOIN juice bars",
       "lat": 40.60107511267006,
@@ -16268,9 +16333,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "join-juice-bars-124c"
       ]
     },
     {
@@ -16500,6 +16562,9 @@
     {
       "id": "coffeeBrunchRestaurants_b9df566768c1",
       "slug": "kora-b9df",
+      "legacySlugs": [
+        "kora-96fe"
+      ],
       "kind": "restaurant",
       "name": "KORA",
       "lat": 37.98011321585773,
@@ -16513,9 +16578,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "kora-96fe"
       ]
     },
     {
@@ -16729,6 +16791,9 @@
     {
       "id": "coffeeBrunchRestaurants_c2dcfed13dc1",
       "slug": "to-vazaki-juice-bar-c2dc",
+      "legacySlugs": [
+        "to-vazaki-juice-bar-fee3"
+      ],
       "kind": "restaurant",
       "name": "Το Βαζάκι Juice Bar",
       "lat": 38.021003514175945,
@@ -16742,9 +16807,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "to-vazaki-juice-bar-fee3"
       ]
     },
     {
@@ -16878,6 +16940,9 @@
     {
       "id": "coffeeBrunchRestaurants_c6ccd807225a",
       "slug": "bread-b-c-bread-before-christ-c6cc",
+      "legacySlugs": [
+        "bread-b-c-bread-before-christ-012b"
+      ],
       "kind": "restaurant",
       "name": "BREAD B.C. Bread Before Christ",
       "lat": 38.02007274297337,
@@ -16891,9 +16956,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "bread-b-c-bread-before-christ-012b"
       ]
     },
     {
@@ -17043,6 +17105,9 @@
     {
       "id": "coffeeBrunchRestaurants_cae5ad9a4492",
       "slug": "join-juice-bars-cae5",
+      "legacySlugs": [
+        "join-juice-bars-7a1d"
+      ],
       "kind": "restaurant",
       "name": "JOIN juice bars",
       "lat": 40.555069982077164,
@@ -17056,9 +17121,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "join-juice-bars-7a1d"
       ]
     },
     {
@@ -17192,6 +17254,9 @@
     {
       "id": "coffeeBrunchRestaurants_d00352ea6d8c",
       "slug": "du-pain-boulangerie-patisserie-cafe-chaidari-d003",
+      "legacySlugs": [
+        "du-pain-boulangerie-patisserie-cafe-chaidari-9c33"
+      ],
       "kind": "restaurant",
       "name": "Du Pain - Boulangerie | Patisserie | Cafe - Χαϊδάρι",
       "lat": 38.01212694777047,
@@ -17205,14 +17270,14 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "du-pain-boulangerie-patisserie-cafe-chaidari-9c33"
       ]
     },
     {
       "id": "coffeeBrunchRestaurants_d047b317da2a",
       "slug": "to-tsai-d047",
+      "legacySlugs": [
+        "to-tsai-23ba"
+      ],
       "kind": "restaurant",
       "name": "To Tsai",
       "lat": 37.97897316301174,
@@ -17226,9 +17291,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "to-tsai-23ba"
       ]
     },
     {
@@ -17346,6 +17408,9 @@
     {
       "id": "coffeeBrunchRestaurants_d3ad015b2f14",
       "slug": "candycat-d3ad",
+      "legacySlugs": [
+        "candycat-50a1"
+      ],
       "kind": "restaurant",
       "name": "CandyCat",
       "lat": 37.9775897353217,
@@ -17359,9 +17424,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "candycat-50a1"
       ]
     },
     {
@@ -17559,6 +17621,9 @@
     {
       "id": "coffeeBrunchRestaurants_e00fbc861ff8",
       "slug": "avaton-1739-coffee-wine-roof-e00f",
+      "legacySlugs": [
+        "avaton-1739-coffee-wine-roof-741d"
+      ],
       "kind": "restaurant",
       "name": "AVATON 1739 - Coffee & Wine Roof",
       "lat": 37.10529514165084,
@@ -17572,9 +17637,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "avaton-1739-coffee-wine-roof-741d"
       ]
     },
     {
@@ -17932,6 +17994,9 @@
     {
       "id": "coffeeBrunchRestaurants_ebe61501db3c",
       "slug": "anemologio-enallaktiko-kafe-ebe6",
+      "legacySlugs": [
+        "anemologio-enallaktiko-kafe-3bf9"
+      ],
       "kind": "restaurant",
       "name": "Ανεμολόγιο εναλλακτικό καφέ",
       "lat": 38.01553415279337,
@@ -17945,9 +18010,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Greek Restaurants"
-      ],
-      "legacySlugs": [
-        "anemologio-enallaktiko-kafe-3bf9"
       ]
     },
     {
@@ -18113,6 +18175,9 @@
     {
       "id": "coffeeBrunchRestaurants_f000d793a460",
       "slug": "bungalow7-athens-f000",
+      "legacySlugs": [
+        "bungalow7-athens-3c7a"
+      ],
       "kind": "restaurant",
       "name": "Bungalow7 Athens",
       "lat": 37.858739347203105,
@@ -18126,9 +18191,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "bungalow7-athens-3c7a"
       ]
     },
     {
@@ -18214,6 +18276,9 @@
     {
       "id": "coffeeBrunchRestaurants_f2909cf2cf63",
       "slug": "fresko-yogurt-bar-f290",
+      "legacySlugs": [
+        "fresko-yogurt-bar-7bd0"
+      ],
       "kind": "restaurant",
       "name": "Fresko Yogurt Bar",
       "lat": 37.97293031928317,
@@ -18227,9 +18292,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "fresko-yogurt-bar-7bd0"
       ]
     },
     {
@@ -18251,6 +18313,9 @@
     {
       "id": "coffeeBrunchRestaurants_f33248e61009",
       "slug": "prasini-tenta-lykavittos-f332",
+      "legacySlugs": [
+        "prasini-tenta-lykavittos-3190"
+      ],
       "kind": "restaurant",
       "name": "Πράσινη Τέντα, Λυκαβηττός",
       "lat": 37.980853849375265,
@@ -18264,14 +18329,14 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "prasini-tenta-lykavittos-3190"
       ]
     },
     {
       "id": "coffeeBrunchRestaurants_f3a3be0d750a",
       "slug": "alsos-cholargou-alsos-cholargoy-f3a3",
+      "legacySlugs": [
+        "alsos-cholargou-alsos-cholargoy-af91"
+      ],
       "kind": "restaurant",
       "name": "Alsos Cholargou / Άλσος Χολαργού",
       "lat": 37.99731205193856,
@@ -18285,9 +18350,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Kid Friendly Locations"
-      ],
-      "legacySlugs": [
-        "alsos-cholargou-alsos-cholargoy-af91"
       ]
     },
     {
@@ -18453,6 +18515,9 @@
     {
       "id": "coffeeBrunchRestaurants_f9825eace7fc",
       "slug": "les-zazous-f982",
+      "legacySlugs": [
+        "les-zazous-fd5e"
+      ],
       "kind": "restaurant",
       "name": "Les Zazous",
       "lat": 40.58600004577793,
@@ -18466,9 +18531,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "les-zazous-fd5e"
       ]
     },
     {
@@ -18538,6 +18600,9 @@
     {
       "id": "coffeeBrunchRestaurants_fb26a559a60b",
       "slug": "fairytale-athens-cafe-suites-fb26",
+      "legacySlugs": [
+        "fairytale-athens-cafe-suites-e14a"
+      ],
       "kind": "restaurant",
       "name": "Fairytale Athens Café & Suites",
       "lat": 37.97805432206773,
@@ -18551,9 +18616,6 @@
       "categories": [
         "Coffee & Brunch Spots",
         "Dessert Shops"
-      ],
-      "legacySlugs": [
-        "fairytale-athens-cafe-suites-e14a"
       ]
     },
     {
@@ -19407,6 +19469,9 @@
     {
       "id": "dessertsRestaurants_18a065b2a830",
       "slug": "despina-patisserie-18a0",
+      "legacySlugs": [
+        "despina-patisserie-1645"
+      ],
       "kind": "restaurant",
       "name": "Despina Patisserie",
       "lat": 37.861200491297915,
@@ -20831,6 +20896,9 @@
     {
       "id": "dessertsRestaurants_578f4bf4ed9c",
       "slug": "dimitris-economides-athens-578f",
+      "legacySlugs": [
+        "dimitris-economides-athens-e53f"
+      ],
       "kind": "restaurant",
       "name": "Dimitris Economides Athens",
       "lat": 38.008931143721306,
@@ -20844,9 +20912,6 @@
       "categories": [
         "Dessert Shops",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "dimitris-economides-athens-e53f"
       ]
     },
     {
@@ -21556,6 +21621,9 @@
     {
       "id": "dessertsRestaurants_7f61f06e1814",
       "slug": "ice-queen-gelato-7f61",
+      "legacySlugs": [
+        "ice-queen-gelato-e688"
+      ],
       "kind": "restaurant",
       "name": "Ice Queen Gelato",
       "lat": 37.96875198593791,
@@ -21569,9 +21637,6 @@
       "categories": [
         "Dessert Shops",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "ice-queen-gelato-e688"
       ]
     },
     {
@@ -21993,6 +22058,9 @@
     {
       "id": "dessertsRestaurants_90e20287b05d",
       "slug": "mourtzis-pistachio-and-traditional-sweets-90e2",
+      "legacySlugs": [
+        "mourtzis-pistachio-and-traditional-sweets-4635"
+      ],
       "kind": "restaurant",
       "name": "Mourtzis Pistachio and Traditional Sweets",
       "lat": 37.74642667880152,
@@ -22377,6 +22445,9 @@
     {
       "id": "dessertsRestaurants_a146fa72ad20",
       "slug": "ohh-boy-a146",
+      "legacySlugs": [
+        "ohh-boy-1239"
+      ],
       "kind": "restaurant",
       "name": "Ohh Boy",
       "lat": 37.97243442670494,
@@ -22390,9 +22461,6 @@
       "categories": [
         "Dessert Shops",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "ohh-boy-1239"
       ]
     },
     {
@@ -22430,6 +22498,9 @@
     {
       "id": "dessertsRestaurants_a4d470fd6efd",
       "slug": "dix-sept-a4d4",
+      "legacySlugs": [
+        "dix-sept-d158"
+      ],
       "kind": "restaurant",
       "name": "Dix Sept",
       "lat": 37.99369642530963,
@@ -22462,6 +22533,9 @@
     {
       "id": "dessertsRestaurants_a6a41ba19f78",
       "slug": "exereton-a6a4",
+      "legacySlugs": [
+        "exereton-e657"
+      ],
       "kind": "restaurant",
       "name": "Exereton",
       "lat": 40.63128878529408,
@@ -22475,9 +22549,6 @@
       "categories": [
         "Dessert Shops",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "exereton-e657"
       ]
     },
     {
@@ -22547,6 +22618,9 @@
     {
       "id": "dessertsRestaurants_ae317ae9a63f",
       "slug": "plan-e-t-ice-cream-ae31",
+      "legacySlugs": [
+        "plan-e-t-ice-cream-bddb"
+      ],
       "kind": "restaurant",
       "name": "Plan(e)t Ice Cream",
       "lat": 37.9768796209685,
@@ -22560,9 +22634,6 @@
       "categories": [
         "Dessert Shops",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "plan-e-t-ice-cream-bddb"
       ]
     },
     {
@@ -23112,6 +23183,9 @@
     {
       "id": "dessertsRestaurants_c341ccbd87e0",
       "slug": "ariston-lompotesis-c341",
+      "legacySlugs": [
+        "ariston-lompotesis-daef"
+      ],
       "kind": "restaurant",
       "name": "ΑΡΙΣΤΟΝ ΛΟΜΠΟΤΕΣΗΣ",
       "lat": 37.97670511785389,
@@ -23125,9 +23199,6 @@
       "categories": [
         "Dessert Shops",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "ariston-lompotesis-daef"
       ]
     },
     {
@@ -23181,6 +23252,9 @@
     {
       "id": "dessertsRestaurants_c99ab06196ae",
       "slug": "carpo-psychiko-c99a",
+      "legacySlugs": [
+        "carpo-psychiko-c351"
+      ],
       "kind": "restaurant",
       "name": "carpo psychiko",
       "lat": 38.00433299399579,
@@ -23293,6 +23367,9 @@
     {
       "id": "dessertsRestaurants_cdd2ff99e09f",
       "slug": "choureal-choux-profiterole-cdd2",
+      "legacySlugs": [
+        "choureal-choux-profiterole-dbb0"
+      ],
       "kind": "restaurant",
       "name": "Choureal - Choux & Profiterole",
       "lat": 37.86175419711277,
@@ -23597,6 +23674,9 @@
     {
       "id": "dessertsRestaurants_e497a22f982a",
       "slug": "mario-luigi-e497",
+      "legacySlugs": [
+        "mario-luigi-77b6"
+      ],
       "kind": "restaurant",
       "name": "Mario & Luigi",
       "lat": 37.96604463058155,
@@ -23610,9 +23690,6 @@
       "categories": [
         "Dessert Shops",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "mario-luigi-77b6"
       ]
     },
     {
@@ -23682,6 +23759,10 @@
     {
       "id": "dessertsRestaurants_e77e22a5c2ea",
       "slug": "patisserie-despina-e77e",
+      "legacySlugs": [
+        "patisserie-despina-7973",
+        "patisserie-despina-806d"
+      ],
       "kind": "restaurant",
       "name": "Patisserie Despina",
       "lat": 37.97835834410638,
@@ -25570,6 +25651,9 @@
     {
       "id": "familyFriendly_7fb51600aa06",
       "slug": "tavern-moustakas-7fb5",
+      "legacySlugs": [
+        "tavern-moustakas-abcf"
+      ],
       "kind": "restaurant",
       "name": "TAVERN 'MOUSTAKAS'",
       "lat": 40.48840354435027,
@@ -25583,9 +25667,6 @@
       "categories": [
         "Kid Friendly Locations",
         "Greek Restaurants"
-      ],
-      "legacySlugs": [
-        "tavern-moustakas-abcf"
       ]
     },
     {
@@ -25687,6 +25768,9 @@
     {
       "id": "familyFriendly_840d2fe28674",
       "slug": "ktima-kokotoy-840d",
+      "legacySlugs": [
+        "ktima-kokotoy-a927"
+      ],
       "kind": "restaurant",
       "name": "ΚΤΗΜΑ ΚΟΚΟΤΟΥ",
       "lat": 38.12312970101472,
@@ -25700,9 +25784,6 @@
       "categories": [
         "Kid Friendly Locations",
         "Wineries & Vineyards"
-      ],
-      "legacySlugs": [
-        "ktima-kokotoy-a927"
       ]
     },
     {
@@ -25964,6 +26045,9 @@
     {
       "id": "familyFriendly_97da3f56afb5",
       "slug": "ethnikos-kipos-97da",
+      "legacySlugs": [
+        "ethnikos-kipos-9c8c"
+      ],
       "kind": "restaurant",
       "name": "Εθνικός Κήπος",
       "lat": 37.97258568206085,
@@ -25977,9 +26061,6 @@
       "categories": [
         "Kid Friendly Locations",
         "Must-See Attractions"
-      ],
-      "legacySlugs": [
-        "ethnikos-kipos-9c8c"
       ]
     },
     {
@@ -26161,6 +26242,9 @@
     {
       "id": "familyFriendly_a3e2f6188bf1",
       "slug": "kentro-politismoy-idryma-stayros-niarchos-a3e2",
+      "legacySlugs": [
+        "kentro-politismoy-idryma-stayros-niarchos-dc50"
+      ],
       "kind": "restaurant",
       "name": "Κέντρο Πολιτισμού Ίδρυμα Σταύρος Νιάρχος",
       "lat": 37.93985683037055,
@@ -26174,9 +26258,6 @@
       "categories": [
         "Kid Friendly Locations",
         "Must-See Attractions"
-      ],
-      "legacySlugs": [
-        "kentro-politismoy-idryma-stayros-niarchos-dc50"
       ]
     },
     {
@@ -26198,6 +26279,9 @@
     {
       "id": "familyFriendly_a550b3686c2d",
       "slug": "ethniko-asteroskopeio-athinon-kentro-episkepton-thiseioy-a550",
+      "legacySlugs": [
+        "ethniko-asteroskopeio-athinon-kentro-episkepton-thiseioy-26d3"
+      ],
       "kind": "restaurant",
       "name": "Εθνικό Αστεροσκοπείο Αθηνών - Κέντρο Επισκεπτών Θησείου",
       "lat": 37.97274718818258,
@@ -26211,9 +26295,6 @@
       "categories": [
         "Kid Friendly Locations",
         "Must-See Attractions"
-      ],
-      "legacySlugs": [
-        "ethniko-asteroskopeio-athinon-kentro-episkepton-thiseioy-26d3"
       ]
     },
     {
@@ -26555,6 +26636,9 @@
     {
       "id": "familyFriendly_bba3af84c3c6",
       "slug": "bella-vespa-bba3",
+      "legacySlugs": [
+        "bella-vespa-976a"
+      ],
       "kind": "restaurant",
       "name": "Bella Vespa",
       "lat": 37.86706675735918,
@@ -26568,9 +26652,6 @@
       "categories": [
         "Kid Friendly Locations",
         "Italian Restaurants"
-      ],
-      "legacySlugs": [
-        "bella-vespa-976a"
       ]
     },
     {
@@ -26800,6 +26881,9 @@
     {
       "id": "familyFriendly_d34de8d9d566",
       "slug": "kerkini-lake-national-park-d34d",
+      "legacySlugs": [
+        "kerkini-lake-national-park-65d9"
+      ],
       "kind": "restaurant",
       "name": "Kerkini Lake National Park",
       "lat": 41.25926151784883,
@@ -26813,9 +26897,6 @@
       "categories": [
         "Kid Friendly Locations",
         "Must-See Attractions"
-      ],
-      "legacySlugs": [
-        "kerkini-lake-national-park-65d9"
       ]
     },
     {
@@ -27381,6 +27462,9 @@
     {
       "id": "fishTavernasRestaurants_052e930b9594",
       "slug": "thalassino-ageri-052e",
+      "legacySlugs": [
+        "thalassino-ageri-7d75"
+      ],
       "kind": "restaurant",
       "name": "Thalassino Ageri",
       "lat": 35.519850213268185,
@@ -27394,9 +27478,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "thalassino-ageri-7d75"
       ]
     },
     {
@@ -27514,6 +27595,9 @@
     {
       "id": "fishTavernasRestaurants_088f1a113b0b",
       "slug": "afropsaro-santorini-088f",
+      "legacySlugs": [
+        "afropsaro-santorini-da47"
+      ],
       "kind": "restaurant",
       "name": "Afropsaro Santorini",
       "lat": 36.44373697181477,
@@ -27527,9 +27611,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "afropsaro-santorini-da47"
       ]
     },
     {
@@ -27711,6 +27792,9 @@
     {
       "id": "fishTavernasRestaurants_12f95d4f93d0",
       "slug": "maiami-seafood-restaurant-12f9",
+      "legacySlugs": [
+        "maiami-seafood-restaurant-20a0"
+      ],
       "kind": "restaurant",
       "name": "Maiami Seafood Restaurant",
       "lat": 40.5660781564898,
@@ -27724,9 +27808,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "maiami-seafood-restaurant-20a0"
       ]
     },
     {
@@ -27764,6 +27845,9 @@
     {
       "id": "fishTavernasRestaurants_159bf25520a5",
       "slug": "varoulko-seaside-restaurant-159b",
+      "legacySlugs": [
+        "varoulko-seaside-restaurant-e7d4"
+      ],
       "kind": "restaurant",
       "name": "Varoulko Seaside Restaurant",
       "lat": 37.93728962950612,
@@ -27777,9 +27861,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "varoulko-seaside-restaurant-e7d4"
       ]
     },
     {
@@ -28137,6 +28218,9 @@
     {
       "id": "fishTavernasRestaurants_25699dc17efe",
       "slug": "spilia-mykonos-seaside-restaurant-2569",
+      "legacySlugs": [
+        "spilia-mykonos-seaside-restaurant-5ef9"
+      ],
       "kind": "restaurant",
       "name": "Spilia Mykonos Seaside Restaurant",
       "lat": 37.4346532807744,
@@ -28150,9 +28234,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "spilia-mykonos-seaside-restaurant-5ef9"
       ]
     },
     {
@@ -28206,6 +28287,9 @@
     {
       "id": "fishTavernasRestaurants_280f68f1857d",
       "slug": "kavos-280f",
+      "legacySlugs": [
+        "kavos-1d0d"
+      ],
       "kind": "restaurant",
       "name": "Κάβος",
       "lat": 37.9019948722367,
@@ -28219,9 +28303,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "kavos-1d0d"
       ]
     },
     {
@@ -28387,6 +28468,9 @@
     {
       "id": "fishTavernasRestaurants_2ec8563b4367",
       "slug": "anefani-2ec8",
+      "legacySlugs": [
+        "anefani-d906"
+      ],
       "kind": "restaurant",
       "name": "Ανεφάνη",
       "lat": 37.973535712152035,
@@ -28400,9 +28484,6 @@
       "categories": [
         "Fish Tavernas",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "anefani-d906"
       ]
     },
     {
@@ -29800,6 +29881,9 @@
     {
       "id": "fishTavernasRestaurants_721ec670613c",
       "slug": "ora-baresto-721e",
+      "legacySlugs": [
+        "ora-baresto-aeef"
+      ],
       "kind": "restaurant",
       "name": "ORA baresto",
       "lat": 37.398407848807196,
@@ -29813,9 +29897,6 @@
       "categories": [
         "Fish Tavernas",
         "Greek Restaurants"
-      ],
-      "legacySlugs": [
-        "ora-baresto-aeef"
       ]
     },
     {
@@ -30429,6 +30510,9 @@
     {
       "id": "fishTavernasRestaurants_8fa64823bdb9",
       "slug": "psarokokkalo-8fa6",
+      "legacySlugs": [
+        "psarokokkalo-9b9d"
+      ],
       "kind": "restaurant",
       "name": "Ψαροκόκκαλο",
       "lat": 38.05407148936591,
@@ -30442,14 +30526,14 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "psarokokkalo-9b9d"
       ]
     },
     {
       "id": "fishTavernasRestaurants_922d6e12caee",
       "slug": "grada-nuevo-922d",
+      "legacySlugs": [
+        "grada-nuevo-c78b"
+      ],
       "kind": "restaurant",
       "name": "Grada nuevo",
       "lat": 40.63326503370027,
@@ -30463,9 +30547,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "grada-nuevo-c78b"
       ]
     },
     {
@@ -30583,6 +30664,9 @@
     {
       "id": "fishTavernasRestaurants_9bf6858efa20",
       "slug": "siparos-seaside-restaurant-9bf6",
+      "legacySlugs": [
+        "siparos-seaside-restaurant-0493"
+      ],
       "kind": "restaurant",
       "name": "Siparos Seaside Restaurant",
       "lat": 37.12641356420799,
@@ -30596,9 +30680,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "siparos-seaside-restaurant-0493"
       ]
     },
     {
@@ -30748,6 +30829,9 @@
     {
       "id": "fishTavernasRestaurants_a41c35691ce2",
       "slug": "kritikos-restaurant-port-a41c",
+      "legacySlugs": [
+        "kritikos-restaurant-port-b8a8"
+      ],
       "kind": "restaurant",
       "name": "Kritikos Restaurant Port",
       "lat": 40.63312219901904,
@@ -30761,9 +30845,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "kritikos-restaurant-port-b8a8"
       ]
     },
     {
@@ -30785,6 +30866,9 @@
     {
       "id": "fishTavernasRestaurants_a752a7fe8192",
       "slug": "matsuhisa-athens-a752",
+      "legacySlugs": [
+        "matsuhisa-athens-c10d"
+      ],
       "kind": "restaurant",
       "name": "Matsuhisa Athens",
       "lat": 37.806991167366505,
@@ -30798,9 +30882,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "matsuhisa-athens-c10d"
       ]
     },
     {
@@ -31302,6 +31383,9 @@
     {
       "id": "fishTavernasRestaurants_c2965cc0335d",
       "slug": "maiolica-sifnos-c296",
+      "legacySlugs": [
+        "maiolica-sifnos-5a94"
+      ],
       "kind": "restaurant",
       "name": "Maiòlica Sifnos",
       "lat": 36.93201088219794,
@@ -31315,14 +31399,14 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "maiolica-sifnos-5a94"
       ]
     },
     {
       "id": "fishTavernasRestaurants_c390847dbff0",
       "slug": "papadakis-restaurant-c390",
+      "legacySlugs": [
+        "papadakis-restaurant-cdff"
+      ],
       "kind": "restaurant",
       "name": "Papadakis Restaurant",
       "lat": 37.97973026422826,
@@ -31336,9 +31420,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "papadakis-restaurant-cdff"
       ]
     },
     {
@@ -31536,6 +31617,9 @@
     {
       "id": "fishTavernasRestaurants_d0a79fe35429",
       "slug": "7-thalasses-d0a7",
+      "legacySlugs": [
+        "7-thalasses-f9b8"
+      ],
       "kind": "restaurant",
       "name": "7 Thalasses",
       "lat": 40.63335235155445,
@@ -31549,9 +31633,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "7-thalasses-f9b8"
       ]
     },
     {
@@ -31925,6 +32006,9 @@
     {
       "id": "fishTavernasRestaurants_e355b9bd1307",
       "slug": "arsanas-restaurant-e355",
+      "legacySlugs": [
+        "arsanas-restaurant-8335"
+      ],
       "kind": "restaurant",
       "name": "Arsanas Restaurant",
       "lat": 40.2141250129841,
@@ -31938,9 +32022,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "arsanas-restaurant-8335"
       ]
     },
     {
@@ -31962,6 +32043,9 @@
     {
       "id": "fishTavernasRestaurants_e4a529eccfe5",
       "slug": "akti-ntovil-sea-taste-e4a5",
+      "legacySlugs": [
+        "akti-ntovil-sea-taste-36db"
+      ],
       "kind": "restaurant",
       "name": "Akti Ntovil sea taste",
       "lat": 40.590227199252006,
@@ -31975,9 +32059,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "akti-ntovil-sea-taste-36db"
       ]
     },
     {
@@ -32111,6 +32192,9 @@
     {
       "id": "fishTavernasRestaurants_eb690c18b7db",
       "slug": "sea-satin-athens-riviera-eb69",
+      "legacySlugs": [
+        "sea-satin-athens-riviera-daf4"
+      ],
       "kind": "restaurant",
       "name": "Sea Satin Athens Riviera",
       "lat": 37.840376863615674,
@@ -32124,9 +32208,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "sea-satin-athens-riviera-daf4"
       ]
     },
     {
@@ -32196,6 +32277,9 @@
     {
       "id": "fishTavernasRestaurants_ecc815b7c2ba",
       "slug": "chromata-vythoy-ecc8",
+      "legacySlugs": [
+        "chromata-vythoy-9dbb"
+      ],
       "kind": "restaurant",
       "name": "Χρώματα Βυθού",
       "lat": 38.087925786455884,
@@ -32209,9 +32293,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "chromata-vythoy-9dbb"
       ]
     },
     {
@@ -32329,6 +32410,9 @@
     {
       "id": "fishTavernasRestaurants_f0d4e1537e1b",
       "slug": "hippie-fish-mykonos-f0d4",
+      "legacySlugs": [
+        "hippie-fish-mykonos-d24a"
+      ],
       "kind": "restaurant",
       "name": "Hippie Fish Mykonos",
       "lat": 37.4216168444124,
@@ -32342,9 +32426,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "hippie-fish-mykonos-d24a"
       ]
     },
     {
@@ -32478,6 +32559,9 @@
     {
       "id": "fishTavernasRestaurants_f8b7ef1f9834",
       "slug": "mavri-thalassa-f8b7",
+      "legacySlugs": [
+        "mavri-thalassa-e027"
+      ],
       "kind": "restaurant",
       "name": "Mavri Thalassa",
       "lat": 40.57843253808032,
@@ -32491,9 +32575,6 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "mavri-thalassa-e027"
       ]
     },
     {
@@ -34547,6 +34628,9 @@
     {
       "id": "greekRestaurants_2c46fb9be459",
       "slug": "basegrill-2c46",
+      "legacySlugs": [
+        "basegrill-e825"
+      ],
       "kind": "restaurant",
       "name": "Basegrill",
       "lat": 37.860629906056765,
@@ -34560,9 +34644,6 @@
       "categories": [
         "Greek Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "basegrill-e825"
       ]
     },
     {
@@ -38232,6 +38313,9 @@
     {
       "id": "greekRestaurants_776ec954209f",
       "slug": "maestranza-skg-776e",
+      "legacySlugs": [
+        "maestranza-skg-4bd7"
+      ],
       "kind": "restaurant",
       "name": "Maestranza.skg",
       "lat": 40.6389335540748,
@@ -38245,9 +38329,6 @@
       "categories": [
         "Greek Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "maestranza-skg-4bd7"
       ]
     },
     {
@@ -39485,6 +39566,9 @@
     {
       "id": "greekRestaurants_8f61506d1171",
       "slug": "basegrill-athens-8f61",
+      "legacySlugs": [
+        "basegrill-athens-1a54"
+      ],
       "kind": "restaurant",
       "name": "Basegrill Athens",
       "lat": 38.01200938597209,
@@ -39498,9 +39582,6 @@
       "categories": [
         "Greek Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "basegrill-athens-1a54"
       ]
     },
     {
@@ -40050,6 +40131,9 @@
     {
       "id": "greekRestaurants_9a0e0e6e3a9d",
       "slug": "feedel-urban-gastronomy-9a0e",
+      "legacySlugs": [
+        "feedel-urban-gastronomy-858d"
+      ],
       "kind": "restaurant",
       "name": "Feedέλ Urban Gastronomy",
       "lat": 37.976600766846424,
@@ -40063,9 +40147,6 @@
       "categories": [
         "Greek Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "feedel-urban-gastronomy-858d"
       ]
     },
     {
@@ -41783,6 +41864,9 @@
     {
       "id": "greekRestaurants_be06a546e935",
       "slug": "giantes-be06",
+      "legacySlugs": [
+        "giantes-2f3a"
+      ],
       "kind": "restaurant",
       "name": "Γιάντες",
       "lat": 37.98561482975353,
@@ -41796,9 +41880,6 @@
       "categories": [
         "Greek Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "giantes-2f3a"
       ]
     },
     {
@@ -42428,6 +42509,9 @@
     {
       "id": "greekRestaurants_ccfa82da91ec",
       "slug": "cafe-avissinia-ccfa",
+      "legacySlugs": [
+        "cafe-avissinia-a6f3"
+      ],
       "kind": "restaurant",
       "name": "Cafe Avissinia",
       "lat": 37.97665935435758,
@@ -42441,9 +42525,6 @@
       "categories": [
         "Greek Restaurants",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "cafe-avissinia-a6f3"
       ]
     },
     {
@@ -45073,6 +45154,9 @@
     {
       "id": "italianRestaurants_0a253e52c51e",
       "slug": "gorlomi-0a25",
+      "legacySlugs": [
+        "gorlomi-6cf0"
+      ],
       "kind": "restaurant",
       "name": "Gorlomi",
       "lat": 37.97728908184003,
@@ -45086,9 +45170,6 @@
       "categories": [
         "Italian Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "gorlomi-6cf0"
       ]
     },
     {
@@ -45158,6 +45239,9 @@
     {
       "id": "italianRestaurants_11b5c7ddc2cb",
       "slug": "lolita-s-athens-11b5",
+      "legacySlugs": [
+        "lolita-s-athens-c233"
+      ],
       "kind": "restaurant",
       "name": "Lolita's Athens",
       "lat": 38.00900399306317,
@@ -45171,9 +45255,6 @@
       "categories": [
         "Italian Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "lolita-s-athens-c233"
       ]
     },
     {
@@ -45435,6 +45516,9 @@
     {
       "id": "italianRestaurants_26670e11b304",
       "slug": "mercato-2667",
+      "legacySlugs": [
+        "mercato-ae1b"
+      ],
       "kind": "restaurant",
       "name": "Mercato",
       "lat": 37.804876583131545,
@@ -45448,9 +45532,6 @@
       "categories": [
         "Italian Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "mercato-ae1b"
       ]
     },
     {
@@ -45696,6 +45777,9 @@
     {
       "id": "italianRestaurants_3be4af98c471",
       "slug": "trattoria-capanna-3be4",
+      "legacySlugs": [
+        "trattoria-capanna-78fc"
+      ],
       "kind": "restaurant",
       "name": "Trattoria Capanna",
       "lat": 37.978619151360974,
@@ -45709,9 +45793,6 @@
       "categories": [
         "Italian Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "trattoria-capanna-78fc"
       ]
     },
     {
@@ -46453,6 +46534,9 @@
     {
       "id": "italianRestaurants_858265b3f822",
       "slug": "cosa-nostra-fresca-pasta-pagrati-8582",
+      "legacySlugs": [
+        "cosa-nostra-fresca-pasta-pagrati-5ddd"
+      ],
       "kind": "restaurant",
       "name": "Cosa Nostra Fresca Pasta Pagrati",
       "lat": 37.96783594678004,
@@ -46466,9 +46550,6 @@
       "categories": [
         "Italian Restaurants",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "cosa-nostra-fresca-pasta-pagrati-5ddd"
       ]
     },
     {
@@ -46602,6 +46683,9 @@
     {
       "id": "italianRestaurants_9ab88b8b6007",
       "slug": "innamorata-9ab8",
+      "legacySlugs": [
+        "innamorata-4f87"
+      ],
       "kind": "restaurant",
       "name": "Innamorata",
       "lat": 38.01461502802222,
@@ -46615,9 +46699,6 @@
       "categories": [
         "Italian Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "innamorata-4f87"
       ]
     },
     {
@@ -47583,6 +47664,9 @@
     {
       "id": "italianRestaurants_ef50c7962b4c",
       "slug": "napule-tinos-restaurant-ef50",
+      "legacySlugs": [
+        "napule-tinos-restaurant-5194"
+      ],
       "kind": "restaurant",
       "name": "Napule Tinos Restaurant",
       "lat": 37.561247297622636,
@@ -47596,9 +47680,6 @@
       "categories": [
         "Italian Restaurants",
         "Luxury Dining"
-      ],
-      "legacySlugs": [
-        "napule-tinos-restaurant-5194"
       ]
     },
     {
@@ -48180,6 +48261,9 @@
     {
       "id": "luxuryDiningRestaurants_1c82eb719373",
       "slug": "mappemonde-restaurant-bar-lounge-1c82",
+      "legacySlugs": [
+        "mappemonde-restaurant-bar-lounge-a1dc"
+      ],
       "kind": "restaurant",
       "name": "MAPPEMONDE RESTAURANT BAR-LOUNGE",
       "lat": 37.97696364697298,
@@ -48193,9 +48277,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "mappemonde-restaurant-bar-lounge-a1dc"
       ]
     },
     {
@@ -48249,6 +48330,9 @@
     {
       "id": "luxuryDiningRestaurants_1ec414f34680",
       "slug": "okra-1ec4",
+      "legacySlugs": [
+        "okra-912c"
+      ],
       "kind": "restaurant",
       "name": "Okra",
       "lat": 37.976265060511366,
@@ -48262,9 +48346,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "okra-912c"
       ]
     },
     {
@@ -48286,6 +48367,9 @@
     {
       "id": "luxuryDiningRestaurants_223cae9767cf",
       "slug": "nest-rooftop-monte-kastella-223c",
+      "legacySlugs": [
+        "nest-rooftop-monte-kastella-d731"
+      ],
       "kind": "restaurant",
       "name": "ΝΕΣΤ Rooftop - Monte Kastella",
       "lat": 37.93966255701075,
@@ -48299,9 +48383,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "nest-rooftop-monte-kastella-d731"
       ]
     },
     {
@@ -48371,6 +48452,9 @@
     {
       "id": "luxuryDiningRestaurants_2a500f95083c",
       "slug": "the-zillers-rooftop-gastronomy-2a50",
+      "legacySlugs": [
+        "the-zillers-rooftop-gastronomy-deda"
+      ],
       "kind": "restaurant",
       "name": "The Zillers Rooftop Gastronomy",
       "lat": 37.97561073825588,
@@ -48384,14 +48468,14 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "the-zillers-rooftop-gastronomy-deda"
       ]
     },
     {
       "id": "luxuryDiningRestaurants_2ae90f83c8cf",
       "slug": "the-secret-gorge-restaurant-wine-tasting-experience-2ae9",
+      "legacySlugs": [
+        "the-secret-gorge-restaurant-wine-tasting-experience-46f1"
+      ],
       "kind": "restaurant",
       "name": "The Secret Gorge - Restaurant & Wine Tasting Experience",
       "lat": 35.36437434920116,
@@ -48405,9 +48489,6 @@
       "categories": [
         "Luxury Dining",
         "Wineries & Vineyards"
-      ],
-      "legacySlugs": [
-        "the-secret-gorge-restaurant-wine-tasting-experience-46f1"
       ]
     },
     {
@@ -48605,6 +48686,9 @@
     {
       "id": "luxuryDiningRestaurants_44502c11c3d7",
       "slug": "orizontes-lycabettus-4450",
+      "legacySlugs": [
+        "orizontes-lycabettus-8840"
+      ],
       "kind": "restaurant",
       "name": "Orizontes Lycabettus",
       "lat": 37.98180885773441,
@@ -48618,9 +48702,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "orizontes-lycabettus-8840"
       ]
     },
     {
@@ -48674,6 +48755,9 @@
     {
       "id": "luxuryDiningRestaurants_45e8a4dd5c78",
       "slug": "metropolis-roof-garden-45e8",
+      "legacySlugs": [
+        "metropolis-roof-garden-f3d7"
+      ],
       "kind": "restaurant",
       "name": "Metropolis Roof Garden",
       "lat": 37.97522262578899,
@@ -48687,9 +48771,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "metropolis-roof-garden-f3d7"
       ]
     },
     {
@@ -48871,6 +48952,9 @@
     {
       "id": "luxuryDiningRestaurants_625d4bb407a4",
       "slug": "tudor-hall-625d",
+      "legacySlugs": [
+        "tudor-hall-611d"
+      ],
       "kind": "restaurant",
       "name": "Tudor Hall",
       "lat": 37.97626476939356,
@@ -48884,9 +48968,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "tudor-hall-611d"
       ]
     },
     {
@@ -48972,6 +49053,9 @@
     {
       "id": "luxuryDiningRestaurants_6d0eec69a8bb",
       "slug": "sense-modern-greek-cuisine-6d0e",
+      "legacySlugs": [
+        "sense-modern-greek-cuisine-ffb0"
+      ],
       "kind": "restaurant",
       "name": "SENSE Modern Greek Cuisine",
       "lat": 37.96950501164825,
@@ -48985,9 +49069,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "sense-modern-greek-cuisine-ffb0"
       ]
     },
     {
@@ -49217,6 +49298,9 @@
     {
       "id": "luxuryDiningRestaurants_83e86c45f94e",
       "slug": "dolli-s-83e8",
+      "legacySlugs": [
+        "dolli-s-6749"
+      ],
       "kind": "restaurant",
       "name": "DOLLI•S",
       "lat": 37.97581257538226,
@@ -49230,9 +49314,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "dolli-s-6749"
       ]
     },
     {
@@ -49366,6 +49447,9 @@
     {
       "id": "luxuryDiningRestaurants_8f9976dae124",
       "slug": "point-a-acropolis-point-8f99",
+      "legacySlugs": [
+        "point-a-acropolis-point-fcea"
+      ],
       "kind": "restaurant",
       "name": "POINT A (Acropolis Point)",
       "lat": 37.968415622994755,
@@ -49379,9 +49463,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "point-a-acropolis-point-fcea"
       ]
     },
     {
@@ -49483,6 +49564,9 @@
     {
       "id": "luxuryDiningRestaurants_9eaec42e6069",
       "slug": "hytra-restaurant-bar-9eae",
+      "legacySlugs": [
+        "hytra-restaurant-bar-8f5c"
+      ],
       "kind": "restaurant",
       "name": "Hytra Restaurant & Bar",
       "lat": 37.98167691309065,
@@ -49496,9 +49580,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "hytra-restaurant-bar-8f5c"
       ]
     },
     {
@@ -50080,6 +50161,9 @@
     {
       "id": "luxuryDiningRestaurants_d4cce740d47c",
       "slug": "rooftop-terrace-on-top-of-st-george-hotel-d4cc",
+      "legacySlugs": [
+        "rooftop-terrace-on-top-of-st-george-hotel-9716"
+      ],
       "kind": "restaurant",
       "name": "Rooftop Terrace on top of St. George Hotel",
       "lat": 37.97925289319014,
@@ -50093,14 +50177,14 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "rooftop-terrace-on-top-of-st-george-hotel-9716"
       ]
     },
     {
       "id": "luxuryDiningRestaurants_d7864d62c4d5",
       "slug": "electra-roof-garden-d786",
+      "legacySlugs": [
+        "electra-roof-garden-e530"
+      ],
       "kind": "restaurant",
       "name": "Electra Roof Garden",
       "lat": 37.97379853875271,
@@ -50114,9 +50198,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "electra-roof-garden-e530"
       ]
     },
     {
@@ -50314,6 +50395,9 @@
     {
       "id": "luxuryDiningRestaurants_ea67b94ccce5",
       "slug": "art-lounge-rooftop-ea67",
+      "legacySlugs": [
+        "art-lounge-rooftop-f22b"
+      ],
       "kind": "restaurant",
       "name": "Art Lounge Rooftop",
       "lat": 37.97343240978713,
@@ -50327,9 +50411,6 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
-      ],
-      "legacySlugs": [
-        "art-lounge-rooftop-f22b"
       ]
     },
     {
@@ -51199,6 +51280,9 @@
     {
       "id": "mexicanRestaurants_e022afb77fe2",
       "slug": "amigos-e022",
+      "legacySlugs": [
+        "amigos-83a2"
+      ],
       "kind": "restaurant",
       "name": "Amigos",
       "lat": 37.94499454255761,
@@ -51212,9 +51296,6 @@
       "categories": [
         "Mexican Restaurants",
         "Vegetarian Friendly Restaurants"
-      ],
-      "legacySlugs": [
-        "amigos-83a2"
       ]
     },
     {
@@ -51780,6 +51861,9 @@
     {
       "id": "monasteriesChurches_9012455a363d",
       "slug": "iera-moni-dafnioy-9012",
+      "legacySlugs": [
+        "iera-moni-dafnioy-2115"
+      ],
       "kind": "restaurant",
       "name": "Ιερά Μονή Δαφνίου",
       "lat": 38.012995167161115,
@@ -51793,9 +51877,6 @@
       "categories": [
         "Monasteries & Spiritual Sites",
         "Must-See Attractions"
-      ],
-      "legacySlugs": [
-        "iera-moni-dafnioy-2115"
       ]
     },
     {
@@ -51897,6 +51978,9 @@
     {
       "id": "monasteriesChurches_caa9124a394d",
       "slug": "ieros-naos-agion-isidoron-lykavittoy-caa9",
+      "legacySlugs": [
+        "ieros-naos-agion-isidoron-lykavittoy-361f"
+      ],
       "kind": "restaurant",
       "name": "Ιερός Ναός Αγίων Ισιδώρων Λυκαβηττού",
       "lat": 37.982296617522,
@@ -51910,9 +51994,6 @@
       "categories": [
         "Monasteries & Spiritual Sites",
         "Must-See Attractions"
-      ],
-      "legacySlugs": [
-        "ieros-naos-agion-isidoron-lykavittoy-361f"
       ]
     },
     {
