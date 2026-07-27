@@ -45,6 +45,35 @@ function restaurantCompletenessScore(item: RestaurantLocation): number {
   return score;
 }
 
+function mergeRestaurantRecords(preferred: RestaurantLocation, incoming: RestaurantLocation): RestaurantLocation {
+  const legacySlugSet = new Set<string>();
+
+  if (preferred.legacySlugs?.length) {
+    preferred.legacySlugs.forEach((slug) => {
+      if (slug) legacySlugSet.add(slug);
+    });
+  }
+
+  if (incoming.legacySlugs?.length) {
+    incoming.legacySlugs.forEach((slug) => {
+      if (slug) legacySlugSet.add(slug);
+    });
+  }
+
+  if (preferred.slug && incoming.slug && preferred.slug !== incoming.slug) {
+    legacySlugSet.add(incoming.slug);
+  }
+
+  if (preferred.slug) {
+    legacySlugSet.delete(preferred.slug);
+  }
+
+  return {
+    ...preferred,
+    legacySlugs: legacySlugSet.size > 0 ? Array.from(legacySlugSet).sort((a, b) => a.localeCompare(b)) : undefined,
+  };
+}
+
 /** Return a non-empty trimmed string or undefined. */
 function asStr(v: unknown): string | undefined {
   return typeof v === 'string' && v.trim() ? v.trim() : undefined;
@@ -87,6 +116,7 @@ export function toRestaurant(raw: RawRecord): RestaurantLocation | null {
     kind: 'restaurant',
     id: asStr(raw['id']),
     slug: asStr(raw['slug']),
+    legacySlugs: asStringArray(raw['legacySlugs']),
     name,
     url: asStr(raw['url']),
     address: asStr(raw['address']) ?? '',
@@ -157,9 +187,9 @@ export function toRestaurantList(raw: unknown[]): RestaurantLocation[] {
       const existingScore = restaurantCompletenessScore(existing);
       const currentScore = restaurantCompletenessScore(mapped);
 
-      if (currentScore > existingScore) {
-        byIdentity.set(key, mapped);
-      }
+      const preferred = currentScore > existingScore ? mapped : existing;
+      const incoming = preferred === mapped ? existing : mapped;
+      byIdentity.set(key, mergeRestaurantRecords(preferred, incoming));
     }
   }
   return Array.from(byIdentity.values());

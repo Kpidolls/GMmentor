@@ -26,7 +26,7 @@ import {
   getSameCategoryEntities,
   loadEntitiesIndex,
 } from '../../lib/entities';
-import { getMentionedGuidesForEntity } from '../../lib/knowledgeGraph';
+import { getGuideVariantByLanguage, getMentionedGuidesForEntity } from '../../lib/knowledgeGraph';
 import { getPlaceEnrichmentByEntityId, PlaceEnrichment } from '../../lib/placeEnrichment';
 import { calculateDistance } from '../../utils/locationUtils';
 import { sanitizeAddressForDisplay } from '../../utils/addressUtils';
@@ -110,8 +110,14 @@ type EntityPageProps = {
   entity: EntityRecord;
   sameCategory: EntityRecord[];
   nearby: Array<EntityRecord & { distanceKm: number }>;
-  mentionedGuides: Array<{ slug: string; title: string }>;
+  mentionedGuides: Array<{
+    slug: string;
+    title: string;
+    elSlug: string | null;
+    elTitle: string | null;
+  }>;
   canonicalSlug: string;
+  isAliasSlug: boolean;
   enrichment: PlaceEnrichment['effective'] | null;
   areaContext: {
     slug: string;
@@ -475,9 +481,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const index = loadEntitiesIndex();
   const slugSet = new Set<string>();
 
-  index.entities
-    .filter((entity) => entity.kind !== 'municipality')
-    .forEach((entity) => {
+  index.entities.forEach((entity) => {
+    if (entity.kind === 'municipality') {
+      return;
+    }
+
     if (entity.slug) {
       slugSet.add(entity.slug);
     }
@@ -502,9 +510,9 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
 
   const index = loadEntitiesIndex();
   const discoverableEntities = index.entities.filter((candidate) => candidate.kind !== 'municipality');
-  const entity = findEntityBySlug(discoverableEntities, slug);
+  const entity = findEntityBySlug(index.entities, slug);
 
-  if (!entity) {
+  if (!entity || entity.kind === 'municipality') {
     return { notFound: true };
   }
 
@@ -591,11 +599,17 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
       entity,
       sameCategory: getSameCategoryEntities(entity, discoverableEntities, 12),
       nearby: nearbyWithDistance,
-      mentionedGuides: getMentionedGuidesForEntity(entity, 8).map((post) => ({
-        slug: post.slug,
-        title: post.title,
-      })),
+      mentionedGuides: getMentionedGuidesForEntity(entity, 8).map((post) => {
+        const greekVariant = getGuideVariantByLanguage(post, 'el');
+        return {
+          slug: post.slug,
+          title: post.title,
+          elSlug: greekVariant?.slug || null,
+          elTitle: greekVariant?.title || null,
+        };
+      }),
       canonicalSlug: canonicalEntity.slug,
+      isAliasSlug: slug !== canonicalEntity.slug,
       enrichment: getPlaceEnrichmentByEntityId(entity.id)?.effective || null,
       areaContext,
       intentContexts,
@@ -603,7 +617,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
   };
 };
 
-export default function PlacePage({ entity, sameCategory, nearby, mentionedGuides, canonicalSlug, enrichment, areaContext, intentContexts }: EntityPageProps) {
+export default function PlacePage({ entity, sameCategory, nearby, mentionedGuides, canonicalSlug, isAliasSlug, enrichment, areaContext, intentContexts }: EntityPageProps) {
   const { t, i18n } = useTranslation();
   const toast = useToast();
   const [copied, setCopied] = useState(false);
@@ -652,6 +666,22 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
       ? `${entity.name} είναι επιλεγμένο ζαχαροπλαστείο στη ${context}. Αγαπημένο των ντόπιων, με κοντινές προτάσεις Googlementor για εύκολη διαδρομή.`
       : `${entity.name} is a featured dessert shop in ${context}. A local favorite with nearby Googlementor picks to help you build an easy route.`)
     : defaultSummary;
+  const localizedMentionedGuides = useMemo(
+    () => mentionedGuides.map((guide) => {
+      if (isGreek && guide.elSlug && guide.elTitle) {
+        return {
+          slug: guide.elSlug,
+          title: guide.elTitle,
+        };
+      }
+
+      return {
+        slug: guide.slug,
+        title: guide.title,
+      };
+    }),
+    [isGreek, mentionedGuides]
+  );
   const categoryNarrativeProfile = primaryCategoryId ? CATEGORY_NARRATIVE_PROFILES[primaryCategoryId] : undefined;
   const typeLabelKey = categoryNarrativeProfile?.typeLabelKey || (entity.kind === 'restaurant' ? 'restaurant' : 'localSpot');
   const placeTypeLabel = t(`place.typeLabels.${typeLabelKey}`, localizedKind.toLowerCase());
@@ -698,6 +728,10 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
   const shareTitle = `${entity.name} | ${localizedKind} | Googlementor`;
   const pageTitle = buildPlaceSeoTitle(entity.name, localizedKind);
   const socialTitle = buildPlaceSeoTitle(entity.name, localizedKind);
+  const robotsDirective = isAliasSlug ? 'noindex, follow' : 'index, follow';
+  const googlebotDirective = isAliasSlug
+    ? 'noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+    : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
   const favoriteBadgeLabel = t('place.badges.favorite', "People's Favorite");
   const curatedBadgeLabel = t('place.badges.curated', 'Googlementor Pick');
   const greekTaglineAreaLabel = selectGreekAreaLabel(entity, areaContext, intentContexts);
@@ -1208,8 +1242,8 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={metaDescription} />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="robots" content={robotsDirective} />
+        <meta name="googlebot" content={googlebotDirective} />
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en" href={canonicalUrl} />
         <link rel="alternate" hrefLang="el" href={canonicalUrl} />
@@ -1468,13 +1502,13 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
             </Box>
           ) : null}
 
-          {mentionedGuides.length > 0 ? (
+          {localizedMentionedGuides.length > 0 ? (
             <Box className="gm-surface-card" p={4}>
               <Heading as="h2" size="sm" mb={3}>
                 {t('place.guides.title', 'Trusted guide mentions')}
               </Heading>
               <VStack align="stretch" spacing={2}>
-                {mentionedGuides.map((guide) => (
+                {localizedMentionedGuides.map((guide) => (
                   <Box key={guide.slug} borderWidth="1px" borderRadius="lg" p={3} bg="white">
                     <Link as={NextLink} href={`/blog/${guide.slug}`} color="blue.600" fontWeight="semibold">
                       {guide.title}

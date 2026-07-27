@@ -13,6 +13,7 @@ export interface LocalizedText {
 export interface LocationBase extends Coordinates {
   id?: string;
   slug?: string;
+  legacySlugs?: string[];
   kind: LocationKind;
   name: string;
   aliases?: string[];

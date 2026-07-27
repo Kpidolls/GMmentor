@@ -219,6 +219,7 @@ function projectEntity(location: DiscoverableLocation, injectCategoryId?: string
   const base: EntityRecord = {
     id: location.id,
     slug: location.slug,
+    legacySlugs: location.legacySlugs,
     kind: location.kind,
     name: location.name,
     lat: location.lat,

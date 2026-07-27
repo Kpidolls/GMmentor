@@ -328,14 +328,25 @@ const nextConfig = withPWA(withBundleAnalyzer({
       const entities = Array.isArray(parsed?.entities) ? parsed.entities : [];
 
       placePaths = entities.reduce((acc, entity) => {
-        if (!entity?.slug) {
+        if (entity?.kind === 'municipality') {
           return acc;
         }
 
-        acc[`/place/${entity.slug}`] = {
-          page: '/place/[slug]',
-          query: { slug: entity.slug },
-        };
+        const slugs = new Set([
+          entity?.slug,
+          ...(Array.isArray(entity?.legacySlugs) ? entity.legacySlugs : []),
+        ].filter(Boolean));
+
+        if (slugs.size === 0) {
+          return acc;
+        }
+
+        slugs.forEach((slug) => {
+          acc[`/place/${slug}`] = {
+            page: '/place/[slug]',
+            query: { slug },
+          };
+        });
 
         return acc;
       }, {});
@@ -430,7 +441,9 @@ const nextConfig = withPWA(withBundleAnalyzer({
       '/itinerary': { page: '/itinerary' },
       '/search': { page: '/search' },
       '/signup': { page: '/signup' },
+      '/store': { page: '/store' },
       '/blog': { page: '/blog' },
+      '/blog/[slug]': { page: '/blog' },
       '/blog/greek-bakeries-brunch-coffee-guide': {
         page: '/blog/[slug]',
         query: { slug: 'greek-bakeries-brunch-coffee-guide' },
@@ -440,10 +453,6 @@ const nextConfig = withPWA(withBundleAnalyzer({
       ...areaPaths,
       ...placePaths,
     };
-
-    if (featureFlags.storeEnabled) {
-      pathMap['/store'] = { page: '/store' };
-    }
 
     return pathMap;
   },

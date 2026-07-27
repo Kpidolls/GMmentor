@@ -51,6 +51,7 @@ const GREEK_TO_LATIN: Record<string, string> = {
 let cachedPosts: Post[] | null = null;
 let cachedEntities: EntityRecord[] | null = null;
 let cachedPriorityPosts: Post[] | null = null;
+let cachedGuideVariantsByCanonicalSlug: Map<string, { en?: Post; el?: Post }> | null = null;
 const entityTermsCache = new Map<string, string[]>();
 const mentionedGuidesCache = new Map<string, Post[]>();
 const normalizedPostCache = new Map<string, { title: string; summary: string; combined: string }>();
@@ -75,6 +76,30 @@ function getPriorityCachedPosts(): Post[] {
     cachedPriorityPosts = getAllCachedPosts().filter(isPriorityGuide);
   }
   return cachedPriorityPosts;
+}
+
+function getGuideVariantsByCanonicalSlug(): Map<string, { en?: Post; el?: Post }> {
+  if (cachedGuideVariantsByCanonicalSlug) {
+    return cachedGuideVariantsByCanonicalSlug;
+  }
+
+  const variants = new Map<string, { en?: Post; el?: Post }>();
+
+  for (const post of getPriorityCachedPosts()) {
+    const canonicalSlug = getGuideSlug(post);
+    const existing = variants.get(canonicalSlug) || {};
+
+    if (post.language === 'el') {
+      existing.el = post;
+    } else {
+      existing.en = post;
+    }
+
+    variants.set(canonicalSlug, existing);
+  }
+
+  cachedGuideVariantsByCanonicalSlug = variants;
+  return variants;
 }
 
 function escapeRegExp(value: string): string {
@@ -314,7 +339,7 @@ export function getMentionedGuidesForEntity(entity: EntityRecord, limit = 8): Po
     return cached.slice(0, limit);
   }
 
-  const ranked = getPriorityCachedPosts()
+  const rankedMatches = getPriorityCachedPosts()
     .map((post) => {
       const explicitTarget = getGuideTargetEntityIdSet(post).has(entity.id);
       const score = scoreEntityMention(post, entity) + (explicitTarget ? 10000 : 0);
@@ -323,12 +348,43 @@ export function getMentionedGuidesForEntity(entity: EntityRecord, limit = 8): Po
     .filter((match): match is { post: Post; score: number } => match.score > 0)
     .sort((left, right) => {
       if (right.score !== left.score) return right.score - left.score;
-      return getGuideSlug(left.post).localeCompare(getGuideSlug(right.post));
-    })
-    .map((match) => match.post);
+      const leftGuideSlug = getGuideSlug(left.post);
+      const rightGuideSlug = getGuideSlug(right.post);
+
+      if (leftGuideSlug !== rightGuideSlug) {
+        return leftGuideSlug.localeCompare(rightGuideSlug);
+      }
+
+      // Prefer English variant when both language versions of the same guide exist.
+      if (left.post.language !== right.post.language) {
+        return left.post.language === 'en' ? -1 : 1;
+      }
+
+      return left.post.slug.localeCompare(right.post.slug);
+    });
+
+  const uniqueByGuideSlug = new Map<string, Post>();
+
+  for (const match of rankedMatches) {
+    const guideSlug = getGuideSlug(match.post);
+    if (!uniqueByGuideSlug.has(guideSlug)) {
+      uniqueByGuideSlug.set(guideSlug, match.post);
+    }
+  }
+
+  const ranked = Array.from(uniqueByGuideSlug.values());
 
   mentionedGuidesCache.set(entity.id, ranked);
   return ranked.slice(0, limit);
+}
+
+export function getGuideVariantByLanguage(post: Post, language: 'en' | 'el'): Post | null {
+  const variants = getGuideVariantsByCanonicalSlug().get(getGuideSlug(post));
+  if (!variants) {
+    return null;
+  }
+
+  return variants[language] || null;
 }
 
 export function getEntityCanonicalUrl(slug: string): string {
