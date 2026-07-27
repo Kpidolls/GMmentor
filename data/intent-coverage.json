@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T17:53:56.449Z",
+  "generatedAt": "2026-07-27T09:34:26.254Z",
   "thresholds": {
     "minAreaEntityCount": 8,
     "minCategoryAreaCount": 5
@@ -4334,7 +4334,7 @@
     "areaEntityCounts": {
       "min": 0,
       "max": 793,
-      "avg": 84.56,
+      "avg": 84.55,
       "p50": 3,
       "p75": 59,
       "p90": 293
@@ -4342,7 +4342,7 @@
     "categoryEntityCounts": {
       "min": 45,
       "max": 779,
-      "avg": 233.13,
+      "avg": 233.06,
       "p50": 131,
       "p75": 330,
       "p90": 431
@@ -4631,7 +4631,7 @@
       "id": "desserts",
       "slug": "desserts",
       "name": "Dessert Shops",
-      "count": 371
+      "count": 370
     },
     {
       "id": "fish-tavernas",

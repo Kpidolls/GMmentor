@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-24T17:52:09.253Z",
+    "generated_at": "2026-07-27T09:32:40.750Z",
     "generator_version": "1.0",
     "schema_version": 1,
     "canonical_url": "https://googlementor.com/data/entities.json",
@@ -8,9 +8,9 @@
       "el",
       "en"
     ],
-    "record_count": 3884,
+    "record_count": 3883,
     "by_kind": {
-      "restaurant": 3532,
+      "restaurant": 3531,
       "municipality": 352
     }
   },
@@ -21530,22 +21530,6 @@
       "lng": 23.754775535968022,
       "url": "https://maps.app.goo.gl/o9wp2AdrozqHihcN7?g_st=ipc",
       "address": "Λεωφ. Σοφοκλή Βενιζέλου 96, Ηλιούπολη 163 41",
-      "categoryIds": [
-        "desserts"
-      ],
-      "categories": [
-        "Dessert Shops"
-      ]
-    },
-    {
-      "id": "dessertsRestaurants_7da559b75445",
-      "slug": "zacharoplasteia-konstantinidis-7da5",
-      "kind": "restaurant",
-      "name": "Ζαχαροπλαστεία Κωνσταντινίδης",
-      "lat": 38.01171233220572,
-      "lng": 23.81400562383525,
-      "url": "https://maps.app.goo.gl/qEsfTTzyhzLukvSx9?g_st=ipc",
-      "address": "Λεωφ. Μεσογείων 368, Αγ. Παρασκευή 153 41",
       "categoryIds": [
         "desserts"
       ],
