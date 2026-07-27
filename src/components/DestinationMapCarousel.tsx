@@ -92,15 +92,17 @@ export default function DestinationMapCarousel() {
               </div>
             ))}
 
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/68 via-slate-900/18 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/84 via-slate-900/34 to-transparent" />
 
             <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-              <p className="text-white text-lg sm:text-xl font-semibold tracking-tight leading-tight">
-                {t(activeSlide.title)}
-              </p>
-              <p className="mt-1 text-slate-100/95 text-xs sm:text-sm">
-                {t('destination.mapPreview', 'Map preview')}
-              </p>
+              <div className="inline-block max-w-full rounded-lg bg-slate-950/46 px-3 py-2 backdrop-blur-[2px] ring-1 ring-white/14 shadow-[0_2px_20px_rgba(0,0,0,0.35)]">
+                <p className="text-white text-lg sm:text-xl font-semibold tracking-tight leading-tight drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)]">
+                  {t(activeSlide.title)}
+                </p>
+                <p className="mt-1 text-slate-100 text-xs sm:text-sm drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+                  {t('destination.mapPreview', 'Map preview')}
+                </p>
+              </div>
             </div>
           </div>
         </Link>

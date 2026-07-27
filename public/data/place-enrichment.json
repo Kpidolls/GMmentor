@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-07-24T17:20:16.763Z",
+    "generated_at": "2026-07-27T07:45:19.072Z",
     "generator_version": "1.0",
     "schema_version": 1,
     "canonical_url": "https://googlementor.com/data/place-enrichment.json",
-    "total_entities": 3884,
+    "total_entities": 3883,
     "override_entities": 0
   },
   "enrichments": [
@@ -690,7 +690,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       },
       "effective": {
@@ -709,7 +709,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       }
     },
@@ -1175,8 +1175,8 @@
     {
       "entity_id": "asianRestaurants_4641bf909241",
       "generated": {
-        "summary_en": "Wasabe Asian Fusion is a curated restaurant in Αγ. Παρασκευή 153 43 in the Asian Restaurants collection. It is connected to 16 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Wasabe Asian Fusion είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Asian Restaurants. Συνδέεται με 16 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Wasabe Asian Fusion is a curated restaurant in Αγ. Παρασκευή 153 43 in the Asian Restaurants collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Wasabe Asian Fusion είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Asian Restaurants. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -1189,13 +1189,13 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 16,
-        "nearby_count_2km": 106,
+        "nearby_walkable_count": 15,
+        "nearby_count_2km": 105,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Wasabe Asian Fusion is a curated restaurant in Αγ. Παρασκευή 153 43 in the Asian Restaurants collection. It is connected to 16 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Wasabe Asian Fusion είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Asian Restaurants. Συνδέεται με 16 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Wasabe Asian Fusion is a curated restaurant in Αγ. Παρασκευή 153 43 in the Asian Restaurants collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Wasabe Asian Fusion είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Asian Restaurants. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -1208,8 +1208,8 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 16,
-        "nearby_count_2km": 106,
+        "nearby_walkable_count": 15,
+        "nearby_count_2km": 105,
         "confidence": 0.98
       }
     },
@@ -1604,7 +1604,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       },
       "effective": {
@@ -1623,7 +1623,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       }
     },
@@ -2764,7 +2764,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 112,
+        "nearby_count_2km": 111,
         "confidence": 0.98
       },
       "effective": {
@@ -2783,7 +2783,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 112,
+        "nearby_count_2km": 111,
         "confidence": 0.98
       }
     },
@@ -2969,7 +2969,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 7,
-        "nearby_count_2km": 101,
+        "nearby_count_2km": 100,
         "confidence": 0.98
       },
       "effective": {
@@ -2988,7 +2988,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 7,
-        "nearby_count_2km": 101,
+        "nearby_count_2km": 100,
         "confidence": 0.98
       }
     },
@@ -4344,7 +4344,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       },
       "effective": {
@@ -4363,7 +4363,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       }
     },
@@ -5131,7 +5131,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 23,
-        "nearby_count_2km": 66,
+        "nearby_count_2km": 65,
         "confidence": 0.98
       },
       "effective": {
@@ -5150,7 +5150,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 23,
-        "nearby_count_2km": 66,
+        "nearby_count_2km": 65,
         "confidence": 0.98
       }
     },
@@ -5467,7 +5467,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       },
       "effective": {
@@ -5486,7 +5486,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       }
     },
@@ -6647,7 +6647,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       },
       "effective": {
@@ -6666,7 +6666,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       }
     },
@@ -7317,7 +7317,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 117,
+        "nearby_count_2km": 116,
         "confidence": 0.98
       },
       "effective": {
@@ -7336,7 +7336,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 117,
+        "nearby_count_2km": 116,
         "confidence": 0.98
       }
     },
@@ -7567,7 +7567,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       },
       "effective": {
@@ -7586,7 +7586,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       }
     },
@@ -8190,7 +8190,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 111,
+        "nearby_count_2km": 110,
         "confidence": 0.98
       },
       "effective": {
@@ -8209,7 +8209,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 111,
+        "nearby_count_2km": 110,
         "confidence": 0.98
       }
     },
@@ -9196,7 +9196,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       },
       "effective": {
@@ -9215,7 +9215,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       }
     },
@@ -9364,7 +9364,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 112,
+        "nearby_count_2km": 111,
         "confidence": 0.98
       },
       "effective": {
@@ -9383,7 +9383,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 112,
+        "nearby_count_2km": 111,
         "confidence": 0.98
       }
     },
@@ -11956,7 +11956,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       },
       "effective": {
@@ -11977,7 +11977,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       }
     },
@@ -12434,8 +12434,8 @@
     {
       "entity_id": "cheapEatsRestaurants_2194bc1389f8",
       "generated": {
-        "summary_en": "Πίτα Παν is a curated restaurant in Αγ. Παρασκευή 153 42 in the Gyros & Cheap Eats collection. It is connected to 12 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Πίτα Παν είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Gyros & Cheap Eats. Συνδέεται με 12 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Πίτα Παν is a curated restaurant in Αγ. Παρασκευή 153 42 in the Gyros & Cheap Eats collection. It is connected to 11 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Πίτα Παν είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Gyros & Cheap Eats. Συνδέεται με 11 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "budget-friendly"
@@ -12450,13 +12450,13 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 12,
-        "nearby_count_2km": 54,
+        "nearby_walkable_count": 11,
+        "nearby_count_2km": 53,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Πίτα Παν is a curated restaurant in Αγ. Παρασκευή 153 42 in the Gyros & Cheap Eats collection. It is connected to 12 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Πίτα Παν είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Gyros & Cheap Eats. Συνδέεται με 12 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Πίτα Παν is a curated restaurant in Αγ. Παρασκευή 153 42 in the Gyros & Cheap Eats collection. It is connected to 11 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Πίτα Παν είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Gyros & Cheap Eats. Συνδέεται με 11 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "budget-friendly"
@@ -12471,8 +12471,8 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 12,
-        "nearby_count_2km": 54,
+        "nearby_walkable_count": 11,
+        "nearby_count_2km": 53,
         "confidence": 0.98
       }
     },
@@ -13081,7 +13081,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 16,
-        "nearby_count_2km": 123,
+        "nearby_count_2km": 122,
         "confidence": 0.98
       },
       "effective": {
@@ -13102,7 +13102,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 16,
-        "nearby_count_2km": 123,
+        "nearby_count_2km": 122,
         "confidence": 0.98
       }
     },
@@ -14163,7 +14163,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 31,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       },
       "effective": {
@@ -14184,7 +14184,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 31,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       }
     },
@@ -14703,7 +14703,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 67,
-        "nearby_count_2km": 114,
+        "nearby_count_2km": 113,
         "confidence": 0.98
       },
       "effective": {
@@ -14724,7 +14724,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 67,
-        "nearby_count_2km": 114,
+        "nearby_count_2km": 113,
         "confidence": 0.98
       }
     },
@@ -15198,7 +15198,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 6,
-        "nearby_count_2km": 45,
+        "nearby_count_2km": 44,
         "confidence": 0.98
       },
       "effective": {
@@ -15219,7 +15219,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 6,
-        "nearby_count_2km": 45,
+        "nearby_count_2km": 44,
         "confidence": 0.98
       }
     },
@@ -15603,7 +15603,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 9,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       },
       "effective": {
@@ -15624,7 +15624,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 9,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       }
     },
@@ -17223,7 +17223,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 112,
+        "nearby_count_2km": 111,
         "confidence": 0.98
       },
       "effective": {
@@ -17244,7 +17244,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 112,
+        "nearby_count_2km": 111,
         "confidence": 0.98
       }
     },
@@ -18438,7 +18438,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       },
       "effective": {
@@ -18459,7 +18459,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       }
     },
@@ -19745,7 +19745,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 112,
+        "nearby_count_2km": 111,
         "confidence": 0.98
       },
       "effective": {
@@ -19766,7 +19766,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 112,
+        "nearby_count_2km": 111,
         "confidence": 0.98
       }
     },
@@ -21275,7 +21275,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 24,
-        "nearby_count_2km": 50,
+        "nearby_count_2km": 49,
         "confidence": 0.98
       },
       "effective": {
@@ -21296,7 +21296,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 24,
-        "nearby_count_2km": 50,
+        "nearby_count_2km": 49,
         "confidence": 0.98
       }
     },
@@ -23058,8 +23058,8 @@
     {
       "entity_id": "cheapEatsRestaurants_ba28713d01c5",
       "generated": {
-        "summary_en": "Jackaroo is a curated restaurant in Αγ. Παρασκευή 153 43 in the Gyros & Cheap Eats collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Jackaroo είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Gyros & Cheap Eats. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Jackaroo is a curated restaurant in Αγ. Παρασκευή 153 43 in the Gyros & Cheap Eats collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Jackaroo είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Gyros & Cheap Eats. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "budget-friendly"
@@ -23074,13 +23074,13 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 15,
-        "nearby_count_2km": 62,
+        "nearby_walkable_count": 14,
+        "nearby_count_2km": 61,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Jackaroo is a curated restaurant in Αγ. Παρασκευή 153 43 in the Gyros & Cheap Eats collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Jackaroo είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Gyros & Cheap Eats. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Jackaroo is a curated restaurant in Αγ. Παρασκευή 153 43 in the Gyros & Cheap Eats collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Jackaroo είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Gyros & Cheap Eats. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "budget-friendly"
@@ -23095,8 +23095,8 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 15,
-        "nearby_count_2km": 62,
+        "nearby_walkable_count": 14,
+        "nearby_count_2km": 61,
         "confidence": 0.98
       }
     },
@@ -24965,7 +24965,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       },
       "effective": {
@@ -24986,7 +24986,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       }
     },
@@ -26135,7 +26135,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 61,
-        "nearby_count_2km": 131,
+        "nearby_count_2km": 130,
         "confidence": 0.98
       },
       "effective": {
@@ -26156,7 +26156,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 61,
-        "nearby_count_2km": 131,
+        "nearby_count_2km": 130,
         "confidence": 0.98
       }
     },
@@ -28004,7 +28004,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 5,
-        "nearby_count_2km": 32,
+        "nearby_count_2km": 31,
         "confidence": 0.98
       },
       "effective": {
@@ -28024,7 +28024,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 5,
-        "nearby_count_2km": 32,
+        "nearby_count_2km": 31,
         "confidence": 0.98
       }
     },
@@ -29517,7 +29517,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 63,
-        "nearby_count_2km": 120,
+        "nearby_count_2km": 119,
         "confidence": 0.98
       },
       "effective": {
@@ -29537,7 +29537,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 63,
-        "nearby_count_2km": 120,
+        "nearby_count_2km": 119,
         "confidence": 0.98
       }
     },
@@ -29603,7 +29603,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 121,
+        "nearby_count_2km": 120,
         "confidence": 0.98
       },
       "effective": {
@@ -29623,7 +29623,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 121,
+        "nearby_count_2km": 120,
         "confidence": 0.98
       }
     },
@@ -30334,7 +30334,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 18,
-        "nearby_count_2km": 43,
+        "nearby_count_2km": 42,
         "confidence": 0.98
       },
       "effective": {
@@ -30354,7 +30354,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 18,
-        "nearby_count_2km": 43,
+        "nearby_count_2km": 42,
         "confidence": 0.98
       }
     },
@@ -32670,7 +32670,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       },
       "effective": {
@@ -32690,7 +32690,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       }
     },
@@ -33364,7 +33364,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 16,
-        "nearby_count_2km": 126,
+        "nearby_count_2km": 125,
         "confidence": 0.98
       },
       "effective": {
@@ -33384,7 +33384,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 16,
-        "nearby_count_2km": 126,
+        "nearby_count_2km": 125,
         "confidence": 0.98
       }
     },
@@ -36732,7 +36732,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 63,
-        "nearby_count_2km": 120,
+        "nearby_count_2km": 119,
         "confidence": 0.98
       },
       "effective": {
@@ -36752,7 +36752,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 63,
-        "nearby_count_2km": 120,
+        "nearby_count_2km": 119,
         "confidence": 0.98
       }
     },
@@ -40139,7 +40139,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 114,
+        "nearby_count_2km": 113,
         "confidence": 0.98
       },
       "effective": {
@@ -40159,7 +40159,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 114,
+        "nearby_count_2km": 113,
         "confidence": 0.98
       }
     },
@@ -40225,7 +40225,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 117,
+        "nearby_count_2km": 116,
         "confidence": 0.98
       },
       "effective": {
@@ -40245,7 +40245,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 117,
+        "nearby_count_2km": 116,
         "confidence": 0.98
       }
     },
@@ -40616,7 +40616,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       },
       "effective": {
@@ -40636,7 +40636,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       }
     },
@@ -40831,7 +40831,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 4,
-        "nearby_count_2km": 27,
+        "nearby_count_2km": 26,
         "confidence": 0.98
       },
       "effective": {
@@ -40851,7 +40851,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 4,
-        "nearby_count_2km": 27,
+        "nearby_count_2km": 26,
         "confidence": 0.98
       }
     },
@@ -40944,8 +40944,8 @@
     {
       "entity_id": "coffeeBrunchRestaurants_9ce003d4ec0a",
       "generated": {
-        "summary_en": "Alto Corto Cafe is a curated restaurant in Αγ. Παρασκευή 153 42 in the Coffee & Brunch Spots collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Alto Corto Cafe είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Coffee & Brunch Spots. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Alto Corto Cafe is a curated restaurant in Αγ. Παρασκευή 153 42 in the Coffee & Brunch Spots collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Alto Corto Cafe είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Coffee & Brunch Spots. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "daytime-favorite"
@@ -40959,13 +40959,13 @@
           "late brunch"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 15,
-        "nearby_count_2km": 89,
+        "nearby_walkable_count": 14,
+        "nearby_count_2km": 88,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Alto Corto Cafe is a curated restaurant in Αγ. Παρασκευή 153 42 in the Coffee & Brunch Spots collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Alto Corto Cafe είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Coffee & Brunch Spots. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Alto Corto Cafe is a curated restaurant in Αγ. Παρασκευή 153 42 in the Coffee & Brunch Spots collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Alto Corto Cafe είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Coffee & Brunch Spots. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "daytime-favorite"
@@ -40979,8 +40979,8 @@
           "late brunch"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 15,
-        "nearby_count_2km": 89,
+        "nearby_walkable_count": 14,
+        "nearby_count_2km": 88,
         "confidence": 0.98
       }
     },
@@ -41245,8 +41245,8 @@
     {
       "entity_id": "coffeeBrunchRestaurants_a15eff32047d",
       "generated": {
-        "summary_en": "WallStreet Athens is a curated restaurant in Αγ. Παρασκευή 153 43 in the Coffee & Brunch Spots collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "WallStreet Athens είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Coffee & Brunch Spots. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "WallStreet Athens is a curated restaurant in Αγ. Παρασκευή 153 43 in the Coffee & Brunch Spots collection. It is connected to 13 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "WallStreet Athens είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Coffee & Brunch Spots. Συνδέεται με 13 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "daytime-favorite"
@@ -41260,13 +41260,13 @@
           "late brunch"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 14,
-        "nearby_count_2km": 58,
+        "nearby_walkable_count": 13,
+        "nearby_count_2km": 57,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "WallStreet Athens is a curated restaurant in Αγ. Παρασκευή 153 43 in the Coffee & Brunch Spots collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "WallStreet Athens είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Coffee & Brunch Spots. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "WallStreet Athens is a curated restaurant in Αγ. Παρασκευή 153 43 in the Coffee & Brunch Spots collection. It is connected to 13 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "WallStreet Athens είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Coffee & Brunch Spots. Συνδέεται με 13 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "daytime-favorite"
@@ -41280,8 +41280,8 @@
           "late brunch"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 14,
-        "nearby_count_2km": 58,
+        "nearby_walkable_count": 13,
+        "nearby_count_2km": 57,
         "confidence": 0.98
       }
     },
@@ -41908,7 +41908,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 15,
-        "nearby_count_2km": 130,
+        "nearby_count_2km": 129,
         "confidence": 0.98
       },
       "effective": {
@@ -41928,7 +41928,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 15,
-        "nearby_count_2km": 130,
+        "nearby_count_2km": 129,
         "confidence": 0.98
       }
     },
@@ -43933,7 +43933,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 121,
+        "nearby_count_2km": 120,
         "confidence": 0.98
       },
       "effective": {
@@ -43953,7 +43953,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 121,
+        "nearby_count_2km": 120,
         "confidence": 0.98
       }
     },
@@ -44105,7 +44105,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       },
       "effective": {
@@ -44125,7 +44125,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       }
     },
@@ -44321,7 +44321,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 120,
+        "nearby_count_2km": 119,
         "confidence": 0.98
       },
       "effective": {
@@ -44342,7 +44342,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 120,
+        "nearby_count_2km": 119,
         "confidence": 0.98
       }
     },
@@ -46177,7 +46177,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 120,
+        "nearby_count_2km": 119,
         "confidence": 0.98
       },
       "effective": {
@@ -46197,7 +46197,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 120,
+        "nearby_count_2km": 119,
         "confidence": 0.98
       }
     },
@@ -46478,7 +46478,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 18,
-        "nearby_count_2km": 101,
+        "nearby_count_2km": 100,
         "confidence": 0.98
       },
       "effective": {
@@ -46498,7 +46498,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 18,
-        "nearby_count_2km": 101,
+        "nearby_count_2km": 100,
         "confidence": 0.98
       }
     },
@@ -47643,7 +47643,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 6,
-        "nearby_count_2km": 32,
+        "nearby_count_2km": 31,
         "confidence": 0.98
       },
       "effective": {
@@ -47663,7 +47663,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 6,
-        "nearby_count_2km": 32,
+        "nearby_count_2km": 31,
         "confidence": 0.98
       }
     },
@@ -47950,7 +47950,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 13,
-        "nearby_count_2km": 42,
+        "nearby_count_2km": 41,
         "confidence": 0.98
       },
       "effective": {
@@ -47972,7 +47972,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 13,
-        "nearby_count_2km": 42,
+        "nearby_count_2km": 41,
         "confidence": 0.98
       }
     },
@@ -49076,7 +49076,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 62,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       },
       "effective": {
@@ -49096,7 +49096,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 62,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       }
     },
@@ -49334,7 +49334,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       },
       "effective": {
@@ -49354,7 +49354,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.98
       }
     },
@@ -50049,8 +50049,8 @@
     {
       "entity_id": "dessertsRestaurants_0abf80a62983",
       "generated": {
-        "summary_en": "ΖΑΧΑΡΟΠΛΑΣΤΕΙΑ ΚΟΣΜΙΚΟΝ ΑΓ.ΠΑΡΑΣΚΕΥΗ is a curated restaurant in Αγ. Παρασκευή 153 43 in the Dessert Shops collection. It is connected to 20 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "ΖΑΧΑΡΟΠΛΑΣΤΕΙΑ ΚΟΣΜΙΚΟΝ ΑΓ.ΠΑΡΑΣΚΕΥΗ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 20 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "ΖΑΧΑΡΟΠΛΑΣΤΕΙΑ ΚΟΣΜΙΚΟΝ ΑΓ.ΠΑΡΑΣΚΕΥΗ is a curated restaurant in Αγ. Παρασκευή 153 43 in the Dessert Shops collection. It is connected to 19 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "ΖΑΧΑΡΟΠΛΑΣΤΕΙΑ ΚΟΣΜΙΚΟΝ ΑΓ.ΠΑΡΑΣΚΕΥΗ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 19 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "sweet-stop"
@@ -50064,13 +50064,13 @@
           "after dinner"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 20,
-        "nearby_count_2km": 106,
+        "nearby_walkable_count": 19,
+        "nearby_count_2km": 105,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "ΖΑΧΑΡΟΠΛΑΣΤΕΙΑ ΚΟΣΜΙΚΟΝ ΑΓ.ΠΑΡΑΣΚΕΥΗ is a curated restaurant in Αγ. Παρασκευή 153 43 in the Dessert Shops collection. It is connected to 20 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "ΖΑΧΑΡΟΠΛΑΣΤΕΙΑ ΚΟΣΜΙΚΟΝ ΑΓ.ΠΑΡΑΣΚΕΥΗ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 20 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "ΖΑΧΑΡΟΠΛΑΣΤΕΙΑ ΚΟΣΜΙΚΟΝ ΑΓ.ΠΑΡΑΣΚΕΥΗ is a curated restaurant in Αγ. Παρασκευή 153 43 in the Dessert Shops collection. It is connected to 19 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "ΖΑΧΑΡΟΠΛΑΣΤΕΙΑ ΚΟΣΜΙΚΟΝ ΑΓ.ΠΑΡΑΣΚΕΥΗ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 43 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 19 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "sweet-stop"
@@ -50084,8 +50084,8 @@
           "after dinner"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 20,
-        "nearby_count_2km": 106,
+        "nearby_walkable_count": 19,
+        "nearby_count_2km": 105,
         "confidence": 0.98
       }
     },
@@ -50710,7 +50710,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 62,
-        "nearby_count_2km": 125,
+        "nearby_count_2km": 124,
         "confidence": 0.98
       },
       "effective": {
@@ -50730,7 +50730,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 62,
-        "nearby_count_2km": 125,
+        "nearby_count_2km": 124,
         "confidence": 0.98
       }
     },
@@ -52215,7 +52215,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 46,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       },
       "effective": {
@@ -52235,7 +52235,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 46,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       }
     },
@@ -53876,8 +53876,8 @@
     {
       "entity_id": "dessertsRestaurants_456ff03615cf",
       "generated": {
-        "summary_en": "Poulette is a curated restaurant in Ag. Paraskevi 153 43 in the Dessert Shops collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Poulette είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Ag. Paraskevi 153 43 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Poulette is a curated restaurant in Ag. Paraskevi 153 43 in the Dessert Shops collection. It is connected to 13 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Poulette είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Ag. Paraskevi 153 43 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 13 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "sweet-stop"
@@ -53891,13 +53891,13 @@
           "after dinner"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 14,
-        "nearby_count_2km": 80,
+        "nearby_walkable_count": 13,
+        "nearby_count_2km": 79,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Poulette is a curated restaurant in Ag. Paraskevi 153 43 in the Dessert Shops collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Poulette είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Ag. Paraskevi 153 43 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Poulette is a curated restaurant in Ag. Paraskevi 153 43 in the Dessert Shops collection. It is connected to 13 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Poulette είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Ag. Paraskevi 153 43 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 13 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "sweet-stop"
@@ -53911,8 +53911,8 @@
           "after dinner"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 14,
-        "nearby_count_2km": 80,
+        "nearby_walkable_count": 13,
+        "nearby_count_2km": 79,
         "confidence": 0.98
       }
     },
@@ -54150,7 +54150,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       },
       "effective": {
@@ -54170,7 +54170,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       }
     },
@@ -54263,8 +54263,8 @@
     {
       "entity_id": "dessertsRestaurants_4de4990e8c52",
       "generated": {
-        "summary_en": "Γαλακτοπωλείο ΣΤΑΜΟΥ is a curated restaurant in Αγ. Παρασκευή 153 42 in the Dessert Shops collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Γαλακτοπωλείο ΣΤΑΜΟΥ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Γαλακτοπωλείο ΣΤΑΜΟΥ is a curated restaurant in Αγ. Παρασκευή 153 42 in the Dessert Shops collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Γαλακτοπωλείο ΣΤΑΜΟΥ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "sweet-stop"
@@ -54278,13 +54278,13 @@
           "after dinner"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 15,
-        "nearby_count_2km": 89,
+        "nearby_walkable_count": 14,
+        "nearby_count_2km": 88,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Γαλακτοπωλείο ΣΤΑΜΟΥ is a curated restaurant in Αγ. Παρασκευή 153 42 in the Dessert Shops collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Γαλακτοπωλείο ΣΤΑΜΟΥ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Γαλακτοπωλείο ΣΤΑΜΟΥ is a curated restaurant in Αγ. Παρασκευή 153 42 in the Dessert Shops collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Γαλακτοπωλείο ΣΤΑΜΟΥ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "sweet-stop"
@@ -54298,8 +54298,8 @@
           "after dinner"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 15,
-        "nearby_count_2km": 89,
+        "nearby_walkable_count": 14,
+        "nearby_count_2km": 88,
         "confidence": 0.98
       }
     },
@@ -54408,7 +54408,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 8,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       },
       "effective": {
@@ -54428,7 +54428,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 8,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       }
     },
@@ -56390,7 +56390,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 3,
-        "nearby_count_2km": 36,
+        "nearby_count_2km": 35,
         "confidence": 0.9
       },
       "effective": {
@@ -56410,7 +56410,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 3,
-        "nearby_count_2km": 36,
+        "nearby_count_2km": 35,
         "confidence": 0.9
       }
     },
@@ -56673,49 +56673,6 @@
       }
     },
     {
-      "entity_id": "dessertsRestaurants_7da559b75445",
-      "generated": {
-        "summary_en": "Ζαχαροπλαστεία Κωνσταντινίδης is a curated restaurant in Αγ. Παρασκευή 153 41 in the Dessert Shops collection. It is connected to 16 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Ζαχαροπλαστεία Κωνσταντινίδης είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 16 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
-        "vibe_tags": [
-          "curated",
-          "sweet-stop"
-        ],
-        "best_for": [
-          "first-time visitors",
-          "food lovers"
-        ],
-        "visit_moments": [
-          "afternoon break",
-          "after dinner"
-        ],
-        "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 16,
-        "nearby_count_2km": 112,
-        "confidence": 0.98
-      },
-      "effective": {
-        "summary_en": "Ζαχαροπλαστεία Κωνσταντινίδης is a curated restaurant in Αγ. Παρασκευή 153 41 in the Dessert Shops collection. It is connected to 16 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Ζαχαροπλαστεία Κωνσταντινίδης είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Dessert Shops. Συνδέεται με 16 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
-        "vibe_tags": [
-          "curated",
-          "sweet-stop"
-        ],
-        "best_for": [
-          "first-time visitors",
-          "food lovers"
-        ],
-        "visit_moments": [
-          "afternoon break",
-          "after dinner"
-        ],
-        "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 16,
-        "nearby_count_2km": 112,
-        "confidence": 0.98
-      }
-    },
-    {
       "entity_id": "dessertsRestaurants_7eaf4eddf047",
       "generated": {
         "summary_en": "Loukoumania Pagrati - Λουκουμάδες is a curated restaurant in Αθήνα 116 34 in the Dessert Shops collection. It is connected to 59 nearby Googlementor picks to help travelers build a stronger local route.",
@@ -56863,7 +56820,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 4,
-        "nearby_count_2km": 59,
+        "nearby_count_2km": 58,
         "confidence": 0.98
       },
       "effective": {
@@ -56883,7 +56840,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 4,
-        "nearby_count_2km": 59,
+        "nearby_count_2km": 58,
         "confidence": 0.98
       }
     },
@@ -57594,7 +57551,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       },
       "effective": {
@@ -57614,7 +57571,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       }
     },
@@ -58841,7 +58798,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 63,
-        "nearby_count_2km": 124,
+        "nearby_count_2km": 123,
         "confidence": 0.98
       },
       "effective": {
@@ -58861,7 +58818,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 63,
-        "nearby_count_2km": 124,
+        "nearby_count_2km": 123,
         "confidence": 0.98
       }
     },
@@ -59056,7 +59013,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       },
       "effective": {
@@ -59076,7 +59033,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       }
     },
@@ -60260,7 +60217,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       },
       "effective": {
@@ -60280,7 +60237,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       }
     },
@@ -60561,7 +60518,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 114,
+        "nearby_count_2km": 113,
         "confidence": 0.98
       },
       "effective": {
@@ -60581,7 +60538,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 114,
+        "nearby_count_2km": 113,
         "confidence": 0.98
       }
     },
@@ -60862,7 +60819,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       },
       "effective": {
@@ -60882,7 +60839,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       }
     },
@@ -63700,7 +63657,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 12,
-        "nearby_count_2km": 39,
+        "nearby_count_2km": 38,
         "confidence": 0.98
       },
       "effective": {
@@ -63720,7 +63677,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 12,
-        "nearby_count_2km": 39,
+        "nearby_count_2km": 38,
         "confidence": 0.98
       }
     },
@@ -64217,7 +64174,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 10,
-        "nearby_count_2km": 101,
+        "nearby_count_2km": 100,
         "confidence": 0.98
       },
       "effective": {
@@ -64238,7 +64195,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 10,
-        "nearby_count_2km": 101,
+        "nearby_count_2km": 100,
         "confidence": 0.98
       }
     },
@@ -65730,8 +65687,8 @@
     {
       "entity_id": "familyFriendly_3a0b8382227c",
       "generated": {
-        "summary_en": "KIDTOPIA is a curated restaurant in Chalandri 152 32 in the Kid Friendly Locations collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "KIDTOPIA είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Chalandri 152 32 και ανήκει στη συλλογή Kid Friendly Locations. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "KIDTOPIA is a curated restaurant in Chalandri 152 32 in the Kid Friendly Locations collection. It is connected to 13 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "KIDTOPIA είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Chalandri 152 32 και ανήκει στη συλλογή Kid Friendly Locations. Συνδέεται με 13 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "family-ready"
@@ -65746,13 +65703,13 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 14,
-        "nearby_count_2km": 117,
+        "nearby_walkable_count": 13,
+        "nearby_count_2km": 116,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "KIDTOPIA is a curated restaurant in Chalandri 152 32 in the Kid Friendly Locations collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "KIDTOPIA είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Chalandri 152 32 και ανήκει στη συλλογή Kid Friendly Locations. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "KIDTOPIA is a curated restaurant in Chalandri 152 32 in the Kid Friendly Locations collection. It is connected to 13 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "KIDTOPIA είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Chalandri 152 32 και ανήκει στη συλλογή Kid Friendly Locations. Συνδέεται με 13 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated",
           "family-ready"
@@ -65767,8 +65724,8 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 14,
-        "nearby_count_2km": 117,
+        "nearby_walkable_count": 13,
+        "nearby_count_2km": 116,
         "confidence": 0.98
       }
     },
@@ -67817,7 +67774,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 3,
-        "nearby_count_2km": 48,
+        "nearby_count_2km": 47,
         "confidence": 0.9
       },
       "effective": {
@@ -67838,7 +67795,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 3,
-        "nearby_count_2km": 48,
+        "nearby_count_2km": 47,
         "confidence": 0.9
       }
     },
@@ -68269,7 +68226,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 11,
-        "nearby_count_2km": 106,
+        "nearby_count_2km": 105,
         "confidence": 0.98
       },
       "effective": {
@@ -68290,7 +68247,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 11,
-        "nearby_count_2km": 106,
+        "nearby_count_2km": 105,
         "confidence": 0.98
       }
     },
@@ -74879,7 +74836,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 121,
+        "nearby_count_2km": 120,
         "confidence": 0.98
       },
       "effective": {
@@ -74899,7 +74856,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 121,
+        "nearby_count_2km": 120,
         "confidence": 0.98
       }
     },
@@ -76300,7 +76257,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 114,
+        "nearby_count_2km": 113,
         "confidence": 0.98
       },
       "effective": {
@@ -76320,7 +76277,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 114,
+        "nearby_count_2km": 113,
         "confidence": 0.98
       }
     },
@@ -84854,7 +84811,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 50,
-        "nearby_count_2km": 129,
+        "nearby_count_2km": 128,
         "confidence": 0.98
       },
       "effective": {
@@ -84874,7 +84831,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 50,
-        "nearby_count_2km": 129,
+        "nearby_count_2km": 128,
         "confidence": 0.98
       }
     },
@@ -88596,7 +88553,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 24,
-        "nearby_count_2km": 110,
+        "nearby_count_2km": 109,
         "confidence": 0.98
       },
       "effective": {
@@ -88615,7 +88572,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 24,
-        "nearby_count_2km": 110,
+        "nearby_count_2km": 109,
         "confidence": 0.98
       }
     },
@@ -88924,7 +88881,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 62,
-        "nearby_count_2km": 124,
+        "nearby_count_2km": 123,
         "confidence": 0.98
       },
       "effective": {
@@ -88943,7 +88900,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 62,
-        "nearby_count_2km": 124,
+        "nearby_count_2km": 123,
         "confidence": 0.98
       }
     },
@@ -92290,7 +92247,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 60,
-        "nearby_count_2km": 120,
+        "nearby_count_2km": 119,
         "confidence": 0.98
       },
       "effective": {
@@ -92309,7 +92266,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 60,
-        "nearby_count_2km": 120,
+        "nearby_count_2km": 119,
         "confidence": 0.98
       }
     },
@@ -93192,7 +93149,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 4,
-        "nearby_count_2km": 47,
+        "nearby_count_2km": 46,
         "confidence": 0.98
       },
       "effective": {
@@ -93211,7 +93168,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 4,
-        "nearby_count_2km": 47,
+        "nearby_count_2km": 46,
         "confidence": 0.98
       }
     },
@@ -94053,7 +94010,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 5,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       },
       "effective": {
@@ -94072,7 +94029,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 5,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       }
     },
@@ -94176,7 +94133,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       },
       "effective": {
@@ -94195,7 +94152,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       }
     },
@@ -94422,7 +94379,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 11,
-        "nearby_count_2km": 94,
+        "nearby_count_2km": 93,
         "confidence": 0.98
       },
       "effective": {
@@ -94441,7 +94398,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 11,
-        "nearby_count_2km": 94,
+        "nearby_count_2km": 93,
         "confidence": 0.98
       }
     },
@@ -99137,7 +99094,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       },
       "effective": {
@@ -99156,7 +99113,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 64,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       }
     },
@@ -99301,7 +99258,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       },
       "effective": {
@@ -99320,7 +99277,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 116,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       }
     },
@@ -101560,7 +101517,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 3,
-        "nearby_count_2km": 56,
+        "nearby_count_2km": 55,
         "confidence": 0.9
       },
       "effective": {
@@ -101579,7 +101536,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 3,
-        "nearby_count_2km": 56,
+        "nearby_count_2km": 55,
         "confidence": 0.9
       }
     },
@@ -102134,7 +102091,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 12,
-        "nearby_count_2km": 137,
+        "nearby_count_2km": 136,
         "confidence": 0.98
       },
       "effective": {
@@ -102153,7 +102110,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 12,
-        "nearby_count_2km": 137,
+        "nearby_count_2km": 136,
         "confidence": 0.98
       }
     },
@@ -103718,8 +103675,8 @@
     {
       "entity_id": "greekRestaurants_8c8e269305b0",
       "generated": {
-        "summary_en": "Νήσων Γη is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 13 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Νήσων Γη είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 13 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Νήσων Γη is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 12 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Νήσων Γη είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 12 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -103732,13 +103689,13 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 13,
-        "nearby_count_2km": 113,
+        "nearby_walkable_count": 12,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Νήσων Γη is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 13 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Νήσων Γη είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 13 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Νήσων Γη is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 12 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Νήσων Γη είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 12 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -103751,8 +103708,8 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 13,
-        "nearby_count_2km": 113,
+        "nearby_walkable_count": 12,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       }
     },
@@ -103923,8 +103880,8 @@
     {
       "entity_id": "greekRestaurants_8e94a0e9697c",
       "generated": {
-        "summary_en": "Το στέκι της Τόμπρα is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 13 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Το στέκι της Τόμπρα είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 13 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Το στέκι της Τόμπρα is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 12 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Το στέκι της Τόμπρα είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 12 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -103937,13 +103894,13 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 13,
-        "nearby_count_2km": 113,
+        "nearby_walkable_count": 12,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Το στέκι της Τόμπρα is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 13 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Το στέκι της Τόμπρα είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 13 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Το στέκι της Τόμπρα is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 12 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Το στέκι της Τόμπρα είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 12 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -103956,8 +103913,8 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 13,
-        "nearby_count_2km": 113,
+        "nearby_walkable_count": 12,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       }
     },
@@ -106447,7 +106404,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 122,
+        "nearby_count_2km": 121,
         "confidence": 0.98
       },
       "effective": {
@@ -106466,7 +106423,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 122,
+        "nearby_count_2km": 121,
         "confidence": 0.98
       }
     },
@@ -110905,8 +110862,8 @@
     {
       "entity_id": "greekRestaurants_c4e480192004",
       "generated": {
-        "summary_en": "Τα Ρωμανάκια is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 16 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Τα Ρωμανάκια είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 16 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Τα Ρωμανάκια is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Τα Ρωμανάκια είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -110919,13 +110876,13 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 16,
-        "nearby_count_2km": 113,
+        "nearby_walkable_count": 15,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Τα Ρωμανάκια is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 16 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Τα Ρωμανάκια είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 16 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Τα Ρωμανάκια is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Τα Ρωμανάκια είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -110938,8 +110895,8 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 16,
-        "nearby_count_2km": 113,
+        "nearby_walkable_count": 15,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       }
     },
@@ -112316,7 +112273,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 21,
-        "nearby_count_2km": 110,
+        "nearby_count_2km": 109,
         "confidence": 0.98
       },
       "effective": {
@@ -112335,7 +112292,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 21,
-        "nearby_count_2km": 110,
+        "nearby_count_2km": 109,
         "confidence": 0.98
       }
     },
@@ -113054,7 +113011,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 3,
-        "nearby_count_2km": 42,
+        "nearby_count_2km": 41,
         "confidence": 0.9
       },
       "effective": {
@@ -113073,7 +113030,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 3,
-        "nearby_count_2km": 42,
+        "nearby_count_2km": 41,
         "confidence": 0.9
       }
     },
@@ -114571,7 +114528,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 2,
-        "nearby_count_2km": 30,
+        "nearby_count_2km": 29,
         "confidence": 0.9
       },
       "effective": {
@@ -114590,7 +114547,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 2,
-        "nearby_count_2km": 30,
+        "nearby_count_2km": 29,
         "confidence": 0.9
       }
     },
@@ -116826,7 +116783,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       },
       "effective": {
@@ -116845,7 +116802,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       }
     },
@@ -117180,8 +117137,8 @@
     {
       "entity_id": "greekRestaurants_f89c37a413b6",
       "generated": {
-        "summary_en": "Ταβέρνα Ο ΜΩΡΙΑΣ is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 16 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Ταβέρνα Ο ΜΩΡΙΑΣ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 16 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Ταβέρνα Ο ΜΩΡΙΑΣ is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Ταβέρνα Ο ΜΩΡΙΑΣ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -117194,13 +117151,13 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 16,
-        "nearby_count_2km": 49,
+        "nearby_walkable_count": 15,
+        "nearby_count_2km": 48,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Ταβέρνα Ο ΜΩΡΙΑΣ is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 16 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Ταβέρνα Ο ΜΩΡΙΑΣ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 16 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Ταβέρνα Ο ΜΩΡΙΑΣ is a curated restaurant in Αγ. Παρασκευή 153 41 in the Greek Restaurants collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Ταβέρνα Ο ΜΩΡΙΑΣ είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 41 και ανήκει στη συλλογή Greek Restaurants. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -117213,8 +117170,8 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 16,
-        "nearby_count_2km": 49,
+        "nearby_walkable_count": 15,
+        "nearby_count_2km": 48,
         "confidence": 0.98
       }
     },
@@ -118191,7 +118148,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       },
       "effective": {
@@ -118210,7 +118167,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       }
     },
@@ -118314,7 +118271,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 61,
-        "nearby_count_2km": 128,
+        "nearby_count_2km": 127,
         "confidence": 0.98
       },
       "effective": {
@@ -118333,7 +118290,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 61,
-        "nearby_count_2km": 128,
+        "nearby_count_2km": 127,
         "confidence": 0.98
       }
     },
@@ -120257,7 +120214,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       },
       "effective": {
@@ -120276,7 +120233,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 118,
+        "nearby_count_2km": 117,
         "confidence": 0.98
       }
     },
@@ -121077,7 +121034,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 60,
-        "nearby_count_2km": 128,
+        "nearby_count_2km": 127,
         "confidence": 0.98
       },
       "effective": {
@@ -121096,7 +121053,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 60,
-        "nearby_count_2km": 128,
+        "nearby_count_2km": 127,
         "confidence": 0.98
       }
     },
@@ -123541,7 +123498,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 16,
-        "nearby_count_2km": 135,
+        "nearby_count_2km": 134,
         "confidence": 0.98
       },
       "effective": {
@@ -123560,7 +123517,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 16,
-        "nearby_count_2km": 135,
+        "nearby_count_2km": 134,
         "confidence": 0.98
       }
     },
@@ -124279,7 +124236,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 4,
-        "nearby_count_2km": 30,
+        "nearby_count_2km": 29,
         "confidence": 0.98
       },
       "effective": {
@@ -124298,7 +124255,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 4,
-        "nearby_count_2km": 30,
+        "nearby_count_2km": 29,
         "confidence": 0.98
       }
     },
@@ -124965,8 +124922,8 @@
     {
       "entity_id": "italianRestaurants_f7f3095a84cf",
       "generated": {
-        "summary_en": "Μαρίκα is a curated restaurant in Χαλάνδρι 152 34 in the Italian Restaurants collection. It is connected to 23 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Μαρίκα είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Χαλάνδρι 152 34 και ανήκει στη συλλογή Italian Restaurants. Συνδέεται με 23 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Μαρίκα is a curated restaurant in Χαλάνδρι 152 34 in the Italian Restaurants collection. It is connected to 22 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Μαρίκα είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Χαλάνδρι 152 34 και ανήκει στη συλλογή Italian Restaurants. Συνδέεται με 22 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -124979,13 +124936,13 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 23,
-        "nearby_count_2km": 114,
+        "nearby_walkable_count": 22,
+        "nearby_count_2km": 113,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Μαρίκα is a curated restaurant in Χαλάνδρι 152 34 in the Italian Restaurants collection. It is connected to 23 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Μαρίκα είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Χαλάνδρι 152 34 και ανήκει στη συλλογή Italian Restaurants. Συνδέεται με 23 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Μαρίκα is a curated restaurant in Χαλάνδρι 152 34 in the Italian Restaurants collection. It is connected to 22 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Μαρίκα είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Χαλάνδρι 152 34 και ανήκει στη συλλογή Italian Restaurants. Συνδέεται με 22 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -124998,8 +124955,8 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 23,
-        "nearby_count_2km": 114,
+        "nearby_walkable_count": 22,
+        "nearby_count_2km": 113,
         "confidence": 0.98
       }
     },
@@ -130456,7 +130413,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 63,
-        "nearby_count_2km": 121,
+        "nearby_count_2km": 120,
         "confidence": 0.98
       },
       "effective": {
@@ -130477,7 +130434,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 63,
-        "nearby_count_2km": 121,
+        "nearby_count_2km": 120,
         "confidence": 0.98
       }
     },
@@ -133113,8 +133070,8 @@
     {
       "entity_id": "mexicanRestaurants_2fa8f90ada8c",
       "generated": {
-        "summary_en": "El Taco Bueno is a curated restaurant in Χαλάνδρι 152 32 in the Mexican Restaurants collection. It is connected to 23 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "El Taco Bueno είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Χαλάνδρι 152 32 και ανήκει στη συλλογή Mexican Restaurants. Συνδέεται με 23 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "El Taco Bueno is a curated restaurant in Χαλάνδρι 152 32 in the Mexican Restaurants collection. It is connected to 22 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "El Taco Bueno είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Χαλάνδρι 152 32 και ανήκει στη συλλογή Mexican Restaurants. Συνδέεται με 22 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -133127,13 +133084,13 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 23,
-        "nearby_count_2km": 116,
+        "nearby_walkable_count": 22,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "El Taco Bueno is a curated restaurant in Χαλάνδρι 152 32 in the Mexican Restaurants collection. It is connected to 23 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "El Taco Bueno είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Χαλάνδρι 152 32 και ανήκει στη συλλογή Mexican Restaurants. Συνδέεται με 23 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "El Taco Bueno is a curated restaurant in Χαλάνδρι 152 32 in the Mexican Restaurants collection. It is connected to 22 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "El Taco Bueno είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Χαλάνδρι 152 32 και ανήκει στη συλλογή Mexican Restaurants. Συνδέεται με 22 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -133146,8 +133103,8 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 23,
-        "nearby_count_2km": 116,
+        "nearby_walkable_count": 22,
+        "nearby_count_2km": 115,
         "confidence": 0.98
       }
     },
@@ -133456,7 +133413,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 16,
-        "nearby_count_2km": 135,
+        "nearby_count_2km": 134,
         "confidence": 0.98
       },
       "effective": {
@@ -133475,7 +133432,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 16,
-        "nearby_count_2km": 135,
+        "nearby_count_2km": 134,
         "confidence": 0.98
       }
     },
@@ -133620,7 +133577,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 117,
+        "nearby_count_2km": 116,
         "confidence": 0.98
       },
       "effective": {
@@ -133639,7 +133596,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 117,
+        "nearby_count_2km": 116,
         "confidence": 0.98
       }
     },
@@ -133728,8 +133685,8 @@
     {
       "entity_id": "mexicanRestaurants_8063d3de98b0",
       "generated": {
-        "summary_en": "Juan's Cantina is a curated restaurant in Αγ. Παρασκευή 153 42 in the Mexican Restaurants collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Juan's Cantina είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Mexican Restaurants. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Juan's Cantina is a curated restaurant in Αγ. Παρασκευή 153 42 in the Mexican Restaurants collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Juan's Cantina είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Mexican Restaurants. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -133742,13 +133699,13 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 15,
-        "nearby_count_2km": 59,
+        "nearby_walkable_count": 14,
+        "nearby_count_2km": 58,
         "confidence": 0.98
       },
       "effective": {
-        "summary_en": "Juan's Cantina is a curated restaurant in Αγ. Παρασκευή 153 42 in the Mexican Restaurants collection. It is connected to 15 nearby Googlementor picks to help travelers build a stronger local route.",
-        "summary_el": "Juan's Cantina είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Mexican Restaurants. Συνδέεται με 15 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
+        "summary_en": "Juan's Cantina is a curated restaurant in Αγ. Παρασκευή 153 42 in the Mexican Restaurants collection. It is connected to 14 nearby Googlementor picks to help travelers build a stronger local route.",
+        "summary_el": "Juan's Cantina είναι ένα επιλεγμένο σημείο φαγητού στην περιοχή Αγ. Παρασκευή 153 42 και ανήκει στη συλλογή Mexican Restaurants. Συνδέεται με 14 κοντινές προτάσεις του Googlementor για πιο ολοκληρωμένη εμπειρία.",
         "vibe_tags": [
           "curated"
         ],
@@ -133761,8 +133718,8 @@
           "dinner stop"
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
-        "nearby_walkable_count": 15,
-        "nearby_count_2km": 59,
+        "nearby_walkable_count": 14,
+        "nearby_count_2km": 58,
         "confidence": 0.98
       }
     },
@@ -134440,7 +134397,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       },
       "effective": {
@@ -134459,7 +134416,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       }
     },
@@ -138779,7 +138736,7 @@
         ],
         "practical_note": "21 curated places are within walkable distance from this area center.",
         "nearby_walkable_count": 21,
-        "nearby_count_2km": 53,
+        "nearby_count_2km": 52,
         "confidence": 0.6
       },
       "effective": {
@@ -138800,7 +138757,7 @@
         ],
         "practical_note": "21 curated places are within walkable distance from this area center.",
         "nearby_walkable_count": 21,
-        "nearby_count_2km": 53,
+        "nearby_count_2km": 52,
         "confidence": 0.6
       }
     },
@@ -140264,7 +140221,7 @@
         ],
         "practical_note": "3 curated places are within walkable distance from this area center.",
         "nearby_walkable_count": 3,
-        "nearby_count_2km": 50,
+        "nearby_count_2km": 49,
         "confidence": 0.55
       },
       "effective": {
@@ -140285,7 +140242,7 @@
         ],
         "practical_note": "3 curated places are within walkable distance from this area center.",
         "nearby_walkable_count": 3,
-        "nearby_count_2km": 50,
+        "nearby_count_2km": 49,
         "confidence": 0.55
       }
     },
@@ -150299,7 +150256,7 @@
         ],
         "practical_note": "65 curated places are within walkable distance from this area center.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.6
       },
       "effective": {
@@ -150320,7 +150277,7 @@
         ],
         "practical_note": "65 curated places are within walkable distance from this area center.",
         "nearby_walkable_count": 65,
-        "nearby_count_2km": 115,
+        "nearby_count_2km": 114,
         "confidence": 0.6
       }
     },
@@ -159851,7 +159808,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       },
       "effective": {
@@ -159870,7 +159827,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 113,
+        "nearby_count_2km": 112,
         "confidence": 0.98
       }
     },
@@ -162024,7 +161981,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       },
       "effective": {
@@ -162043,7 +162000,7 @@
         ],
         "practical_note": "Address and direct map link are available for easy turn-by-turn access.",
         "nearby_walkable_count": 66,
-        "nearby_count_2km": 119,
+        "nearby_count_2km": 118,
         "confidence": 0.98
       }
     },

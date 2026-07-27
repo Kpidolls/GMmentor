@@ -23,6 +23,7 @@ import { useTranslation } from 'react-i18next';
 import debounce from 'lodash.debounce';
 import featureFlags from '../config/featureFlags.json';
 import { dispatchAddToItinerary } from '../utils/itineraryEvents';
+import { sanitizeAddressForDisplay } from '../utils/addressUtils';
 import { detectCategoryMatches } from '../lib/intent/categoryMatcher';
 import type { EntityRecord } from '../lib/entities';
 
@@ -174,7 +175,7 @@ const SearchPage = ({ focusOnMount = false, placeEntities }: SearchPageProps) =>
     ...searchablePlaceEntities.map((entity) => ({
       id: entity.id,
       title: entity.name,
-      description: [entity.address, entity.region].filter(Boolean).join(' • ') || t('search.placeResultFallback', 'View place details'),
+      description: [sanitizeAddressForDisplay(entity.address), entity.region].filter(Boolean).join(' • ') || t('search.placeResultFallback', 'View place details'),
       link: `/place/${entity.slug}`,
       type: 'places',
       kind: entity.kind,

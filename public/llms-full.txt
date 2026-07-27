@@ -7,9 +7,9 @@ language_coverage: el,en
 # Googlementor — Greece Travel & Restaurant Guide
 Site: https://googlementor.com
 Entities index: https://googlementor.com/data/entities.json
-Generated: 2026-07-24T17:42:57.967Z
+Generated: 2026-07-27T09:19:38.011Z
 
-Googlementor is a curated directory of restaurants, cafes, attractions, and neighborhoods in Athens and the Greek islands. All locations are verified, geocoded, and linked to Google Maps. The site covers 3532 curated dining and attraction entries across 352 Athens neighborhoods and Greek regions.
+Googlementor is a curated directory of restaurants, cafes, attractions, and neighborhoods in Athens and the Greek islands. All locations are verified, geocoded, and linked to Google Maps. The site covers 3531 curated dining and attraction entries across 352 Athens neighborhoods and Greek regions.
 
 ## Curated Locations by Category
 
@@ -1696,7 +1696,7 @@ Budget-friendly delicious meals
 - Souvlaki Monastiraki — Mitropoleos 2, Athina 105 63
 - Gyros Psyrri — Agiou Filippou 19, Athina 105 55
 
-### Dessert Shops (349 locations)
+### Dessert Shops (348 locations)
 Sweet treats and traditional Greek desserts
 
 - L’arte del gelato — Πατριάρχου Ιωακείμ 48-50, Αθήνα 106 76
@@ -1873,7 +1873,6 @@ Sweet treats and traditional Greek desserts
 - Gelato di nonna athens — Ερμού 129, Αθήνα 105 55
 - Sweet garden — Ermou 69, Thessaloniki 546 23
 - Γαλακτοπωλείο ΣΤΑΜΟΥ — Λεωφ. Σοφοκλή Βενιζέλου 96, Ηλιούπολη 163 41
-- Ζαχαροπλαστεία Κωνσταντινίδης — Λεωφ. Μεσογείων 368, Αγ. Παρασκευή 153 41
 - Loukoumania Pagrati - Λουκουμάδες — Φρύνης 4, Αθήνα 116 34
 - Ice Queen Gelato — Μακρυγιάννη 9, Αθήνα 117 42 [also: Vegetarian Friendly Restaurants]
 - Κρίνος — Αιόλου 87, Αθήνα 105 51

@@ -21538,22 +21538,6 @@
       ]
     },
     {
-      "id": "dessertsRestaurants_7da559b75445",
-      "slug": "zacharoplasteia-konstantinidis-7da5",
-      "kind": "restaurant",
-      "name": "Ζαχαροπλαστεία Κωνσταντινίδης",
-      "lat": 38.01171233220572,
-      "lng": 23.81400562383525,
-      "url": "https://maps.app.goo.gl/qEsfTTzyhzLukvSx9?g_st=ipc",
-      "address": "Λεωφ. Μεσογείων 368, Αγ. Παρασκευή 153 41",
-      "categoryIds": [
-        "desserts"
-      ],
-      "categories": [
-        "Dessert Shops"
-      ]
-    },
-    {
       "id": "dessertsRestaurants_7eaf4eddf047",
       "slug": "loukoumania-pagrati-loykoymades-7eaf",
       "kind": "restaurant",

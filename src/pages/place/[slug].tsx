@@ -29,6 +29,7 @@ import {
 import { getMentionedGuidesForEntity } from '../../lib/knowledgeGraph';
 import { getPlaceEnrichmentByEntityId, PlaceEnrichment } from '../../lib/placeEnrichment';
 import { calculateDistance } from '../../utils/locationUtils';
+import { sanitizeAddressForDisplay } from '../../utils/addressUtils';
 import { buildPlaceMetaDescription } from '../../config/metaDescriptions';
 import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
 
@@ -224,15 +225,17 @@ function buildPlaceSeoTitle(name: string, kind: string): string {
 }
 
 function displayContext(entity: EntityRecord): string {
-  if (entity.address) return entity.address;
+  const displayAddress = sanitizeAddressForDisplay(entity.address);
+  if (displayAddress) return displayAddress;
   if (entity.region) return entity.region;
   if (entity.kind === 'municipality' && entity.region_en) return entity.region_en;
   return 'Greece';
 }
 
 function displayNeighborhood(entity: EntityRecord): string {
-  if (entity.address) {
-    const [firstSegment] = entity.address.split(',').map((part) => part.trim()).filter(Boolean);
+  const displayAddress = sanitizeAddressForDisplay(entity.address);
+  if (displayAddress) {
+    const [firstSegment] = displayAddress.split(',').map((part) => part.trim()).filter(Boolean);
     if (firstSegment) {
       return firstSegment;
     }
@@ -780,7 +783,7 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
     ? `Κορυφαία επιλογή για ${primaryCategoryLabel.toLowerCase()} ${getGreekPosterPreposition(greekPosterAreaLabel)} ${inflectGreekAreaLabel(greekPosterAreaLabel).toLowerCase()}, δημοφιλής και αγαπημένη από τους ντόπιους.`
     : `A top choice ${primaryCategoryLabel.toLowerCase()} in ${posterAreaLabel}, popular and loved by locals.`;
   const promoHighlight = isGreek ? 'Τοπικό αγαπημένο. Αξίζει να το μοιραστείς.' : 'A local favorite. Worth sharing.';
-  const promoAddress = entity.address || (isGreek ? `${posterAreaLabel}, Ελλάδα` : `${posterAreaLabel}, Greece`);
+  const promoAddress = sanitizeAddressForDisplay(entity.address) || (isGreek ? `${posterAreaLabel}, Ελλάδα` : `${posterAreaLabel}, Greece`);
   const promoTags = [
     primaryCategoryLabel,
     posterAreaLabel,
@@ -1372,7 +1375,7 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
                       </Link>
                       <Text as="span" fontSize="sm" color="gray.600">{formatWalkingTime(candidate.distanceKm)}</Text>
                     </HStack>
-                    <Text color="gray.600" fontSize="sm">{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
+                    <Text color="gray.600" fontSize="sm">{sanitizeAddressForDisplay(candidate.address) || candidate.region || t('common.greece', 'Greece')}</Text>
                   </Box>
                 ))}
               </SimpleGrid>
@@ -1420,7 +1423,7 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
                               <Text as="span" fontSize="sm" color="gray.600">{formatWalkingTime(candidate.distanceKm)}</Text>
                             </HStack>
                             <Text fontSize="sm" color="gray.600" mt={1}>
-                              {candidate.address || candidate.region || t('common.greece', 'Greece')}
+                              {sanitizeAddressForDisplay(candidate.address) || candidate.region || t('common.greece', 'Greece')}
                             </Text>
                           </Box>
                         ))}
@@ -1447,7 +1450,7 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
                       </Link>
                       <Badge colorScheme="blue" textTransform="none">{formatWalkingTime(candidate.distanceKm)}</Badge>
                     </HStack>
-                    <Text color="gray.600" fontSize="sm" mt={1}>{candidate.address || candidate.region || t('common.greece', 'Greece')}</Text>
+                    <Text color="gray.600" fontSize="sm" mt={1}>{sanitizeAddressForDisplay(candidate.address) || candidate.region || t('common.greece', 'Greece')}</Text>
                   </Box>
                 ))}
               </SimpleGrid>

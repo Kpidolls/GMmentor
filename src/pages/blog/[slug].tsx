@@ -12,6 +12,7 @@ import { useEffect, useMemo, useState } from 'react'
 import NextLink from 'next/link'
 import { generateBlogMetaDescription, getBlogMetaDescriptionBySlug } from '../../config/metaDescriptions'
 import { formatPostDate } from '../../utils/dateUtils'
+import { sanitizeAddressForDisplay } from '../../utils/addressUtils'
 import { getMentionedEntitiesForPost } from '../../lib/knowledgeGraph'
 import type { EntityRecord } from '../../lib/entities'
 import { dispatchAddToItinerary } from '../../utils/itineraryEvents'
@@ -410,7 +411,7 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
                     {entity.categories?.[0] || entity.categoryIds?.[0] || t('blog.placeTypeFallback', 'Local place')}
                   </Text>
                   <Text fontSize="sm" color="gray.600" mt={1}>
-                    {entity.address || entity.region || entity.region_en || t('common.greece', 'Greece')}
+                    {sanitizeAddressForDisplay(entity.address) || entity.region || entity.region_en || t('common.greece', 'Greece')}
                   </Text>
                   <HStack mt={3} spacing={2} align="stretch" flexDirection={{ base: 'column', sm: 'row' }}>
                     <Button as={NextLink} href={`/place/${entity.slug}`} size="sm" colorScheme="blue" minH="42px" w={{ base: '100%', sm: 'auto' }}>

@@ -153,12 +153,18 @@ export default function AreasPage({ areaLinks, totalAreas }: AreasPageProps) {
           }
 
           return (
-            <Box key={area.href} borderWidth="1px" borderRadius="lg" p={4} bg="white">
-              {showRegionHeader ? (
-                <Text fontSize="xs" fontWeight="bold" textTransform="uppercase" letterSpacing="0.08em" color="gray.500" mb={2}>
-                  {area.region}
-                </Text>
-              ) : null}
+            <Box key={area.href} borderWidth="1px" borderRadius="lg" p={4} bg="white" display="flex" flexDirection="column">
+              <Text
+                fontSize="xs"
+                fontWeight="bold"
+                textTransform="uppercase"
+                letterSpacing="0.08em"
+                color="gray.500"
+                mb={2}
+                visibility={showRegionHeader ? 'visible' : 'hidden'}
+              >
+                {area.region}
+              </Text>
               <Link as={NextLink} href={area.href} color="blue.700" fontWeight="semibold">
                 {area.name}
               </Link>
