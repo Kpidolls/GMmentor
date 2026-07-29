@@ -466,5 +466,14 @@
     "lng": "22.93646283547866",
     "id": "mexicanRestaurants_d80043a5b99e",
     "slug": "la-sirena-d800"
+  },
+  {
+    "url": "https://maps.app.goo.gl/otuxf3VNmmoAF2tp8",
+    "name": "PANCHO Cantina Y Coctelería Mexicana",
+    "address": "Akti Themistokleous 4, Pireas 185 36",
+    "lat": "37.9330716494229",
+    "lng": "23.647435047698682",
+    "id": "mexicanRestaurants_9afdb1c4e62b",
+    "slug": "pancho-cantina-y-cocteleria-mexicana-9afd"
   }
 ]

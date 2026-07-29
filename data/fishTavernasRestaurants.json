@@ -2968,5 +2968,140 @@
     "lng": "23.745141100112257",
     "id": "fishTavernasRestaurants_57034fb5f673",
     "slug": "mikres-kyklades-5703"
+  },
+  {
+    "url": "https://maps.app.goo.gl/c2MC4UCF861F7WVR9",
+    "name": "ΜΠΑΛΑΟΥΡΟ ΟΥΖΕΡΙ ΕΣΤΙΑΤΟΡΙΟ ΚΑΒΑΛΑ",
+    "address": "Λιμανάκι Σφαγείων, Thassou 19, Limanaki Sfageion, Thasou 19, Kavala 652 01",
+    "lat": "40.94204166035319",
+    "lng": "24.425052998462387",
+    "id": "fishTavernasRestaurants_6fa4e1c8b203",
+    "slug": "mpalaoyro-oyzeri-estiatorio-kavala-6fa4"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BQZRXCbwY4GDv51V9",
+    "name": "Παραδοσιακό Βολιώτικο Τσιπουράδικο \" Το ΚΡΊΤΑΜΟ του Βόλου\"",
+    "address": "Lori 21, Volos 382 21",
+    "lat": "39.36165627529227",
+    "lng": "22.946683885182953",
+    "id": "fishTavernasRestaurants_c1d7a25f9e46",
+    "slug": "paradosiako-voliotiko-tsipoyradiko-to-kritamo-toy-voloy-c1d7"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JHg5rcbRTnz9DnE36",
+    "name": "Μεζέν - Mezen",
+    "address": "Alonnisou 8, Volos 382 21",
+    "lat": "39.36009085889059",
+    "lng": "22.948534794246243",
+    "id": "fishTavernasRestaurants_34be9f1d27a8",
+    "slug": "mezen-mezen-34be"
+  },
+  {
+    "url": "https://maps.app.goo.gl/m8HaCf32Q8krwbho8",
+    "name": "Θεόδωρος και Ελένη το μικρό",
+    "address": "MX8V+F8, Legrena 195 00",
+    "lat": "37.66626123426895",
+    "lng": "23.995109894246287",
+    "id": "fishTavernasRestaurants_9b2e4d7018cf",
+    "slug": "theodoros-kai-eleni-to-mikro-9b2e"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MWZ4YRRPz8wtUHcSA",
+    "name": "Melina Seafood",
+    "address": "Αγίας Τριάδος 10 &, Ivis Athanasiadou 116, Paleo Faliro 175 62",
+    "lat": "37.9320834327476",
+    "lng": "23.700328796941935",
+    "id": "fishTavernasRestaurants_f8c431e5d992",
+    "slug": "melina-seafood-f8c4"
+  },
+  {
+    "url": "https://maps.app.goo.gl/U2nBc7XuEFgxCUaF8",
+    "name": "Ο Ανδρέας – Ψαροταβέρνα & Ουζερί | Εξάρχεια Αθήνα",
+    "address": "Themistokleous 18, Athina 106 78",
+    "lat": "37.98449882858981",
+    "lng": "23.731471744089987",
+    "id": "fishTavernasRestaurants_0e7a1c5b4d63",
+    "slug": "o-andreas-psarotaverna-oyzeri-exarcheia-athina-0e7a"
+  },
+  {
+    "url": "https://maps.app.goo.gl/yyfZuwuFStYxyxy49",
+    "name": "Ταβέρνα του Ψαρρά",
+    "address": "Erotokritou &, Erechtheos 16, Athina 105 56",
+    "lat": "37.97303466396399",
+    "lng": "23.728720664800438",
+    "id": "fishTavernasRestaurants_b3d9e046a7f1",
+    "slug": "taverna-toy-psarra-b3d9"
+  },
+  {
+    "url": "https://maps.app.goo.gl/2NXssMXT1NfUKLZm6",
+    "name": "Ψαροταβέρνα Ο Τάκης",
+    "address": "Limeni 230 62",
+    "lat": "36.67995090633026",
+    "lng": "22.377483494251127",
+    "id": "fishTavernasRestaurants_72f1c8a49e5b",
+    "slug": "psarotaverna-o-takis-72f1"
+  },
+  {
+    "url": "https://maps.app.goo.gl/NYfsNooqVc7m4C3j7",
+    "name": "Χειμώνα-Καλοκαίρι",
+    "address": "Leof. Posidonos 93, Nea Makri 190 05",
+    "lat": "38.06870873586777",
+    "lng": "23.99439589168764",
+    "id": "fishTavernasRestaurants_5d8e2b7193ac",
+    "slug": "cheimona-kalokairi-5d8e"
+  },
+  {
+    "url": "https://maps.app.goo.gl/KUaHFkTX883vMHcdA",
+    "name": "Το Αγκυροβόλι - L'Ancoraggio",
+    "address": "ΛΙΜΑΝΙ, Porto Rafti 190 03",
+    "lat": "37.88594672860571",
+    "lng": "24.01420050065703",
+    "id": "fishTavernasRestaurants_41ac7e2d9f35",
+    "slug": "to-agkyrovoli-l-ancoraggio-41ac"
+  },
+  {
+    "url": "https://maps.app.goo.gl/RoBCDQhnpZLqfzWF7",
+    "name": "Kalos Gialos - Καλός Γιαλός",
+    "address": "Avlakiou 22, Porto Rafti 190 03",
+    "lat": "37.88136039355079",
+    "lng": "24.014213894249476",
+    "id": "fishTavernasRestaurants_e69f2a8b4c10",
+    "slug": "kalos-gialos-kalos-gialos-e69f"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PGy8k9q9exTNpjHr8",
+    "name": "Ψαροταβέρνα Η Σιδερώνα",
+    "address": "Σιδερώνα, Katakali 201 00",
+    "lat": "37.844175680641584",
+    "lng": "23.037755588694356",
+    "id": "fishTavernasRestaurants_8f1b46ce2d95",
+    "slug": "psarotaverna-i-siderona-8f1b"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BzhTYpha27tyCSPN7",
+    "name": "Ταβέρνα \"Το Σκάλωμα\"",
+    "address": "Παραλία Βαρνάβα, Marathonas",
+    "lat": "38.26275933641377",
+    "lng": "23.97816469424541",
+    "id": "fishTavernasRestaurants_2ce79d4a6b18",
+    "slug": "taverna-to-skaloma-2ce7"
+  },
+  {
+    "url": "https://maps.app.goo.gl/P8dWqEeZan9GcjMB9",
+    "name": "Ουζερί Ψαροταβέρνα Αγκυροβόλ",
+    "address": "Δημοτική Ιχθυαγορά Σαλαμίνας, Salamina",
+    "lat": "37.96376733466332",
+    "lng": "23.49757486494791",
+    "id": "fishTavernasRestaurants_a507c3e18d64",
+    "slug": "oyzeri-psarotaverna-agkyrovol-a507"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4yCf8xozFJvREN3DA",
+    "name": "Tarsanás - Ταρσανάς",
+    "address": "Vintsi 1, Tinos 842 00",
+    "lat": "37.53326349391045",
+    "lng": "25.1626525297628",
+    "id": "fishTavernasRestaurants_d83e1a74b9f2",
+    "slug": "tarsanas-tarsanas-d83e"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-27T14:10:14.922Z",
+    "generated_at": "2026-07-29T13:50:17.586Z",
     "generator_version": "1.0",
     "schema_version": 1,
     "canonical_url": "https://googlementor.com/data/entities.json",
@@ -8,9 +8,9 @@
       "el",
       "en"
     ],
-    "record_count": 3883,
+    "record_count": 3944,
     "by_kind": {
-      "restaurant": 3531,
+      "restaurant": 3592,
       "municipality": 352
     }
   },
@@ -6624,6 +6624,9 @@
     {
       "id": "cheapEatsRestaurants_5cd53c0e6d00",
       "slug": "la-jacka-5cd5",
+      "legacySlugs": [
+        "la-jacka-a1f6"
+      ],
       "kind": "restaurant",
       "name": "La Jacka",
       "lat": 37.9421277470468,
@@ -6631,10 +6634,12 @@
       "url": "https://maps.app.goo.gl/4aXg5d6SUN73hXDt8?g_st=ic",
       "address": "Καραΐσκου 117, Pireas 185 32",
       "categoryIds": [
-        "cheap-eats"
+        "cheap-eats",
+        "italian"
       ],
       "categories": [
-        "Gyros & Cheap Eats"
+        "Gyros & Cheap Eats",
+        "Italian Restaurants"
       ]
     },
     {
@@ -27742,6 +27747,22 @@
       ]
     },
     {
+      "id": "fishTavernasRestaurants_0e7a1c5b4d63",
+      "slug": "o-andreas-psarotaverna-oyzeri-exarcheia-athina-0e7a",
+      "kind": "restaurant",
+      "name": "Ο Ανδρέας – Ψαροταβέρνα & Ουζερί | Εξάρχεια Αθήνα",
+      "lat": 37.98449882858981,
+      "lng": 23.731471744089987,
+      "url": "https://maps.app.goo.gl/U2nBc7XuEFgxCUaF8",
+      "address": "Themistokleous 18, Athina 106 78",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
       "id": "fishTavernasRestaurants_1101abe83696",
       "slug": "mezedopoleio-i-chira-1101",
       "kind": "restaurant",
@@ -28434,6 +28455,22 @@
       ]
     },
     {
+      "id": "fishTavernasRestaurants_2ce79d4a6b18",
+      "slug": "taverna-to-skaloma-2ce7",
+      "kind": "restaurant",
+      "name": "Ταβέρνα \"Το Σκάλωμα\"",
+      "lat": 38.26275933641377,
+      "lng": 23.97816469424541,
+      "url": "https://maps.app.goo.gl/BzhTYpha27tyCSPN7",
+      "address": "Παραλία Βαρνάβα, Marathonas",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
       "id": "fishTavernasRestaurants_2d289dd504e5",
       "slug": "annie-fine-cooking-2d28",
       "kind": "restaurant",
@@ -28575,6 +28612,22 @@
       "lng": 28.1401896188144,
       "url": "https://maps.app.goo.gl/BQHAxew1vaRjgSqj8?g_st=ipc",
       "address": "Archangelos 851 02",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
+      "id": "fishTavernasRestaurants_34be9f1d27a8",
+      "slug": "mezen-mezen-34be",
+      "kind": "restaurant",
+      "name": "Μεζέν - Mezen",
+      "lat": 39.36009085889059,
+      "lng": 22.948534794246243,
+      "url": "https://maps.app.goo.gl/JHg5rcbRTnz9DnE36",
+      "address": "Alonnisou 8, Volos 382 21",
       "categoryIds": [
         "fish-tavernas"
       ],
@@ -28927,6 +28980,22 @@
       "lng": 24.73092559432301,
       "url": "https://maps.app.goo.gl/hct1BV2oGe6F3cM97?g_st=ipc",
       "address": "Πλατύς Γιαλός 840 03",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
+      "id": "fishTavernasRestaurants_41ac7e2d9f35",
+      "slug": "to-agkyrovoli-l-ancoraggio-41ac",
+      "kind": "restaurant",
+      "name": "Το Αγκυροβόλι - L'Ancoraggio",
+      "lat": 37.88594672860571,
+      "lng": 24.01420050065703,
+      "url": "https://maps.app.goo.gl/KUaHFkTX883vMHcdA",
+      "address": "ΛΙΜΑΝΙ, Porto Rafti 190 03",
       "categoryIds": [
         "fish-tavernas"
       ],
@@ -29463,6 +29532,22 @@
       ]
     },
     {
+      "id": "fishTavernasRestaurants_5d8e2b7193ac",
+      "slug": "cheimona-kalokairi-5d8e",
+      "kind": "restaurant",
+      "name": "Χειμώνα-Καλοκαίρι",
+      "lat": 38.06870873586777,
+      "lng": 23.99439589168764,
+      "url": "https://maps.app.goo.gl/NYfsNooqVc7m4C3j7",
+      "address": "Leof. Posidonos 93, Nea Makri 190 05",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
       "id": "fishTavernasRestaurants_5ddf9e953038",
       "slug": "thymari-taverna-5ddf",
       "kind": "restaurant",
@@ -29783,6 +29868,22 @@
       ]
     },
     {
+      "id": "fishTavernasRestaurants_6fa4e1c8b203",
+      "slug": "mpalaoyro-oyzeri-estiatorio-kavala-6fa4",
+      "kind": "restaurant",
+      "name": "ΜΠΑΛΑΟΥΡΟ ΟΥΖΕΡΙ ΕΣΤΙΑΤΟΡΙΟ ΚΑΒΑΛΑ",
+      "lat": 40.94204166035319,
+      "lng": 24.425052998462387,
+      "url": "https://maps.app.goo.gl/c2MC4UCF861F7WVR9",
+      "address": "Λιμανάκι Σφαγείων, Thassou 19, Limanaki Sfageion, Thasou 19, Kavala 652 01",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
       "id": "fishTavernasRestaurants_6ff9bd52a54d",
       "slug": "ouzeri-halaris-6ff9",
       "kind": "restaurant",
@@ -29897,6 +29998,22 @@
       "categories": [
         "Fish Tavernas",
         "Greek Restaurants"
+      ]
+    },
+    {
+      "id": "fishTavernasRestaurants_72f1c8a49e5b",
+      "slug": "psarotaverna-o-takis-72f1",
+      "kind": "restaurant",
+      "name": "Ψαροταβέρνα Ο Τάκης",
+      "lat": 36.67995090633026,
+      "lng": 22.377483494251127,
+      "url": "https://maps.app.goo.gl/2NXssMXT1NfUKLZm6",
+      "address": "Limeni 230 62",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
       ]
     },
     {
@@ -30476,6 +30593,22 @@
       ]
     },
     {
+      "id": "fishTavernasRestaurants_8f1b46ce2d95",
+      "slug": "psarotaverna-i-siderona-8f1b",
+      "kind": "restaurant",
+      "name": "Ψαροταβέρνα Η Σιδερώνα",
+      "lat": 37.844175680641584,
+      "lng": 23.037755588694356,
+      "url": "https://maps.app.goo.gl/PGy8k9q9exTNpjHr8",
+      "address": "Σιδερώνα, Katakali 201 00",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
       "id": "fishTavernasRestaurants_8f48155428a0",
       "slug": "almyriki-8f48",
       "kind": "restaurant",
@@ -30654,6 +30787,22 @@
       "lng": 24.900261999085988,
       "url": "https://maps.app.goo.gl/fZarxkpuFnFbzYFR6?g_st=ipc",
       "address": "Κίνι 841 00",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
+      "id": "fishTavernasRestaurants_9b2e4d7018cf",
+      "slug": "theodoros-kai-eleni-to-mikro-9b2e",
+      "kind": "restaurant",
+      "name": "Θεόδωρος και Ελένη το μικρό",
+      "lat": 37.66626123426895,
+      "lng": 23.995109894246287,
+      "url": "https://maps.app.goo.gl/m8HaCf32Q8krwbho8",
+      "address": "MX8V+F8, Legrena 195 00",
       "categoryIds": [
         "fish-tavernas"
       ],
@@ -30845,6 +30994,22 @@
       "categories": [
         "Fish Tavernas",
         "Luxury Dining"
+      ]
+    },
+    {
+      "id": "fishTavernasRestaurants_a507c3e18d64",
+      "slug": "oyzeri-psarotaverna-agkyrovol-a507",
+      "kind": "restaurant",
+      "name": "Ουζερί Ψαροταβέρνα Αγκυροβόλ",
+      "lat": 37.96376733466332,
+      "lng": 23.49757486494791,
+      "url": "https://maps.app.goo.gl/P8dWqEeZan9GcjMB9",
+      "address": "Δημοτική Ιχθυαγορά Σαλαμίνας, Salamina",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
       ]
     },
     {
@@ -31053,6 +31218,22 @@
       "lng": 24.78588365168363,
       "url": "https://maps.app.goo.gl/6pEnXsNrPXAaNQPu8?g_st=ipc",
       "address": "Μπατσί 845 01",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
+      "id": "fishTavernasRestaurants_b3d9e046a7f1",
+      "slug": "taverna-toy-psarra-b3d9",
+      "kind": "restaurant",
+      "name": "Ταβέρνα του Ψαρρά",
+      "lat": 37.97303466396399,
+      "lng": 23.728720664800438,
+      "url": "https://maps.app.goo.gl/yyfZuwuFStYxyxy49",
+      "address": "Erotokritou &, Erechtheos 16, Athina 105 56",
       "categoryIds": [
         "fish-tavernas"
       ],
@@ -31341,6 +31522,22 @@
       "lng": 23.72367935167617,
       "url": "https://maps.app.goo.gl/zBgRFUhoxGYetbQc8?g_st=ipc",
       "address": "Χριστοκοπίδου 1, Αθήνα 105 54",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
+      "id": "fishTavernasRestaurants_c1d7a25f9e46",
+      "slug": "paradosiako-voliotiko-tsipoyradiko-to-kritamo-toy-voloy-c1d7",
+      "kind": "restaurant",
+      "name": "Παραδοσιακό Βολιώτικο Τσιπουράδικο \" Το ΚΡΊΤΑΜΟ του Βόλου\"",
+      "lat": 39.36165627529227,
+      "lng": 22.946683885182953,
+      "url": "https://maps.app.goo.gl/BQZRXCbwY4GDv51V9",
+      "address": "Lori 21, Volos 382 21",
       "categoryIds": [
         "fish-tavernas"
       ],
@@ -31860,6 +32057,22 @@
       ]
     },
     {
+      "id": "fishTavernasRestaurants_d83e1a74b9f2",
+      "slug": "tarsanas-tarsanas-d83e",
+      "kind": "restaurant",
+      "name": "Tarsanás - Ταρσανάς",
+      "lat": 37.53326349391045,
+      "lng": 25.1626525297628,
+      "url": "https://maps.app.goo.gl/4yCf8xozFJvREN3DA",
+      "address": "Vintsi 1, Tinos 842 00",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
       "id": "fishTavernasRestaurants_da1220f4c7c3",
       "slug": "limani-restaurant-da12",
       "kind": "restaurant",
@@ -32070,6 +32283,22 @@
       "lng": 25.355709551048015,
       "url": "https://maps.app.goo.gl/f5SYBYZkLKJhZSov6?g_st=ipc",
       "address": "Αγ. Αννα 843 00",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
+      "id": "fishTavernasRestaurants_e69f2a8b4c10",
+      "slug": "kalos-gialos-kalos-gialos-e69f",
+      "kind": "restaurant",
+      "name": "Kalos Gialos - Καλός Γιαλός",
+      "lat": 37.88136039355079,
+      "lng": 24.014213894249476,
+      "url": "https://maps.app.goo.gl/RoBCDQhnpZLqfzWF7",
+      "address": "Avlakiou 22, Porto Rafti 190 03",
       "categoryIds": [
         "fish-tavernas"
       ],
@@ -32578,6 +32807,22 @@
       ]
     },
     {
+      "id": "fishTavernasRestaurants_f8c431e5d992",
+      "slug": "melina-seafood-f8c4",
+      "kind": "restaurant",
+      "name": "Melina Seafood",
+      "lat": 37.9320834327476,
+      "lng": 23.700328796941935,
+      "url": "https://maps.app.goo.gl/MWZ4YRRPz8wtUHcSA",
+      "address": "Αγίας Τριάδος 10 &, Ivis Athanasiadou 116, Paleo Faliro 175 62",
+      "categoryIds": [
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Fish Tavernas"
+      ]
+    },
+    {
       "id": "fishTavernasRestaurants_f8d86bc09dac",
       "slug": "thalassaki-peiraiki-f8d8",
       "kind": "restaurant",
@@ -32946,6 +33191,22 @@
       ]
     },
     {
+      "id": "greekRestaurants_059dc139ec15",
+      "slug": "προφητης-αμως-profitis-amos-amos-restaurantπροφητης-αμμως-059d",
+      "kind": "restaurant",
+      "name": "Προφήτης Αμώς - Profitis Amos - Amos restaurantΠροφήτης Αμμως,",
+      "lat": 36.32515436979197,
+      "lng": 28.20445506480205,
+      "url": "https://maps.app.goo.gl/WTtdUWzYBzh2tF8YA",
+      "address": "Asklipiou, Faliraki 851",
+      "categoryIds": [
+        "greek-restaurants"
+      ],
+      "categories": [
+        "Greek Restaurants"
+      ]
+    },
+    {
       "id": "greekRestaurants_05c7d7fb8213",
       "slug": "fortoynis-tsipoyradiko-05c7",
       "kind": "restaurant",
@@ -33114,6 +33375,22 @@
       "lng": 26.355418637517822,
       "url": "https://maps.app.goo.gl/y4D61qmZahwjDV357?g_st=ipc",
       "address": "Αστυπάλαια 859 00",
+      "categoryIds": [
+        "greek-restaurants"
+      ],
+      "categories": [
+        "Greek Restaurants"
+      ]
+    },
+    {
+      "id": "greekRestaurants_0bf1151ea4f7",
+      "slug": "μουριες-παπαδοπουλος-ψησταρια-0bf1",
+      "kind": "restaurant",
+      "name": "Μουριές Παπαδόπουλος Ψησταριά",
+      "lat": 39.774994414003984,
+      "lng": 20.749627229746146,
+      "url": "https://maps.app.goo.gl/UBQPBAoWfCUbW1s5A",
+      "address": "QPFX+XR, Asfaka 455",
       "categoryIds": [
         "greek-restaurants"
       ],
@@ -37495,6 +37772,22 @@
       ]
     },
     {
+      "id": "greekRestaurants_63f4614958fa",
+      "slug": "ovelos-psitopoleio-ovelos-ψητοπωλειοel-venizelou-63f4",
+      "kind": "restaurant",
+      "name": "Ovelos Psitopoleio - “Ovelos” ψητοπωλείοEl. Venizelou",
+      "lat": 40.52685044481528,
+      "lng": 22.203377164795544,
+      "url": "https://maps.app.goo.gl/6o5zKZrEmQRiV4XE8",
+      "address": "35, Veria 591",
+      "categoryIds": [
+        "greek-restaurants"
+      ],
+      "categories": [
+        "Greek Restaurants"
+      ]
+    },
+    {
       "id": "greekRestaurants_640a14efa101",
       "slug": "taverna-alekos-640a",
       "kind": "restaurant",
@@ -38620,6 +38913,22 @@
       ]
     },
     {
+      "id": "greekRestaurants_7c37801cbf8c",
+      "slug": "anemologio-ανεμολογιο-7c37",
+      "kind": "restaurant",
+      "name": "Anemológio - Ανεμολόγιο",
+      "lat": 41.024898246719644,
+      "lng": 22.004328094242272,
+      "url": "https://maps.app.goo.gl/eMQ6JRNKoGjdJ7XDA",
+      "address": "Πρόμαχοι Πέλλας 584",
+      "categoryIds": [
+        "greek-restaurants"
+      ],
+      "categories": [
+        "Greek Restaurants"
+      ]
+    },
+    {
       "id": "greekRestaurants_7c9f07a3160d",
       "slug": "maniatis-restaurant-7c9f",
       "kind": "restaurant",
@@ -39060,6 +39369,22 @@
       "lng": 27.20601879367517,
       "url": "https://maps.app.goo.gl/R49wPJn6AyfTkV788?g_st=ipc",
       "address": "Λαγουδι Ζία 853 00",
+      "categoryIds": [
+        "greek-restaurants"
+      ],
+      "categories": [
+        "Greek Restaurants"
+      ]
+    },
+    {
+      "id": "greekRestaurants_8503cd3344c5",
+      "slug": "zagorisios-8503",
+      "kind": "restaurant",
+      "name": "Zagorisios",
+      "lat": 39.58870965683631,
+      "lng": 20.91657746491134,
+      "url": "https://maps.app.goo.gl/gR5zad4cjcVsMY1K9",
+      "address": "Κουτσελιό 455",
       "categoryIds": [
         "greek-restaurants"
       ],
@@ -41987,6 +42312,22 @@
       "lng": 27.052101116485588,
       "url": "https://maps.app.goo.gl/UVQDaysnf7UpsGmGA?g_st=ipc",
       "address": "Επαρ.Οδ. Κώ-Κέφαλου, Ηρακλειδείς 853 01",
+      "categoryIds": [
+        "greek-restaurants"
+      ],
+      "categories": [
+        "Greek Restaurants"
+      ]
+    },
+    {
+      "id": "greekRestaurants_c07f85faa560",
+      "slug": "vrachos-restaurant-c07f",
+      "kind": "restaurant",
+      "name": "Vrachos Restaurant",
+      "lat": 35.00699278227931,
+      "lng": 24.7594597227437,
+      "url": "https://maps.app.goo.gl/V9BYaC9YwE9EDzKv8",
+      "address": "Vrachos, Festos 702",
       "categoryIds": [
         "greek-restaurants"
       ],
@@ -45567,6 +45908,22 @@
       ]
     },
     {
+      "id": "italianRestaurants_27c504fe503d",
+      "slug": "hasselhoff-pizza-27c5",
+      "kind": "restaurant",
+      "name": "Hasselhoff Pizza",
+      "lat": 37.946448125981064,
+      "lng": 23.713275469593658,
+      "url": "https://maps.app.goo.gl/dyiG6xYY2jnKqWuC6",
+      "address": "2as Maiou 22, Nea Smirni 171 21",
+      "categoryIds": [
+        "italian"
+      ],
+      "categories": [
+        "Italian Restaurants"
+      ]
+    },
+    {
       "id": "italianRestaurants_27d92444b722",
       "slug": "goloso-acharnes-27d9",
       "kind": "restaurant",
@@ -45687,6 +46044,22 @@
       "lng": 23.664059272009183,
       "url": "https://maps.app.goo.gl/akcP8bTGNqFh27cR9?g_st=ipc",
       "address": "Στρ. Καραϊσκάκη 43, Χαϊδάρι 124 61",
+      "categoryIds": [
+        "italian"
+      ],
+      "categories": [
+        "Italian Restaurants"
+      ]
+    },
+    {
+      "id": "italianRestaurants_2ebf1b5146a3",
+      "slug": "liondi-traditional-greek-restaurant-2ebf",
+      "kind": "restaurant",
+      "name": "LIONDI Traditional Greek Restaurant",
+      "lat": 37.968210535350664,
+      "lng": 23.729476329522083,
+      "url": "https://maps.app.goo.gl/wFv1VvvLh2j9QQS58",
+      "address": "Makrigianni 19-21, Athina 117 42",
       "categoryIds": [
         "italian"
       ],
@@ -45820,6 +46193,22 @@
       "lng": 25.326934720051547,
       "url": "https://maps.app.goo.gl/Cf4S8nv5DHQYNzkR7?g_st=ipc",
       "address": "Mitropoleos 1, Hora 846 00",
+      "categoryIds": [
+        "italian"
+      ],
+      "categories": [
+        "Italian Restaurants"
+      ]
+    },
+    {
+      "id": "italianRestaurants_3ec8f4a2fbc1",
+      "slug": "ateniese-trattoria-3ec8",
+      "kind": "restaurant",
+      "name": "ATENIESE TRATTORIA",
+      "lat": 37.97639590175048,
+      "lng": 23.751287594336826,
+      "url": "https://maps.app.goo.gl/K1QjtsfF5Jxwh1Ky5",
+      "address": "Kon/nou Ventiri 7, Athina 115 28",
       "categoryIds": [
         "italian"
       ],
@@ -45964,6 +46353,22 @@
       "lng": 23.858730163431314,
       "url": "https://maps.app.goo.gl/ZAb7BbVjZ5jTGd8i8?g_st=ipc",
       "address": "Λεωφ. Μαραθώνος 61, Άνοιξη 145 69",
+      "categoryIds": [
+        "italian"
+      ],
+      "categories": [
+        "Italian Restaurants"
+      ]
+    },
+    {
+      "id": "italianRestaurants_4c9bf0f6e0d1",
+      "slug": "da-leonardo-cucina-italiana-4c9b",
+      "kind": "restaurant",
+      "name": "Da Leonardo Cucina Italiana",
+      "lat": 40.60016225935109,
+      "lng": 22.98386716432333,
+      "url": "https://maps.app.goo.gl/UJT49gNyvqNwUfw87",
+      "address": "Filippou 50, Pilea 555 35",
       "categoryIds": [
         "italian"
       ],
@@ -46388,6 +46793,22 @@
       ]
     },
     {
+      "id": "italianRestaurants_7768f312af8e",
+      "slug": "obati-italian-restaurant-and-pizzeria-7768",
+      "kind": "restaurant",
+      "name": "Obati Italian restaurant and pizzeria",
+      "lat": 37.427475063420026,
+      "lng": 25.333495200083025,
+      "url": "https://maps.app.goo.gl/p1pHqhxtenS93n3F9",
+      "address": "Unnamed Road, Mikonos 846 00",
+      "categoryIds": [
+        "italian"
+      ],
+      "categories": [
+        "Italian Restaurants"
+      ]
+    },
+    {
       "id": "italianRestaurants_78702cadc159",
       "slug": "pizzicato-osteria-7870",
       "kind": "restaurant",
@@ -46444,6 +46865,22 @@
       "lng": 22.937112758246737,
       "url": "https://maps.app.goo.gl/PSUf6oyYdwKAkgEFA",
       "address": "Ernestou Emprar 2, Thessaloniki 546 25",
+      "categoryIds": [
+        "italian"
+      ],
+      "categories": [
+        "Italian Restaurants"
+      ]
+    },
+    {
+      "id": "italianRestaurants_7d0d64fce5ab",
+      "slug": "kritamos-taverna-pizzeria-7d0d",
+      "kind": "restaurant",
+      "name": "Kritamos Taverna - Pizzeria",
+      "lat": 35.05731442082574,
+      "lng": 24.93581115897962,
+      "url": "https://maps.app.goo.gl/SZsMoK8HTGnTZqTq7",
+      "address": "3W4P+W8 Δίπλα στο Μουσείο Μεσσαράς, Ampelouzos 700 12",
       "categoryIds": [
         "italian"
       ],
@@ -46553,6 +46990,22 @@
       ]
     },
     {
+      "id": "italianRestaurants_89d22fb2b0dc",
+      "slug": "siena-pizzeria-restaurant-89d2",
+      "kind": "restaurant",
+      "name": "Siena Pizzeria Restaurant",
+      "lat": 40.665642842807195,
+      "lng": 22.929618796114344,
+      "url": "https://maps.app.goo.gl/JY9gc1zWFMM8PRPo9",
+      "address": "Karaoli ke Dimitriou 255, Stavroupoli 564 31",
+      "categoryIds": [
+        "italian"
+      ],
+      "categories": [
+        "Italian Restaurants"
+      ]
+    },
+    {
       "id": "italianRestaurants_8d018442e7f5",
       "slug": "freskia-zymi-pizza-pasta-fresca-8d01",
       "kind": "restaurant",
@@ -46577,6 +47030,22 @@
       "lng": 23.732726038133688,
       "url": "https://maps.app.goo.gl/YsVGa9MzZPoFLxFs9?g_st=ipc",
       "address": "Απόλλωνος 4, Αθήνα 105 57",
+      "categoryIds": [
+        "italian"
+      ],
+      "categories": [
+        "Italian Restaurants"
+      ]
+    },
+    {
+      "id": "italianRestaurants_95ff2a6d9770",
+      "slug": "la-strada-the-art-of-pizza-95ff",
+      "kind": "restaurant",
+      "name": "La Strada the art of pizza",
+      "lat": 37.98713184940215,
+      "lng": 23.85036898842405,
+      "url": "https://maps.app.goo.gl/eNK7n3TdbbZaXYbe6",
+      "address": "Leof. Lavriou 158, Glika Nera 153 54",
       "categoryIds": [
         "italian"
       ],
@@ -46641,6 +47110,22 @@
       "lng": 23.81375357994017,
       "url": "https://maps.app.goo.gl/jpzzbHYa7ZkuqiDh9?g_st=ipc",
       "address": "Κασσαβέτη 12, Κηφισιά 145 62",
+      "categoryIds": [
+        "italian"
+      ],
+      "categories": [
+        "Italian Restaurants"
+      ]
+    },
+    {
+      "id": "italianRestaurants_98a88655b1d4",
+      "slug": "olio-pizza-stoupa-98a8",
+      "kind": "restaurant",
+      "name": "Olio pizza stoupa",
+      "lat": 36.84561803095061,
+      "lng": 22.259538928906146,
+      "url": "https://maps.app.goo.gl/PP6eHZX61MwrMkVK8",
+      "address": "Stoupa 240 24",
       "categoryIds": [
         "italian"
       ],
@@ -46923,6 +47408,27 @@
       ],
       "categories": [
         "Italian Restaurants"
+      ]
+    },
+    {
+      "id": "italianRestaurants_b73d8842d51c",
+      "slug": "sole-giaguaro-athens-italian-dining-house-b73d",
+      "legacySlugs": [
+        "sole-giaguaro-athens-italian-dining-house-c2bc"
+      ],
+      "kind": "restaurant",
+      "name": "Sole Giaguaro Athens Italian Dining House",
+      "lat": 37.96824180671715,
+      "lng": 23.71221680007241,
+      "url": "https://maps.app.goo.gl/ydJ9HU8xCXUZckNX6",
+      "address": "Troon 66, Athina 118 52",
+      "categoryIds": [
+        "italian",
+        "luxury-dining"
+      ],
+      "categories": [
+        "Italian Restaurants",
+        "Luxury Dining"
       ]
     },
     {
@@ -47238,6 +47744,22 @@
       "lng": 23.364217806517935,
       "url": "https://maps.app.goo.gl/CQiwfGN8vkcQtv7x8?g_st=ipc",
       "address": "Σκάλα 180 10",
+      "categoryIds": [
+        "italian"
+      ],
+      "categories": [
+        "Italian Restaurants"
+      ]
+    },
+    {
+      "id": "italianRestaurants_cf20b12c5719",
+      "slug": "zyme-zymospritzeria-kallithea-cf20",
+      "kind": "restaurant",
+      "name": "Zyme Zymospritzeria Kallithea",
+      "lat": 37.9568231927377,
+      "lng": 23.702705658972977,
+      "url": "https://maps.app.goo.gl/wcctewnuRztXCZJP8",
+      "address": "Mantzagriotaki 105, Kallithea 176 76",
       "categoryIds": [
         "italian"
       ],
@@ -48131,6 +48653,22 @@
       ]
     },
     {
+      "id": "luxuryDiningRestaurants_15ccbce7d4e2",
+      "slug": "dionysos-zonars-15cc",
+      "kind": "restaurant",
+      "name": "Dionysos Zonar's",
+      "lat": 37.969454769051865,
+      "lng": 23.7224339411048,
+      "url": "https://maps.app.goo.gl/HAa43wUDR7ony7y76",
+      "address": "Rovertou Galli 43, Athina 117 42",
+      "categoryIds": [
+        "luxury-dining"
+      ],
+      "categories": [
+        "Luxury Dining"
+      ]
+    },
+    {
       "id": "luxuryDiningRestaurants_162c7c269249",
       "slug": "mario-restaurant-162c",
       "kind": "restaurant",
@@ -48838,6 +49376,38 @@
       ]
     },
     {
+      "id": "luxuryDiningRestaurants_4f979598b6e4",
+      "slug": "patio-at-the-margi-4f97",
+      "kind": "restaurant",
+      "name": "Patio at The Margi",
+      "lat": 37.81371494804425,
+      "lng": 23.77400785487732,
+      "url": "https://maps.app.goo.gl/juFhjckbNQCSsXfZ7",
+      "address": "Litous 11, Vouliagmeni 166 71",
+      "categoryIds": [
+        "luxury-dining"
+      ],
+      "categories": [
+        "Luxury Dining"
+      ]
+    },
+    {
+      "id": "luxuryDiningRestaurants_54b69549e1c5",
+      "slug": "twenty-five-restaurant-54b6",
+      "kind": "restaurant",
+      "name": "Twenty Five Restaurant",
+      "lat": 37.93708326778921,
+      "lng": 23.658416319042388,
+      "url": "https://maps.app.goo.gl/aXpPsmT3SWfnwzNT7",
+      "address": "Akti Koumoundourou 58, Pireas 185 33",
+      "categoryIds": [
+        "luxury-dining"
+      ],
+      "categories": [
+        "Luxury Dining"
+      ]
+    },
+    {
       "id": "luxuryDiningRestaurants_572c742b427a",
       "slug": "teloneio-572c",
       "kind": "restaurant",
@@ -49381,6 +49951,22 @@
       ]
     },
     {
+      "id": "luxuryDiningRestaurants_8933c051cf1b",
+      "slug": "dex-silo-01-creative-dining-8933",
+      "kind": "restaurant",
+      "name": "dex.Silo.01 Creative Dining",
+      "lat": 37.767572954782565,
+      "lng": 21.296399401229483,
+      "url": "https://maps.app.goo.gl/y8BqMn2JoCNSgTEMA",
+      "address": "Dexamenes Seaside Hotel Pedestrian of Kourouta, Kourouta 272 00",
+      "categoryIds": [
+        "luxury-dining"
+      ],
+      "categories": [
+        "Luxury Dining"
+      ]
+    },
+    {
       "id": "luxuryDiningRestaurants_8a047703e0fb",
       "slug": "afropsaro-8a04",
       "kind": "restaurant",
@@ -49389,6 +49975,22 @@
       "lng": 23.771888846159882,
       "url": "https://maps.app.goo.gl/g7jbxhgYDYFvpnKX6?g_st=ipc",
       "address": "Μαρίνου Αντύπα 62-66, Ηράκλειο 141 21",
+      "categoryIds": [
+        "luxury-dining"
+      ],
+      "categories": [
+        "Luxury Dining"
+      ]
+    },
+    {
+      "id": "luxuryDiningRestaurants_8ad0fc7a1b49",
+      "slug": "whispers-athens-8ad0",
+      "kind": "restaurant",
+      "name": "Whispers Athens",
+      "lat": 37.97395179071669,
+      "lng": 23.734906203532102,
+      "url": "https://maps.app.goo.gl/ugERq2tfoiEihDtd8",
+      "address": "Leof. Vasilisis Amalias 10, Athina 105 57",
       "categoryIds": [
         "luxury-dining"
       ],
@@ -50177,6 +50779,22 @@
       "categories": [
         "Luxury Dining",
         "Rooftop Lounges"
+      ]
+    },
+    {
+      "id": "luxuryDiningRestaurants_d6856d7a6f3b",
+      "slug": "focu-sauvage-d685",
+      "kind": "restaurant",
+      "name": "Focu Sauvage",
+      "lat": 37.97537729508126,
+      "lng": 23.706242632495353,
+      "url": "https://maps.app.goo.gl/MmYYF3XmW9zvN7yVA",
+      "address": "Megalou Vasileiou 52, Athina 118 54",
+      "categoryIds": [
+        "luxury-dining"
+      ],
+      "categories": [
+        "Luxury Dining"
       ]
     },
     {
@@ -51054,6 +51672,22 @@
       ]
     },
     {
+      "id": "mexicanRestaurants_9afdb1c4e62b",
+      "slug": "pancho-cantina-y-cocteleria-mexicana-9afd",
+      "kind": "restaurant",
+      "name": "PANCHO Cantina Y Coctelería Mexicana",
+      "lat": 37.9330716494229,
+      "lng": 23.647435047698682,
+      "url": "https://maps.app.goo.gl/otuxf3VNmmoAF2tp8",
+      "address": "Akti Themistokleous 4, Pireas 185 36",
+      "categoryIds": [
+        "mexican"
+      ],
+      "categories": [
+        "Mexican Restaurants"
+      ]
+    },
+    {
       "id": "mexicanRestaurants_9cdc9098224f",
       "slug": "el-dorado-9cdc",
       "kind": "restaurant",
@@ -51411,6 +52045,22 @@
       ]
     },
     {
+      "id": "monasteriesChurches_0d4eb967a2f1",
+      "slug": "holy-monastery-virgin-mary-kallipetra-0d4e",
+      "kind": "restaurant",
+      "name": "Holy Monastery of the Virgin Mary at Kallipetra - Ιερά Μονή Θεοτόκου Καλλίπετρας",
+      "lat": 40.455891444548186,
+      "lng": 22.22349015896646,
+      "url": "https://maps.app.goo.gl/jqHJJos7UzqnkkoU9",
+      "address": "Veria 591 32",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
       "id": "monasteriesChurches_10f29f7ed669",
       "slug": "ieros-naos-agioy-nikolaoy-ragkava-10f2",
       "kind": "restaurant",
@@ -51435,6 +52085,22 @@
       "lng": 23.713901119345575,
       "url": "https://maps.app.goo.gl/iaAnNdKjb6eDxhaq5?g_st=ipc",
       "address": "Νίκης 51, Άλιμος 174 55",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
+      "id": "monasteriesChurches_1e8a43b0c5d2",
+      "slug": "chrysoskalitissa-monastery-iera-moni-chrysoskalitissis-1e8a",
+      "kind": "restaurant",
+      "name": "Chrysoskalitissa Monastery - Ιερά Μονή Χρυσοσκαλιτίσσης",
+      "lat": 35.31130012608163,
+      "lng": 23.533355229524656,
+      "url": "https://maps.app.goo.gl/SKJ6uTDzANeyCqS76",
+      "address": "Kissamos 730 12",
       "categoryIds": [
         "monasteries-churches"
       ],
@@ -51539,6 +52205,22 @@
       ]
     },
     {
+      "id": "monasteriesChurches_2f7c5d901ab6",
+      "slug": "moni-megalou-spileou-moni-megaloy-spilaioy-2f7c",
+      "kind": "restaurant",
+      "name": "Moni Megalou Spileou - Μόνη Μεγάλου Σπηλαίου",
+      "lat": 38.0889484350977,
+      "lng": 22.1748075118857,
+      "url": "https://maps.app.goo.gl/cuJREBUnhfP59wHR6",
+      "address": "250 01",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
       "id": "monasteriesChurches_33b82b7e9f7b",
       "slug": "ieros-panepistimiakos-naos-eisodion-tis-theotokoy-kapnikarea-33b8",
       "kind": "restaurant",
@@ -51587,6 +52269,22 @@
       ]
     },
     {
+      "id": "monasteriesChurches_3a5f70d8ec19",
+      "slug": "monastery-of-pantokrator-iera-moni-ypsiloy-pantokratoros-3a5f",
+      "kind": "restaurant",
+      "name": "Monastery of Pantokrator - Ιερά Μονή Υψηλού Παντοκράτορος",
+      "lat": 39.74823814260427,
+      "lng": 19.872244900924773,
+      "url": "https://maps.app.goo.gl/dKxj952w52kLKbEo9",
+      "address": "Kassiopi 490 81",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
       "id": "monasteriesChurches_3b14e4e4fde2",
       "slug": "ieros-naos-agias-sofias-akropoleos-3b14",
       "kind": "restaurant",
@@ -51611,6 +52309,22 @@
       "lng": 23.73873188558116,
       "url": "https://maps.app.goo.gl/m2sqAvFCJXsVJyjB8?g_st=ipc",
       "address": "Σκουφά 34, Αθήνα 106 72",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
+      "id": "monasteriesChurches_4b6e1d2f983a",
+      "slug": "panagia-flampoyriani-4b6e",
+      "kind": "restaurant",
+      "name": "Παναγιά Φλαμπουριανή",
+      "lat": 37.363417474794346,
+      "lng": 24.398408155354847,
+      "url": "https://maps.app.goo.gl/rj2JHgxQwfw4oTMs8",
+      "address": "Φλαμπούρια 840 06",
       "categoryIds": [
         "monasteries-churches"
       ],
@@ -51699,6 +52413,22 @@
       ]
     },
     {
+      "id": "monasteriesChurches_5c7d20ea41bf",
+      "slug": "monastery-of-fotodoti-iera-moni-fotodoti-christoy-5c7d",
+      "kind": "restaurant",
+      "name": "Monastery of Fotodoti - Ιερά Μονή Φωτοδότη Χριστού",
+      "lat": 37.050400554278966,
+      "lng": 25.52144077589327,
+      "url": "https://maps.app.goo.gl/3Co7tWygkwkGmRm99",
+      "address": "Naxos and Lesser Cyclades 843 02",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
       "id": "monasteriesChurches_616a7205bceb",
       "slug": "ieros-naos-agioy-nikolaoy-616a",
       "kind": "restaurant",
@@ -51723,6 +52453,22 @@
       "lng": 23.65695380658108,
       "url": "https://maps.app.goo.gl/BjSRHN6tAZGnfJ9p8?g_st=ipc",
       "address": "Φυλή 133 41",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
+      "id": "monasteriesChurches_6d8e31fb52c0",
+      "slug": "sacred-monastery-agios-gerasimos-kefalonia-6d8e",
+      "kind": "restaurant",
+      "name": "Sacred Monastery of Agios Gerasimos of Kefalonia - Ιερά Μονή Αγίου Γερασίμου Κεφαλληνίας - Μόνη Αγίου Γερασίμου",
+      "lat": 38.16502019047914,
+      "lng": 20.58922577063167,
+      "url": "https://maps.app.goo.gl/Yusqmrvgcd3DW84WA",
+      "address": "281 00",
       "categoryIds": [
         "monasteries-churches"
       ],
@@ -51795,6 +52541,22 @@
       ]
     },
     {
+      "id": "monasteriesChurches_7e9f42ac63d1",
+      "slug": "monastery-of-agios-georgios-iera-moni-agioy-georgioy-7e9f",
+      "kind": "restaurant",
+      "name": "Monastery of Agios Georgios - Ιερά Μονή Αγίου Γεωργίου",
+      "lat": 38.90582702599708,
+      "lng": 24.567361500082193,
+      "url": "https://maps.app.goo.gl/TzbVB3EbX8xjJjED9",
+      "address": "Skyros 340 07",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
       "id": "monasteriesChurches_8533fc9b9b94",
       "slug": "ieros-naos-agion-anargyron-kolokynthi-metochion-panagioy-tafoy-8533",
       "kind": "restaurant",
@@ -51859,6 +52621,22 @@
       ]
     },
     {
+      "id": "monasteriesChurches_8f0a53bd74e2",
+      "slug": "agios-symeon-agios-symeon-8f0a",
+      "kind": "restaurant",
+      "name": "Agios Symeon - Άγιος Συμεών",
+      "lat": 37.00042910295488,
+      "lng": 24.68521922952725,
+      "url": "https://maps.app.goo.gl/od4X3aZKe6s69At59",
+      "address": "Sifnos 840 03",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
       "id": "monasteriesChurches_9012455a363d",
       "slug": "iera-moni-dafnioy-9012",
       "legacySlugs": [
@@ -51896,6 +52674,38 @@
       ]
     },
     {
+      "id": "monasteriesChurches_9a1b64ce85f3",
+      "slug": "holy-church-panagia-portaitissa-9a1b",
+      "kind": "restaurant",
+      "name": "Holy Church of Panagia Portaitissa - Ιερός Ναός Παναγίας Πορταΐτισσας",
+      "lat": 36.543566951497354,
+      "lng": 26.355848557527512,
+      "url": "https://maps.app.goo.gl/XHbAU7ykF6nXmgTb7",
+      "address": "Astypalea 859 00",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
+      "id": "monasteriesChurches_a1c3d9e74b52",
+      "slug": "monastery-elonas-a1c3",
+      "kind": "restaurant",
+      "name": "Monastery Elonas",
+      "lat": 37.14571048401651,
+      "lng": 22.769010092024345,
+      "url": "https://maps.app.goo.gl/USS5LKMaUtqDCLus9",
+      "address": "Kosmas 223 00",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
       "id": "monasteriesChurches_a960e0dee86b",
       "slug": "iera-moni-panagias-gorgoepikooy-a960",
       "kind": "restaurant",
@@ -51904,6 +52714,22 @@
       "lng": 23.467831046678143,
       "url": "https://maps.app.goo.gl/vNnKum91S5s8eiVu8?g_st=ipc",
       "address": "Μακεδονομάχων, Μάνδρα-Ειδύλλια 196 00",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
+      "id": "monasteriesChurches_ab2c75df9604",
+      "slug": "holy-church-saint-marina-ekali-ab2c",
+      "kind": "restaurant",
+      "name": "Holy Church of Saint Marina at Ekali - Ιερός Ναός Αγίας Μαρίνας Εκάλης",
+      "lat": 38.10775227465497,
+      "lng": 23.837177358441796,
+      "url": "https://maps.app.goo.gl/y9wQM3g7sP5NJzQo8",
+      "address": "Leof. Thiseos 54, Ekali 145 78",
       "categoryIds": [
         "monasteries-churches"
       ],
@@ -51944,6 +52770,38 @@
       ]
     },
     {
+      "id": "monasteriesChurches_b83f2a6d1c90",
+      "slug": "panachrantou-monastery-iera-moni-panachrantou-b83f",
+      "kind": "restaurant",
+      "name": "Panachrantou Monastery - Ιερά Μονή Παναχράντου",
+      "lat": 37.800632817147644,
+      "lng": 24.91001038610456,
+      "url": "https://maps.app.goo.gl/dycFDmxEv3eRQ7Sz9",
+      "address": "Φάλικα 84 500, Moni Panachrantou",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
+      "id": "monasteriesChurches_bc3d86ea0715",
+      "slug": "panagia-skopiani-panagia-skopiani-bc3d",
+      "kind": "restaurant",
+      "name": "Panagia Skopiani - Παναγιά Σκοπιανή",
+      "lat": 37.19206813258094,
+      "lng": 24.516835900075215,
+      "url": "https://maps.app.goo.gl/tP6J5MTFxfdpnNUa8",
+      "address": "Serifos 840 05",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
       "id": "monasteriesChurches_c167cd824b01",
       "slug": "ieros-naos-agioy-nektarioy-aiginis-c167",
       "kind": "restaurant",
@@ -51952,6 +52810,22 @@
       "lng": 23.484687951163814,
       "url": "https://maps.app.goo.gl/KjppqYPoe3hM1kHb9?g_st=ipc",
       "address": "Κοντός 180 10",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
+      "id": "monasteriesChurches_c29e5b147adf",
+      "slug": "holy-monastery-of-prousos-panagia-prousiotissa-c29e",
+      "kind": "restaurant",
+      "name": "Holy Monastery of Prousos - Panagia Prousiotissa - Ιερά Μονή Προυσού - Παναγία Προυσιώτισσα",
+      "lat": 38.74955768409699,
+      "lng": 21.65677730007785,
+      "url": "https://maps.app.goo.gl/zfWiPcXup1iCjPxf8",
+      "address": "Prousos 360 74",
       "categoryIds": [
         "monasteries-churches"
       ],
@@ -52013,6 +52887,22 @@
       ]
     },
     {
+      "id": "monasteriesChurches_cd4e97fb1826",
+      "slug": "catholic-cathedral-of-saint-george-cd4e",
+      "kind": "restaurant",
+      "name": "Catholic Cathedral of Saint George - Καθεδρικός Ναός Αγίου Γεωργίου",
+      "lat": 37.45094653282945,
+      "lng": 24.93538980022541,
+      "url": "https://maps.app.goo.gl/UYdHWGCYPUTCAwrB7",
+      "address": "Ano Syros 841 00",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
       "id": "monasteriesChurches_d020daa580d2",
       "slug": "ieron-isychastirion-agias-triados-agioy-nektarioy-aiginis-d020",
       "kind": "restaurant",
@@ -52045,6 +52935,38 @@
       ]
     },
     {
+      "id": "monasteriesChurches_d6f14e38ab07",
+      "slug": "monastery-panagia-malevi-iera-moni-malevis-arkadias-d6f1",
+      "kind": "restaurant",
+      "name": "Monastery Panagia Malevi - Ιερά Μονή Μαλεβής Αρκαδίας",
+      "lat": 37.32826726626947,
+      "lng": 22.582098000077636,
+      "url": "https://maps.app.goo.gl/BtKsuFeFD4LWsA3b9",
+      "address": "Epar.Od. Tripolis - Paraliou Astrous, Moni Malevis 220 09",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
+      "id": "monasteriesChurches_de5fa80c2937",
+      "slug": "saint-marina-andros-monastery-de5f",
+      "kind": "restaurant",
+      "name": "Saint Marina Andros Monastery - Ιερά Μονή Αγίας Μαρίνας",
+      "lat": 37.843778887243595,
+      "lng": 24.910125759208498,
+      "url": "https://maps.app.goo.gl/4AtnZF7HGZrH4Lju6",
+      "address": "Andros 845 00",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
       "id": "monasteriesChurches_e06cb099676f",
       "slug": "iera-moni-panagias-chrysoleontissas-e06c",
       "kind": "restaurant",
@@ -52061,6 +52983,22 @@
       ]
     },
     {
+      "id": "monasteriesChurches_e4a5d88f31bc",
+      "slug": "holy-church-dormition-virgin-mary-kalampakas-e4a5",
+      "kind": "restaurant",
+      "name": "Holy Church of the Dormition of the Virgin Mary - Ιερός Ναός Κοιμήσεως της Θεοτόκου Καλαμπάκας",
+      "lat": 39.709907873434474,
+      "lng": 21.628024029524074,
+      "url": "https://maps.app.goo.gl/sFH2jdo1FCexac6s5",
+      "address": "Επισκοπής, Mitropoleos, Kalampaka 422 00",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
       "id": "monasteriesChurches_ea257ea66588",
       "slug": "ieros-kathedrikos-naos-agias-triados-ano-glyfadas-ea25",
       "kind": "restaurant",
@@ -52069,6 +53007,54 @@
       "lng": 23.76655825797858,
       "url": "https://maps.app.goo.gl/SpsszvBBtaBzKcAW9?g_st=ipc",
       "address": "Αγίας ΤΡΙΑΔΑΣ &, Αρετής 78, Γλυφάδα 166 74",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
+      "id": "monasteriesChurches_ef60b91d3a48",
+      "slug": "holy-church-hagia-sophia-ef60",
+      "kind": "restaurant",
+      "name": "Holy Church of Hagia Sophia - Ιερός Ναός Αγίας Σοφίας (ή Παναγίας Οδηγήτριας)",
+      "lat": 36.68986250913508,
+      "lng": 23.054533300960983,
+      "url": "https://maps.app.goo.gl/WyT9QUcDPWZupwo39",
+      "address": "Agia Sofia, EO Monemvasias Krokeon, Monemvasia 230 70",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
+      "id": "monasteriesChurches_f071ca2e4b59",
+      "slug": "lycian-tomb-lykiakos-tafos-f071",
+      "kind": "restaurant",
+      "name": "Lycian Tomb - Λυκιακός Τάφος",
+      "lat": 36.15099209663437,
+      "lng": 29.595259139148887,
+      "url": "https://maps.app.goo.gl/DWgJ7YFmgXBd8pSW6",
+      "address": "Καστελλόριζο 851 11",
+      "categoryIds": [
+        "monasteries-churches"
+      ],
+      "categories": [
+        "Monasteries & Spiritual Sites"
+      ]
+    },
+    {
+      "id": "monasteriesChurches_f7c39261de48",
+      "slug": "iera-moni-osioy-grigorioy-f7c3",
+      "kind": "restaurant",
+      "name": "Ιερά Μονή Οσίου Γρηγορίου",
+      "lat": 40.17975416813608,
+      "lng": 24.255881300076492,
+      "url": "https://maps.app.goo.gl/GobC9Z2gJFJn7b7HA",
+      "address": "Άγιο Όρος 603 86",
       "categoryIds": [
         "monasteries-churches"
       ],
