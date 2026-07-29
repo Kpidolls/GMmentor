@@ -184,14 +184,29 @@ function getPlaceHtmlPath(slug) {
   return path.join(OUT_PLACE_DIR, `${slug}.html`);
 }
 
+function normalizePathname(value) {
+  let pathname = value;
+
+  try {
+    pathname = new URL(value, SITE_URL).pathname;
+  } catch {
+    // Keep original value if URL parsing fails.
+  }
+
+  try {
+    pathname = decodeURIComponent(pathname);
+  } catch {
+    // Keep encoded form when decoding fails.
+  }
+
+  const normalized = pathname.replace(/\/+$/, '') || '/';
+  return normalized;
+}
+
 function parseSitemapPaths(xml) {
   const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
   return new Set(urls.map((value) => {
-    try {
-      return new URL(value).pathname;
-    } catch {
-      return value;
-    }
+    return normalizePathname(value);
   }));
 }
 
@@ -234,12 +249,12 @@ function main() {
     if (entity?.kind === 'municipality') continue;
     if (!entity?.slug) continue;
 
-    expectedPaths.add(`/place/${entity.slug}`);
+    expectedPaths.add(normalizePathname(`/place/${entity.slug}`));
     slugToCanonical.set(entity.slug, entity.slug);
 
     for (const legacySlug of entity.legacySlugs || []) {
       if (!legacySlug) continue;
-      expectedPaths.add(`/place/${legacySlug}`);
+      expectedPaths.add(normalizePathname(`/place/${legacySlug}`));
       slugToCanonical.set(legacySlug, entity.slug);
     }
   }
@@ -296,10 +311,10 @@ function main() {
     const html = fs.readFileSync(htmlPath, 'utf8');
     const canonicalMatch = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i);
     const canonicalHref = canonicalMatch ? canonicalMatch[1] : null;
-    const expectedCanonicalPath = `/place/${canonicalSlug}`;
-    const expectedCanonicalUrl = `${SITE_URL}${expectedCanonicalPath}`;
+    const expectedCanonicalPath = normalizePathname(`/place/${canonicalSlug}`);
+    const actualCanonicalPath = canonicalHref ? normalizePathname(canonicalHref) : null;
 
-    if (!canonicalHref || canonicalHref !== expectedCanonicalUrl || !placePathSet.has(expectedCanonicalPath)) {
+    if (!canonicalHref || actualCanonicalPath !== expectedCanonicalPath || !placePathSet.has(expectedCanonicalPath)) {
       invalidCanonical.push(expectedPath);
     }
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T08:44:46.736Z",
+  "generatedAt": "2026-07-29T12:25:06.077Z",
   "thresholds": {
     "minAreaEntityCount": 8,
     "minCategoryAreaCount": 5
@@ -9,10 +9,10 @@
     "categories": 16,
     "candidateCombinations": 5632,
     "generatedAreaPages": 141,
-    "generatedCategoryAreaPages": 1042
+    "generatedCategoryAreaPages": 1052
   },
   "filteredCombinations": {
-    "below_threshold": 4590,
+    "below_threshold": 4580,
     "invalid_area": 0,
     "invalid_category": 0,
     "duplicate_intent": 0
@@ -934,6 +934,10 @@
       "areaSlug": "nea-erythraia"
     },
     {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "nea-erythraia"
+    },
+    {
       "categorySlug": "italian",
       "areaSlug": "nea-erythraia"
     },
@@ -1839,6 +1843,10 @@
     },
     {
       "categorySlug": "brunch",
+      "areaSlug": "palaio-faliro"
+    },
+    {
+      "categorySlug": "fish-tavernas",
       "areaSlug": "palaio-faliro"
     },
     {
@@ -1988,6 +1996,14 @@
     {
       "categorySlug": "family-friendly",
       "areaSlug": "dionysos"
+    },
+    {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "dionysos"
+    },
+    {
+      "categorySlug": "fish-tavernas",
+      "areaSlug": "nea-makri"
     },
     {
       "categorySlug": "family-friendly",
@@ -2266,6 +2282,10 @@
       "areaSlug": "nikaia"
     },
     {
+      "categorySlug": "italian",
+      "areaSlug": "nikaia"
+    },
+    {
       "categorySlug": "cheap-eats",
       "areaSlug": "nikaia"
     },
@@ -2275,6 +2295,10 @@
     },
     {
       "categorySlug": "burgers",
+      "areaSlug": "nikaia"
+    },
+    {
+      "categorySlug": "luxury-dining",
       "areaSlug": "nikaia"
     },
     {
@@ -2611,6 +2635,10 @@
     },
     {
       "categorySlug": "brunch",
+      "areaSlug": "mykonos"
+    },
+    {
+      "categorySlug": "italian",
       "areaSlug": "mykonos"
     },
     {
@@ -3118,6 +3146,10 @@
       "areaSlug": "ekali"
     },
     {
+      "categorySlug": "monasteries-churches",
+      "areaSlug": "stamata"
+    },
+    {
       "categorySlug": "greek-restaurants",
       "areaSlug": "kastella"
     },
@@ -3543,6 +3575,10 @@
     },
     {
       "categorySlug": "fish-tavernas",
+      "areaSlug": "karampoyrnaki"
+    },
+    {
+      "categorySlug": "italian",
       "areaSlug": "karampoyrnaki"
     },
     {
@@ -4326,6 +4362,10 @@
       "areaSlug": "ormos"
     },
     {
+      "categorySlug": "italian",
+      "areaSlug": "ormos"
+    },
+    {
       "categorySlug": "luxury-dining",
       "areaSlug": "ormos"
     }
@@ -4333,27 +4373,27 @@
   "densityAnalysis": {
     "areaEntityCounts": {
       "min": 0,
-      "max": 793,
-      "avg": 84.55,
-      "p50": 3,
+      "max": 803,
+      "avg": 85.41,
+      "p50": 4,
       "p75": 59,
-      "p90": 293
+      "p90": 294
     },
     "categoryEntityCounts": {
-      "min": 45,
-      "max": 779,
-      "avg": 233.06,
+      "min": 53,
+      "max": 785,
+      "avg": 237,
       "p50": 131,
-      "p75": 330,
+      "p75": 345,
       "p90": 431
     },
     "categoryAreaCounts": {
       "min": 3,
       "max": 142,
-      "avg": 29.48,
+      "avg": 29.52,
       "p50": 16,
-      "p75": 42,
-      "p90": 73
+      "p75": 43,
+      "p90": 75
     }
   },
   "categoryPerformance": [
@@ -4382,6 +4422,14 @@
       "filteredBelowThreshold": 262
     },
     {
+      "categoryId": "italian",
+      "categorySlug": "italian",
+      "threshold": 5,
+      "candidates": 352,
+      "generated": 86,
+      "filteredBelowThreshold": 266
+    },
+    {
       "categoryId": "family-friendly",
       "categorySlug": "family-friendly",
       "threshold": 4,
@@ -4398,14 +4446,6 @@
       "filteredBelowThreshold": 269
     },
     {
-      "categoryId": "italian",
-      "categorySlug": "italian",
-      "threshold": 5,
-      "candidates": 352,
-      "generated": 82,
-      "filteredBelowThreshold": 270
-    },
-    {
       "categoryId": "burgers",
       "categorySlug": "burgers",
       "threshold": 4,
@@ -4418,8 +4458,8 @@
       "categorySlug": "luxury-dining",
       "threshold": 4,
       "candidates": 352,
-      "generated": 74,
-      "filteredBelowThreshold": 278
+      "generated": 75,
+      "filteredBelowThreshold": 277
     },
     {
       "categoryId": "asian",
@@ -4434,8 +4474,8 @@
       "categorySlug": "fish-tavernas",
       "threshold": 6,
       "candidates": 352,
-      "generated": 62,
-      "filteredBelowThreshold": 290
+      "generated": 64,
+      "filteredBelowThreshold": 288
     },
     {
       "categoryId": "mexican",
@@ -4474,8 +4514,8 @@
       "categorySlug": "monasteries-churches",
       "threshold": 3,
       "candidates": 352,
-      "generated": 33,
-      "filteredBelowThreshold": 319
+      "generated": 36,
+      "filteredBelowThreshold": 316
     },
     {
       "categoryId": "wineries-vineyards",
@@ -4491,121 +4531,121 @@
       "id": "municipalities_5bc013791cf8",
       "slug": "plaka",
       "name": "Πλάκα",
-      "count": 793
+      "count": 803
     },
     {
       "id": "municipalities_877c3bc81df5",
       "slug": "syntagma",
       "name": "Σύνταγμα",
-      "count": 790
+      "count": 799
     },
     {
       "id": "municipalities_0cae2c00b932",
       "slug": "kolonaki",
       "name": "Κολωνάκι",
-      "count": 781
+      "count": 789
     },
     {
       "id": "municipalities_d7e1aaaed4f9",
       "slug": "monastiraki",
       "name": "Μοναστηράκι",
-      "count": 779
-    },
-    {
-      "id": "municipalities_0fd1d03201a0",
-      "slug": "mets",
-      "name": "Μετς",
-      "count": 779
+      "count": 788
     },
     {
       "id": "municipalities_4149fa79e27b",
       "slug": "akropoli",
       "name": "Ακρόπολη",
-      "count": 778
+      "count": 788
     },
     {
       "id": "municipalities_2bcfcb8b899f",
       "slug": "psyrri",
       "name": "Ψυρρή",
-      "count": 777
+      "count": 787
+    },
+    {
+      "id": "municipalities_0fd1d03201a0",
+      "slug": "mets",
+      "name": "Μετς",
+      "count": 786
     },
     {
       "id": "municipalities_616efd2a0d9b",
       "slug": "koykaki",
       "name": "Κουκάκι",
-      "count": 775
-    },
-    {
-      "id": "municipalities_2f324ee27306",
-      "slug": "exarcheia",
-      "name": "Εξάρχεια",
-      "count": 770
+      "count": 785
     },
     {
       "id": "municipalities_b85b54408d92",
       "slug": "thiseio",
       "name": "Θησείο",
-      "count": 769
+      "count": 779
+    },
+    {
+      "id": "municipalities_2f324ee27306",
+      "slug": "exarcheia",
+      "name": "Εξάρχεια",
+      "count": 778
     },
     {
       "id": "municipalities_0eb5ad956816",
       "slug": "neos-kosmos",
       "name": "Νέος Κόσμος",
-      "count": 757
+      "count": 767
     },
     {
       "id": "municipalities_7e1691d5f08d",
       "slug": "metaxoyrgeio",
       "name": "Μεταξουργείο",
-      "count": 751
+      "count": 760
     },
     {
       "id": "municipalities_75ddb64a42fd",
       "slug": "gyzi",
       "name": "Γύζη",
-      "count": 747
+      "count": 753
     },
     {
       "id": "municipalities_80c55a9453fa",
       "slug": "ano-petralona",
       "name": "Άνω Πετράλωνα",
-      "count": 743
+      "count": 753
     },
     {
       "id": "municipalities_af1f7d07cb18",
       "slug": "gkazi",
       "name": "Γκάζι",
-      "count": 742
+      "count": 751
     },
     {
       "id": "municipalities_0889636ab7df",
       "slug": "petralona",
       "name": "Πετράλωνα",
-      "count": 740
-    },
-    {
-      "id": "municipalities_e7a6ea2b75ba",
-      "slug": "pagkrati",
-      "name": "Παγκράτι",
-      "count": 725
+      "count": 749
     },
     {
       "id": "municipalities_f73663b8f738",
       "slug": "attiki",
       "name": "Αττική",
-      "count": 725
+      "count": 733
+    },
+    {
+      "id": "municipalities_e7a6ea2b75ba",
+      "slug": "pagkrati",
+      "name": "Παγκράτι",
+      "count": 732
     },
     {
       "id": "municipalities_61eaea5bd3d9",
       "slug": "ilisia",
       "name": "Ιλίσια",
-      "count": 708
+      "count": 714
     },
     {
       "id": "municipalities_2dbf77b73060",
       "slug": "royf",
       "name": "Ρουφ",
-      "count": 704
+      "count": 713
     }
   ],
   "highestDensityCategories": [
@@ -4613,7 +4653,7 @@
       "id": "greek-restaurants",
       "slug": "greek-restaurants",
       "name": "Greek Restaurants",
-      "count": 779
+      "count": 785
     },
     {
       "id": "coffee-brunch",
@@ -4637,19 +4677,19 @@
       "id": "fish-tavernas",
       "slug": "fish-tavernas",
       "name": "Fish Tavernas",
-      "count": 330
+      "count": 345
     },
     {
       "id": "luxury-dining",
       "slug": "luxury-dining",
       "name": "Luxury Dining",
-      "count": 207
+      "count": 214
     },
     {
       "id": "italian",
       "slug": "italian",
       "name": "Italian Restaurants",
-      "count": 187
+      "count": 199
     },
     {
       "id": "family-friendly",
@@ -4694,16 +4734,16 @@
       "count": 76
     },
     {
-      "id": "mexican",
-      "slug": "mexican",
-      "name": "Mexican Restaurants",
-      "count": 52
-    },
-    {
       "id": "monasteries-churches",
       "slug": "monasteries-churches",
       "name": "Monasteries & Spiritual Sites",
-      "count": 45
+      "count": 67
+    },
+    {
+      "id": "mexican",
+      "slug": "mexican",
+      "name": "Mexican Restaurants",
+      "count": 53
     }
   ],
   "strongestCategoryAreaCombinations": [
