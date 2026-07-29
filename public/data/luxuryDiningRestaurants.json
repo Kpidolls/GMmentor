@@ -423,6 +423,69 @@
     "slug": "tudor-hall-625d"
   },
   {
+    "url": "https://maps.app.goo.gl/ugERq2tfoiEihDtd8",
+    "name": "Whispers Athens",
+    "address": "Leof. Vasilisis Amalias 10, Athina 105 57",
+    "lat": "37.97395179071669",
+    "lng": "23.734906203532102",
+    "id": "luxuryDiningRestaurants_8ad0fc7a1b49",
+    "slug": "whispers-athens-8ad0"
+  },
+  {
+    "url": "https://maps.app.goo.gl/juFhjckbNQCSsXfZ7",
+    "name": "Patio at The Margi",
+    "address": "Litous 11, Vouliagmeni 166 71",
+    "lat": "37.81371494804425",
+    "lng": "23.77400785487732",
+    "id": "luxuryDiningRestaurants_4f979598b6e4",
+    "slug": "patio-at-the-margi-4f97"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cMCNaEudeCE8JYP76",
+    "name": "Sole Giaguaro Athens Italian Dining House",
+    "address": "Troon 66, Athina 118 52",
+    "lat": "37.96824137306403",
+    "lng": "23.712215878915362",
+    "id": "luxuryDiningRestaurants_c2bcf3a4ec7d",
+    "slug": "sole-giaguaro-athens-italian-dining-house-c2bc"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HAa43wUDR7ony7y76",
+    "name": "Dionysos Zonar's",
+    "address": "Rovertou Galli 43, Athina 117 42",
+    "lat": "37.969454769051865",
+    "lng": "23.7224339411048",
+    "id": "luxuryDiningRestaurants_15ccbce7d4e2",
+    "slug": "dionysos-zonars-15cc"
+  },
+  {
+    "url": "https://maps.app.goo.gl/y8BqMn2JoCNSgTEMA",
+    "name": "dex.Silo.01 Creative Dining",
+    "address": "Dexamenes Seaside Hotel Pedestrian of Kourouta, Kourouta 272 00",
+    "lat": "37.767572954782565",
+    "lng": "21.296399401229483",
+    "id": "luxuryDiningRestaurants_8933c051cf1b",
+    "slug": "dex-silo-01-creative-dining-8933"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aXpPsmT3SWfnwzNT7",
+    "name": "Twenty Five Restaurant",
+    "address": "Akti Koumoundourou 58, Pireas 185 33",
+    "lat": "37.93708326778921",
+    "lng": "23.658416319042388",
+    "id": "luxuryDiningRestaurants_54b69549e1c5",
+    "slug": "twenty-five-restaurant-54b6"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MmYYF3XmW9zvN7yVA",
+    "name": "Focu Sauvage",
+    "address": "Megalou Vasileiou 52, Athina 118 54",
+    "lat": "37.97537729508126",
+    "lng": "23.706242632495353",
+    "id": "luxuryDiningRestaurants_d6856d7a6f3b",
+    "slug": "focu-sauvage-d685"
+  },
+  {
     "url": "https://maps.app.goo.gl/yjnQQMfc7oBpEhjn7?g_st=ipc",
     "name": "Spondi Restaurant",
     "address": "Πύρρωνος 5, Αθήνα 116 36",
@@ -1861,5 +1924,68 @@
     "lng": "23.751887900106137",
     "id": "luxuryDiningRestaurants_b47f4027e341",
     "slug": "son-b47f"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ugERq2tfoiEihDtd8",
+    "name": "Whispers Athens",
+    "address": "Leof. Vasilisis Amalias 10, Athina 105 57",
+    "lat": "37.97395179071669",
+    "lng": "23.734906203532102",
+    "id": "luxuryDiningRestaurants_8ad0fc7a1b49",
+    "slug": "whispers-athens-8ad0"
+  },
+  {
+    "url": "https://maps.app.goo.gl/juFhjckbNQCSsXfZ7",
+    "name": "Patio at The Margi",
+    "address": "Litous 11, Vouliagmeni 166 71",
+    "lat": "37.81371494804425",
+    "lng": "23.77400785487732",
+    "id": "luxuryDiningRestaurants_4f979598b6e4",
+    "slug": "patio-at-the-margi-4f97"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cMCNaEudeCE8JYP76",
+    "name": "Sole Giaguaro Athens Italian Dining House",
+    "address": "Troon 66, Athina 118 52",
+    "lat": "37.96824137306403",
+    "lng": "23.712215878915362",
+    "id": "luxuryDiningRestaurants_c2bcf3a4ec7d",
+    "slug": "sole-giaguaro-athens-italian-dining-house-c2bc"
+  },
+  {
+    "url": "https://maps.app.goo.gl/HAa43wUDR7ony7y76",
+    "name": "Dionysos Zonar's",
+    "address": "Rovertou Galli 43, Athina 117 42",
+    "lat": "37.969454769051865",
+    "lng": "23.7224339411048",
+    "id": "luxuryDiningRestaurants_15ccbce7d4e2",
+    "slug": "dionysos-zonars-15cc"
+  },
+  {
+    "url": "https://maps.app.goo.gl/y8BqMn2JoCNSgTEMA",
+    "name": "dex.Silo.01 Creative Dining",
+    "address": "Dexamenes Seaside Hotel Pedestrian of Kourouta, Kourouta 272 00",
+    "lat": "37.767572954782565",
+    "lng": "21.296399401229483",
+    "id": "luxuryDiningRestaurants_8933c051cf1b",
+    "slug": "dex-silo-01-creative-dining-8933"
+  },
+  {
+    "url": "https://maps.app.goo.gl/aXpPsmT3SWfnwzNT7",
+    "name": "Twenty Five Restaurant",
+    "address": "Akti Koumoundourou 58, Pireas 185 33",
+    "lat": "37.93708326778921",
+    "lng": "23.658416319042388",
+    "id": "luxuryDiningRestaurants_54b69549e1c5",
+    "slug": "twenty-five-restaurant-54b6"
+  },
+  {
+    "url": "https://maps.app.goo.gl/MmYYF3XmW9zvN7yVA",
+    "name": "Focu Sauvage",
+    "address": "Megalou Vasileiou 52, Athina 118 54",
+    "lat": "37.97537729508126",
+    "lng": "23.706242632495353",
+    "id": "luxuryDiningRestaurants_d6856d7a6f3b",
+    "slug": "focu-sauvage-d685"
   }
 ]

@@ -1681,5 +1681,113 @@
     "lng": "22.97491381907505",
     "id": "italianRestaurants_ef2ba38809cf",
     "slug": "funky-s-thessaloniki-ef2b"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dyiG6xYY2jnKqWuC6",
+    "name": "Hasselhoff Pizza",
+    "address": "2as Maiou 22, Nea Smirni 171 21",
+    "lat": "37.946448125981064",
+    "lng": "23.713275469593658",
+    "id": "italianRestaurants_27c504fe503d",
+    "slug": "hasselhoff-pizza-27c5"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UJT49gNyvqNwUfw87",
+    "name": "Da Leonardo Cucina Italiana",
+    "address": "Filippou 50, Pilea 555 35",
+    "lat": "40.60016225935109",
+    "lng": "22.98386716432333",
+    "id": "italianRestaurants_4c9bf0f6e0d1",
+    "slug": "da-leonardo-cucina-italiana-4c9b"
+  },
+  {
+    "url": "https://maps.app.goo.gl/JY9gc1zWFMM8PRPo9",
+    "name": "Siena Pizzeria Restaurant",
+    "address": "Karaoli ke Dimitriou 255, Stavroupoli 564 31",
+    "lat": "40.665642842807195",
+    "lng": "22.929618796114344",
+    "id": "italianRestaurants_89d22fb2b0dc",
+    "slug": "siena-pizzeria-restaurant-89d2"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wFv1VvvLh2j9QQS58",
+    "name": "LIONDI Traditional Greek Restaurant",
+    "address": "Makrigianni 19-21, Athina 117 42",
+    "lat": "37.968210535350664",
+    "lng": "23.729476329522083",
+    "id": "italianRestaurants_2ebf1b5146a3",
+    "slug": "liondi-traditional-greek-restaurant-2ebf"
+  },
+  {
+    "url": "https://maps.app.goo.gl/eNK7n3TdbbZaXYbe6",
+    "name": "La Strada the art of pizza",
+    "address": "Leof. Lavriou 158, Glika Nera 153 54",
+    "lat": "37.98713184940215",
+    "lng": "23.85036898842405",
+    "id": "italianRestaurants_95ff2a6d9770",
+    "slug": "la-strada-the-art-of-pizza-95ff"
+  },
+  {
+    "url": "https://maps.app.goo.gl/ydJ9HU8xCXUZckNX6",
+    "name": "Sole Giaguaro Athens Italian Dining House",
+    "address": "Troon 66, Athina 118 52",
+    "lat": "37.96824180671715",
+    "lng": "23.71221680007241",
+    "id": "italianRestaurants_b73d8842d51c",
+    "slug": "sole-giaguaro-athens-italian-dining-house-b73d"
+  },
+  {
+    "url": "https://maps.app.goo.gl/wcctewnuRztXCZJP8",
+    "name": "Zyme Zymospritzeria Kallithea",
+    "address": "Mantzagriotaki 105, Kallithea 176 76",
+    "lat": "37.9568231927377",
+    "lng": "23.702705658972977",
+    "id": "italianRestaurants_cf20b12c5719",
+    "slug": "zyme-zymospritzeria-kallithea-cf20"
+  },
+  {
+    "url": "https://maps.app.goo.gl/p1pHqhxtenS93n3F9",
+    "name": "Obati Italian restaurant and pizzeria",
+    "address": "Unnamed Road, Mikonos 846 00",
+    "lat": "37.427475063420026",
+    "lng": "25.333495200083025",
+    "id": "italianRestaurants_7768f312af8e",
+    "slug": "obati-italian-restaurant-and-pizzeria-7768"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DT9T57duPcaXdH888",
+    "name": "La Jacka",
+    "address": "Καραΐσκου 117, Pireas 185 32",
+    "lat": "37.94212829289322",
+    "lng": "23.647528000078857",
+    "id": "italianRestaurants_a1f6dc6b3370",
+    "slug": "la-jacka-a1f6"
+  },
+  {
+    "url": "https://maps.app.goo.gl/PP6eHZX61MwrMkVK8",
+    "name": "Olio pizza stoupa",
+    "address": "Stoupa 240 24",
+    "lat": "36.84561803095061",
+    "lng": "22.259538928906146",
+    "id": "italianRestaurants_98a88655b1d4",
+    "slug": "olio-pizza-stoupa-98a8"
+  },
+  {
+    "url": "https://maps.app.goo.gl/K1QjtsfF5Jxwh1Ky5",
+    "name": "ATENIESE TRATTORIA",
+    "address": "Kon/nou Ventiri 7, Athina 115 28",
+    "lat": "37.97639590175048",
+    "lng": "23.751287594336826",
+    "id": "italianRestaurants_3ec8f4a2fbc1",
+    "slug": "ateniese-trattoria-3ec8"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SZsMoK8HTGnTZqTq7",
+    "name": "Kritamos Taverna - Pizzeria",
+    "address": "3W4P+W8 Δίπλα στο Μουσείο Μεσσαράς, Ampelouzos 700 12",
+    "lat": "35.05731442082574",
+    "lng": "24.93581115897962",
+    "id": "italianRestaurants_7d0d64fce5ab",
+    "slug": "kritamos-taverna-pizzeria-7d0d"
   }
 ]

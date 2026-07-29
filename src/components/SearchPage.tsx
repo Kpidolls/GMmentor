@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useMemo, useEffect } from 'react';
+import React, { useDeferredValue, useState, useRef, useMemo, useEffect } from 'react';
 import {
   Box,
   Button,
@@ -126,6 +126,7 @@ const SearchPage = ({ focusOnMount = false, placeEntities }: SearchPageProps) =>
     }
   };
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredSearchQuery = useDeferredValue(searchQuery);
   const [filteredResults, setFilteredResults] = useState<SearchResult[]>([]);
   const [searchablePlaceEntities, setSearchablePlaceEntities] = useState<EntityRecord[]>(initialPlaceEntities);
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -163,13 +164,13 @@ const SearchPage = ({ focusOnMount = false, placeEntities }: SearchPageProps) =>
   }, [searchablePlaceEntities.length]);
 
   const matchedCategories = useMemo(() => {
-    if (!searchQuery.trim()) return [];
+    if (!deferredSearchQuery.trim()) return [];
 
-    const matches = detectCategoryMatches(searchQuery, 4);
+    const matches = detectCategoryMatches(deferredSearchQuery, 4);
     return matches
       .map((match) => restaurantCategories.find((category) => category.id === match.categoryId))
       .filter((category): category is RestaurantCategory => Boolean(category));
-  }, [searchQuery, restaurantCategories]);
+  }, [deferredSearchQuery, restaurantCategories]);
 
   const searchableData = useMemo<SearchResult[]>(() => [
     ...searchablePlaceEntities.map((entity) => ({
@@ -264,10 +265,16 @@ const SearchPage = ({ focusOnMount = false, placeEntities }: SearchPageProps) =>
       defaultValue: '{{destination}} Points of Interest Map',
     });
 
+  const getDestinationDetailsPath = (id: string) => `/destination/${encodeURIComponent(String(id || '').trim())}`;
+
   const handleShareMap = async (item: SearchResult) => {
     if (typeof window === 'undefined') return;
 
     const shareUrl = (() => {
+      if (item.type === 'islands') {
+        return new URL(getDestinationDetailsPath(item.id), window.location.origin).toString();
+      }
+
       try {
         return new URL(item.link, window.location.origin).toString();
       } catch {

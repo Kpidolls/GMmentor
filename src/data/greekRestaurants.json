@@ -7009,5 +7009,734 @@
     "lng": "23.12040447873948",
     "id": "greekRestaurants_f58f287acaec",
     "slug": "1900-paradosiako-taverneio-traditional-tavern-f58f"
+  },
+  {
+    "name": "Παραφλού",
+    "url": "https://maps.app.goo.gl/FHzT2nFozTEtmHZa8",
+    "address": "Kosti Palama 12, Thessaloniki 546",
+    "lat": 3040.640920914049,
+    "lng": 22.938784388650497,
+    "id": "greekRestaurants_89b107d9e1a4",
+    "slug": "παραφλου-89b1"
+  },
+  {
+    "name": "Fantazio Kitchen - ΦΑΝΤΑΖΙΟ",
+    "url": "https://maps.app.goo.gl/EhEq3R6xEWXgny2H9",
+    "address": "Olympou 23, Thessaloniki 546",
+    "lat": 3040.6413121310193,
+    "lng": 22.940383008345652,
+    "id": "greekRestaurants_6cd1636a047d",
+    "slug": "fantazio-kitchen-φανταζιο-6cd1"
+  },
+  {
+    "name": "Σουμάκι - Vradyfageio Soumaki",
+    "url": "https://maps.app.goo.gl/UovS43wjRNQFV26g9",
+    "address": "Olympou 79, Thessaloniki 546",
+    "lat": 3140.6380752452383,
+    "lng": 22.94693866479571,
+    "id": "greekRestaurants_0929782ee71b",
+    "slug": "σουμακι-vradyfageio-soumaki-0929"
+  },
+  {
+    "name": "Φέννελ Γαστροταβέρνα - Fennel Gastro Tavern",
+    "url": "https://maps.app.goo.gl/NWVn2Vete3J3gC9JA",
+    "address": "Themistokli Sofouli 89, Kalamaria 551",
+    "lat": 3140.589595963474,
+    "lng": 22.94584126479991,
+    "id": "greekRestaurants_895343a944ec",
+    "slug": "φεννελ-γαστροταβερνα-fennel-gastro-tavern-8953"
+  },
+  {
+    "name": "Gobo Restaurant",
+    "url": "https://maps.app.goo.gl/iL6vCD8WxnDdsrK17",
+    "address": "Str. Doumpiotou 8, Thessaloniki 546",
+    "lat": 3240.641040262887,
+    "lng": 22.943258464799992,
+    "id": "greekRestaurants_74fae9dde8b9",
+    "slug": "gobo-restaurant-74fa"
+  },
+  {
+    "name": "Chouska",
+    "url": "https://maps.app.goo.gl/vS2iLa7QB9D4M7rA6",
+    "address": "Στεφάνου Δραγούμη, Πρώην Φιλήμονος 10, Thessaloniki 546",
+    "lat": 3340.6406369533424,
+    "lng": 22.945145821595638,
+    "id": "greekRestaurants_f171c0ed1b43",
+    "slug": "chouska-f171"
+  },
+  {
+    "name": "Aλγη - Álgē",
+    "url": "https://maps.app.goo.gl/h2Rj7ibMrGkH1xXx9",
+    "address": "Achiropiitou 4, Thessaloniki 546",
+    "lat": 3540.63495724932,
+    "lng": 22.948636416055326,
+    "id": "greekRestaurants_38610b64339b",
+    "slug": "aλγη-alge-3861"
+  },
+  {
+    "name": "ΑΠΑΛΟΥ bistro",
+    "url": "https://maps.app.goo.gl/BhJjN8PtFaV4egHv9",
+    "address": "EO Neochoriou Tsagkaradas 26, Tsagkarada 370",
+    "lat": 1239.3873367540696,
+    "lng": 23.172890510386317,
+    "id": "greekRestaurants_072f4eb22081",
+    "slug": "απαλου-bistro-072f"
+  },
+  {
+    "name": "El resto-barpapa nero, Ag. Ioannis Mouresiou",
+    "url": "https://maps.app.goo.gl/SmaossdmvRmnqZRb7",
+    "address": "370",
+    "lat": 1239.410303144228,
+    "lng": 23.16571263167433,
+    "id": "greekRestaurants_e29c4f7cac64",
+    "slug": "el-resto-barpapa-nero-ag-ioannis-mouresiou-e29c"
+  },
+  {
+    "name": "Το Καλύβι",
+    "url": "https://maps.app.goo.gl/fMSERGPtCm1NZUNH7",
+    "address": "EO Neochoriou Tsagkaradas 26, Tsagkarada 370",
+    "lat": 1239.3767046228077,
+    "lng": 23.179468648718135,
+    "id": "greekRestaurants_cb14a42f97a5",
+    "slug": "το-καλυβι-cb14"
+  },
+  {
+    "name": "Dovas Home CookingΠηλίου, Chorefto",
+    "url": "https://maps.app.goo.gl/LZXZLQDr5RxJ8nxu9",
+    "address": "370",
+    "lat": 139.45282121641148,
+    "lng": 23.12196502974803,
+    "id": "greekRestaurants_90e96529bd89",
+    "slug": "dovas-home-cookingπηλιου-chorefto-90e9"
+  },
+  {
+    "name": "Λιοστάσι / LiostasiMilies",
+    "url": "https://maps.app.goo.gl/96r9wioLrF2UCQoXA",
+    "address": "370",
+    "lat": 1039.3176592217264,
+    "lng": 23.15325587403558,
+    "id": "greekRestaurants_b13a55b24c10",
+    "slug": "λιοστασι-liostasimilies-b13a"
+  },
+  {
+    "name": "Όβηλος-Ovylos restaurant",
+    "url": "https://maps.app.goo.gl/vQKEPPhURJBLvHtZ8",
+    "address": "Anaximandrou 35, Thessaloniki 542",
+    "lat": 5040.600276435967,
+    "lng": 22.975866694240796,
+    "id": "greekRestaurants_36cd69d5fe86",
+    "slug": "οβηλος-ovylos-restaurant-36cd"
+  },
+  {
+    "name": "Νόστιμον ἦμαρ",
+    "url": "https://maps.app.goo.gl/dX3uyBtSakHy2Rqq5",
+    "address": "Βυζίτσα, Πηλίου, Βόλος 370",
+    "lat": 1039.3341235403395,
+    "lng": 23.131531594243864,
+    "id": "greekRestaurants_fd80f70d4214",
+    "slug": "νοστιμον-ημαρ-fd80"
+  },
+  {
+    "name": "Παραδοσιακό Βολιώτικο Τσιπουράδικο \" Το ΚΡΊΤΑΜΟ του Βόλου\"",
+    "url": "https://maps.app.goo.gl/dKRQZKTcZE1uiPtA6",
+    "address": "Lori 21, Volos 382",
+    "lat": 2139.361656358883,
+    "lng": 22.946684064799157,
+    "id": "greekRestaurants_dc089c812750",
+    "slug": "παραδοσιακο-βολιωτικο-τσιπουραδικο-το-κριταμο-του-βολου-dc08"
+  },
+  {
+    "name": "LIONDI Traditional Greek Restaurant",
+    "url": "https://maps.app.goo.gl/wFv1VvvLh2j9QQS58",
+    "address": "Makrigianni 19-21, Athina 117",
+    "lat": 4237.968211592614,
+    "lng": 23.729475994250002,
+    "id": "greekRestaurants_2ef36d04dcda",
+    "slug": "liondi-traditional-greek-restaurant-2ef3"
+  },
+  {
+    "name": "Grande Dame Athenian Tavern",
+    "url": "https://maps.app.goo.gl/FbxiKVnk2yqJcpz8A",
+    "address": "Nikis 46, Athina 105",
+    "lat": 5837.973212035368,
+    "lng": 23.732904864798513,
+    "id": "greekRestaurants_25dccc775267",
+    "slug": "grande-dame-athenian-tavern-25dc"
+  },
+  {
+    "name": "Lyra Restaurant Athens",
+    "url": "https://maps.app.goo.gl/DQt5aR4HCmN2uJuJ9",
+    "address": "Lisiou 12, Athina 105",
+    "lat": 5637.973449435335,
+    "lng": 23.72800242863027,
+    "id": "greekRestaurants_ec28fc7972f1",
+    "slug": "lyra-restaurant-athens-ec28"
+  },
+  {
+    "name": "Taverna",
+    "url": "https://maps.app.goo.gl/LXJbGoK8CnK3ZJmp9",
+    "address": "Ermou AthensErmou 98, Athina 105",
+    "lat": 5537.977018340924,
+    "lng": 23.72427258842632,
+    "id": "greekRestaurants_81188e89de92",
+    "slug": "taverna-8118"
+  },
+  {
+    "name": "Στου Βαλέσα - Όλα στη Λαδόκολλα",
+    "url": "https://maps.app.goo.gl/dusoeUyJzW9Hpc8a6",
+    "address": "Χρυσοστόμου Σμύρνης 8, Nik. Plastira 61, Nea Smirni 171",
+    "lat": 2137.9489663346108,
+    "lng": 23.70914206494787,
+    "id": "greekRestaurants_d550ad9ad085",
+    "slug": "στου-βαλεσα-ολα-στη-λαδοκολλα-d550"
+  },
+  {
+    "name": "Κεμπαπτζίδικον Μπουρνοβαλια",
+    "url": "https://maps.app.goo.gl/V3q8BvP2neHZn5z17",
+    "address": "Agias Sofias 93, Nea Smirni 171",
+    "lat": 2337.9364239541915,
+    "lng": 23.71597604371751,
+    "id": "greekRestaurants_823098d4cb2f",
+    "slug": "κεμπαπτζιδικον-μπουρνοβαλια-8230"
+  },
+  {
+    "name": "Anemológio - Ανεμολόγιο",
+    "url": "https://maps.app.goo.gl/eMQ6JRNKoGjdJ7XDA",
+    "address": "Πρόμαχοι Πέλλας 584",
+    "lat": 41.024898246719644,
+    "lng": 22.004328094242272,
+    "id": "greekRestaurants_7c37801cbf8c",
+    "slug": "anemologio-ανεμολογιο-7c37"
+  },
+  {
+    "name": "Salero",
+    "url": "https://maps.app.goo.gl/kojxoTfsJ83U4nUN9",
+    "address": "Valtetsiou 51, Athina 106",
+    "lat": 8137.98564586392,
+    "lng": 23.735585394247536,
+    "id": "greekRestaurants_799ef17cd68e",
+    "slug": "salero-799e"
+  },
+  {
+    "name": "To Kaplani",
+    "url": "https://maps.app.goo.gl/biCuPWx3gMdebrJm6",
+    "address": "Efroniou 47, Kesariani 161",
+    "lat": 2137.972526135367,
+    "lng": 23.752873194245566,
+    "id": "greekRestaurants_2786b211e808",
+    "slug": "to-kaplani-2786"
+  },
+  {
+    "name": "Tsiftis gastrokoutouki +",
+    "url": "https://maps.app.goo.gl/cwyuJCQyzTCkLCEN9",
+    "address": "Michalakopoulou 88Α, Athina 115",
+    "lat": 2837.9804019068497,
+    "lng": 23.75684656479625,
+    "id": "greekRestaurants_6971bf3e1afc",
+    "slug": "tsiftis-gastrokoutouki-6971"
+  },
+  {
+    "name": "Stani - Στανη",
+    "url": "https://maps.app.goo.gl/dxWuFw46jyx3gF8D7",
+    "address": "Σκαμνέλι, Γυφτόκαμπος Σκαμνέλι 440",
+    "lat": 1039.9342254567441,
+    "lng": 20.917142864798436,
+    "id": "greekRestaurants_f65d3733ad4a",
+    "slug": "stani-στανη-f65d"
+  },
+  {
+    "name": "Ροζ Πάνθηρας Fire Kitchen",
+    "url": "https://maps.app.goo.gl/YKhCTQUvWUzWDr327",
+    "address": "Empedokleous 29, Athina 116",
+    "lat": 3537.9653951066884,
+    "lng": 23.7437150942432,
+    "id": "greekRestaurants_1468cedb5d75",
+    "slug": "ροζ-πανθηρας-fire-kitchen-1468"
+  },
+  {
+    "name": "Opos Palia - Όπως Παλιά",
+    "url": "https://maps.app.goo.gl/U2VybZbb61Uc3hjA7",
+    "address": "Veikou 2, Athina 117",
+    "lat": 4237.9674803353455,
+    "lng": 23.728728535351255,
+    "id": "greekRestaurants_e6d59c522e39",
+    "slug": "opos-palia-οπως-παλια-e6d5"
+  },
+  {
+    "name": "SOLAKIS ESTIATORIO",
+    "url": "https://maps.app.goo.gl/2RZv96ezmUe4pqUV8",
+    "address": "Nikis 43, Athina 105",
+    "lat": 5737.972660963964,
+    "lng": 23.733195964800117,
+    "id": "greekRestaurants_9ec5aae91b94",
+    "slug": "solakis-estiatorio-9ec5"
+  },
+  {
+    "name": "Τρελή Ροδιά",
+    "url": "https://maps.app.goo.gl/82Mi181r5nYHHC8R7",
+    "address": "Kidantidon 39, Athina 118",
+    "lat": 5137.969743692595,
+    "lng": 23.71372146480242,
+    "id": "greekRestaurants_f291a050d81f",
+    "slug": "τρελη-ροδια-f291"
+  },
+  {
+    "name": "To kousoulo - Μεζεδοπωλείο Θησείο Το Κούσουλο",
+    "url": "https://maps.app.goo.gl/oSwFfBY68VMc9RyQA",
+    "address": "Amfiktionos 27, Athina 118",
+    "lat": 5137.975130035372,
+    "lng": 23.718484935350695,
+    "id": "greekRestaurants_5c74c249804b",
+    "slug": "to-kousoulo-μεζεδοπωλειο-θησειο-το-κουσουλο-5c74"
+  },
+  {
+    "name": "Papagalos Tavern - Παπαγάλος Μεζεδοπωλείο",
+    "url": "https://maps.app.goo.gl/U1uFxf6Pxrhc4RaHA",
+    "address": "P. Tsaldari 261, Kallithea 176",
+    "lat": 7537.957060419468,
+    "lng": 23.694362229198504,
+    "id": "greekRestaurants_d691a6d20659",
+    "slug": "papagalos-tavern-παπαγαλος-μεζεδοπωλειο-d691"
+  },
+  {
+    "name": "Βασιλικός & Δυόσμος",
+    "url": "https://maps.app.goo.gl/EwDU3pZAstt7b6DU7",
+    "address": "Xenofontos 179, Kallithea 176",
+    "lat": 7437.9442202640685,
+    "lng": 23.68892029424734,
+    "id": "greekRestaurants_26b443f00cdb",
+    "slug": "βασιλικος-δυοσμος-26b4"
+  },
+  {
+    "name": "Koutsou & Co.",
+    "url": "https://maps.app.goo.gl/VQZatwHe6n5AADoH8",
+    "address": "Xenofontos 15Α, Athina 105",
+    "lat": 5737.974234692548,
+    "lng": 23.73340256480259,
+    "id": "greekRestaurants_f38c1825ae90",
+    "slug": "koutsou-co-f38c"
+  },
+  {
+    "name": "Πλυτά - Plyta",
+    "url": "https://maps.app.goo.gl/ESmeFE5xHqTrRtb66",
+    "address": "Pl. Amvrosiou Plita 1, Athina 116",
+    "lat": 3137.959279692708,
+    "lng": 23.74029556480238,
+    "id": "greekRestaurants_6ddb12894a5d",
+    "slug": "πλυτα-plyta-6ddb"
+  },
+  {
+    "name": "Mystilli",
+    "url": "https://maps.app.goo.gl/Gm1W8gdw2HvaLLZA7",
+    "address": "Adrianou 7, Athina 105",
+    "lat": 5537.97649693538,
+    "lng": 23.721983864798432,
+    "id": "greekRestaurants_9894127a8fa4",
+    "slug": "mystilli-9894"
+  },
+  {
+    "name": "Ταβέρνα Σαράντης - Taverna Sarantis",
+    "url": "https://maps.app.goo.gl/2fTrt1CHqyhbe8ec9",
+    "address": "Unnamed Road, Theologos 350",
+    "lat": 538.6476045378117,
+    "lng": 23.182196764797432,
+    "id": "greekRestaurants_f2177c3883d5",
+    "slug": "ταβερνα-σαραντης-taverna-sarantis-f217"
+  },
+  {
+    "name": "Φλάρος Καφενείο",
+    "url": "https://maps.app.goo.gl/45eMM8pmwVUdKX6k6",
+    "address": "Damareos 25, Athina 116",
+    "lat": 3337.967776335348,
+    "lng": 23.75258586479825,
+    "id": "greekRestaurants_4a5403fc5b3b",
+    "slug": "φλαρος-καφενειο-4a54"
+  },
+  {
+    "name": "Μηλεώνας (Κτήμα Παπαϊωάννου)",
+    "url": "https://maps.app.goo.gl/SMzLtHZpgNxxrYi89",
+    "address": "Μελάνθιο 570",
+    "lat": 1740.9469199658574,
+    "lng": 23.05367666480151,
+    "id": "greekRestaurants_1586268b2e15",
+    "slug": "μηλεωνας-κτημα-παπαιωαννου-1586"
+  },
+  {
+    "name": "Edestéon - Εδεστέον",
+    "url": "https://maps.app.goo.gl/kssg1zvQ1CfLHNxs7",
+    "address": "P. Mela 14-16, Evosmos 562",
+    "lat": 2440.6682064539646,
+    "lng": 22.90994306479753,
+    "id": "greekRestaurants_9b84f24ea5e4",
+    "slug": "edesteon-εδεστεον-9b84"
+  },
+  {
+    "name": "1917 Thessaloniki",
+    "url": "https://maps.app.goo.gl/rx9hvPu8DMMiTJRM9",
+    "address": "Leof. Nikis 3, Thessaloniki 546",
+    "lat": 2440.6332222629762,
+    "lng": 22.93851226479985,
+    "id": "greekRestaurants_e3e1e02f6268",
+    "slug": "1917-thessaloniki-e3e1"
+  },
+  {
+    "name": "Rakómelo - Ρακόμελο",
+    "url": "https://maps.app.goo.gl/8iza4CJ1F8uUE5BE9",
+    "address": "Praxagora 1, Thessaloniki 543",
+    "lat": 5140.614263100037,
+    "lng": 22.97388939423227,
+    "id": "greekRestaurants_72b3597ddbd1",
+    "slug": "rakomelo-ρακομελο-72b3"
+  },
+  {
+    "name": "Svoúra",
+    "url": "https://maps.app.goo.gl/Yyr6z6qmaWLmjLKz5",
+    "address": "30, Nik. Plastira 28, Ampelokipi 561",
+    "lat": 2140.6571804776295,
+    "lng": 22.9243398547481,
+    "id": "greekRestaurants_767e30a1bc45",
+    "slug": "svoura-767e"
+  },
+  {
+    "name": "PARAMYΘΙΑ - PARAMYTHIA",
+    "url": "https://maps.app.goo.gl/cRKVNnJn9Bkwok3K9",
+    "address": "Leof. Meg. Alexandrou 12, Thessaloniki 546",
+    "lat": 4140.609574489103,
+    "lng": 22.951319545487273,
+    "id": "greekRestaurants_98e6f75a030d",
+    "slug": "paramyθια-paramythia-98e6"
+  },
+  {
+    "name": "Ο Στάβλος - Stavlos",
+    "url": "https://maps.app.goo.gl/jvMrZ6po7eamG7sv8",
+    "address": "Kon/nou Melenikou 30Α, Thessaloniki 546",
+    "lat": 3540.634007589616,
+    "lng": 22.95457003408181,
+    "id": "greekRestaurants_37c67e347b07",
+    "slug": "ο-σταβλος-stavlos-37c6"
+  },
+  {
+    "name": "Έπεα Πτερόεντα",
+    "url": "https://maps.app.goo.gl/6GJbvUwHNMHupwwZ9",
+    "address": "I. Passalidi 136, Kalamaria 551",
+    "lat": 3340.582663307171,
+    "lng": 22.956305270102817,
+    "id": "greekRestaurants_2d5f411be16c",
+    "slug": "επεα-πτεροεντα-2d5f"
+  },
+  {
+    "name": "Geusea - Γευsea",
+    "url": "https://maps.app.goo.gl/XqkVG2wnF1XaAjKM7",
+    "address": "Unnamed Road, Mandraki 853",
+    "lat": 336.61253016879164,
+    "lng": 27.132903364801933,
+    "id": "greekRestaurants_3a6344df1fe6",
+    "slug": "geusea-γευsea-3a63"
+  },
+  {
+    "name": "Η Θέα | Καφέ - Ταβέρνα - ΜεζεδοπωλείοΑγ. Γεώργιος",
+    "url": "https://maps.app.goo.gl/fEaFvUyN45YMd6kJ7",
+    "address": "360",
+    "lat": 7138.898999016874,
+    "lng": 21.59905049424274,
+    "id": "greekRestaurants_522477a6163f",
+    "slug": "η-θεα-καφε-ταβερνα-μεζεδοπωλειοαγ-γεωργιος-5224"
+  },
+  {
+    "name": "Mister Beef Steakhouse",
+    "url": "https://maps.app.goo.gl/EUDK5BZVwnfDKWfUA",
+    "address": "Pl. Agias Triadas, Penteli 152",
+    "lat": 3638.055088419652,
+    "lng": 23.86953629364944,
+    "id": "greekRestaurants_5286b093f60c",
+    "slug": "mister-beef-steakhouse-5286"
+  },
+  {
+    "name": "Ovelos Psitopoleio - “Ovelos” ψητοπωλείοEl. Venizelou",
+    "url": "https://maps.app.goo.gl/6o5zKZrEmQRiV4XE8",
+    "address": "35, Veria 591",
+    "lat": 40.52685044481528,
+    "lng": 22.203377164795544,
+    "id": "greekRestaurants_63f4614958fa",
+    "slug": "ovelos-psitopoleio-ovelos-ψητοπωλειοel-venizelou-63f4"
+  },
+  {
+    "name": "Οβελός ΨητοπωλείονEgnatia",
+    "url": "https://maps.app.goo.gl/LnfVTNtLuGWwaYQ69",
+    "address": "140, Thessaloniki 546",
+    "lat": 2240.632024462991,
+    "lng": 22.950935694246926,
+    "id": "greekRestaurants_bdef63608d40",
+    "slug": "οβελος-ψητοπωλειονegnatia-bdef"
+  },
+  {
+    "name": "Liastres Stoupa - Ταβέρνα \"Λιάστρες\"Ταμπουρέα, Στούπα, Stoupa",
+    "url": "https://maps.app.goo.gl/DkscwLt7Gu3XJaF19",
+    "address": "240",
+    "lat": 2436.8471474045714,
+    "lng": 22.256570664803434,
+    "id": "greekRestaurants_be11103db80b",
+    "slug": "liastres-stoupa-ταβερνα-λιαστρες-ταμπουρεα-στουπα-stoupa-be11"
+  },
+  {
+    "name": "Almyriki TavernΠΑΡΑΛΙΑ, Kalogria",
+    "url": "https://maps.app.goo.gl/dQKFo7L9hqdGecig6",
+    "address": "240",
+    "lat": 2436.8507620948058,
+    "lng": 22.258932994244667,
+    "id": "greekRestaurants_0dd6628e41c5",
+    "slug": "almyriki-tavernπαραλια-kalogria-0dd6"
+  },
+  {
+    "name": "O Lolos – Τσιπουράδικο Μεζεδοπωλείο ΚουκάκιGeor. Olimpiou",
+    "url": "https://maps.app.goo.gl/1mKMLcd2KLCM4m3a8",
+    "address": "5, Athina 117",
+    "lat": 4137.963302235332,
+    "lng": 23.72175096479854,
+    "id": "greekRestaurants_24ef5352d8d1",
+    "slug": "o-lolos-τσιπουραδικο-μεζεδοπωλειο-κουκακιgeor-olimpiou-24ef"
+  },
+  {
+    "name": "Yioryitsa’s Backyard",
+    "url": "https://maps.app.goo.gl/N6hfu6mKAdkCW8CR9",
+    "address": "Epar.Od. Kalamatas - Areopolis, Ditiki Mani 240",
+    "lat": 2236.8894961041246,
+    "lng": 22.232303664803247,
+    "id": "greekRestaurants_f59843a47856",
+    "slug": "yioryitsa-s-backyard-f598"
+  },
+  {
+    "name": "MEDIKON Mediterranean Cuisine & WineAgios Nikolaos",
+    "url": "https://maps.app.goo.gl/ASc49iG2XPEifyB69",
+    "address": "240",
+    "lat": 2436.82418786805,
+    "lng": 22.281693264801493,
+    "id": "greekRestaurants_2ceb37c2e2f1",
+    "slug": "medikon-mediterranean-cuisine-wineagios-nikolaos-2ceb"
+  },
+  {
+    "name": "Ladókola - Λαδόκολα",
+    "url": "https://maps.app.goo.gl/WcSnNyuQBaPtsfk67",
+    "address": "Papaflessa 24, Larisa 412",
+    "lat": 2139.6403801255456,
+    "lng": 22.416558500193933,
+    "id": "greekRestaurants_f4e876818b3e",
+    "slug": "ladokola-λαδοκολα-f4e8"
+  },
+  {
+    "name": "Το Μετόχι",
+    "url": "https://maps.app.goo.gl/DsuCdkmBU1QgocMZ8",
+    "address": "Stefanina 570",
+    "lat": 2140.7573582456916,
+    "lng": 23.578090935347895,
+    "id": "greekRestaurants_9ec29b44fff8",
+    "slug": "το-μετοχι-9ec2"
+  },
+  {
+    "name": "Sloppy Joe • The Meat Bar •",
+    "url": "https://maps.app.goo.gl/XuX9jWx2rrsnos28A",
+    "address": "Marina Zeas, Pireas 185",
+    "lat": 3637.933075435223,
+    "lng": 23.647480664798692,
+    "id": "greekRestaurants_2532349fbe75",
+    "slug": "sloppy-joe-the-meat-bar-2532"
+  },
+  {
+    "name": "Brizolarah by ΠΥΡΑ",
+    "url": "https://maps.app.goo.gl/7r9DSL4XpEpJpTWT9",
+    "address": "Agiou Ioannou 1, Nea Filadelfia 143",
+    "lat": 4238.039488135606,
+    "lng": 23.73883276479804,
+    "id": "greekRestaurants_b811b9ef9749",
+    "slug": "brizolarah-by-πυρα-b811"
+  },
+  {
+    "name": "Taverna Manaras",
+    "url": "https://maps.app.goo.gl/NeV9Vgrd9ABUYyqa8",
+    "address": "Σταθμός Αφιδνών 190",
+    "lat": 1438.187649490236,
+    "lng": 23.844029664801884,
+    "id": "greekRestaurants_e6574a15f3a3",
+    "slug": "taverna-manaras-e657"
+  },
+  {
+    "name": "Riza.Restaurant.skg",
+    "url": "https://maps.app.goo.gl/aRU2k8FguTAi5SaE9",
+    "address": "Kanari 20, Polichni 565",
+    "lat": 3340.6592948626776,
+    "lng": 22.9433363647999,
+    "id": "greekRestaurants_11f0d9edd279",
+    "slug": "riza-restaurant-skg-11f0"
+  },
+  {
+    "name": "Οκταράκια Meze Bar",
+    "url": "https://maps.app.goo.gl/tThJ8PKE3wv2NUtb7",
+    "address": "Epidavrou 3, Thessaloniki 543",
+    "lat": 5240.614494663191,
+    "lng": 22.978891994246734,
+    "id": "greekRestaurants_bda4df1c43ca",
+    "slug": "οκταρακια-meze-bar-bda4"
+  },
+  {
+    "name": "Koukatsi",
+    "url": "https://maps.app.goo.gl/PS2Um5CH3oPV2bZX9",
+    "address": "Drakou 10, Athina 117",
+    "lat": 4237.965372721294,
+    "lng": 23.726271164804082,
+    "id": "greekRestaurants_7977ee2a3674",
+    "slug": "koukatsi-7977"
+  },
+  {
+    "name": "To Bakaliko & i Taverna tou Thodorou",
+    "url": "https://maps.app.goo.gl/QbPfTMCDgJKtC1Nh7",
+    "address": "Karpenisiou 3, Peristeri 121",
+    "lat": 3138.0066657921984,
+    "lng": 23.68930869424946,
+    "id": "greekRestaurants_f427dd91f851",
+    "slug": "to-bakaliko-i-taverna-tou-thodorou-f427"
+  },
+  {
+    "name": "Προφήτης Αμώς - Profitis Amos - Amos restaurantΠροφήτης Αμμως,",
+    "url": "https://maps.app.goo.gl/WTtdUWzYBzh2tF8YA",
+    "address": "Asklipiou, Faliraki 851",
+    "lat": 36.32515436979197,
+    "lng": 28.20445506480205,
+    "id": "greekRestaurants_059dc139ec15",
+    "slug": "προφητης-αμως-profitis-amos-amos-restaurantπροφητης-αμμως-059d"
+  },
+  {
+    "name": "Το Παλιό Κουτουκι Εστιατόριο Νέα Σμύρνη",
+    "url": "https://maps.app.goo.gl/TbGYwSvE2h3RphjP6",
+    "address": "Metamorfoseos 20, Nea Smirni 171",
+    "lat": 2337.9369324929517,
+    "lng": 23.72037079424961,
+    "id": "greekRestaurants_38188c3932ff",
+    "slug": "το-παλιο-κουτουκι-εστιατοριο-νεα-σμυρνη-3818"
+  },
+  {
+    "name": "Πρωτοράκι - Γιαγιά Κούκου",
+    "url": "https://maps.app.goo.gl/CzMfHnRs16TF3PA98",
+    "address": "Pelasgias 7, Peristeri 121",
+    "lat": 3138.0115224638266,
+    "lng": 23.688948894247453,
+    "id": "greekRestaurants_5fd24f3b6d65",
+    "slug": "πρωτορακι-γιαγια-κουκου-5fd2"
+  },
+  {
+    "name": "Mpampesa - Μπαμπέσα",
+    "url": "https://maps.app.goo.gl/yzoheopCpW5ExipD9",
+    "address": "Skoufa 99, Petroupoli 132",
+    "lat": 3138.035164112671,
+    "lng": 23.67963986652621,
+    "id": "greekRestaurants_28c9c8a35fb6",
+    "slug": "mpampesa-μπαμπεσα-28c9"
+  },
+  {
+    "name": "Taverna \"To Paradosiako\"",
+    "url": "https://maps.app.goo.gl/RgSuC4L8E32vh4HNA",
+    "address": "Unnamed Road, Propouli 814",
+    "lat": 139.97149267049136,
+    "lng": 25.231890964800236,
+    "id": "greekRestaurants_ebbb84233472",
+    "slug": "taverna-to-paradosiako-ebbb"
+  },
+  {
+    "name": "Tessera Piperia",
+    "url": "https://maps.app.goo.gl/UjVp5n1B7xFNVtfs9",
+    "address": "Diogenous 29, Thessaloniki 544",
+    "lat": 5340.615606881203,
+    "lng": 22.969530194250964,
+    "id": "greekRestaurants_861e338c70c6",
+    "slug": "tessera-piperia-861e"
+  },
+  {
+    "name": "ΨΗΣΤΑΡΙΑ ΤΑΒΕΡΝΑ \"Ο ΣΑΚΗΣ\"",
+    "url": "https://maps.app.goo.gl/qNmkjJ85zxc9SAGW8",
+    "address": "Anexartisias 130 εντός στοάς Anexartisias 130 εντός στοάς, Ioannina 455",
+    "lat": 3239.6702015222904,
+    "lng": 20.851835823099087,
+    "id": "greekRestaurants_7b4959f87ff3",
+    "slug": "ψησταρια-ταβερνα-ο-σακης-7b49"
+  },
+  {
+    "name": "Zagorisios",
+    "url": "https://maps.app.goo.gl/gR5zad4cjcVsMY1K9",
+    "address": "Κουτσελιό 455",
+    "lat": 39.58870965683631,
+    "lng": 20.91657746491134,
+    "id": "greekRestaurants_8503cd3344c5",
+    "slug": "zagorisios-8503"
+  },
+  {
+    "name": "Grill House \"To Pigadi\"",
+    "url": "https://maps.app.goo.gl/c826RSEsKWhx7dqg9",
+    "address": "Πετσάλι 440",
+    "lat": 339.78530601393317,
+    "lng": 20.718140788639978,
+    "id": "greekRestaurants_0036dca613a3",
+    "slug": "grill-house-to-pigadi-0036"
+  },
+  {
+    "name": "Μουριές Παπαδόπουλος Ψησταριά",
+    "url": "https://maps.app.goo.gl/UBQPBAoWfCUbW1s5A",
+    "address": "QPFX+XR, Asfaka 455",
+    "lat": 39.774994414003984,
+    "lng": 20.749627229746146,
+    "id": "greekRestaurants_0bf1151ea4f7",
+    "slug": "μουριες-παπαδοπουλος-ψησταρια-0bf1"
+  },
+  {
+    "name": "Metsovitiki Folia",
+    "url": "https://maps.app.goo.gl/598hzwTFNj6Szz3M8",
+    "address": "Averof 101, Ioannina 452",
+    "lat": 2139.6694688690063,
+    "lng": 20.85697288495988,
+    "id": "greekRestaurants_d5e9e134bd30",
+    "slug": "metsovitiki-folia-d5e9"
+  },
+  {
+    "name": "Kafenion mezedopoleio stin plateia",
+    "url": "https://maps.app.goo.gl/7eYdh5codGx7wLCeA",
+    "address": "Unnamed Road, Pentamodi 700",
+    "lat": 1335.248745751795,
+    "lng": 25.026027278064912,
+    "id": "greekRestaurants_07cd8589fdce",
+    "slug": "kafenion-mezedopoleio-stin-plateia-07cd"
+  },
+  {
+    "name": "ΣΠΟΡΑ - Spora’",
+    "url": "https://maps.app.goo.gl/HqnH6u7zLiRkE3rj8",
+    "address": "Γεωρ. Παπανδρέου 64, Leof. Ionias 11, Iraklio 713",
+    "lat": 635.3307262667813,
+    "lng": 25.134838180540193,
+    "id": "greekRestaurants_78b2053b85ae",
+    "slug": "σπορα-spora-78b2"
+  },
+  {
+    "name": "Vrachos Restaurant",
+    "url": "https://maps.app.goo.gl/V9BYaC9YwE9EDzKv8",
+    "address": "Vrachos, Festos 702",
+    "lat": 35.00699278227931,
+    "lng": 24.7594597227437,
+    "id": "greekRestaurants_c07f85faa560",
+    "slug": "vrachos-restaurant-c07f"
+  },
+  {
+    "name": "Aspalathos Restaurant Agriana",
+    "url": "https://maps.app.goo.gl/fvgncnFZLv9BCX6M6",
+    "address": "Αγριανά 700",
+    "lat": 1435.3091236903447,
+    "lng": 25.34725562272332,
+    "id": "greekRestaurants_8c9c03563d80",
+    "slug": "aspalathos-restaurant-agriana-8c9c"
+  },
+  {
+    "name": "Δροσοσταλιά - Drosostaliá",
+    "url": "https://maps.app.goo.gl/KV95gFQyigpwVPyq5",
+    "address": "4ο χλμ. Ανάβρας Φράγματος Σμοκόβου, Sofades 430",
+    "lat": 6839.158807036965,
+    "lng": 22.0832284585545,
+    "id": "greekRestaurants_9e5aa55ad6e3",
+    "slug": "δροσοσταλια-drosostalia-9e5a"
   }
 ]

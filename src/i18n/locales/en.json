@@ -292,6 +292,7 @@
       "title": "Best Walkable Picks Nearby",
       "subtitle": "Great options within a short walk."
     },
+    "walkingDistanceNote": "Walking times are estimates; some waterfront routes may require detours and may not be fully walkable.",
     "moreNearby": {
       "title": "More Nearby Options",
       "subtitle": "A lighter set of extra nearby options if you want to keep exploring."

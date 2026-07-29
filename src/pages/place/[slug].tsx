@@ -34,6 +34,9 @@ import { buildPlaceMetaDescription } from '../../config/metaDescriptions';
 import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
 
 const SITE_URL = 'https://googlementor.com';
+const AVERAGE_WALKING_SPEED_KMPH = 4.8;
+const MAX_WALKING_RECOMMENDATION_MINUTES = 60;
+const MAX_WALKING_RECOMMENDATION_KM = (AVERAGE_WALKING_SPEED_KMPH * MAX_WALKING_RECOMMENDATION_MINUTES) / 60;
 
 type CategoryNarrativeProfile = {
   typeLabelKey: string;
@@ -255,8 +258,7 @@ function displayNeighborhood(entity: EntityRecord): string {
 }
 
 function formatWalkingTime(distanceKm: number): string {
-  const walkingSpeedKmPerHour = 4.8;
-  const totalMinutes = Math.max(1, Math.round((distanceKm / walkingSpeedKmPerHour) * 60));
+  const totalMinutes = Math.max(1, Math.round((distanceKm / AVERAGE_WALKING_SPEED_KMPH) * 60));
 
   if (totalMinutes < 60) {
     return `${totalMinutes} min walk`;
@@ -270,6 +272,10 @@ function formatWalkingTime(distanceKm: number): string {
   }
 
   return `${hours} hr ${minutes} min walk`;
+}
+
+function isWithinWalkingRecommendationRange(distanceKm: number): boolean {
+  return distanceKm <= MAX_WALKING_RECOMMENDATION_KM;
 }
 
 function kindLabel(entity: EntityRecord): string {
@@ -538,6 +544,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
       distanceKm: calculateDistance(entity.lat, entity.lng, candidate.lat, candidate.lng),
     }))
     .sort((a, b) => a.distanceKm - b.distanceKm)
+    .filter((candidate) => isWithinWalkingRecommendationRange(candidate.distanceKm))
     .slice(0, 24);
 
   const intentEngine = getIntentEngine(index.entities);
@@ -759,6 +766,7 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
         ...candidate,
         distanceKm: calculateDistance(entity.lat, entity.lng, candidate.lat, candidate.lng),
       }))
+      .filter((candidate) => isWithinWalkingRecommendationRange(candidate.distanceKm))
       .slice(0, 6),
     [entity.lat, entity.lng, sameCategory]
   );
@@ -806,6 +814,10 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
 
     return (walkable.length > 0 ? walkable : filtered).slice(0, 4);
   }, [nearby, sameCategoryWithDistance, usefulStopIds]);
+  const hasWalkingRecommendations =
+    sameCategoryWithDistance.length > 0 ||
+    nearbyGroupedByCategory.length > 0 ||
+    walkableNearby.length > 0;
   const shareCaption = t('place.share.autoCaption', 'Discovered via Googlementor curated picks across Greece.');
   const nearbyGroupAccentSchemes = ['blue', 'teal', 'orange', 'purple'] as const;
   const promoBadgeText = isGreek ? 'ΑΓΑΠΗΜΕΝΟ ΤΩΝ ΝΤΟΠΙΩΝ' : "PEOPLE'S FAVORITE";
@@ -1393,6 +1405,12 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
               </Button>
             </SimpleGrid>
           </Box>
+
+          {hasWalkingRecommendations ? (
+            <Text fontSize="xs" color="gray.500" px={{ base: 1, md: 2 }}>
+              {t('place.walkingDistanceNote', 'Walking times are estimates; some waterfront routes may require detours and may not be fully walkable.')}
+            </Text>
+          ) : null}
 
           {sameCategoryWithDistance.length > 0 ? (
             <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>

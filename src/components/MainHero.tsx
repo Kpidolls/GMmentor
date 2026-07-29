@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import NextLink from 'next/link';
 import { GlobeAltIcon, MapPinIcon } from '@heroicons/react/24/solid';
@@ -65,6 +65,27 @@ interface ExperienceType {
 }
 
 const LOCATION_RESULTS_RADIUS_KM = 10;
+
+const GREEK_TO_LATIN_MAP: Record<string, string> = {
+  'α': 'a', 'β': 'v', 'γ': 'g', 'δ': 'd', 'ε': 'e', 'ζ': 'z', 'η': 'i', 'θ': 'th',
+  'ι': 'i', 'κ': 'k', 'λ': 'l', 'μ': 'm', 'ν': 'n', 'ξ': 'x', 'ο': 'o', 'π': 'p',
+  'ρ': 'r', 'σ': 's', 'ς': 's', 'τ': 't', 'υ': 'u', 'φ': 'f', 'χ': 'ch', 'ψ': 'ps', 'ω': 'o',
+  'αυ': 'av', 'ευ': 'ev', 'ου': 'ou', 'αι': 'ai', 'ει': 'ei', 'οι': 'oi', 'υι': 'ui',
+  'γγ': 'ng', 'γκ': 'gk', 'γχ': 'nch', 'γξ': 'nx', 'μπ': 'mp', 'ντ': 'nt', 'τσ': 'ts', 'τζ': 'tz'
+};
+
+const SEARCH_VARIATIONS: Record<string, string[]> = {
+  'agia': ['agía', 'αγία', 'αγια'],
+  'agios': ['agíos', 'άγιος', 'αγιος'],
+  'nea': ['néa', 'νέα', 'νεα'],
+  'neos': ['néos', 'νέος', 'νεος'],
+  'palaio': ['palaiό', 'παλαιό', 'παλαιο'],
+  'kala': ['kalá', 'καλά', 'καλα'],
+  'mega': ['megá', 'μεγά', 'μεγα'],
+  'mikro': ['mikró', 'μικρό', 'μικρο'],
+  'ano': ['ánο', 'άνω', 'ανω'],
+  'kato': ['káto', 'κάτω', 'κατω']
+};
 
 const MainHero = () => {
   const logDevWarning = (...args: unknown[]) => {
@@ -222,6 +243,7 @@ const MainHero = () => {
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
   const [initialSearchDone, setInitialSearchDone] = useState(false);
   const [showDeferredUi, setShowDeferredUi] = useState(false);
+  const deferredMunicipalitySearchQuery = useDeferredValue(municipalitySearchQuery);
   const locationOptionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const categoryMatches = useMemo(
@@ -1013,26 +1035,17 @@ const MainHero = () => {
 
   // Enhanced transliteration mapping (Greek to Latin)
   const transliterateGreekToLatin = (text: string): string => {
-    const greekToLatin: { [key: string]: string } = {
-      'α': 'a', 'β': 'v', 'γ': 'g', 'δ': 'd', 'ε': 'e', 'ζ': 'z', 'η': 'i', 'θ': 'th',
-      'ι': 'i', 'κ': 'k', 'λ': 'l', 'μ': 'm', 'ν': 'n', 'ξ': 'x', 'ο': 'o', 'π': 'p',
-      'ρ': 'r', 'σ': 's', 'ς': 's', 'τ': 't', 'υ': 'u', 'φ': 'f', 'χ': 'ch', 'ψ': 'ps', 'ω': 'o',
-      // Common combinations
-      'αυ': 'av', 'ευ': 'ev', 'ου': 'ou', 'αι': 'ai', 'ει': 'ei', 'οι': 'oi', 'υι': 'ui',
-      'γγ': 'ng', 'γκ': 'gk', 'γχ': 'nch', 'γξ': 'nx', 'μπ': 'mp', 'ντ': 'nt', 'τσ': 'ts', 'τζ': 'tz'
-    };
-    
     let result = text.toLowerCase();
     
     // Replace multi-character combinations first
-    for (const [greek, latin] of Object.entries(greekToLatin)) {
+    for (const [greek, latin] of Object.entries(GREEK_TO_LATIN_MAP)) {
       if (greek.length > 1) {
         result = result.replace(new RegExp(greek, 'g'), latin);
       }
     }
     
     // Replace single characters
-    for (const [greek, latin] of Object.entries(greekToLatin)) {
+    for (const [greek, latin] of Object.entries(GREEK_TO_LATIN_MAP)) {
       if (greek.length === 1) {
         result = result.replace(new RegExp(greek, 'g'), latin);
       }
@@ -1045,23 +1058,9 @@ const MainHero = () => {
   const generateAlternativeSpellings = (text: string): string[] => {
     const alternatives: string[] = [text];
     let working = text.toLowerCase();
-    
-    // Common English transliteration variations
-    const variations: { [key: string]: string[] } = {
-      'agia': ['agía', 'αγία', 'αγια'],
-      'agios': ['agíos', 'άγιος', 'αγιος'], 
-      'nea': ['néa', 'νέα', 'νεα'],
-      'neos': ['néos', 'νέος', 'νεος'],
-      'palaio': ['palaiό', 'παλαιό', 'παλαιο'],
-      'kala': ['kalá', 'καλά', 'καλα'],
-      'mega': ['megá', 'μεγά', 'μεγα'],
-      'mikro': ['mikró', 'μικρό', 'μικρο'],
-      'ano': ['ánο', 'άνω', 'ανω'],
-      'kato': ['káto', 'κάτω', 'κατω']
-    };
-    
+
     // Add variations for common prefixes/suffixes
-    for (const [english, greekVariations] of Object.entries(variations)) {
+    for (const [english, greekVariations] of Object.entries(SEARCH_VARIATIONS)) {
       if (working.includes(english)) {
         greekVariations.forEach(variation => {
           alternatives.push(working.replace(english, variation));
@@ -1134,6 +1133,27 @@ const MainHero = () => {
     return toMunicipalityList(municipalitiesData as unknown[]);
   };
 
+  const municipalities = useMemo(
+    () => getMunicipalitiesData(),
+    [isOnline, isStandalone]
+  );
+
+  const municipalitySearchEntries = useMemo(
+    () => municipalities.map((municipality) => ({
+      municipality,
+      searchableTexts: [
+        municipality.name,
+        municipality.name_en,
+        ...(municipality.aliases || []),
+        t(`municipalities.${municipality.name}`, municipality.name_en || municipality.name),
+        municipality.region,
+        municipality.region_en,
+        t(`regions.${municipality.region}`, municipality.region_en || municipality.region),
+      ].filter((value): value is string => Boolean(value)),
+    })),
+    [municipalities, t]
+  );
+
   useEffect(() => {
     getMunicipalitiesDataRef.current = getMunicipalitiesData;
     searchByMunicipalityRef.current = searchByMunicipality;
@@ -1200,38 +1220,14 @@ const MainHero = () => {
   }, [router.isReady, router.query.category, router.query.area, intentResolver, restaurantCategories]);
 
   // Filter municipalities based on enhanced search query
-  const filteredMunicipalities = getMunicipalitiesData().filter((municipality: Municipality) => {
-    if (!municipalitySearchQuery.trim()) return true;
-    
-    const query = municipalitySearchQuery.trim();
-    
-    // Check municipality name (Greek)
-    if (searchMatches(query, municipality.name)) return true;
-    
-    // Check municipality name_en field
-    if (municipality.name_en && searchMatches(query, municipality.name_en)) return true;
-    
-    // Check aliases if they exist
-    if (municipality.aliases && Array.isArray(municipality.aliases)) {
-      if (municipality.aliases.some(alias => searchMatches(query, alias))) return true;
-    }
-    
-    // Check translated municipality name (English from i18n)
-    const translatedName = t(`municipalities.${municipality.name}`, municipality.name_en || municipality.name);
-    if (searchMatches(query, translatedName)) return true;
-    
-    // Check region name (Greek)
-    if (searchMatches(query, municipality.region)) return true;
-    
-    // Check region_en field
-    if (municipality.region_en && searchMatches(query, municipality.region_en)) return true;
-    
-    // Check translated region name (English from i18n)
-    const translatedRegion = t(`regions.${municipality.region}`, municipality.region_en || municipality.region);
-    if (searchMatches(query, translatedRegion)) return true;
-    
-    return false;
-  });
+  const filteredMunicipalities = useMemo(() => {
+    const query = deferredMunicipalitySearchQuery.trim();
+    if (!query) return municipalities;
+
+    return municipalitySearchEntries
+      .filter(({ searchableTexts }) => searchableTexts.some((text) => searchMatches(query, text)))
+      .map(({ municipality }) => municipality);
+  }, [deferredMunicipalitySearchQuery, municipalities, municipalitySearchEntries]);
 
   const heroContentSpacing = showLocationOptions
     ? 'pt-12 sm:pt-16 lg:pt-16 pb-2 sm:pb-4 lg:pb-5'
@@ -1556,13 +1552,13 @@ const MainHero = () => {
                       <span className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
                         {t('municipalitySearch.resultsCount', 'Showing {{count}} of {{total}} locations', {
                           count: filteredMunicipalities.length,
-                          total: getMunicipalitiesData().length
+                          total: municipalities.length
                         })}
                       </span>
                     ) : (
                       <span className="text-xs text-gray-500">
                         {t('municipalitySearch.typeOrBrowse', 'Type to search or browse below • {{count}} Athens areas', {
-                          count: getMunicipalitiesData().length
+                          count: municipalities.length
                         })}
                       </span>
                     )}

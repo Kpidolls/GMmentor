@@ -403,5 +403,203 @@
     "lng": "22.97687851305677",
     "id": "monasteriesChurches_27ad1b8957bf",
     "slug": "iera-moni-osioy-patapioy-27ad"
+  },
+  {
+    "url": "https://maps.app.goo.gl/USS5LKMaUtqDCLus9",
+    "name": "Monastery Elonas",
+    "address": "Kosmas 223 00",
+    "lat": "37.14571048401651",
+    "lng": "22.769010092024345",
+    "id": "monasteriesChurches_a1c3d9e74b52",
+    "slug": "monastery-elonas-a1c3"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dycFDmxEv3eRQ7Sz9",
+    "name": "Panachrantou Monastery - Ιερά Μονή Παναχράντου",
+    "address": "Φάλικα 84 500, Moni Panachrantou",
+    "lat": "37.800632817147644",
+    "lng": "24.91001038610456",
+    "id": "monasteriesChurches_b83f2a6d1c90",
+    "slug": "panachrantou-monastery-iera-moni-panachrantou-b83f"
+  },
+  {
+    "url": "https://maps.app.goo.gl/zfWiPcXup1iCjPxf8",
+    "name": "Holy Monastery of Prousos - Panagia Prousiotissa - Ιερά Μονή Προυσού - Παναγία Προυσιώτισσα",
+    "address": "Prousos 360 74",
+    "lat": "38.74955768409699",
+    "lng": "21.65677730007785",
+    "id": "monasteriesChurches_c29e5b147adf",
+    "slug": "holy-monastery-of-prousos-panagia-prousiotissa-c29e"
+  },
+  {
+    "url": "https://maps.app.goo.gl/BtKsuFeFD4LWsA3b9",
+    "name": "Monastery Panagia Malevi - Ιερά Μονή Μαλεβής Αρκαδίας",
+    "address": "Epar.Od. Tripolis - Paraliou Astrous, Moni Malevis 220 09",
+    "lat": "37.32826726626947",
+    "lng": "22.582098000077636",
+    "id": "monasteriesChurches_d6f14e38ab07",
+    "slug": "monastery-panagia-malevi-iera-moni-malevis-arkadias-d6f1"
+  },
+  {
+    "url": "https://maps.app.goo.gl/sFH2jdo1FCexac6s5",
+    "name": "Holy Church of the Dormition of the Virgin Mary - Ιερός Ναός Κοιμήσεως της Θεοτόκου Καλαμπάκας",
+    "address": "Επισκοπής, Mitropoleos, Kalampaka 422 00",
+    "lat": "39.709907873434474",
+    "lng": "21.628024029524074",
+    "id": "monasteriesChurches_e4a5d88f31bc",
+    "slug": "holy-church-dormition-virgin-mary-kalampakas-e4a5"
+  },
+  {
+    "url": "https://maps.app.goo.gl/GobC9Z2gJFJn7b7HA",
+    "name": "Ιερά Μονή Οσίου Γρηγορίου",
+    "address": "Άγιο Όρος 603 86",
+    "lat": "40.17975416813608",
+    "lng": "24.255881300076492",
+    "id": "monasteriesChurches_f7c39261de48",
+    "slug": "iera-moni-osioy-grigorioy-f7c3"
+  },
+  {
+    "url": "https://maps.app.goo.gl/jqHJJos7UzqnkkoU9",
+    "name": "Holy Monastery of the Virgin Mary at Kallipetra - Ιερά Μονή Θεοτόκου Καλλίπετρας",
+    "address": "Veria 591 32",
+    "lat": "40.455891444548186",
+    "lng": "22.22349015896646",
+    "id": "monasteriesChurches_0d4eb967a2f1",
+    "slug": "holy-monastery-virgin-mary-kallipetra-0d4e"
+  },
+  {
+    "url": "https://maps.app.goo.gl/SKJ6uTDzANeyCqS76",
+    "name": "Chrysoskalitissa Monastery - Ιερά Μονή Χρυσοσκαλιτίσσης",
+    "address": "Kissamos 730 12",
+    "lat": "35.31130012608163",
+    "lng": "23.533355229524656",
+    "id": "monasteriesChurches_1e8a43b0c5d2",
+    "slug": "chrysoskalitissa-monastery-iera-moni-chrysoskalitissis-1e8a"
+  },
+  {
+    "url": "https://maps.app.goo.gl/cuJREBUnhfP59wHR6",
+    "name": "Moni Megalou Spileou - Μόνη Μεγάλου Σπηλαίου",
+    "address": "250 01",
+    "lat": "38.0889484350977",
+    "lng": "22.1748075118857",
+    "id": "monasteriesChurches_2f7c5d901ab6",
+    "slug": "moni-megalou-spileou-moni-megaloy-spilaioy-2f7c"
+  },
+  {
+    "url": "https://maps.app.goo.gl/dKxj952w52kLKbEo9",
+    "name": "Monastery of Pantokrator - Ιερά Μονή Υψηλού Παντοκράτορος",
+    "address": "Kassiopi 490 81",
+    "lat": "39.74823814260427",
+    "lng": "19.872244900924773",
+    "id": "monasteriesChurches_3a5f70d8ec19",
+    "slug": "monastery-of-pantokrator-iera-moni-ypsiloy-pantokratoros-3a5f"
+  },
+  {
+    "url": "https://maps.app.goo.gl/rj2JHgxQwfw4oTMs8",
+    "name": "Παναγιά Φλαμπουριανή",
+    "address": "Φλαμπούρια 840 06",
+    "lat": "37.363417474794346",
+    "lng": "24.398408155354847",
+    "id": "monasteriesChurches_4b6e1d2f983a",
+    "slug": "panagia-flampoyriani-4b6e"
+  },
+  {
+    "url": "https://maps.app.goo.gl/3Co7tWygkwkGmRm99",
+    "name": "Monastery of Fotodoti - Ιερά Μονή Φωτοδότη Χριστού",
+    "address": "Naxos and Lesser Cyclades 843 02",
+    "lat": "37.050400554278966",
+    "lng": "25.52144077589327",
+    "id": "monasteriesChurches_5c7d20ea41bf",
+    "slug": "monastery-of-fotodoti-iera-moni-fotodoti-christoy-5c7d"
+  },
+  {
+    "url": "https://maps.app.goo.gl/Yusqmrvgcd3DW84WA",
+    "name": "Sacred Monastery of Agios Gerasimos of Kefalonia - Ιερά Μονή Αγίου Γερασίμου Κεφαλληνίας - Μόνη Αγίου Γερασίμου",
+    "address": "281 00",
+    "lat": "38.16502019047914",
+    "lng": "20.58922577063167",
+    "id": "monasteriesChurches_6d8e31fb52c0",
+    "slug": "sacred-monastery-agios-gerasimos-kefalonia-6d8e"
+  },
+  {
+    "url": "https://maps.app.goo.gl/TzbVB3EbX8xjJjED9",
+    "name": "Monastery of Agios Georgios - Ιερά Μονή Αγίου Γεωργίου",
+    "address": "Skyros 340 07",
+    "lat": "38.90582702599708",
+    "lng": "24.567361500082193",
+    "id": "monasteriesChurches_7e9f42ac63d1",
+    "slug": "monastery-of-agios-georgios-iera-moni-agioy-georgioy-7e9f"
+  },
+  {
+    "url": "https://maps.app.goo.gl/od4X3aZKe6s69At59",
+    "name": "Agios Symeon - Άγιος Συμεών",
+    "address": "Sifnos 840 03",
+    "lat": "37.00042910295488",
+    "lng": "24.68521922952725",
+    "id": "monasteriesChurches_8f0a53bd74e2",
+    "slug": "agios-symeon-agios-symeon-8f0a"
+  },
+  {
+    "url": "https://maps.app.goo.gl/XHbAU7ykF6nXmgTb7",
+    "name": "Holy Church of Panagia Portaitissa - Ιερός Ναός Παναγίας Πορταΐτισσας",
+    "address": "Astypalea 859 00",
+    "lat": "36.543566951497354",
+    "lng": "26.355848557527512",
+    "id": "monasteriesChurches_9a1b64ce85f3",
+    "slug": "holy-church-panagia-portaitissa-9a1b"
+  },
+  {
+    "url": "https://maps.app.goo.gl/y9wQM3g7sP5NJzQo8",
+    "name": "Holy Church of Saint Marina at Ekali - Ιερός Ναός Αγίας Μαρίνας Εκάλης",
+    "address": "Leof. Thiseos 54, Ekali 145 78",
+    "lat": "38.10775227465497",
+    "lng": "23.837177358441796",
+    "id": "monasteriesChurches_ab2c75df9604",
+    "slug": "holy-church-saint-marina-ekali-ab2c"
+  },
+  {
+    "url": "https://maps.app.goo.gl/tP6J5MTFxfdpnNUa8",
+    "name": "Panagia Skopiani - Παναγιά Σκοπιανή",
+    "address": "Serifos 840 05",
+    "lat": "37.19206813258094",
+    "lng": "24.516835900075215",
+    "id": "monasteriesChurches_bc3d86ea0715",
+    "slug": "panagia-skopiani-panagia-skopiani-bc3d"
+  },
+  {
+    "url": "https://maps.app.goo.gl/UYdHWGCYPUTCAwrB7",
+    "name": "Catholic Cathedral of Saint George - Καθεδρικός Ναός Αγίου Γεωργίου",
+    "address": "Ano Syros 841 00",
+    "lat": "37.45094653282945",
+    "lng": "24.93538980022541",
+    "id": "monasteriesChurches_cd4e97fb1826",
+    "slug": "catholic-cathedral-of-saint-george-cd4e"
+  },
+  {
+    "url": "https://maps.app.goo.gl/4AtnZF7HGZrH4Lju6",
+    "name": "Saint Marina Andros Monastery - Ιερά Μονή Αγίας Μαρίνας",
+    "address": "Andros 845 00",
+    "lat": "37.843778887243595",
+    "lng": "24.910125759208498",
+    "id": "monasteriesChurches_de5fa80c2937",
+    "slug": "saint-marina-andros-monastery-de5f"
+  },
+  {
+    "url": "https://maps.app.goo.gl/WyT9QUcDPWZupwo39",
+    "name": "Holy Church of Hagia Sophia - Ιερός Ναός Αγίας Σοφίας (ή Παναγίας Οδηγήτριας)",
+    "address": "Agia Sofia, EO Monemvasias Krokeon, Monemvasia 230 70",
+    "lat": "36.68986250913508",
+    "lng": "23.054533300960983",
+    "id": "monasteriesChurches_ef60b91d3a48",
+    "slug": "holy-church-hagia-sophia-ef60"
+  },
+  {
+    "url": "https://maps.app.goo.gl/DWgJ7YFmgXBd8pSW6",
+    "name": "Lycian Tomb - Λυκιακός Τάφος",
+    "address": "Καστελλόριζο 851 11",
+    "lat": "36.15099209663437",
+    "lng": "29.595259139148887",
+    "id": "monasteriesChurches_f071ca2e4b59",
+    "slug": "lycian-tomb-lykiakos-tafos-f071"
   }
 ]
