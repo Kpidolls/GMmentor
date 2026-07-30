@@ -496,11 +496,20 @@ export default function BlogPost({ post, mdxSource, alternatePost, mentionedEnti
             <Button size="sm" colorScheme="blue" onClick={handleCopyLink} w={{ base: '100%', sm: 'auto' }} aria-label={t('blog.share.copy', 'Copy link')}>
               {copied ? t('blog.share.copied', 'Copied') : t('blog.share.copy', 'Copy link')}
             </Button>
-            {canNativeShare && (
-              <Button size="sm" variant="outline" colorScheme="blue" onClick={handleNativeShare} w={{ base: '100%', sm: 'auto' }} aria-label={t('blog.share.native', 'Share')}>
-                {t('blog.share.native', 'Share')}
-              </Button>
-            )}
+            <Button
+              size="sm"
+              variant="outline"
+              colorScheme="blue"
+              onClick={handleNativeShare}
+              w={{ base: '100%', sm: 'auto' }}
+              aria-label={t('blog.share.native', 'Share')}
+              visibility={canNativeShare ? 'visible' : 'hidden'}
+              pointerEvents={canNativeShare ? 'auto' : 'none'}
+              aria-hidden={!canNativeShare}
+              tabIndex={canNativeShare ? 0 : -1}
+            >
+              {t('blog.share.native', 'Share')}
+            </Button>
           </HStack>
         </HStack>
       </Box>

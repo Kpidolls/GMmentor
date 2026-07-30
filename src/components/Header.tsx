@@ -78,7 +78,25 @@ const Header = () => {
     };
   }, [onClose, router.events]);
 
-  if (!isLanguageReady) return null; // Avoid rendering until language is ready
+  if (!isLanguageReady) {
+    // Keep header space reserved before hydration to avoid top-of-page layout shifts.
+    return (
+      <Box
+        as="header"
+        bg="white"
+        shadow="xs"
+        position="sticky"
+        top="0"
+        zIndex="50"
+        w="full"
+        borderBottom="1px solid"
+        borderColor="gray.200"
+        aria-hidden="true"
+      >
+        <Box minH={{ base: '108px', md: '114px' }} />
+      </Box>
+    );
+  }
 
   const bg = 'white'; // Default background color
   const textColor = 'gray.800'; // Default text color
