@@ -136,6 +136,24 @@ type EntityPageProps = {
     areaName: string;
     areaNameEl: string;
   }>;
+  municipalityArea: {
+    slug: string;
+    name: string;
+    nameEn?: string;
+    region?: string;
+    regionEn?: string;
+  } | null;
+  municipalityRecommendations: Array<{
+    categoryId: string;
+    categoryName: string;
+    categorySlug: string;
+    count: number;
+    passesThreshold: boolean;
+    items: Array<{
+      entity: EntityRecord;
+      distanceKm: number;
+    }>;
+  }>;
 };
 
 let cachedIntentEngine: ReturnType<typeof createIntentEngine> | null = null;
@@ -488,10 +506,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const slugSet = new Set<string>();
 
   index.entities.forEach((entity) => {
-    if (entity.kind === 'municipality') {
-      return;
-    }
-
     if (entity.slug) {
       slugSet.add(entity.slug);
     }
@@ -515,13 +529,13 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
   if (!slug) return { notFound: true };
 
   const index = loadEntitiesIndex();
-  const discoverableEntities = index.entities.filter((candidate) => candidate.kind !== 'municipality');
   const entity = findEntityBySlug(index.entities, slug);
 
-  if (!entity || entity.kind === 'municipality') {
+  if (!entity) {
     return { notFound: true };
   }
 
+  const discoverableEntities = index.entities.filter((candidate) => candidate.kind !== 'municipality');
   const canonicalEntity = entity;
 
   const nearbyCandidates = discoverableEntities.filter((candidate) => {
@@ -548,6 +562,33 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
     .slice(0, 24);
 
   const intentEngine = getIntentEngine(index.entities);
+  const municipalityArea = entity.kind === 'municipality'
+    ? intentEngine.areas.records.find((area) => area.id === entity.id) || null
+    : null;
+  const municipalityRecommendations = municipalityArea
+    ? intentEngine.categories.records
+      .map((category) => {
+        const payload = intentEngine.query.getCategoryAreaPayload({
+          categoryId: category.id,
+          areaId: municipalityArea.id,
+          limit: 6,
+        });
+
+        if (!payload || payload.topEntities.length === 0) {
+          return null;
+        }
+
+        return {
+          categoryId: category.id,
+          categoryName: category.name,
+          categorySlug: category.urlSlug,
+          count: payload.totalMatches,
+          passesThreshold: payload.passesThreshold,
+          items: payload.topEntities,
+        };
+      })
+      .filter((recommendation): recommendation is NonNullable<typeof recommendation> => recommendation !== null)
+    : [];
   const nearestArea = intentEngine.areas.records
     .map((area) => ({
       area,
@@ -617,6 +658,16 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
       }),
       canonicalSlug: canonicalEntity.slug,
       isAliasSlug: slug !== canonicalEntity.slug,
+      municipalityArea: municipalityArea
+        ? {
+          slug: municipalityArea.urlSlug,
+          name: municipalityArea.name,
+          nameEn: municipalityArea.nameEn,
+          region: municipalityArea.region,
+          regionEn: municipalityArea.regionEn,
+        }
+        : null,
+      municipalityRecommendations,
       enrichment: getPlaceEnrichmentByEntityId(entity.id)?.effective || null,
       areaContext,
       intentContexts,
@@ -624,7 +675,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
   };
 };
 
-export default function PlacePage({ entity, sameCategory, nearby, mentionedGuides, canonicalSlug, isAliasSlug, enrichment, areaContext, intentContexts }: EntityPageProps) {
+function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canonicalSlug, isAliasSlug, enrichment, areaContext, intentContexts }: EntityPageProps) {
   const { t, i18n } = useTranslation();
   const toast = useToast();
   const [copied, setCopied] = useState(false);
@@ -1540,4 +1591,131 @@ export default function PlacePage({ entity, sameCategory, nearby, mentionedGuide
       </SimpleGrid>
     </Container>
   );
+}
+
+function MunicipalityPage({ entity, canonicalSlug, municipalityArea, municipalityRecommendations }: EntityPageProps) {
+  const { t, i18n } = useTranslation();
+  const isGreek = i18n.language?.startsWith('el');
+  const displayName = isGreek
+    ? entity.name
+    : municipalityArea?.nameEn || entity.name_en || entity.name;
+  const areaName = isGreek
+    ? municipalityArea?.name || entity.name
+    : municipalityArea?.nameEn || entity.name_en || entity.name;
+  const regionName = isGreek
+    ? municipalityArea?.region || entity.region || t('common.greece', 'Greece')
+    : municipalityArea?.regionEn || entity.region_en || entity.region || t('common.greece', 'Greece');
+  const canonicalUrl = `${SITE_URL}/place/${canonicalSlug}`;
+  const title = t('place.municipality.title', {
+    name: displayName,
+    defaultValue: `Things to do and places to visit in ${displayName} | Googlementor`,
+  });
+  const description = t('place.municipality.description', {
+    name: displayName,
+    defaultValue: `Discover recommended places and things to do in ${displayName}, Greece.`,
+  });
+
+  return (
+    <Container maxW="5xl" py={10}>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="googlebot" content="noindex, follow" />
+        <link rel="canonical" href={canonicalUrl} />
+      </Head>
+
+      <Box className="gm-surface-card" p={{ base: 5, md: 8 }} mb={6}>
+        <Badge colorScheme="blue" textTransform="none" mb={3}>
+          {t('place.municipality.badge', 'Local recommendations')}
+        </Badge>
+        <Heading as="h1" size="xl" mb={3}>
+          {t('place.municipality.heading', {
+            name: displayName,
+            defaultValue: `Explore ${displayName}`,
+          })}
+        </Heading>
+        <Text color="gray.700" lineHeight="1.7">
+          {t('place.municipality.subtitle', {
+            name: displayName,
+            region: regionName,
+            defaultValue: `Useful recommendations near ${displayName}, ${regionName}. Browse nearby places by category and build your route from here.`,
+          })}
+        </Text>
+      </Box>
+
+      {municipalityRecommendations.length > 0 ? (
+        <VStack align="stretch" spacing={5}>
+          {municipalityRecommendations.map((recommendation) => (
+            <Box key={recommendation.categoryId} className="gm-surface-card" p={{ base: 5, md: 6 }}>
+              <HStack justify="space-between" align="baseline" spacing={3} mb={1}>
+                <Heading as="h2" size="md">
+                  {recommendation.categoryName}
+                </Heading>
+                <Text fontSize="sm" color="gray.600" whiteSpace="nowrap">
+                  {t('place.municipality.count', {
+                    count: recommendation.count,
+                    defaultValue: `${recommendation.count} nearby`,
+                  })}
+                </Text>
+              </HStack>
+              <Text color="gray.600" fontSize="sm" mb={4}>
+                {t('place.municipality.categorySubtitle', {
+                  category: recommendation.categoryName,
+                  defaultValue: `Recommended ${recommendation.categoryName.toLowerCase()} near ${areaName}.`,
+                })}
+              </Text>
+              <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={3}>
+                {recommendation.items.map((item) => (
+                  <Box key={item.entity.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                    <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.700" fontWeight="semibold">
+                      {item.entity.name}
+                    </Link>
+                    <Text fontSize="sm" color="gray.600" mt={2}>
+                      {formatWalkingTime(item.distanceKm)} · {sanitizeAddressForDisplay(item.entity.address) || item.entity.region || regionName}
+                    </Text>
+                  </Box>
+                ))}
+              </SimpleGrid>
+              {recommendation.passesThreshold ? (
+                <Button
+                  as={NextLink}
+                  href={`/${recommendation.categorySlug}/${municipalityArea?.slug || ''}`}
+                  variant="link"
+                  colorScheme="blue"
+                  mt={4}
+                  alignSelf="flex-start"
+                >
+                  {t('place.municipality.viewCategory', {
+                    category: recommendation.categoryName,
+                    defaultValue: `View all ${recommendation.categoryName.toLowerCase()}`,
+                  })}
+                </Button>
+              ) : null}
+            </Box>
+          ))}
+        </VStack>
+      ) : (
+        <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>
+          <Text color="gray.700">
+            {t('place.municipality.empty', {
+              name: displayName,
+              defaultValue: `We are still curating recommendations for ${displayName}. Try the main search to explore nearby places.`,
+            })}
+          </Text>
+          <Button as={NextLink} href="/search" colorScheme="blue" mt={4}>
+            {t('place.exploreMore', 'Explore More Places')}
+          </Button>
+        </Box>
+      )}
+    </Container>
+  );
+}
+
+export default function PlacePage(props: EntityPageProps) {
+  if (props.entity.kind === 'municipality') {
+    return <MunicipalityPage {...props} />;
+  }
+
+  return <PlaceDetailPage {...props} />;
 }

@@ -328,10 +328,6 @@ const nextConfig = withPWA(withBundleAnalyzer({
       const entities = Array.isArray(parsed?.entities) ? parsed.entities : [];
 
       placePaths = entities.reduce((acc, entity) => {
-        if (entity?.kind === 'municipality') {
-          return acc;
-        }
-
         const slugs = new Set([
           entity?.slug,
           ...(Array.isArray(entity?.legacySlugs) ? entity.legacySlugs : []),
@@ -443,7 +439,6 @@ const nextConfig = withPWA(withBundleAnalyzer({
       '/signup': { page: '/signup' },
       '/store': { page: '/store' },
       '/blog': { page: '/blog' },
-      '/blog/[slug]': { page: '/blog' },
       '/blog/greek-bakeries-brunch-coffee-guide': {
         page: '/blog/[slug]',
         query: { slug: 'greek-bakeries-brunch-coffee-guide' },

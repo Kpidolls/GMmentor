@@ -244,18 +244,30 @@ function main() {
   const entities = Array.isArray(entitiesIndex?.entities) ? entitiesIndex.entities : [];
   const slugToCanonical = new Map();
   const expectedPaths = new Set();
+  const expectedIndexablePaths = new Set();
+  const municipalityPaths = new Set();
 
   for (const entity of entities) {
-    if (entity?.kind === 'municipality') continue;
     if (!entity?.slug) continue;
 
     expectedPaths.add(normalizePathname(`/place/${entity.slug}`));
     slugToCanonical.set(entity.slug, entity.slug);
 
+    if (entity.kind === 'municipality') {
+      municipalityPaths.add(normalizePathname(`/place/${entity.slug}`));
+    } else {
+      expectedIndexablePaths.add(normalizePathname(`/place/${entity.slug}`));
+    }
+
     for (const legacySlug of entity.legacySlugs || []) {
       if (!legacySlug) continue;
       expectedPaths.add(normalizePathname(`/place/${legacySlug}`));
       slugToCanonical.set(legacySlug, entity.slug);
+      if (entity.kind === 'municipality') {
+        municipalityPaths.add(normalizePathname(`/place/${legacySlug}`));
+      } else {
+        expectedIndexablePaths.add(normalizePathname(`/place/${legacySlug}`));
+      }
     }
   }
 
@@ -280,7 +292,7 @@ function main() {
   const longTitlePages = [];
   const linkedEntityIds = new Set();
   const priorityPosts = getPriorityGuidePosts();
-  const placePathSet = new Set(expectedPaths);
+  const placePathSet = new Set(expectedIndexablePaths);
 
   for (const post of priorityPosts) {
     for (const entity of entities) {
@@ -292,7 +304,7 @@ function main() {
     }
   }
 
-  for (const expectedPath of Array.from(expectedPaths).sort((a, b) => a.localeCompare(b))) {
+  for (const expectedPath of Array.from(expectedIndexablePaths).sort((a, b) => a.localeCompare(b))) {
     const requestedSlug = expectedPath.replace('/place/', '');
     const htmlPath = getPlaceHtmlPath(requestedSlug);
     const canonicalSlug = slugToCanonical.get(requestedSlug) || requestedSlug;
@@ -329,8 +341,32 @@ function main() {
     }
   }
 
+  const missingMunicipalityFiles = [];
+  const invalidMunicipalityRobots = [];
+  for (const municipalityPath of Array.from(municipalityPaths).sort((a, b) => a.localeCompare(b))) {
+    const requestedSlug = municipalityPath.replace('/place/', '');
+    const htmlPath = getPlaceHtmlPath(requestedSlug);
+    if (!fs.existsSync(htmlPath)) {
+      missingMunicipalityFiles.push(municipalityPath);
+      continue;
+    }
+
+    const html = fs.readFileSync(htmlPath, 'utf8');
+    if (!/<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html)) {
+      invalidMunicipalityRobots.push(municipalityPath);
+    }
+  }
+
   if (missingFiles.length) {
     fail(`Missing exported place pages: ${missingFiles.slice(0, 10).join(', ')}${missingFiles.length > 10 ? ' ...' : ''}`);
+  }
+
+  if (missingMunicipalityFiles.length) {
+    fail(`Missing exported municipality pages: ${missingMunicipalityFiles.slice(0, 10).join(', ')}${missingMunicipalityFiles.length > 10 ? ' ...' : ''}`);
+  }
+
+  if (invalidMunicipalityRobots.length) {
+    fail(`Municipality pages must be noindex: ${invalidMunicipalityRobots.slice(0, 10).join(', ')}${invalidMunicipalityRobots.length > 10 ? ' ...' : ''}`);
   }
 
   if (missingFromSitemap.length) {
@@ -354,7 +390,7 @@ function main() {
   const canonicalCount = entities.filter((entity) => Boolean(entity?.slug)).length;
   const orphanRate = canonicalCount > 0 ? (orphanCount / canonicalCount) * 100 : 0;
 
-  console.log(`✅  Knowledge graph checks passed for ${expectedCount} place pages.`);
+  console.log(`✅  Knowledge graph checks passed for ${expectedIndexablePaths.size} indexable place pages and ${municipalityPaths.size} noindex municipality pages.`);
   console.log(`ℹ️  Graph KPI: ${linkedEntityIds.size} entities linked from priority guides, ${orphanCount} orphans (${orphanRate.toFixed(1)}%).`);
 }
 

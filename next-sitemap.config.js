@@ -91,7 +91,7 @@ module.exports = {
       }
 
       const placePaths = entities
-        .filter((entity) => entity?.slug)
+        .filter((entity) => entity?.slug && entity.kind !== 'municipality')
         .map((entity) => ({
           loc: `/place/${entity.slug}`,
           changefreq: 'weekly',
