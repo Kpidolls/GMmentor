@@ -7,7 +7,7 @@ language_coverage: el,en
 # Googlementor — Greece Travel & Restaurant Guide
 Site: https://googlementor.com
 Entities index: https://googlementor.com/data/entities.json
-Generated: 2026-07-30T16:25:49.729Z
+Generated: 2026-08-15T13:55:14.362Z
 
 Googlementor is a curated directory of restaurants, cafes, attractions, and neighborhoods in Athens and the Greek islands. All locations are verified, geocoded, and linked to Google Maps. The site covers 3592 curated dining and attraction entries across 352 Athens neighborhoods and Greek regions.
 
