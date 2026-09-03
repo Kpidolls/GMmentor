@@ -1,6 +1,6 @@
 'use client';
 
-import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import NextLink from 'next/link';
 import { GlobeAltIcon, MapPinIcon } from '@heroicons/react/24/solid';
@@ -1078,7 +1078,7 @@ const MainHero = () => {
   };
 
   // Enhanced search matching function
-  const searchMatches = (searchText: string, targetText: string): boolean => {
+  const searchMatches = useCallback((searchText: string, targetText: string): boolean => {
     if (!searchText || !targetText) return false;
     
     const normalizedSearch = normalizeSearchText(searchText);
@@ -1116,10 +1116,10 @@ const MainHero = () => {
     }
     
     return false;
-  };
+  }, []);
 
   // PWA Enhancement: Get municipalities with offline fallback
-  const getMunicipalitiesData = (): Municipality[] => {
+  const getMunicipalitiesData = useCallback((): Municipality[] => {
     if (typeof window !== 'undefined' && !navigator.onLine && isStandalone) {
       const cachedData = localStorage.getItem('municipalities_data');
       if (cachedData) {
@@ -1131,11 +1131,11 @@ const MainHero = () => {
       }
     }
     return toMunicipalityList(municipalitiesData as unknown[]);
-  };
+  }, [isStandalone, municipalitiesData]);
 
   const municipalities = useMemo(
     () => getMunicipalitiesData(),
-    [isOnline, isStandalone]
+    [getMunicipalitiesData]
   );
 
   const municipalitySearchEntries = useMemo(
@@ -1227,7 +1227,7 @@ const MainHero = () => {
     return municipalitySearchEntries
       .filter(({ searchableTexts }) => searchableTexts.some((text) => searchMatches(query, text)))
       .map(({ municipality }) => municipality);
-  }, [deferredMunicipalitySearchQuery, municipalities, municipalitySearchEntries]);
+  }, [deferredMunicipalitySearchQuery, municipalities, municipalitySearchEntries, searchMatches]);
 
   const heroContentSpacing = showLocationOptions
     ? 'pt-12 sm:pt-16 lg:pt-16 pb-2 sm:pb-4 lg:pb-5'

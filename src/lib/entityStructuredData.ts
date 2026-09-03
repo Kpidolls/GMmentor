@@ -88,25 +88,10 @@ export function buildBreadcrumbJsonLd(
         item: `${SITE_URL}/${options.categorySlug}/${options.areaSlug}`,
       });
     }
-  } else {
-    if (entity.kind === 'restaurant' && entity.categories?.length) {
-      items.push({
-        '@type': 'ListItem',
-        position: items.length + 1,
-        name: entity.categories[0],
-        item: `${SITE_URL}/search?category=${encodeURIComponent(entity.categoryIds?.[0] || '')}`,
-      });
-    }
-
-    if (entity.region) {
-      items.push({
-        '@type': 'ListItem',
-        position: items.length + 1,
-        name: entity.region,
-        item: `${SITE_URL}/search?region=${encodeURIComponent(entity.region)}`,
-      });
-    }
   }
+  // No area/category fallback here: /search only supports query-string filters,
+  // and those URLs are blocked by robots.txt (Disallow: /*?*), so they must
+  // never be emitted as breadcrumb "item" URLs. Skip straight to the entity.
 
   items.push({
     '@type': 'ListItem',

@@ -142,6 +142,7 @@ type EntityPageProps = {
     nameEn?: string;
     region?: string;
     regionEn?: string;
+    hasAreaPage: boolean;
   } | null;
   municipalityRecommendations: Array<{
     categoryId: string;
@@ -589,6 +590,10 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
       })
       .filter((recommendation): recommendation is NonNullable<typeof recommendation> => recommendation !== null)
     : [];
+  const municipalityAreaHasIndexablePage = municipalityArea
+    ? Boolean(intentEngine.query.getIntentResults({ areaId: municipalityArea.id })?.passesThreshold)
+    : false;
+
   const nearestArea = intentEngine.areas.records
     .map((area) => ({
       area,
@@ -665,6 +670,7 @@ export const getStaticProps: GetStaticProps<EntityPageProps> = async ({ params }
           nameEn: municipalityArea.nameEn,
           region: municipalityArea.region,
           regionEn: municipalityArea.regionEn,
+          hasAreaPage: municipalityAreaHasIndexablePage,
         }
         : null,
       municipalityRecommendations,
@@ -1605,7 +1611,9 @@ function MunicipalityPage({ entity, canonicalSlug, municipalityArea, municipalit
   const regionName = isGreek
     ? municipalityArea?.region || entity.region || t('common.greece', 'Greece')
     : municipalityArea?.regionEn || entity.region_en || entity.region || t('common.greece', 'Greece');
-  const canonicalUrl = `${SITE_URL}/place/${canonicalSlug}`;
+  // When a real /area/ hub page exists for this municipality, send traffic and link equity there instead of this thin fallback.
+  const areaPageUrl = municipalityArea?.hasAreaPage ? `${SITE_URL}/area/${municipalityArea.slug}` : null;
+  const canonicalUrl = areaPageUrl || `${SITE_URL}/place/${canonicalSlug}`;
   const title = t('place.municipality.title', {
     name: displayName,
     defaultValue: `Things to do and places to visit in ${displayName} | Googlementor`,
@@ -1623,7 +1631,22 @@ function MunicipalityPage({ entity, canonicalSlug, municipalityArea, municipalit
         <meta name="robots" content="noindex, follow" />
         <meta name="googlebot" content="noindex, follow" />
         <link rel="canonical" href={canonicalUrl} />
+        {areaPageUrl ? <meta httpEquiv="refresh" content={`0;url=${areaPageUrl}`} /> : null}
       </Head>
+
+      {areaPageUrl ? (
+        <Box className="gm-surface-card" p={{ base: 5, md: 6 }} mb={6}>
+          <Text color="gray.700">
+            {t('place.municipality.redirecting', {
+              name: displayName,
+              defaultValue: `This page has moved. Continue to the ${displayName} guide.`,
+            })}
+          </Text>
+          <Button as={NextLink} href={`/area/${municipalityArea?.slug}`} colorScheme="blue" mt={4}>
+            {t('place.municipality.continueToArea', 'Continue')}
+          </Button>
+        </Box>
+      ) : null}
 
       <Box className="gm-surface-card" p={{ base: 5, md: 8 }} mb={6}>
         <Badge colorScheme="blue" textTransform="none" mb={3}>

@@ -332,14 +332,51 @@ function submitToIndexNow(urls, key) {
       });
     });
     
+    const timeoutMs = Number(process.env.INDEXNOW_REQUEST_TIMEOUT_MS || 15000);
+    req.setTimeout(timeoutMs, () => {
+      req.destroy(new Error(`IndexNow request timed out after ${timeoutMs}ms`));
+    });
+
     req.on('error', (error) => {
-      console.error('❌ IndexNow submission failed:', error.message);
       reject(error);
     });
     
     req.write(payload);
     req.end();
   });
+}
+
+const TRANSIENT_NETWORK_ERROR_CODES = new Set([
+  'ECONNRESET',
+  'ETIMEDOUT',
+  'ECONNREFUSED',
+  'EAI_AGAIN',
+  'ENOTFOUND',
+  'EPIPE',
+]);
+
+async function submitToIndexNowWithRetry(urls, key, maxAttempts = 3) {
+  let lastError = null;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    try {
+      return await submitToIndexNow(urls, key);
+    } catch (error) {
+      lastError = error;
+      const isTransient = TRANSIENT_NETWORK_ERROR_CODES.has(error.code);
+
+      if (!isTransient || attempt === maxAttempts) {
+        console.error(`❌ IndexNow submission failed (attempt ${attempt}/${maxAttempts}):`, error.message);
+        return { success: false, status: 0, error: { message: error.message, code: error.code } };
+      }
+
+      const backoffMs = 500 * attempt;
+      console.warn(`⚠️  IndexNow network error (${error.code || error.message}), retrying in ${backoffMs}ms (attempt ${attempt}/${maxAttempts})...`);
+      await sleep(backoffMs);
+    }
+  }
+
+  return { success: false, status: 0, error: { message: lastError?.message } };
 }
 
 async function streamSubmitQueue(queue, key) {
@@ -358,7 +395,7 @@ async function streamSubmitQueue(queue, key) {
 
   for (let i = 0; i < chunks.length; i += 1) {
     const chunk = chunks[i];
-    const result = await submitToIndexNow(chunk, key);
+    const result = await submitToIndexNowWithRetry(chunk, key);
 
     if (result.success) {
       submittedCount += chunk.length;
