@@ -37,7 +37,7 @@ const About = () => {
         <div className="mb-8 pb-5 sm:mb-10 sm:pb-7 border-b border-slate-800">
           <h2 className="text-lg sm:text-xl font-primary font-bold tracking-tight text-white">Googlementor</h2>
           <p className="mt-1.5 sm:mt-2 text-[13px] sm:text-sm leading-snug sm:leading-normal font-secondary text-slate-300 max-w-xl sm:max-w-2xl">
-            Curated places, practical travel tools, and trusted guides for exploring Greece with confidence.
+            {t('about.description', 'Curated places, practical travel tools, and trusted guides for exploring Greece with confidence.')}
           </p>
         </div>
 

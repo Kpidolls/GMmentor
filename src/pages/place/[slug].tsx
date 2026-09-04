@@ -336,10 +336,15 @@ function getGreekPosterPreposition(areaLabel: string): string {
     'γιαννενα',
     'τρικαλα',
   ]);
+  const neuterAreas = new Set(['ιλιον']);
 
   // Common plural toponyms (mostly neuter plural) -> στα
   if (pluralAreas.has(compact) || compact.endsWith('δικα') || compact.endsWith('ικα') || compact.endsWith('εια')) {
     return 'στα';
+  }
+
+  if (neuterAreas.has(compact)) {
+    return 'στο';
   }
 
   // Feminine plural -> στις
@@ -383,6 +388,12 @@ function inflectGreekAreaLabel(areaLabel: string): string {
   }
 
   return areaLabel;
+}
+
+function formatGreekTaglineArea(areaLabel: string): string {
+  return normalizeGreekPosterArea(areaLabel) === 'ιλιον'
+    ? 'Ίλιον'
+    : areaLabel.toLowerCase();
 }
 
 function selectGreekAreaLabel(
@@ -718,13 +729,6 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
       : entity.kind === 'attraction'
         ? t('place.kind.attraction', 'Tourist Attraction')
         : t('place.kind.localPlace', 'Local Place');
-  const categoryBadgeLabels = (entity.categoryIds || [])
-    .map((categoryId, index) => {
-      const fallbackCategoryName = entity.categories?.[index] || categoryId;
-      return t(`place.categoryNames.${categoryId}`, fallbackCategoryName);
-    })
-    .filter(Boolean)
-    .slice(0, 2);
   const summary = isSanZachariFeatured
     ? (isGreek
       ? `${entity.name} είναι επιλεγμένο ζαχαροπλαστείο στη ${context}. Αγαπημένο των ντόπιων, με κοντινές προτάσεις Googlementor για εύκολη διαδρομή.`
@@ -767,7 +771,6 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
     ? (categoryNarrativeProfile?.visitMomentDefaults || visitMomentsRaw)
     : visitMomentsRaw;
 
-  const showKindBadge = !(entity.kind === 'restaurant' && categoryBadgeLabels.length > 0);
   const metaDescription = buildPlaceMetaDescription({
     placeName: entity.name,
     context,
@@ -799,7 +802,7 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
   const favoriteBadgeLabel = t('place.badges.favorite', "People's Favorite");
   const curatedBadgeLabel = t('place.badges.curated', 'Googlementor Pick');
   const greekTaglineAreaLabel = selectGreekAreaLabel(entity, areaContext, intentContexts);
-  const greekTaglineLocationPhrase = `${getGreekPosterPreposition(greekTaglineAreaLabel)} ${inflectGreekAreaLabel(greekTaglineAreaLabel).toLowerCase()}`;
+  const greekTaglineLocationPhrase = `${getGreekPosterPreposition(greekTaglineAreaLabel)} ${formatGreekTaglineArea(inflectGreekAreaLabel(greekTaglineAreaLabel))}`;
   const tagline = isGreek
     ? (heroAudience
       ? `Αγαπημένη στάση ${placeTypeLabel} ${greekTaglineLocationPhrase}, ιδανική για ${heroAudience}.`
@@ -961,99 +964,149 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
       const cupHeight = 170 * scale;
       const cupX = x - cupWidth / 2;
       const cupY = y;
-      const stemWidth = 30 * scale;
-      const stemHeight = 40 * scale;
-      const baseWidth = 144 * scale;
-      const baseHeight = 24 * scale;
+      const stemWidth = 26 * scale;
+      const stemHeight = 34 * scale;
+      const baseWidth = 150 * scale;
+      const baseHeight = 20 * scale;
+      const plinthWidth = 106 * scale;
+      const plinthHeight = 16 * scale;
 
       const cupGradient = ctx.createLinearGradient(cupX, cupY, cupX + cupWidth, cupY + cupHeight);
-      cupGradient.addColorStop(0, '#fff9c9');
-      cupGradient.addColorStop(0.28, '#f8d54f');
-      cupGradient.addColorStop(0.56, '#d9a800');
-      cupGradient.addColorStop(1, '#8d6200');
+      cupGradient.addColorStop(0, '#fffce0');
+      cupGradient.addColorStop(0.22, '#ffe07a');
+      cupGradient.addColorStop(0.5, '#f6b93b');
+      cupGradient.addColorStop(0.78, '#dd9400');
+      cupGradient.addColorStop(1, '#9c6b00');
 
       const rimGradient = ctx.createLinearGradient(cupX, cupY, cupX + cupWidth, cupY);
-      rimGradient.addColorStop(0, '#ffe890');
-      rimGradient.addColorStop(0.5, '#f2c83f');
-      rimGradient.addColorStop(1, '#ba8300');
+      rimGradient.addColorStop(0, '#fff2b0');
+      rimGradient.addColorStop(0.5, '#ffd257');
+      rimGradient.addColorStop(1, '#c88900');
 
-      const drawSparkle = (sx: number, sy: number, size: number) => {
+      const handleGradient = ctx.createLinearGradient(cupX, cupY, cupX, cupY + 140 * scale);
+      handleGradient.addColorStop(0, '#ffe287');
+      handleGradient.addColorStop(1, '#c98d00');
+
+      const drawStarSparkle = (sx: number, sy: number, size: number) => {
         ctx.save();
-        ctx.fillStyle = 'rgba(255, 246, 200, 0.85)';
+        ctx.fillStyle = 'rgba(255, 250, 214, 0.95)';
         ctx.beginPath();
         ctx.moveTo(sx, sy - size);
-        ctx.lineTo(sx + size * 0.35, sy - size * 0.35);
+        ctx.lineTo(sx + size * 0.22, sy - size * 0.22);
         ctx.lineTo(sx + size, sy);
-        ctx.lineTo(sx + size * 0.35, sy + size * 0.35);
+        ctx.lineTo(sx + size * 0.22, sy + size * 0.22);
         ctx.lineTo(sx, sy + size);
-        ctx.lineTo(sx - size * 0.35, sy + size * 0.35);
+        ctx.lineTo(sx - size * 0.22, sy + size * 0.22);
         ctx.lineTo(sx - size, sy);
-        ctx.lineTo(sx - size * 0.35, sy - size * 0.35);
+        ctx.lineTo(sx - size * 0.22, sy - size * 0.22);
         ctx.closePath();
         ctx.fill();
         ctx.restore();
       };
 
+      // Closed-loop handle: an outer curve and an inner curve joined into one filled ring shape.
+      const drawHandle = (mirror: 1 | -1) => {
+        const attachTopX = cupX + (mirror === 1 ? 28 : cupWidth - 28) * scale;
+        const attachTopY = cupY + 44 * scale;
+        const attachBottomX = cupX + (mirror === 1 ? 20 : cupWidth - 20) * scale;
+        const attachBottomY = cupY + 120 * scale;
+        const outerX = mirror * 46 * scale;
+        const innerX = mirror * 20 * scale;
+
+        ctx.beginPath();
+        ctx.moveTo(attachTopX, attachTopY);
+        ctx.bezierCurveTo(
+          attachTopX + outerX, attachTopY - 6 * scale,
+          attachTopX + outerX, attachBottomY + 6 * scale,
+          attachBottomX, attachBottomY
+        );
+        ctx.bezierCurveTo(
+          attachTopX + innerX, attachBottomY - 4 * scale,
+          attachTopX + innerX, attachTopY + 12 * scale,
+          attachTopX, attachTopY + 4 * scale
+        );
+        ctx.closePath();
+        ctx.fillStyle = handleGradient;
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(140, 96, 0, 0.55)';
+        ctx.lineWidth = 1.5 * scale;
+        ctx.stroke();
+      };
+
       ctx.save();
-      ctx.shadowColor = 'rgba(255, 215, 0, 0.16)';
-      ctx.shadowBlur = 7 * scale;
-      ctx.shadowOffsetY = 3 * scale;
+      ctx.shadowColor = 'rgba(255, 200, 0, 0.2)';
+      ctx.shadowBlur = 9 * scale;
+      ctx.shadowOffsetY = 4 * scale;
 
-      ctx.strokeStyle = '#ce9800';
-      ctx.lineWidth = 8 * scale;
-      ctx.lineCap = 'round';
+      drawHandle(-1);
+      drawHandle(1);
 
-      // Left handle
-      ctx.beginPath();
-      ctx.moveTo(cupX + 28 * scale, cupY + 46 * scale);
-      ctx.bezierCurveTo(cupX - 22 * scale, cupY + 36 * scale, cupX - 28 * scale, cupY + 110 * scale, cupX + 20 * scale, cupY + 122 * scale);
-      ctx.stroke();
-
-      // Right handle
-      ctx.beginPath();
-      ctx.moveTo(cupX + cupWidth - 28 * scale, cupY + 46 * scale);
-      ctx.bezierCurveTo(cupX + cupWidth + 22 * scale, cupY + 36 * scale, cupX + cupWidth + 28 * scale, cupY + 110 * scale, cupX + cupWidth - 20 * scale, cupY + 122 * scale);
-      ctx.stroke();
-
-      // Rim
+      // Rim (elliptical lip for a rounder, 3D-looking opening)
       ctx.fillStyle = rimGradient;
-      drawRoundedRect(ctx, cupX + 14 * scale, cupY + 18 * scale, cupWidth - 28 * scale, 24 * scale, 11 * scale);
+      ctx.beginPath();
+      ctx.ellipse(x, cupY + 26 * scale, cupWidth / 2 - 10 * scale, 16 * scale, 0, 0, Math.PI * 2);
       ctx.fill();
+      ctx.strokeStyle = 'rgba(140, 96, 0, 0.35)';
+      ctx.lineWidth = 1.5 * scale;
+      ctx.stroke();
 
       // Body (classic tapered cup)
       ctx.beginPath();
-      ctx.moveTo(cupX + 30 * scale, cupY + 36 * scale);
-      ctx.lineTo(cupX + cupWidth - 30 * scale, cupY + 36 * scale);
+      ctx.moveTo(cupX + 30 * scale, cupY + 32 * scale);
+      ctx.lineTo(cupX + cupWidth - 30 * scale, cupY + 32 * scale);
       ctx.bezierCurveTo(cupX + cupWidth - 42 * scale, cupY + 92 * scale, cupX + cupWidth - 66 * scale, cupY + 130 * scale, cupX + cupWidth - 88 * scale, cupY + 138 * scale);
       ctx.lineTo(cupX + 88 * scale, cupY + 138 * scale);
-      ctx.bezierCurveTo(cupX + 66 * scale, cupY + 130 * scale, cupX + 42 * scale, cupY + 92 * scale, cupX + 30 * scale, cupY + 36 * scale);
+      ctx.bezierCurveTo(cupX + 66 * scale, cupY + 130 * scale, cupX + 42 * scale, cupY + 92 * scale, cupX + 30 * scale, cupY + 32 * scale);
       ctx.closePath();
       ctx.fillStyle = cupGradient;
       ctx.fill();
+      ctx.strokeStyle = 'rgba(140, 96, 0, 0.3)';
+      ctx.lineWidth = 1.25 * scale;
+      ctx.stroke();
+
+      // Top rim highlight ellipse (front edge, brighter)
+      ctx.fillStyle = 'rgba(255, 255, 235, 0.55)';
+      ctx.beginPath();
+      ctx.ellipse(x, cupY + 22 * scale, cupWidth / 2 - 16 * scale, 9 * scale, 0, 0, Math.PI * 2);
+      ctx.fill();
 
       // Center sheen
-      const sheen = ctx.createLinearGradient(x - 22 * scale, cupY + 40 * scale, x + 22 * scale, cupY + 140 * scale);
-      sheen.addColorStop(0, 'rgba(255, 248, 197, 0.7)');
-      sheen.addColorStop(1, 'rgba(255, 248, 197, 0)');
+      const sheen = ctx.createLinearGradient(x - 22 * scale, cupY + 36 * scale, x + 22 * scale, cupY + 140 * scale);
+      sheen.addColorStop(0, 'rgba(255, 252, 214, 0.8)');
+      sheen.addColorStop(1, 'rgba(255, 252, 214, 0)');
       ctx.fillStyle = sheen;
-      drawRoundedRect(ctx, x - 18 * scale, cupY + 44 * scale, 36 * scale, 88 * scale, 14 * scale);
+      drawRoundedRect(ctx, x - 16 * scale, cupY + 40 * scale, 32 * scale, 90 * scale, 14 * scale);
       ctx.fill();
 
-      // Neck + stem + base
+      // Neck
       ctx.fillStyle = '#e6b300';
-      drawRoundedRect(ctx, x - 36 * scale, cupY + 134 * scale, 72 * scale, 18 * scale, 8 * scale);
+      drawRoundedRect(ctx, x - 34 * scale, cupY + 134 * scale, 68 * scale, 16 * scale, 7 * scale);
       ctx.fill();
 
-      ctx.fillStyle = '#ffd26a';
-      drawRoundedRect(ctx, x - stemWidth / 2, cupY + 150 * scale, stemWidth, stemHeight, 10 * scale);
+      // Stem
+      const stemGradient = ctx.createLinearGradient(x - stemWidth / 2, 0, x + stemWidth / 2, 0);
+      stemGradient.addColorStop(0, '#ffe287');
+      stemGradient.addColorStop(1, '#d99a00');
+      ctx.fillStyle = stemGradient;
+      drawRoundedRect(ctx, x - stemWidth / 2, cupY + 148 * scale, stemWidth, stemHeight, 9 * scale);
       ctx.fill();
 
-      ctx.fillStyle = '#c78a00';
-      drawRoundedRect(ctx, x - baseWidth / 2, cupY + 184 * scale, baseWidth, baseHeight, 12 * scale);
+      // Two-tier pedestal base
+      ctx.fillStyle = '#d9a300';
+      drawRoundedRect(ctx, x - plinthWidth / 2, cupY + 180 * scale, plinthWidth, plinthHeight, 6 * scale);
       ctx.fill();
 
-      drawSparkle(cupX + 38 * scale, cupY + 14 * scale, 10 * scale);
-      drawSparkle(cupX + cupWidth - 34 * scale, cupY + 20 * scale, 8 * scale);
+      const baseGradient = ctx.createLinearGradient(x - baseWidth / 2, 0, x + baseWidth / 2, 0);
+      baseGradient.addColorStop(0, '#b87c00');
+      baseGradient.addColorStop(0.5, '#e0a91c');
+      baseGradient.addColorStop(1, '#b87c00');
+      ctx.fillStyle = baseGradient;
+      drawRoundedRect(ctx, x - baseWidth / 2, cupY + 194 * scale, baseWidth, baseHeight, 8 * scale);
+      ctx.fill();
+
+      drawStarSparkle(cupX + 32 * scale, cupY + 8 * scale, 11 * scale);
+      drawStarSparkle(cupX + cupWidth - 28 * scale, cupY + 16 * scale, 8 * scale);
+      drawStarSparkle(x, cupY - 18 * scale, 6 * scale);
 
       ctx.restore();
     };
@@ -1307,7 +1360,7 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
   };
 
   return (
-    <Container maxW="5xl" py={10}>
+    <Container maxW="5xl" py={{ base: 5, md: 8 }} className="place-page">
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={metaDescription} />
@@ -1336,31 +1389,34 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
         />
       </Head>
 
-      <Box mb={8} className="gm-surface-card" p={{ base: 5, md: 7 }}>
+      <Box mb={{ base: 6, md: 8 }} className="place-hero" p={{ base: 5, md: 7 }}>
+        <Box className="place-approval-seal" aria-label={t('place.approvalSeal.ariaLabel', 'Googlementor curated selection')}>
+          <Text as="span" className="place-approval-brand" aria-hidden="true">GM</Text>
+          <Text as="span" className="place-approval-label" aria-hidden="true">{t('place.approvalSeal.label', 'Curated')}</Text>
+        </Box>
         <VStack align="stretch" spacing={4}>
           <HStack spacing={2} flexWrap="wrap">
-            <Badge colorScheme="orange" textTransform="none">{favoriteBadgeLabel}</Badge>
-            <Badge colorScheme="gray" textTransform="none">{curatedBadgeLabel}</Badge>
-            {showKindBadge ? <Badge colorScheme="blue" textTransform="none">{localizedKind}</Badge> : null}
+            <Badge className="place-label" textTransform="none">{primaryCategoryLabel} · {localizedKind}</Badge>
+            <Badge className="place-curated-label" textTransform="none">{favoriteBadgeLabel} · {curatedBadgeLabel}</Badge>
           </HStack>
 
-          <Text fontSize="sm" fontWeight="semibold" color="gray.600">
-            {primaryCategoryLabel} · {neighborhood}
+          <Text className="place-location" fontSize="sm" fontWeight="semibold">
+            {neighborhood}
           </Text>
-          <Heading as="h1" size="2xl">
+          <Heading as="h1" size="2xl" className="place-title">
             {entity.name}
           </Heading>
-          <Text color="gray.700" lineHeight="1.7">
+          <Text className="place-tagline" lineHeight="1.7">
             {tagline}
           </Text>
 
           {bestForLabels.length > 0 || visitMomentLabels.length > 0 ? (
             <HStack spacing={2} flexWrap="wrap">
               {bestForLabels.map((label) => (
-                <Badge key={`hero-best-${label}`} colorScheme="teal" textTransform="none">{label}</Badge>
+                <Badge key={`hero-best-${label}`} className="place-tag" textTransform="none">{label}</Badge>
               ))}
               {visitMomentLabels.map((label) => (
-                <Badge key={`hero-time-${label}`} colorScheme="orange" textTransform="none">{label}</Badge>
+                <Badge key={`hero-time-${label}`} className="place-tag" textTransform="none">{label}</Badge>
               ))}
             </HStack>
           ) : null}
@@ -1369,9 +1425,9 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
 
       <SimpleGrid columns={{ base: 1, xl: 12 }} spacing={6} alignItems="start">
         <VStack gridColumn={{ xl: 'span 8' }} align="stretch" spacing={6}>
-          <Box className="gm-surface-card" p={{ base: 4, md: 5 }}>
-            <Heading as="h2" size="sm" mb={1}>{t('place.promo.posterTitle', 'Social poster preview')}</Heading>
-            <Text fontSize="sm" color="gray.600" mb={3}>{shareCaption}</Text>
+          <Box className="place-share-panel" p={{ base: 4, md: 5 }}>
+            <Heading as="h2" size="md" className="place-share-title" mb={1}>{t('place.share.title', 'Celebrate this place on Googlementor')}</Heading>
+            <Text className="place-share-subtitle" fontSize="sm" mb={3}>{shareCaption}</Text>
 
             {socialPosterPreview ? (
               <Image
@@ -1382,38 +1438,32 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
                 maxH={{ base: '420px', md: '520px' }}
                 objectFit="contain"
                 objectPosition="center"
-                borderRadius="xl"
-                borderWidth="1px"
-                bg="gray.100"
+                className="place-poster"
                 mb={3}
               />
             ) : (
-              <Box h="260px" borderWidth="1px" borderRadius="xl" bg="gray.50" display="flex" alignItems="center" justifyContent="center" mb={3}>
-                <Text fontSize="sm" color="gray.500">{t('place.promo.generating', 'Generating preview...')}</Text>
+              <Box className="place-poster-placeholder" h="190px" display="flex" alignItems="center" justifyContent="center" mb={3}>
+                <Text fontSize="sm">{t('place.promo.generating', 'Generating preview...')}</Text>
               </Box>
             )}
 
-            <Box h="1px" bg="gray.200" mb={3} />
-            <Text fontSize="xs" textTransform="uppercase" letterSpacing="0.08em" color="gray.500" mb={1}>
-              {t('place.share.title', 'Celebrate this place on Googlementor')}
-            </Text>
-            <Button colorScheme="blue" size="md" minH="44px" w="full" mb={2} onClick={handleSharePlace}>
+            <Button className="place-share-primary" size="md" minH="44px" w="full" mb={2} onClick={handleSharePlace}>
               {t('place.share.heroButton', 'Share this place')}
             </Button>
             <SimpleGrid columns={{ base: 1, sm: 3 }} spacing={2}>
-              <Button size="sm" minH="40px" variant="outline" onClick={handleShareCard}>
+              <Button className="place-share-secondary" size="sm" minH="40px" variant="outline" onClick={handleShareCard}>
                 {t('place.share.cardButton', 'Share this card')}
               </Button>
-              <Button size="sm" minH="40px" variant="outline" onClick={handleCopyCaption}>
+              <Button className="place-share-secondary" size="sm" minH="40px" variant="outline" onClick={handleCopyCaption}>
                 {copiedCaption ? t('place.share.copiedShort', 'Copied') : t('place.share.copyCaption', 'Copy caption')}
               </Button>
-              <Button size="sm" minH="40px" variant="outline" onClick={handleCopyLink}>
+              <Button className="place-share-secondary" size="sm" minH="40px" variant="outline" onClick={handleCopyLink}>
                 {copied ? t('place.share.copiedShort', 'Copied') : t('place.share.copyLink', 'Copy link')}
               </Button>
             </SimpleGrid>
           </Box>
 
-          <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>
+          <Box className="place-section" p={{ base: 5, md: 6 }}>
             <HStack justify="space-between" align="flex-start" spacing={4} mb={4}>
               <VStack align="start" spacing={1}>
                 <Text
@@ -1425,7 +1475,7 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
                 >
                   {t('place.utility.eyebrow', 'Tools')}
                 </Text>
-                <Heading as="h2" size="md">{t('place.utility.title', 'Practical info')}</Heading>
+                <Heading as="h2" size="md" className="place-section-title">{t('place.utility.title', 'Practical info')}</Heading>
               </VStack>
               <Badge colorScheme="gray" textTransform="none">{t('place.utility.quickActions', 'Quick actions')}</Badge>
             </HStack>
@@ -1470,14 +1520,14 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
           ) : null}
 
           {sameCategoryWithDistance.length > 0 ? (
-            <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>
-              <Heading as="h2" size="md" mb={3}>
+            <Box className="place-section" p={{ base: 5, md: 6 }}>
+              <Heading as="h2" size="md" className="place-section-title" mb={3}>
                 {t('place.sameCategory.title', 'Similar places nearby')}
               </Heading>
               <Text color="gray.600" mb={4}>{t('place.sameCategory.subtitle', 'If you liked this pick, these are strong alternatives nearby.')}</Text>
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
                 {sameCategoryWithDistance.map((candidate) => (
-                  <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                  <Box key={candidate.id} className="place-list-item" p={4}>
                     <HStack justify="space-between" align="baseline" spacing={3} mb={1}>
                       <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
                         {candidate.name}
@@ -1492,8 +1542,8 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
           ) : null}
 
           {nearbyGroupedByCategory.length > 0 ? (
-            <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>
-              <Heading as="h2" size="md" mb={2}>
+            <Box className="place-section" p={{ base: 5, md: 6 }}>
+              <Heading as="h2" size="md" className="place-section-title" mb={2}>
                 {t('place.nearby.title', 'Closest useful stops')}
               </Heading>
               <Text color="gray.700" mb={4}>{t('place.nearby.subtitle', 'A quick travel-assistant view of the closest useful stops to walk to next.')}</Text>
@@ -1502,7 +1552,7 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
                   const accentScheme = nearbyGroupAccentSchemes[groupIndex % nearbyGroupAccentSchemes.length];
 
                   return (
-                    <Box key={group.label} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                    <Box key={group.label} className="place-list-item" p={4}>
                       <Box
                         mb={3}
                         px={3}
@@ -1545,14 +1595,14 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
           ) : null}
 
           {walkableNearby.length > 0 ? (
-            <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>
-              <Heading as="h2" size="md" mb={3}>
+            <Box className="place-section" p={{ base: 5, md: 6 }}>
+              <Heading as="h2" size="md" className="place-section-title" mb={3}>
                 {t('place.walkable.title', 'Best Walkable Picks Nearby')}
               </Heading>
               <Text color="gray.600" mb={4}>{t('place.walkable.subtitle', 'Great options within a short walk.')}</Text>
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
                 {walkableNearby.map((candidate) => (
-                  <Box key={candidate.id} borderWidth="1px" borderRadius="lg" p={4} bg="white">
+                  <Box key={candidate.id} className="place-list-item" p={4}>
                     <HStack justify="space-between" align="flex-start" spacing={3} mb={2}>
                       <Link as={NextLink} href={`/place/${candidate.slug}`} color="blue.600" fontWeight="semibold">
                         {candidate.name}

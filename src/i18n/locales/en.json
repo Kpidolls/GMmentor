@@ -242,6 +242,10 @@
       "favorite": "People's Favorite",
       "curated": "Googlementor Pick"
     },
+    "approvalSeal": {
+      "label": "Curated",
+      "ariaLabel": "Googlementor curated selection"
+    },
     "typeLabels": {
       "restaurant": "restaurant",
       "localSpot": "local spot",
@@ -276,8 +280,23 @@
       "bestTime": "Best times to visit"
     },
     "utility": {
+      "eyebrow": "Tools",
       "title": "Practical info",
+      "quickActions": "Quick actions",
       "subtitle": "You can open directions, save this location to your itinerary and discover what’s close."
+    },
+    "municipality": {
+      "title": "Things to do and places to visit in {{name}} | Googlementor",
+      "description": "Discover recommended places and things to do in {{name}}, Greece.",
+      "redirecting": "This page has moved. Continue to the {{name}} guide.",
+      "continueToArea": "Continue",
+      "badge": "Local recommendations",
+      "heading": "Explore {{name}}",
+      "subtitle": "Useful recommendations near {{name}}, {{region}}. Browse nearby places by category and build your route from here.",
+      "count": "{{count}} nearby",
+      "categorySubtitle": "Recommended {{category}} near {{name}}.",
+      "viewCategory": "View all {{category}}",
+      "empty": "We are still curating recommendations for {{name}}. Try the main search to explore nearby places."
     },
     "sameCategory": {
       "title": "More places like this",
@@ -292,7 +311,7 @@
       "title": "Best Walkable Picks Nearby",
       "subtitle": "Great options within a short walk."
     },
-    "walkingDistanceNote": "Walking times are estimates; some waterfront routes may require detours and may not be fully walkable.",
+    "walkingDistanceNote": "Walking times are estimates. Some waterfront routes may require detours and may not be fully walkable.",
     "moreNearby": {
       "title": "More Nearby Options",
       "subtitle": "A lighter set of extra nearby options if you want to keep exploring."
@@ -1389,6 +1408,7 @@
     "canDeleteListAnswer": "Yes, you can delete any list you’ve created at any time from your Google Maps account."
   },
   "about": {
+    "description": "Curated places, practical travel tools, and trusted guides for exploring Greece with confidence.",
     "linksTitle": "Links",
     "affiliatePartners": "Affiliate Partners",
     "mapCreators": "Map Creators",

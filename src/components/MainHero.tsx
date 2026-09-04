@@ -1131,7 +1131,7 @@ const MainHero = () => {
       }
     }
     return toMunicipalityList(municipalitiesData as unknown[]);
-  }, [isStandalone, municipalitiesData]);
+  }, [isStandalone]);
 
   const municipalities = useMemo(
     () => getMunicipalitiesData(),
