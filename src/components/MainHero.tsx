@@ -1364,7 +1364,7 @@ const MainHero = () => {
                 
                 {/* Main Image */}
                 <img 
-                  src="/assets/images/santorini.webp" 
+                  src="/assets/images/astypalea.webp" 
                   alt="Santorini caldera" 
                   className="absolute top-5 left-0 w-[72%] h-[80%] object-cover shadow-lg"
                 />

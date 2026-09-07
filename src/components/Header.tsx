@@ -435,6 +435,14 @@ const Header = () => {
     localStorage.setItem('language', lang);
   };
 
+  // Flag shown is always the language the user would switch TO, not the current one.
+  const renderFlagIcon = (lang: 'en' | 'el') =>
+    lang === 'el' ? (
+      <svg viewBox="0 0 27 18" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="presentation" aria-hidden="true"><rect width="27" height="18" fill="#0D5EAF" /><rect y="2" width="27" height="2" fill="#FFFFFF" /><rect y="6" width="27" height="2" fill="#FFFFFF" /><rect y="10" width="27" height="2" fill="#FFFFFF" /><rect y="14" width="27" height="2" fill="#FFFFFF" /><rect width="10" height="10" fill="#0D5EAF" /><rect x="4" width="2" height="10" fill="#FFFFFF" /><rect y="4" width="10" height="2" fill="#FFFFFF" /></svg>
+    ) : (
+      <svg viewBox="0 0 60 30" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="presentation" aria-hidden="true"><rect width="60" height="30" fill="#012169" /><path d="M0 0 L25 12.5 M35 17.5 L60 30 M60 0 L35 12.5 M25 17.5 L0 30" stroke="#FFFFFF" strokeWidth="6" /><path d="M0 0 L25 12.5 M35 17.5 L60 30 M60 0 L35 12.5 M25 17.5 L0 30" stroke="#C8102E" strokeWidth="4" /><path d="M30 0 V30 M0 15 H60" stroke="#FFFFFF" strokeWidth="10" /><path d="M30 0 V30 M0 15 H60" stroke="#C8102E" strokeWidth="6" /></svg>
+    );
+
   const resolveNavigationTarget = (href: string) => {
     if (href.startsWith('/')) {
       return href;
@@ -505,18 +513,18 @@ const Header = () => {
             </Text>
             <Button
               size="xs"
-              onClick={() => setLanguage('en')}
-              bg={i18n.language === 'en' ? 'var(--gm-sea-700)' : 'transparent'}
-              color={i18n.language === 'en' ? 'white' : 'gray.700'}
+              onClick={() => setLanguage(i18n.language === 'en' ? 'el' : 'en')}
+              bg="transparent"
+              color="gray.700"
               borderRadius="full"
               fontWeight="bold"
               fontSize={{ base: '10px', md: 'xs' }}
               px={{ base: 2, md: 3 }}
               h={{ base: '24px', md: '28px' }}
               minW={{ base: '36px', md: '40px' }}
-              _hover={{ bg: i18n.language === 'en' ? 'var(--gm-sea-500)' : 'gray.100' }}
-              _active={{ bg: i18n.language === 'en' ? 'var(--gm-sea-500)' : 'gray.200' }}
-              aria-label={t('language.english', 'English')}
+              _hover={{ bg: 'gray.100' }}
+              _active={{ bg: 'gray.200' }}
+              aria-label={t('language.toggle', 'Toggle language')}
             >
               <Box
                 as="span"
@@ -530,52 +538,7 @@ const Header = () => {
                 h={{ base: '14px', md: '15px' }}
                 aria-hidden="true"
               >
-                <svg viewBox="0 0 60 30" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="presentation" aria-hidden="true">
-                  <rect width="60" height="30" fill="#012169" />
-                  <path d="M0 0 L25 12.5 M35 17.5 L60 30 M60 0 L35 12.5 M25 17.5 L0 30" stroke="#FFFFFF" strokeWidth="6" />
-                  <path d="M0 0 L25 12.5 M35 17.5 L60 30 M60 0 L35 12.5 M25 17.5 L0 30" stroke="#C8102E" strokeWidth="4" />
-                  <path d="M30 0 V30 M0 15 H60" stroke="#FFFFFF" strokeWidth="10" />
-                  <path d="M30 0 V30 M0 15 H60" stroke="#C8102E" strokeWidth="6" />
-                </svg>
-              </Box>
-            </Button>
-            <Button
-              size="xs"
-              onClick={() => setLanguage('el')}
-              bg={i18n.language === 'el' ? 'var(--gm-sea-700)' : 'transparent'}
-              color={i18n.language === 'el' ? 'white' : 'gray.700'}
-              borderRadius="full"
-              fontWeight="bold"
-              fontSize={{ base: '10px', md: 'xs' }}
-              px={{ base: 2, md: 3 }}
-              h={{ base: '24px', md: '28px' }}
-              minW={{ base: '36px', md: '40px' }}
-              _hover={{ bg: i18n.language === 'el' ? 'var(--gm-sea-500)' : 'gray.100' }}
-              _active={{ bg: i18n.language === 'el' ? 'var(--gm-sea-500)' : 'gray.200' }}
-              aria-label={t('language.greek', 'Greek')}
-            >
-              <Box
-                as="span"
-                display="inline-flex"
-                alignItems="center"
-                justifyContent="center"
-                borderRadius="sm"
-                overflow="hidden"
-                boxShadow="inset 0 0 0 1px rgba(0,0,0,0.12)"
-                w={{ base: '20px', md: '22px' }}
-                h={{ base: '14px', md: '15px' }}
-                aria-hidden="true"
-              >
-                <svg viewBox="0 0 27 18" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="presentation" aria-hidden="true">
-                  <rect width="27" height="18" fill="#0D5EAF" />
-                  <rect y="2" width="27" height="2" fill="#FFFFFF" />
-                  <rect y="6" width="27" height="2" fill="#FFFFFF" />
-                  <rect y="10" width="27" height="2" fill="#FFFFFF" />
-                  <rect y="14" width="27" height="2" fill="#FFFFFF" />
-                  <rect width="10" height="10" fill="#0D5EAF" />
-                  <rect x="4" width="2" height="10" fill="#FFFFFF" />
-                  <rect y="4" width="10" height="2" fill="#FFFFFF" />
-                </svg>
+                {renderFlagIcon(i18n.language === 'en' ? 'el' : 'en')}
               </Box>
             </Button>
           </HStack>
@@ -830,36 +793,24 @@ const Header = () => {
             )}
           </HStack>
 
-          <HStack spacing={0.5} display={{ base: 'none', md: 'flex' }} flexShrink={0} p={0.5} border="1px solid" borderColor="gray.200" borderRadius="md">
-            <Button
-              size="xs"
-              onClick={() => setLanguage('en')}
-              bg={i18n.language === 'en' ? 'var(--gm-aegean)' : 'transparent'}
-              borderRadius="sm"
-              minW="32px"
-              px={1.5}
-              _hover={{ bg: i18n.language === 'en' ? 'var(--gm-sea-500)' : 'gray.50' }}
-              aria-label={t('language.english', 'English')}
-            >
-              <Box as="span" display="inline-flex" w="20px" h="14px" borderRadius="sm" overflow="hidden" boxShadow="inset 0 0 0 1px rgba(0,0,0,0.12)" aria-hidden="true">
-                <svg viewBox="0 0 60 30" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect width="60" height="30" fill="#012169" /><path d="M0 0 L25 12.5 M35 17.5 L60 30 M60 0 L35 12.5 M25 17.5 L0 30" stroke="#FFFFFF" strokeWidth="6" /><path d="M0 0 L25 12.5 M35 17.5 L60 30 M60 0 L35 12.5 M25 17.5 L0 30" stroke="#C8102E" strokeWidth="4" /><path d="M30 0 V30 M0 15 H60" stroke="#FFFFFF" strokeWidth="10" /><path d="M30 0 V30 M0 15 H60" stroke="#C8102E" strokeWidth="6" /></svg>
-              </Box>
-            </Button>
-            <Button
-              size="xs"
-              onClick={() => setLanguage('el')}
-              bg={i18n.language === 'el' ? 'var(--gm-aegean)' : 'transparent'}
-              borderRadius="sm"
-              minW="32px"
-              px={1.5}
-              _hover={{ bg: i18n.language === 'el' ? 'var(--gm-sea-500)' : 'gray.50' }}
-              aria-label={t('language.greek', 'Greek')}
-            >
-              <Box as="span" display="inline-flex" w="20px" h="14px" borderRadius="sm" overflow="hidden" boxShadow="inset 0 0 0 1px rgba(0,0,0,0.12)" aria-hidden="true">
-                <svg viewBox="0 0 27 18" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect width="27" height="18" fill="#0D5EAF" /><rect y="2" width="27" height="2" fill="#FFFFFF" /><rect y="6" width="27" height="2" fill="#FFFFFF" /><rect y="10" width="27" height="2" fill="#FFFFFF" /><rect y="14" width="27" height="2" fill="#FFFFFF" /><rect width="10" height="10" fill="#0D5EAF" /><rect x="4" width="2" height="10" fill="#FFFFFF" /><rect y="4" width="10" height="2" fill="#FFFFFF" /></svg>
-              </Box>
-            </Button>
-          </HStack>
+          <Button
+            size="xs"
+            onClick={() => setLanguage(i18n.language === 'en' ? 'el' : 'en')}
+            display={{ base: 'none', md: 'inline-flex' }}
+            variant="ghost"
+            flexShrink={0}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            minW="auto"
+            px={1.5}
+            _hover={{ bg: 'gray.50' }}
+            aria-label={t('language.toggle', 'Toggle language')}
+          >
+            <Box as="span" display="inline-flex" w="20px" h="14px" borderRadius="sm" overflow="hidden" boxShadow="inset 0 0 0 1px rgba(0,0,0,0.12)" aria-hidden="true">
+              {renderFlagIcon(i18n.language === 'en' ? 'el' : 'en')}
+            </Box>
+          </Button>
 
           <Button
             onClick={onOpen}
@@ -876,21 +827,42 @@ const Header = () => {
             <SearchIcon color="gray.600" boxSize="14px" />
           </Button>
 
-          {/* Mobile Menu Toggle */}
-          <IconButton
-            onClick={() => setMenuOpen(!isMenuOpen)}
-            icon={isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
-            variant="ghost"
-            aria-label={isMenuOpen ? t('aria.closeMenu') : t('aria.openMenu')}
-            display={{ base: 'flex', lg: 'none' }}
-            borderRadius="full"
-            border="1px solid"
-            borderColor="gray.200"
-            bg="white"
-            boxShadow="sm"
-            _hover={{ bg: 'gray.50', borderColor: 'gray.300' }}
-            _active={{ bg: 'gray.100' }}
-          />
+          {/* Language Toggle (mobile, next to hamburger) */}
+          <HStack spacing={1} display={{ base: 'flex', lg: 'none' }}>
+            <Button
+              onClick={() => setLanguage(i18n.language === 'en' ? 'el' : 'en')}
+              variant="ghost"
+              aria-label={t('language.toggle', 'Toggle language')}
+              borderRadius="full"
+              border="1px solid"
+              borderColor="gray.200"
+              bg="white"
+              boxShadow="sm"
+              minW="auto"
+              px={2}
+              _hover={{ bg: 'gray.50', borderColor: 'gray.300' }}
+              _active={{ bg: 'gray.100' }}
+            >
+              <Box as="span" display="inline-flex" w="20px" h="14px" borderRadius="sm" overflow="hidden" boxShadow="inset 0 0 0 1px rgba(0,0,0,0.12)" aria-hidden="true">
+                {renderFlagIcon(i18n.language === 'en' ? 'el' : 'en')}
+              </Box>
+            </Button>
+
+            {/* Mobile Menu Toggle */}
+            <IconButton
+              onClick={() => setMenuOpen(!isMenuOpen)}
+              icon={isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
+              variant="ghost"
+              aria-label={isMenuOpen ? t('aria.closeMenu') : t('aria.openMenu')}
+              borderRadius="full"
+              border="1px solid"
+              borderColor="gray.200"
+              bg="white"
+              boxShadow="sm"
+              _hover={{ bg: 'gray.50', borderColor: 'gray.300' }}
+              _active={{ bg: 'gray.100' }}
+            />
+          </HStack>
         </Flex>
 
         {/* Mobile Menu */}
