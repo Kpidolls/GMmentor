@@ -28,7 +28,6 @@ module.exports = {
     ],
     additionalSitemaps: [
       'https://googlementor.com/sitemap.xml',
-      'https://googlementor.com/sitemap-recent.xml',
     ],
   },
   transform: async (config, path) => {

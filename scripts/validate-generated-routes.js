@@ -14,6 +14,7 @@ const SITEMAP_FILES = [
   path.join(ROOT, 'out', 'sitemap-recent.xml'),
 ];
 const PLACEHOLDER_PATTERN = /\[(?:id|slug|category|area)\]/i;
+const ADVERTISED_SITEMAP_PATTERN = /^Sitemap:\s*(\S+)$/gim;
 
 function routeOutputCandidates(pathname) {
   const decodedPathname = decodeURIComponent(pathname);
@@ -38,8 +39,34 @@ function readSitemapUrls(filePath) {
   return Array.from(content.matchAll(/<loc>(.*?)<\/loc>/g), (match) => match[1].trim());
 }
 
-function main() {
+function validateAdvertisedSitemaps() {
+  const robotsPath = path.join(OUT_DIR, 'robots.txt');
+  if (!fs.existsSync(robotsPath)) {
+    return [`Missing deploy output: ${path.relative(ROOT, robotsPath)}`];
+  }
+
   const issues = [];
+  const robots = fs.readFileSync(robotsPath, 'utf8');
+  for (const match of robots.matchAll(ADVERTISED_SITEMAP_PATTERN)) {
+    let parsed;
+    try {
+      parsed = new URL(match[1]);
+    } catch {
+      issues.push(`Invalid advertised sitemap URL: ${match[1]}`);
+      continue;
+    }
+
+    const relativePath = decodeURIComponent(parsed.pathname).replace(/^\/+/, '');
+    if (!relativePath || !fs.existsSync(path.join(OUT_DIR, relativePath))) {
+      issues.push(`Advertised sitemap has no static output: ${match[1]}`);
+    }
+  }
+
+  return issues;
+}
+
+function main() {
+  const issues = validateAdvertisedSitemaps();
   const urls = new Set();
 
   for (const sitemapFile of SITEMAP_FILES) {
