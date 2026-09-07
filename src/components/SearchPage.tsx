@@ -25,6 +25,7 @@ import featureFlags from '../config/featureFlags.json';
 import { dispatchAddToItinerary } from '../utils/itineraryEvents';
 import { sanitizeAddressForDisplay } from '../utils/addressUtils';
 import { detectCategoryMatches } from '../lib/intent/categoryMatcher';
+import { CategoryIcon } from './CategoryIcon';
 import type { EntityRecord } from '../lib/entities';
 
 import islandsData from '../data/islands.json';
@@ -437,7 +438,7 @@ const SearchPage = ({ focusOnMount = false, placeEntities }: SearchPageProps) =>
                   p={4}
                 >
                   <VStack align="start" spacing={2}>
-                    <Text fontSize="2xl" lineHeight="1">{category.icon}</Text>
+                    <CategoryIcon categoryId={category.id} className="text-teal-600" size={40} />
                     <Text fontWeight="bold" color="gray.800">
                       {t(`categories.${category.id}`, category.name)}
                     </Text>

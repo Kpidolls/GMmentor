@@ -1468,9 +1468,9 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
               <VStack align="start" spacing={1}>
                 <Text
                   fontSize="xs"
-                  textTransform="uppercase"
-                  letterSpacing="0.08em"
-                  color="gray.500"
+                  textTransform="none"
+                  letterSpacing="normal"
+                  color="teal.600"
                   fontWeight="semibold"
                 >
                   {t('place.utility.eyebrow', 'Tools')}

@@ -3,7 +3,6 @@
 import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import NextLink from 'next/link';
-import { GlobeAltIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import config from '../config/index.json';
 import featureFlags from '../config/featureFlags.json';
 import dynamic from 'next/dynamic';
@@ -18,6 +17,7 @@ import { detectCategoryMatches } from '../lib/intent/categoryMatcher';
 
 import { usePWA } from '../hooks/usePWA';
 import { dispatchAddToItinerary } from '../utils/itineraryEvents';
+import { CategoryIcon } from './CategoryIcon';
 
 // Region matching utilities no longer needed - using coordinate-based distance
 
@@ -1230,7 +1230,7 @@ const MainHero = () => {
   }, [deferredMunicipalitySearchQuery, municipalities, municipalitySearchEntries, searchMatches]);
 
   const heroContentSpacing = showLocationOptions
-    ? 'pt-12 sm:pt-16 lg:pt-16 pb-2 sm:pb-4 lg:pb-5'
+    ? 'pt-8 sm:pt-10 lg:pt-12 pb-6 sm:pb-8'
     : 'py-6 sm:py-8 lg:py-9';
 
   return (
@@ -1278,26 +1278,6 @@ const MainHero = () => {
 
         {/* Professional Background with restrained layering */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-cyan-50/70 to-slate-100">
-          
-          <picture className="absolute inset-0 block w-full h-full">
-            <source
-              srcSet="/assets/images/cover-480.webp 480w, /assets/images/cover-627.webp 627w"
-              sizes="100vw"
-              type="image/webp"
-            />
-            <img
-              src="/assets/images/cover-627.webp"
-              alt={t('mainHero.coverAlt', 'Panoramic view of Athens skyline with the Acropolis in the background — travel and dining guide hero image')}
-              className="w-full h-full object-cover"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-              sizes="100vw"
-              srcSet="/assets/images/cover-480.webp 480w, /assets/images/cover-627.webp 627w"
-              style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.24 }}
-            />
-          </picture>
-          
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-slate-100/70 via-white/58 to-cyan-100/25" />
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/5 via-cyan-100/10 to-slate-200/40" />
         </div>
@@ -1321,18 +1301,95 @@ const MainHero = () => {
         )}
         
         {/* Professional Hero Content */}
-        <section role="main" aria-label={t('aria.homepage', 'Homepage')} className={`relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 max-w-7xl w-full mx-auto hero-tight flex flex-col justify-center ${heroContentSpacing}`}>
+        <section role="main" aria-label={t('aria.homepage', 'Homepage')} className={`relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 w-full mx-auto hero-tight ${heroContentSpacing} ${showLocationOptions ? 'max-w-6xl' : 'max-w-7xl flex flex-col justify-center'}`}>
           {/* Lightweight content backdrop */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-slate-100/25 to-slate-200/30" />
           </div>
-          <div className={`text-center w-full ${showLocationOptions ? 'space-y-4 xs:space-y-5 sm:space-y-6 lg:space-y-7' : 'space-y-5 xs:space-y-7 sm:space-y-9 lg:space-y-10'}`}>
+          
+          {showLocationOptions ? (
+            // New Grid Layout for Hero
+            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-center">
+              {/* Left Column - Text Content */}
+              <div className="space-y-6 sm:space-y-8">
+                {/* Header with New Fonts */}
+                <header className="space-y-3 sm:space-y-4">
+                  <p className="text-teal-600 font-semibold text-sm sm:text-base flex items-center gap-3">
+                    <span className="w-6 h-px bg-teal-600 inline-block" />
+                    {t('mainHero.subtitle')}
+                  </p>
+                  
+                  <h1 style={{ fontFamily: "var(--font-fraunces), 'Fraunces', serif" }} className="text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight text-slate-900">
+                    {t('mainHero.title')}
+                  </h1>
+                  
+                  <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl pt-2">
+                    {t('mainHero.tagline', 'Real tavernas, beaches, and neighborhoods worth knowing - selected by people who know Greece, then organized for your trip.')}
+                  </p>
+                </header>
+
+                {/* Unified Location Picker */}
+                <div className="border border-slate-300 rounded-lg bg-white overflow-hidden">
+                  <p className="text-xs font-semibold text-slate-700 px-4 sm:px-5 pt-4 pb-2">{t('mainHero.explorePrompt', 'How would you like to explore?')}</p>
+                  <div className="grid grid-cols-2 gap-0">
+                    {/* Near You */}
+                    <button
+                      onClick={() => handleLocationOptionSelect('location')}
+                      className={`group p-4 sm:p-5 text-left border-r border-b border-slate-200 transition-all hover:bg-sky-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--gm-sea-500)] ${activeLocationOption === 'location' ? 'bg-sky-50' : ''}`}
+                    >
+                      <div className="text-lg sm:text-2xl mb-2">📍</div>
+                      <h3 style={{ fontFamily: "var(--font-fraunces), 'Fraunces', serif" }} className="font-medium text-slate-900 text-sm sm:text-base mb-1">{t('mainHero.useMyLocation', 'Use my location')}</h3>
+                      <p className="text-xs text-slate-600">{t('mainHero.nearbyDescription', 'Find nearby places right now')}</p>
+                      <span className="inline-flex mt-3 px-3 py-1.5 text-xs font-semibold text-white bg-[var(--gm-aegean)] rounded-sm transition-colors group-hover:bg-[var(--gm-teal)]">{t('mainHero.fastestBadge', 'Quick')} →</span>
+                    </button>
+
+                    {/* By Area */}
+                    <button
+                      onClick={() => handleLocationOptionSelect('municipality')}
+                      className={`group p-4 sm:p-5 text-left border-b border-slate-200 transition-all hover:bg-sky-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--gm-sea-500)] ${activeLocationOption === 'municipality' ? 'bg-sky-50' : ''}`}
+                    >
+                      <div className="text-lg sm:text-2xl mb-2">🗺️</div>
+                      <h3 style={{ fontFamily: "var(--font-fraunces), 'Fraunces', serif" }} className="font-medium text-slate-900 text-sm sm:text-base mb-1">{t('mainHero.browseAreas', 'Browse areas')}</h3>
+                      <p className="text-xs text-slate-600">{t('mainHero.areaDescription', 'Pick a neighborhood')}</p>
+                      <span className="inline-flex mt-3 px-3 py-1.5 text-xs font-semibold text-white bg-[var(--gm-aegean)] rounded-sm transition-colors group-hover:bg-[var(--gm-teal)]">{t('mainHero.mostAccurateBadge', 'Precise')} →</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column - Photo Collage */}
+              <div className="relative h-[430px] lg:h-[470px] hidden lg:block overflow-visible">
+                {/* Gold Frame */}
+                <div className="absolute top-0 left-6 right-10 bottom-8 border" style={{ borderColor: 'var(--gm-gold)' }} />
+                
+                {/* Main Image */}
+                <img 
+                  src="/assets/images/santorini.webp" 
+                  alt="Santorini caldera" 
+                  className="absolute top-5 left-0 w-[72%] h-[80%] object-cover shadow-lg"
+                />
+                
+                {/* Stat Card Overlay */}
+                <div className="absolute top-12 right-0 z-10 bg-[var(--gm-aegean-deep)] text-white rounded-sm p-5 shadow-xl" style={{ width: '230px' }}>
+                  <div className="text-2xl font-semibold mb-1" style={{ color: 'var(--gm-gold-soft)' }}>5000+</div>
+                  <p className="text-xs text-slate-200">{t('mainHero.curatedLocations', 'curated locations across Greece')}</p>
+                </div>
+
+                {/* Smaller Image */}
+                <img 
+                  src="/assets/images/athens.webp" 
+                  alt="Illuminated Acropolis in Athens" 
+                  className="absolute bottom-0 right-0 z-20 w-[52%] h-[39%] object-cover border-[6px] border-[var(--gm-whitewash)] shadow-lg"
+                />
+              </div>
+            </div>
+          ) : (
+            // Original centered layout when not showing location options
+            <div className={`text-center w-full space-y-5 xs:space-y-7 sm:space-y-9 lg:space-y-10`}>
             {/* Enhanced Title with Modern Typography */}
-            <header className={`relative ${showLocationOptions ? 'space-y-2 xs:space-y-3 sm:space-y-4' : 'space-y-3 xs:space-y-4 sm:space-y-6'}`}>
+            <header className="relative space-y-3 xs:space-y-4 sm:space-y-6">
               {/* Decorative elements */}
-              {!showLocationOptions && (
-                <div className="absolute -top-8 inset-x-0 mx-auto w-24 h-1 rounded-full opacity-70 bg-gradient-to-r from-transparent via-slate-400 to-transparent" />
-              )}
+              <div className="absolute -top-8 inset-x-0 mx-auto w-24 h-1 rounded-full opacity-70 bg-gradient-to-r from-transparent via-slate-400 to-transparent" />
               
               <div 
                 onClick={fullReset}
@@ -1343,24 +1400,22 @@ const MainHero = () => {
                 title={t('mainHero.clickToReturnToMain', 'Click to return to main page')}
               >
                 <div className="relative">
-                  <span className={`block font-semibold tracking-[0.12em] uppercase transition-colors duration-300 relative ${showLocationOptions ? 'text-[11px] xs:text-xs sm:text-sm mb-1 xs:mb-2 sm:mb-2.5' : 'text-sm xs:text-base sm:text-lg lg:text-xl mb-2 xs:mb-3 sm:mb-4'} text-slate-700`}>
+                  <span className="block font-semibold tracking-normal normal-case transition-colors duration-300 relative text-sm xs:text-base sm:text-lg lg:text-xl mb-2 xs:mb-3 sm:mb-4 text-teal-700">
                     <span className="relative z-10">{t('mainHero.subtitle')}</span>
                   </span>
                   
-                  <h1 className={`block font-extrabold leading-tight px-1 transition-colors duration-300 gm-heading-gradient ${showLocationOptions ? 'text-3xl sm:text-4xl md:text-[2.85rem]' : 'text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem]'}`}>
+                  <h1 className="block font-extrabold leading-tight px-1 transition-colors duration-300 gm-heading-gradient text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem]">
                     {t('mainHero.title')}
                   </h1>
                 </div>
               </div>
               
               {/* Decorative dots */}
-              {!showLocationOptions && (
               <div className="flex justify-center space-x-2 mt-6">
                 <div className="w-2 h-2 rounded-full animate-pulse bg-slate-400" />
                 <div className="w-2 h-2 rounded-full animate-pulse animation-delay-300 bg-zinc-400" />
                 <div className="w-2 h-2 rounded-full animate-pulse animation-delay-600 bg-stone-400" />
               </div>
-              )}
             </header>
 
             {/* Professional Discovery Interface */}
@@ -1391,8 +1446,8 @@ const MainHero = () => {
                             value={categoryIntentQuery}
                             onChange={(event) => setCategoryIntentQuery(event.target.value)}
                             className="block w-full pl-9 pr-10 py-2.5 border rounded-lg text-sm placeholder-slate-500 focus:outline-none transition-colors duration-200 border-slate-300 bg-white text-slate-800 focus:ring-2 focus:ring-slate-400 focus:border-slate-500"
-                            placeholder={t('categorySelection.intentPlaceholder', 'Try: italian restaurants near glyfada')}
-                            aria-label={t('categorySelection.intentPlaceholder', 'Try: italian restaurants near glyfada')}
+                            placeholder={t('categorySelection.intentPlaceholder', 'π.χ. ιταλικά εστιατόρια κοντά στη Γλυφάδα')}
+                            aria-label={t('categorySelection.intentPlaceholder', 'π.χ. ιταλικά εστιατόρια κοντά στη Γλυφάδα')}
                           />
                           {categoryIntentQuery && (
                             <button
@@ -1427,7 +1482,7 @@ const MainHero = () => {
                                     className="text-left rounded-xl border border-cyan-300 bg-cyan-50/80 p-3 sm:p-4 transition-all duration-200 hover:shadow-[var(--gm-shadow-2)] hover:bg-cyan-50 focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)]"
                                   >
                                     <div className="flex items-start gap-3">
-                                      <span className="text-2xl leading-none">{category.icon}</span>
+                                      <CategoryIcon categoryId={category.id} className="shrink-0 text-teal-700" size={36} />
                                       <div className="min-w-0">
                                         <p className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
                                           {t(`categories.${category.id}`, category.name)}
@@ -1466,8 +1521,8 @@ const MainHero = () => {
                           className={`group relative overflow-hidden bg-white/88 backdrop-blur-sm border border-slate-200 rounded-lg xs:rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-7 transition-all duration-300 hover:scale-[1.01] hover:shadow-[var(--gm-shadow-2)] focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)]${selectedDisplayCategory?.id === category.id && selectedType === 'category' ? ' border-cyan-400 bg-cyan-50' : ''}${suggestedCategoryIds.has(category.id) ? ' ring-1 ring-cyan-300' : ''}`}
                         >
                           <div className="relative text-center space-y-2 xs:space-y-3 sm:space-y-4">
-                            <div className="text-3xl xs:text-4xl sm:text-5xl group-hover:scale-110 transition-transform duration-300">
-                              {category.icon}
+                            <div className="flex justify-center text-teal-700 group-hover:scale-110 transition-transform duration-300">
+                              <CategoryIcon categoryId={category.id} />
                             </div>
                             <h3 className="text-slate-800 font-bold text-sm sm:text-base lg:text-lg leading-tight">
                               {t(`categories.${category.id}`, category.name)}
@@ -1644,132 +1699,8 @@ const MainHero = () => {
                   </button>
                 </div>
               </div>
-            ) : showLocationOptions ? (
-              /* Location Options Selection */
-              <div className="relative">
-                <div className={`relative gm-panel gm-panel-strong rounded-2xl sm:rounded-3xl bg-white/92 ${showLocationOptions ? 'p-4 sm:p-5 lg:p-6' : 'p-6 xs:p-8 sm:p-10 lg:p-14'}`}>
-                  {/* Header Section */}
-                  <div className={`text-center relative ${showLocationOptions ? 'mb-2 xs:mb-3 lg:mb-3.5' : 'mb-8 xs:mb-10 lg:mb-14'}`}>
-                    <div className="w-16 h-px mx-auto mb-3 opacity-60 bg-slate-300" />
-                    <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-[1.9rem] font-bold text-slate-900 mb-2 xs:mb-3 relative">
-                      <span className="relative z-10">
-                        {t('locationOptions.pickSearchMethod', 'Pick a Search Method')}
-                      </span>
-                    </h2>
-                    <p className="text-slate-700 text-sm xs:text-base sm:text-[1.02rem] max-w-2xl mx-auto px-4 leading-relaxed font-normal">
-                      {t('locationOptions.selectLocationFirst', 'Start by choosing how to search, then select a category.')}
-                    </p>
-                  </div>
-
-                  {/* Options Grid */}
-                  <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto ${showLocationOptions ? 'gap-4 sm:gap-5 lg:gap-6 mb-4 sm:mb-5' : 'gap-5 xs:gap-6 sm:gap-8 lg:gap-10 mb-6 xs:mb-8'}`}>
-                    {/* Near You Option - Enhanced */}
-                    <button
-                      onClick={() => {
-                        handleLocationOptionSelect('location');
-                      }}
-                      className={`group relative overflow-hidden rounded-[var(--gm-radius-md)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.99] ring-1 focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)] shadow-[var(--gm-shadow-1)] hover:shadow-[var(--gm-shadow-2)] min-h-[238px] sm:min-h-[250px] cursor-pointer touch-manipulation ${activeLocationOption === 'location' ? 'ring-[var(--gm-sea-500)] bg-slate-50/85 scale-[1.02]' : 'ring-slate-300/80 hover:ring-[var(--gm-sea-500)]'}`}
-                    >
-                      <div className="absolute inset-0 transition-all duration-300 bg-gradient-to-b from-white to-slate-50 group-hover:from-sky-50/70 group-hover:to-slate-100/90" />
-
-                      <div className="absolute top-4 right-4 z-20">
-                        <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full border transition-all duration-300 ${activeLocationOption === 'location' ? 'bg-cyan-500 border-cyan-500 shadow-[0_0_0_4px_rgba(6,182,212,0.18)]' : 'bg-cyan-200/70 border-cyan-300'}`}>
-                          <span className={`h-2 w-2 rounded-full bg-white transition-opacity duration-300 ${activeLocationOption === 'location' ? 'opacity-100' : 'opacity-70'}`} />
-                        </span>
-                      </div>
-
-                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 sm:p-5 lg:p-5.5' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
-                        <div className="flex justify-center mb-3.5">
-                          <div className="relative">
-                            <div className="relative rounded-full p-3 xs:p-4 sm:p-5 border border-slate-200 bg-white shadow-[var(--gm-shadow-1)]">
-                              <MapPinIcon className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 text-[var(--gm-sea-500)] transition-transform duration-300" aria-hidden="true" />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="flex justify-center mb-2.5">
-                          <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-sky-50/80 text-slate-700 border-slate-200 shadow-none">
-                            {t('mainHero.fastestBadge', 'Quick')}
-                          </span>
-                        </div>
-
-                        <h3 className="text-[clamp(1rem,3vw,1.75rem)] font-bold leading-tight mb-2 xs:mb-3 tracking-[-0.02em]">
-                          {t('locationOptions.nearYou', 'Near You')}
-                        </h3>
-
-                        <p className="text-slate-600 text-[clamp(0.875rem,1.45vw,1.125rem)] font-normal leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 mb-3.5 xs:mb-4.5">
-                          {t('locationOptions.nearYouDesc', 'Use your current location to find nearby places')}
-                        </p>
-
-                        <div className="flex justify-center">
-                          <div className="flex items-center min-h-[42px] text-[clamp(0.8125rem,1.2vw,0.95rem)] font-semibold transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-sky-50/70 border border-slate-200 text-slate-700 group-hover:bg-sky-100/70">
-                            <span>{t('mainHero.useMyLocation', 'Use my location')}</span>
-                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </button>
-
-                    {/* By Region Option - Enhanced */}
-                    <button
-                      onClick={() => {
-                        handleLocationOptionSelect('municipality');
-                      }}
-                      className={`group relative overflow-hidden rounded-[var(--gm-radius-md)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.99] ring-1 focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)] shadow-[var(--gm-shadow-1)] hover:shadow-[var(--gm-shadow-2)] min-h-[238px] sm:min-h-[250px] cursor-pointer touch-manipulation ${activeLocationOption === 'municipality' ? 'ring-[var(--gm-sea-500)] bg-slate-50/85 scale-[1.02]' : 'ring-slate-300/80 hover:ring-[var(--gm-sea-500)]'}`}
-                    >
-                      <div className="absolute inset-0 transition-all duration-300 bg-gradient-to-b from-white to-slate-50 group-hover:from-sky-50/70 group-hover:to-slate-100/90" />
-
-                      <div className="absolute top-4 right-4 z-20">
-                        <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full border transition-all duration-300 ${activeLocationOption === 'municipality' ? 'bg-cyan-500 border-cyan-500 shadow-[0_0_0_4px_rgba(6,182,212,0.18)]' : 'bg-cyan-200/70 border-cyan-300'}`}>
-                          <span className={`h-2 w-2 rounded-full bg-white transition-opacity duration-300 ${activeLocationOption === 'municipality' ? 'opacity-100' : 'opacity-70'}`} />
-                        </span>
-                      </div>
-
-                      <div className={`relative text-slate-900 ${showLocationOptions ? 'p-4 sm:p-5 lg:p-5.5' : 'p-6 xs:p-8 sm:p-10 lg:p-12'}`}>
-                        <div className="flex justify-center mb-3.5">
-                          <div className="relative">
-                            <div className="relative rounded-full p-3 xs:p-4 sm:p-5 border border-slate-200 bg-white shadow-[var(--gm-shadow-1)]">
-                              <GlobeAltIcon className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 text-[var(--gm-sea-500)] transition-transform duration-300" aria-hidden="true" />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="flex justify-center mb-2.5">
-                          <span className="px-3.5 py-1 backdrop-blur-sm rounded-full text-[11px] font-medium tracking-[0.16em] uppercase border bg-sky-50/80 text-slate-700 border-slate-200 shadow-none">
-                            {t('mainHero.mostAccurateBadge', 'Most Accurate')}
-                          </span>
-                        </div>
-
-                        <h3 className="text-[clamp(1rem,3vw,1.75rem)] font-bold leading-tight mb-2 xs:mb-3 tracking-[-0.02em]">
-                          {t('locationOptions.byNeighborhood', 'Neighborhood')}
-                        </h3>
-
-                        <p className="text-slate-600 text-[clamp(0.875rem,1.45vw,1.125rem)] font-normal leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 mb-3.5 xs:mb-4.5">
-                          {t('locationOptions.byNeighborhoodDesc', 'Choose a specific neighborhood or municipality')}
-                        </p>
-
-                        <div className="flex justify-center">
-                          <div className="flex items-center min-h-[42px] text-[clamp(0.8125rem,1.2vw,0.95rem)] font-semibold transition-all duration-300 gap-2.5 px-3 py-2 rounded-full bg-sky-50/70 border border-slate-200 text-slate-700 group-hover:bg-sky-100/70">
-                            <span>{t('mainHero.browseAreas', 'Browse areas')}</span>
-                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </button>
-
-                  </div>
-
-                  <p className="text-slate-700 text-sm sm:text-base md:text-[1.02rem] max-w-2xl mx-auto text-center font-medium">
-                    {t('mainHero.tagline', 'Curated maps, local guides and vetted lists to help you explore Greece with confidence.')}
-                  </p>
-
-                </div>
-              </div>
             ) : null}
+            </div>
             {showRestaurantFinder && (
               /* Restaurant Finder Results */
               <div id="results-section" className="gm-panel gm-panel-strong bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 max-w-6xl mx-auto">
@@ -1897,12 +1828,12 @@ const MainHero = () => {
                         <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-2">
                         {selectedType === 'experience' && selectedExperienceType ? (
                           <>
-                            <span className="text-2xl mr-2">{selectedExperienceType.icon}</span>
+                            <CategoryIcon categoryId={selectedExperienceType.id} className="inline-block mr-2 align-[-0.35em] text-teal-700" size={28} />
                             {selectedExperienceType.name} {t('restaurantFinder.experiences', 'Experiences')}
                           </>
                         ) : selectedType === 'category' && selectedDisplayCategory ? (
                           <>
-                            <span className="text-2xl mr-2">{selectedDisplayCategory.icon}</span>
+                            <CategoryIcon categoryId={selectedDisplayCategory.id} className="inline-block mr-2 align-[-0.35em] text-teal-700" size={28} />
                             {getSafeCategoryHeading(selectedDisplayCategory)}
                           </>
                         ) : searchMode.type === 'municipality' && selectedDisplayCategory ? (
@@ -2330,9 +2261,10 @@ const MainHero = () => {
               </div>
             )}
           </div>
+          )}
 
-            {/* Enhanced Install App CTA with Modern Design */}
-            {(isInstallable || process.env.NODE_ENV === 'development') && !isInstalled && (
+            {/* Install CTA is intentionally deferred until after a user advances beyond the landing picker. */}
+            {!showLocationOptions && (isInstallable || process.env.NODE_ENV === 'development') && !isInstalled && (
               <div className="flex justify-center max-w-sm xs:max-w-md sm:max-w-lg mx-auto mt-6 xs:mt-8 sm:mt-10 lg:mt-14 px-4 xs:px-5">
                 <div className="relative group w-full">
                   {/* Glow effect */}
@@ -2425,7 +2357,7 @@ const MainHero = () => {
                 <span className="text-xs uppercase tracking-wide">{t('mainHero.scrollHint', 'Scroll')}</span>
               </div>
             </div> */}
-          </div>
+
         </section>
       </main>
     </>

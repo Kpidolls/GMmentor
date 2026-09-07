@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import usePersistedLanguage from '../hooks/usePersistedLanguage';
 import Layout from '../components/Layout';
-import { Roboto } from 'next/font/google';
+import { Roboto, Fraunces, Work_Sans } from 'next/font/google';
 import Header from '../components/Header';
 import Analytics from '../components/Analytics';
 import AddToItineraryNotifier from '../components/itinerary/AddToItineraryNotifier';
@@ -19,6 +19,21 @@ const roboto = Roboto({
   weight: ['400', '600', '700'],
   display: 'optional',
 });
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  display: 'swap',
+  variable: '--font-fraunces',
+});
+
+const workSans = Work_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-work-sans',
+});
+
 
 const customTheme = extendTheme({
   styles: {
@@ -94,7 +109,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       {shouldEnableAnalytics && <Analytics />}
       <AddToItineraryNotifier />
       <Header />
-      <main className={`${roboto.className} gm-page-shell`}>
+      <main className={`${roboto.className} ${fraunces.variable} ${workSans.variable} gm-page-shell`}>
         <Layout>
           <Component {...pageProps} />
           <BackToTop />

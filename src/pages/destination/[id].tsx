@@ -111,7 +111,7 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
       <main className="min-h-screen bg-slate-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
           <div className="p-6 sm:p-8 lg:p-10 pb-2">
-            <p className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-slate-500 mb-3">
+            <p className="text-[11px] sm:text-xs normal-case tracking-normal font-semibold text-teal-700 mb-3">
               {t('destination.pageLabel', 'Destination Guide')}
             </p>
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">📍 {destinationHeadingName || destinationName}</h1>
@@ -122,7 +122,7 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
             <img src={destination.img} alt={destinationName} className="w-full h-56 sm:h-80 lg:h-96 object-cover" loading="eager" />
             <div className="px-2 py-2 sm:px-6 sm:py-4">
               <div className="max-w-4xl mx-auto rounded-xl overflow-hidden border border-slate-200 bg-white shadow-sm">
-                <p className="text-[10px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.18em] text-slate-500 px-3 py-2 border-b border-slate-200">
+                <p className="text-[10px] sm:text-xs normal-case tracking-normal font-semibold text-teal-700 px-3 py-2 border-b border-slate-200">
                   {t('destination.mapPreview', 'Map preview')}
                 </p>
                 <a

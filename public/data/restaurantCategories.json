@@ -3,7 +3,7 @@
     "id": "attractions",
     "name": "Must-See Attractions",
     "description": "Explore iconic landmarks and cultural sites",
-    "icon": "🏛️",
+    "icon": "landmark",
     "color": "from-blue-500 to-indigo-600",
     "keywords": [
       "attractions",
@@ -25,7 +25,7 @@
     "id": "greek-restaurants",
     "name": "Greek Restaurants",
     "description": "Authentic traditional Greek cuisine",
-    "icon": "🍽️",
+    "icon": "utensils",
     "color": "from-blue-500 to-indigo-600",
     "keywords": [
       "greek",
@@ -47,7 +47,7 @@
     "id": "desserts",
     "name": "Dessert Shops",
     "description": "Sweet treats and traditional Greek desserts",
-    "icon": "🍰",
+    "icon": "cake",
     "color": "from-pink-500 to-rose-600",
     "keywords": [
       "dessert",
@@ -69,7 +69,7 @@
     "id": "family-friendly",
     "name": "Kid Friendly Locations",
     "description": "Places welcoming families with kids",
-    "icon": "👨‍👩‍👧‍👦",
+    "icon": "users",
     "color": "from-emerald-400 to-teal-500",
     "keywords": [
       "family",
@@ -93,7 +93,7 @@
     "id": "coffee-brunch",
     "name": "Coffee & Brunch Spots",
     "description": "Specialty coffee and all-day brunch spots",
-    "icon": "☕",
+    "icon": "coffee",
     "color": "from-amber-500 to-orange-600",
     "keywords": [
       "coffee",
@@ -114,7 +114,7 @@
     "id": "fish-tavernas",
     "name": "Fish Tavernas",
     "description": "Fresh seafood and traditional tavernas",
-    "icon": "🐟",
+    "icon": "fish",
     "color": "from-blue-600 to-indigo-700",
     "keywords": [
       "fish",
@@ -133,7 +133,7 @@
     "id": "monasteries-churches",
     "name": "Monasteries & Spiritual Sites",
     "description": "Visit sacred places and spiritual retreats",
-    "icon": "⛪",
+    "icon": "church",
     "color": "from-emerald-500 to-teal-600",
     "keywords": [
       "monastery",
@@ -154,7 +154,7 @@
     "id": "italian",
     "name": "Italian Restaurants",
     "description": "Authentic Italian flavors and pasta",
-    "icon": "🍝",
+    "icon": "utensils",
     "color": "from-green-500 to-emerald-600",
     "keywords": [
       "italian",
@@ -173,7 +173,7 @@
     "id": "cheap-eats",
     "name": "Gyros & Cheap Eats",
     "description": "Budget-friendly delicious meals",
-    "icon": "💰",
+    "icon": "dollar",
     "color": "from-blue-500 to-cyan-600",
     "keywords": [
       "cheap",
@@ -194,7 +194,7 @@
     "id": "asian",
     "name": "Asian Restaurants",
     "description": "Diverse Asian flavors and dishes",
-    "icon": "🥢",
+    "icon": "globe",
     "color": "from-red-500 to-pink-600",
     "keywords": [
       "asian",
@@ -215,7 +215,7 @@
     "id": "burgers",
     "name": "Burger Spots",
     "description": "Gourmet burgers and casual dining",
-    "icon": "🍔",
+    "icon": "utensils",
     "color": "from-yellow-500 to-orange-600",
     "keywords": [
       "burger",
@@ -233,7 +233,7 @@
     "id": "vegetarian",
     "name": "Vegetarian Friendly Restaurants",
     "description": "Plant-based and vegetarian options",
-    "icon": "🌱",
+    "icon": "salad",
     "color": "from-green-400 to-emerald-500",
     "keywords": [
       "vegetarian",
@@ -253,7 +253,7 @@
     "id": "mexican",
     "name": "Mexican Restaurants",
     "description": "Authentic Mexican flavors and spices",
-    "icon": "🌮",
+    "icon": "utensils",
     "color": "from-lime-500 to-green-600",
     "keywords": [
       "mexican",
@@ -272,7 +272,7 @@
     "id": "luxury-dining",
     "name": "Luxury Dining",
     "description": "Fine dining and upscale experiences",
-    "icon": "🥂",
+    "icon": "martini",
     "color": "from-purple-600 to-indigo-700",
     "keywords": [
       "luxury",
@@ -290,7 +290,7 @@
     "id": "rooftop-lounges",
     "name": "Rooftop Lounges",
     "description": "Sky-high dining with stunning views",
-    "icon": "🌆",
+    "icon": "globe",
     "color": "from-indigo-500 to-purple-600",
     "keywords": [
       "rooftop",
@@ -311,7 +311,7 @@
     "id": "wineries-vineyards",
     "name": "Wineries & Vineyards",
     "description": "Taste exceptional Greek wines and visit vineyards",
-    "icon": "🍷",
+    "icon": "wine",
     "color": "from-purple-500 to-pink-600",
     "keywords": [
       "wine",

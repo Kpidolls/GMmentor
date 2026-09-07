@@ -291,7 +291,7 @@ const App = ({ allPosts, topAreaLinks, topListLinks, topGuideLinks }: HomePagePr
       <section className="gm-section bg-slate-50/55 border-y border-slate-200/70">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-7">
           <div className="gm-panel p-4 sm:p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-slate-500 mb-2">
+            <p className="text-xs font-semibold normal-case tracking-normal text-teal-700 mb-2">
               {t('navigation.blog', 'Blog')}
             </p>
             <BlogHighlight allPosts={allPosts} />

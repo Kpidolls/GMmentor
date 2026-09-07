@@ -21,6 +21,7 @@ import {
   useDisclosure,
   Text,
   Icon,
+  Tooltip,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, SearchIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import { useRouter } from 'next/router';
@@ -470,6 +471,7 @@ const Header = () => {
     <Box as="header" bg={bg} shadow="xs" position="sticky" top="0" zIndex="50" w="full" borderBottom="1px solid" borderColor="gray.200">
       {/* Top Bar */}
       <Flex
+        display="none"
         bg="var(--gm-sea-700)"
         color="white"
         px={{ base: 3, md: 8 }}
@@ -683,34 +685,62 @@ const Header = () => {
       </Flex>
 
       {/* Main Header */}
-      <Box px={{ base: 3, md: 8 }} py={{ base: 3, md: 3.5 }}>
+      <Box px={{ base: 3, md: 8 }} py={{ base: 2.5, md: 3 }}>
         <Flex align="center" justify="space-between" wrap="nowrap" gap={3}>
-          {/* Logo and Company */}
-          <HStack spacing={3} onClick={() => window.location.href = '/'} cursor="pointer">
-            <Image
-              src={logo}
-              alt={t('company.logoAlt', { name: t('company.name') })}
-              width={40}
-              height={40}
-              priority 
-              unoptimized={false} 
-            />
-            <Text
-              fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}
-              fontWeight="bold"
-              color={textColor}
-              textShadow="0 2px 8px rgba(0,0,0,0.12)"
-              letterSpacing="tight"
-              noOfLines={1}
-              maxW={{ base: '200px', sm: '260px', md: 'none' }}
-              className="leading-tight tracking-tight"
-            >
-              {t('company.name')}
-            </Text>
+          {/* Brand and utility controls */}
+          <HStack spacing={{ base: 2, md: 3 }} flexShrink={0}>
+            <HStack spacing={3} onClick={() => window.location.href = '/'} cursor="pointer">
+              <Image
+                src={logo}
+                alt={t('company.logoAlt', { name: t('company.name') })}
+                width={40}
+                height={40}
+                priority
+                unoptimized={false}
+              />
+              <Text
+                fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}
+                fontWeight="bold"
+                color={textColor}
+                textShadow="0 2px 8px rgba(0,0,0,0.12)"
+                letterSpacing="tight"
+                noOfLines={1}
+                maxW={{ base: '150px', sm: '260px', md: 'none' }}
+                className="leading-tight tracking-tight"
+              >
+                {t('company.name')}
+              </Text>
+            </HStack>
+            {((isInstallable && !isInstalled && !isStandalone) ||
+              (isMobile && isIOS && !isInstalled && !isStandalone) ||
+              process.env.NODE_ENV === 'development') && isOnline && (
+              <Tooltip label={t('pwa.getApp', 'Get App')} hasArrow>
+                <IconButton
+                  aria-label={t('pwa.getApp', 'Get App')}
+                  icon={
+                    <Icon viewBox="0 0 20 20" boxSize={4}>
+                      <path fill="currentColor" fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </Icon>
+                  }
+                  size="sm"
+                  onClick={async () => {
+                    if (isIOS && isMobile) {
+                      alert(`📱 ${t('ios.installInstructions')}`);
+                      return;
+                    }
+                    await installApp();
+                  }}
+                  color="white"
+                  bg="var(--gm-aegean)"
+                  borderRadius="md"
+                  _hover={{ bg: 'var(--gm-teal)' }}
+                />
+              </Tooltip>
+            )}
           </HStack>
 
           {/* Desktop Nav */}
-          <HStack spacing={{ lg: 2, xl: 4 }} display={{ base: 'none', lg: 'flex' }} flexWrap="nowrap" overflowX="auto">
+          <HStack spacing={{ lg: 2, xl: 4 }} display={{ base: 'none', lg: 'flex' }} flexWrap="nowrap" overflowX="auto" marginLeft="auto">
             {visibleNavigation.map((item) =>
               !item.submenu ? (
                 <Button
@@ -799,6 +829,52 @@ const Header = () => {
               )
             )}
           </HStack>
+
+          <HStack spacing={0.5} display={{ base: 'none', md: 'flex' }} flexShrink={0} p={0.5} border="1px solid" borderColor="gray.200" borderRadius="md">
+            <Button
+              size="xs"
+              onClick={() => setLanguage('en')}
+              bg={i18n.language === 'en' ? 'var(--gm-aegean)' : 'transparent'}
+              borderRadius="sm"
+              minW="32px"
+              px={1.5}
+              _hover={{ bg: i18n.language === 'en' ? 'var(--gm-sea-500)' : 'gray.50' }}
+              aria-label={t('language.english', 'English')}
+            >
+              <Box as="span" display="inline-flex" w="20px" h="14px" borderRadius="sm" overflow="hidden" boxShadow="inset 0 0 0 1px rgba(0,0,0,0.12)" aria-hidden="true">
+                <svg viewBox="0 0 60 30" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect width="60" height="30" fill="#012169" /><path d="M0 0 L25 12.5 M35 17.5 L60 30 M60 0 L35 12.5 M25 17.5 L0 30" stroke="#FFFFFF" strokeWidth="6" /><path d="M0 0 L25 12.5 M35 17.5 L60 30 M60 0 L35 12.5 M25 17.5 L0 30" stroke="#C8102E" strokeWidth="4" /><path d="M30 0 V30 M0 15 H60" stroke="#FFFFFF" strokeWidth="10" /><path d="M30 0 V30 M0 15 H60" stroke="#C8102E" strokeWidth="6" /></svg>
+              </Box>
+            </Button>
+            <Button
+              size="xs"
+              onClick={() => setLanguage('el')}
+              bg={i18n.language === 'el' ? 'var(--gm-aegean)' : 'transparent'}
+              borderRadius="sm"
+              minW="32px"
+              px={1.5}
+              _hover={{ bg: i18n.language === 'el' ? 'var(--gm-sea-500)' : 'gray.50' }}
+              aria-label={t('language.greek', 'Greek')}
+            >
+              <Box as="span" display="inline-flex" w="20px" h="14px" borderRadius="sm" overflow="hidden" boxShadow="inset 0 0 0 1px rgba(0,0,0,0.12)" aria-hidden="true">
+                <svg viewBox="0 0 27 18" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect width="27" height="18" fill="#0D5EAF" /><rect y="2" width="27" height="2" fill="#FFFFFF" /><rect y="6" width="27" height="2" fill="#FFFFFF" /><rect y="10" width="27" height="2" fill="#FFFFFF" /><rect y="14" width="27" height="2" fill="#FFFFFF" /><rect width="10" height="10" fill="#0D5EAF" /><rect x="4" width="2" height="10" fill="#FFFFFF" /><rect y="4" width="10" height="2" fill="#FFFFFF" /></svg>
+              </Box>
+            </Button>
+          </HStack>
+
+          <Button
+            onClick={onOpen}
+            variant="ghost"
+            aria-label={t('search.openSearch', 'Open search')}
+            display={{ base: 'none', lg: 'inline-flex' }}
+            border="1px solid"
+            borderColor="gray.200"
+            borderRadius="md"
+            minW="auto"
+            px={3}
+            _hover={{ bg: 'gray.50', borderColor: 'var(--gm-sea-500)' }}
+          >
+            <SearchIcon color="gray.600" boxSize="14px" />
+          </Button>
 
           {/* Mobile Menu Toggle */}
           <IconButton

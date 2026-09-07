@@ -509,9 +509,13 @@
     "text": "Get Started"
   },
   "mainHero": {
-    "title": "Greece",
-    "subtitle": "Places worth visiting",
-    "tagline": "Powered by Google Maps lists",
+    "title": "Greece, exactly as locals experience it",
+    "subtitle": "Curated by humans, not algorithms",
+    "tagline": "Authentic tavernas, beaches and neighborhoods worth your time — hand‑picked by people who know the country and arranged by destination so you can open them instantly on your phone.",
+    "curatedLocations": "curated locations across Greece",
+    "explorePrompt": "How would you like to explore?",
+    "nearbyDescription": "Find suggestions based on your current location",
+    "areaDescription": "Choose a neighborhood or city",
     "scrollHint": "Scroll",
     "coverAlt": "Greece travel scene",
     "viewProduct": "View Product",
@@ -543,7 +547,7 @@
     "fastestBadge": "Quick",
     "mostAccurateBadge": "Most Accurate",
     "useMyLocation": "Search",
-    "browseAreas": "Browse areas",
+    "browseAreas": "Explore areas",
     "curatedBadge": "Curated",
     "exploreDestinations": "Explore destinations"
   },
@@ -667,6 +671,7 @@
     "shareFailed": "Unable to share this destination right now."
   },
   "categorySelection": {
+    "intentPlaceholder": "π.χ. ιταλικά εστιατόρια κοντά στη Γλυφάδα",
     "chooseYourCuisine": "Choose Your Cuisine",
     "selectFromCurated": "Choose from our curated categories to find the perfect dining experience",
     "backToSearchOptions": "Back to Search Options",

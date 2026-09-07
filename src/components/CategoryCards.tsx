@@ -1,13 +1,13 @@
 'use client';
 
-import React, { ComponentType } from 'react';
-import { GiIsland, GiForkKnifeSpoon } from 'react-icons/gi';
-import { FaMapMarkedAlt, FaHiking, FaExternalLinkAlt } from 'react-icons/fa';
+import React from 'react';
+import type { IconType } from 'react-icons';
+import { LuExternalLink, LuMap, LuMountain, LuUtensils, LuWaves } from 'react-icons/lu';
 import { useTranslation } from 'react-i18next';
 
 interface CategoryItem {
   name: string;
-  icon: ComponentType<{ className?: string }>;
+  icon: IconType;
   tag: string;
   link: string;
   description: string;
@@ -16,28 +16,28 @@ interface CategoryItem {
 const categories: CategoryItem[] = [
   {
     name: 'categories.mustSee',
-    icon: FaMapMarkedAlt,
+    icon: LuMap,
     tag: 'must',
     link: 'https://maps.app.goo.gl/nh9QZAwzkh31DrqGA',
     description: 'categories.mustSeeDesc',
   },
   {
     name: 'categories.islands',
-    icon: GiIsland,
+    icon: LuWaves,
     tag: 'islands',
     link: '#destinations',
     description: 'categories.islandsDesc',
   },
   {
     name: 'categories.food',
-    icon: GiForkKnifeSpoon,
+    icon: LuUtensils,
     tag: 'food',
     link: '#vegan',
     description: 'categories.foodDesc',
   },
   {
     name: 'categories.hiking',
-    icon: FaHiking,
+    icon: LuMountain,
     tag: 'hiking',
     link: 'https://maps.app.goo.gl/oZ8ZGmrR7n2MCBtG8',
     description: 'categories.hikingDesc',
@@ -46,7 +46,7 @@ const categories: CategoryItem[] = [
 
 interface CategoryCardProps {
   name: string;
-  Icon: ComponentType<{ className?: string }>;
+  Icon: IconType;
   link: string;
   description: string;
 }
@@ -70,12 +70,12 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ name, Icon, link, descripti
         {/* Icon and External Link Indicator */}
         <div className="flex items-center justify-between mb-3">
           <div className="bg-gradient-to-br from-slate-100 to-slate-200 p-3 rounded-lg group-hover:scale-110 transition-transform duration-300">
-            <Icon className="w-6 h-6 text-slate-700 group-hover:text-slate-900 transition-colors duration-300" />
+            <Icon className="w-10 h-10 text-teal-700 group-hover:text-teal-800 transition-colors duration-300" size={40} strokeWidth={1.75} />
           </div>
           
           {isExternal && (
             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <FaExternalLinkAlt className="w-3 h-3 text-gray-400 group-hover:text-slate-700" />
+              <LuExternalLink className="w-4 h-4 text-gray-400 group-hover:text-slate-700" strokeWidth={1.75} />
             </div>
           )}
         </div>

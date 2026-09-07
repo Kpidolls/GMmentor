@@ -22,6 +22,13 @@
   --gm-shadow-2: 0 10px 24px rgba(15, 23, 42, 0.1);
   --gm-shadow-3: 0 14px 30px rgba(15, 23, 42, 0.14);
   --gm-focus-ring: 0 0 0 3px rgba(27, 127, 149, 0.28);
+  --gm-gold: #C89B3C;
+  --gm-gold-soft: #E8D5A3;
+  --gm-aegean: #123C5C;
+  --gm-aegean-deep: #0B2A40;
+  --gm-whitewash: #FAF8F3;
+  --gm-whitewash-2: #F1EDE2;
+  --gm-teal: #1F6F78;
 }
 
 html,
