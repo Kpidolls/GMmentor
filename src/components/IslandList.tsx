@@ -142,6 +142,7 @@ const IslandList = () => {
                   }
                   className="inline-flex items-center justify-center min-h-11 sm:min-h-12 px-3 py-2.5 text-[11px] sm:text-[13px] font-semibold tracking-tight rounded-lg border transition-colors duration-200 text-center leading-snug whitespace-normal bg-teal-50 border-teal-300 text-teal-800 hover:bg-teal-100"
                   aria-label={t('place.addToItinerary', 'Add to itinerary')}
+                  title={t('itinerary.addTooltip', 'Saves this place to your trip planner (see it under Itinerary in the menu)')}
                 >
                   <span className="sm:hidden">➕ {t('destinationSearch.addShort', 'Add')}</span>
                   <span className="hidden sm:inline">➕ {t('place.addToItinerary', 'Add to itinerary')}</span>

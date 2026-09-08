@@ -25,6 +25,7 @@ import type { IntentResultsPayload } from '../../lib/intent';
 import { formatDistance } from '../../utils/locationUtils';
 import { buildCategoryAreaMetaDescription } from '../../config/metaDescriptions';
 import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
+import { Breadcrumbs } from '../../components/Breadcrumbs';
 
 const SITE_URL = 'https://googlementor.com';
 
@@ -315,6 +316,17 @@ export default function CategoryAreaPage({ payload, hasAreaGuidePage, topGuides 
           />
         ) : null}
       </Head>
+
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Areas', href: '/areas' },
+          hasAreaGuidePage
+            ? { label: payload.area.name, href: `/area/${payload.area.urlSlug}` }
+            : { label: payload.area.name },
+          { label: payload.category.name },
+        ]}
+      />
 
       <Box mb={8}>
         <Box

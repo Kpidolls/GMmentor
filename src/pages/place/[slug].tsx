@@ -13,6 +13,7 @@ import {
   Link,
   SimpleGrid,
   Text,
+  Tooltip,
   VStack,
   useToast,
 } from '@chakra-ui/react';
@@ -32,6 +33,7 @@ import { calculateDistance } from '../../utils/locationUtils';
 import { sanitizeAddressForDisplay } from '../../utils/addressUtils';
 import { buildPlaceMetaDescription } from '../../config/metaDescriptions';
 import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
+import { Breadcrumbs } from '../../components/Breadcrumbs';
 
 const SITE_URL = 'https://googlementor.com';
 const AVERAGE_WALKING_SPEED_KMPH = 4.8;
@@ -792,6 +794,8 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
     categorySlug: intentContexts[0]?.categorySlug,
     categoryName: intentContexts[0]?.categoryName,
   });
+  const breadcrumbAreaSlug = areaContext?.slug || intentContexts[0]?.areaSlug;
+  const breadcrumbAreaName = areaContext?.name || intentContexts[0]?.areaName;
   const shareTitle = `${entity.name} | ${localizedKind} | Googlementor`;
   const pageTitle = buildPlaceSeoTitle(entity.name, localizedKind);
   const socialTitle = buildPlaceSeoTitle(entity.name, localizedKind);
@@ -1359,6 +1363,8 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
     }
   };
 
+  const hasSecondaryContent = Boolean(entity.aliases?.length || localizedMentionedGuides.length > 0);
+
   return (
     <Container maxW="5xl" py={{ base: 5, md: 8 }} className="place-page">
       <Head>
@@ -1388,6 +1394,17 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
       </Head>
+
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Areas', href: '/areas' },
+          ...(breadcrumbAreaSlug && breadcrumbAreaName
+            ? [{ label: breadcrumbAreaName, href: `/area/${breadcrumbAreaSlug}` }]
+            : []),
+          { label: entity.name },
+        ]}
+      />
 
       <Box mb={{ base: 6, md: 8 }} className="place-hero" p={{ base: 5, md: 7 }}>
         <Box className="place-approval-seal" aria-label={t('place.approvalSeal.ariaLabel', 'Googlementor curated selection')}>
@@ -1424,7 +1441,7 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
       </Box>
 
       <SimpleGrid columns={{ base: 1, xl: 12 }} spacing={6} alignItems="start">
-        <VStack gridColumn={{ xl: 'span 8' }} align="stretch" spacing={6}>
+        <VStack gridColumn={{ xl: hasSecondaryContent ? 'span 8' : 'span 12' }} align="stretch" spacing={6}>
           <Box className="place-share-panel" p={{ base: 4, md: 5 }}>
             <Heading as="h2" size="md" className="place-share-title" mb={1}>{t('place.share.title', 'Celebrate this place on Googlementor')}</Heading>
             <Text className="place-share-subtitle" fontSize="sm" mb={3}>{shareCaption}</Text>
@@ -1495,18 +1512,23 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
               >
                 {t('place.openDirections', 'Navigate')}
               </Button>
-              <Button
-                variant="outline"
-                colorScheme="teal"
-                minH="44px"
-                w="full"
-                whiteSpace="normal"
-                lineHeight="short"
-                textAlign="center"
-                onClick={handleAddToItinerary}
+              <Tooltip
+                label={t('itinerary.addTooltip', 'Saves this place to your trip planner (see it under Itinerary in the menu)')}
+                hasArrow
               >
-                {t('place.addToItinerary', 'Add to itinerary')}
-              </Button>
+                <Button
+                  variant="outline"
+                  colorScheme="teal"
+                  minH="44px"
+                  w="full"
+                  whiteSpace="normal"
+                  lineHeight="short"
+                  textAlign="center"
+                  onClick={handleAddToItinerary}
+                >
+                  {t('place.addToItinerary', 'Add to itinerary')}
+                </Button>
+              </Tooltip>
               <Button as={NextLink} href="/search" variant="outline" colorScheme="gray" minH="44px" w="full">
                 {t('place.exploreMore', 'Explore More Places')}
               </Button>
@@ -1617,7 +1639,8 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
           ) : null}
         </VStack>
 
-        <VStack gridColumn={{ xl: 'span 4' }} align="stretch" spacing={6}>
+        {hasSecondaryContent ? (
+          <VStack gridColumn={{ xl: 'span 4' }} align="stretch" spacing={6}>
           {entity.aliases?.length ? (
             <Box className="gm-surface-card" p={4}>
               <Heading as="h2" size="sm" mb={3}>
@@ -1643,7 +1666,8 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
               </VStack>
             </Box>
           ) : null}
-        </VStack>
+          </VStack>
+        ) : null}
       </SimpleGrid>
     </Container>
   );

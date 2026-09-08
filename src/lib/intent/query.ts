@@ -190,6 +190,8 @@ export function createIntentQueryService(deps: {
       .sort((left, right) => right.count - left.count)
       .slice(0, relatedLimit);
 
+    const RELATED_AREA_MAX_DISTANCE_KM = radiusKm * 4;
+
     const relatedAreas = deps.areas.records
       .filter((candidate) => candidate.id !== area.id)
       .map((candidate) => {
@@ -205,19 +207,12 @@ export function createIntentQueryService(deps: {
           passesThreshold: categoryId
             ? ranked.length >= getEffectiveCategoryThreshold(categoryId)
             : ranked.length >= thresholds.minAreaEntityCount,
-          nearestDistanceKm:
-            ranked.length > 0
-              ? ranked[0]!.distanceKm
-              : calculateDistance(area.lat, area.lng, candidate.lat, candidate.lng),
+          // Distance from the current area to the candidate area, so "related" areas are actually nearby.
+          nearestDistanceKm: calculateDistance(area.lat, area.lng, candidate.lat, candidate.lng),
         };
       })
-      .filter((candidate) => candidate.count > 0)
-      .sort((left, right) => {
-        if (right.count !== left.count) {
-          return right.count - left.count;
-        }
-        return left.nearestDistanceKm - right.nearestDistanceKm;
-      })
+      .filter((candidate) => candidate.count > 0 && candidate.nearestDistanceKm <= RELATED_AREA_MAX_DISTANCE_KM)
+      .sort((left, right) => left.nearestDistanceKm - right.nearestDistanceKm)
       .slice(0, relatedLimit);
 
     return {

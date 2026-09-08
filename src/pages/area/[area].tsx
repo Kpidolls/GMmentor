@@ -25,6 +25,8 @@ import type { IntentResultsPayload } from '../../lib/intent';
 import { formatDistance } from '../../utils/locationUtils';
 import { buildAreaMetaDescription } from '../../config/metaDescriptions';
 import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
+import { CategoryIcon } from '../../components/CategoryIcon';
+import { Breadcrumbs } from '../../components/Breadcrumbs';
 
 const SITE_URL = 'https://googlementor.com';
 
@@ -211,7 +213,9 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
   const topRestaurants = payload.entities
     .filter((item) => item.entity.kind === 'restaurant' && !item.entity.categoryIds?.includes('attractions'))
     .slice(0, 10);
-  const topPlaces = payload.entities.slice(0, 12);
+  // "Top places" must be a distinct mixed-category set, not a re-render of the sections above.
+  const shownEntityIds = new Set([...topAttractions, ...topRestaurants].map((item) => item.entity.id));
+  const topPlaces = payload.entities.filter((item) => !shownEntityIds.has(item.entity.id)).slice(0, 12);
   const guidesItemListJsonLd =
     topGuides.length > 0 ? buildGuideItemListJsonLd(payload.area.name, canonicalUrl, topGuides) : null;
 
@@ -250,6 +254,17 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
         ) : null}
       </Head>
 
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Areas', href: '/areas' },
+          ...(payload.area.regionEn || payload.area.region
+            ? [{ label: payload.area.regionEn || payload.area.region, href: `/areas?region=${encodeURIComponent(payload.area.regionEn || payload.area.region)}` }]
+            : []),
+          { label: payload.area.name },
+        ]}
+      />
+
       <Box
         mb={8}
         borderWidth="1px"
@@ -275,8 +290,8 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
           </Heading>
 
           <Text color="gray.700" lineHeight="1.7">
-            {payload.counts.totalInArea} places found near {payload.area.name}.
-            {' '}This guide highlights high-signal options with map-ready links, plus related categories and nearby areas.
+            {payload.counts.totalInArea} places found near {payload.area.name}, with the top picks highlighted below.
+            {' '}Browse the related categories further down to see the full list for each one.
           </Text>
 
           <HStack spacing={2} flexWrap="wrap">
@@ -306,11 +321,6 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
                   <Text fontWeight="semibold">{item.categoryName}</Text>
                 )}
                 <Text color="gray.600" fontSize="sm">{item.count} places nearby</Text>
-                {item.passesThreshold ? (
-                  <Text color="blue.600" fontSize="sm" mt={1}>
-                    View {item.categoryName.toLowerCase()} in {payload.area.name}
-                  </Text>
-                ) : null}
                 <Button
                   size="sm"
                   mt={2}
@@ -345,6 +355,7 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
             {topAttractions.map((item) => (
               <ListItem key={item.entity.id}>
                 <Box display="flex" flexWrap="wrap" alignItems="center" columnGap={2} rowGap={2}>
+                  <CategoryIcon categoryId="attractions" size={18} className="shrink-0 text-teal-700" />
                   {item.entity.slug ? (
                     <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
                       {item.entity.name}
@@ -389,6 +400,11 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
             {topRestaurants.map((item) => (
               <ListItem key={item.entity.id}>
                 <Box display="flex" flexWrap="wrap" alignItems="center" columnGap={2} rowGap={2}>
+                  <CategoryIcon
+                    categoryId={item.entity.categoryIds?.[0] ?? 'greek-restaurants'}
+                    size={18}
+                    className="shrink-0 text-teal-700"
+                  />
                   {item.entity.slug ? (
                     <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
                       {item.entity.name}
@@ -441,47 +457,54 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
         </Box>
       ) : null}
 
-      <Box mb={8}>
-        <Heading as="h2" size="md" mb={3}>Top places near {payload.area.name}</Heading>
-        <UnorderedList spacing={2} ml={5}>
-          {topPlaces.map((item) => (
-            <ListItem key={item.entity.id}>
-              <Box display="flex" flexWrap="wrap" alignItems="center" columnGap={2} rowGap={2}>
-                {item.entity.slug ? (
-                  <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
-                    {item.entity.name}
-                  </Link>
-                ) : (
-                  <Text as="span">{item.entity.name}</Text>
-                )}
-                <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
-              <Button
-                size="sm"
-                variant="ghost"
-                colorScheme="teal"
-                minH="40px"
-                w={{ base: '100%', sm: 'auto' }}
-                justifyContent="center"
-                px={3}
-                whiteSpace="normal"
-                lineHeight="short"
-                textAlign="center"
-                onClick={() =>
-                  dispatchAddToItinerary({
-                    id: item.entity.id,
-                    name: item.entity.name,
-                    type: item.entity.kind === 'municipality' ? 'area' : 'place',
-                    url: item.entity.slug ? `${SITE_URL}/place/${item.entity.slug}` : item.entity.url || undefined,
-                  })
-                }
-              >
-                {t('itinerary.addItem', 'Add point')}
-              </Button>
-              </Box>
-            </ListItem>
-          ))}
-        </UnorderedList>
-      </Box>
+      {topPlaces.length > 0 ? (
+        <Box mb={8}>
+          <Heading as="h2" size="md" mb={3}>Top places near {payload.area.name}</Heading>
+          <UnorderedList spacing={2} ml={5}>
+            {topPlaces.map((item) => (
+              <ListItem key={item.entity.id}>
+                <Box display="flex" flexWrap="wrap" alignItems="center" columnGap={2} rowGap={2}>
+                  <CategoryIcon
+                    categoryId={item.entity.categoryIds?.[0] ?? 'greek-restaurants'}
+                    size={18}
+                    className="shrink-0 text-teal-700"
+                  />
+                  {item.entity.slug ? (
+                    <Link as={NextLink} href={`/place/${item.entity.slug}`} color="blue.600">
+                      {item.entity.name}
+                    </Link>
+                  ) : (
+                    <Text as="span">{item.entity.name}</Text>
+                  )}
+                  <Text as="span" color="gray.600">({formatDistance(item.distanceKm)})</Text>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  colorScheme="teal"
+                  minH="40px"
+                  w={{ base: '100%', sm: 'auto' }}
+                  justifyContent="center"
+                  px={3}
+                  whiteSpace="normal"
+                  lineHeight="short"
+                  textAlign="center"
+                  onClick={() =>
+                    dispatchAddToItinerary({
+                      id: item.entity.id,
+                      name: item.entity.name,
+                      type: item.entity.kind === 'municipality' ? 'area' : 'place',
+                      url: item.entity.slug ? `${SITE_URL}/place/${item.entity.slug}` : item.entity.url || undefined,
+                    })
+                  }
+                >
+                  {t('itinerary.addItem', 'Add point')}
+                </Button>
+                </Box>
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
+      ) : null}
 
       {payload.relatedAreas.some((item) => item.passesThreshold) ? (
         <Box mb={8}>
@@ -494,7 +517,7 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
                 <Link as={NextLink} href={`/area/${item.areaSlug}`} color="blue.600" fontWeight="semibold">
                   {item.areaName}
                 </Link>
-                <Text color="gray.600" fontSize="sm">{item.count} places</Text>
+                <Text color="gray.600" fontSize="sm">{item.count} places · {formatDistance(item.nearestDistanceKm)} away</Text>
                 <Button
                   size="sm"
                   mt={2}

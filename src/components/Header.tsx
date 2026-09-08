@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
   Box,
   Button,
@@ -27,10 +27,12 @@ import { HamburgerIcon, CloseIcon, SearchIcon, ChevronDownIcon } from '@chakra-u
 import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import { LuMapPinned } from 'react-icons/lu';
 import config from '../config/index.json';
 import featureFlags from '../config/featureFlags.json';
 import SearchPage from './SearchPage';
 import { usePWA } from '../hooks/usePWA';
+import { useItinerary } from './itinerary/useItinerary';
 
 const Header = () => {
   const hasStringHref = (item: unknown): item is { href: string } => {
@@ -61,6 +63,12 @@ const Header = () => {
   
   // PWA Hook for install functionality
   const { isInstallable, isInstalled, isStandalone, isMobile, isIOS, isOnline, installApp } = usePWA();
+
+  const { itinerary } = useItinerary();
+  const savedItemsCount = useMemo(
+    () => itinerary.days.reduce((total, day) => total + day.items.length, 0),
+    [itinerary]
+  );
 
   useEffect(() => {
     setIsLanguageReady(true); // Ensure language is ready before rendering
@@ -827,6 +835,51 @@ const Header = () => {
             <SearchIcon color="gray.600" boxSize="14px" />
           </Button>
 
+          {/* Saved trip planner items (desktop) */}
+          <Tooltip
+            label={t('header.itinerary.tooltip', 'View places you saved to your trip planner')}
+            hasArrow
+          >
+            <Button
+              onClick={() => router.push('/itinerary')}
+              variant="ghost"
+              position="relative"
+              aria-label={t('header.itinerary.aria', {
+                count: savedItemsCount,
+                defaultValue: '{{count}} places saved to your trip planner. Open trip planner.',
+              })}
+              display={{ base: 'none', lg: 'inline-flex' }}
+              border="1px solid"
+              borderColor="gray.200"
+              borderRadius="md"
+              minW="auto"
+              px={3}
+              _hover={{ bg: 'gray.50', borderColor: 'var(--gm-sea-500)' }}
+            >
+              <LuMapPinned color="var(--chakra-colors-gray-600)" size={16} />
+              {savedItemsCount > 0 && (
+                <Box
+                  as="span"
+                  position="absolute"
+                  top="-6px"
+                  right="-6px"
+                  bg="teal.500"
+                  color="white"
+                  fontSize="10px"
+                  fontWeight="bold"
+                  borderRadius="full"
+                  minW="16px"
+                  h="16px"
+                  lineHeight="16px"
+                  textAlign="center"
+                  px={1}
+                >
+                  {savedItemsCount}
+                </Box>
+              )}
+            </Button>
+          </Tooltip>
+
           {/* Language Toggle (mobile, next to hamburger) */}
           <HStack spacing={1} display={{ base: 'flex', lg: 'none' }}>
             <Button
@@ -846,6 +899,48 @@ const Header = () => {
               <Box as="span" display="inline-flex" w="20px" h="14px" borderRadius="sm" overflow="hidden" boxShadow="inset 0 0 0 1px rgba(0,0,0,0.12)" aria-hidden="true">
                 {renderFlagIcon(i18n.language === 'en' ? 'el' : 'en')}
               </Box>
+            </Button>
+
+            {/* Saved trip planner items (mobile) */}
+            <Button
+              onClick={() => router.push('/itinerary')}
+              variant="ghost"
+              position="relative"
+              aria-label={t('header.itinerary.aria', {
+                count: savedItemsCount,
+                defaultValue: '{{count}} places saved to your trip planner. Open trip planner.',
+              })}
+              borderRadius="full"
+              border="1px solid"
+              borderColor="gray.200"
+              bg="white"
+              boxShadow="sm"
+              minW="auto"
+              px={2}
+              _hover={{ bg: 'gray.50', borderColor: 'gray.300' }}
+              _active={{ bg: 'gray.100' }}
+            >
+              <LuMapPinned color="var(--chakra-colors-gray-600)" size={16} />
+              {savedItemsCount > 0 && (
+                <Box
+                  as="span"
+                  position="absolute"
+                  top="-4px"
+                  right="-4px"
+                  bg="teal.500"
+                  color="white"
+                  fontSize="10px"
+                  fontWeight="bold"
+                  borderRadius="full"
+                  minW="16px"
+                  h="16px"
+                  lineHeight="16px"
+                  textAlign="center"
+                  px={1}
+                >
+                  {savedItemsCount}
+                </Box>
+              )}
             </Button>
 
             {/* Mobile Menu Toggle */}

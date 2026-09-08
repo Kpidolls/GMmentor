@@ -1,16 +1,22 @@
 import Head from 'next/head';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import type { GetStaticProps } from 'next';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { useEffect, useMemo, useState } from 'react';
 import {
   Box,
   Container,
   Heading,
+  Input,
+  InputGroup,
+  InputLeftElement,
   Link,
   SimpleGrid,
   Text,
 } from '@chakra-ui/react';
+import { LuSearch } from 'react-icons/lu';
 
 import { loadEntitiesIndex } from '../lib/entities';
 import { createIntentEngine } from '../lib/intent';
@@ -115,6 +121,24 @@ export default function AreasPage({ areaLinks, totalAreas }: AreasPageProps) {
 
   let currentRegion = '';
 
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+
+  useEffect(() => {
+    const regionParam = router.query.region;
+    if (typeof regionParam === 'string' && regionParam) {
+      setQuery(regionParam);
+    }
+  }, [router.query.region]);
+
+  const filteredAreas = useMemo(() => {
+    const term = query.trim().toLowerCase();
+    if (!term) return areaLinks;
+    return areaLinks.filter(
+      (area) => area.name.toLowerCase().includes(term) || area.region.toLowerCase().includes(term)
+    );
+  }, [areaLinks, query]);
+
   return (
     <Container maxW="6xl" py={10}>
       <Head>
@@ -140,39 +164,56 @@ export default function AreasPage({ areaLinks, totalAreas }: AreasPageProps) {
       <Box mb={8} borderWidth="1px" borderColor="orange.100" borderRadius="2xl" p={{ base: 5, md: 8 }} bg="white" boxShadow="sm">
         <Text fontSize="sm" color="gray.500" mb={2}>Crawl Hub</Text>
         <Heading as="h1" size="2xl" mb={3}>All Area Guides</Heading>
-        <Text color="gray.700">
+        <Text color="gray.700" mb={4}>
           This index lists every published area guide route. Use it to quickly discover local pages and deeper place collections.
         </Text>
+        <InputGroup maxW="sm">
+          <InputLeftElement pointerEvents="none">
+            <LuSearch color="gray" />
+          </InputLeftElement>
+          <Input
+            type="text"
+            placeholder="Filter by area or region..."
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            bg="white"
+            aria-label="Filter areas"
+          />
+        </InputGroup>
       </Box>
 
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={3}>
-        {areaLinks.map((area) => {
-          const showRegionHeader = area.region !== currentRegion;
-          if (showRegionHeader) {
-            currentRegion = area.region;
-          }
+      {filteredAreas.length === 0 ? (
+        <Text color="gray.600">No areas match &ldquo;{query}&rdquo;.</Text>
+      ) : (
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={3}>
+          {filteredAreas.map((area) => {
+            const showRegionHeader = !query.trim() && area.region !== currentRegion;
+            if (showRegionHeader) {
+              currentRegion = area.region;
+            }
 
-          return (
-            <Box key={area.href} borderWidth="1px" borderRadius="lg" p={4} bg="white" display="flex" flexDirection="column">
-              <Text
-                fontSize="xs"
-                fontWeight="bold"
-                textTransform="uppercase"
-                letterSpacing="0.08em"
-                color="gray.500"
-                mb={2}
-                visibility={showRegionHeader ? 'visible' : 'hidden'}
-              >
-                {area.region}
-              </Text>
-              <Link as={NextLink} href={area.href} color="blue.700" fontWeight="semibold">
-                {area.name}
-              </Link>
-              <Text color="gray.600" fontSize="sm" mt={1}>{area.count} places</Text>
-            </Box>
-          );
-        })}
-      </SimpleGrid>
+            return (
+              <Box key={area.href} borderWidth="1px" borderRadius="lg" p={4} bg="white" display="flex" flexDirection="column">
+                <Text
+                  fontSize="xs"
+                  fontWeight="bold"
+                  textTransform="uppercase"
+                  letterSpacing="0.08em"
+                  color="gray.500"
+                  mb={2}
+                  visibility={showRegionHeader ? 'visible' : 'hidden'}
+                >
+                  {area.region}
+                </Text>
+                <Link as={NextLink} href={area.href} color="blue.700" fontWeight="semibold">
+                  {area.name}
+                </Link>
+                <Text color="gray.600" fontSize="sm" mt={1}>{area.count} places</Text>
+              </Box>
+            );
+          })}
+        </SimpleGrid>
+      )}
     </Container>
   );
 }

@@ -11,7 +11,11 @@
     "register": "Register",
     "search": "Find: Destinations, Dining, Activities & Travel Gear",
     "searchTitle": "Search",
-    "searchHint": "Find places"
+    "searchHint": "Find places",
+    "itinerary": {
+      "tooltip": "View places you saved to your trip planner",
+      "aria": "{{count}} places saved to your trip planner. Open trip planner."
+    }
   },
   "language": {
     "label": "Language",
@@ -377,6 +381,7 @@
     "subtitle": "Personal trip plan stored only on your device.",
     "addDay": "Add day",
     "addItem": "Add point",
+    "addTooltip": "Saves this place to your trip planner (see it under Itinerary in the menu)",
     "typePlace": "Place",
     "typeArea": "Area",
     "typeGuide": "Guide",
@@ -977,7 +982,7 @@
     },
     "exploreButton": "Open Map",
     "shareButton": "Share",
-    "addShort": "Add",
+    "addShort": "Add to trip",
     "shareText": "Recommendations for {{title}} from googlementor",
     "shareNotSupported": "Sharing is not supported on this browser.",
     "viewMoreButton": "View More"
