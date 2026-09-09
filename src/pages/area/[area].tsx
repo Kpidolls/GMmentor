@@ -23,7 +23,7 @@ import { createIntentEngine } from '../../lib/intent';
 import { loadEntitiesIndex } from '../../lib/entities';
 import type { IntentResultsPayload } from '../../lib/intent';
 import { formatDistance } from '../../utils/locationUtils';
-import { buildAreaMetaDescription } from '../../config/metaDescriptions';
+import { buildAreaMetaDescription, translateRegionLabel } from '../../config/metaDescriptions';
 import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
 import { CategoryIcon } from '../../components/CategoryIcon';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
@@ -111,6 +111,68 @@ function buildGuideItemListJsonLd(
   };
 }
 
+const CORE_RESTAURANT_CATEGORIES = new Set([
+  'greek-restaurants',
+  'fish-tavernas',
+  'italian',
+  'asian',
+  'burgers',
+  'mexican',
+  'cheap-eats',
+  'luxury-dining',
+]);
+
+const STRICT_RESTAURANT_CATEGORIES = new Set([
+  'greek-restaurants',
+  'fish-tavernas',
+  'italian',
+  'asian',
+  'burgers',
+  'mexican',
+  'cheap-eats',
+  'luxury-dining',
+  'vegetarian',
+  'family-friendly',
+]);
+
+const MIXED_PLACE_CATEGORIES = new Set([
+  'attractions',
+  'monasteries-churches',
+  'coffee-brunch',
+  'rooftop-lounges',
+  'desserts',
+  'wineries-vineyards',
+]);
+
+function isAttractionEntity(entity: { kind?: string; categoryIds?: string[]; name: string }): boolean {
+  if (entity.kind === 'attraction' || entity.kind === 'poi') return true;
+  if (entity.categoryIds?.some((c) => c === 'attractions' || c === 'monasteries-churches')) return true;
+  const lower = entity.name.toLowerCase();
+  if (lower.includes('μουσείο') || lower.includes('museum')) {
+    return true;
+  }
+  return false;
+}
+
+function isStrictRestaurantEntity(entity: { kind?: string; categoryIds?: string[]; name: string }): boolean {
+  if (isAttractionEntity(entity)) return false;
+  if (entity.categoryIds?.includes('desserts') && !entity.categoryIds?.some((c) => CORE_RESTAURANT_CATEGORIES.has(c))) {
+    return false;
+  }
+  if (entity.categoryIds?.includes('coffee-brunch') && !entity.categoryIds?.some((c) => CORE_RESTAURANT_CATEGORIES.has(c))) {
+    return false;
+  }
+  const hasCoreCategory = entity.categoryIds?.some((c) => CORE_RESTAURANT_CATEGORIES.has(c));
+  if (hasCoreCategory) return true;
+  const hasStrictCategory = entity.categoryIds?.some((c) => STRICT_RESTAURANT_CATEGORIES.has(c));
+  const hasMixedOnly = entity.categoryIds?.every((c) => MIXED_PLACE_CATEGORIES.has(c) || c === 'family-friendly' || c === 'vegetarian');
+  return Boolean(hasStrictCategory && !hasMixedOnly);
+}
+
+function normalizeName(name: string): string {
+  return name.trim().toLowerCase().replace(/[^a-z0-9\u0370-\u03ff]/g, '');
+}
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const coveragePath = join(process.cwd(), 'public', 'data', 'intent-coverage.json');
   try {
@@ -155,7 +217,7 @@ export const getStaticProps: GetStaticProps<AreaPageProps> = async ({ params }) 
     return { notFound: true };
   }
 
-  const payload = engine.query.getIntentResults({ areaId: area.id, limit: 30, relatedLimit: 10 });
+  const payload = engine.query.getIntentResults({ areaId: area.id, limit: 50, relatedLimit: 10 });
   if (!payload || payload.entities.length === 0) {
     return { notFound: true };
   }
@@ -198,26 +260,62 @@ export const getStaticProps: GetStaticProps<AreaPageProps> = async ({ params }) 
 };
 
 export default function AreaPage({ payload, topGuides }: AreaPageProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const language = (i18n.language || i18n.resolvedLanguage || 'en').split('-')[0];
+  const isGreek = language === 'el';
+  const areaName = isGreek ? payload.area.name : (payload.area.nameEn || payload.area.name);
+  const regionName = translateRegionLabel(isGreek ? payload.area.region : (payload.area.regionEn || payload.area.region), language);
   const canonicalUrl = `${SITE_URL}/area/${payload.area.urlSlug}`;
-  const title = `Best places in ${payload.area.name} | Googlementor`;
+  const title = isGreek ? `Τα καλύτερα μέρη σε ${areaName} | Googlementor` : `Best places in ${areaName} | Googlementor`;
   const description = buildAreaMetaDescription({
-    areaName: payload.area.nameEn || payload.area.name,
-    regionName: payload.area.regionEn || payload.area.region,
+    areaName,
+    regionName,
     count: payload.counts.totalInArea,
+    language,
   });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(payload.area.urlSlug, payload.area.name);
   const collectionJsonLd = buildCollectionJsonLd(payload, canonicalUrl);
-  const topAttractions = payload.entities.filter((item) => item.entity.categoryIds?.includes('attractions')).slice(0, 10);
-  const topRestaurants = payload.entities
-    .filter((item) => item.entity.kind === 'restaurant' && !item.entity.categoryIds?.includes('attractions'))
+  const shownEntityIds = new Set<string>();
+  const shownEntityNames = new Set<string>();
+
+  const topAttractions = payload.entities
+    .filter((item) => {
+      if (!isAttractionEntity(item.entity)) return false;
+      const norm = normalizeName(item.entity.name);
+      if (shownEntityIds.has(item.entity.id) || shownEntityNames.has(norm)) return false;
+      shownEntityIds.add(item.entity.id);
+      shownEntityNames.add(norm);
+      return true;
+    })
     .slice(0, 10);
-  // "Top places" must be a distinct mixed-category set, not a re-render of the sections above.
-  const shownEntityIds = new Set([...topAttractions, ...topRestaurants].map((item) => item.entity.id));
-  const topPlaces = payload.entities.filter((item) => !shownEntityIds.has(item.entity.id)).slice(0, 12);
+
+  const topRestaurants = payload.entities
+    .filter((item) => {
+      if (!isStrictRestaurantEntity(item.entity)) return false;
+      const norm = normalizeName(item.entity.name);
+      if (shownEntityIds.has(item.entity.id) || shownEntityNames.has(norm)) return false;
+      shownEntityIds.add(item.entity.id);
+      shownEntityNames.add(norm);
+      return true;
+    })
+    .slice(0, 10);
+
+  // "Top places" must be a distinct mixed-category set (attractions, cafés, bars, shops, etc.)
+  // excluding anything already shown in the attractions and restaurants blocks above.
+  const topPlaces = payload.entities
+    .filter((item) => {
+      const norm = normalizeName(item.entity.name);
+      if (shownEntityIds.has(item.entity.id) || shownEntityNames.has(norm)) return false;
+      shownEntityIds.add(item.entity.id);
+      shownEntityNames.add(norm);
+      return true;
+    })
+    .slice(0, 12);
   const guidesItemListJsonLd =
-    topGuides.length > 0 ? buildGuideItemListJsonLd(payload.area.name, canonicalUrl, topGuides) : null;
+    topGuides.length > 0 ? buildGuideItemListJsonLd(areaName, canonicalUrl, topGuides) : null;
+
+  const hasAnyStats = topPlaces.length > 0 || topAttractions.length > 0 || topRestaurants.length > 0;
 
   return (
     <Container maxW="5xl" py={10}>
@@ -258,10 +356,10 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
         items={[
           { label: 'Home', href: '/' },
           { label: 'Areas', href: '/areas' },
-          ...(payload.area.regionEn || payload.area.region
-            ? [{ label: payload.area.regionEn || payload.area.region, href: `/areas?region=${encodeURIComponent(payload.area.regionEn || payload.area.region)}` }]
+          ...(regionName
+            ? [{ label: regionName, href: `/areas?region=${encodeURIComponent(regionName)}` }]
             : []),
-          { label: payload.area.name },
+          { label: areaName },
         ]}
       />
 
@@ -278,15 +376,15 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
           <HStack spacing={2} flexWrap="wrap">
             <Badge colorScheme="orange" textTransform="none">Area Guide</Badge>
             <Badge colorScheme="gray" textTransform="none">Curated picks</Badge>
-            {payload.area.regionEn || payload.area.region ? (
+            {regionName ? (
               <Badge colorScheme="blue" textTransform="none">
-                {payload.area.regionEn || payload.area.region}
+                {regionName}
               </Badge>
             ) : null}
           </HStack>
 
           <Heading as="h1" size="2xl">
-            Best places in {payload.area.name}
+            {isGreek ? `Τα καλύτερα μέρη σε ${areaName}` : `Best places in ${areaName}`}
           </Heading>
 
           <Text color="gray.700" lineHeight="1.7">
@@ -294,11 +392,19 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
             {' '}Browse the related categories further down to see the full list for each one.
           </Text>
 
-          <HStack spacing={2} flexWrap="wrap">
-            <Badge colorScheme="teal" textTransform="none">{topPlaces.length} featured places</Badge>
-            <Badge colorScheme="teal" textTransform="none">{topAttractions.length} attractions</Badge>
-            <Badge colorScheme="teal" textTransform="none">{topRestaurants.length} restaurants</Badge>
-          </HStack>
+          {hasAnyStats ? (
+            <HStack spacing={2} flexWrap="wrap">
+              {topPlaces.length > 0 ? (
+                <Badge colorScheme="teal" textTransform="none">{topPlaces.length} featured places</Badge>
+              ) : null}
+              {topAttractions.length > 0 ? (
+                <Badge colorScheme="teal" textTransform="none">{topAttractions.length} attractions</Badge>
+              ) : null}
+              {topRestaurants.length > 0 ? (
+                <Badge colorScheme="teal" textTransform="none">{topRestaurants.length} restaurants</Badge>
+              ) : null}
+            </HStack>
+          ) : null}
         </VStack>
       </Box>
 
@@ -465,7 +571,7 @@ export default function AreaPage({ payload, topGuides }: AreaPageProps) {
               <ListItem key={item.entity.id}>
                 <Box display="flex" flexWrap="wrap" alignItems="center" columnGap={2} rowGap={2}>
                   <CategoryIcon
-                    categoryId={item.entity.categoryIds?.[0] ?? 'greek-restaurants'}
+                    categoryId={item.entity.categoryIds?.[0] ?? 'attractions'}
                     size={18}
                     className="shrink-0 text-teal-700"
                   />

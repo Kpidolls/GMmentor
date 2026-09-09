@@ -199,6 +199,11 @@ export function createIntentQueryService(deps: {
           ? rankByDistance(categoryUniverse, { lat: candidate.lat, lng: candidate.lng }, radiusKm)
           : rankByDistance(discoverable, { lat: candidate.lat, lng: candidate.lng }, radiusKm);
 
+        const isSameRegion = Boolean(
+          (candidate.region && area.region && candidate.region === area.region) ||
+          (candidate.regionEn && area.regionEn && candidate.regionEn === area.regionEn)
+        );
+
         return {
           areaId: candidate.id,
           areaName: candidate.name,
@@ -209,10 +214,17 @@ export function createIntentQueryService(deps: {
             : ranked.length >= thresholds.minAreaEntityCount,
           // Distance from the current area to the candidate area, so "related" areas are actually nearby.
           nearestDistanceKm: calculateDistance(area.lat, area.lng, candidate.lat, candidate.lng),
+          isSameRegion,
         };
       })
       .filter((candidate) => candidate.count > 0 && candidate.nearestDistanceKm <= RELATED_AREA_MAX_DISTANCE_KM)
-      .sort((left, right) => left.nearestDistanceKm - right.nearestDistanceKm)
+      .sort((left, right) => {
+        if (left.isSameRegion !== right.isSameRegion) {
+          return left.isSameRegion ? -1 : 1;
+        }
+        return left.nearestDistanceKm - right.nearestDistanceKm;
+      })
+      .map(({ isSameRegion: _, ...item }) => item)
       .slice(0, relatedLimit);
 
     return {

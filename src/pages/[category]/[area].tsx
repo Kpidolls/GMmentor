@@ -23,7 +23,7 @@ import { createIntentEngine } from '../../lib/intent';
 import { loadEntitiesIndex } from '../../lib/entities';
 import type { IntentResultsPayload } from '../../lib/intent';
 import { formatDistance } from '../../utils/locationUtils';
-import { buildCategoryAreaMetaDescription } from '../../config/metaDescriptions';
+import { buildCategoryAreaMetaDescription, translateRegionLabel } from '../../config/metaDescriptions';
 import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
 
@@ -255,18 +255,24 @@ export const getStaticProps: GetStaticProps<CategoryAreaPageProps> = async ({ pa
 };
 
 export default function CategoryAreaPage({ payload, hasAreaGuidePage, topGuides }: CategoryAreaPageProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const language = (i18n.language || i18n.resolvedLanguage || 'en').split('-')[0];
+  const isGreek = language === 'el';
   if (!payload.category) {
     return null;
   }
 
   const canonicalUrl = `${SITE_URL}/${payload.category.urlSlug}/${payload.area.urlSlug}`;
-  const title = `Best ${payload.category.name} in ${payload.area.name} | Googlementor`;
+  const areaName = isGreek ? payload.area.name : (payload.area.nameEn || payload.area.name);
+  const regionName = translateRegionLabel(isGreek ? payload.area.region : (payload.area.regionEn || payload.area.region), language);
+  const categoryName = isGreek ? t(`categories.${payload.category.id}`, payload.category.name) : payload.category.name;
+  const title = isGreek ? `${categoryName} σε ${areaName} | Googlementor` : `Best ${categoryName} in ${areaName} | Googlementor`;
   const description = buildCategoryAreaMetaDescription({
-    categoryName: payload.category.name,
-    areaName: payload.area.nameEn || payload.area.name,
-    regionName: payload.area.regionEn || payload.area.region,
+    categoryName,
+    areaName,
+    regionName,
     count: payload.counts.totalCategoryArea,
+    language,
   });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(
@@ -341,11 +347,11 @@ export default function CategoryAreaPage({ payload, hasAreaGuidePage, topGuides 
             <HStack spacing={2} flexWrap="wrap">
               <Badge colorScheme="orange" textTransform="none">Intent Collection</Badge>
               <Badge colorScheme="gray" textTransform="none">Curated picks</Badge>
-              <Badge colorScheme="blue" textTransform="none">{payload.category.name}</Badge>
+              <Badge colorScheme="blue" textTransform="none">{categoryName}</Badge>
             </HStack>
 
             <Heading as="h1" size="2xl">
-              Best {payload.category.name} in {payload.area.name}
+              {isGreek ? `${categoryName} σε ${areaName}` : `Best ${categoryName} in ${areaName}`}
             </Heading>
 
             <Text color="gray.700" lineHeight="1.7">
@@ -353,11 +359,19 @@ export default function CategoryAreaPage({ payload, hasAreaGuidePage, topGuides 
               {' '}Use this page to compare top options, then branch into nearby areas or related collections.
             </Text>
 
-            <HStack spacing={2} flexWrap="wrap">
-              <Badge colorScheme="teal" textTransform="none">{payload.entities.length} featured picks</Badge>
-              <Badge colorScheme="teal" textTransform="none">{topRestaurants.length} restaurants</Badge>
-              <Badge colorScheme="teal" textTransform="none">{topAttractions.length} attractions</Badge>
-            </HStack>
+            {(payload.entities.length > 0 || topRestaurants.length > 0 || topAttractions.length > 0) && (
+              <HStack spacing={2} flexWrap="wrap">
+                {payload.entities.length > 0 ? (
+                  <Badge colorScheme="teal" textTransform="none">{payload.entities.length} featured picks</Badge>
+                ) : null}
+                {topRestaurants.length > 0 ? (
+                  <Badge colorScheme="teal" textTransform="none">{topRestaurants.length} restaurants</Badge>
+                ) : null}
+                {topAttractions.length > 0 ? (
+                  <Badge colorScheme="teal" textTransform="none">{topAttractions.length} attractions</Badge>
+                ) : null}
+              </HStack>
+            )}
           </VStack>
         </Box>
       </Box>

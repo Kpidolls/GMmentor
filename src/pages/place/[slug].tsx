@@ -835,12 +835,14 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
     [entity.lat, entity.lng, sameCategory]
   );
   const usefulStopCandidates = useMemo(() => {
-    const categorizedNearby = nearby.filter((candidate) => (candidate.categoryIds?.length ?? 0) > 0);
+    const sameCategoryIds = new Set(sameCategoryWithDistance.map((candidate) => candidate.id));
+    const eligibleNearby = nearby.filter((candidate) => !sameCategoryIds.has(candidate.id));
+    const categorizedNearby = eligibleNearby.filter((candidate) => (candidate.categoryIds?.length ?? 0) > 0);
     const primaryIds = new Set(entity.categoryIds || []);
     const complementary = categorizedNearby.filter((candidate) => !(candidate.categoryIds || []).some((categoryId) => primaryIds.has(categoryId)));
 
     return complementary.length >= 3 ? complementary : categorizedNearby;
-  }, [entity.categoryIds, nearby]);
+  }, [entity.categoryIds, nearby, sameCategoryWithDistance]);
   const nearbyGroupedByCategory = useMemo(() => {
     const grouped = new Map<string, { label: string; items: Array<EntityRecord & { distanceKm: number }> }>();
 

@@ -1,5 +1,107 @@
 export type MetaDescriptionLanguage = 'en' | 'el';
 
+const regionLabels: Record<MetaDescriptionLanguage, Record<string, string>> = {
+  en: {
+    'Κέντρο Αθήνας': 'Athens Center',
+    'Βόρεια Προάστια': 'Northern Suburbs',
+    'Βόρεια/Ανατολικά': 'North/East',
+    'Νότια Προάστια': 'Southern Suburbs',
+    'Ανατολικά Προάστια': 'Eastern Suburbs',
+    'Δυτικά Προάστια': 'Western Suburbs',
+    'Πειραιάς': 'Piraeus',
+    'Δυτική Αττική': 'West Attica',
+    'Θεσσαλονίκη': 'Thessaloniki',
+    'Κέντρο Θεσσαλονίκης': 'Thessaloniki Center',
+    'Ανατολική Θεσσαλονίκη': 'East Thessaloniki',
+    'Δυτική Θεσσαλονίκη': 'West Thessaloniki',
+    'Ήπειρος': 'Epirus',
+    'Ανατολική Κρήτη': 'East Crete',
+    'Ανατολική Μακεδονία και Θράκη': 'Eastern Macedonia & Thrace',
+    'Αργολίδα': 'Argolis',
+    'Αρκαδία': 'Arcadia',
+    'Βόρειο Αιγαίο': 'North Aegean',
+    'Δυτική Ελλάδα': 'Western Greece',
+    'Δυτική Κρήτη': 'West Crete',
+    'Δυτική Μακεδονία': 'Western Macedonia',
+    'Δωδεκάνησα': 'Dodecanese',
+    'Ηλεία': 'Ilia',
+    'Θεσσαλία': 'Thessaly',
+    'Ιόνιο': 'Ionian Islands',
+    'Κεντρική Κρήτη': 'Central Crete',
+    'Κεντρική Μακεδονία': 'Central Macedonia',
+    'Κορινθία': 'Corinthia',
+    'Κρήτη': 'Crete',
+    'Κυκλάδες': 'Cyclades',
+    'Κως': 'Kos',
+    'Λακωνία': 'Laconia',
+    'Μάνη': 'Mani',
+    'Μήλος': 'Milos',
+    'Μεσσηνία': 'Messinia',
+    'Νησιά Αργοσαρωνικού': 'Saronic Islands',
+    'Νότια Αττική': 'South Attica',
+    'Νότια Κρήτη': 'South Crete',
+    'Νότιο Αιγαίο': 'South Aegean',
+    'Ορεινοί Προορισμοί': 'Mountain Destinations',
+    'Πάρος': 'Paros',
+    'Πελοπόννησος': 'Peloponnese',
+    'Περιαστική Ζώνη': 'Suburban Zone',
+    'Ρόδος': 'Rhodes',
+    'Σαντορίνη': 'Santorini',
+    'Στερεά Ελλάδα': 'Central Greece',
+    'Χαλκιδική': 'Halkidiki',
+  },
+  el: {
+    'Athens Center': 'Κέντρο Αθήνας',
+    'Northern Suburbs': 'Βόρεια Προάστια',
+    'North Suburbs': 'Βόρεια Προάστια',
+    'North/East': 'Βόρεια/Ανατολικά',
+    'Southern Suburbs': 'Νότια Προάστια',
+    'Eastern Suburbs': 'Ανατολικά Προάστια',
+    'Western Suburbs': 'Δυτικά Προάστια',
+    'Piraeus': 'Πειραιάς',
+    'West Attica': 'Δυτική Αττική',
+    'Thessaloniki': 'Θεσσαλονίκη',
+    'Thessaloniki Center': 'Κέντρο Θεσσαλονίκης',
+    'East Thessaloniki': 'Ανατολική Θεσσαλονίκη',
+    'West Thessaloniki': 'Δυτική Θεσσαλονίκη',
+    'Epirus': 'Ήπειρος',
+    'East Crete': 'Ανατολική Κρήτη',
+    'Eastern Macedonia & Thrace': 'Ανατολική Μακεδονία και Θράκη',
+    'Argolis': 'Αργολίδα',
+    'Arcadia': 'Αρκαδία',
+    'North Aegean': 'Βόρειο Αιγαίο',
+    'Western Greece': 'Δυτική Ελλάδα',
+    'West Crete': 'Δυτική Κρήτη',
+    'Western Macedonia': 'Δυτική Μακεδονία',
+    'Dodecanese': 'Δωδεκάνησα',
+    'Ilia': 'Ηλεία',
+    'Thessaly': 'Θεσσαλία',
+    'Ionian Islands': 'Ιόνιο',
+    'Central Crete': 'Κεντρική Κρήτη',
+    'Central Macedonia': 'Κεντρική Μακεδονία',
+    'Corinthia': 'Κορινθία',
+    'Crete': 'Κρήτη',
+    'Cyclades': 'Κυκλάδες',
+    'Kos': 'Κως',
+    'Laconia': 'Λακωνία',
+    'Mani': 'Μάνη',
+    'Milos': 'Μήλος',
+    'Messinia': 'Μεσσηνία',
+    'Saronic Islands': 'Νησιά Αργοσαρωνικού',
+    'South Attica': 'Νότια Αττική',
+    'South Crete': 'Νότια Κρήτη',
+    'South Aegean': 'Νότιο Αιγαίο',
+    'Mountain Destinations': 'Ορεινοί Προορισμοί',
+    'Paros': 'Πάρος',
+    'Peloponnese': 'Πελοπόννησος',
+    'Suburban Zone': 'Περιαστική Ζώνη',
+    'Rhodes': 'Ρόδος',
+    'Santorini': 'Σαντορίνη',
+    'Central Greece': 'Στερεά Ελλάδα',
+    'Halkidiki': 'Χαλκιδική',
+  },
+};
+
 export type StaticMetaDescriptionKey =
   | 'home'
   | 'search'
@@ -223,6 +325,15 @@ export function resolveMetaDescriptionLanguage(language?: string): MetaDescripti
   return language?.toLowerCase().startsWith('el') ? 'el' : 'en';
 }
 
+export function translateRegionLabel(label: string | undefined, language?: string): string | undefined {
+  if (!label) {
+    return undefined;
+  }
+
+  const resolvedLanguage = resolveMetaDescriptionLanguage(language);
+  return regionLabels[resolvedLanguage][label] ?? label;
+}
+
 export function normalizeMetaDescription(
   text: string,
   options: NormalizeMetaDescriptionOptions = {}
@@ -261,7 +372,8 @@ export function buildDestinationMetaDescription({ destinationName, summary, lang
 
 export function buildAreaMetaDescription({ areaName, regionName, count, language }: AreaMetaInput): string {
   const resolvedLanguage = resolveMetaDescriptionLanguage(language);
-  const areaContext = regionName && regionName !== areaName ? `${areaName}, ${regionName}` : areaName;
+  const localizedRegionName = translateRegionLabel(regionName, resolvedLanguage);
+  const areaContext = localizedRegionName && localizedRegionName !== areaName ? `${areaName}, ${localizedRegionName}` : areaName;
   const countText = typeof count === 'number'
     ? resolvedLanguage === 'el'
       ? `${count} επιμελημένα μέρη`
@@ -289,7 +401,8 @@ export function buildCategoryAreaMetaDescription({
   language,
 }: CategoryAreaMetaInput): string {
   const resolvedLanguage = resolveMetaDescriptionLanguage(language);
-  const areaContext = regionName && regionName !== areaName ? `${areaName}, ${regionName}` : areaName;
+  const localizedRegionName = translateRegionLabel(regionName, resolvedLanguage);
+  const areaContext = localizedRegionName && localizedRegionName !== areaName ? `${areaName}, ${localizedRegionName}` : areaName;
   const countText = typeof count === 'number'
     ? resolvedLanguage === 'el'
       ? `${count} επιλεγμένες προτάσεις`
