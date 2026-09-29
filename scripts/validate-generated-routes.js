@@ -68,6 +68,19 @@ function validateAdvertisedSitemaps() {
 function main() {
   const issues = validateAdvertisedSitemaps();
   const urls = new Set();
+  const notFoundPage = path.join(OUT_DIR, '404.html');
+
+  if (!fs.existsSync(notFoundPage)) {
+    issues.push(`Missing deploy output: ${path.relative(ROOT, notFoundPage)}`);
+  } else {
+    const notFoundHtml = fs.readFileSync(notFoundPage, 'utf8');
+    const hasLocalizedNotFoundTitle =
+      notFoundHtml.includes('We could not find that page') ||
+      notFoundHtml.includes('Δεν βρήκαμε αυτή τη σελίδα');
+    if (!hasLocalizedNotFoundTitle) {
+      issues.push(`Deploy output does not contain the custom 404 page: ${path.relative(ROOT, notFoundPage)}`);
+    }
+  }
 
   for (const sitemapFile of SITEMAP_FILES) {
     for (const rawUrl of readSitemapUrls(sitemapFile)) {

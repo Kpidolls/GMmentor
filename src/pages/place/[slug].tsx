@@ -373,6 +373,92 @@ function getGreekPosterPreposition(areaLabel: string): string {
   return 'στην';
 }
 
+const greekPosterLocationOverrides: Record<string, string> = {
+  'ιλισια': 'στα Ιλίσια',
+  'εξαρχεια': 'στα Εξάρχεια',
+  'πατησια': 'στα Πατήσια',
+  'πετραλωνα': 'στα Πετράλωνα',
+  'ανω πετραλωνα': 'στα Άνω Πετράλωνα',
+  'ανω πολη': 'στην Άνω Πόλη',
+  'αμπελοκηποι': 'στους Αμπελόκηπους',
+  'αμπελοκηποι μενεμενη': 'στους Αμπελόκηπους και στη Μενεμένη',
+  'αγιοι αναργυροι': 'στους Αγίους Αναργύρους',
+  'αγιος στεφανος': 'στον Άγιο Στέφανο',
+  'αγιος νικολαος': 'στον Άγιο Νικόλαο',
+  'αγιος γεωργιος λασιθιου': 'στον Άγιο Γεώργιο Λασιθίου',
+  'νεος κοσμος': 'στον Νέο Κόσμο',
+  'δελφοι': 'στους Δελφούς',
+  'αρκοι': 'στους Αρκούς',
+  'λειψοι': 'στους Λειψούς',
+  'παξοι': 'στους Παξούς',
+  'ιωαννινα': 'στα Ιωάννινα',
+  'τρικαλα': 'στα Τρίκαλα',
+  'χανια': 'στα Χανιά',
+  'λαδαδικα': 'στα Λαδάδικα',
+  'καλαβρυτα': 'στα Καλάβρυτα',
+  'γρεβενα': 'στα Γρεβενά',
+  'φαρσαλα': 'στα Φάρσαλα',
+  'πευκα': 'στα Πεύκα',
+  'μαλια': 'στα Μάλια',
+  'ματαλα': 'στα Μάταλα',
+  'ανωγεια': 'στα Ανώγεια',
+  'φηρα': 'στα Φηρά',
+  'σερβια': 'στα Σέρβια',
+  'δωδεκανησα': 'στα Δωδεκάνησα',
+  'καμενα βουρλα': 'στα Καμένα Βούρλα',
+  'βορεια προαστια': 'στα Βόρεια Προάστια',
+  'νοτια προαστια': 'στα Νότια Προάστια',
+  'δυτικα προαστια': 'στα Δυτικά Προάστια',
+  'ανατολικα προαστια': 'στα Ανατολικά Προάστια',
+  'νησια αργοσαρωνικου': 'στα νησιά του Αργοσαρωνικού',
+  'ορεινοι προορισμοι': 'στους ορεινούς προορισμούς',
+  'αρχανες αστερουσια': 'στις Αρχάνες και στα Αστερούσια',
+  'κορδελιο ευοσμος': 'στο Κορδελιό και στον Εύοσμο',
+  'πυλαια χορτιατης': 'στην Πυλαία και στον Χορτιάτη',
+  'πυλος νεστορας': 'στην Πύλο και στον Νέστορα',
+  'παπαγου χολαργος': 'στον Παπάγο και στον Χολαργό',
+  'λουτρακι περαχωρα αγ θεωδωροι': 'στο Λουτράκι, στην Περαχώρα και στους Αγίους Θεοδώρους',
+  'νεαπολη συκιες': 'στη Νεάπολη και στις Συκιές',
+  'ξυλοκαστρο ευρωστινη': 'στο Ξυλόκαστρο και στην Ευρωστίνη',
+  'μανδρα ειδυλλια': 'στη Μάνδρα και στην Ειδυλλία',
+  'αχαρνες': 'στις Αχαρνές',
+  'οινουσσες': 'στις Οινούσσες',
+  'σπετσες': 'στις Σπέτσες',
+  'ψυρρη': 'στου Ψυρρή',
+  'ζωγραφου': 'στου Ζωγράφου',
+  'αλοννησος': 'στην Αλόννησο',
+  'αναβυσσος': 'στην Ανάβυσσο',
+  'αργος': 'στο Άργος',
+  'ανδρος': 'στην Άνδρο',
+  'αμοργος': 'στην Αμοργό',
+  'ζακυνθος': 'στη Ζάκυνθο',
+  'θασος': 'στη Θάσο',
+  'ιος': 'στην Ίο',
+  'καλυμνος': 'στην Κάλυμνο',
+  'κασος': 'στην Κάσο',
+  'καρπαθος': 'στην Κάρπαθο',
+  'κιμωλος': 'στην Κίμωλο',
+  'κυθνος': 'στην Κύθνο',
+  'λερος': 'στη Λέρο',
+  'λεσβος': 'στη Λέσβο',
+  'λημνος': 'στη Λήμνο',
+  'μηλος': 'στη Μήλο',
+  'μυκονος': 'στη Μύκονο',
+  'ναξος': 'στη Νάξο',
+  'παρος': 'στην Πάρο',
+  'πατμος': 'στην Πάτμο',
+  'ροδος': 'στη Ρόδο',
+  'σαμος': 'στη Σάμο',
+  'σεριφος': 'στη Σέριφο',
+  'σκοπελος': 'στη Σκόπελο',
+  'συρος': 'στη Σύρο',
+  'τηνος': 'στην Τήνο',
+  'φολεγανδρος': 'στη Φολέγανδρο',
+  'χιος': 'στη Χίο',
+  'κως': 'στην Κω',
+  'χερσονησος': 'στη Χερσόνησο',
+};
+
 function inflectGreekAreaLabel(areaLabel: string): string {
   const normalized = normalizeGreekPosterArea(areaLabel);
 
@@ -389,13 +475,27 @@ function inflectGreekAreaLabel(areaLabel: string): string {
     return areaLabel.replace(/ης$/u, 'η').replace(/ής$/u, 'ή');
   }
 
+  if (normalized.endsWith('οι')) {
+    return areaLabel.replace(/οί$/u, 'ούς').replace(/οι$/u, 'ους');
+  }
+
   return areaLabel;
 }
 
 function formatGreekTaglineArea(areaLabel: string): string {
   return normalizeGreekPosterArea(areaLabel) === 'ιλιον'
     ? 'Ίλιον'
-    : areaLabel.toLowerCase();
+    : areaLabel;
+}
+
+function formatGreekPosterLocation(areaLabel: string): string {
+  const normalized = normalizeGreekPosterArea(areaLabel);
+  const override = greekPosterLocationOverrides[normalized];
+  if (override) {
+    return override;
+  }
+
+  return `${getGreekPosterPreposition(areaLabel)} ${formatGreekTaglineArea(inflectGreekAreaLabel(areaLabel))}`;
 }
 
 function selectGreekAreaLabel(
@@ -806,11 +906,11 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
   const favoriteBadgeLabel = t('place.badges.favorite', "People's Favorite");
   const curatedBadgeLabel = t('place.badges.curated', 'Googlementor Pick');
   const greekTaglineAreaLabel = selectGreekAreaLabel(entity, areaContext, intentContexts);
-  const greekTaglineLocationPhrase = `${getGreekPosterPreposition(greekTaglineAreaLabel)} ${formatGreekTaglineArea(inflectGreekAreaLabel(greekTaglineAreaLabel))}`;
+  const greekTaglineLocationPhrase = formatGreekPosterLocation(greekTaglineAreaLabel);
   const tagline = isGreek
     ? (heroAudience
-      ? `Αγαπημένη στάση ${placeTypeLabel} ${greekTaglineLocationPhrase}, ιδανική για ${heroAudience}.`
-      : `Αγαπημένη στάση ${placeTypeLabel} ${greekTaglineLocationPhrase}.`)
+      ? `Πρόταση για ${placeTypeLabel} ${greekTaglineLocationPhrase}, ιδανική για ${heroAudience}.`
+      : `Πρόταση για ${placeTypeLabel} ${greekTaglineLocationPhrase}.`)
     : (heroAudience
       ? t('place.tagline.withAudience', {
         type: placeTypeLabel,
@@ -892,7 +992,7 @@ function PlaceDetailPage({ entity, sameCategory, nearby, mentionedGuides, canoni
   const englishPosterAreaLabel = areaContext?.name || intentContexts[0]?.areaName || entity.region_en || entity.region || 'Greece';
   const posterAreaLabel = isGreek ? greekPosterAreaLabel : englishPosterAreaLabel;
   const posterDescriptor = isGreek
-    ? `Κορυφαία επιλογή για ${primaryCategoryLabel.toLowerCase()} ${getGreekPosterPreposition(greekPosterAreaLabel)} ${inflectGreekAreaLabel(greekPosterAreaLabel).toLowerCase()}, δημοφιλής και αγαπημένη από τους ντόπιους.`
+    ? `Κορυφαία επιλογή για ${primaryCategoryLabel.toLowerCase()} ${formatGreekPosterLocation(greekPosterAreaLabel)}, δημοφιλής και αγαπημένη από τους ντόπιους.`
     : `A top choice ${primaryCategoryLabel.toLowerCase()} in ${posterAreaLabel}, popular and loved by locals.`;
   const promoHighlight = isGreek ? 'Τοπικό αγαπημένο. Αξίζει να το μοιραστείς.' : 'A local favorite. Worth sharing.';
   const promoAddress = sanitizeAddressForDisplay(entity.address) || (isGreek ? `${posterAreaLabel}, Ελλάδα` : `${posterAreaLabel}, Greece`);

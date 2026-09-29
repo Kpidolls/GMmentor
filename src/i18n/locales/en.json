@@ -17,6 +17,12 @@
       "aria": "{{count}} places saved to your trip planner. Open trip planner."
     }
   },
+  "notFound": {
+    "title": "We could not find that page",
+    "description": "The address may have changed or may not exist. Search for a place or return to the homepage.",
+    "home": "Go to homepage",
+    "search": "Search places"
+  },
   "language": {
     "label": "Language",
     "english": "English",

@@ -438,6 +438,7 @@ const nextConfig = withPWA(withBundleAnalyzer({
       '/search': { page: '/search' },
       '/signup': { page: '/signup' },
       '/store': { page: '/store' },
+      '/404': { page: '/404' },
       '/blog': { page: '/blog' },
       '/blog/greek-bakeries-brunch-coffee-guide': {
         page: '/blog/[slug]',
