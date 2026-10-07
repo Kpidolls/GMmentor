@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 
 const OUT_DIR = path.join(process.cwd(), 'out');
@@ -11,7 +11,7 @@ const REDIRECTS = {
 
 function html(target) {
   const url = `${SITE_URL}${target}`;
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Redirecting…</title><meta name="robots" content="noindex"><link rel="canonical" href="${url}"><meta http-equiv="refresh" content="0; url=${target}"></head><body><a href="${target}">Continue</a><script>location.replace(${JSON.stringify(target)});</script></body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Redirectingâ€¦</title><meta name="robots" content="noindex"><link rel="canonical" href="${url}"><meta http-equiv="refresh" content="0; url=${target}"></head><body><a href="${target}">Continue</a><script>location.replace(${JSON.stringify(target)});</script></body></html>`;
 }
 
 function main() {
