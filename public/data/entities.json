@@ -19525,6 +19525,9 @@
     {
       "id": "dessertsRestaurants_195d87455c89",
       "slug": "ta-serbetia-stou-psyrri-195d",
+      "legacySlugs": [
+        "ta-serbetia-stou-psyrri-0617"
+      ],
       "kind": "restaurant",
       "name": "Ta Serbetia stou Psyrri",
       "lat": 37.97876489928662,

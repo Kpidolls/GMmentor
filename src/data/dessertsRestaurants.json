@@ -2958,7 +2958,8 @@
     "lat": "37.97876489928662",
     "lng": "23.725063077362762",
     "id": "dessertsRestaurants_195d87455c89",
-    "slug": "ta-serbetia-stou-psyrri-195d"
+    "slug": "ta-serbetia-stou-psyrri-195d",
+    "legacySlugs": ["ta-serbetia-stou-psyrri-0617"]
   },
   {
     "url": "https://maps.app.goo.gl/RjyUkSTj6TwcuZnn6?g_st=ipc",
