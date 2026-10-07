@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-29T07:09:39.151Z",
+    "generated_at": "2026-10-07T11:28:01.926Z",
     "generator_version": "1.0",
     "schema_version": 1,
     "canonical_url": "https://googlementor.com/data/entities.json",
@@ -8,9 +8,9 @@
       "el",
       "en"
     ],
-    "record_count": 3944,
+    "record_count": 3987,
     "by_kind": {
-      "restaurant": 3592,
+      "restaurant": 3635,
       "municipality": 352
     }
   },
@@ -19525,6 +19525,9 @@
     {
       "id": "dessertsRestaurants_195d87455c89",
       "slug": "ta-serbetia-stou-psyrri-195d",
+      "legacySlugs": [
+        "ta-serbetia-stou-psyrri-0617"
+      ],
       "kind": "restaurant",
       "name": "Ta Serbetia stou Psyrri",
       "lat": 37.97876489928662,
@@ -24614,6 +24617,22 @@
       ]
     },
     {
+      "id": "familyFriendly_0de964387cb0",
+      "slug": "sports-playpark-lavrio-paidotopos-0de9",
+      "kind": "restaurant",
+      "name": "Sports & playpark Lavrio - Παιδότοπος",
+      "lat": 37.71950978371138,
+      "lng": 24.043604917819295,
+      "url": "https://maps.app.goo.gl/J5Ah3Bns2zdqwWaH9?g_st=ic",
+      "address": "Laurium 195 00",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_0fe2b96ad54c",
       "slug": "paramythochora-powered-by-unboxholics-0fe2",
       "kind": "restaurant",
@@ -24686,6 +24705,22 @@
       "lng": 22.989769059470625,
       "url": "https://maps.app.goo.gl/b73PDCUhFyJQjo748?g_st=ipc",
       "address": "Agias Anastasias 15, Thessaloniki 555 35",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_15ac6226a9c2",
+      "slug": "kartland-15ac",
+      "kind": "restaurant",
+      "name": "Kartland",
+      "lat": 38.00740473549002,
+      "lng": 23.870654364798245,
+      "url": "https://maps.app.goo.gl/ex7CWHa4cYgTBpf46?g_st=ic",
+      "address": "Leof. Anthousas 8, Pallini 153 51",
       "categoryIds": [
         "family-friendly"
       ],
@@ -24774,6 +24809,22 @@
       ]
     },
     {
+      "id": "familyFriendly_1e1b252c3ad0",
+      "slug": "attalos-s-cafe-bar-restaurant-1e1b",
+      "kind": "restaurant",
+      "name": "Attalos’s Café Bar Restaurant",
+      "lat": 38.05659731394546,
+      "lng": 23.701832982132085,
+      "url": "https://maps.app.goo.gl/PE6QPG3p17pWLAgp7?g_st=ic",
+      "address": "Δημοτικό Πάρκο Ειρήνης Είσοδος από Αττάλου, Sintagmatos Και, Kamatero 134 51",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_1f20e7775883",
       "slug": "pantheon-water-park-crete-1f20",
       "kind": "restaurant",
@@ -24822,6 +24873,22 @@
       ]
     },
     {
+      "id": "familyFriendly_20e54fd67faa",
+      "slug": "lazy-leaf-20e5",
+      "kind": "restaurant",
+      "name": "Lazy Leaf",
+      "lat": 40.577481864289304,
+      "lng": 22.978054463572377,
+      "url": "https://maps.app.goo.gl/uPcJDerUSnZEnj3h6?g_st=ic",
+      "address": "Tompazi 17, Pilea 555 35",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_220ccb0fa158",
       "slug": "road-safety-park-220c",
       "kind": "restaurant",
@@ -24838,6 +24905,22 @@
       ]
     },
     {
+      "id": "familyFriendly_25acdf15c8de",
+      "slug": "sunny-spot-paidotopos-25ac",
+      "kind": "restaurant",
+      "name": "Sunny Spot Παιδότοπος",
+      "lat": 37.89396228948666,
+      "lng": 24.012116344421283,
+      "url": "https://maps.app.goo.gl/Z41CTSVEo1bea8XS7?g_st=ic",
+      "address": "Leof. G. Gregou, Thermopilon &, Porto Rafti 190 03",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_27bf58d1aae3",
       "slug": "mediterranean-cosmos-27bf",
       "kind": "restaurant",
@@ -24846,6 +24929,22 @@
       "lng": 22.993377329551482,
       "url": "https://maps.app.goo.gl/hyNCGfBFcBtGJn7q9?g_st=ipc",
       "address": "11ο χλμ εθνικής οδού, A/D Thessalonikis Neon Moudanion, Thessaloniki 570 01",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_286393ef1a0e",
+      "slug": "taverna-manaras-2863",
+      "kind": "restaurant",
+      "name": "Ταβέρνα Μανάρας",
+      "lat": 38.187649490235934,
+      "lng": 23.844029664801884,
+      "url": "https://maps.app.goo.gl/iDidy5pyN9SCTLQHA?g_st=ic",
+      "address": "Σταθμός Αφιδνών 190 14",
       "categoryIds": [
         "family-friendly"
       ],
@@ -24910,6 +25009,38 @@
       "lng": 25.35405984069226,
       "url": "https://maps.app.goo.gl/kxZ4WVVMgAh5nHj19?g_st=ipc",
       "address": "ΣΤΕΛΙΔΑ, Ag. Prokopios 843 00",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_2e72a66d9158",
+      "slug": "funghi-pizza-pasta-2e72",
+      "kind": "restaurant",
+      "name": "Funghi Pizza & Pasta",
+      "lat": 40.660507892171374,
+      "lng": 22.927413269485143,
+      "url": "https://maps.app.goo.gl/GWwYtS8eMNjESzQq7?g_st=ic",
+      "address": "Iatrou Gogousi 25, Stavroupoli 564 30",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_2fe1cc33478b",
+      "slug": "agios-nikolaos-park-2fe1",
+      "kind": "restaurant",
+      "name": "Agios Nikolaos Park",
+      "lat": 40.61177817118026,
+      "lng": 22.04528793249537,
+      "url": "https://maps.app.goo.gl/bAA2Ch72897y8JYh8?g_st=ic",
+      "address": "Naousa 592 00",
       "categoryIds": [
         "family-friendly"
       ],
@@ -24998,6 +25129,22 @@
       ]
     },
     {
+      "id": "familyFriendly_3c32dfd66244",
+      "slug": "mooven-baguette-cafe-3c32",
+      "kind": "restaurant",
+      "name": "Mooven Baguette Cafe",
+      "lat": 40.27421864842526,
+      "lng": 22.521396118141517,
+      "url": "https://maps.app.goo.gl/U4RqWERAM78f4kCb6?g_st=ic",
+      "address": "Mouson, Katerini 601 00",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_3f48a5ea582b",
       "slug": "gymboree-play-music-neo-psychiko-3f48",
       "kind": "restaurant",
@@ -25054,6 +25201,54 @@
       "lng": 22.950719648023778,
       "url": "https://maps.app.goo.gl/cAbkipq3qupUHj1v7?g_st=ipc",
       "address": "Leof. Meg. Alexandrou 14, Thessaloniki 546 43",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_43bf9c797d0c",
+      "slug": "paidiki-chara-kifisia-43bf",
+      "kind": "restaurant",
+      "name": "Παιδική Χαρά Κηφισιά",
+      "lat": 38.07571529145127,
+      "lng": 23.82782889424942,
+      "url": "https://maps.app.goo.gl/xs4jdNShstRt2nVh6?g_st=ic",
+      "address": "Xenias 25, Kifisia 145 62",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_44c0398063b5",
+      "slug": "paidotopos-paramythoypoli-44c0",
+      "kind": "restaurant",
+      "name": "Παιδότοπος Παραμυθούπολη",
+      "lat": 40.77353484576797,
+      "lng": 22.580084300373215,
+      "url": "https://maps.app.goo.gl/dDm6qUqHESpkwKGS8?g_st=ic",
+      "address": "Mark. Mpotsari, Koufalia 571 00",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_454c26eb96f0",
+      "slug": "capu-family-bar-454c",
+      "kind": "restaurant",
+      "name": "CAPU family bar",
+      "lat": 38.03447754636648,
+      "lng": 23.7641427776519,
+      "url": "https://maps.app.goo.gl/GDRkeE76qzkdG82S7?g_st=ic",
+      "address": "Pl. Panagi Tsaldari 19, Nea Ionia 142 33",
       "categoryIds": [
         "family-friendly"
       ],
@@ -25190,6 +25385,22 @@
       ]
     },
     {
+      "id": "familyFriendly_5576f3d41c0d",
+      "slug": "arena-jr-fun-farm-5576",
+      "kind": "restaurant",
+      "name": "Arena Jr Fun Farm",
+      "lat": 38.00166016808108,
+      "lng": 23.859650052236976,
+      "url": "https://maps.app.goo.gl/jsSNDVmaQ6de6thD7?g_st=ic",
+      "address": "Leof. Spaton 77, Gerakas 153 44",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_55f46ad3d361",
       "slug": "sea-turtle-rescue-centre-55f4",
       "kind": "restaurant",
@@ -25286,6 +25497,22 @@
       ]
     },
     {
+      "id": "familyFriendly_5bc270415a7c",
+      "slug": "blueberry-cafe-5bc2",
+      "kind": "restaurant",
+      "name": "Blueberry Café",
+      "lat": 37.92294806712938,
+      "lng": 23.739585955287833,
+      "url": "https://maps.app.goo.gl/GrAPTDBd1fvdTxVv9?g_st=ic",
+      "address": "Pl. Karaiskaki, Λεωφ. Ιωνίας 72 Απέναντι,( εντός πλατείας, Alimos 174 56",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_5c291a1b67e5",
       "slug": "sport-point-5c29",
       "kind": "restaurant",
@@ -25366,6 +25593,22 @@
       ]
     },
     {
+      "id": "familyFriendly_5fe180501c12",
+      "slug": "fokianos-cafe-5fe1",
+      "kind": "restaurant",
+      "name": "Fokianos Cafe",
+      "lat": 37.969557444256246,
+      "lng": 23.738128828312973,
+      "url": "https://maps.app.goo.gl/aQ4afGmHFkjv8rcF7?g_st=ic",
+      "address": "Leof. Vasilissis Olgas 1, Athina 105 57",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_605cb6ee53f8",
       "slug": "paidiki-chara-plateias-karaiskaki-605c",
       "kind": "restaurant",
@@ -25398,6 +25641,22 @@
       ]
     },
     {
+      "id": "familyFriendly_62f875bac520",
+      "slug": "the-park-rafina-62f8",
+      "kind": "restaurant",
+      "name": "The Park - Rafina",
+      "lat": 38.01768977206722,
+      "lng": 24.01150444421273,
+      "url": "https://maps.app.goo.gl/F5RLb3ed4R4ukqMY8?g_st=ic",
+      "address": "Argonafton 16, Rafina 190 09",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_647731b73787",
       "slug": "lake-kournas-6477",
       "kind": "restaurant",
@@ -25422,6 +25681,38 @@
       "lng": 23.088737171472587,
       "url": "https://maps.app.goo.gl/zejLUTjQA5bbDHBb6?g_st=ipc",
       "address": "EO Thessalonikis Kavalas, Volvi 572 00",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_684701082b39",
+      "slug": "mochi-shared-care-6847",
+      "kind": "restaurant",
+      "name": "Mochi Shared Care",
+      "lat": 38.015315992104384,
+      "lng": 23.793125794249413,
+      "url": "https://maps.app.goo.gl/zZgwSj2oDecFsmoH6?g_st=ic",
+      "address": "Filikis Etaerias 39, Chalandri 152 32",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_6c14a6790f9e",
+      "slug": "tango-cafe-6c14",
+      "kind": "restaurant",
+      "name": "Tango cafe",
+      "lat": 38.03457431420368,
+      "lng": 23.70751341945416,
+      "url": "https://maps.app.goo.gl/WjNspKD8ABia4i8x9?g_st=ic",
+      "address": "Paridos 100, Ilion 131 22",
       "categoryIds": [
         "family-friendly"
       ],
@@ -25574,6 +25865,22 @@
       ]
     },
     {
+      "id": "familyFriendly_75b08cbe1306",
+      "slug": "lipasmata-multifunctional-park-in-drapetsona-75b0",
+      "kind": "restaurant",
+      "name": "Lipasmata Multifunctional Park in Drapetsona",
+      "lat": 37.94170606518333,
+      "lng": 23.621421376096947,
+      "url": "https://maps.app.goo.gl/o8gaJPxL1Dsg75uB8?g_st=ic",
+      "address": "Βόρεια είσοδος Νότια είσοδος, περιοχή Κράκαρη (παραπλεύρως Ε1 πύλης λιμανιού, Γρ. Λαμπράκη, Sfagion, Drapetsona 186 48",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_75cf039dc3c8",
       "slug": "monsterville-75cf",
       "kind": "restaurant",
@@ -25606,6 +25913,22 @@
       ]
     },
     {
+      "id": "familyFriendly_7823b38c2b17",
+      "slug": "avant-garde-sports-club-7823",
+      "kind": "restaurant",
+      "name": "Avant Garde Sports Club",
+      "lat": 40.48412635535969,
+      "lng": 22.986319845524132,
+      "url": "https://maps.app.goo.gl/rPFFB4nJQwqsT3XC8?g_st=ic",
+      "address": "Το Χωριό της Ειρήνης (Irinis Village), Θεσσαλονίκη 570 01",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_784064c3c628",
       "slug": "parko-aixonis-7840",
       "kind": "restaurant",
@@ -25630,6 +25953,22 @@
       "lng": 28.059689128523214,
       "url": "https://maps.app.goo.gl/VV66xLTvU3w6LKzy9?g_st=ipc",
       "address": "Επάνω Καλαμωνας 851 06",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_7af87862a0fc",
+      "slug": "pick-nick-7af8",
+      "kind": "restaurant",
+      "name": "Pick Nick",
+      "lat": 37.981045696134984,
+      "lng": 23.650523995095813,
+      "url": "https://maps.app.goo.gl/GAUpHoWXn6HrmrNXA?g_st=ic",
+      "address": "Grigoriou Lampraki 202, Koridallos 181 20",
       "categoryIds": [
         "family-friendly"
       ],
@@ -25808,6 +26147,22 @@
       ]
     },
     {
+      "id": "familyFriendly_850f5e9e1cac",
+      "slug": "booki-kluki-850f",
+      "kind": "restaurant",
+      "name": "Booki Kluki",
+      "lat": 37.863014334971275,
+      "lng": 23.75601406479805,
+      "url": "https://maps.app.goo.gl/VmxUWmxVNuvMZALr9?g_st=ic",
+      "address": "Filikis Eterias 10, Glifada 166 74",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_851fdc1f68b5",
       "slug": "parapotamio-parko-artas-851f",
       "kind": "restaurant",
@@ -25864,6 +26219,22 @@
       "lng": 22.922356233082034,
       "url": "https://maps.app.goo.gl/y5U3WvSQGqnkW6KY7?g_st=ipc",
       "address": "Palaiokomis 22, Evosmos 562 24",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_8a79bcdafc50",
+      "slug": "kartodromo-athens-kart-8a79",
+      "kind": "restaurant",
+      "name": "KARTODROMO - ATHENS KART",
+      "lat": 38.17923869032876,
+      "lng": 23.854890694249317,
+      "url": "https://maps.app.goo.gl/JtLH7WBSFMAnypwb6?g_st=ic",
+      "address": "28ο Κλμ Ε.Ο. Αθηνων, Θεοδoσιoυ Tιtοπουλου, Afidnes 190 14",
       "categoryIds": [
         "family-friendly"
       ],
@@ -26077,6 +26448,22 @@
       "lng": 23.019251786146132,
       "url": "https://maps.app.goo.gl/Cv1bZomhT5nP8ZDp6?g_st=ic",
       "address": "Vasilikis Tavaki 6, Thermi 570 01",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_988383321248",
+      "slug": "waterpark-makedonikou-9883",
+      "kind": "restaurant",
+      "name": "Waterpark Makedonikou",
+      "lat": 40.677896800848515,
+      "lng": 22.951436773930688,
+      "url": "https://maps.app.goo.gl/eEVCGqySCMQ9B3BR8?g_st=ic",
+      "address": "Ιπποδρομίου. Εσωτερική Περιφερειακή, Κόμβος, Efkarpia 564 29",
       "categoryIds": [
         "family-friendly"
       ],
@@ -26367,6 +26754,22 @@
       ]
     },
     {
+      "id": "familyFriendly_aa89171f1be0",
+      "slug": "south-padel-club-aa89",
+      "kind": "restaurant",
+      "name": "South Padel Club",
+      "lat": 35.04719715909048,
+      "lng": 24.87624224499126,
+      "url": "https://maps.app.goo.gl/fhDMwoN5gJpPhskaA?g_st=ic",
+      "address": "Moires 704 00",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_aade95e892c7",
       "slug": "parko-mikis-theodorakis-typet-aade",
       "kind": "restaurant",
@@ -26447,6 +26850,22 @@
       ]
     },
     {
+      "id": "familyFriendly_ae7dc1855353",
+      "slug": "circuit-of-megara-athens-international-circuit-ae7d",
+      "kind": "restaurant",
+      "name": "Circuit of Megara - Athens International Circuit",
+      "lat": 37.98588423541282,
+      "lng": 23.363028864798398,
+      "url": "https://maps.app.goo.gl/8uUsY3i8qaDmHEyg6?g_st=ic",
+      "address": "Ε.Ο. Αθηνών - Κορίνθου (41xλμ), Kόμβος, Pachi 191 00",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_afbd73fa31fe",
       "slug": "neo-psifiako-planitario-idrymatos-eygenidoy-afbd",
       "kind": "restaurant",
@@ -26479,6 +26898,43 @@
       ]
     },
     {
+      "id": "familyFriendly_b0ca2302a4d4",
+      "slug": "tsouknida-b0ca",
+      "legacySlugs": [
+        "tsouknida-5a1a"
+      ],
+      "kind": "restaurant",
+      "name": "Tsouknída",
+      "lat": 40.641969444046175,
+      "lng": 23.016082132938536,
+      "url": "https://maps.app.goo.gl/5shFhVrGJxP5Aag59?g_st=ic",
+      "address": "28is Oktovriou 0, Asvestochori 570 10",
+      "categoryIds": [
+        "family-friendly",
+        "fish-tavernas"
+      ],
+      "categories": [
+        "Kid Friendly Locations",
+        "Fish Tavernas"
+      ]
+    },
+    {
+      "id": "familyFriendly_b357e8c560c5",
+      "slug": "sidirodromiko-parko-kalamatas-b357",
+      "kind": "restaurant",
+      "name": "Σιδηροδρομικό Πάρκο Καλαμάτας",
+      "lat": 37.028627702657495,
+      "lng": 22.10995749425048,
+      "url": "https://maps.app.goo.gl/VDNykhEofQbysf3E9?g_st=ic",
+      "address": "Praxitelous 2, Kalamata 241 00",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_b360cd975d06",
       "slug": "voula-park-b360",
       "kind": "restaurant",
@@ -26487,6 +26943,22 @@
       "lng": 23.762193155062445,
       "url": "https://maps.app.goo.gl/V4oZWgECkqhJFkK46?g_st=ipc",
       "address": "Nireos, Voula, Athens 166 73",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_b405b22bf885",
+      "slug": "xpadel-playground-b405",
+      "kind": "restaurant",
+      "name": "Xpadel_playground",
+      "lat": 37.9217420033358,
+      "lng": 22.930966063384453,
+      "url": "https://maps.app.goo.gl/awAntmJA5hXUzeqm7?g_st=ic",
+      "address": "Θεση πύργος, Korinthos 201 00",
       "categoryIds": [
         "family-friendly"
       ],
@@ -26740,6 +27212,22 @@
       ]
     },
     {
+      "id": "familyFriendly_c05c83553103",
+      "slug": "aktaion-seaside-bar-c05c",
+      "kind": "restaurant",
+      "name": "Aktaion Seaside Bar",
+      "lat": 40.04178911572096,
+      "lng": 23.482512068329207,
+      "url": "https://maps.app.goo.gl/XkaYZfFw7uX2WrWJ9?g_st=ic",
+      "address": "παραλια, Kriopigi 630 77",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_c4b368df83c1",
       "slug": "oikogeneiako-parko-perivallontikis-eyaisthitopoiisis-c4b3",
       "kind": "restaurant",
@@ -26884,6 +27372,22 @@
       ]
     },
     {
+      "id": "familyFriendly_d1edaad9b3a0",
+      "slug": "playground-moustakas-d1ed",
+      "kind": "restaurant",
+      "name": "PLAYGROUND MOUSTAKAS",
+      "lat": 38.008680392174846,
+      "lng": 23.87219906480228,
+      "url": "https://maps.app.goo.gl/4s8DcUJC9cPV4qgd7?g_st=ic",
+      "address": "Leof. Anthousas 8, Anthousa 153 49",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_d34de8d9d566",
       "slug": "kerkini-lake-national-park-d34d",
       "legacySlugs": [
@@ -26913,6 +27417,22 @@
       "lng": 23.825630520397997,
       "url": "https://maps.app.goo.gl/pF3h6gGnqMiku8Wg9?g_st=ic",
       "address": "Sismanogliou 74, Marousi 151 26",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_d4c4f62fa4a5",
+      "slug": "anasa-the-garden-spot-d4c4",
+      "kind": "restaurant",
+      "name": "Ανάσα The Garden Spot",
+      "lat": 40.66015364532348,
+      "lng": 22.946191794242417,
+      "url": "https://maps.app.goo.gl/jEPfZw7rj45F8W6n6?g_st=ic",
+      "address": "El. Venizelou 32, Polichni 565 33",
       "categoryIds": [
         "family-friendly"
       ],
@@ -27017,6 +27537,22 @@
       ]
     },
     {
+      "id": "familyFriendly_dc238042e97d",
+      "slug": "koydoyni-cafe-dc23",
+      "kind": "restaurant",
+      "name": "Κουδούνι cafe",
+      "lat": 38.09045108870049,
+      "lng": 23.70982799171269,
+      "url": "https://maps.app.goo.gl/9QE8jpGJppaXxPuKA?g_st=ic",
+      "address": "Αλιακμωνος, Pindou, Ano Liosia 133 41",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_dcb80555b0c4",
       "slug": "hakuna-matata-family-park-dcb8",
       "kind": "restaurant",
@@ -27081,6 +27617,22 @@
       ]
     },
     {
+      "id": "familyFriendly_ddb16b826f8b",
+      "slug": "fun-spot-ddb1",
+      "kind": "restaurant",
+      "name": "Fun Spot",
+      "lat": 40.67612134150691,
+      "lng": 22.94225902871456,
+      "url": "https://maps.app.goo.gl/Hn7he6JM17DctHAe9?g_st=ic",
+      "address": "Ko 15, Polichni 564 29",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_df83d6806c13",
       "slug": "oneiroypoli-dramas-df83",
       "kind": "restaurant",
@@ -27089,6 +27641,22 @@
       "lng": 24.146200919467475,
       "url": "https://maps.app.goo.gl/hQZWfg9QfnFeMyBTA?g_st=ipc",
       "address": "Drama 661 00",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_dfd2d39b51f0",
+      "slug": "paidiki-chara-river-west-dfd2",
+      "kind": "restaurant",
+      "name": "Παιδική Χαρά River West",
+      "lat": 37.980953635396254,
+      "lng": 23.676076594245025,
+      "url": "https://maps.app.goo.gl/VKGGBDr6LZLDgE776?g_st=ic",
+      "address": "Proodou, Egaleo 122 41",
       "categoryIds": [
         "family-friendly"
       ],
@@ -27161,6 +27729,54 @@
       ]
     },
     {
+      "id": "familyFriendly_e80d80633a0b",
+      "slug": "playce-e80d",
+      "kind": "restaurant",
+      "name": "PLAyCE",
+      "lat": 37.99421555163823,
+      "lng": 23.76373356212965,
+      "url": "https://maps.app.goo.gl/xUShuzb6yn6W9dcS7?g_st=ic",
+      "address": "Vasili Logothetidi 14, Athina 115 24",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_e9c85e16f0df",
+      "slug": "nea-mparmpoyta-restaurant-e9c8",
+      "kind": "restaurant",
+      "name": "Νέα Μπαρμπούτα Restaurant",
+      "lat": 40.52110456425766,
+      "lng": 22.19783909424693,
+      "url": "https://maps.app.goo.gl/RwKKKAayfbHHZjD98?g_st=ic",
+      "address": "Τριποταμου 1, Veria 591 32",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_eabb053f6671",
+      "slug": "ena-ena-eabb",
+      "kind": "restaurant",
+      "name": "Ένα & Ένα",
+      "lat": 38.00898110214376,
+      "lng": 23.652801890173688,
+      "url": "https://maps.app.goo.gl/VenemsvYTLz6QWVJ6?g_st=ic",
+      "address": "Kiprou 19, Chaidari 124 61",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_eb2517ef6cdc",
       "slug": "flisvos-playground-eb25",
       "kind": "restaurant",
@@ -27169,6 +27785,22 @@
       "lng": 23.6891198217997,
       "url": "https://maps.app.goo.gl/jLUBCzf12Wt3RSRK7?g_st=ipc",
       "address": "Palaio Faliro 175 61",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_ec897e01ba7a",
+      "slug": "agroktima-tithorea-ec89",
+      "kind": "restaurant",
+      "name": "Αγρόκτημα Τιθορέα",
+      "lat": 38.604977078441756,
+      "lng": 22.666294852754167,
+      "url": "https://maps.app.goo.gl/a8BeMN1aXtK6UAHg7?g_st=ic",
+      "address": "Tithorea 350 15",
       "categoryIds": [
         "family-friendly"
       ],
@@ -27201,6 +27833,22 @@
       "lng": 20.627015564275286,
       "url": "https://maps.app.goo.gl/JMXqaxKVD3CmU7Ft8?g_st=ipc",
       "address": "BOURAZANI Konitsa, BOURAZANi KONITSA 441 00",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_f00c35bd6db1",
+      "slug": "seich-sou-park-f00c",
+      "kind": "restaurant",
+      "name": "Seich Sou Park",
+      "lat": 40.639359945243726,
+      "lng": 22.968071664795914,
+      "url": "https://maps.app.goo.gl/UC3xUwLaK1ChG4nT8?g_st=ic",
+      "address": "JXQ9+M8, Ag. Pavlos 554 38",
       "categoryIds": [
         "family-friendly"
       ],
@@ -27273,6 +27921,22 @@
       ]
     },
     {
+      "id": "familyFriendly_f585cc015c7a",
+      "slug": "patitiri-zachaios-f585",
+      "kind": "restaurant",
+      "name": "Πατητήρι Ζαχαίος",
+      "lat": 37.95977219270354,
+      "lng": 23.856519264802348,
+      "url": "https://maps.app.goo.gl/isWs9rc9HXc4Thsv8?g_st=ic",
+      "address": "Leof. Lavriou 71, Peania 190 02",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_f5a054e30c6e",
       "slug": "cherryland-ktima-fokaeon-f5a0",
       "kind": "restaurant",
@@ -27289,6 +27953,22 @@
       ]
     },
     {
+      "id": "familyFriendly_f7183e761425",
+      "slug": "yamato-f718",
+      "kind": "restaurant",
+      "name": "YAMATO",
+      "lat": 38.088434890728216,
+      "lng": 23.81740172904818,
+      "url": "https://maps.app.goo.gl/7FcSD4W6fGJWG24V7?g_st=ic",
+      "address": "El. Venizelou 59, Nea Erithrea 146 71",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
       "id": "familyFriendly_f9db02b0c4d4",
       "slug": "saint-george-athletic-park-f9db",
       "kind": "restaurant",
@@ -27297,6 +27977,22 @@
       "lng": 21.786690732349854,
       "url": "https://maps.app.goo.gl/pwB8sxfXU5yLbEHY9?g_st=ipc",
       "address": "Trikala 421 00",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_fae8ed16454e",
+      "slug": "moyseio-polemikis-aeroporias-fae8",
+      "kind": "restaurant",
+      "name": "Μουσείο Πολεμικής Αεροπορίας",
+      "lat": 38.104826263487446,
+      "lng": 23.777811364799916,
+      "url": "https://maps.app.goo.gl/3tKa1Xnt8Znw8aDP7?g_st=ic",
+      "address": "Unnamed Road 136 72, Acharnes 136 72",
       "categoryIds": [
         "family-friendly"
       ],
@@ -27345,6 +28041,22 @@
       "lng": 23.710426716839976,
       "url": "https://maps.app.goo.gl/fZKSbKJMUaonK7vh9?g_st=ipc",
       "address": "Λεωφ. Ελ. Βενιζέλου 235, Παλαιό Φάληρο 175 63",
+      "categoryIds": [
+        "family-friendly"
+      ],
+      "categories": [
+        "Kid Friendly Locations"
+      ]
+    },
+    {
+      "id": "familyFriendly_ff69506ccf73",
+      "slug": "bumblin-ff69",
+      "kind": "restaurant",
+      "name": "Bumblin",
+      "lat": 38.01425164022529,
+      "lng": 23.678378506457133,
+      "url": "https://maps.app.goo.gl/eNGMcGV7bzHRRcjE8?g_st=ic",
+      "address": "Pipinou 29, Peristeri 121 36",
       "categoryIds": [
         "family-friendly"
       ],
@@ -29460,22 +30172,6 @@
       "lng": 23.122079543325817,
       "url": "https://maps.app.goo.gl/J6rBsvJ8fqbki2T77?g_st=ipc",
       "address": "Ilia, Ilia, Edipsos 343 00",
-      "categoryIds": [
-        "fish-tavernas"
-      ],
-      "categories": [
-        "Fish Tavernas"
-      ]
-    },
-    {
-      "id": "fishTavernasRestaurants_5a1acfab0629",
-      "slug": "tsouknida-5a1a",
-      "kind": "restaurant",
-      "name": "Tsouknída",
-      "lat": 40.64197017301936,
-      "lng": 23.01608188028885,
-      "url": "https://maps.app.goo.gl/xAJUBaZ5Hv4Rggaw9",
-      "address": "28is Oktovriou 0, Asvestochori 570 10",
       "categoryIds": [
         "fish-tavernas"
       ],

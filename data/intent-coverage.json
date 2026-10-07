@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T07:11:35.684Z",
+  "generatedAt": "2026-10-07T11:29:55.654Z",
   "thresholds": {
     "minAreaEntityCount": 8,
     "minCategoryAreaCount": 5
@@ -9,10 +9,10 @@
     "categories": 16,
     "candidateCombinations": 5632,
     "generatedAreaPages": 141,
-    "generatedCategoryAreaPages": 1052
+    "generatedCategoryAreaPages": 1063
   },
   "filteredCombinations": {
-    "below_threshold": 4580,
+    "below_threshold": 4569,
     "invalid_area": 0,
     "invalid_category": 0,
     "duplicate_intent": 0
@@ -2046,6 +2046,10 @@
       "areaSlug": "kamatero"
     },
     {
+      "categorySlug": "family-friendly",
+      "areaSlug": "kamatero"
+    },
+    {
       "categorySlug": "cheap-eats",
       "areaSlug": "kamatero"
     },
@@ -2118,6 +2122,10 @@
       "areaSlug": "petroypoli"
     },
     {
+      "categorySlug": "family-friendly",
+      "areaSlug": "petroypoli"
+    },
+    {
       "categorySlug": "brunch",
       "areaSlug": "petroypoli"
     },
@@ -2143,6 +2151,10 @@
     },
     {
       "categorySlug": "desserts",
+      "areaSlug": "peristeri"
+    },
+    {
+      "categorySlug": "family-friendly",
       "areaSlug": "peristeri"
     },
     {
@@ -2275,6 +2287,10 @@
     },
     {
       "categorySlug": "desserts",
+      "areaSlug": "nikaia"
+    },
+    {
+      "categorySlug": "family-friendly",
       "areaSlug": "nikaia"
     },
     {
@@ -2391,6 +2407,10 @@
     },
     {
       "categorySlug": "family-friendly",
+      "areaSlug": "peyka"
+    },
+    {
+      "categorySlug": "family-friendly",
       "areaSlug": "panorama"
     },
     {
@@ -2486,6 +2506,10 @@
       "areaSlug": "polichni"
     },
     {
+      "categorySlug": "family-friendly",
+      "areaSlug": "polichni"
+    },
+    {
       "categorySlug": "brunch",
       "areaSlug": "polichni"
     },
@@ -2518,6 +2542,10 @@
       "areaSlug": "stayroypoli"
     },
     {
+      "categorySlug": "family-friendly",
+      "areaSlug": "stayroypoli"
+    },
+    {
       "categorySlug": "brunch",
       "areaSlug": "stayroypoli"
     },
@@ -2539,6 +2567,10 @@
     },
     {
       "categorySlug": "greek-restaurants",
+      "areaSlug": "ampelokipoi-menemeni"
+    },
+    {
+      "categorySlug": "family-friendly",
       "areaSlug": "ampelokipoi-menemeni"
     },
     {
@@ -2571,6 +2603,10 @@
     },
     {
       "categorySlug": "desserts",
+      "areaSlug": "neapoli-sykies"
+    },
+    {
+      "categorySlug": "family-friendly",
       "areaSlug": "neapoli-sykies"
     },
     {
@@ -3151,6 +3187,10 @@
     },
     {
       "categorySlug": "greek-restaurants",
+      "areaSlug": "kastella"
+    },
+    {
+      "categorySlug": "family-friendly",
       "areaSlug": "kastella"
     },
     {
@@ -4282,6 +4322,10 @@
       "areaSlug": "eptapyrgio"
     },
     {
+      "categorySlug": "family-friendly",
+      "areaSlug": "eptapyrgio"
+    },
+    {
       "categorySlug": "brunch",
       "areaSlug": "eptapyrgio"
     },
@@ -4373,16 +4417,16 @@
   "densityAnalysis": {
     "areaEntityCounts": {
       "min": 0,
-      "max": 803,
-      "avg": 85.41,
+      "max": 804,
+      "avg": 85.93,
       "p50": 4,
-      "p75": 59,
-      "p90": 294
+      "p75": 61,
+      "p90": 297
     },
     "categoryEntityCounts": {
       "min": 53,
       "max": 785,
-      "avg": 237,
+      "avg": 239.75,
       "p50": 131,
       "p75": 345,
       "p90": 431
@@ -4390,9 +4434,9 @@
     "categoryAreaCounts": {
       "min": 3,
       "max": 142,
-      "avg": 29.52,
+      "avg": 29.4,
       "p50": 16,
-      "p75": 43,
+      "p75": 42,
       "p90": 75
     }
   },
@@ -4401,6 +4445,14 @@
       "categoryId": "greek-restaurants",
       "categorySlug": "greek-restaurants",
       "threshold": 8,
+      "candidates": 352,
+      "generated": 96,
+      "filteredBelowThreshold": 256
+    },
+    {
+      "categoryId": "family-friendly",
+      "categorySlug": "family-friendly",
+      "threshold": 4,
       "candidates": 352,
       "generated": 96,
       "filteredBelowThreshold": 256
@@ -4428,14 +4480,6 @@
       "candidates": 352,
       "generated": 86,
       "filteredBelowThreshold": 266
-    },
-    {
-      "categoryId": "family-friendly",
-      "categorySlug": "family-friendly",
-      "threshold": 4,
-      "candidates": 352,
-      "generated": 85,
-      "filteredBelowThreshold": 267
     },
     {
       "categoryId": "coffee-brunch",
@@ -4531,121 +4575,121 @@
       "id": "municipalities_5bc013791cf8",
       "slug": "plaka",
       "name": "Πλάκα",
-      "count": 803
+      "count": 804
     },
     {
       "id": "municipalities_877c3bc81df5",
       "slug": "syntagma",
       "name": "Σύνταγμα",
-      "count": 799
+      "count": 801
     },
     {
       "id": "municipalities_0cae2c00b932",
       "slug": "kolonaki",
       "name": "Κολωνάκι",
-      "count": 789
+      "count": 791
     },
     {
       "id": "municipalities_d7e1aaaed4f9",
       "slug": "monastiraki",
       "name": "Μοναστηράκι",
-      "count": 788
+      "count": 789
     },
     {
       "id": "municipalities_4149fa79e27b",
       "slug": "akropoli",
       "name": "Ακρόπολη",
-      "count": 788
+      "count": 789
     },
     {
       "id": "municipalities_2bcfcb8b899f",
       "slug": "psyrri",
       "name": "Ψυρρή",
-      "count": 787
+      "count": 788
     },
     {
       "id": "municipalities_0fd1d03201a0",
       "slug": "mets",
       "name": "Μετς",
-      "count": 786
+      "count": 788
     },
     {
       "id": "municipalities_616efd2a0d9b",
       "slug": "koykaki",
       "name": "Κουκάκι",
-      "count": 785
-    },
-    {
-      "id": "municipalities_b85b54408d92",
-      "slug": "thiseio",
-      "name": "Θησείο",
-      "count": 779
+      "count": 786
     },
     {
       "id": "municipalities_2f324ee27306",
       "slug": "exarcheia",
       "name": "Εξάρχεια",
-      "count": 778
+      "count": 780
+    },
+    {
+      "id": "municipalities_b85b54408d92",
+      "slug": "thiseio",
+      "name": "Θησείο",
+      "count": 780
     },
     {
       "id": "municipalities_0eb5ad956816",
       "slug": "neos-kosmos",
       "name": "Νέος Κόσμος",
-      "count": 767
+      "count": 768
     },
     {
       "id": "municipalities_7e1691d5f08d",
       "slug": "metaxoyrgeio",
       "name": "Μεταξουργείο",
-      "count": 760
+      "count": 761
     },
     {
       "id": "municipalities_75ddb64a42fd",
       "slug": "gyzi",
       "name": "Γύζη",
-      "count": 753
+      "count": 755
     },
     {
       "id": "municipalities_80c55a9453fa",
       "slug": "ano-petralona",
       "name": "Άνω Πετράλωνα",
-      "count": 753
+      "count": 754
     },
     {
       "id": "municipalities_af1f7d07cb18",
       "slug": "gkazi",
       "name": "Γκάζι",
-      "count": 751
+      "count": 753
     },
     {
       "id": "municipalities_0889636ab7df",
       "slug": "petralona",
       "name": "Πετράλωνα",
-      "count": 749
+      "count": 751
     },
     {
       "id": "municipalities_f73663b8f738",
       "slug": "attiki",
       "name": "Αττική",
-      "count": 733
+      "count": 735
     },
     {
       "id": "municipalities_e7a6ea2b75ba",
       "slug": "pagkrati",
       "name": "Παγκράτι",
-      "count": 732
+      "count": 733
     },
     {
       "id": "municipalities_61eaea5bd3d9",
       "slug": "ilisia",
       "name": "Ιλίσια",
-      "count": 714
+      "count": 716
     },
     {
       "id": "municipalities_2dbf77b73060",
       "slug": "royf",
       "name": "Ρουφ",
-      "count": 713
+      "count": 715
     }
   ],
   "highestDensityCategories": [
@@ -4680,6 +4724,12 @@
       "count": 345
     },
     {
+      "id": "family-friendly",
+      "slug": "family-friendly",
+      "name": "Kid Friendly Locations",
+      "count": 228
+    },
+    {
       "id": "luxury-dining",
       "slug": "luxury-dining",
       "name": "Luxury Dining",
@@ -4690,12 +4740,6 @@
       "slug": "italian",
       "name": "Italian Restaurants",
       "count": 199
-    },
-    {
-      "id": "family-friendly",
-      "slug": "family-friendly",
-      "name": "Kid Friendly Locations",
-      "count": 184
     },
     {
       "id": "burgers",

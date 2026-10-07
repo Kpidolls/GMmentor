@@ -483,6 +483,7 @@
 <url><loc>https://googlementor.com/family-friendly/pikermi</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/kamatero</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/desserts/kamatero</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
+<url><loc>https://googlementor.com/family-friendly/kamatero</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/cheap-eats/kamatero</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/agioi-anargyroi</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/desserts/agioi-anargyroi</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
@@ -501,6 +502,7 @@
 <url><loc>https://googlementor.com/mexican/ilion</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/petroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/desserts/petroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
+<url><loc>https://googlementor.com/family-friendly/petroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/brunch/petroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/italian/petroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/cheap-eats/petroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
@@ -508,6 +510,7 @@
 <url><loc>https://googlementor.com/mexican/petroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/peristeri</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/desserts/peristeri</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
+<url><loc>https://googlementor.com/family-friendly/peristeri</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/brunch/peristeri</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/italian/peristeri</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/cheap-eats/peristeri</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
@@ -541,6 +544,7 @@
 <url><loc>https://googlementor.com/cheap-eats/korydallos</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/nikaia</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/desserts/nikaia</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
+<url><loc>https://googlementor.com/family-friendly/nikaia</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/fish-tavernas/nikaia</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/italian/nikaia</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/cheap-eats/nikaia</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
@@ -569,6 +573,7 @@
 <url><loc>https://googlementor.com/mexican/thessaloniki</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/luxury-dining/thessaloniki</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/rooftops/thessaloniki</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
+<url><loc>https://googlementor.com/family-friendly/peyka</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/family-friendly/panorama</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/burgers/panorama</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/kalamaria</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
@@ -593,6 +598,7 @@
 <url><loc>https://googlementor.com/burgers/kordelio-eyosmos</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/polichni</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/desserts/polichni</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
+<url><loc>https://googlementor.com/family-friendly/polichni</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/brunch/polichni</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/fish-tavernas/polichni</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/italian/polichni</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
@@ -601,12 +607,14 @@
 <url><loc>https://googlementor.com/attractions/stayroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/stayroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/desserts/stayroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
+<url><loc>https://googlementor.com/family-friendly/stayroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/brunch/stayroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/fish-tavernas/stayroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/italian/stayroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/cheap-eats/stayroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/burgers/stayroypoli</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/ampelokipoi-menemeni</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
+<url><loc>https://googlementor.com/family-friendly/ampelokipoi-menemeni</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/brunch/ampelokipoi-menemeni</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/fish-tavernas/ampelokipoi-menemeni</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/italian/ampelokipoi-menemeni</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
@@ -615,6 +623,7 @@
 <url><loc>https://googlementor.com/attractions/neapoli-sykies</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/neapoli-sykies</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/desserts/neapoli-sykies</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
+<url><loc>https://googlementor.com/family-friendly/neapoli-sykies</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/brunch/neapoli-sykies</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/fish-tavernas/neapoli-sykies</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/italian/neapoli-sykies</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
@@ -760,6 +769,7 @@
 <url><loc>https://googlementor.com/italian/ekali</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/monasteries-churches/stamata</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/kastella</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
+<url><loc>https://googlementor.com/family-friendly/kastella</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/fish-tavernas/kastella</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/italian/kastella</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/cheap-eats/kastella</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
@@ -1042,6 +1052,7 @@
 <url><loc>https://googlementor.com/attractions/eptapyrgio</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/greek-restaurants/eptapyrgio</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/desserts/eptapyrgio</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
+<url><loc>https://googlementor.com/family-friendly/eptapyrgio</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/brunch/eptapyrgio</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/fish-tavernas/eptapyrgio</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
 <url><loc>https://googlementor.com/italian/eptapyrgio</loc><changefreq>weekly</changefreq><priority>0.82</priority></url>
@@ -1337,6 +1348,7 @@
 <url><loc>https://googlementor.com/place/agios-georgios-lasithioy-43ae</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/agios-merkoyrios-5df0</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/agios-nikolaos-ccbf</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+<url><loc>https://googlementor.com/place/agios-nikolaos-park-2fe1</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/agios-stefanos-da89</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/agios-symeon-agios-symeon-8f0a</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/agkistri-f635</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
@@ -1349,6 +1361,7 @@
 <url><loc>https://googlementor.com/place/agora-beach-greek-kouzina-beach-bar-2451</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/agora-select-bfe0</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/agroktima-regkoykoy-taverna-stamata-a9fd</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/agroktima-tithorea-ec89</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/aiakeion-a0f9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/aidonakia-playcity-2b5a</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/aigaleo-786b</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
@@ -1374,6 +1387,7 @@
 <url><loc>https://googlementor.com/place/akrovatis-7a43</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/aktaion-eb32</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/aktaion-pastry-ice-cream-downtown-c2d4</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/aktaion-seaside-bar-c05c</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/akti-e975</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/akti-ntovil-sea-taste-e4a5</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/ala-burger-c5b9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -1460,6 +1474,7 @@
 <url><loc>https://googlementor.com/place/anama-restaurant-887b</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/anana-coffee-food-3bd1</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/anapsyktirio-kalopoyla-6490</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/anasa-the-garden-spot-d4c4</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/anavyssos-0d14</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/anax-brunch-all-day-bar-81ba</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/ancho-3d3e</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -1556,6 +1571,7 @@
 <url><loc>https://googlementor.com/place/archipelagos-restaurant-rooms-a37b</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/archontiko-agia-paraskeyi-2beb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/area-synest-32cb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/arena-jr-fun-farm-5576</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/areopoli-509e</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/argithea-7dfa</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/argo-restaurant-8539</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -1632,11 +1648,13 @@
 <url><loc>https://googlementor.com/place/atitamos-eec0</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/atlantikos-a5c3</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/atole-c7c7</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/attalos-s-cafe-bar-restaurant-1e1b</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/attic-urban-rooftop-1000</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/attica-zoological-park-8ed1</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/attiki-f736</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/austin-smokehouse-bbq-57ae</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/av-it-5b20</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/avant-garde-sports-club-7823</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/avaton-1739-coffee-wine-roof-e00f</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/avenue-modern-cuisine-4980</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/avithos-preview-taverna-a4e0</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -1729,6 +1747,7 @@
 <url><loc>https://googlementor.com/place/bloom-projectgr-1211</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/blue-caves-zakynthos-20af</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/blue-sea-restaurant-7b6b</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/blueberry-cafe-5bc2</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/bluefish-paros-d060</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/boken-athens-ea52</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/bokos-ouzeri-437f</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -1741,6 +1760,7 @@
 <url><loc>https://googlementor.com/place/boo-athens-ce09</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/bookali-e4c2</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/bookbar-by-kaktos-1535</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/booki-kluki-850f</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/bored-c-mon-hub-fee7</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/bostani-bar-restaurant-bc52</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/botanical-garden-bistrot-7dd8</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -1776,6 +1796,7 @@
 <url><loc>https://googlementor.com/place/bufala-gelato-glyfada-2849</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/bulacan-halo-halo-11e9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/bulldogs-the-beast-1d96</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/bumblin-ff69</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/bungalow7-athens-f000</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/bunny-tail-b5c7</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/burger-house-pangeo-35e7</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -1825,6 +1846,7 @@
 <url><loc>https://googlementor.com/place/captain-george-ce38</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/captain-nikolas-family-tavern-9ba7</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/captain-s-food-for-sharing-27b9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/capu-family-bar-454c</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/cardamomo-2fd6</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/caretta-athens-72f0</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/caretta-athens-fbea</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -1910,6 +1932,7 @@
 <url><loc>https://googlementor.com/place/cinnabon-halandri-8ce3</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/cinnabon-river-west-2d68</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/cinq-sens-athens-2444</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/circuit-of-megara-athens-international-circuit-ae7d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/city-bliss-617b</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/city-zen-all-day-bar-restaurant-f5cf</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/clochard-1c1d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -2120,6 +2143,7 @@
 <url><loc>https://googlementor.com/place/emporikon-a5b4</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/en-plo-e98c</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/ena-ena-d043</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/ena-ena-eabb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/encore-beach-bar-c8f5</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/enjoy-just-falafel-6e33</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/enkelt-eatery-drinkery-a620</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -2273,6 +2297,7 @@
 <url><loc>https://googlementor.com/place/fofo-cycladic-gastronomy-718e</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/foinikas-cocina-y-cocteleria-mexicana-6755</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/foititis-bdb6</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/fokianos-cafe-5fe1</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/fokos-taverna-0347</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/folegandros-b083</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/folia-fbf9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -2305,7 +2330,9 @@
 <url><loc>https://googlementor.com/place/frutti-di-mare-34f5</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/fuddy-duddy-7f56</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/fuga-restaurant-bar-2750</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/fun-spot-ddb1</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/funbox-03f2</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/funghi-pizza-pasta-2e72</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/funghi-pizza-pasta-767d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/funky-s-thessaloniki-8f3b</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/funmily-eat-drink-play-a9b8</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -2797,6 +2824,8 @@
 <url><loc>https://googlementor.com/place/karpathos-c534</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/karpenisi-1d4b</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/karpenisi-d6c7</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+<url><loc>https://googlementor.com/place/kartland-15ac</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/kartodromo-athens-kart-8a79</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/kasmir-cdb9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/kasos-6629</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/kastanis-estiatorio-4777</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -2911,6 +2940,7 @@
 <url><loc>https://googlementor.com/place/koyasan-in-koukaki-a894</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/koyasan-in-philadelphia-a37a</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/koyasan-in-voula-5169</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/koydoyni-cafe-dc23</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/koyfonisi-444e</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/koykaki-616e</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/koykoynari-8119</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -3038,6 +3068,7 @@
 <url><loc>https://googlementor.com/place/layers-07b3</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/layreotiki-84c9</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/lazo-69fc</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/lazy-leaf-20e5</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/le-greche-agia-paraskevi-78c1</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/le-greche-neo-psychiko-b43c</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/le-greche-syntagma-2434</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -3084,6 +3115,7 @@
 <url><loc>https://googlementor.com/place/liogerma-tis-athinas-a7fb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/liondi-traditional-greek-restaurant-2ebf</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/liotrivi-estiatorio-kafe-mpar-b0d3</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/lipasmata-multifunctional-park-in-drapetsona-75b0</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/lisa-athens-fee6</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/lithodomi-61c6</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/little-bear-piraeus-vegan-patisserie-bistro-8b92</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -3360,6 +3392,7 @@
 <url><loc>https://googlementor.com/place/mitsos-0da1</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/mlrt-sourdough-microbakery-9cbe</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/mnemes-farm-51d0</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/mochi-shared-care-6847</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/model-urban-style-bar-5f03</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/moden-6e53</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/modish-coffee-graze-and-booze-4ee8</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -3391,6 +3424,7 @@
 <url><loc>https://googlementor.com/place/moo-casa-steak-lobster-bbeb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/moonkiz-cafe-b487</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/moorings-8b66</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/mooven-baguette-cafe-3c32</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/morenita-all-day-bar-restaurant-68ac</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/morrison-the-premium-rooftop-3819</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/mosaic-milos-22ed</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -3407,6 +3441,7 @@
 <url><loc>https://googlementor.com/place/moyrtas-psarotaverna-701e</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/moyseio-akropolis-8c69</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/moyseio-mpenaki-ellinikoy-politismoy-benaki-museum-of-greek-culture-4a96</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/moyseio-polemikis-aeroporias-fae8</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/moyzilo-cheiropoiites-pites-2219</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/mozzart-pizza-center-b7a4</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/mpachtses-caf4</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -3505,6 +3540,7 @@
 <url><loc>https://googlementor.com/place/nea-ionia-a312</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/nea-klimataria-effa</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/nea-makri-dba8</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+<url><loc>https://googlementor.com/place/nea-mparmpoyta-restaurant-e9c8</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/nea-paralia-fe83</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/nea-smyrni-093f</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/neapoli-sykies-52e9</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
@@ -3776,7 +3812,10 @@
 <url><loc>https://googlementor.com/place/pagota-glyka-alma-a5a6</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/pagota-themis-971d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/paidikes-ekdiloseis-xenes-glosses-petit-paris-993d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/paidiki-chara-kifisia-43bf</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/paidiki-chara-plateias-karaiskaki-605c</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/paidiki-chara-river-west-dfd2</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/paidotopos-paramythoypoli-44c0</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/pakoymel-399d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/palace-of-aigai-aegae-2ba6</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/palace-of-the-grand-master-of-the-knights-of-rhodes-d121</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -3884,6 +3923,7 @@
 <url><loc>https://googlementor.com/place/patisserie-achlatis-4d9f</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/patisserie-artemis-gelateria-ice-cream-2223</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/patisserie-despina-e77e</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/patitiri-zachaios-f585</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/patmos-8f7e</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/patra-9cb3</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/patriko-pub-cafe-b924</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -3962,6 +4002,7 @@
 <url><loc>https://googlementor.com/place/picasso-on-the-beach-naxos-983d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/piccadilly-cafe-bar-f0c9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/piccola-9273</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/pick-nick-7af8</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/picky-brunch-specialty-coffee-1ddb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/pidalio-restaurant-0e93</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/pie-serres-lambrakis-0447</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -4029,6 +4070,8 @@
 <url><loc>https://googlementor.com/place/plateia-monastirakioy-241b</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/plateia-theatroy-kafe-mpar-estiatorio-553c</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/play-hall-fca4</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/playce-e80d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/playground-moustakas-d1ed</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/playmobil-funpark-914b</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/plegma-coffee-living-f179</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/pnevmatikaki-s-a-1e78</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -4286,6 +4329,7 @@
 <url><loc>https://googlementor.com/place/sea-turtle-rescue-centre-55f4</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/season-beach-house-koursaros-fc07</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/seeds-restaurant-5f11</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/seich-sou-park-f00c</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/seladi-cafe-bar-2396</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/selene-restaurant-a54c</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/semeli-estate-ktima-semeli-b00a</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -4323,6 +4367,7 @@
 <url><loc>https://googlementor.com/place/shoreditch-burgers-sandwiches-07d4</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/shoreditch-burgers-sandwiches-9135</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/siam-thai-food-01d2</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/sidirodromiko-parko-kalamatas-b357</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/siena-pizzeria-restaurant-89d2</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/sifnos-7236</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 <url><loc>https://googlementor.com/place/sigi-ikthios-2b51</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -4383,6 +4428,7 @@
 <url><loc>https://googlementor.com/place/sotiris-1056</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/souffler-7793</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/sourloulou-kythnos-e658</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/south-padel-club-aa89</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/souvlaki-monastiraki-5149</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/souvlaki-street-3503</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/souvlakia-kargas-6666</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -4426,6 +4472,7 @@
 <url><loc>https://googlementor.com/place/spoon-e317</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/sport-point-5c29</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/sports-park-72e5</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/sports-playpark-lavrio-paidotopos-0de9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/spyros-antonis-2f69</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/st-george-lycabettus-lifestyle-hotel-313a</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/st-george-s-tavern-2332</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -4485,6 +4532,7 @@
 <url><loc>https://googlementor.com/place/sugarela-d629</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/sugarini-8400</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/sun-do-each-1133</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/sunny-spot-paidotopos-25ac</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/sunrise-fish-restaurant-aba9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/sunset-restaurant-23eb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/sunset-restaurant-ff8e</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -4549,6 +4597,7 @@
 <url><loc>https://googlementor.com/place/taliban-street-food-dac5</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/tama-d5a2</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/tandur-meze-bar-3592</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/tango-cafe-6c14</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/tanpopo-464e</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/tao-s-asian-restaurant-77a6</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/tarantino-burgers-athens-bebf</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -4612,6 +4661,7 @@
 <url><loc>https://googlementor.com/place/taverna-lestori-ad3a</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/taverna-limnios-fd2d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/taverna-man-tella-5899</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://googlementor.com/place/taverna-manaras-2863</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/taverna-mantsios-f0a3</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/taverna-michalis-f482</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/taverna-miranta-a83c</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -4732,56 +4782,6 @@
 <url><loc>https://googlementor.com/place/the-burger-joint-d3fe</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/the-caravan-cafe-brunch-cb81</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://googlementor.com/place/the-coffee-rawsters-f80a</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-cookie-spot-1262</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-coral-69aa</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-doc-s-burger-bar-0f0b</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-eatalians-mario-luigi-55bf</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-ellinikon-experience-park-824d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-garden-bar-2258</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-handmade-souvlaki-ascension-26f9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-heavy-melon-to-vari-peponi-0664</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-italians-c563</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-italians-peristeri-1b88</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-last-slice-284a</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-liberty-breakfast-room-ccfc</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-makers-ed24</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-meaters-urban-beer-garden-7415</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-mill-of-the-elves-a4d8</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-morning-table-0c2a</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-naxos-apothecary-portara-naxos-3a5b</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-nets-f997</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-paradosiakon-traditional-7763</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-park-of-mushrooms-d18c</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-pelion-train-b5b2</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-pirate-bar-6a00</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-place-secret-yard-4c99</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-room-mets-6bdd</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-roosters-3118</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-roosters-ilisia-fe6d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-roosters-tinos-c8a3</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-roosters-vrilissia-4c51</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-secret-garden-e1d9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-secret-gorge-restaurant-wine-tasting-experience-2ae9</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-smashers-athens-594f</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-smashers-athens-7c6e</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-squirrel-within-the-danai-196e</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-sushi-bar-4901</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-sweet-lab-1656</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-sweet-spot-69d8</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-twins-inspiration-4eb0</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-underdog-flagship-store-thissio-97ad</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-vegan-fairies-ce13</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-vegan-vandal-2f95</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-wall-5510</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-windmill-restaurant-skiathos-bee2</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-winter-garden-bd5e</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-zillers-pastry-bar-af73</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/the-zillers-rooftop-gastronomy-2a50</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://googlementor.com/place/thea-terrace-bar-ffcc</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-
-
-
-
 
 
 
