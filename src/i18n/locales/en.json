@@ -519,7 +519,15 @@
   "callToAction": {
     "text": "Get Started"
   },
+  "common": {
+    "back": "Back"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "areas": "Areas"
+  },
   "mainHero": {
+    "back": "Back",
     "title": "Greece, exactly as locals experience it",
     "subtitle": "Curated by humans, not algorithms",
     "tagline": "Authentic tavernas, beaches and neighborhoods worth your time — hand‑picked by people who know the country and arranged by destination so you can open them instantly on your phone.",
@@ -563,6 +571,7 @@
     "exploreDestinations": "Explore destinations"
   },
   "restaurantFinder": {
+    "changeCategory": "Change Category",
     "title": "Discover Authentic Greek Restaurants",
     "subtitle": "Find traditional Greek tavernas and restaurants near you",
     "discoverGreekCuisine": "Discover Greek Cuisine",

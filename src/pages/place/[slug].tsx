@@ -1845,7 +1845,14 @@ function MunicipalityPage({ entity, canonicalSlug, municipalityArea, municipalit
 
       {municipalityRecommendations.length > 0 ? (
         <VStack align="stretch" spacing={5}>
-          {municipalityRecommendations.map((recommendation) => (
+          {municipalityRecommendations.map((rawRecommendation) => {
+            const recommendation = {
+              ...rawRecommendation,
+              categoryName: isGreek
+                ? t(`categories.${rawRecommendation.categoryId}`, rawRecommendation.categoryName)
+                : rawRecommendation.categoryName,
+            };
+            return (
             <Box key={recommendation.categoryId} className="gm-surface-card" p={{ base: 5, md: 6 }}>
               <HStack justify="space-between" align="baseline" spacing={3} mb={1}>
                 <Heading as="h2" size="md">
@@ -1860,7 +1867,8 @@ function MunicipalityPage({ entity, canonicalSlug, municipalityArea, municipalit
               </HStack>
               <Text color="gray.600" fontSize="sm" mb={4}>
                 {t('place.municipality.categorySubtitle', {
-                  category: recommendation.categoryName,
+                  category: isGreek ? recommendation.categoryName : recommendation.categoryName.toLowerCase(),
+                  name: areaName,
                   defaultValue: `Recommended ${recommendation.categoryName.toLowerCase()} near ${areaName}.`,
                 })}
               </Text>
@@ -1892,7 +1900,8 @@ function MunicipalityPage({ entity, canonicalSlug, municipalityArea, municipalit
                 </Button>
               ) : null}
             </Box>
-          ))}
+            );
+          })}
         </VStack>
       ) : (
         <Box className="gm-surface-card" p={{ base: 5, md: 6 }}>

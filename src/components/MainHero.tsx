@@ -65,6 +65,8 @@ interface ExperienceType {
 }
 
 const LOCATION_RESULTS_RADIUS_KM = 10;
+const FINDER_SNAPSHOT_KEY = 'gm_finder_snapshot';
+const FINDER_SNAPSHOT_TTL_MS = 30 * 60 * 1000;
 
 const GREEK_TO_LATIN_MAP: Record<string, string> = {
   'α': 'a', 'β': 'v', 'γ': 'g', 'δ': 'd', 'ε': 'e', 'ζ': 'z', 'η': 'i', 'θ': 'th',
@@ -243,6 +245,76 @@ const MainHero = () => {
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
   const [initialSearchDone, setInitialSearchDone] = useState(false);
   const [showDeferredUi, setShowDeferredUi] = useState(false);
+
+  // Mirror the finder step into browser history so the back button walks the steps.
+  type FinderStep = 'options' | 'municipalities' | 'categories' | 'results';
+  const currentStep: FinderStep = showRestaurantFinder
+    ? 'results'
+    : showCategorySelection
+    ? 'categories'
+    : showMunicipalityList
+    ? 'municipalities'
+    : 'options';
+  const prevStepRef = useRef<FinderStep>('options');
+
+  useEffect(() => {
+    if (prevStepRef.current === currentStep) return;
+    prevStepRef.current = currentStep;
+    const url = new URL(window.location.href);
+    if (currentStep !== 'results') {
+      url.searchParams.delete('area');
+      url.searchParams.delete('category');
+    }
+    window.history.pushState({ ...window.history.state, gmStep: currentStep }, '', url.toString());
+  }, [currentStep]);
+
+  // Reflect an area + category result in the URL so it can be shared or reloaded.
+  // Uses replaceState directly to keep our history state and avoid re-triggering the intent effect.
+  useEffect(() => {
+    if (!showRestaurantFinder || searchMode.type !== 'municipality') return;
+    const municipality = searchMode.selectedMunicipality;
+    if (!municipality?.id || !selectedDisplayCategory) return;
+    const areaSlug = intentResolver.resolveArea(municipality.id)?.urlSlug;
+    const categorySlug = intentResolver.resolveCategory(selectedDisplayCategory.id)?.urlSlug;
+    if (!areaSlug || !categorySlug) return;
+
+    lastHandledIntentKeyRef.current = `${categorySlug}|${areaSlug}`;
+    const url = new URL(window.location.href);
+    url.searchParams.set('area', areaSlug);
+    url.searchParams.set('category', categorySlug);
+    window.history.replaceState(window.history.state, '', url.toString());
+  }, [showRestaurantFinder, searchMode, selectedDisplayCategory, intentResolver]);
+
+  useEffect(() => {
+    const onPopState = (event: PopStateEvent) => {
+      const step: FinderStep = (event.state && event.state.gmStep) || 'options';
+      if (event.state && event.state.gmStep) {
+        // Keep Next.js from re-routing for our own history entries.
+        event.stopImmediatePropagation();
+      }
+      if (step === prevStepRef.current) return;
+      prevStepRef.current = step;
+      if (step !== 'results') {
+        setLoading(false);
+        setError(null);
+      }
+      setShowRestaurantFinder(step === 'results');
+      setShowCategorySelection(step === 'categories');
+      setShowMunicipalityList(step === 'municipalities');
+      setShowLocationOptions(step === 'options');
+      alignViewport();
+    };
+    window.addEventListener('popstate', onPopState, true);
+    return () => window.removeEventListener('popstate', onPopState, true);
+  }, []);
+
+  const goBackOneStep = (fallback: () => void) => {
+    if (typeof window !== 'undefined' && window.history.state?.gmStep) {
+      window.history.back();
+    } else {
+      fallback();
+    }
+  };
   const deferredMunicipalitySearchQuery = useDeferredValue(municipalitySearchQuery);
   const locationOptionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -772,50 +844,32 @@ const MainHero = () => {
   };
 
   const backToCategoryStep = () => {
+    goBackOneStep(() => {
+      setLoading(false);
+      setError(null);
+      setNearestRestaurants(null);
+      setCurrentIndex(0);
+      setSelectedRestaurants(new Set());
+      setShowRestaurantFinder(false);
+      setShowLocationOptions(false);
+      setShowMunicipalityList(false);
+      setShowCategorySelection(true);
+      alignViewport();
+    });
+  };
+
+  const chooseAnotherArea = () => {
     setLoading(false);
     setError(null);
     setNearestRestaurants(null);
     setCurrentIndex(0);
     setSelectedRestaurants(new Set());
     setShowRestaurantFinder(false);
-    setShowLocationOptions(true);
-    setShowMunicipalityList(false);
     setShowCategorySelection(false);
-    setSearchMode({ type: 'location' });
-    setCategoryIntentQuery('');
+    setShowLocationOptions(false);
+    setShowMunicipalityList(true);
+    setSearchMode({ type: 'municipality', selectedMunicipality: undefined, selectedCategory: undefined });
     alignViewport();
-  };
-
-  const resetSearch = () => {
-    setUserLocation(null);
-    setNearestRestaurants(null);
-    setCurrentIndex(0);
-    setError(null);
-    setShowRestaurantFinder(false);
-    setShowMunicipalityList(false);
-    setShowCategorySelection(false);
-    setShowLocationOptions(true);
-    setSearchMode({ type: 'location' });
-    setSelectedDisplayCategory(undefined);
-    setSelectedExperienceType(undefined);
-    setSelectedType(undefined);
-    setMunicipalitySearchQuery(''); // Clear municipality search
-    setCategoryIntentQuery('');
-    setSelectedRestaurants(new Set()); // Clear selection
-    setSearchRadius(20);
-    setInitialSearchDone(false); // Reset initial search flag
-    
-    // Optimal scroll to show all 4 main cards completely in viewport
-    setTimeout(() => {
-      const isMobile = window.innerWidth < 768;
-      if (isMobile) {
-        // Minimal scroll for mobile
-        window.scrollTo({ top: 30, behavior: 'smooth' });
-      } else {
-        // Desktop: scroll to position that shows the 4 main cards optimally
-        window.scrollTo({ top: 280, behavior: 'smooth' });
-      }
-    }, 100);
   };
 
   const fullReset = () => {
@@ -1167,6 +1221,68 @@ const MainHero = () => {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if (!router.isReady || router.query.category || router.query.area) {
+      return;
+    }
+    let raw: string | null = null;
+    try {
+      raw = window.sessionStorage.getItem(FINDER_SNAPSHOT_KEY);
+      window.sessionStorage.removeItem(FINDER_SNAPSHOT_KEY);
+    } catch {
+      return;
+    }
+    if (!raw) return;
+
+    try {
+      const snap = JSON.parse(raw);
+      if (!snap || Date.now() - snap.savedAt > FINDER_SNAPSHOT_TTL_MS || !Array.isArray(snap.nearestRestaurants)) {
+        return;
+      }
+      // Avoid pushing a duplicate history entry when the entry we returned to is already a results step.
+      if (window.history.state?.gmStep === 'results') {
+        prevStepRef.current = 'results';
+      }
+      setSearchMode(snap.searchMode);
+      setSelectedDisplayCategory(snap.selectedDisplayCategory);
+      setSelectedExperienceType(snap.selectedExperienceType);
+      setSelectedType(snap.selectedType);
+      setSearchRadius(snap.searchRadius);
+      setNearestRestaurants(snap.nearestRestaurants);
+      setCurrentIndex(0);
+      setInitialSearchDone(true);
+      setShowLocationOptions(false);
+      setShowMunicipalityList(false);
+      setShowCategorySelection(false);
+      setShowRestaurantFinder(true);
+      window.setTimeout(() => window.scrollTo({ top: snap.scrollY || 0 }), 80);
+    } catch {
+      // Ignore corrupt snapshots.
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.isReady]);
+
+  const saveFinderSnapshot = () => {
+    if (!nearestRestaurants || nearestRestaurants.length === 0) return;
+    try {
+      window.sessionStorage.setItem(
+        FINDER_SNAPSHOT_KEY,
+        JSON.stringify({
+          savedAt: Date.now(),
+          scrollY: window.scrollY,
+          searchMode,
+          selectedDisplayCategory,
+          selectedExperienceType,
+          selectedType,
+          searchRadius,
+          nearestRestaurants,
+        })
+      );
+    } catch {
+      // Storage may be unavailable or full; skip restore support.
+    }
+  };
 
   useEffect(() => {
     if (!router.isReady) {
@@ -1537,13 +1653,15 @@ const MainHero = () => {
                     <div className="text-center pt-4 border-t border-sky-100">
                       <button
                         onClick={() => {
-                          setShowCategorySelection(false);
-                          if (searchMode.type === 'municipality' && searchMode.selectedMunicipality) {
-                            setShowMunicipalityList(true);
-                          } else {
-                            setShowLocationOptions(true);
-                          }
-                          alignViewport();
+                          goBackOneStep(() => {
+                            setShowCategorySelection(false);
+                            if (searchMode.type === 'municipality' && searchMode.selectedMunicipality) {
+                              setShowMunicipalityList(true);
+                            } else {
+                              setShowLocationOptions(true);
+                            }
+                            alignViewport();
+                          });
                         }}
                         className="group inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-all duration-200 font-semibold text-sm sm:text-base px-4 py-2.5 rounded-xl hover:bg-white/70 hover:scale-105"
                       >
@@ -1690,8 +1808,13 @@ const MainHero = () => {
                 <div className="text-center pt-4 border-t border-slate-300/80">
                   <button
                     onClick={() => {
-                      resetSearch();
-                      alignViewport();
+                      goBackOneStep(() => {
+                        setShowMunicipalityList(false);
+                        setShowCategorySelection(false);
+                        setShowLocationOptions(true);
+                        setMunicipalitySearchQuery('');
+                        alignViewport();
+                      });
                     }}
                     className="inline-flex items-center gap-2 transition-colors duration-200 font-medium text-sm px-3 py-2 rounded-lg text-slate-600 hover:text-slate-800 hover:bg-slate-100"
                   >
@@ -1704,6 +1827,23 @@ const MainHero = () => {
             {showRestaurantFinder && (
               /* Restaurant Finder Results */
               <div id="results-section" className="gm-panel gm-panel-strong bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 max-w-6xl mx-auto">
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <button
+                    onClick={backToCategoryStep}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 px-3 py-1.5 rounded-lg transition-colors"
+                    aria-label={t('restaurantFinder.changeCategory', 'Change Category')}
+                  >
+                    ← {t('mainHero.back', 'Back')}
+                  </button>
+                  {searchMode.type === 'municipality' && (
+                    <button
+                      onClick={chooseAnotherArea}
+                      className="text-sm font-medium text-sky-700 hover:bg-sky-50 px-3 py-1.5 rounded-lg transition-colors"
+                    >
+                      {t('restaurantFinder.chooseAnotherArea', 'Choose Another Area')}
+                    </button>
+                  )}
+                </div>
                 {loading && (
                   <div className="text-center py-4 xs:py-6 sm:py-8">
                     <div className="inline-block animate-spin rounded-full h-5 w-5 xs:h-6 xs:w-6 sm:h-8 sm:w-8 border-b-2 border-sky-600 mb-2 xs:mb-3 sm:mb-4"></div>
@@ -1804,6 +1944,12 @@ const MainHero = () => {
                       <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <button
                           onClick={backToCategoryStep}
+                          className="px-5 py-2.5 bg-white border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                        >
+                          ← {t('restaurantFinder.changeCategory', 'Change Category')}
+                        </button>
+                        <button
+                          onClick={chooseAnotherArea}
                           className="px-5 py-2.5 bg-white border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors duration-200"
                         >
                           {t('restaurantFinder.chooseAnotherArea', 'Choose Another Area')}
@@ -2074,6 +2220,7 @@ const MainHero = () => {
                                 {placeHref ? (
                                   <NextLink
                                     href={placeHref}
+                                    onClick={saveFinderSnapshot}
                                     className="font-bold text-slate-900 text-base sm:text-lg line-clamp-2 leading-tight hover:text-sky-700 hover:underline"
                                   >
                                     {restaurantData.restaurant.name}
@@ -2112,6 +2259,7 @@ const MainHero = () => {
                                 {placeHref ? (
                                   <NextLink
                                     href={placeHref}
+                                    onClick={saveFinderSnapshot}
                                     className="text-slate-600 text-xs sm:text-sm line-clamp-2 leading-snug block hover:text-sky-700"
                                   >
                                     📍 {restaurantData.restaurant.address}

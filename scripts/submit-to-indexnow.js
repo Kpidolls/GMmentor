@@ -25,8 +25,8 @@ const QUEUE_STATE_FILE = path.join(INDEXNOW_STATE_DIR, 'pending-queue.json');
 const RECENT_STATE_FILE = path.join(INDEXNOW_STATE_DIR, 'recent-updates.json');
 const OUT_DIR = path.join(process.cwd(), 'out');
 const MAX_URLS_PER_RUN = Number(process.env.INDEXNOW_MAX_URLS_PER_RUN || 1000);
-const CHUNK_SIZE = Number(process.env.INDEXNOW_CHUNK_SIZE || 10);
-const CHUNK_DELAY_MS = Number(process.env.INDEXNOW_CHUNK_DELAY_MS || 400);
+const CHUNK_SIZE = Number(process.env.INDEXNOW_CHUNK_SIZE || 1);
+const CHUNK_DELAY_MS = Number(process.env.INDEXNOW_CHUNK_DELAY_MS || 250);
 const AUTO_DRAIN_ENABLED = process.env.INDEXNOW_AUTO_DRAIN !== '0';
 const AUTO_DRAIN_MAX_PASSES = Number(process.env.INDEXNOW_AUTO_DRAIN_MAX_PASSES || 20);
 const RECENT_SITEMAP_LIMIT = Number(process.env.RECENT_SITEMAP_LIMIT || 500);
@@ -283,15 +283,23 @@ function submitToIndexNow(urls, key) {
       urlList: urls.slice(0, 10000), // IndexNow limit
     });
     
-    const options = {
-      hostname: INDEXNOW_ENDPOINT,
-      path: '/indexnow',
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(payload),
-      },
-    };
+    // Single URL => GET (streaming mode); Bing flags multi-URL POSTs as "batch mode".
+    const useGet = urls.length === 1;
+    const options = useGet
+      ? {
+          hostname: INDEXNOW_ENDPOINT,
+          path: `/indexnow?${new URLSearchParams({ url: urls[0], key, keyLocation }).toString()}`,
+          method: 'GET',
+        }
+      : {
+          hostname: INDEXNOW_ENDPOINT,
+          path: '/indexnow',
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': Buffer.byteLength(payload),
+          },
+        };
     
     const req = https.request(options, (res) => {
       let data = '';
@@ -341,7 +349,9 @@ function submitToIndexNow(urls, key) {
       reject(error);
     });
     
-    req.write(payload);
+    if (!useGet) {
+      req.write(payload);
+    }
     req.end();
   });
 }

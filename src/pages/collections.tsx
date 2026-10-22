@@ -14,6 +14,7 @@ import {
 
 import { loadEntitiesIndex } from '../lib/entities';
 import { createIntentEngine } from '../lib/intent';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 const SITE_URL = 'https://googlementor.com';
 
@@ -143,6 +144,7 @@ export default function CollectionsPage({ groups, totalCollections }: Collection
 
   return (
     <Container maxW="6xl" py={10}>
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Collections' }]} />
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />

@@ -272,7 +272,12 @@ function main() {
   }
 
   const expectedCount = expectedPaths.size;
-  const actualFiles = fs.readdirSync(OUT_PLACE_DIR).filter((file) => file.endsWith('.html'));
+  // Legacy redirect stubs (meta-refresh, noindex) are not real place pages.
+  const actualFiles = fs.readdirSync(OUT_PLACE_DIR).filter((file) => {
+    if (!file.endsWith('.html')) return false;
+    const head = fs.readFileSync(path.join(OUT_PLACE_DIR, file), 'utf8').slice(0, 600);
+    return !head.includes('<title>Redirecting');
+  });
 
   if (actualFiles.length !== expectedCount) {
     fail(`Place page count mismatch: expected ${expectedCount}, found ${actualFiles.length}`);

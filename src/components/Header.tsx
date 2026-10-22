@@ -660,7 +660,7 @@ const Header = () => {
         <Flex align="center" justify="space-between" wrap="nowrap" gap={3}>
           {/* Brand and utility controls */}
           <HStack spacing={{ base: 2, md: 3 }} flexShrink={0}>
-            <HStack spacing={3} onClick={() => window.location.href = '/'} cursor="pointer">
+            <HStack spacing={3} onClick={() => router.push('/')} cursor="pointer">
               <Image
                 src={logo}
                 alt={t('company.logoAlt', { name: t('company.name') })}

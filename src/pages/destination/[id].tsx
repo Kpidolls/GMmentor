@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useTranslation } from 'react-i18next';
+import { BackButton } from '../../components/BackButton';
 import islandsData from '../../data/islands.json';
 import { buildDestinationMetaDescription } from '../../config/metaDescriptions';
 import { dispatchAddToItinerary } from '../../utils/itineraryEvents';
@@ -111,6 +112,7 @@ const DestinationPage = ({ destination }: DestinationPageProps) => {
       <main className="min-h-screen bg-slate-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
           <div className="p-6 sm:p-8 lg:p-10 pb-2">
+            <BackButton fallbackHref="/" label={t('destination.backHome', 'Back to Home')} />
             <p className="text-[11px] sm:text-xs normal-case tracking-normal font-semibold text-teal-700 mb-3">
               {t('destination.pageLabel', 'Destination Guide')}
             </p>

@@ -7,6 +7,7 @@ const SITE_URL = 'https://googlementor.com';
 // Retired URLs -> current target. GitHub Pages has no server redirects, so emit meta-refresh pages.
 const REDIRECTS = {
   '/burgers/kastella': '/area/kastella',
+  '/place/zacharoplasteia-konstantinidis-7da5': '/search',
 };
 
 function html(target) {

@@ -356,7 +356,26 @@ const SearchPage = ({ focusOnMount = false, placeEntities }: SearchPageProps) =>
   const handleSearch = (query: string) => {
     setSearchQuery(query);
     debouncedSearch(query);
+    if (router.pathname === '/search') {
+      const { q: _omit, ...rest } = router.query;
+      void router.replace(
+        { pathname: router.pathname, query: query.trim() ? { ...rest, q: query } : rest },
+        undefined,
+        { shallow: true, scroll: false }
+      );
+    }
   };
+
+  // Restore the query from the URL so back/refresh/shared links keep the search.
+  useEffect(() => {
+    if (!router.isReady || router.pathname !== '/search') return;
+    const qParam = router.query.q;
+    const initial = Array.isArray(qParam) ? qParam[0] : qParam;
+    if (initial) {
+      setSearchQuery((current) => current || initial);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.isReady]);
 
   const handleFocus = () => {
     searchInputRef.current?.focus();

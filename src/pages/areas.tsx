@@ -20,6 +20,7 @@ import { LuSearch } from 'react-icons/lu';
 
 import { loadEntitiesIndex } from '../lib/entities';
 import { createIntentEngine } from '../lib/intent';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 const SITE_URL = 'https://googlementor.com';
 
@@ -141,6 +142,7 @@ export default function AreasPage({ areaLinks, totalAreas }: AreasPageProps) {
 
   return (
     <Container maxW="6xl" py={10}>
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Areas' }]} />
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -175,7 +177,16 @@ export default function AreasPage({ areaLinks, totalAreas }: AreasPageProps) {
             type="text"
             placeholder="Filter by area or region..."
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            onChange={(event) => {
+              const value = event.target.value;
+              setQuery(value);
+              const { region: _omit, ...rest } = router.query;
+              void router.replace(
+                { pathname: router.pathname, query: value.trim() ? { ...rest, region: value } : rest },
+                undefined,
+                { shallow: true, scroll: false }
+              );
+            }}
             bg="white"
             aria-label="Filter areas"
           />

@@ -4,6 +4,24 @@ const { join } = require('path');
 const featureFlags = require('./src/config/featureFlags.json');
 
 const exclude = ['/404', '/500', '/api/*', '/pwa-test', '/pwa-test/'];
+
+// Municipality pages and legacy alias slugs are intentionally noindex; keep them out of the sitemap.
+const noindexPlacePaths = new Set();
+try {
+  const parsed = JSON.parse(readFileSync(join(process.cwd(), 'public', 'data', 'entities.json'), 'utf8'));
+  (Array.isArray(parsed?.entities) ? parsed.entities : []).forEach((entity) => {
+    if (entity?.kind === 'municipality' && entity.slug) {
+      noindexPlacePaths.add(`/place/${entity.slug}`);
+    }
+    (entity?.legacySlugs || []).forEach((slug) => {
+      if (slug && slug !== entity.slug) {
+        noindexPlacePaths.add(`/place/${slug}`);
+      }
+    });
+  });
+} catch {
+  // entities.json missing: nothing to exclude
+}
 if (!featureFlags.storeEnabled) {
   exclude.push('/store');
 }
@@ -31,6 +49,10 @@ module.exports = {
     ],
   },
   transform: async (config, path) => {
+    if (noindexPlacePaths.has(path)) {
+      return null;
+    }
+
     // Custom priority based on page importance
     let priority = 0.7;
     let changefreq = 'weekly';
