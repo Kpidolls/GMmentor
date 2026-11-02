@@ -27,6 +27,7 @@ import { HamburgerIcon, CloseIcon, SearchIcon, ChevronDownIcon } from '@chakra-u
 import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import NextLink from 'next/link';
 import { LuMapPinned } from 'react-icons/lu';
 import config from '../config/index.json';
 import featureFlags from '../config/featureFlags.json';
@@ -69,6 +70,18 @@ const Header = () => {
     () => itinerary.days.reduce((total, day) => total + day.items.length, 0),
     [itinerary]
   );
+
+  const handleHomeNavigation = () => {
+    try {
+      window.sessionStorage.removeItem('gm_finder_snapshot');
+    } catch (error) {
+      logDevWarning('Failed to clear finder snapshot before returning home:', error);
+    }
+
+    if (router.pathname === '/') {
+      window.dispatchEvent(new Event('gm:reset-finder'));
+    }
+  };
 
   useEffect(() => {
     setIsLanguageReady(true); // Ensure language is ready before rendering
@@ -660,7 +673,14 @@ const Header = () => {
         <Flex align="center" justify="space-between" wrap="nowrap" gap={3}>
           {/* Brand and utility controls */}
           <HStack spacing={{ base: 2, md: 3 }} flexShrink={0}>
-            <HStack spacing={3} onClick={() => router.push('/')} cursor="pointer">
+            <HStack
+              as={NextLink}
+              href="/"
+              spacing={3}
+              onClick={handleHomeNavigation}
+              cursor="pointer"
+              aria-label={t('header.home', 'Go to homepage')}
+            >
               <Image
                 src={logo}
                 alt={t('company.logoAlt', { name: t('company.name') })}

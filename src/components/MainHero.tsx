@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -243,6 +243,7 @@ const MainHero = () => {
   const [searchRadius, setSearchRadius] = useState(20);
   const [maxResults, setMaxResults] = useState(50);
   const [selectedRestaurants, setSelectedRestaurants] = useState<Set<number>>(new Set());
+  const [limitAttempted, setLimitAttempted] = useState(false);
   const [initialSearchDone, setInitialSearchDone] = useState(false);
   const [showDeferredUi, setShowDeferredUi] = useState(false);
 
@@ -872,7 +873,11 @@ const MainHero = () => {
     alignViewport();
   };
 
-  const fullReset = () => {
+  const fullReset = useCallback(() => {
+    if (locationOptionTimerRef.current) {
+      clearTimeout(locationOptionTimerRef.current);
+      locationOptionTimerRef.current = null;
+    }
     setUserLocation(null);
     setNearestRestaurants(null);
     setCurrentIndex(0);
@@ -881,6 +886,7 @@ const MainHero = () => {
     setShowMunicipalityList(false);
     setShowCategorySelection(false);
     setShowLocationOptions(true);
+    setActiveLocationOption('location');
     setSearchMode({ type: 'location' });
     setSelectedDisplayCategory(undefined);
     setSelectedExperienceType(undefined);
@@ -902,7 +908,13 @@ const MainHero = () => {
         window.scrollTo({ top: 280, behavior: 'smooth' });
       }
     }, 100);
-  };
+  }, []);
+
+  useEffect(() => {
+    const resetFinder = () => fullReset();
+    window.addEventListener('gm:reset-finder', resetFinder);
+    return () => window.removeEventListener('gm:reset-finder', resetFinder);
+  }, [fullReset]);
 
   // Selection helper functions
   const toggleRestaurantSelection = (index: number) => {
@@ -913,50 +925,87 @@ const MainHero = () => {
       } else {
         if (newSet.size < 10) {
           newSet.add(index);
+        } else {
+          setLimitAttempted(true);
         }
       }
       return newSet;
     });
   };
 
-  const selectAllVisible = () => {
-    if (!nearestRestaurants) return;
-    const newSet = new Set<number>();
-    const limit = Math.min(10, nearestRestaurants.length);
-    for (let i = 0; i < limit; i++) {
-      newSet.add(i);
-    }
-    setSelectedRestaurants(newSet);
-  };
-
   const clearSelection = () => {
     setSelectedRestaurants(new Set());
+    setLimitAttempted(false);
   };
 
-  const addSelectedToItinerary = () => {
-    if (!nearestRestaurants || selectedRestaurants.size === 0) {
-      return;
-    }
-
-    const selectedItems = Array.from(selectedRestaurants)
+  const getSelectedItems = () =>
+    Array.from(selectedRestaurants)
       .sort((a, b) => a - b)
-      .map(index => nearestRestaurants[index])
+      .map(index => nearestRestaurants?.[index])
       .filter((item): item is { restaurant: Restaurant; distance: number } => item !== undefined);
 
-    if (selectedItems.length === 0) {
+  const openSelectedInGoogleMaps = () => {
+    const items = getSelectedItems();
+    if (items.length === 0) return;
+    const first = items[0];
+    if (items.length === 1 && first?.restaurant.url) {
+      window.open(first.restaurant.url, '_blank', 'noopener,noreferrer');
       return;
     }
+    const stops = items.map(({ restaurant }) =>
+      encodeURIComponent([restaurant.name, restaurant.address].filter(Boolean).join(', '))
+    );
+    window.open(`https://www.google.com/maps/dir/${stops.join('/')}`, '_blank', 'noopener,noreferrer');
+  };
 
-    selectedItems.forEach((item, index) => {
-      dispatchAddToItinerary({
-        id: `${item.restaurant.name}-${item.restaurant.address || item.restaurant.url || index}`,
-        name: item.restaurant.name,
-        type: 'place',
-        url: item.restaurant.url,
-      });
-    });
+  const shareSelected = async () => {
+    const shareText = getSelectedItems()
+      .map((r, i) => `${i + 1}. ${r.restaurant.name}\n${r.restaurant.url}`)
+      .join('\n\n');
+    const fullText = `${t('restaurantFinder.shareTitle', 'Check out these places:')}\n\n${shareText}`;
 
-    clearSelection();
+    let copied = false;
+    let shared = false;
+    let message = '';
+    let type = 'info';
+
+    try {
+      await navigator.clipboard.writeText(fullText);
+      copied = true;
+    } catch {
+      copied = false;
+    }
+
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: t('restaurantFinder.shareTitle', 'Check out these places!'),
+          text: fullText,
+        });
+        shared = true;
+      }
+    } catch {
+      shared = false;
+    }
+
+    if (copied && shared) {
+      message = t('restaurantFinder.copiedAndShared', 'Selected locations copied and ready to share!');
+      type = 'success';
+    } else if (shared && !copied) {
+      message = t('restaurantFinder.sharedButNotCopied', 'Shared successfully, but could not copy to clipboard.');
+      type = 'warning';
+    } else if (copied && !shared) {
+      message = t('restaurantFinder.copiedToClipboard', 'Selected locations copied to clipboard!');
+      type = 'success';
+    } else {
+      message = t('restaurantFinder.shareFailed', 'Unable to share or copy results. Please try again.');
+      type = 'error';
+    }
+
+    setShareSnackbar({ open: true, message, type });
+    setTimeout(() => {
+      setShareSnackbar((prev) => ({ ...prev, open: false }));
+    }, 5000);
   };
 
   const shareSinglePlace = async (item: { restaurant: Restaurant; distance: number }) => {
@@ -1400,22 +1449,6 @@ const MainHero = () => {
 
 
 
-        {/* Enhanced Location Badge with Animation */}
-        {!showLocationOptions && (
-        <div className="absolute top-4 right-4 z-40 xs:top-6 xs:right-6 md:top-6 md:right-8 lg:top-8 lg:right-8">
-          <div className="relative group">
-            {/* Glow effect */}
-            <div className="absolute -inset-1 rounded-full blur opacity-35 group-hover:opacity-60 transition duration-300 bg-gradient-to-r from-slate-400 via-zinc-300 to-stone-300" />
-            
-            <span className="relative inline-flex items-center px-3 py-2 xs:px-4 xs:py-2 backdrop-blur-md text-slate-800 font-semibold rounded-full text-xs xs:text-sm gap-2 hover:scale-105 transition-all duration-300 shadow-lg bg-white/88 hover:bg-white border border-slate-300/80">
-              <span className="text-sm xs:text-base animate-pulse">🇬🇷</span>
-              <span className="hidden font-medium tracking-wide">{t('mainHero.athens', 'Athens')}</span>
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-            </span>
-          </div>
-        </div>
-        )}
-        
         {/* Professional Hero Content */}
         <section role="main" aria-label={t('aria.homepage', 'Homepage')} className={`relative z-20 px-3 xs:px-4 sm:px-6 lg:px-8 w-full mx-auto hero-tight ${heroContentSpacing} ${showLocationOptions ? 'max-w-6xl' : 'max-w-7xl flex flex-col justify-center'}`}>
           {/* Lightweight content backdrop */}
@@ -1539,6 +1572,18 @@ const MainHero = () => {
               {showCategorySelection && !showRestaurantFinder && !showMunicipalityList && (
                 <div className="relative">
                   <div className="gm-panel gm-panel-strong backdrop-blur-md rounded-2xl xs:rounded-3xl sm:rounded-[2rem] p-4 xs:p-6 sm:p-8 lg:p-12">
+                    <div className="mb-5 text-left">
+                      <button
+                        type="button"
+                        onClick={fullReset}
+                        className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-white/70 hover:text-slate-900 focus-visible:outline-none focus-visible:shadow-[var(--gm-focus-ring)]"
+                      >
+                        <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        {t('mainHero.backToSearchOptions', 'Back to Search Options')}
+                      </button>
+                    </div>
                     <div className="text-center mb-8 xs:mb-10 lg:mb-12 relative">
                       <div className="w-20 h-0.5 mx-auto mb-6 opacity-70 bg-gradient-to-r from-transparent via-slate-400 to-transparent" />
                       <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-4 xs:mb-5 sm:mb-6 relative">
@@ -2029,115 +2074,9 @@ const MainHero = () => {
                     {/* Selection and Share Controls */}
                     {(nearestRestaurants && nearestRestaurants.length > 0) && (
                       <>
-                        <div className="flex flex-col items-center gap-3 mb-4 p-3 bg-gradient-to-r from-sky-50 to-cyan-50 rounded-xl border border-sky-200">
-                          {/* Selection Info */}
-                          <div className="text-center w-full">
-                            <p className="text-sm sm:text-base font-semibold text-gray-700 mb-3">
-                              {selectedRestaurants.size > 0 
-                                ? `✓ ${selectedRestaurants.size} ${t('restaurantFinder.selected', 'selected')} ${selectedRestaurants.size < 10 ? `(${t('restaurantFinder.selectUpTo', 'select up to')} ${10 - selectedRestaurants.size} ${t('restaurantFinder.more', 'more')})` : ''}`
-                                : `📍 ${t('restaurantFinder.selectUpTo10', 'Select up to 10 locations to share')}`}
-                            </p>
-                          </div>
-
-                          {/* Selection Actions */}
-                          <div className="flex items-center justify-center gap-3 flex-wrap">
-                            <button
-                              onClick={selectAllVisible}
-                              disabled={selectedRestaurants.size >= 10}
-                              className="px-4 py-2 text-sm sm:text-base font-semibold text-sky-700 bg-white hover:bg-sky-50 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed border-2 border-sky-200 hover:border-sky-300 shadow-sm"
-                              title={t('restaurantFinder.selectFirst10', 'Select first 10')}
-                            >
-                              {nearestRestaurants.length >= 10 
-                                ? t('restaurantFinder.selectUpTo10', 'Select up to 10')
-                                : t('restaurantFinder.selectUpTo', `Select up to ${nearestRestaurants.length}`)}
-                            </button>
-                            
-                            {selectedRestaurants.size > 0 && (
-                              <>
-                                <button
-                                  onClick={clearSelection}
-                                  className="px-4 py-2 text-sm sm:text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 rounded-lg transition-all duration-200 border-2 border-gray-300 hover:border-gray-400 shadow-sm"
-                                >
-                                  {t('restaurantFinder.clearSelection', 'Clear')}
-                                </button>
-                                
-                                <button
-                                  onClick={addSelectedToItinerary}
-                                  className="inline-flex items-center justify-center min-h-11 px-4 py-2 text-sm sm:text-base font-semibold rounded-lg border transition-colors duration-200 text-center leading-tight whitespace-normal bg-teal-50 border-teal-300 text-teal-800 hover:bg-teal-100"
-                                  title={t('restaurantFinder.addSelectedToItinerary', 'Add selected to itinerary')}
-                                >
-                                  ➕ {t('restaurantFinder.addSelectedToItinerary', 'Add selected to itinerary')}
-                                </button>
-
-                                <button
-                                  onClick={async () => {
-                                    const selectedItems = Array.from(selectedRestaurants)
-                                      .sort((a, b) => a - b)
-                                      .map(index => nearestRestaurants[index])
-                                      .filter((item): item is { restaurant: Restaurant; distance: number } => item !== undefined);
-                                    
-                                    const shareText = selectedItems
-                                      .map((r, i) => `${i + 1}. ${r.restaurant.name}\n${r.restaurant.url}`)
-                                      .join('\n\n');
-                                    const fullText = `${t('restaurantFinder.shareTitle', 'Check out these places:')}\n\n${shareText}`;
-                                    
-                                    let copied = false;
-                                    let shared = false;
-                                    let message = '';
-                                    let type = 'info';
-                                    
-                                    try {
-                                      await navigator.clipboard.writeText(fullText);
-                                      copied = true;
-                                    } catch (e) {
-                                      copied = false;
-                                    }
-                                    
-                                    try {
-                                      if (navigator.share) {
-                                        await navigator.share({
-                                          title: t('restaurantFinder.shareTitle', 'Check out these places!'),
-                                          text: fullText
-                                        });
-                                        shared = true;
-                                      }
-                                    } catch (e) {
-                                      shared = false;
-                                    }
-                                    
-                                    if (copied && shared) {
-                                      message = t('restaurantFinder.copiedAndShared', 'Selected locations copied and ready to share!');
-                                      type = 'success';
-                                    } else if (shared && !copied) {
-                                      message = t('restaurantFinder.sharedButNotCopied', 'Shared successfully, but could not copy to clipboard.');
-                                      type = 'warning';
-                                    } else if (copied && !shared) {
-                                      message = t('restaurantFinder.copiedToClipboard', 'Selected locations copied to clipboard!');
-                                      type = 'success';
-                                    } else {
-                                      message = t('restaurantFinder.shareFailed', 'Unable to share or copy results. Please try again.');
-                                      type = 'error';
-                                    }
-                                    
-                                    setShareSnackbar({ open: true, message, type });
-                                    setTimeout(() => {
-                                      setShareSnackbar((prev) => ({ ...prev, open: false }));
-                                    }, 5000);
-                                  }}
-                                  className="inline-flex items-center gap-2 px-4 py-2 text-sm sm:text-base font-semibold rounded-lg border transition-colors duration-200 bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200"
-                                  title={t('restaurantFinder.shareSelected', 'Share selected locations')}
-                                >
-                                  <span className="flex items-center gap-2">
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                                    </svg>
-                                     {t('restaurantFinder.shareSelected', `Share (${selectedRestaurants.size})`)}
-                                  </span>
-                                </button>
-                              </>
-                            )}
-                          </div>
-                        </div>
+<p className="text-center text-sm sm:text-base font-medium text-slate-700 mb-4 px-3 py-3 bg-gradient-to-r from-sky-50 to-cyan-50 rounded-xl border border-sky-200">
+  {t('restaurantFinder.handPickedIntro', 'Every place here is hand-picked by people. Choose the ones you like and share them with a friend.')}
+</p>
 
                         {/* Snackbar/Toast for share feedback */}
                         {shareSnackbar.open && (
@@ -2246,8 +2185,7 @@ const MainHero = () => {
                                     type="checkbox"
                                     checked={isSelected}
                                     onChange={() => toggleRestaurantSelection(index)}
-                                    disabled={!isSelected && selectedRestaurants.size >= 10}
-                                    className="w-4 h-4 rounded border border-slate-400 text-emerald-600 focus:ring-2 focus:ring-emerald-500 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                                    className="w-4 h-4 rounded border border-slate-400 text-emerald-600 focus:ring-2 focus:ring-emerald-500 cursor-pointer transition-all"
                                   />
                                   <span className="text-[11px] sm:text-xs font-semibold text-slate-600 whitespace-nowrap">
                                     {isSelected ? t('restaurantFinder.selected', 'Selected') : t('restaurantFinder.select', 'Select')}
@@ -2338,6 +2276,47 @@ const MainHero = () => {
                       </div>
                     </div>
 
+                    {selectedRestaurants.size > 0 && (
+                      <div className="fixed bottom-0 inset-x-0 z-40 border-t border-sky-200 bg-white/95 backdrop-blur shadow-[0_-8px_24px_rgba(15,23,42,0.12)] px-3 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+                        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+                          <div className="text-center sm:text-left">
+                            <p className="text-sm sm:text-base font-semibold text-slate-800">
+                              {selectedRestaurants.size === 1
+                                ? t('restaurantFinder.listCountOne', '1 place on your list')
+                                : t('restaurantFinder.listCount', '{{count}} places on your list', { count: selectedRestaurants.size })}
+                            </p>
+                            {(selectedRestaurants.size >= 8 || limitAttempted) && (
+                              <p className="text-xs text-slate-600" role="status">
+                                {limitAttempted || selectedRestaurants.size >= 10
+                                  ? t('restaurantFinder.listLimit', 'Your list holds up to 10 places')
+                                  : `${selectedRestaurants.size}/10`}
+                              </p>
+                            )}
+                          </div>
+                          <div className="flex flex-wrap items-center justify-center gap-2">
+                            <button
+                              onClick={() => { void shareSelected(); }}
+                              className="px-4 py-2 text-sm font-semibold rounded-lg border bg-slate-100 border-slate-300 text-slate-800 hover:bg-slate-200 transition-colors"
+                            >
+                              {t('restaurantFinder.shareWithFriend', 'Share with a friend')}
+                            </button>
+                            <button
+                              onClick={openSelectedInGoogleMaps}
+                              className="px-4 py-2 text-sm font-semibold rounded-lg text-white bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black transition-colors"
+                            >
+                              {t('restaurantFinder.openInGoogleMaps', 'Open in Google Maps')}
+                            </button>
+                            <button
+                              onClick={clearSelection}
+                              className="px-4 py-2 text-sm font-semibold rounded-lg border bg-white border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
+                            >
+                              {t('restaurantFinder.clearSelection', 'Clear')}
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
                     <div className="text-center pt-6 mt-6 border-t-2 border-sky-100">
                       <button
                         onClick={backToCategoryStep}
@@ -2406,6 +2385,9 @@ const MainHero = () => {
                         </button>
                       </div>
                     </div>
+
+                    {/* Reserve room so the fixed selection bar never covers the content above */}
+                    {selectedRestaurants.size > 0 && <div className="h-44 sm:h-32 md:h-24" aria-hidden="true" />}
                   </div>
                 )}
               </div>
